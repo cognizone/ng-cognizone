@@ -1,0 +1,11 @@
+{
+  "name": "@cognizone/model-utils",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.5.0",
+    "typescript": ">=3.7.0 <5"
+  }
+}
