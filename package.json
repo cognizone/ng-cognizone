@@ -57,6 +57,7 @@
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@jscutlery/semver": "^2.4.0",
+    "@jsdevtools/npm-publish": "^1.4.3",
     "@nrwl/cli": "11.6.3",
     "@nrwl/cypress": "11.6.3",
     "@nrwl/eslint-plugin-nx": "11.6.3",

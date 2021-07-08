@@ -1,14 +1,12 @@
-name: CI
+name: main
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 jobs:
-  build-and-test:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node.js environment
@@ -18,49 +16,36 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
-      - name: Cache node modules
+      - name: Git set user
+        run: |
+          git config --local user.email "$(git log --format='%ae' HEAD^!)"
+          git config --local user.name "$(git log --format='%an' HEAD^!)"
+      - name: Cache node modules global
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm ci
-      #- run: npm run affected:lint -- --base=origin/main
-      - run: npm run affected:build:prod -- --base=origin/main
-      - run: npm run affected:test -- --base=origin/main
-      #- run: npm run affected:e2e -- --headless --base=origin/main
-  dump-info:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump GitHub context
+      - name: Cache node modules local
+        uses: actions/cache@v2
         env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
+          cache-name: cache-node-modules-local
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
+      - run: npm i
+      # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
+      # - run: npm run affected:lint -- --base=origin/main
+      # since lib versions are synced, just versioning one is enough
+      - run: npm run nx -- run model-utils:version --version=prerelease --preid=alpha --sync-versions
+      - run: git status
+      - run: npm --version
+      - run: npm run nx -- run-many --all --target=build --prod
+      - run: npm run nx -- run-many --all --target=test
+      - run: node ./tools/npm-publish.js
         env:
-          JOB_CONTEXT: ${{ toJSON(job) }}
-        run: echo "$JOB_CONTEXT"
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJSON(steps) }}
-        run: echo "$STEPS_CONTEXT"
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ toJSON(runner) }}
-        run: echo "$RUNNER_CONTEXT"
-      - name: Dump strategy context
-        env:
-          STRATEGY_CONTEXT: ${{ toJSON(strategy) }}
-        run: echo "$STRATEGY_CONTEXT"
-      - name: Dump matrix context
-        env:
-          MATRIX_CONTEXT: ${{ toJSON(matrix) }}
-        run: echo "$MATRIX_CONTEXT"
-      - name: Dump secrets
-        env:
-          SECRETS_CONTEXT: ${{ toJSON(secrets) }}
-        run: echo "$SECRETS_CONTEXT"
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      # - run: npm run affected:e2e -- --headless --base=origin/main
+      - run: git push --follow-tags
