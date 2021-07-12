@@ -48,4 +48,4 @@ jobs:
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       # - run: npm run affected:e2e -- --headless --base=origin/main
-      - run: git push --follow-tags
+      # - run: git push --follow-tags
