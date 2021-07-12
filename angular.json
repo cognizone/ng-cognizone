@@ -63,12 +63,6 @@
             "jestConfig": "libs/ng-core/jest.config.js",
             "passWithNoTests": true
           }
-        },
-        "version": {
-          "builder": "@jscutlery/semver:version",
-          "options": {
-            "syncVersions": true
-          }
         }
       }
     },
@@ -103,14 +97,19 @@
             "jestConfig": "libs/model-utils/jest.config.js",
             "passWithNoTests": true
           }
-        },
+        }
+      }
+    },
+    "workspace": {
+      "architect": {
         "version": {
           "builder": "@jscutlery/semver:version",
           "options": {
             "syncVersions": true
           }
         }
-      }
+      },
+      "root": "."
     }
   }
 }

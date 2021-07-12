@@ -38,8 +38,7 @@ jobs:
       - run: npm i
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
-      # since lib versions are synced, just versioning one is enough
-      - run: npm run nx -- run model-utils:version --version=prerelease --preid=alpha --sync-versions
+      - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
       - run: git status
       - run: npm --version
       - run: npm run nx -- run-many --all --target=build --prod
