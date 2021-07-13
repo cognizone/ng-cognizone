@@ -17,7 +17,8 @@
     "paths": {
       "@cognizone/ng-core": ["libs/ng-core/src/index.ts"],
       "@cognizone/model-utils": ["libs/model-utils/src/index.ts"],
-      "@cognizone/application-profile": ["libs/application-profile/src/index.ts"]
+      "@cognizone/application-profile": ["libs/application-profile/src/index.ts"],
+      "@cognizone/devtools": ["libs/devtools/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

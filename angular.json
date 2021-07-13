@@ -144,6 +144,40 @@
           }
         }
       }
+    },
+    "devtools": {
+      "projectType": "library",
+      "root": "libs/devtools",
+      "sourceRoot": "libs/devtools/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/devtools/tsconfig.lib.json",
+            "project": "libs/devtools/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/devtools/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/devtools/src/**/*.ts", "libs/devtools/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/devtools"],
+          "options": {
+            "jestConfig": "libs/devtools/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

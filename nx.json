@@ -16,6 +16,7 @@
     "ng-core": { "tags": [] },
     "model-utils": { "tags": [] },
     "workspace": { "tags": [] },
-    "application-profile": { "tags": [] }
+    "application-profile": { "tags": [] },
+    "devtools": { "tags": [] }
   }
 }
