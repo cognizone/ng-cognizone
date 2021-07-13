@@ -1,4 +1,4 @@
-name: main
+name: release
 
 on:
   # push:
@@ -39,12 +39,10 @@ jobs:
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
       - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
-      - run: git status
-      - run: npm --version
       - run: npm run nx -- run-many --all --target=build --prod
       - run: npm run nx -- run-many --all --target=test
       - run: node ./tools/npm-publish.js
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       # - run: npm run affected:e2e -- --headless --base=origin/main
-      # - run: git push --follow-tags
+      - run: git push --follow-tags

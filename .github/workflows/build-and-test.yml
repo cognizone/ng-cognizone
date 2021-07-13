@@ -1,6 +1,8 @@
-name: main-pr
+name: build-and-test
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 
@@ -18,15 +20,22 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
-      - name: Cache node modules
+      - name: Cache node modules global
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm ci
+      - name: Cache node modules local
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules-local
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
+      - run: npm i
       #- run: npm run affected:lint -- --base=origin/main
-      - run: npm run affected:build:prod -- --base=origin/main
-      - run: npm run affected:test -- --base=origin/main
+      - run: npm run nx -- run-many --all --target=build --prod
+      - run: npm run nx -- run-many --all --target=test
       #- run: npm run affected:e2e -- --headless --base=origin/main
