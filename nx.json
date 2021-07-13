@@ -19,6 +19,7 @@
     "application-profile": { "tags": [] },
     "devtools": { "tags": [] },
     "ng-application-profile": { "tags": [] },
-    "elastic": { "tags": [] }
+    "elastic": { "tags": [] },
+    "transloco-langstring": { "tags": [] }
   }
 }

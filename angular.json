@@ -246,6 +246,40 @@
           }
         }
       }
+    },
+    "transloco-langstring": {
+      "projectType": "library",
+      "root": "libs/transloco-langstring",
+      "sourceRoot": "libs/transloco-langstring/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/transloco-langstring/tsconfig.lib.json",
+            "project": "libs/transloco-langstring/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/transloco-langstring/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/transloco-langstring/src/**/*.ts", "libs/transloco-langstring/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/transloco-langstring"],
+          "options": {
+            "jestConfig": "libs/transloco-langstring/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

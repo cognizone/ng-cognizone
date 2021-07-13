@@ -5,6 +5,7 @@ module.exports = {
     '<rootDir>/libs/application-profile',
     '<rootDir>/libs/devtools',
     '<rootDir>/libs/ng-application-profile',
-    '<rootDir>/libs/elastic'
+    '<rootDir>/libs/elastic',
+    '<rootDir>/libs/transloco-langstring'
   ]
 };
