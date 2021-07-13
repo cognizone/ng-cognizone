@@ -1,0 +1,5 @@
+<div *ngIf="anchors$ | async as anchors" fxLayout="column">
+  <ng-container *ngFor="let anchor of anchors">
+    <a (click)="scrollTo($event, anchor)" href="#" [class.active]="isActive(anchor)">{{ anchor.text }}</a>
+  </ng-container>
+</div>

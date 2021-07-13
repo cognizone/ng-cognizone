@@ -1,0 +1,164 @@
+<app-article>
+  <app-article-title [lastUpdate]="lastUpdate">Modules</app-article-title>
+  <h2 class="mat-h2" appAnchor>Modules and how to structure them</h2>
+  <section>
+    <p>In its most basic form, a module could look like this</p>
+    <img src="assets/architecture/basic-module.png" />
+    <p>
+      Of course a module is never (?) that simple, and you will certainly have multiple components/services and others. To have a clean
+      module is almost like having a clean drawer cabinet, each drawer storing a certain type of cloth.
+    </p>
+    <img style="height: 200px;" src="assets/architecture/module-drawer.jpg" />
+
+    <p>With that comparison in mind, a really complete module could look like this:</p>
+    <img src="assets/architecture/module-full.png" />
+
+    <p>
+      In practice, a module is rarely so complete and we want to scope its responsibility to limit its size and complexity. So, what are
+      those different folders for ? Most of them are pretty self explanatory but hey, let's dive in:
+    </p>
+    <ul>
+      <li>
+        <app-inline-code>components</app-inline-code>: contains the components of the modules, each sub-folder being a different component.
+        Those components should be as dumb as possible, so their knowledge of the global state should be limited and their behavior should
+        mainly be driven by inputs.
+      </li>
+      <li><app-inline-code>directives</app-inline-code>: contains the different directives of the module</li>
+      <li>
+        <app-inline-code>guards</app-inline-code>: contains the guards of this module. Guards are services used in routing and that
+        implements <a href="https://angular.io/api/router/CanActivate" target="_blank"><app-inline-code>CanActivate</app-inline-code></a
+        >, <a href="https://angular.io/api/router/CanDeactivate" target="_blank"><app-inline-code>CanDeactivate</app-inline-code></a> or
+        others. A typical case of such a service would be to implement <app-inline-code>CanActivate</app-inline-code> and to verify if the
+        user is logged in before going to a particular part of the application.
+      </li>
+      <li>
+        <app-inline-code>http-interceptors</app-inline-code>: contains the different
+        <a href="https://angular.io/api/common/http/HttpInterceptor"><app-inline-code>HttpInterceptor</app-inline-code></a> services of the
+        module. A typical use case would be to intercept response to handle errors following the
+        <a href="https://jsonapi.org/format/#document-top-level">Json:api</a> or to add some authentication headers to all requests.
+      </li>
+      <li>
+        <app-inline-code>models</app-inline-code>: here you put all the models of your module, either being classes, interfaces, types or
+        enums. If you don't need to use <app-inline-code>instanceof</app-inline-code> on your model, it's simpler to stay away from classes
+        and use types or interfaces instead.
+      </li>
+      <li><app-inline-code>pipes</app-inline-code>: you put the pipes here, pure and simple.</li>
+      <li><app-inline-code>services</app-inline-code>: well... you put services here that don't belong in other folders.</li>
+      <li>
+        <app-inline-code>store</app-inline-code>: you store here everything that is related to state management for your module, either
+        using some well known libraries (like <a href="https://www.ngxs.io/">ngxs 💓</a> or <a href="https://ngrx.io/">ngrx</a>) or defining
+        your own. Beware that, normally, the store part of a module knows about the service part, but not the other way around !
+      </li>
+      <li>
+        <app-inline-code>views</app-inline-code>: here is for the components that are smart (think hard to reuse). Typically, you'll put
+        here components that are directly used by the routing module and/or knows about the state that is in the
+        <app-inline-code>store</app-inline-code> .
+      </li>
+    </ul>
+    <p>
+      You might have noticed that there is also the <app-inline-code>index.ts</app-inline-code> file. There you should export everything
+      that you want to be accessible outside the scope of your module so that you have cleaner imports. For example:
+    </p>
+    <app-code-block [code]="exportImportCode"></app-code-block>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Modules and where to find them</h2>
+  <section>
+    <p>
+      Now that we have seen the structure of an abstract module, let's define some typical modules you will have and scope their
+      responsibilities.
+    </p>
+    <img src="assets/architecture/modules-all.png" />
+
+    <h3 class="mat-h3">Core module</h3>
+    <p>
+      This module should only be imported once, in your <app-inline-code>app.module.ts</app-inline-code>. Here you will find services
+      associated to your business logic, like the <app-inline-code>AuthService</app-inline-code> that handles authentication, an
+      <app-inline-code>AuthGuard</app-inline-code>, and others. Usually, you will not find any components/directives/pipes (or maybe some
+      directly used in <app-inline-code>app.component.html</app-inline-code> ). So a typical core module folder would look like:
+    </p>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around space-around">
+      <img src="assets/architecture/modules-core-file-tree.png" />
+      <app-code-block [code]="coreModuleCode"></app-code-block>
+    </div>
+
+    <p>
+      Of course, you can import entities from <app-inline-code>core</app-inline-code> anywhere else in the the application, it's just the
+      module itself that has to be imported only once.
+    </p>
+
+    <h3 class="mat-h3">Shared module</h3>
+    <p>
+      Here you will put most of the reusable (dumb) components/directives/pipes used in your application. You will also want to export
+      commonly used module to limit the amount of imports you have to do for each new feature module.
+    </p>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around space-around">
+      <img src="assets/architecture/modules-shared.png" />
+      <app-code-block [code]="sharedModuleCode"></app-code-block>
+    </div>
+    <p>
+      Since most components here are dumb (input driven), most of them should be using the
+      <a href="https://angular.io/api/core/ChangeDetectionStrategy">OnPush change detection strategy</a>, maybe with the help of the
+      <a href="https://angular.io/api/core/ChangeDetectorRef">ChangeDetectorRef</a> if need be.
+    </p>
+
+    <h3 class="mat-h3">Feature modules</h3>
+    <p>
+      Feature modules are where you put your... features, yeah I know. The simplest way to kickstart a new feature is to generate it using
+      the cli, with something like
+      <app-inline-code>ng g module features/feature-a --routing --route=feature-a-route -m=app-routing.module</app-inline-code>. Isn't it
+      great ? You just generated a new feature module with lazy-loading and all it took was one command.
+    </p>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around space-around">
+      <img src="assets/architecture/modules-feature.png" />
+      <app-code-block [code]="featureModuleCode"></app-code-block>
+    </div>
+    <p>
+      What ? No <app-inline-code>index.ts</app-inline-code> file ?! Yeah, you shouldn't need it here because, except for the routing part,
+      no other place of the application should depend on a feature module (see below for more details about module inter-dependencies).
+    </p>
+
+    <h3 class="mat-h3">Shared feature modules</h3>
+    <p>
+      Those modules serve the same kind of purpose as the <app-inline-code>SharedModule</app-inline-code> but with a more dedicated scope.
+      For example, you could create a <app-inline-code>FormModule</app-inline-code> as a shared feature because you don't need every feature
+      to have access to all form related components. Please consider creating a shared feature module only if a clear need arises, usually
+      everything should be ok by just putting your common entities in either <app-inline-code>CoreModule</app-inline-code> or
+      <app-inline-code>SharedModule</app-inline-code> depending on their type. You may start considering using shared feature modules if you
+      excess your <a href="https://angular.io/guide/build#configuring-size-budgets" target="_blank">budgets</a> on certain part of your app.
+    </p>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Modules inter-dependencies</h2>
+  <section>
+    <p>
+      As with most code bases, we want our dependencies to look more like a directed graph and we don't want any circular dependencies!
+      Since a picture is worth a thousand words, here goes:
+    </p>
+    <img src="assets/architecture/modules-dependencies.png" />
+    <p>To summarize</p>
+    <ul>
+      <li><app-inline-code>CoreModule</app-inline-code> entities do not have imports coming from the rest of the code base.</li>
+      <li>
+        <app-inline-code>SharedModule</app-inline-code> entities do not have imports coming from the rest of the code base either, exception
+        being maybe to import services or models from <app-inline-code>CoreModule</app-inline-code>. Ideally, you should be able to
+        copy/paste your <app-inline-code>SharedModule</app-inline-code> folder in another application with as little effort as possible (or
+        make it a library).
+      </li>
+      <li>
+        Feature modules entities can import entities from <app-inline-code>CoreModule</app-inline-code> and
+        <app-inline-code>SharedModule</app-inline-code>, but have no knowledge of entities coming from other feature modules. There are 2
+        main exceptions to this:
+        <ul>
+          <li>A feature can have an indirect knowledge of another feature by knowing how to route to that feature.</li>
+          <li>
+            A feature can have a more direct knowledge of other features by being a "feature container", so it is a feature whose main
+            responsibility is to wire up other features in the same way as the
+            <app-inline-code>app-routing.module.ts</app-inline-code> does.
+          </li>
+        </ul>
+      </li>
+      <li><app-inline-code>AppModule</app-inline-code>, being the container of it all, can import anything from anywhere.</li>
+    </ul>
+  </section>
+</app-article>

@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-title>C3</mat-card-title>
+  <mat-card-subtitle>OnPush change detection with interval inside triggering every second</mat-card-subtitle>
+  <mat-card-content *ngIf="number$ | async as num">
+    Double of {{ num }} is {{ getDouble(num) }}. Number of template evaluations: {{ templateEvaluations }}
+  </mat-card-content>
+</mat-card>

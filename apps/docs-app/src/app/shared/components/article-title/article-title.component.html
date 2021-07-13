@@ -1,0 +1,6 @@
+<h1 class="mat-h1 d-flex flex-column">
+  <span><ng-content></ng-content></span>
+  <span class="mat-h5">
+    <ng-container *ngIf="lastUpdate">{{ lastUpdate | date }} - </ng-container> {{ textContent | readingTime }}
+  </span>
+</h1>

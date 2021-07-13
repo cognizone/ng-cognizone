@@ -1,0 +1,14 @@
+div {
+  margin-top: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+a {
+  padding: 8px 0 8px 8px;
+  text-align: start;
+  white-space: pre-wrap;
+
+  &:not(.active) {
+    color: rgba(0, 0, 0, 0.87);
+  }
+}

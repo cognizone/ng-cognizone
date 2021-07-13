@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title>C2</mat-card-title>
+  <mat-card-subtitle>OnPush change detection</mat-card-subtitle>
+  <mat-card-content>
+    <p>Double of {{ number }} is {{ getDouble(number) }}.</p>
+    <p>Number of template evaluations: {{ templateEvaluations }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="onButtonClick()">CLICK</button>
+  </mat-card-actions>
+</mat-card>

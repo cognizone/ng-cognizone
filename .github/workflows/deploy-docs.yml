@@ -1,0 +1,42 @@
+name: deploy-docs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: 14.x
+      - name: Git checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Git set user
+        run: |
+          git config --local user.email "$(git log --format='%ae' HEAD^!)"
+          git config --local user.name "$(git log --format='%an' HEAD^!)"
+      - name: Cache node modules global
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
+      - name: Cache node modules local
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules-local
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
+      - run: npm i
+      - run: npm run build-compodoc
+      - run: npx rimraf ./docs
+      - run: npm run nx -- run docs-app:build --prod
+      - run: git add ./docs
+      - run: git commit -m="[skip ci] deploy docs-app"
+      - run: git push

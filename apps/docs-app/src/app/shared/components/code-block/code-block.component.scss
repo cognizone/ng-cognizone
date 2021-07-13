@@ -1,0 +1,15 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'vendors/bootstrap/abstract';
+
+pre {
+  @include border-radius();
+  background-color: $app-code-block-bg-color;
+  padding: 8px;
+  white-space: pre-wrap;
+}
+
+code {
+  @include code-font();
+  color: $app-color-white;
+}

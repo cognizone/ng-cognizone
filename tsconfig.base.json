@@ -22,7 +22,9 @@
       "@cognizone/ng-application-profile": ["libs/ng-application-profile/src/index.ts"],
       "@cognizone/elastic": ["libs/elastic/src/index.ts"],
       "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"],
-      "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"]
+      "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"],
+      "@app/*": ["apps/docs-app/src/app/*"],
+      "@env/*": ["apps/docs-app/src/environments/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

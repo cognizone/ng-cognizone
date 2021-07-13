@@ -1,0 +1,8 @@
+:host table td:not(:last-child) {
+  padding-right: 24px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}

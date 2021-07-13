@@ -21,6 +21,8 @@
     "ng-application-profile": { "tags": [] },
     "elastic": { "tags": [] },
     "transloco-langstring": { "tags": [] },
-    "ng-yasgui": { "tags": [] }
+    "ng-yasgui": { "tags": [] },
+    "docs-app": { "tags": [] },
+    "docs-app-e2e": { "tags": [], "implicitDependencies": ["docs-app"] }
   }
 }

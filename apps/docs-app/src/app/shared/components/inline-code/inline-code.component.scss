@@ -1,0 +1,7 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+code {
+  @include code-font();
+  background-color: $app-inline-code-bg-color;
+}

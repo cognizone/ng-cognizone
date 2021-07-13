@@ -1,0 +1,45 @@
+<mat-toolbar class="header mat-elevation-z5" color="primary">
+  <button mat-icon-button [disabled]="!hasPages" (click)="sideMenu.toggle()"><mat-icon>menu</mat-icon></button>
+  <!-- TODO When a real home page is there -->
+  <!-- <button [routerLink]="['/']" mat-button><mat-icon>home</mat-icon> Ng-cognizone</button> -->
+  <button [routerLink]="['/packages']" mat-button>
+    <img style="width: 24px; height: 24px" src="assets/icons/cognizone.png" />
+    Libraries
+  </button>
+  <button [routerLink]="['/architecture']" mat-button>Architecture</button>
+  <div style="flex-grow: 1"></div>
+  <a href="https://bitbucket.org/cognizone/ng-cognizone/" mat-button target="_blank">
+    <img style="width: 24px; height: 24px" src="assets/icons/bitbucket.svg" />
+    Bitbucket
+    <ng-container *ngIf="version$ | async as version">v{{ version }}</ng-container>
+  </a>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav [mode]="startSidenavMode$ | async" [opened]="!hasPages ? false : (isMediumScreen$ | async)" #sideMenu fixedInViewport>
+    <app-section-nav [pages]="pages$ | async"></app-section-nav>
+  </mat-sidenav>
+  <mat-sidenav mode="side" position="end" fixedInViewport [opened]="endSidenavOpened$ | async">
+    <app-anchor-nav></app-anchor-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar *ngIf="title">
+      {{ title }}
+      <ng-container *ngIf="subtitle"> - {{ subtitle }}</ng-container>
+    </mat-toolbar>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+      <div *ngIf="pagination$ | async as pagination" fxLayout="row">
+        <a *ngIf="pagination.previous" [routerLink]="[pagination?.previous?.path]" mat-button (click)="scrollToTop()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+          {{ pagination?.previous?.label }}
+        </a>
+        <div style="flex-grow: 1"></div>
+        <a *ngIf="pagination.next" [routerLink]="[pagination?.next?.path]" mat-button (click)="scrollToTop()">
+          {{ pagination?.next?.label }}
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </a>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<div *ngIf="easter$ | async as html" class="easter" [innerHTML]="html"></div>

@@ -1,0 +1,10 @@
+<mat-card>
+  <div class="app-container">
+    <a [href]="target || src" target="_blank">
+      <img #img [src]="src" [ngStyle]="style" />
+    </a>
+    <div class="app-spinner-container">
+      <mat-spinner *ngIf="loading"></mat-spinner>
+    </div>
+  </div>
+</mat-card>

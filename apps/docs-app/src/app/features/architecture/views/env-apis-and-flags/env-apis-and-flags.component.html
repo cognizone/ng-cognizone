@@ -1,0 +1,44 @@
+<app-article>
+  <app-article-title [lastUpdate]="lastUpdate">Env, apis and flags</app-article-title>
+  <h2 class="mat-h2" appAnchor>Environment</h2>
+  <section>
+    <p>
+      Developing an Angular application is a lot like survival: there are millions of way to do it, but it's always better to make use of
+      your environment. The most typical use-case is to define you base api like so:
+    </p>
+
+    <app-code-block [code]="env1"></app-code-block>
+
+    <p>This is quite practical but we can do even better with some proxy !</p>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Proxy</h2>
+  <section>
+    <p>
+      A really nice thing to use is webpack's proxy that is integrated inside angular/cli. It can be as simple as below and like that, we
+      have a cleaner environment to leave for future generations.
+    </p>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around">
+      <app-code-block language="javascript" [code]="proxyConf"></app-code-block>
+      <app-code-block [code]="env2"></app-code-block>
+      <app-code-block [code]="packageJson" language="json"></app-code-block>
+    </div>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Env flags and routing</h2>
+  <section>
+    <p>
+      You can adapt your application's content by using your environment directly in
+      <app-inline-code>app-routing.module.ts</app-inline-code>, like here:
+    </p>
+    <app-code-block url="assets/src/app/app-routing.module.ts"></app-code-block>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Feature flags</h2>
+  <section>
+    <p>
+      Coming soon (?)...
+      <!-- https://netbasal.com/the-ultimate-guide-to-implementing-feature-flags-in-angular-applications-d4ae1fd33684 -->
+    </p>
+  </section>
+</app-article>

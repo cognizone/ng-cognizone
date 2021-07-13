@@ -1,0 +1,20 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
+
+$czls-headers: 'h1', 'h2', 'h3', 'h4', 'h5';
+@each $header1 in $czls-headers {
+  #{$header1} + p {
+    margin-top: 1rem;
+  }
+  p + #{$header1} {
+    margin-top: 2rem;
+  }
+  @each $header2 in $czls-headers {
+    #{$header1} + #{$header2} {
+      margin-top: 2rem;
+    }
+  }
+}
+
+p + p {
+  margin-top: 1rem;
+}

@@ -1,0 +1,176 @@
+<app-article>
+  <app-article-title [lastUpdate]="lastUpdate">Components</app-article-title>
+  <h2 class="mat-h2" appAnchor>General information</h2>
+  <section>
+    <p>
+      Here are a few global rules to follow when creating a component:
+    </p>
+    <ul>
+      <li>
+        Methods that are not used in the template and that are not life-cycle methods should be private, so that it's easier to see
+        <span appImgTooltip="https://wandervogeldiary.files.wordpress.com/2011/07/i-see-dead-people.jpg">actual dead code</span>.
+      </li>
+      <li>
+        Injected services should be private, and by extension, not used directly in the template. So usage of services should be proxied by
+        the component's attributes and/or methods.
+      </li>
+      <li>At its base, a component is a class, so it shouldn't be 5000+ lines longs. (300 is already too long in most cases)</li>
+      <li>
+        Same thing for the html template, is it too long? You might want to create "sub components" to split a bit your presentation logic
+        (and maybe make them OnPush? 😁)
+      </li>
+    </ul>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Dumb/smart spectrum</h2>
+  <section>
+    <p>
+      Since you are developing a web application, the environment you are in is stateful, and the components you create are, in some way or
+      another, conscious of that state. In that regard, the dumbest possible component is one for which its local state is only dependent on
+      its inputs (and outputs of its children). On the other side of the spectrum, the "smartest" component can be totally aware of the
+      global state and so it's internal state is mostly driven by calls to services.
+    </p>
+    <p>
+      So, is there a best solution? The short answer is "no", the long answer is "no, but let me explain...". Intuitively, a dumb component
+      is considered better since it could be associated to pure functions and those are great right ? It's more predictable, easier to
+      maintain and easier to test. But we are in an application with a state, we cannot have only dumb components. And so your next question
+      would be, how smart a smart component should be ? It's hard to pinpoint but here are a few rules of thumb:
+    </p>
+    <ul>
+      <li>
+        Globally speaking, a smart component should, in its essence, be a bridge between dumb components and the service layer, but still
+        has a low/medium complexity.
+      </li>
+      <li>
+        In this regard, it should not know about url to contact and have complex query building logic, this should be given to the service
+        layer. So, if you are going to search for cats trough an api, you should have a <app-inline-code>CatService</app-inline-code> that
+        knows about the corresponding endpoint and how to interact with it.
+
+        <app-code-block [code]="catExample"></app-code-block>
+      </li>
+    </ul>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Change detection</h2>
+  <section>
+    <p>
+      By default, angular use some eager change detection strategy, so the template of a component is evaluated multiple times whenever the
+      user interacts with the page. Here below are twice the (almost) same component (<app-code-link
+        path="app/features/architecture/components/cd-default/cd-default.component.ts"
+        >ts</app-code-link
+      >
+      and
+      <app-code-link path="app/features/architecture/components/cd-default/cd-default.component.html">html</app-code-link>), the only
+      difference being that C1 has the default change detection and C2 has the OnPush change detection. There is also a third (C3) component
+      that you can toggle which has an OnPush detection strategy and used rxjs' interval inside.
+    </p>
+    <mat-card>
+      <mat-form-field>
+        <mat-label>"number" input for C1 and C2</mat-label>
+        <input matInput [formControl]="numberControl" type="number" />
+      </mat-form-field>
+      <div fxLayout>
+        <app-cd-default [number]="numberControl.value"></app-cd-default>
+        <app-cd-on-push [number]="numberControl.value"></app-cd-on-push>
+        <div>
+          <button mat-raised-button (click)="showIntervalComponent = !showIntervalComponent">Toggle Component with interval inside</button>
+          <app-on-push-async-pipe *ngIf="showIntervalComponent"></app-on-push-async-pipe>
+        </div>
+      </div>
+    </mat-card>
+    <p>
+      After playing a bit with the different interactive elements above, you might have seen interesting stuff:
+    </p>
+    <ul>
+      <li>
+        C1 has its rendering count increasing whenever there is some interaction with the page: a button being click, a tooltip being
+        rendered, the input value being changed, etc.
+      </li>
+      <li>C2's rendering count only increases when you click on its button or when you change the input value.</li>
+      <li>
+        When C3 is rendered, we see that C1 is evaluated every time the interval is fired inside C3. This is because of how angular
+        interacts with <a href="https://medium.com/better-programming/zone-js-for-angular-devs-573d89bbb890">Zone.js</a>. You can see an
+        example of how to opt out of Zone.js for performance reason
+        <app-code-link path="app/shared/components/anchor-nav/anchor-nav.component.ts" [showPreview]="false">here</app-code-link>.
+      </li>
+    </ul>
+    <p>
+      All in all, we see that the <app-inline-code>getDouble</app-inline-code> method is called a lot of times. This number of evaluations
+      is not a problem per se and most of the time it is not an issue because angular kinda knows when to stop evaluating templates.
+      Regardless, you need to keep in mind that, in regular components, you need to keep the complexity of your methods and getters used in
+      your template as low as possible.
+    </p>
+  </section>
+
+  <h3 class="mat-h3">OnPush</h3>
+  <section>
+    <p>
+      So OnPush is really great but it comes with a few shortcomings. Components that follow this strategy have their templates only
+      evaluated when their inputs change or when the user interacts within the scope of these components, which means:
+    </p>
+    <ul>
+      <li>
+        This change detection on the inputs is not smart in anyway, so if one of the inputs is an object, changing one of its property will
+        not trigger change detection. That is one of the reasons why immutability is a big part of angular development and reactive
+        programming in general.
+      </li>
+      <li>You have to do some nitpicking if you deal with async and/or observables.</li>
+    </ul>
+  </section>
+
+  <div class="mat-h3">OnPush & async</div>
+  <section>
+    <p>
+      You have 2 main ways of handling async scenarios, either using
+      <a href="https://angular.io/api/core/ChangeDetectorRef">ChangeDetectionRef</a> or the
+      <a href="https://angular.io/api/common/AsyncPipe">AsyncPipe</a> (or a combination of both). The first solution might give you a code
+      that looks like this:
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="space-around">
+      <app-code-block url="assets/src/app/features/architecture/components/on-push-cd-ref/on-push-cd-ref.component.ts"></app-code-block>
+      <app-code-block url="assets/src/app/features/architecture/components/on-push-cd-ref/on-push-cd-ref.component.html"></app-code-block>
+    </div>
+
+    <p>
+      Ok, this is a working solution, optimized and the html is clean buuuuuuut... the typescript part is a bit complex and that is with
+      only one subscription. Fortunately, we have the <app-inline-code>AsyncPipe</app-inline-code> to the rescue!
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="space-around">
+      <app-code-block
+        url="assets/src/app/features/architecture/components/on-push-async-pipe/on-push-async-pipe.component.ts"
+      ></app-code-block>
+      <app-code-block
+        url="assets/src/app/features/architecture/components/on-push-async-pipe/on-push-async-pipe.component.html"
+      ></app-code-block>
+    </div>
+
+    <p>
+      Hey, that is one fancy component, the html is clean and the typescript is elegantly simple (and it is the code of the C3 component
+      used above). There is even no need to handle the subscription's life-cycle, because the
+      <app-inline-code>AsyncPipe</app-inline-code> is that great and it should be your go-to solution for this kind of problem, even with
+      the default detection strategy!
+    </p>
+
+    <div class="mat-h3" appImgTooltip="https://www.flickfilosopher.com/wptest/wp-content/uploads/2008/10/tennanthamletyorick.gif">
+      OnPush or not OnPush ?
+    </div>
+    <p>
+      You might have seen this coming, but there is no clear answer for this, it depends on the situation (doesn't it always ?). But hey, I
+      like lists so here are some thoughts:
+    </p>
+    <ul>
+      <li>
+        If your component is really dumb, and that its inputs follows the immutability principle, you should make it OnPush, it should be
+        effortless f it is as dumb as yu think.
+      </li>
+      <li>
+        If your component is further on the spectrum and that you don't see any performance issue, there usually is no need for the OnPush
+        strategy and the possible complexity that this might add to your code
+      </li>
+      <li>Most of the components in your <app-inline-code>SharedModule</app-inline-code> should be OnPush.</li>
+    </ul>
+  </section>
+  <!-- <h2 class="mat-h2" appAnchor>Composition, mixins and inheritance</h2> -->
+</app-article>
