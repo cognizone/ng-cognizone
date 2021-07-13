@@ -212,6 +212,40 @@
           }
         }
       }
+    },
+    "elastic": {
+      "projectType": "library",
+      "root": "libs/elastic",
+      "sourceRoot": "libs/elastic/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/elastic/tsconfig.lib.json",
+            "project": "libs/elastic/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/elastic/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/elastic/src/**/*.ts", "libs/elastic/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/elastic"],
+          "options": {
+            "jestConfig": "libs/elastic/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

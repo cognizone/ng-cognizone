@@ -18,6 +18,7 @@
     "workspace": { "tags": [] },
     "application-profile": { "tags": [] },
     "devtools": { "tags": [] },
-    "ng-application-profile": { "tags": [] }
+    "ng-application-profile": { "tags": [] },
+    "elastic": { "tags": [] }
   }
 }

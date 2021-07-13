@@ -19,7 +19,8 @@
       "@cognizone/model-utils": ["libs/model-utils/src/index.ts"],
       "@cognizone/application-profile": ["libs/application-profile/src/index.ts"],
       "@cognizone/devtools": ["libs/devtools/src/index.ts"],
-      "@cognizone/ng-application-profile": ["libs/ng-application-profile/src/index.ts"]
+      "@cognizone/ng-application-profile": ["libs/ng-application-profile/src/index.ts"],
+      "@cognizone/elastic": ["libs/elastic/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
