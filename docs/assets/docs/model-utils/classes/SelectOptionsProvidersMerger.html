@@ -1,0 +1,642 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@cognizone/model-utils</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@cognizone/model-utils</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li >SelectOptionsProvidersMerger</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/models/select-option.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Merges multiple SelectOptionsProvider together to form a unified one.</p>
+
+            </p>
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="../interfaces/SelectOptionsProvider.html" target="_self" >SelectOptionsProvider</a></code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getOptions" >getOptions</a>
+                            </li>
+                            <li>
+                                <a href="#getValueOption" >getValueOption</a>
+                            </li>
+                            <li>
+                                <a href="#hasOptionFor" >hasOptionFor</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(providers: SelectOptionsProvider<T>[])</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/lib/models/select-option.ts:93</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>providers</td>
+                                                  
+                                                        <td>
+                                                                    <code>SelectOptionsProvider&lt;T&gt;[]</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOptions"></a>
+                    <span class="name">
+                        <span ><b>getOptions</b></span>
+                        <a href="#getOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOptions(query: <a href="../undefineds/Nil.html" target="_self">Nil&lt;string&gt;</a>, params: <a href="../interfaces/GetSelectOptionsParams.html" target="_self">GetSelectOptionsParams</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/lib/models/select-option.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../interfaces/SelectOptionsProvider.html">SelectOptionsProvider</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#Nil" target="_self" >Nil&lt;string&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>params</td>
+                                    <td>
+                                                <code><a href="../interfaces/GetSelectOptionsParams.html" target="_self" >GetSelectOptionsParams</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getValueOption"></a>
+                    <span class="name">
+                        <span ><b>getValueOption</b></span>
+                        <a href="#getValueOption"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getValueOption(value: T)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/lib/models/select-option.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../interfaces/SelectOptionsProvider.html">SelectOptionsProvider</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                            <code>T</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SelectOption.html" target="_self" >Observable&lt;SelectOption&lt;T&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasOptionFor"></a>
+                    <span class="name">
+                        <span ><b>hasOptionFor</b></span>
+                        <a href="#hasOptionFor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasOptionFor(value: T)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/lib/models/select-option.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../interfaces/SelectOptionsProvider.html">SelectOptionsProvider</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                            <code>T</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { combineLatest, from, Observable } from &#x27;rxjs&#x27;;
+import { filter, first, map, mergeMap, switchMap, toArray } from &#x27;rxjs/operators&#x27;;
+
+import { LangString, LangStringSimple } from &#x27;./lang-string&#x27;;
+import { Nil, notNil } from &#x27;./nil&#x27;;
+
+/**
+ * Kind of an augmented KeyValue type to be used whenever we have case where a user has to select an option, being it in a select, an autocomplete, etc.
+ * This is mostly there in an effort of consistency, to have interoperable libraries and data models.
+ */
+export interface SelectOption&lt;T &#x3D; string&gt; {
+  /**
+   * The value associated to the SelectOption. In a given set, this should be unique.
+   */
+  value: T;
+  /**
+   * The label, used for presentational purposes
+   */
+  label: SelectOptionLabel;
+  /**
+   * Set tu true if this option is disabled, useful when needing to display historical values.
+   */
+  disabled?: boolean;
+  /**
+   * Can store whatever, placeholder for library to put whatever they need here.
+   */
+  data?: {};
+}
+
+/**
+ * The label of a {@link SelectOption}
+ */
+export type SelectOptionLabel &#x3D; string | LangString | LangStringSimple;
+
+/**
+ * For consistency, this interface is to be used when needing to use counts for {@link SelectOption}
+ */
+export interface SelectOptionCounts {
+  [value: string]: number;
+}
+
+/**
+ * a TrackByFn to be used with an &#x60;*ngFor&#x60; in case it is used on an array of {@link SelectOption}
+ */
+export function trackBySelectOption&lt;T&gt;(index: number, option: SelectOption&lt;T&gt;): T {
+  return option.value;
+}
+
+/**
+ * This will (naively) check that on the labels of the given option matches the query.
+ */
+export function selectOptionMatchQuery&lt;T&gt;(option: SelectOption&lt;T&gt;, query: Nil&lt;string&gt;): boolean {
+  if (!query) return true;
+  const lowerQuery &#x3D; query.toLowerCase();
+  const allLabels &#x3D; [];
+  if (typeof option.label &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+    allLabels.push(option.label);
+  } else {
+    Object.values(option.label).forEach(labels &#x3D;&gt; allLabels.push(...labels));
+  }
+  return allLabels.some(label &#x3D;&gt; label.toLowerCase().includes(lowerQuery));
+}
+
+/**
+ * Any service or other that provides an array of SelectOption should implement this interface for consistency and interoperability.
+ */
+export interface SelectOptionsProvider&lt;T&gt; {
+  /**
+   * Given the query, will return a filtered array of &#x60;SelectOption&#x60; that all matches.
+   */
+  getOptions(query: Nil&lt;string&gt;, params: GetSelectOptionsParams): Observable&lt;(SelectOption&lt;T&gt; | SelectOptionGroup&lt;T&gt;)[]&gt;;
+
+  /**
+   * Given a value, will return the SelectOption corresponding that value.
+   */
+  getValueOption(value: T): Observable&lt;SelectOption&lt;T&gt;&gt;;
+
+  /**
+   * Returns &#x60;true&#x60; if this provider has a &#x60;SelectOption&#x60; that is linked to the given value.
+   */
+  hasOptionFor(value: T): Observable&lt;boolean&gt;;
+}
+
+export interface GetSelectOptionsParams {
+  counts?: Nil&lt;SelectOptionCounts&gt;;
+  lang?: Nil&lt;string&gt;;
+}
+
+/**
+ * Merges multiple SelectOptionsProvider together to form a unified one.
+ * @deprectated
+ */
+export class SelectOptionsProvidersMerger&lt;T&gt; implements SelectOptionsProvider&lt;T&gt; {
+  constructor(private providers: SelectOptionsProvider&lt;T&gt;[]) {}
+
+  /**
+   * see {@link SelectOptionsProvider}
+   */
+  getOptions(query: Nil&lt;string&gt;, params: GetSelectOptionsParams): Observable&lt;(SelectOption&lt;T&gt; | SelectOptionGroup&lt;T&gt;)[]&gt; {
+    const obs &#x3D; this.providers.map(provider &#x3D;&gt; provider.getOptions(query, params));
+    return combineLatest(obs).pipe(map(allOptions &#x3D;&gt; allOptions.reduce((acc, curr) &#x3D;&gt; [...acc, ...curr], [])));
+  }
+
+  /**
+   * see {@link SelectOptionsProvider}
+   */
+  getValueOption(value: T): Observable&lt;SelectOption&lt;T&gt;&gt; {
+    return from(this.providers).pipe(
+      mergeMap(provider &#x3D;&gt; provider.hasOptionFor(value).pipe(map(hasOption &#x3D;&gt; (hasOption ? provider : null)))),
+      filter(notNil),
+      first(),
+      switchMap(provider &#x3D;&gt; provider.getValueOption(value)),
+      first()
+    );
+  }
+
+  /**
+   * see {@link SelectOptionsProvider}
+   */
+  hasOptionFor(value: T): Observable&lt;boolean&gt; {
+    return from(this.providers).pipe(
+      mergeMap(provider &#x3D;&gt; provider.hasOptionFor(value)),
+      toArray(),
+      map(hasOptions &#x3D;&gt; hasOptions.some(hasOption &#x3D;&gt; hasOption))
+    );
+  }
+}
+
+/**
+ * Represents a group SelectOption, might be useful when having grouped options in selects for example
+ */
+export interface SelectOptionGroup&lt;T &#x3D; string&gt; {
+  /**
+   * Label of the group
+   */
+  label?: SelectOptionLabel;
+
+  /**
+   * Options that are inside that group
+   */
+  options: SelectOption&lt;T&gt;[];
+}
+
+export function getAllSelectOptions&lt;T&gt;(options: (SelectOption&lt;T&gt; | SelectOptionGroup&lt;T&gt;)[]): SelectOption&lt;T&gt;[] {
+  const allOptions: SelectOption&lt;T&gt;[] &#x3D; [];
+  options.forEach(option &#x3D;&gt; {
+    if (&#x27;value&#x27; in option) {
+      allOptions.push(option);
+    } else {
+      allOptions.push(...option.options);
+    }
+  });
+  return allOptions;
+}
+
+export function groupSelectOptions&lt;T&gt;(options: (SelectOption&lt;T&gt; | SelectOptionGroup&lt;T&gt;)[]): SelectOptionGroup&lt;T&gt;[] {
+  const allGroups: SelectOptionGroup&lt;T&gt;[] &#x3D; [];
+  let lastDynamicGroup: SelectOptionGroup&lt;T&gt; | undefined;
+  for (const option of options) {
+    if (isSelectOption(option)) {
+      if (!lastDynamicGroup) {
+        lastDynamicGroup &#x3D; { options: [] };
+        allGroups.push(lastDynamicGroup);
+      }
+      lastDynamicGroup.options.push(option);
+    } else {
+      lastDynamicGroup &#x3D; undefined;
+      allGroups.push(option);
+    }
+  }
+  return allGroups;
+}
+
+function isSelectOption&lt;T&gt;(o: SelectOption&lt;T&gt; | SelectOptionGroup&lt;T&gt;): o is SelectOption&lt;T&gt; {
+  return &#x27;value&#x27; in o;
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'SelectOptionsProvidersMerger.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
