@@ -6,6 +6,7 @@ module.exports = {
     '<rootDir>/libs/devtools',
     '<rootDir>/libs/ng-application-profile',
     '<rootDir>/libs/elastic',
-    '<rootDir>/libs/transloco-langstring'
+    '<rootDir>/libs/transloco-langstring',
+    '<rootDir>/libs/ng-yasgui'
   ]
 };

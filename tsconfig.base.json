@@ -21,7 +21,8 @@
       "@cognizone/devtools": ["libs/devtools/src/index.ts"],
       "@cognizone/ng-application-profile": ["libs/ng-application-profile/src/index.ts"],
       "@cognizone/elastic": ["libs/elastic/src/index.ts"],
-      "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"]
+      "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"],
+      "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -280,6 +280,40 @@
           }
         }
       }
+    },
+    "ng-yasgui": {
+      "projectType": "library",
+      "root": "libs/ng-yasgui",
+      "sourceRoot": "libs/ng-yasgui/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ng-yasgui/tsconfig.lib.json",
+            "project": "libs/ng-yasgui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-yasgui/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ng-yasgui/src/**/*.ts", "libs/ng-yasgui/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ng-yasgui"],
+          "options": {
+            "jestConfig": "libs/ng-yasgui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

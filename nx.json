@@ -20,6 +20,7 @@
     "devtools": { "tags": [] },
     "ng-application-profile": { "tags": [] },
     "elastic": { "tags": [] },
-    "transloco-langstring": { "tags": [] }
+    "transloco-langstring": { "tags": [] },
+    "ng-yasgui": { "tags": [] }
   }
 }
