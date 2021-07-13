@@ -178,6 +178,40 @@
           }
         }
       }
+    },
+    "ng-application-profile": {
+      "projectType": "library",
+      "root": "libs/ng-application-profile",
+      "sourceRoot": "libs/ng-application-profile/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ng-application-profile/tsconfig.lib.json",
+            "project": "libs/ng-application-profile/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-application-profile/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ng-application-profile/src/**/*.ts", "libs/ng-application-profile/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ng-application-profile"],
+          "options": {
+            "jestConfig": "libs/ng-application-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

@@ -17,6 +17,7 @@
     "model-utils": { "tags": [] },
     "workspace": { "tags": [] },
     "application-profile": { "tags": [] },
-    "devtools": { "tags": [] }
+    "devtools": { "tags": [] },
+    "ng-application-profile": { "tags": [] }
   }
 }

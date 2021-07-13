@@ -2,8 +2,7 @@
   "name": "@cognizone/application-profile",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^11.2.14",
-    "@angular/core": "^11.2.14"
+    "@cognizone/model-utils": "^1.28.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
