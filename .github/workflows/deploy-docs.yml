@@ -36,7 +36,7 @@ jobs:
       - run: npm i
       - run: npm run build-compodoc
       - run: npx rimraf ./docs
-      - run: npm run nx -- run docs-app:build --prod
+      - run: npm run nx -- run docs-app:build --prod --base-href=/ng-cognizone/ --deploy-url=/ng-cognizone/
       - run: git add ./docs
       - run: git commit -m="[skip ci] deploy docs-app"
       - run: git push
