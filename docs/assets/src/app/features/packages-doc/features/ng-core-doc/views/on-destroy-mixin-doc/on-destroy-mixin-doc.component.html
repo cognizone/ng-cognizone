@@ -1,0 +1,58 @@
+<mat-tab-group [dynamicHeight]="true" appMatTabRouted>
+  <mat-tab label="OVERVIEW">
+    <p>
+      <app-inline-code>OnDestroyMixin()</app-inline-code> provides an easy to use observable that is fired at component/directive/pipe
+      destruction. The most direct use case for this is to use it in a <app-inline-code>takeUntil()</app-inline-code> close like below.
+    </p>
+    <mat-card>
+      <mat-card-content>
+        <app-code-block [code]="code1"></app-code-block>
+      </mat-card-content>
+    </mat-card>
+    <p>
+      Since it is the most common use case, <app-inline-code>OnDestroyMixin()</app-inline-code> comes with a helper method called
+      <app-inline-code>untilDestroyed()</app-inline-code> which is just a wrapper for
+      <app-inline-code>takeUntil(this.onDestroy$)</app-inline-code>
+    </p>
+    <mat-card>
+      <mat-card-content>
+        <app-code-block [code]="code2"></app-code-block>
+      </mat-card-content>
+    </mat-card>
+    <p>There are 2 more helpers that can be quite useful:</p>
+    <ul>
+      <li>
+        The <app-inline-code>firstUntilDestroyed()</app-inline-code> method which provides a combination of
+        <app-inline-code>first()</app-inline-code> and <app-inline-code>untilDestroyed()</app-inline-code>
+      </li>
+      <li>
+        The <app-inline-code>OnDestroy$</app-inline-code> class that is just a quick wrapper for
+        <app-inline-code>OnDestroyMixin(class{{ '{' }}})</app-inline-code>
+      </li>
+    </ul>
+    <p>With all this, the code of a component could be as simple as</p>
+    <mat-card>
+      <mat-card-content>
+        <app-code-block [code]="code3"></app-code-block>
+      </mat-card-content>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="API">
+    <h2>API reference for OnDestroyMixin</h2>
+    <h3>Mixins</h3>
+    <h4>OnDestroyMixin</h4>
+    <mat-card>
+      <mat-card-title>Properties</mat-card-title>
+      <app-api-table [apis]="onDestroyMixinProperties"></app-api-table>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Methods</mat-card-title>
+      <app-api-table [apis]="onDestroyMixinMethods"></app-api-table>
+    </mat-card>
+    <h3>Classes</h3>
+    <h4>OnDestroy$</h4>
+    <p>
+      Just a wrapper for <app-inline-code>OnDestroyMixin(class{{ '{' }}})</app-inline-code>, see the mixin above for more details
+    </p>
+  </mat-tab>
+</mat-tab-group>

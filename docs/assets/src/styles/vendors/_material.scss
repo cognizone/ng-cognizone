@@ -1,0 +1,10 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+mat-card {
+  margin: 20px;
+}
+
+// adapting to bootstrap's reboot
+mat-form-field * {
+  box-sizing: unset;
+}

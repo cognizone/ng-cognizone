@@ -1,0 +1,98 @@
+<app-article>
+  <app-article-title [lastUpdate]="lastUpdate">Getting started</app-article-title>
+  <h2 class="mat-h2" appAnchor>Intro</h2>
+  <section>
+    <p>
+      Creating a new angular application is as simple as
+      <app-inline-code>ng new my-application-name --routing --style=scss</app-inline-code>. If you haven't already, it's advised to take a
+      look at the <a href="https://angular.io/tutorial" target="_blank">tour of heroes tutorial on the angular website</a> which is a nice
+      introduction to the angular environment. After creating the basic structure, there are a few things to do in order to make it
+      architecturally great (again?).
+    </p>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Adapting tsconfig</h2>
+  <section>
+    <p>
+      We want to add some entries in the root <app-inline-code>tsconfig.json</app-inline-code> file, particularly look at the paths and
+      strict attributes here below. <app-inline-code>"strict": true</app-inline-code> enable all
+      <a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html" target="_blank">strict flags</a> for the typescript
+      compiler. The <app-inline-code>paths</app-inline-code> entries' main purpose is to have cleaner imports like
+      <app-inline-code>import {{ '{' }} MyService } from '@app/core'</app-inline-code> and
+      <app-inline-code>import {{ '{' }} environment } from '@env/environment'</app-inline-code>
+    </p>
+    <app-code-block language="json" [code]="tsconfig1"></app-code-block>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Linting and formatting</h2>
+  <h3 class="mat-h3" appAnchor>Setup</h3>
+  <section>
+    <p>You just need to run this command line and follow the questions and everything will be setup for you:</p>
+
+    <app-code-block language="bash" [code]="lintingCommand"></app-code-block>
+
+    <p>To summarize, here is what the cli has done for your project:</p>
+    <ul>
+      <li>We are following Cognizone conventions by extending tslint and prettier configs coming from both packages</li>
+      <li>With lint-staged set up, every time files are committed, they are passed trough prettier and tslint, which mean</li>
+      <ul>
+        <li>
+          They are formatted by prettier, following rules coming from @cognizone/prettier, so no more white space, tabs, comma, ...
+          discussions and issues with merge conflict
+        </li>
+        <li>
+          *.ts files go trough tslint and are fixed by it, so, for example, imports are ordered, which again minimize conflicts. But tslint
+          cannot fix everything by itself, so if one or more files fail linting, the commit is aborted.
+        </li>
+        <li>
+          If you accepted to format your files, every compatible files have been formatted using prettier. Beware that since all those files
+          will be in your next commit, they might throw errors if they are not tslint compliant. See below for a workaround if you don't
+          have the time or the courage to fix them all.
+        </li>
+      </ul>
+    </ul>
+    <p>
+      For more information about this cli, please check
+      <a href="https://verdaccio.cogni.zone/-/web/detail/@cognizone/cli">its homepage</a>.
+    </p>
+  </section>
+
+  <h3 class="mat-h3" appAnchor>Tslint workarounds</h3>
+  <section>
+    <p>
+      Sometime, tslint is driving you crazy and so you might want to disable it in some places or be able to commit without it bugging you.
+      If so, here are a few tip & tricks.
+    </p>
+
+    <h4 class="mat-h4">Tslint rules are not applicable for this line/file</h4>
+    <p>You can disable tslint rules like in the code below:</p>
+    <app-code-block url="assets/src/app/core/services/highlight.service.ts"></app-code-block>
+    <ul>
+      <li>
+        On line 2, we see that <app-inline-code>no-import-side-effect</app-inline-code> and
+        <app-inline-code>ordered-imports</app-inline-code> are disabled for all the lines below line 2 in this file.
+      </li>
+      <li>
+        On the line just above <app-inline-code>declare var Prism: any;</app-inline-code>, we see that, for this particular line, the
+        <app-inline-code>no-any</app-inline-code> rule is disabled.
+      </li>
+    </ul>
+    <p>
+      Before doing such adaptation, please take a moment to verify if you really need to disable the rules, but is is acceptable to have
+      <app-inline-code>any</app-inline-code> types in a really generic par of the code for example (but you might want to use
+      <a href="https://mariusschulz.com/blog/the-unknown-type-in-typescript"> <app-inline-code>unknown</app-inline-code> </a> instead?).
+    </p>
+
+    <h4 class="mat-h4">Tslint rules are applicable, but I don't have the time to adapt everything right now.</h4>
+    <p>
+      Tslint rules are checked upon commit, using the git hooks, but you can disable it if need be. If you use the GUI from Intellij to
+      commit, you can disable the git hooks by disabling the checkbox as shown below:
+    </p>
+    <img src="assets/architecture/git-hooks-intellij.png" />
+    <p>
+      If you use git trough command line, when you commit, you can just add the <app-inline-code>--no-verify</app-inline-code> flag to your
+      command, like this:
+    </p>
+    <app-code-block code="git commit --no-verify -m'fix: an issue''" language="bash"></app-code-block>
+  </section>
+</app-article>

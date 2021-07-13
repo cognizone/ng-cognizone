@@ -1,0 +1,24 @@
+<div fxLayout="column">
+  <ng-container *ngFor="let page of _pages">
+    <ng-container *ngIf="page.pages; else linkTemplate">
+      <button mat-button (click)="page.opened = !page.opened">
+        <div class="section-header">
+          <span>{{ page.label }}</span>
+          <ng-container *ngIf="page.pages">
+            <mat-icon *ngIf="!page.opened">expand_more</mat-icon>
+            <mat-icon *ngIf="page.opened">expand_less</mat-icon>
+          </ng-container>
+        </div>
+      </button>
+      <ng-container *ngIf="page.opened">
+        <mat-divider></mat-divider>
+        <app-section-nav [pages]="page.pages"></app-section-nav>
+      </ng-container>
+    </ng-container>
+    <ng-template #linkTemplate>
+      <a mat-button [routerLink]="page.path" routerLinkActive="mat-primary" (click)="scrollToTop()">{{ page.label }}</a>
+    </ng-template>
+
+    <mat-divider></mat-divider>
+  </ng-container>
+</div>

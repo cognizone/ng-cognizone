@@ -1,0 +1,263 @@
+<app-article>
+  <app-article-title [lastUpdate]="lastUpdate">Styling</app-article-title>
+  <section>
+    <p>
+      Substance over form right ? But for a UI/UX to be great, you need some
+      <span appImgTooltip="https://giphygifs.s3.amazonaws.com/media/t1lmQR7sXeZJC/giphy.gif">pazazz</span>, and that comes from styling with
+      css (well, <a href="https://sass-lang.com/">scss</a> in our case). If you are not familiar with scss,
+      <a href="https://sass-lang.com/documentation/syntax">their documentation</a> is not very long and a great place to start.
+    </p>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>
+    Structuring
+  </h2>
+  <section>
+    <p>
+      As with the "angular part" of the app, we also want to have structure for our global styling. In a perfect world, your structure would
+      look like this so that it (kinda) follows
+      <a
+        href="https://sass-guidelin.es/#the-7-1-pattern"
+        appImgTooltip="https://miro.medium.com/max/628/1*0MP59mq0K_Hi2ECSb_Zwhg.png"
+        [imgStyle]="{ 'max-height': '800px', 'max-width': '400px' }"
+      >
+        the 7-1 pattern </a
+      >, but with a few quirks to make it Angular-y :
+    </p>
+    <div fxLayout fxLayoutAlign="start">
+      <img src="assets/architecture/styles-structure.png" />
+      <ul>
+        <li>
+          <app-inline-code>abstracts</app-inline-code>: here are all the scss files that do not produce any css on their own. That means
+          that you could <app-inline-code>@import '...';</app-inline-code> all the partials from this folder in another file and it will not
+          generate any css rules unless you declaratively use the mixins, placeholders, etc. that are inside those files.
+        </li>
+        <li>
+          <app-inline-code>base</app-inline-code>:
+          <app-blockquote from="https://sass-guidelin.es/#base-folder">
+            The base/ folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some
+            typographic rules, and probably a stylesheet defining some standard styles for commonly used HTML elements (that I like to call
+            _base.scss).
+          </app-blockquote>
+          <span> Note that you might have close to a 0% chance of having to create your own reset file (see below)</span>
+        </li>
+        <li><app-inline-code>layout</app-inline-code>: contains layout related styling, so mostly grid related rules.</li>
+        <li>
+          <app-inline-code>themes</app-inline-code>: You should just know that all sub-folders are one theme and need to follow the same
+          structure as the "root" styles folder. See below if you have needs for theming (did I just hear someone yell "Swiss" in the back
+          ?)
+        </li>
+        <li>
+          <app-inline-code>vendors</app-inline-code>: here you put scss code that imports styles from node_modules, one file per npm package
+          ideally. you can have a look at
+          <a
+            href="https://bitbucket.org/cognizone/ng-cognizone/src/master/projects/docs-app/src/styles/vendors/_material.scss"
+            appComponentTooltip="code"
+            [inputs]="{ url: 'assets/src/styles/vendors/_material.scss' }"
+            >_material.scss</a
+          >
+          for example.
+        </li>
+        <li>
+          <app-inline-code>main.scss</app-inline-code>: this is where the
+          <span appImgTooltip="https://media.giphy.com/media/VHngktboAlxHW/giphy-downsized-large.gif">magic</span> happens, its the file
+          that will be imported in your <app-inline-code>angular.json</app-inline-code> file an so that will be used to generate the global
+          styling of your app.
+          <app-code-block url="assets/src/styles/main.scss"></app-code-block>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <h2 class="mat-h2" appAnchor>Naming</h2>
+  <ul>
+    <li>
+      Everything should be in <app-inline-code>kebab-case</app-inline-code>, except for constants that should be in
+      <app-inline-code>SCREAMING-KEBAB-CASE</app-inline-code>.
+    </li>
+    <!-- TODO Not sure about this... -->
+    <!-- <li>
+    Classes created for your app should be prefixed by <app-inline-code>app-</app-inline-code> to prevent colliding issues with some
+    framework and/or library you might be using. For example, it is common to have some sort of container in your component, so you might
+    want to create your own <app-inline-code>.container</app-inline-code> css class, but this might clash with the
+    <a href="https://getbootstrap.com/docs/4.3/layout/grid/">Bootstrap one</a>.
+  </!-->
+    <li>
+      If you need modifier classes like the <app-inline-code>d-flex</app-inline-code> class from Bootstrap, you should prefix them with
+      <app-inline-code>is-</app-inline-code>, so you might have a class called <app-inline-code>is-flex</app-inline-code> for example.
+    </li>
+  </ul>
+
+  <h2 class="mat-h2" appAnchor>Components</h2>
+  <p>
+    One of the purpose of the aforementioned structure is to enable you to easily and cleanly style your components. So, you might want to
+    use your variables and your mixins in your component stylesheet right ? You first reflex might be to do something like this:
+  </p>
+
+  <app-code-block
+    [code]="badImportsScss"
+    language="scss"
+    appImgTooltip="https://media.giphy.com/media/xUOwG5IshvzNMdzR72/giphy.gif"
+  ></app-code-block>
+
+  <p>
+    This is not really great is it? We can do better ! First, you will have to adapt your
+    <app-inline-code>angular.json</app-inline-code> file. In particular, it's the
+    <a href="https://angular.io/guide/workspace-config#style-preprocessor-options">stylePreprocessorOptions</a> we want to add.
+  </p>
+
+  <app-code-block [code]="angularJsonImports" language="json"></app-code-block>
+
+  <p>With this, your component's stylesheet could be as elegant as</p>
+
+  <app-code-block url="assets/src/app/shared/components/code-block/code-block.component.scss"></app-code-block>
+
+  <h2 class="mat-h2" appAnchor>Theming (compile time)</h2>
+  <p>
+    If you followed the previous sections, you just need a few extra steps for each theme you will have. First you'll have to add a folder
+    for your new theme like shown in the structure section above for a sweet sweet dark theme. Ideally, you will not need much more then the
+    <app-inline-code>mains.scss</app-inline-code> and <app-inline-code>_variables.scss</app-inline-code>. You can see below a naive
+    implementation of a dark theme.
+  </p>
+  <div fxLayout="row wrap" fxLayoutAlign="space-around">
+    <app-code-block
+      url="assets/src/styles/themes/dark/abstracts/_variables.scss"
+      prefix="// src/styles/themes/dark/abstracts/_variables.scss"
+    ></app-code-block>
+    <app-code-block url="assets/src/styles/themes/dark/main.scss" prefix="// src/styles/themes/dark/main.scss"></app-code-block>
+  </div>
+  <p>
+    This might feel a bit convoluted but this structure gives you theming both for global styling and component styling. The last thing you
+    have to adapt is the infamous <app-inline-code>angular.json</app-inline-code> and add two new configurations for you theme next to the
+    production configuration.
+  </p>
+  <app-code-block [code]="angularJsonDarkTheme1"></app-code-block>
+  <p>
+    You will notice that the "production-dark" is a merge between the "production" and the "dark" configurations. With all that, your
+    scripts for developing and building the app could be:
+  </p>
+  <app-code-block [code]="darkThemeScripts" language="bash"></app-code-block>
+
+  <h3 class="mat-h3">Note on angular 9+</h3>
+  <p>
+    Coming in angular 9, we will be able to use multiple configurations in one command line, so the "production-dark" could be removed and
+    the scripts would look like
+  </p>
+  <app-code-block [code]="darkThemeScripts9" language="bash"></app-code-block>
+
+  <h2 class="mat-h2" appAnchor>Css reset</h2>
+  <p>
+    The thing is, all browsers are not born equal and in regard to this topic, default css rules for buttons, list and others might not be
+    consistent depending on which browser you are using (and in particular, which
+    <span appImgTooltip="https://4.bp.blogspot.com/-RKy5Z397Ca0/Tybm-UdyjBI/AAAAAAAABNI/QppDWOmJiRw/s1600/evilinternetexplorer.jpg"
+      >browser your user is using</span
+    >). In this regard, it is always better to do a good cleanup at the start to standardize default styling.
+  </p>
+
+  <p>There are a few options available depending on the strength of the visual identity your application need to have:</p>
+  <ul>
+    <li>
+      <a href="https://meyerweb.com/eric/tools/css/reset/">Reset CSS</a>: this ancestral css reset is quite basic and kinda remove
+      everything, so it's a good base if you want to define everything on your own. It is also available as an
+      <a href="https://www.npmjs.com/package/reset.css">unofficial npm package</a>.
+    </li>
+    <li>
+      <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> is a more lenient reset that keeps a few basics (like lists
+      keeping their bullets). It's a good start to have consistency but also usability for the base html elements.
+    </li>
+    <li>
+      <a href="https://getbootstrap.com/docs/4.3/content/reboot/">Reboot</a> is the css reset of bootstrap and it you should be your choice,
+      well, if you use bootstrap in your app. It might be a good choice even if it's the only part of bootstrap you will use (and it is
+      based on Normalize.css!). Beware that it comes with a great design idea which is
+      <app-inline-code>*{{ '{' }}box-sizing: border-box;}</app-inline-code> which might be problematic for some situations, like when using
+      <app-inline-code>mat-form-field</app-inline-code> from angular material.
+    </li>
+  </ul>
+
+  <h2 class="mat-h2" appAnchor>Css frameworks/libraries</h2>
+  <p>
+    So, chances are, you don't want to start from scratch for your styles right? There are a
+    <span appImgTooltip="https://media.giphy.com/media/cvyjkCiOw1QRy/giphy.gif">lots of solutions available to us today</span>.
+  </p>
+  <h3 class="mat-h3" appAnchor>Angular material</h3>
+  <p>
+    Ok ok, this is more of an angular/javascript library than a css one, but hear me out. So, material is a set of extensive
+    <a href="https://material.io/design/">styling guidelines</a> that aims to provide a highly consistent and qualitative UX. Because of
+    this, material has a really strong visual identity so it might be hard to tweak it to your needs, but if your needs are close enough to
+    the material design specs, this should be your go-to solution. In deed, the angular material library comes with a lot of qualitative
+    components and services that are easy(-ish) to use and requires from you very few (styling) customization.
+  </p>
+  <p>
+    And what about css? The thing is, angular material is more about providing styled components then a css framework. You do have a few
+    classes to be used anywhere in your app like the ones for <a href="https://material.angular.io/guide/elevation">elevation</a> or for
+    <a href="https://material.angular.io/guide/typography">typography</a>, but that is it. So, if you need need more, please look at the
+    rest of this list.
+  </p>
+
+  <h3 class="mat-h3" appAnchor>Bootstrap</h3>
+  <p>
+    <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a> is the current ruler of the css frameworks
+    empire and it has been wearing the crown for several years now. It really is a good place to start, and even without the "component"
+    part of the framework, all the different helpers classes are quite useful, like their
+    <a href="https://getbootstrap.com/docs/4.3/layout/grid/">grid system</a> or the different
+    <a href="https://getbootstrap.com/docs/4.3/utilities/borders/">utility classes</a>. If you already are using a more component oriented
+    framework like angular material, it might be a good idea that, instead of directly importing
+    <app-inline-code>bootstrap.scss</app-inline-code>, you put a dedicated file in your vendors folder and import only the needed scss files
+    from bootstrap. Based on the source-code of <app-inline-code>bootstrap.scss</app-inline-code>, you could have something like this:
+  </p>
+  <app-code-block [code]="bootstrapScss" language="scss"></app-code-block>
+  <p>
+    But we are in angular, so what do we want? Styled components! And when do we want them? Right now! So the previous example is not good
+    enough, we need to split things up a bit:
+  </p>
+  <div class="d-flex align-items-start" style="justify-content: space-around;">
+    <img src="assets/architecture/styles-bootstrap.png" />
+    <div class="d-flex flex-wrap align-items-start" style="justify-content: space-around;">
+      <app-code-block
+        prefix="// styles/vendors/bootstrap/_abstract.scss"
+        url="assets/src/styles/vendors/bootstrap/_abstract.scss"
+      ></app-code-block>
+      <app-code-block prefix="// styles/vendors/bootstrap/_base.scss" url="assets/src/styles/vendors/bootstrap/_base.scss"></app-code-block>
+      <app-code-block
+        prefix="// styles/vendors/bootstrap/_override.scss"
+        url="assets/src/styles/vendors/bootstrap/_override.scss"
+      ></app-code-block>
+      <app-code-block prefix="// styles/vendors/_bootstrap.scss" url="assets/src/styles/vendors/_bootstrap.scss"></app-code-block>
+    </div>
+  </div>
+  <p>With this in place, you can use bootstrap at both:</p>
+  <ul>
+    <li>
+      the global level: you just need to add <app-inline-code>@import 'vendors/bootstrap.scss';</app-inline-code> to your
+      <app-inline-code>main.scss</app-inline-code> file
+    </li>
+    <li>
+      the component level: depending on what you need, you might just want to add
+      <app-inline-code>@import 'vendors/bootstrap/abstract';</app-inline-code> to your file to start using bootstrap stuff in your
+      component, like here below.
+    </li>
+  </ul>
+
+  <app-code-block url="assets/src/app/shared/components/code-block/code-block.component.scss"></app-code-block>
+
+  <h3 class="mat-h3" appAnchor>Others</h3>
+  <p>Here is a short list of qualitative libraries that you might want to at least read about:</p>
+  <ul>
+    <li>
+      <a href="https://www.bourbon.io/">Bourbon</a> is a pure scss library that comes only with abstract entities (mixin, etc.). So this is
+      just like <app-inline-code>lodash</app-inline-code> but for scss. A good example of its usefulness is its
+      <a href="https://www.bourbon.io/docs/latest/#ellipsis">ellipsis mixin</a> or the more trivial but expressive
+      <a href="https://www.bourbon.io/docs/latest/#border-left-radius">border-left-radius mixin</a>.
+    </li>
+    <li>
+      <a href="https://tailwindcss.com">Tailwind</a> is, as its developers say, a utility based css library, and the thing is, it's how we
+      mostly use Bootstrap anyway. So, to its core, this library is really "styled components" friendly. The downfall is that it is quite
+      <a href="https://www.jerriepelser.com/blog/using-tailwindcss-with-angular/">hard to use with "vanilla" angular</a> for the moment
+      since it uses PostCSS, but with the cli's future developments, this might be easier to integrate at some point.
+    </li>
+    <li>
+      Last but definitely not least, <a href="https://bulma.io/">Bulma</a> is really worth checking out. It's pure (s)css, so no javascript
+      involved and its api is quite straightforward. This might be the most serious competitor of Bootstrap at the moment.
+    </li>
+  </ul>
+</app-article>

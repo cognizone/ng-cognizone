@@ -1,0 +1,19 @@
+blockquote {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+  font: 14px/22px;
+
+  &:hover a {
+    display: block;
+  }
+}
+a {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

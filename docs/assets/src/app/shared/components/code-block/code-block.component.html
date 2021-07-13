@@ -1,0 +1,4 @@
+<pre *ngIf="codeHtml; else loading" class="line-numbers"><code [innerHTML]="codeHtml"></code></pre>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

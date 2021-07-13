@@ -1,0 +1,18 @@
+<main class="container">
+  <h1>Libraries</h1>
+  <div class="row">
+    <div *ngFor="let lib of descriptions" class="col-3">
+      <mat-card [routerLink]="lib.path">
+        <mat-card-header>
+          <mat-card-title>{{lib.title}}</mat-card-title>
+        </mat-card-header>
+        <img *ngIf="lib.img" mat-card-image [src]="lib.img" [alt]="lib.title" />
+        <mat-card-content>
+          <p>
+            {{lib.description}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</main>

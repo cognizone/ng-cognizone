@@ -1,0 +1,10 @@
+{
+  "name": "@cognizone/application-profile",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@cognizone/model-utils": "^1.28.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+body {
+  text-align: justify;
+}
+
+img {
+  @include border-radius();
+}
