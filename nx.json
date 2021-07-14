@@ -25,6 +25,7 @@
     "docs-app": { "tags": [] },
     "docs-app-e2e": { "tags": [], "implicitDependencies": ["docs-app"] },
     "permissions": { "tags": [] },
-    "operation": { "tags": [] }
+    "operation": { "tags": [] },
+    "legi-cv": { "tags": [] }
   }
 }

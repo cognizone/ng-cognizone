@@ -10,6 +10,7 @@ module.exports = {
     '<rootDir>/libs/ng-yasgui',
     '<rootDir>/apps/docs-app',
     '<rootDir>/libs/permissions',
-    '<rootDir>/libs/operation'
+    '<rootDir>/libs/operation',
+    '<rootDir>/libs/legi-cv'
   ]
 };

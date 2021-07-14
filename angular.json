@@ -521,6 +521,40 @@
           }
         }
       }
+    },
+    "legi-cv": {
+      "projectType": "library",
+      "root": "libs/legi-cv",
+      "sourceRoot": "libs/legi-cv/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/legi-cv/tsconfig.lib.json",
+            "project": "libs/legi-cv/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/legi-cv/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/legi-cv/src/**/*.ts", "libs/legi-cv/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/legi-cv"],
+          "options": {
+            "jestConfig": "libs/legi-cv/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
