@@ -359,7 +359,9 @@
                 "output": "./assets/ng-yasgui/"
               }
             ],
-            "stylePreprocessorOptions": { "includePaths": ["apps/docs-app/src/styles"] },
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/docs-app/src/styles"]
+            },
             "styles": ["apps/docs-app/src/styles/main.scss"],
             "scripts": []
           },
@@ -448,6 +450,40 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/docs-app-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "permissions": {
+      "projectType": "library",
+      "root": "libs/permissions",
+      "sourceRoot": "libs/permissions/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/permissions/tsconfig.lib.json",
+            "project": "libs/permissions/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/permissions/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/permissions/src/**/*.ts", "libs/permissions/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/permissions"],
+          "options": {
+            "jestConfig": "libs/permissions/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

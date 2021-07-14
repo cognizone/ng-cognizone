@@ -1,0 +1,14 @@
+{
+  "name": "@cognizone/permissions",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": ">=8",
+    "@angular/core": ">=8",
+    "@angular/router": ">=8",
+    "@cognizone/model-utils": "^1.30.0",
+    "@cognizone/ng-core": "^1.30.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

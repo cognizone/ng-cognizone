@@ -24,7 +24,8 @@
       "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"],
       "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"],
       "@app/*": ["apps/docs-app/src/app/*"],
-      "@env/*": ["apps/docs-app/src/environments/*"]
+      "@env/*": ["apps/docs-app/src/environments/*"],
+      "@cognizone/permissions": ["libs/permissions/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
