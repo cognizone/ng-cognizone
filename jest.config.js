@@ -9,6 +9,7 @@ module.exports = {
     '<rootDir>/libs/transloco-langstring',
     '<rootDir>/libs/ng-yasgui',
     '<rootDir>/apps/docs-app',
-    '<rootDir>/libs/permissions'
+    '<rootDir>/libs/permissions',
+    '<rootDir>/libs/operation'
   ]
 };

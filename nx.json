@@ -24,6 +24,7 @@
     "ng-yasgui": { "tags": [] },
     "docs-app": { "tags": [] },
     "docs-app-e2e": { "tags": [], "implicitDependencies": ["docs-app"] },
-    "permissions": { "tags": [] }
+    "permissions": { "tags": [] },
+    "operation": { "tags": [] }
   }
 }
