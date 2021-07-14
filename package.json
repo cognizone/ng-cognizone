@@ -53,6 +53,7 @@
     "@types/lodash-es": "^4.17.4",
     "bootstrap": "^4.6.0",
     "clipboard": "^2.0.8",
+    "immer": "^9.0.5",
     "lodash-es": "^4.17.21",
     "ngx-json-viewer": "^3.0.2",
     "prismjs": "^1.24.1",

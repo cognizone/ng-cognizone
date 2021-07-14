@@ -11,6 +11,7 @@ module.exports = {
     '<rootDir>/apps/docs-app',
     '<rootDir>/libs/permissions',
     '<rootDir>/libs/operation',
-    '<rootDir>/libs/legi-cv'
+    '<rootDir>/libs/legi-cv',
+    '<rootDir>/libs/json-model-graph'
   ]
 };

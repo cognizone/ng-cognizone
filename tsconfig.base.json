@@ -27,7 +27,8 @@
       "@env/*": ["apps/docs-app/src/environments/*"],
       "@cognizone/permissions": ["libs/permissions/src/index.ts"],
       "@cognizone/operation": ["libs/operation/src/index.ts"],
-      "@cognizone/legi-cv": ["libs/legi-cv/src/index.ts"]
+      "@cognizone/legi-cv": ["libs/legi-cv/src/index.ts"],
+      "@cognizone/json-model-graph": ["libs/json-model-graph/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

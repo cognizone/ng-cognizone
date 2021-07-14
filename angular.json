@@ -555,6 +555,40 @@
           }
         }
       }
+    },
+    "json-model-graph": {
+      "projectType": "library",
+      "root": "libs/json-model-graph",
+      "sourceRoot": "libs/json-model-graph/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/json-model-graph/tsconfig.lib.json",
+            "project": "libs/json-model-graph/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/json-model-graph/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/json-model-graph/src/**/*.ts", "libs/json-model-graph/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/json-model-graph"],
+          "options": {
+            "jestConfig": "libs/json-model-graph/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
