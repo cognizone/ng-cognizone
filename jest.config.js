@@ -12,6 +12,7 @@ module.exports = {
     '<rootDir>/libs/permissions',
     '<rootDir>/libs/operation',
     '<rootDir>/libs/legi-cv',
-    '<rootDir>/libs/json-model-graph'
+    '<rootDir>/libs/json-model-graph',
+    '<rootDir>/libs/material-icons'
   ]
 };

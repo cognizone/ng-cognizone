@@ -589,6 +589,40 @@
           }
         }
       }
+    },
+    "material-icons": {
+      "projectType": "library",
+      "root": "libs/material-icons",
+      "sourceRoot": "libs/material-icons/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/material-icons/tsconfig.lib.json",
+            "project": "libs/material-icons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/material-icons/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/material-icons/src/**/*.ts", "libs/material-icons/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/material-icons"],
+          "options": {
+            "jestConfig": "libs/material-icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
