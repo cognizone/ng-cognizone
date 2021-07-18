@@ -1,7 +1,17 @@
 {
   "name": "ng-cognizone",
-  "version": "0.0.0",
-  "license": "MIT",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git"
+  },
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    }
+  ],
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
