@@ -15,6 +15,7 @@ module.exports = {
     '<rootDir>/libs/json-model-graph',
     '<rootDir>/libs/material-icons',
     '<rootDir>/libs/legi-shared',
-    '<rootDir>/libs/legi-styles'
+    '<rootDir>/libs/legi-styles',
+    '<rootDir>/libs/user-action'
   ]
 };

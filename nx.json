@@ -30,6 +30,7 @@
     "json-model-graph": { "tags": [] },
     "material-icons": { "tags": [] },
     "legi-shared": { "tags": [] },
-    "legi-styles": { "tags": [] }
+    "legi-styles": { "tags": [] },
+    "user-action": { "tags": [] }
   }
 }

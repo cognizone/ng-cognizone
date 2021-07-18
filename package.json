@@ -58,6 +58,7 @@
     "@angular/router": "^11.2.0",
     "@compodoc/compodoc": "^1.1.13",
     "@ngneat/transloco": "^2.22.0",
+    "@ngneat/transloco-locale": "^1.4.0",
     "@ngxs/devtools-plugin": "^3.7.2",
     "@ngxs/store": "^3.7.2",
     "@nrwl/angular": "11.6.3",
