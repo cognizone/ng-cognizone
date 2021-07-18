@@ -1,0 +1,26 @@
+mat-chip.mat-chip.mat-standard-chip {
+  // fixes issue with height not expanding, but might be a "time bomb" for IE, see here https://github.com/angular/components/blob/master/src/material/chips/chips.scss#L55
+  @extend %czls-body-1;
+
+  height: unset;
+  border: 1px solid $czls-border-color;
+  background-color: transparent;
+
+  &.is-selected {
+    border-color: $czls-color-primary;
+    color: $czls-color-primary;
+    background-color: $czls-color-primary-background-light;
+  }
+  &:not(.legacy-appearance) {
+    color: $czls-font-color-high;
+    border: 1px solid $czls-color-primary;
+    .mat-chip-remove {
+      color: $czls-color-primary;
+      background-color: transparent;
+      opacity: 1;
+    }
+    &::after {
+      background: $czls-color-primary;
+    }
+  }
+}

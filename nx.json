@@ -28,6 +28,8 @@
     "operation": { "tags": [] },
     "legi-cv": { "tags": [] },
     "json-model-graph": { "tags": [] },
-    "material-icons": { "tags": [] }
+    "material-icons": { "tags": [] },
+    "legi-shared": { "tags": [] },
+    "legi-styles": { "tags": [] }
   }
 }

@@ -1,0 +1,5 @@
+@import '../common';
+
+textarea {
+  @extend %input-typography;
+}

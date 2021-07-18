@@ -1,0 +1,23 @@
+@import 'components-pack';
+
+.checkbox-container {
+  min-height: 40px;
+}
+
+mat-checkbox {
+  @extend %mt-3;
+}
+
+mat-checkbox::ng-deep {
+  .mat-checkbox-label {
+    white-space: pre-wrap;
+  }
+
+  .mat-checkbox-inner-container {
+    margin: 4px 8px auto 0;
+  }
+}
+
+.checkboxes-container {
+  display: flex;
+}

@@ -1,0 +1,5 @@
+$custom-typography: mat-typography-config(
+  $font-family: $czls-font-family
+);
+
+@include angular-material-typography($custom-typography);

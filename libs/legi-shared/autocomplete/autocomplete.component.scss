@@ -1,0 +1,30 @@
+@import '../common';
+
+input {
+  @extend %input-typography;
+}
+
+// textarea
+mat-form-field.my-single-field::ng-deep {
+  .mat-form-field-wrapper {
+    min-height: 51px;
+  }
+  .mat-form-field-outline {
+    min-height: $czls-form-field-height;
+  }
+  .mat-form-field-prefix {
+    top: 0.45em;
+    left: -2px;
+  }
+}
+
+// input
+mat-form-field:not(.my-single-field)::ng-deep {
+  .mat-form-field-outline {
+    min-height: $czls-form-field-height;
+  }
+  .mat-form-field-prefix {
+    top: 0.45em;
+    left: -2px;
+  }
+}

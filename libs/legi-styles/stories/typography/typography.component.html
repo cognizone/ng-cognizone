@@ -1,0 +1,123 @@
+<div class="container">
+  <h1 class="mb-3">Typography</h1>
+  <table class="mb-3">
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngFor="let modifier of modifiers">
+          <div class="czls-title">
+            <div>{{ modifier.label }}</div>
+            <div *ngIf="modifier.className">(.{{ modifier.className }})</div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let typography of typographies">
+        <td class="mb-3">
+          <div>{{ typography.label }}</div>
+          <div *ngIf="typography.selector">({{ typography.selector }})</div>
+          <div *ngIf="!typography.selector">(.{{ typography.className }})</div>
+        </td>
+        <td *ngFor="let modifier of modifiers">
+          <p [ngClass]="modifier.className + ' ' + typography.className">
+            {{ typography.label }}
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="mb-3">
+          <div>Link</div>
+          <div>(.czls-link)</div>
+        </td>
+        <td *ngFor="let modifier of modifiers">
+          <p class="czls-link" [ngClass]="modifier.className">
+            Link
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="mb-3">
+          <div>Link underline</div>
+          <div>(.czls-link-u)</div>
+        </td>
+        <td *ngFor="let modifier of modifiers">
+          <p class="czls-link-u" [ngClass]="modifier.className">
+            Link
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Spacing</h2>
+  <div class="row">
+    <div class="col">
+      <h3>Between header and paragraph</h3>
+      <ul>
+        <li>
+          When a heading is followed by paragraph text, include 16px below Headings 1–4.
+        </li>
+        <li>
+          When body copy is followed by a heading, include 32px of space above Heading 1–6.
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>h4</h4>
+      <p>
+        Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Just my
+        luck, no ice. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. Yeah, but your
+        scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.
+      </p>
+      <h4>h4 again</h4>
+      <p>
+        Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Must go faster... go, go, go, go, go! Jaguar shark! So tell
+        me - does it really exist? Just my luck, no ice. You're a very talented young man, with your own clever thoughts and ideas. Do you
+        need a manager?
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>Between headers</h3>
+      <p>For stacked headings, include 32 px of space after heading.</p>
+    </div>
+    <div class="col">
+      <h4>h4</h4>
+      <h4>h4</h4>
+      <h4>h4</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>Between paragraphs</h3>
+      <p>For multiple paragraphs within the same section set the space between paragraphs to 16px.</p>
+    </div>
+    <div class="col">
+      <p>
+        God help us, we're in the hands of engineers. Hey, take a look at the earthlings. Goodbye! Hey, you know how I'm, like, always
+        trying to save the planet? Here's my chance. Yes, Yes, without the oops! So you two dig up, dig up dinosaurs? Is this my espresso
+        machine? Wh-what is-h-how did you get my espresso machine?
+      </p>
+
+      <p>
+        I gave it a cold? I gave it a virus. A computer virus. God help us, we're in the hands of engineers. Checkmate... Eventually, you do
+        plan to have dinosaurs on your dinosaur tour, right? This thing comes fully loaded. AM/FM radio, reclining bucket seats, and...
+        power windows.
+      </p>
+
+      <p>
+        Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. Forget the fat lady! You're
+        obsessed with the fat lady! Drive us out of here! So you two dig up, dig up dinosaurs? I was part of something special. Yeah, but
+        John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists.
+      </p>
+    </div>
+  </div>
+
+  <h2>Misc.</h2>
+  <h3>.is-capitalized</h3>
+  <p class="is-capitalized">
+    this class capitalize the first letter. In the code, the "this" at the beginning of this paragraph is actually in lowercase
+  </p>
+</div>

@@ -1,0 +1,13 @@
+// body to override material
+body .mat-icon {
+  width: $czls-icon-size-basis;
+  height: $czls-icon-size-basis;
+
+  &.is-high-emphasis {
+    color: $czls-font-color-high;
+  }
+}
+
+mat-icon svg {
+  vertical-align: baseline;
+}

@@ -623,6 +623,74 @@
           }
         }
       }
+    },
+    "legi-shared": {
+      "projectType": "library",
+      "root": "libs/legi-shared",
+      "sourceRoot": "libs/legi-shared/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/legi-shared/tsconfig.lib.json",
+            "project": "libs/legi-shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/legi-shared/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/legi-shared/src/**/*.ts", "libs/legi-shared/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/legi-shared"],
+          "options": {
+            "jestConfig": "libs/legi-shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "legi-styles": {
+      "projectType": "library",
+      "root": "libs/legi-styles",
+      "sourceRoot": "libs/legi-styles/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/legi-styles/tsconfig.lib.json",
+            "project": "libs/legi-styles/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/legi-styles/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/legi-styles/src/**/*.ts", "libs/legi-styles/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/legi-styles"],
+          "options": {
+            "jestConfig": "libs/legi-styles/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

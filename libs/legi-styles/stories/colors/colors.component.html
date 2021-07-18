@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Colors</h1>
+  <ng-container *ngFor="let group of colorGroups">
+    <h2>{{ group.label }}</h2>
+    <div class="row">
+      <div *ngFor="let color of group.colors" class="col-3">
+        <div class="my-color mb-3">
+          <div [style.background-color]="color.value"></div>
+          <div class="p-3">
+            <div class="czls-title">
+              {{ color.label }}
+            </div>
+            <div class="czls-body-2">{{ color.var }}: {{ color.value }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

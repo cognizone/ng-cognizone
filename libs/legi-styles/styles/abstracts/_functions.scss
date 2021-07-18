@@ -1,0 +1,10 @@
+@function to-rem($val) {
+  @return #{$val / 16px}rem;
+}
+
+@function get-col-width($col) {
+  // TODO responsive
+  $all-gutters: ($grid-columns) * $grid-gutter-width;
+  $col-width: (1200 - $all-gutters) / $grid-columns;
+  @return $col * $col-width + ($col) * $grid-gutter-width + $grid-gutter-width;
+}

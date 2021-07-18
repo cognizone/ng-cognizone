@@ -1,0 +1,7 @@
+@include mat-core($custom-mat-typography);
+
+$czls-primary: mat-palette($czls-primary-palette);
+$czls-accent: mat-palette($czls-accent-palette);
+$czls-theme: mat-light-theme($czls-primary, $czls-accent);
+
+@include angular-material-theme($czls-theme);

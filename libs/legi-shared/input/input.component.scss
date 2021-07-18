@@ -1,0 +1,20 @@
+@import '../common';
+
+input {
+  @extend %input-typography;
+}
+
+.is-readonly {
+  input {
+    @extend %readonly-typography;
+  }
+}
+
+:host ::ng-deep .mat-form-field-disabled {
+  .mat-form-field-prefix,
+  .mat-form-field-suffix {
+    mat-icon {
+      color: $czls-font-color-disabled;
+    }
+  }
+}

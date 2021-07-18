@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Buttons</h1>
+  <p>We use the <a class="czls-link-u" href="https://material.angular.io/components/button/overview">Material buttons</a>.</p>
+
+  <div *ngFor="let disabled of trueOrFalse" class="row">
+    <div class="col">
+      <button [disabled]="disabled" mat-raised-button color="primary">Button</button>
+    </div>
+    <div class="col">
+      <button [disabled]="disabled" class="has-border" mat-button color="primary">Button</button>
+    </div>
+    <div class="col">
+      <button [disabled]="disabled" mat-button color="primary">Button</button>
+    </div>
+
+    <div class="col">
+      <button [disabled]="disabled" mat-button color="warn">Button</button>
+    </div>
+
+    <div class="col">
+      <button mat-icon-button [disabled]="disabled"><mat-icon>add</mat-icon></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button mat-raised-button color="primary"><mat-icon>add</mat-icon>Button</button>
+    </div>
+    <div class="col">
+      <button class="has-border" mat-button color="primary"><mat-icon>add</mat-icon>Button</button>
+    </div>
+    <div class="col">
+      <button mat-button color="primary"><mat-icon>add</mat-icon>Button</button>
+    </div>
+
+    <div class="col">
+      <button mat-button color="warn"><mat-icon>add</mat-icon>Button</button>
+    </div>
+
+    <div class="col"></div>
+  </div>
+</div>

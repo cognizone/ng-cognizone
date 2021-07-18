@@ -13,6 +13,8 @@ module.exports = {
     '<rootDir>/libs/operation',
     '<rootDir>/libs/legi-cv',
     '<rootDir>/libs/json-model-graph',
-    '<rootDir>/libs/material-icons'
+    '<rootDir>/libs/material-icons',
+    '<rootDir>/libs/legi-shared',
+    '<rootDir>/libs/legi-styles'
   ]
 };

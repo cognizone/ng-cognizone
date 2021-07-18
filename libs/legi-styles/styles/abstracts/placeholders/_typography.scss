@@ -1,0 +1,97 @@
+%czls-h1 {
+  @include typography(to-rem(40px), 60px);
+  font-weight: normal;
+}
+
+%czls-h2 {
+  @include typography(to-rem(32px), 48px);
+  font-weight: normal;
+}
+
+%czls-h3 {
+  @include typography(to-rem(24px), 36px);
+  font-weight: normal;
+}
+
+%czls-h4 {
+  @include typography(to-rem(20px), 30px);
+  font-weight: $czls-font-weight-semi-bold;
+}
+
+%czls-h5 {
+  @include typography(to-rem(16px), 24px);
+  font-weight: $czls-font-weight-semi-bold;
+}
+
+%czls-title {
+  @include typography(to-rem(14px), 20px);
+  font-weight: $czls-font-weight-semi-bold;
+}
+
+%czls-body-1 {
+  @include typography(to-rem(16px), 24px, $czls-font-color-medium);
+  &.is-link {
+    @include text-link();
+  }
+}
+
+%czls-body-2 {
+  @include typography(to-rem(14px), 20px, $czls-font-color-medium);
+}
+
+%czls-caption {
+  @include typography(to-rem(12px), 16px, $czls-font-color-medium);
+}
+
+%czls-overline {
+  @include typography(to-rem(10px), 24px);
+}
+
+%czls-btn {
+  @include typography(to-rem(14px), 16px, $czls-color-primary);
+  font-weight: $czls-font-weight-bold;
+  &:not([href]) {
+    color: $czls-color-primary;
+  }
+}
+
+%czls-link {
+  @include typography(to-rem(14px), 16px, $czls-color-primary);
+  @include text-link();
+  &:not([href]) {
+    color: $czls-color-primary;
+  }
+}
+
+%czls-link-u {
+  @extend %czls-link;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%is-high-emphasis {
+  color: $czls-font-color-high !important;
+}
+
+%is-medium-emphasis {
+  color: $czls-font-color-medium !important;
+}
+
+%is-disabled {
+  color: $czls-font-color-disabled !important;
+}
+
+%is-capitalized {
+  &::first-letter {
+    text-transform: capitalize !important;
+  }
+}
+
+%legacy-typography {
+  font-size: to-rem(16px);
+  color: $czls-font-color-high;
+  font-weight: $czls-font-weight-normal;
+  font-family: $czls-font-family;
+  line-height: $czls-form-line-height-legacy;
+}

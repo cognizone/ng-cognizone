@@ -1,0 +1,11 @@
+.radio-container {
+  min-height: 40px;
+}
+
+mat-radio-button ::ng-deep .mat-radio-label-content {
+  white-space: normal;
+}
+
+.is-row mat-radio-button {
+  margin-right: 24px;
+}

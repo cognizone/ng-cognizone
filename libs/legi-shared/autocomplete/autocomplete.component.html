@@ -1,0 +1,64 @@
+<div class="d-flex flex-column">
+  <span *ngIf="label && legacyMode" class="czls-title">{{ label }}</span>
+  <mat-form-field *ngIf="multi; else singleTemplate" [class.mat-form-field-disabled]="disabled" [class.legacy-appearance]="legacyMode">
+    <mat-label *ngIf="label && !legacyMode">{{ label }} </mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <mat-chip-list #chipList>
+      <mat-chip
+        *ngFor="let value of modelAsOptions | selectOptionsSort: 'label'"
+        [disabled]="disabled"
+        [selectable]="false"
+        [class.legacy-appearance]="legacyMode"
+        [removable]="!disabled"
+        (removed)="removeValue(value)"
+      >
+        {{ value.label | czLangString }}
+        <mat-icon *ngIf="!disabled" matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input
+        #multiInput
+        matInput
+        autocomplete="off"
+        type="text"
+        [disabled]="disabled"
+        [placeholder]="placeholder"
+        [name]="name"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        type="text"
+        (input)="queryChanges.next(multiInput.value)"
+      />
+    </mat-chip-list>
+  </mat-form-field>
+
+  <ng-template #singleTemplate>
+    <mat-form-field class="my-single-field" [class.legacy-appearance]="legacyMode">
+      <mat-label *ngIf="label && !legacyMode">{{ label }} </mat-label>
+      <mat-icon matPrefix>search</mat-icon>
+      <textarea
+        #singleInput
+        matInput
+        autocomplete="off"
+        type="text"
+        [placeholder]="placeholder"
+        [name]="name"
+        [matAutocomplete]="auto"
+        [formControl]="singleInputControl"
+        [cdkTextareaAutosize]="true"
+        type="text"
+        (input)="queryChanges.next(singleInput.value)"
+        (blur)="onSingleBlur()"
+      >
+      </textarea>
+    </mat-form-field>
+  </ng-template>
+</div>
+
+<mat-autocomplete #auto [displayWith]="displayFn" [panelWidth]="panelWidth" (optionSelected)="onOptionSelected($event)">
+  <mat-option
+    *ngFor="let option of options | selectOptionsSort: sortType; trackBy: trackByFn"
+    [value]="option.value"
+    [matTooltip]="option.label | czLangString: lang"
+    >{{ option.label | czLangString: lang }}</mat-option
+  >
+</mat-autocomplete>

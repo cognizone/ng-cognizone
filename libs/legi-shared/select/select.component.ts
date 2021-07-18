@@ -1,0 +1,102 @@
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  ContentChild,
+  forwardRef,
+  Inject,
+  Input,
+  Optional,
+  TemplateRef
+} from '@angular/core';
+import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
+import { I18nService, LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
+import { getAllSelectOptions, LangString, LangStringSimple, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
+import { ControlComponent, Logger } from '@cognizone/ng-core';
+
+@Component({
+  selector: 'cz-select',
+  templateUrl: './select.component.html',
+  styleUrls: ['./select.component.scss'],
+  providers: [
+    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => SelectComponent), multi: true },
+    provideHasOptionsProvider(forwardRef(() => SelectComponent))
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class SelectComponent<T> extends ControlComponent<T> implements HasOptionsProvider<T> {
+  @Input()
+  placeholder?: string;
+  @Input()
+  label?: string;
+  @Input()
+  options: SelectOption<T>[] = [];
+  @Input()
+  set optionsProvider(value: SelectOptionsProvider<T>) {
+    this.useOptionsProvider(value);
+  }
+  @Input()
+  sortType?: SelectOptionSortType;
+
+  @Input()
+  canBeDiscarded: boolean = false;
+  @Input()
+  removeDisabledOptions: boolean = true;
+  @Input()
+  isCompact: boolean = false;
+  @ContentChild(TemplateRef, { static: false })
+  template!: TemplateRef<unknown>;
+
+  @Input()
+  hint?: string;
+
+  embeddedControl: FormControl = new FormControl();
+
+  get legacyMode(): boolean {
+    return this.config.appearance === 'legacy';
+  }
+
+  private allOptions?: SelectOption<T>[];
+
+  constructor(
+    @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
+    private i18nService: I18nService,
+    logger: Logger,
+    cdr: ChangeDetectorRef,
+    @Optional() controlContainer: ControlContainer
+  ) {
+    super(logger, cdr, controlContainer);
+  }
+
+  writeValue(value: T): void {
+    super.writeValue(value);
+    this.evaluateOptions();
+  }
+
+  getContext(option: SelectOption<T>): { $implicit: SelectOption<T>; option: SelectOption<T> } {
+    return { $implicit: option, option };
+  }
+
+  isString(label: string | LangString | LangStringSimple): label is string {
+    return typeof label === 'string';
+  }
+
+  private evaluateOptions(): void {
+    this.options = (this.allOptions ?? this.options ?? []).filter(option => {
+      if (option.disabled && this.removeDisabledOptions) {
+        return option.value === this.model;
+      }
+      return true;
+    });
+  }
+
+  private useOptionsProvider(provider: SelectOptionsProvider<T>): void {
+    this.subSink = provider.getOptions(undefined, { lang: this.i18nService.getActiveSimpleLang() }).subscribe(options => {
+      this.allOptions = getAllSelectOptions(options);
+      this.evaluateOptions();
+      this.cdr.markForCheck();
+    });
+  }
+}

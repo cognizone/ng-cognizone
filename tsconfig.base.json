@@ -29,7 +29,9 @@
       "@cognizone/operation": ["libs/operation/src/index.ts"],
       "@cognizone/legi-cv": ["libs/legi-cv/src/index.ts"],
       "@cognizone/json-model-graph": ["libs/json-model-graph/src/index.ts"],
-      "@cognizone/material-icons": ["libs/material-icons/src/index.ts"]
+      "@cognizone/material-icons": ["libs/material-icons/src/index.ts"],
+      "@cognizone/legi-shared": ["libs/legi-shared/src/index.ts"],
+      "@cognizone/legi-styles": ["libs/legi-styles/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

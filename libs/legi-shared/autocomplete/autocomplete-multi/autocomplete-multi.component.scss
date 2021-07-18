@@ -1,0 +1,12 @@
+@import '../../common';
+
+input {
+  @extend %input-typography;
+}
+
+.chips-container {
+  border: 1px solid $czls-font-color-medium;
+  border-radius: 4px;
+  // to keep the empty container at the same height as when it has content
+  min-height: 70px;
+}

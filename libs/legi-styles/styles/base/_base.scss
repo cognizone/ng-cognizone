@@ -1,0 +1,23 @@
+.czls-card {
+  @include make-border();
+  padding: $czls-card-padding;
+  @include mat-elevation-transition;
+  &.is-clickable {
+    cursor: pointer;
+    &:hover {
+      @include mat-elevation(2);
+    }
+  }
+}
+
+.czls-card-title {
+  margin-bottom: 16px;
+}
+
+.is-highlighted {
+  background-color: $czls-color-highlight;
+}
+
+a[disabled] {
+  pointer-events: none;
+}

@@ -1,0 +1,23 @@
+@import '../common';
+
+input {
+  @extend %input-typography;
+}
+
+.is-readonly {
+  input {
+    @extend %readonly-typography;
+  }
+
+  mat-datepicker-toggle {
+    display: none;
+  }
+}
+
+mat-form-field::ng-deep .mat-form-field-flex {
+  align-items: center;
+}
+
+mat-icon {
+  color: $czls-font-color-medium;
+}
