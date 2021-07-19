@@ -68,6 +68,7 @@
     "immer": "^9.0.5",
     "lodash-es": "^4.17.21",
     "ngx-json-viewer": "^3.0.2",
+    "ngx-monaco-editor": "^12.0.0",
     "prismjs": "^1.24.1",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",

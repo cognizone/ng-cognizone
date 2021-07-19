@@ -2,6 +2,7 @@
  * Public API Surface of model-utils
  */
 
+export * from './lib/models/any-object';
 export * from './lib/models/completable';
 export * from './lib/models/cz-label';
 export * from './lib/models/dictionary';

@@ -16,6 +16,7 @@ module.exports = {
     '<rootDir>/libs/material-icons',
     '<rootDir>/libs/legi-shared',
     '<rootDir>/libs/legi-styles',
-    '<rootDir>/libs/user-action'
+    '<rootDir>/libs/user-action',
+    '<rootDir>/libs/elastic-explorer'
   ]
 };

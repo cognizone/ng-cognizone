@@ -31,6 +31,7 @@
     "material-icons": { "tags": [] },
     "legi-shared": { "tags": [] },
     "legi-styles": { "tags": [] },
-    "user-action": { "tags": [] }
+    "user-action": { "tags": [] },
+    "elastic-explorer": { "tags": [] }
   }
 }

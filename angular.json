@@ -725,6 +725,40 @@
           }
         }
       }
+    },
+    "elastic-explorer": {
+      "projectType": "library",
+      "root": "libs/elastic-explorer",
+      "sourceRoot": "libs/elastic-explorer/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/elastic-explorer/tsconfig.lib.json",
+            "project": "libs/elastic-explorer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/elastic-explorer/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/elastic-explorer/src/**/*.ts", "libs/elastic-explorer/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/elastic-explorer"],
+          "options": {
+            "jestConfig": "libs/elastic-explorer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
