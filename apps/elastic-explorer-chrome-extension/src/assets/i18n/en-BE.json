@@ -1,0 +1,18 @@
+{
+  "global": {
+    "first_page_disabled": "",
+    "first_page": "",
+    "previous_page_disabled": "",
+    "previous_page": "",
+    "next_page_disabled": "",
+    "next_page": "",
+    "last_page_disabled": "",
+    "last_page": "",
+    "results_per_page": "Results",
+    "select_size": "",
+    "validation": {
+      "pattern": "url must start with http(s)://",
+      "required": "This field is required"
+    }
+  }
+}

@@ -17,6 +17,7 @@ module.exports = {
     '<rootDir>/libs/legi-shared',
     '<rootDir>/libs/legi-styles',
     '<rootDir>/libs/user-action',
-    '<rootDir>/libs/elastic-explorer'
+    '<rootDir>/libs/elastic-explorer',
+    '<rootDir>/apps/elastic-explorer-chrome-extension'
   ]
 };

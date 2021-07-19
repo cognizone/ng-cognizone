@@ -34,9 +34,7 @@ import { ELASTIC_EXPLORER_STATE_TOKEN, ElasticExplorerStateModel } from '../stor
 import { ElasticClientFactoryService } from './elastic-client-factory.service';
 import { ElasticInstanceService } from './elastic-instance-service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ElasticExplorerService {
   private get state$(): Observable<ElasticExplorerStateModel> {
     return this.store.select(ELASTIC_EXPLORER_STATE_TOKEN);

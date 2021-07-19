@@ -759,6 +759,127 @@
           }
         }
       }
+    },
+    "elastic-explorer-chrome-extension": {
+      "projectType": "application",
+      "root": "apps/elastic-explorer-chrome-extension",
+      "sourceRoot": "apps/elastic-explorer-chrome-extension/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/elastic-explorer-chrome-extension",
+            "index": "apps/elastic-explorer-chrome-extension/src/index.html",
+            "main": "apps/elastic-explorer-chrome-extension/src/main.ts",
+            "polyfills": "apps/elastic-explorer-chrome-extension/src/polyfills.ts",
+            "tsConfig": "apps/elastic-explorer-chrome-extension/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/elastic-explorer-chrome-extension/src/favicon.ico",
+              "apps/elastic-explorer-chrome-extension/src/assets",
+              "apps/elastic-explorer-chrome-extension/src/manifest.json",
+              "apps/elastic-explorer-chrome-extension/src/background.js",
+              { "glob": "**/*", "input": "node_modules/ngx-monaco-editor/assets/monaco", "output": "./assets/monaco/" },
+              { "glob": "**/*", "input": "node_modules/monaco-editor/min-maps", "output": "./assets/min-maps/" }
+            ],
+            "styles": ["apps/elastic-explorer-chrome-extension/src/styles/main.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/elastic-explorer-chrome-extension/src/styles"]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/elastic-explorer-chrome-extension/src/environments/environment.ts",
+                  "with": "apps/elastic-explorer-chrome-extension/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "elastic-explorer-chrome-extension:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "elastic-explorer-chrome-extension:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "elastic-explorer-chrome-extension:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/elastic-explorer-chrome-extension/src/**/*.ts",
+              "apps/elastic-explorer-chrome-extension/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/elastic-explorer-chrome-extension"],
+          "options": {
+            "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "elastic-explorer-chrome-extension-e2e": {
+      "root": "apps/elastic-explorer-chrome-extension-e2e",
+      "sourceRoot": "apps/elastic-explorer-chrome-extension-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/elastic-explorer-chrome-extension-e2e/cypress.json",
+            "tsConfig": "apps/elastic-explorer-chrome-extension-e2e/tsconfig.e2e.json",
+            "devServerTarget": "elastic-explorer-chrome-extension:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "elastic-explorer-chrome-extension:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/elastic-explorer-chrome-extension-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
     }
   }
 }

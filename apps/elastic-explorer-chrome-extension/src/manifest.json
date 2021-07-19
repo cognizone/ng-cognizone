@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Cognizone data explorer",
+  "version": "0.0.1",
+  "description": "Data explorer in chrome extension form",
+  "browser_action": {
+    "default_icon": "assets/cognizone-icon-150x150.png",
+    "default_title": "Cognizone data explorer"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "matches": ["*://*/"],
+      "js": ["background.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

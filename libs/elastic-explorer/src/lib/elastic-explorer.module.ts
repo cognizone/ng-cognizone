@@ -39,6 +39,7 @@ import { FilterObjectPipe } from './pipes/filter-object.pipe';
 import { JsonModelLabelPipe } from './pipes/json-model-label.pipe';
 import { RemoveCircularFromJsonModelPipe } from './pipes/remove-circular-from-json-model.pipe';
 import { UriCropPipe } from './pipes/uri-crop.pipe';
+import { ElasticExplorerService } from './services/elastic-explorer.service';
 import { ElasticExplorerComponent } from './views/elastic-explorer/elastic-explorer.component';
 
 @NgModule({
@@ -96,6 +97,7 @@ import { ElasticExplorerComponent } from './views/elastic-explorer/elastic-explo
     // MonacoEditorModule.forRoot(),
     MonacoEditorModule,
     FormsModule
-  ]
+  ],
+  providers: [ElasticExplorerService]
 })
-export class DataExplorerModule {}
+export class ElasticExplorerModule {}

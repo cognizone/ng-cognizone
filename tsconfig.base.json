@@ -25,6 +25,8 @@
       "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"],
       "@app/*": ["apps/docs-app/src/app/*"],
       "@env/*": ["apps/docs-app/src/environments/*"],
+      "@czde-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
+      "@czde-ce/env/*": ["apps/elastic-explorer-chrome-extension/src/environments/*"],
       "@cognizone/permissions": ["libs/permissions/src/index.ts"],
       "@cognizone/operation": ["libs/operation/src/index.ts"],
       "@cognizone/legi-cv": ["libs/legi-cv/src/index.ts"],
