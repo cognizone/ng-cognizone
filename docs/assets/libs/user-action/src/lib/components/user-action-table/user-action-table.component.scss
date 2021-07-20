@@ -1,0 +1,16 @@
+@import 'components-pack';
+
+.my-action-table {
+  border: 1px solid $czls-border-color;
+}
+
+.my-success-icon {
+  color: $czls-color-primary !important;
+}
+
+.my-filters-wrapper {
+  align-items: baseline;
+}
+table {
+  width: 100%;
+}

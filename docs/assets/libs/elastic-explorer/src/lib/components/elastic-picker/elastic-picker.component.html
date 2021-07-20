@@ -1,0 +1,8 @@
+<div class="my-side-menu p-4" [formGroup]="form">
+  <div class="d-flex align-items-center justify-content-between">
+    <h4 class="mb-2">Elastic selection</h4>
+    <button mat-icon-button (click)="editElasticUrl()"><mat-icon>settings</mat-icon></button>
+  </div>
+  <cz-select formControlName="url" label="Url" [options]="urlOptions$ | async"></cz-select>
+  <cz-select formControlName="index" label="Index" [options]="indexOptions$ | async"></cz-select>
+</div>

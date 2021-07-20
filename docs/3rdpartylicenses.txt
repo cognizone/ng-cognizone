@@ -92,10 +92,13 @@ MIT
 MIT
 
 @cognizone/model-utils
+Apache-2.0
 
 @cognizone/ng-core
+Apache-2.0
 
 @cognizone/ng-yasgui
+Apache-2.0
 
 @ngxs/devtools-plugin
 MIT

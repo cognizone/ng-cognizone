@@ -1,0 +1,9 @@
+@import '../common';
+
+mat-option {
+  @extend %input-typography;
+}
+
+:host ::ng-deep .mat-form-field-subscript-wrapper {
+  top: calc(100% - 0em);
+}

@@ -1,0 +1,83 @@
+<div *transloco="let t; read: 'user_action'" class="my-action-table pt-4">
+  <div class="mx-4 mb-5">
+    <h4 class="mb-5">{{ t('title') }}</h4>
+    <div class="container-fluid">
+      <div class="row my-filters-wrapper" [formGroup]="form">
+        <cz-input class="col" formControlName="username" [placeholder]="t('user')"></cz-input>
+        <cz-autocomplete-single
+          class="col"
+          formControlName="actionName"
+          [optionsProvider]="actionNameOptionsProvider"
+          [placeholder]="t('action')"
+        ></cz-autocomplete-single>
+        <cz-date-picker class="col" formControlName="dateFrom" [placeholder]="t('start_date')"></cz-date-picker>
+        <cz-date-picker class="col" formControlName="dateTo" [placeholder]="t('end_date')"></cz-date-picker>
+        <div class="col">
+          <mat-checkbox formControlName="onlyErrors">{{ t('only_errors') }}</mat-checkbox>
+        </div>
+        <div>
+          <button mat-button color="primary" (click)="form.reset()">{{ t('reset') }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table mat-table [dataSource]="actions">
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('action') }}</th>
+      <td mat-cell *matCellDef="let action" class="pr-3">
+        <div *ngIf="action['http.actionPath']">{{ action['http.actionPath'] }}</div>
+        <div>{{ action.name || action.methodName }}</div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('date') }}</th>
+      <td mat-cell *matCellDef="let action" class="pr-3">
+        {{ action.start | translocoDate }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hour">
+      <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('hour') }}</th>
+      <td mat-cell *matCellDef="let action" class="pr-3">
+        {{ action.start | translocoDate: { timeStyle: 'medium' } }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="user">
+      <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('user') }}</th>
+      <td mat-cell *matCellDef="let action" class="pr-3">
+        {{ action[userFullNameAttribute] }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="userId">
+      <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('user_id') }}</th>
+      <td mat-cell *matCellDef="let action" class="pr-3">
+        {{ action[userIvAttribute] }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('status') }}</th>
+      <td mat-cell *matCellDef="let action" class="pr-3">
+        <button *ngIf="action.success" mat-icon-button disabled>
+          <mat-icon class="my-success-icon" color="primary">check_circle</mat-icon>
+        </button>
+        <button *ngIf="!action.success" mat-icon-button (click)="downloadAction(action)">
+          <mat-icon color="warn">error</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+  </table>
+  <mat-paginator
+    czPaginatorOutline
+    [pageSizeOptions]="[10, 25, 50]"
+    [length]="totalResults"
+    [pageIndex]="pageIndex"
+    [pageSize]="pageSize"
+    (page)="setPage($event)"
+  ></mat-paginator>
+</div>

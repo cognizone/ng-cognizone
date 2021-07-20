@@ -1,0 +1,76 @@
+<div [ngSwitch]="type" class="czls-body-2" [class.pl-3]="padded && type !== 'uri'">
+  <ng-container *ngSwitchCase="'Date'">
+    {{ value | translocoDate }}
+  </ng-container>
+  <ng-container *ngSwitchCase="'number'">
+    {{ value }}
+  </ng-container>
+  <ng-container *ngSwitchCase="'uri'">
+    <button mat-button color="primary" [matTooltip]="value" [matMenuTriggerFor]="uriMenu" (click)="$event.stopPropagation()">
+      {{ value | uriCrop }}
+    </button>
+    <mat-menu #uriMenu>
+      <button mat-menu-item [cdkCopyToClipboard]="value" (click)="openSnackbar('The Uri is copied to your clipboard')">
+        <mat-icon>content_copy</mat-icon>
+        Copy uri
+      </button>
+      <a
+        *ngIf="modelHit"
+        mat-menu-item
+        target="_blank"
+        [routerLink]="[]"
+        [queryParamsHandling]="'merge'"
+        [queryParams]="{ _id: modelHit._id }"
+      >
+        <mat-icon>open_in_new</mat-icon>
+        Open in new tab
+      </a>
+    </mat-menu>
+  </ng-container>
+  <ng-container *ngSwitchCase="'JsonModel'">
+    <mat-expansion-panel class="my-2" [expanded]="opened">
+      <mat-expansion-panel-header>
+        {{ (value['@id'] | uriCrop) || key }}
+        <ng-container *ngIf="value | jsonModelLabel as label"> - {{ label | czLangString }} </ng-container>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <div *ngIf="value['@id']">
+          <span class="czls-title">uri</span>
+          <app-attribute-display [model]="value" [key]="'@id'"></app-attribute-display>
+        </div>
+        <div *ngIf="value['@type']">
+          <span class="czls-title">type</span>
+          <app-attribute-display [model]="value" [key]="'@type'" [padded]="true"></app-attribute-display>
+        </div>
+        <div *ngIf="value['@facets']">
+          <span class="czls-title">facets</span>
+          <ngx-json-viewer [json]="value['@facets']" [depth]="2"></ngx-json-viewer>
+        </div>
+        <div *ngFor="let key of subKeys">
+          <span class="czls-title">{{ key }}</span>
+          <app-attribute-display [model]="value" [key]="key" [padded]="true"></app-attribute-display>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+  </ng-container>
+  <ng-container *ngSwitchCase="'Array'">
+    <ng-container *ngFor="let m of value">
+      <app-attribute-display class="d-block" [model]="m"></app-attribute-display>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngSwitchCase="'boolean'">
+    {{ value ? 'true' : false }}
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <ng-container *ngIf="value | czLangString as text">
+      <ng-container *ngIf="text | ellipsis as shortText">
+        <span [matTooltip]="text !== shortText ? text : null">{{ shortText }}</span>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</div>
+
+<!-- TODO use AP for display type -->
+<!-- TODO uri quick add to uri and included filters -->
+<!-- TODO search for concepts -->
+<!-- TODO see more https://fedlex.data.admin.ch/eli/treaty/1950/0267 -->

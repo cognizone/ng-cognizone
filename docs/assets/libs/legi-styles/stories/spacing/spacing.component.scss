@@ -1,0 +1,14 @@
+@import '../common';
+
+.my-spacing {
+  border: 1px solid $czls-border-color;
+  background-color: lightgreen;
+}
+
+.my-spacing-container {
+  background-color: orange;
+}
+
+.my-spacing-content {
+  background-color: lightskyblue;
+}

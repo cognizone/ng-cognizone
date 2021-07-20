@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{ data.operation }} a new elastic url</h2>
+<mat-dialog-content [formGroup]="form">
+  <cz-input formControlName="url" label="url"></cz-input>
+  <cz-input formControlName="label" label="label"></cz-input>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button matDialogClose>Cancel</button>
+  <button
+    mat-button
+    color="primary"
+    [disabled]="!form.valid"
+    [matDialogClose]="{ url: form.controls.url.value, label: form.controls.label.value }"
+  >
+    {{ data.operation }}
+  </button>
+</mat-dialog-actions>

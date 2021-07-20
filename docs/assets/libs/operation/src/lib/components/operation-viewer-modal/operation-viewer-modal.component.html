@@ -1,0 +1,26 @@
+<mat-dialog-content class="operation-viewer-container">
+  <div class="d-flex flex-column">
+    <ng-container *ngIf="data.operation">
+      <h4>Operation</h4>
+      <ngx-json-viewer class="p-3" [json]="data.operation" [expanded]="false"></ngx-json-viewer>
+    </ng-container>
+
+    <ng-container *ngIf="group">
+      <h4>Operation Group</h4>
+      <ngx-json-viewer class="p-3" [json]="group" [expanded]="false"></ngx-json-viewer>
+    </ng-container>
+
+    <h4>Path</h4>
+    <ngx-json-viewer class="p-3" [json]="data.operationGroupDescriptions" [expanded]="false"></ngx-json-viewer>
+
+    <ng-container *ngIf="allOperations">
+      <h4>All Operation Groups</h4>
+      <ngx-json-viewer class="p-3" [json]="allOperations" [expanded]="false"></ngx-json-viewer>
+    </ng-container>
+  </div>
+</mat-dialog-content>
+<div mat-dialog-actions align="end" class="m-0">
+  <button mat-flat-button color="primary" [mat-dialog-close]="false">
+    Close
+  </button>
+</div>

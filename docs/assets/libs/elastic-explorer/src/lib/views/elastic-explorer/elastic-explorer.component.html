@@ -1,0 +1,88 @@
+<div class="my-card m-4 mat-elevation-z1">
+  <mat-toolbar>
+    <div class="my-toolbar-inner d-flex align-items-center w-100">
+      <button mat-icon-button class="mr-2" (click)="showMenu = !showMenu">
+        <mat-icon *ngIf="showMenu">close</mat-icon>
+        <mat-icon *ngIf="!showMenu">menu</mat-icon>
+      </button>
+      <span class="mr-3">Data Explorer</span>
+      <span *ngIf="total$ | async as totalLabel">Number of entries: {{ totalLabel }}</span>
+      <div style="flex-grow: 1;"></div>
+      <div *ngIf="loading$ | async" class="my-progress-bar-container">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <div class="row flex-nowrap">
+    <div *ngIf="showMenu" class="col-3">
+      <app-elastic-picker></app-elastic-picker>
+      <mat-divider></mat-divider>
+      <mat-slide-toggle [formControl]="manualMode">Pro mode</mat-slide-toggle>
+      <app-filters-form *ngIf="!manualMode.value"></app-filters-form>
+      <app-elastic-query-editor *ngIf="manualMode.value"></app-elastic-query-editor>
+    </div>
+    <div class="col">
+      <div class="my-table-container">
+        <table mat-table multiTemplateDataRows [dataSource]="dataSource$" [trackBy]="trackBy">
+          <ng-container matColumnDef="@uri">
+            <th mat-header-cell *matHeaderCellDef class="czls-title pr-3">Uri // _id</th>
+            <td mat-cell *matCellDef="let model" class="pr-3">
+              <app-attribute-display
+                *ngIf="model.jsonModel"
+                [model]="model.jsonModel"
+                [modelHit]="model.hit"
+                [key]="'@id'"
+              ></app-attribute-display>
+              <ng-container *ngIf="!model.jsonModel">{{ model.hit._id }}</ng-container>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="@type">
+            <th mat-header-cell *matHeaderCellDef class="czls-title pr-3">Type</th>
+            <td mat-cell *matCellDef="let model" class="pr-3">
+              <app-attribute-display *ngIf="model.jsonModel" [model]="model.jsonModel" [key]="'@type'"></app-attribute-display>
+              <ng-container *ngIf="!model.jsonModel">N/A</ng-container>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="@label">
+            <th mat-header-cell *matHeaderCellDef class="czls-title pr-3">Label</th>
+            <td mat-cell *matCellDef="let model" class="pr-3">
+              <app-json-model-label [model]="model.jsonModel"></app-json-model-label>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let model">
+              <div class="d-flex">
+                <a mat-icon-button [routerLink]="[]" [queryParamsHandling]="'merge'" [queryParams]="{ _id: model.hit._id }">
+                  <mat-icon>pageview</mat-icon>
+                </a>
+              </div>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="index">
+            <th mat-header-cell *matHeaderCellDef class="czls-title pr-3">Index</th>
+            <td mat-cell *matCellDef="let model" class="pr-3">
+              {{ model.hit._index }}
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="columns"></tr>
+          <tr mat-row *matRowDef="let row; columns: columns" class="model-row"></tr>
+        </table>
+        <div class="d-flex justify-content-center">
+          <cz-list-paginator
+            [total]="total$ | async"
+            [pagination]="pagination$ | async"
+            (changePagination)="onPaginationChange($event)"
+          ></cz-list-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modelDetails let-model>
+  <app-full-model-detail [model]="model"></app-full-model-detail>
+</ng-template>

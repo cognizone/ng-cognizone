@@ -1,0 +1,26 @@
+// also need to disabled angular animations on mat-sort-header with something like this below, might be added to library in the future
+/**
+import { Directive, HostBinding } from '@angular/core';
+
+@Directive({
+  selector: '[mat-sort-header], [matSortHeader]'
+})
+export class MatSortHeaderDisabledAnimationDirective {
+  @HostBinding('@.disabled')
+  private disabled: boolean = true;
+}
+
+*/
+
+.mat-sort-header-container:not(.mat-sort-header-sorted) .mat-sort-header-arrow {
+  opacity: 0.54 !important;
+  transform: translateY(0px) !important;
+  transition: none;
+}
+
+.mat-sort-header-container.mat-sort-header-sorted .mat-sort-header-arrow {
+  opacity: 0.54 !important;
+  color: $czls-color-primary;
+  transform: translateY(0px) !important;
+  transition: none;
+}

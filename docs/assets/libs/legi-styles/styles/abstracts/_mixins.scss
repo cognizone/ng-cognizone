@@ -1,0 +1,38 @@
+@mixin typography($font-size, $line-height, $color: $czls-font-color-high, $font-family: $czls-font-family) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-family: $font-family;
+}
+
+@mixin is-high-emphasis($color: $czls-font-color-high) {
+  &.is-high-emphasis {
+    color: $color;
+  }
+}
+
+@mixin is-disabled($color: $czls-font-color-disabled) {
+  &.is-disabled {
+    color: $color;
+  }
+}
+
+@mixin text-link() {
+  cursor: pointer;
+  &:hover {
+    color: $czls-color-primary-hovered;
+    text-decoration: none;
+  }
+  &.is-active {
+    color: $czls-color-primary-active;
+  }
+}
+
+@mixin make-border() {
+  border: 1px solid $czls-border-color;
+  border-radius: $czls-border-radius;
+}
+
+@mixin make-grid-width($col) {
+  width: get-col-width($col);
+}

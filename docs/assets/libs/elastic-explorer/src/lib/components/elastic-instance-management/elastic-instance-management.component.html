@@ -1,0 +1,29 @@
+<div>
+  <div class="d-flex justify-content-between">
+    <h4>Elastic editor</h4>
+    <span>
+      <input type="file" style="display:none" accept=".json" #input (change)="onFileSelection($event)">
+      <button mat-icon-button (click)="input.click()">
+        <mat-icon>file_upload</mat-icon>
+      </button>
+      <a download="elasticInstances.json" (click)='download()'><button mat-icon-button ><mat-icon>file_download</mat-icon></button></a>
+      <button mat-icon-button (click)="addElasticInstance()"><mat-icon>add</mat-icon></button>
+    </span>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-list>
+    <mat-list-item *ngFor="let value of values" class="pb-5">
+      <div>
+        <div mat-line class="mt-2">url: {{ value.url }}</div>
+        <div mat line class="m-0">label: {{ value.label }}</div>
+      </div>
+      <div class="my-spacer"></div>
+
+      <div>
+        <button mat-icon-button (click)="editElasticInstance(value)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button (click)="deleteElasticInstance(value)"><mat-icon>delete</mat-icon></button>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>

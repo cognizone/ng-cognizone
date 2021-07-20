@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Spacing</h1>
+  <p>
+    The spacing system uses the one from <a class="czls-link" href="https://getbootstrap.com/docs/4.4/utilities/spacing/">Bootstrap</a>,
+    customized with our own scale. Most spacing classes are available as placeholders as well, like so:
+  </p>
+  <div [innerHtml]="md"></div>
+  <code>
+    <pre>
+@import 'components-pack';
+
+.my-div {{ '{' }}
+  @extend %mb-3;
+}
+    </pre>
+  </code>
+  <div *ngFor="let spacing of spacings" class="row">
+    <div class="my-spacing-container">
+      <div class="my-spacing" [ngClass]="'p-' + spacing.name + ' m-' + spacing.name">
+        <div class="my-spacing-content d-flex flex-column justify-content-center align-items-center">
+          <span>.p-{{ spacing.name }} .m-{{ spacing.name }}</span>
+          <span>{{ spacing.multiplier }}rem</span>
+          <span>~{{ spacing.multiplier * 16 }}px</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+body .mat-tab-link {
+  opacity: 1;
+  color: $czls-color-primary;
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:not(.mat-tab-label-active) {
+    color: $czls-font-color-disabled;
+  }
+}
+
+body .mat-ink-bar {
+  height: 4px;
+}

@@ -1,0 +1,8 @@
+th.mat-header-cell {
+  @extend %czls-title;
+}
+
+tr.mat-row.is-clickable:hover {
+  background-color: $czls-color-hovered;
+  cursor: pointer;
+}

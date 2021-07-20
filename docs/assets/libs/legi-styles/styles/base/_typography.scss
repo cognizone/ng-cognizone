@@ -1,0 +1,94 @@
+// https://projects.invisionapp.com/d/main#/console/15839093/395705687/preview
+
+h1,
+.czls-h1 {
+  @extend %czls-h1;
+}
+
+h2,
+.czls-h2 {
+  @extend %czls-h2;
+}
+
+h3,
+.czls-h3 {
+  @extend %czls-h3;
+}
+
+h4,
+.czls-h4 {
+  @extend %czls-h4;
+}
+
+h5,
+.czls-h5 {
+  @extend %czls-h5;
+}
+
+.czls-title {
+  @extend %czls-title;
+}
+
+body,
+.czls-body-1 {
+  @extend %czls-body-1;
+}
+
+.czls-body-2 {
+  @extend %czls-body-2;
+}
+
+.czls-caption {
+  @extend %czls-caption;
+}
+
+.czls-overline {
+  @extend %czls-overline;
+}
+
+.czls-btn {
+  @extend %czls-btn;
+}
+
+.czls-link {
+  @extend %czls-link;
+}
+
+.czls-link-u {
+  @extend .czls-link-u;
+}
+
+.is-high-emphasis {
+  @extend %is-high-emphasis;
+}
+
+.is-medium-emphasis {
+  @extend %is-medium-emphasis;
+}
+
+.is-disabled {
+  @extend %is-disabled;
+}
+
+.is-capitalized {
+  @extend %is-capitalized;
+}
+
+$czls-headers: 'h1', 'h2', 'h3', 'h4', 'h5';
+@each $header1 in $czls-headers {
+  #{$header1} + p {
+    margin-top: 1rem;
+  }
+  p + #{$header1} {
+    margin-top: 2rem;
+  }
+  @each $header2 in $czls-headers {
+    #{$header1} + #{$header2} {
+      margin-top: 2rem;
+    }
+  }
+}
+
+p + p {
+  margin-top: 1rem;
+}
