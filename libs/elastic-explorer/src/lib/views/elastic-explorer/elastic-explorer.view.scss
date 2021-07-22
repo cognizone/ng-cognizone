@@ -12,3 +12,9 @@ header {
 mat-toolbar {
   position: relative;
 }
+
+.my-side-menu {
+  min-width: 20%;
+  resize: both;
+  overflow: auto;
+}

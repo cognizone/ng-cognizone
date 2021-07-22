@@ -47,7 +47,7 @@
     <tr mat-header-row *matHeaderRowDef="columns"></tr>
     <tr mat-row *matRowDef="let row; columns: columns" class="model-row"></tr>
   </table>
-  <div class="d-flex justify-content-center mt-2">
+  <div *ngIf="showPaginator$ | async" class="d-flex justify-content-center mt-2">
     <cz-list-paginator
       [total]="total$ | async"
       [pagination]="pagination$ | async"

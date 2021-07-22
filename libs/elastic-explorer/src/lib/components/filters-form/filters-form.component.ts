@@ -25,6 +25,9 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
     this.initForm();
     this.initTypeOptions();
     this.subSink = this.manualMode.valueChanges.subscribe(manualMode => this.elasticExplorerService.setManualMode(manualMode));
+    this.subSink = this.elasticExplorerService.manualMode$.subscribe(manualMode =>
+      this.manualMode.setValue(manualMode, { emitEvent: false })
+    );
   }
 
   resetFilters(): void {

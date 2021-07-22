@@ -71,6 +71,7 @@ export class ElasticExplorerService {
     this.parseFiltersFromRoute(route);
     this.parseElasticInfoFromRoute(route);
     this.parsePaginationFromRoute(route);
+    this.parseElasticQueryFromRoute(route);
     this.wireStateToRoute();
     this.initModels();
     this.initElasticQuery();
@@ -167,11 +168,11 @@ export class ElasticExplorerService {
   }
 
   private initElasticQuery(): void {
-    this.subSink.add = combineLatest([this.filters$, this.pagination$, this.facetFields$]).subscribe(
-      ([filters, pagination, facetsFields]) => {
+    this.subSink.add = combineLatest([this.manualMode$, this.filters$, this.pagination$, this.facetFields$])
+      .pipe(filter(([manualMode]) => !manualMode))
+      .subscribe(([, filters, pagination, facetsFields]) => {
         this.setElasticQuery(this.getQuery(filters, pagination, facetsFields));
-      }
-    );
+      });
   }
 
   private getQuery(filters: Filters, pagination: Pagination, fields: Field[]): {} {
@@ -276,19 +277,29 @@ export class ElasticExplorerService {
   }
 
   private wireStateToRoute(): void {
-    this.subSink.add = combineLatest([this.filters$, this.pagination$, this.elasticInfo$]).subscribe(
-      ([filters, pagination, elasticInfo]) => {
-        this.router.navigate([], {
-          queryParams: {
+    this.subSink.add = combineLatest([this.filters$, this.pagination$, this.elasticInfo$, this.manualMode$, this.elasticQuery$])
+      .pipe(debounceTime(0))
+      .subscribe(([filters, pagination, elasticInfo, manualMode, elasticQuery]) => {
+        let queryParams: {} = {
+          elasticInfo: this.toQueryParams(elasticInfo)
+        };
+        if (manualMode) {
+          queryParams = {
+            ...queryParams,
+            elasticQuery: JSON.stringify(elasticQuery)
+          };
+        } else {
+          queryParams = {
+            ...queryParams,
             q: this.toQueryParams(filters),
             from: pagination.from,
-            size: pagination.size,
-            elasticInfo: this.toQueryParams(elasticInfo)
-          },
-          queryParamsHandling: 'merge'
+            size: pagination.size
+          };
+        }
+        this.router.navigate([], {
+          queryParams
         });
-      }
-    );
+      });
   }
 
   private toQueryParams<T extends {}>(obj: T): string | undefined {
@@ -304,6 +315,7 @@ export class ElasticExplorerService {
   private parsePaginationFromRoute(route: ActivatedRoute): void {
     this.subSink.add = route.queryParams
       .pipe(
+        filter(params => !params.elasticQuery),
         map(({ from, size }) => ({
           from: parseInt(from ?? '0'),
           size: parseInt(size ?? '10')
@@ -315,11 +327,26 @@ export class ElasticExplorerService {
   private parseFiltersFromRoute(route: ActivatedRoute): void {
     this.subSink.add = route.queryParams
       .pipe(
+        filter(params => !params.elasticQuery),
         map(params => params.q),
         distinctUntilChanged(),
         map(q => (q ? JSON.parse(q) : {}))
       )
       .subscribe(filters => this.setFilters(filters));
+  }
+
+  private parseElasticQueryFromRoute(route: ActivatedRoute): void {
+    this.subSink.add = route.queryParams
+      .pipe(
+        filter(params => !!params.elasticQuery),
+        map(params => params.elasticQuery),
+        distinctUntilChanged(),
+        map(elasticQuery => (elasticQuery ? JSON.parse(elasticQuery) : {}))
+      )
+      .subscribe(elasticQuery => {
+        this.setElasticQuery(elasticQuery);
+        this.setManualMode(true);
+      });
   }
 
   private parseElasticInfoFromRoute(route: ActivatedRoute): void {
