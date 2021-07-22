@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
-import {
-  ElasticExplorerComponent,
-  ElasticExplorerModule as LibDataExplorerModule,
-  ElasticExplorerState
-} from '@cognizone/elastic-explorer';
+import { ElasticExplorerModule as LibDataExplorerModule, ElasticExplorerState, ElasticExplorerView } from '@cognizone/elastic-explorer';
 import { NgxsModule } from '@ngxs/store';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 
@@ -18,7 +13,7 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
     RouterModule.forChild([
       {
         path: '',
-        component: ElasticExplorerComponent
+        component: ElasticExplorerView
       }
     ])
   ]

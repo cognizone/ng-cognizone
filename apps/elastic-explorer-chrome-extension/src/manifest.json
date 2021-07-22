@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Cognizone data explorer",
+  "name": "Cognizone elastic explorer",
   "version": "0.0.1",
-  "description": "Data explorer in chrome extension form",
+  "description": "Elastic explorer in chrome extension form",
   "browser_action": {
     "default_icon": "assets/cognizone-icon-150x150.png",
-    "default_title": "Cognizone data explorer"
+    "default_title": "Cognizone elastic explorer"
   },
   "background": {
     "scripts": ["background.js"],

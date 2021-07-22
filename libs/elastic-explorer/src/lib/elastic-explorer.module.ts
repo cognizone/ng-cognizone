@@ -34,17 +34,27 @@ import { ElasticQueryEditorComponent } from './components/elastic-query-editor/e
 import { FiltersFormComponent } from './components/filters-form/filters-form.component';
 import { FullModelDetailComponent } from './components/full-model-detail/full-model-detail.component';
 import { JsonModelLabelComponent } from './components/json-model-label/json-model-label.component';
+import { ElasticExplorerRoutingModule } from './elastic-explorer-routing.module';
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { FilterObjectPipe } from './pipes/filter-object.pipe';
 import { JsonModelLabelPipe } from './pipes/json-model-label.pipe';
 import { RemoveCircularFromJsonModelPipe } from './pipes/remove-circular-from-json-model.pipe';
 import { UriCropPipe } from './pipes/uri-crop.pipe';
 import { ElasticExplorerService } from './services/elastic-explorer.service';
-import { ElasticExplorerComponent } from './views/elastic-explorer/elastic-explorer.component';
+import { ElasticExplorerView } from './views/elastic-explorer/elastic-explorer.view';
+import { RawDetailsComponent, rawDetailsViewProvider } from './components/raw-details/raw-details.component';
+import { ApDetailsComponent, apDetailsViewProvider } from './components/ap-details/ap-details.component';
+import { JsonModelDetailsComponent, jsonModelDetailsViewProvider } from './components/json-model-details/json-model-details.component';
+import {
+  JsonModelFlatGraphDetailsComponent,
+  jsonModelFlatGraphDetailsViewProvider
+} from './components/json-model-flat-graph-details/json-model-flat-graph-details.component';
+import { LoadingService } from '@cognizone/ng-core';
+import { ResultsTableComponent } from './components/results-table/results-table.component';
 
 @NgModule({
   declarations: [
-    ElasticExplorerComponent,
+    ElasticExplorerView,
     AttributeDisplayComponent,
     EllipsisPipe,
     UriCropPipe,
@@ -57,11 +67,15 @@ import { ElasticExplorerComponent } from './views/elastic-explorer/elastic-explo
     ElasticInstanceManagementComponent,
     ElasticInstanceEditorComponent,
     FilterObjectPipe,
-    ElasticQueryEditorComponent
+    ElasticQueryEditorComponent,
+    RawDetailsComponent,
+    ApDetailsComponent,
+    JsonModelDetailsComponent,
+    JsonModelFlatGraphDetailsComponent,
+    ResultsTableComponent
   ],
   imports: [
-    // TODO add back when migrating to angular 12
-    // ElasticExplorerRoutingModule,
+    ElasticExplorerRoutingModule,
     // Angular
     CommonModule,
     ReactiveFormsModule,
@@ -98,6 +112,13 @@ import { ElasticExplorerComponent } from './views/elastic-explorer/elastic-explo
     MonacoEditorModule,
     FormsModule
   ],
-  providers: [ElasticExplorerService]
+  providers: [
+    ElasticExplorerService,
+    apDetailsViewProvider,
+    rawDetailsViewProvider,
+    jsonModelFlatGraphDetailsViewProvider,
+    jsonModelDetailsViewProvider,
+    LoadingService
+  ]
 })
 export class ElasticExplorerModule {}

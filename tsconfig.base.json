@@ -25,8 +25,8 @@
       "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"],
       "@app/*": ["apps/docs-app/src/app/*"],
       "@env/*": ["apps/docs-app/src/environments/*"],
-      "@czde-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
-      "@czde-ce/env/*": ["apps/elastic-explorer-chrome-extension/src/environments/*"],
+      "@czee-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
+      "@czee-ce/env/*": ["apps/elastic-explorer-chrome-extension/src/environments/*"],
       "@cognizone/permissions": ["libs/permissions/src/index.ts"],
       "@cognizone/operation": ["libs/operation/src/index.ts"],
       "@cognizone/legi-cv": ["libs/legi-cv/src/index.ts"],
@@ -38,6 +38,9 @@
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
       "@cognizone/elastic-explorer": ["libs/elastic-explorer/src/index.ts"]
     }
+  },
+  "angularCompilerOptions": {
+    // "strictTemplates": true
   },
   "exclude": ["node_modules", "tmp"]
 }

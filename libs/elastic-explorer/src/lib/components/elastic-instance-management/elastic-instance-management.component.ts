@@ -21,9 +21,11 @@ export class ElasticInstanceManagementComponent extends OnDestroy$ implements On
   ngOnInit(): void {
     this.initValues();
   }
+
   initValues(): void {
     this.subSink = this.elasticInstanceService.values$.subscribe(values => (this.values = values));
   }
+
   editElasticInstance(elasticInstance: ElasticInstance): void {
     this.dialog
       .open(ElasticInstanceEditorComponent, {
@@ -47,9 +49,11 @@ export class ElasticInstanceManagementComponent extends OnDestroy$ implements On
       .afterClosed()
       .subscribe(instance => this.elasticInstanceService.addIfNotPresent(instance));
   }
+
   deleteElasticInstance(elasticInstance: ElasticInstance): void {
     this.elasticInstanceService.deleteValue(elasticInstance);
   }
+
   download(): void {
     this.elasticInstanceService.downloadFile();
   }

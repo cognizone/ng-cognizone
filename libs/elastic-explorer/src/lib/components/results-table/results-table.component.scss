@@ -1,0 +1,14 @@
+@import 'abstracts';
+
+.my-table-container,
+table {
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+:host {
+  display: block;
+  border: 1px solid $czls-border-color;
+  margin: 1.5rem 0;
+}

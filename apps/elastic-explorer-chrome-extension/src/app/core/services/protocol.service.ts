@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { environment } from '@czde-ce/env/environment';
+import { environment } from '@czee-ce/env/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class ProtocolService {
   get protocol(): string {
-    return `web+czde${environment.production ? '' : 'local'}`;
+    return `web+czee${environment.production ? '' : 'local'}`;
   }
 
   init(): void {

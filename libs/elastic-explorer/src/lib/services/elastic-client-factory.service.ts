@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ElasticHit, ElasticSearchResponse, Nil, notNil } from '@cognizone/model-utils';
-import { JsonModelService, ResourceGraphService } from '@cognizone/ng-application-profile';
+import { JsonModelService, ResourceGraphRaw, ResourceGraphService } from '@cognizone/ng-application-profile';
+import produce from 'immer';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { FullModel } from '../models/full-model';
+import { getSortedObject } from '../utils/get-sorted-object';
 
 @Injectable({
   providedIn: 'root'
@@ -49,11 +51,24 @@ export class ElasticClient {
 
   // tslint:disable-next-line: no-any
   private mapIn(hit: ElasticHit<any>): FullModel {
+    if (this.isResourceGraphRaw(hit._source)) {
+      hit = produce(hit, draft => {
+        const all = [draft._source.data, ...draft._source.included];
+        all.forEach(node => {
+          if (node.attributes) {
+            node.attributes = getSortedObject(node.attributes ?? {});
+          }
+          if (node.references) {
+            node.references = getSortedObject(node.references ?? {});
+          }
+        });
+      });
+    }
     const source = hit._source;
     const fullModel: FullModel = {
       hit
     };
-    if ('data' in source) {
+    if (this.isResourceGraphRaw(source)) {
       fullModel.jsonModel = this.resourceGraphService.resourceGraphRawToJsonModel(source);
       fullModel.jsonModelFlatGraph = this.jsonModelService.toFlatGraph(fullModel.jsonModel);
     }
@@ -64,6 +79,10 @@ export class ElasticClient {
     // TODO maybe replace http with https when in https env?
     const parts = [this.options.baseUrl, this.options.index, '_search'].filter(notNil);
     return parts.join('/');
+  }
+
+  private isResourceGraphRaw(obj: unknown): obj is ResourceGraphRaw {
+    return typeof obj === 'object' && obj != null && 'data' in obj;
   }
 }
 export interface ElasticClientOptions {

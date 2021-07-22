@@ -1,0 +1,29 @@
+<header>
+  <mat-toolbar color="primary">
+    <div class="my-toolbar-inner d-flex align-items-center w-100">
+      <button mat-icon-button class="mr-2" (click)="showMenu = !showMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="mr-3">Elastic Explorer</span>
+      <div style="flex-grow: 1"></div>
+      <div *ngIf="loading$ | async" class="my-progress-bar-container">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      </div>
+    </div>
+  </mat-toolbar>
+</header>
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div *ngIf="showMenu" class="col-3">
+      <cz-elastic-picker></cz-elastic-picker>
+      <mat-divider></mat-divider>
+      <cz-filters-form></cz-filters-form>
+    </div>
+    <div class="col">
+      <cz-results-table></cz-results-table>
+    </div>
+  </div>
+</div>
+<ng-template #modelDetails let-model>
+  <cz-full-model-detail [model]="model"></cz-full-model-detail>
+</ng-template>

@@ -5,12 +5,7 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button matDialogClose>Cancel</button>
-  <button
-    mat-button
-    color="primary"
-    [disabled]="!form.valid"
-    [matDialogClose]="{ url: form.controls.url.value, label: form.controls.label.value }"
-  >
+  <button mat-button color="primary" [disabled]="!form.valid" [matDialogClose]="form.value">
     {{ data.operation }}
   </button>
 </mat-dialog-actions>

@@ -1,17 +1,17 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ProtocolService } from '@czde-ce/core';
+import { ProtocolService } from '@czee-ce/core';
 
 @Component({
   selector: 'app-copy-link-button',
   template: `
     <button
-      mat-mini-fab
+      mat-fab
       color="primary"
       aria-label="Copy shareable link to current page"
       matTooltip="Copy shareable link to current page"
       [cdkCopyToClipboard]="link"
     >
-      <mat-icon>link</mat-icon>
+      <mat-icon>share</mat-icon>
     </button>
   `,
   styles: [

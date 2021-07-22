@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ElasticAggregation, notNil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { identity, Observable } from 'rxjs';
@@ -8,13 +8,14 @@ import { filter, first, map, switchMap, toArray } from 'rxjs/operators';
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
 
 @Component({
-  selector: 'app-filters-form',
+  selector: 'cz-filters-form',
   templateUrl: './filters-form.component.html',
   styleUrls: ['./filters-form.component.scss']
 })
 export class FiltersFormComponent extends OnDestroy$ implements OnInit {
   form!: FormGroup;
   typeOptionsProvider!: SelectOptionsProvider<string>;
+  manualMode: FormControl = new FormControl(false);
 
   constructor(private fb: FormBuilder, private elasticExplorerService: ElasticExplorerService) {
     super();
@@ -23,6 +24,7 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
   ngOnInit(): void {
     this.initForm();
     this.initTypeOptions();
+    this.subSink = this.manualMode.valueChanges.subscribe(manualMode => this.elasticExplorerService.setManualMode(manualMode));
   }
 
   resetFilters(): void {

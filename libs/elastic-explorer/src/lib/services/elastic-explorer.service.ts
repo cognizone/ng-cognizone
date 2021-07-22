@@ -12,10 +12,10 @@ import {
   selectProp,
   SubSink
 } from '@cognizone/model-utils';
-import { Logger } from '@cognizone/ng-core';
+import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
-import { BehaviorSubject, combineLatest, EMPTY, Observable, of } from 'rxjs';
-import { catchError, debounceTime, distinctUntilChanged, filter, finalize, map, shareReplay, switchMap } from 'rxjs/operators';
+import { combineLatest, EMPTY, Observable, of } from 'rxjs';
+import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap } from 'rxjs/operators';
 
 import { ElasticInfo } from '../models/elastic-info';
 import { ElasticState } from '../models/elastic-state';
@@ -46,12 +46,10 @@ export class ElasticExplorerService {
   elasticInfo$: Observable<ElasticInfo> = this.state$.pipe(selectProp('elasticInfo'));
   models$: Observable<FullModel[]> = this.state$.pipe(selectProp('models'));
   indices$: Observable<string[]> = this.state$.pipe(selectProp('indices'));
-  loading$: Observable<boolean>;
   facetFields$!: Observable<Field[]>;
   manualMode$: Observable<boolean> = this.state$.pipe(selectProp('manualMode'));
   elasticQuery$: Observable<{}> = this.state$.pipe(selectProp('elasticQuery'));
 
-  private _loading$: BehaviorSubject<boolean>;
   private subSink: SubSink = new SubSink();
 
   constructor(
@@ -61,15 +59,14 @@ export class ElasticExplorerService {
     private router: Router,
     private logger: Logger,
     private elasticInstanceService: ElasticInstanceService,
-    private snack: MatSnackBar
+    private snack: MatSnackBar,
+    private loadingService: LoadingService
   ) {
     this.logger = logger.extend('DataExplorerService');
-    this._loading$ = new BehaviorSubject<boolean>(false);
-    this.loading$ = this._loading$.asObservable();
     this.initFields();
   }
 
-  onViewLoad(route: ActivatedRoute): void {
+  onPageLoad(route: ActivatedRoute): void {
     this.initIndices();
     this.parseFiltersFromRoute(route);
     this.parseElasticInfoFromRoute(route);
@@ -79,7 +76,7 @@ export class ElasticExplorerService {
     this.initElasticQuery();
   }
 
-  onViewUnload(): void {
+  onPageUnload(): void {
     this.subSink.empty();
   }
 
@@ -117,16 +114,15 @@ export class ElasticExplorerService {
             baseUrl: elasticInfo.url,
             index: elasticInfo.index
           });
-          this._loading$.next(true);
           return client.search(elasticQuery).pipe(
-            finalize(() => this._loading$.next(false)),
             catchError(err => {
               const message = 'Failed to fetch entries from elastic';
               this.logger.error(message, err);
               this.snack.open(message, 'Dismiss', { duration: 5000 });
               this.store.dispatch(new SetData([], 0, {}));
               return EMPTY;
-            })
+            }),
+            this.loadingService.asOperator()
           );
         })
       )

@@ -1,0 +1,4 @@
+<ngx-json-viewer
+  [json]="jsonModel | removeCircularFromJsonModel | filterObject: (textFilter$ | async)"
+  [expanded]="false"
+></ngx-json-viewer>

@@ -8,10 +8,6 @@ import { ElasticInstance } from '../models/elastic-instance';
   providedIn: 'root'
 })
 export class ElasticInstanceService {
-  private defaultValues: ElasticInstance[] = [
-    { url: 'http://ch-casemates-dev-elastic.cz-aws.net:9200', label: 'ch casemates dev' },
-    { url: 'http://ch-legipro-dev-elastic.cz-aws.net:9200', label: 'ch legipro dev' }
-  ];
   private readonly LOCAL_STORAGE_KEY: string = 'cz elastic urls';
   private _values$: BehaviorSubject<ElasticInstance[]>;
 
@@ -23,7 +19,7 @@ export class ElasticInstanceService {
   private get values(): ElasticInstance[] {
     const localValues = localStorage.getItem(this.LOCAL_STORAGE_KEY);
     if (!localValues) {
-      this.values = this.defaultValues;
+      this.values = [];
       return this.values;
     }
     const raw = JSON.parse(localValues) as (ElasticInstance | string)[];
@@ -63,7 +59,10 @@ export class ElasticInstanceService {
     this.values = this.values.filter(items => items.url !== instance.url);
   }
   downloadFile(): void {
-    downloadBlob(new Blob([JSON.stringify(this.values)], { type: 'application/json' }));
+    downloadBlob(
+      new Blob([JSON.stringify(this.values)], { type: 'application/json' }),
+      `elastic-instances-${new Date().toISOString()}.json`
+    );
   }
 
   private cleanUp(instance: ElasticInstance): ElasticInstance {

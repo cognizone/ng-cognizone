@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ElasticExplorerComponent } from './views/elastic-explorer/elastic-explorer.component';
+import { ElasticExplorerView } from './views/elastic-explorer/elastic-explorer.view';
 
-const routes: Routes = [{ path: '', component: ElasticExplorerComponent }];
+const routes: Routes = [{ path: '', component: ElasticExplorerView }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  // TODO add back when migrating to angular 12
+  imports: [
+    /* RouterModule.forChild(routes) */
+  ],
   exports: [RouterModule]
 })
 export class ElasticExplorerRoutingModule {}

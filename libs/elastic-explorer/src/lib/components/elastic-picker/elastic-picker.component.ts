@@ -11,7 +11,7 @@ import { ElasticInstanceService } from '../../services/elastic-instance-service'
 import { ElasticInstanceManagementComponent } from '../elastic-instance-management/elastic-instance-management.component';
 
 @Component({
-  selector: 'app-elastic-picker',
+  selector: 'cz-elastic-picker',
   templateUrl: `./elastic-picker.component.html`,
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -59,14 +59,18 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
           value: null,
           label: { en: 'All indices' }
         },
-        ...indices.map(index => ({ label: { en: index }, value: index }))
+        ...indices.map(index => ({ label: { en: index }, value: index })).sort((a, b) => a.label.en.localeCompare(b.label.en))
       ])
     );
   }
 
   private initUrlOptions(): void {
     this.urlOptions$ = this.elasticInstanceService.values$.pipe(
-      map(instances => instances.map(instance => ({ label: { en: instance.label }, value: instance.url })))
+      map(instances =>
+        instances
+          .map(instance => ({ label: { en: instance.label }, value: instance.url }))
+          .sort((a, b) => a.label.en.localeCompare(b.label.en))
+      )
     );
   }
 }
