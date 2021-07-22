@@ -3,8 +3,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { CoreStateFacade } from '@app/core/store/core.facade';
 import { ApiDescription } from '@app/shared/components/api-table/api-table.component';
 import { Logger } from '@cognizone/ng-core';
-import { interval, Observable } from 'rxjs';
-import { distinct, map, skip, startWith } from 'rxjs/operators';
 
 import { NgCorePagesService } from '../../services/ng-core-pages.service';
 
@@ -16,7 +14,7 @@ import { NgCorePagesService } from '../../services/ng-core-pages.service';
 export class LoggerDocComponent implements OnInit, OnDestroy {
   form!: FormGroup;
 
-  code1: string = `
+  code1 = `
   // app.module.ts
   @NgModule(imports: [LoggerModule.forRoot('App')])
   export class AppModule() {}
@@ -47,22 +45,11 @@ export class LoggerDocComponent implements OnInit, OnDestroy {
   }
   `;
 
-  code2: string = `
+  code2 = `
     {
       "^[App.*]": "WARN",
       ".*DataService.*": 0 // DEBUG
     }`;
-
-  logLevelMap$: Observable<string> = interval(1000).pipe(
-    startWith(0),
-    map(() => JSON.stringify(this.logLevelMap, null, 2))
-  );
-
-  logLevelChanged$: Observable<boolean> = this.logLevelMap$.pipe(
-    distinct(),
-    skip(1),
-    map(() => true)
-  );
 
   loggerModuleMethods: ApiDescription[] = [
     {
@@ -98,10 +85,6 @@ export class LoggerDocComponent implements OnInit, OnDestroy {
         "create a new logger which namespace extends the current one. For example, if the root Logger has a namespace 'App', calling logger.extend('Component') will result in a logger having the namespace 'App:Component'"
     }
   ];
-
-  private get logLevelMap(): object {
-    return JSON.parse(localStorage.getItem(this.logger.localStorageKey) || '{}');
-  }
 
   constructor(
     public readonly logger: Logger,

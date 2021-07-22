@@ -7,11 +7,11 @@ import { EmptyComponent } from './shared';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'data-explorer',
+    redirectTo: 'elastic-explorer',
     pathMatch: 'full'
   },
   {
-    path: 'data-explorer',
+    path: 'elastic-explorer',
     loadChildren: () => import('./features/data-explorer/data-explorer.module').then(m => m.DataExplorerModule)
   },
   {
