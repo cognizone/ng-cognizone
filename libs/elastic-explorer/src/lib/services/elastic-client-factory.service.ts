@@ -53,7 +53,7 @@ export class ElasticClient {
   private mapIn(hit: ElasticHit<any>): FullModel {
     if (this.isResourceGraphRaw(hit._source)) {
       hit = produce(hit, draft => {
-        const all = [draft._source.data, ...draft._source.included];
+        const all = [draft._source.data, ...(draft._source.included ?? [])];
         all.forEach(node => {
           if (node.attributes) {
             node.attributes = getSortedObject(node.attributes ?? {});
