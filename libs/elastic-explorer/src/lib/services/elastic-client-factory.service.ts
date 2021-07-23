@@ -51,9 +51,13 @@ export class ElasticClient {
 
   // tslint:disable-next-line: no-any
   private mapIn(hit: ElasticHit<any>): FullModel {
-    if (this.isResourceGraphRaw(hit._source)) {
-      hit = produce(hit, draft => {
-        const all = [draft._source.data, ...(draft._source.included ?? [])];
+    let source = hit._source;
+    if (this.isResourceGraphRaw(source)) {
+      source = produce(source, draft => {
+        const all = [draft.data, ...(draft.included ?? [])];
+        draft.included.sort((a, b) => {
+          return a.uri.localeCompare(b.uri, undefined, { numeric: true });
+        });
         all.forEach(node => {
           if (node.attributes) {
             node.attributes = getSortedObject(node.attributes ?? {});
@@ -63,8 +67,8 @@ export class ElasticClient {
           }
         });
       });
+      hit = { ...hit, _source: source };
     }
-    const source = hit._source;
     const fullModel: FullModel = {
       hit
     };
