@@ -34,6 +34,7 @@
     "user-action": { "tags": [] },
     "elastic-explorer": { "tags": [] },
     "elastic-explorer-chrome-extension": { "tags": [] },
-    "elastic-explorer-chrome-extension-e2e": { "tags": [], "implicitDependencies": ["elastic-explorer-chrome-extension"] }
+    "elastic-explorer-chrome-extension-e2e": { "tags": [], "implicitDependencies": ["elastic-explorer-chrome-extension"] },
+    "cli": { "tags": [] }
   }
 }

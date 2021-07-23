@@ -1,0 +1,76 @@
+{
+  "casemates-ch-local": {
+    "name": "casemates-ch-local",
+    "generationOptions": {
+      "targetPath": "test/generated/casemates-ch-local.ap.ts"
+    },
+    "apFetchOptions": {
+      "type": "file",
+      "path": "assets/ap/ch-casemates.ap.json"
+    }
+  },
+  "casemates-ch-elastic": {
+    "name": "casemates-ch-elastic",
+    "generationOptions": {
+      "targetPath": "test/generated/casemates-ch-elastic.ap.ts",
+      "useMinCardinality": true
+    },
+    "apFetchOptions": {
+      "type": "elastic",
+      "url": "http://ch-casemates-dev-elastic.cz-aws.net:9200",
+      "index": "config",
+      "id": "casemates-ap.json"
+    }
+  },
+  "casemates-lux-elastic": {
+    "name": "casemates-lux-elastic",
+    "generationOptions": {
+      "targetPath": "test/generated/casemates-lux-elastic.ap.ts",
+      "interfacePrefix": "CmLux"
+    },
+    "apFetchOptions": {
+      "type": "elastic",
+      "url": "http://lux-casemates-dev-elastic.cz-aws.net:9200",
+      "index": "config",
+      "id": "casemates-ap.json"
+    }
+  },
+  "legipro-ch-local": {
+    "name": "legipro-ch-local",
+    "generationOptions": {
+      "targetPath": "test/generated/legipro-ch-local.ap.ts"
+    },
+    "apFetchOptions": {
+      "type": "file",
+      "path": "assets/ap/ch-legipro.ap.json"
+    }
+  },
+  "treaty-ch-local": {
+    "name": "treaty-ch-local",
+    "generationOptions": {
+      "targetPath": "test/generated/treaty-ch-local.ap.ts"
+    },
+    "apFetchOptions": {
+      "type": "file",
+      "path": "assets/ap/ch-treaty.ap.json"
+    }
+  },
+  "dcat": {
+    "name": "dcat",
+    "subClassMappingGenerationOptions": {
+      "apPaths": ["assets/ap-raw/dcat.ap.json", "assets/ap-raw/epdcat.ap.json"],
+      "targetPath": "test/generated/dcat-mapping.json"
+    }
+  },
+  "legipro-ch-api": {
+    "name": "legipro-ch-api",
+    "generationOptions": {
+      "targetPath": "test/generated/legipro-ch-api.ap.ts"
+    },
+    "apFetchOptions": {
+      "type": "apiGet",
+      "url": "http://localhost:8080/legipro/api/application-profile/draft",
+      "authHeader": "Basic dGVjaG5pY2FsX2FkbWluOnRlc3Q="
+    }
+  }
+}

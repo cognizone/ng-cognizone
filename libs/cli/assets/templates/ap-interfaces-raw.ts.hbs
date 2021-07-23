@@ -1,0 +1,23 @@
+// this file was generated using cz-cli, it is advised to not update it manually and use the cli instead
+
+import { LangString } from '@cognizone/model-utils';
+
+{{#each types}}
+export interface {{this.name}}Raw {
+  uri: string;
+  type: string[];
+  attributes?: {
+  {{#each attributes}}
+    {{this.name}}{{#if isOptional}}?{{/if}}: {{{this.type}}};
+  {{/each}}
+  };
+  {{#if hasReferences}}
+  references?: {
+  {{#each references}}
+    {{this.name}}{{#if isOptional}}?{{/if}}: {{this.type}};
+  {{/each}}
+  };
+  {{/if}}
+}
+
+{{/each}}

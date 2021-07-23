@@ -345,12 +345,12 @@
               },
               {
                 "glob": "**/*",
-                "input": "libs",
-                "output": "./assets/libs/"
+                "input": "libs/ng-core",
+                "output": "./assets/libs/ng-core"
               },
               {
                 "glob": "**/*",
-                "input": "dist/docs",
+                "input": "dist/docs/",
                 "output": "./assets/docs/"
               },
               {
@@ -877,6 +877,20 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/elastic-explorer-chrome-extension-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "cli": {
+      "projectType": "library",
+      "root": "libs/cli",
+      "sourceRoot": "libs/cli/src",
+      "prefix": "cz",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/cli/src/**/*.ts"]
           }
         }
       }
