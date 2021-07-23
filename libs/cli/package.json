@@ -1,0 +1,73 @@
+{
+  "name": "@cognizone/cli",
+  "description": "a cool cli for cool devs",
+  "version": "0.0.1",
+  "author": "William Chelman @WilliamChelman",
+  "bin": {
+    "cz-cli": "./bin/run"
+  },
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.1",
+    "@types/handlebars": "^4.1.0",
+    "@types/listr": "^0.14.2",
+    "@types/lodash": "^4.14.168",
+    "@types/prompts": "^2.0.3",
+    "@types/shelljs": "^0.8.6",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.0",
+    "cosmiconfig": "^7.0.0",
+    "execa": "^4.0.0",
+    "handlebars": "^4.7.2",
+    "immer": "^9.0.1",
+    "jsonc-parser": "^3.0.0",
+    "listr": "^0.14.3",
+    "lodash": "^4.17.20",
+    "prompts": "^2.3.0",
+    "shelljs": "^0.8.3",
+    "tslib": "^1.10.0"
+  },
+  "peerDependencies": {
+    "@cognizone/application-profile": "^0.0.1",
+    "@cognizone/model-utils": "^0.0.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@types/node": "^10.17.11",
+    "copyfiles": "^2.4.1",
+    "globby": "^10.0.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.8.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/assets",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://bitbucket.org/cognizone/cz-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "cz-cli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "scripts": {
+    "postinstall": "copyfiles \"../../dist/libs/**/*\" ./node_modules/@cognizone --up=4",
+    "test": "node ./bin/run create-ap-types",
+    "build": "rm -rf lib && rm -rf ../dist/libs/cli && tsc -b && oclif-dev manifest && copyfiles --exclude=node_modules \"./**/*\" ../../dist/libs/cli && node ../../tools/sync-cli-deps.js",
+    "generate-readme": "oclif-dev readme"
+  },
+  "types": "lib/index.d.ts"
+}

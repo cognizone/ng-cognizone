@@ -41,6 +41,11 @@ jobs:
       - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
       - run: npm run nx -- run-many --all --target=build --prod
       - run: npm run nx -- run-many --all --target=test
+      - name: 'Build cli'
+        run: |
+          cd ./libs/cli
+          npm i
+          npm run build
       - run: node ./tools/npm-publish.js
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
