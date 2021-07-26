@@ -297,7 +297,8 @@ export class ElasticExplorerService {
           };
         }
         this.router.navigate([], {
-          queryParams
+          queryParams,
+          queryParamsHandling: 'merge'
         });
       });
   }

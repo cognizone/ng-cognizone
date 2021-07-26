@@ -17,7 +17,7 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "nx": "nx",
     "start": "ng serve",
-    "start:czex": "ng serve elastic-explorer-chrome-extension",
+    "start:eece": "ng serve elastic-explorer-chrome-extension",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",

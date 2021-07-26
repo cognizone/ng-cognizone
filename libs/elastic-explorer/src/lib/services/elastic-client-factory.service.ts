@@ -55,7 +55,7 @@ export class ElasticClient {
     if (this.isResourceGraphRaw(source)) {
       source = produce(source, draft => {
         const all = [draft.data, ...(draft.included ?? [])];
-        draft.included.sort((a, b) => {
+        draft.included?.sort((a, b) => {
           return a.uri.localeCompare(b.uri, undefined, { numeric: true });
         });
         all.forEach(node => {
