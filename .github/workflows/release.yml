@@ -19,8 +19,8 @@ jobs:
           fetch-depth: 0
       - name: Git set user
         run: |
-          git config --local user.email "$(git log --format='%ae' HEAD^!)"
-          git config --local user.name "$(git log --format='%an' HEAD^!)"
+          git config --local user.email "WilliamChelman@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
       - name: Cache node modules global
         uses: actions/cache@v2
         env:
@@ -38,7 +38,7 @@ jobs:
       - run: npm i
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
-      - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
+      # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
       - run: npm run nx -- run-many --all --target=build --prod
       - run: npm run nx -- run-many --all --target=test
       - name: 'Build cli'
@@ -46,8 +46,9 @@ jobs:
           cd ./libs/cli
           npm i
           npm run build
-      - run: node ./tools/npm-publish.js
+      - run: npx semantic-release --dry-run
+        # - run: node ./tools/npm-publish.js
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       # - run: npm run affected:e2e -- --headless --base=origin/main
-      - run: git push --follow-tags
+      # - run: git push --follow-tags
