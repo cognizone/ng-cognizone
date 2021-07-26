@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/cognizone/ng-cognizone/compare/v2.0.2...v2.0.3) (2021-07-26)
+
+
+### Bug Fixes
+
+* export LegalTaxonomy model ([90b17a7](https://github.com/cognizone/ng-cognizone/commit/90b17a78b8c5355ea82713ded815c1da85f983a0))
+
 ## [2.0.2](https://github.com/cognizone/ng-cognizone/compare/v2.0.1...v2.0.2) (2021-07-26)
 
 
