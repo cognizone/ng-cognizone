@@ -21,4 +21,6 @@ Object.keys(cliPackage.dependencies)
     cliPackage.dependencies[key] = `^${depPackage.version}`;
   });
 
+delete cliPackage.scripts;
+
 writeJson(cliPackagePath, cliPackage);
