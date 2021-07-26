@@ -1,3 +1,5 @@
+export * from './models/concept';
+export * from './models/legal-taxonomy';
 export * from './models/legal-taxonomy-cv-provider-options';
 
 export * from './services/legal-taxonomy-client.service';
