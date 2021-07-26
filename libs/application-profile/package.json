@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/application-profile",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "peerDependencies": {
     "@cognizone/model-utils": "^1.28.0"
   },
