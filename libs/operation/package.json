@@ -27,5 +27,9 @@
       "name": "William Chelman",
       "email": "william.chelman@cogni.zone"
     }
-  ]
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }

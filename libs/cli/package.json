@@ -50,11 +50,11 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://bitbucket.org/cognizone/cz-cli",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
   "keywords": [
     "oclif"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
@@ -69,5 +69,20 @@
     "build": "rm -rf lib && rm -rf ../dist/libs/cli && tsc -b && oclif-dev manifest && copyfiles --exclude=node_modules \"./**/*\" ../../dist/libs/cli && node ../../tools/sync-cli-deps.js",
     "generate-readme": "oclif-dev readme"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git",
+    "directory": "libs/cli"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }

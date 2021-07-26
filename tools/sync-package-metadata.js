@@ -22,5 +22,9 @@ packageFiles.forEach(packageFile => {
   package.homepage = rootPackage.homepage;
   package.contributors = rootPackage.contributors;
   package.repository = { ...rootPackage.repository, directory };
+  package.private = false;
+  package.publishConfig = {
+    access: 'public'
+  };
   writeJson(packageFile, package);
 });

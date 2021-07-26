@@ -20,5 +20,9 @@
     "type": "git",
     "url": "https://github.com/cognizone/ng-cognizone.git",
     "directory": "libs/elastic-explorer"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
