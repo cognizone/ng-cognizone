@@ -16,7 +16,9 @@ import {
 import { ControlContainer, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18nService, LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { I18nService } from '@cognizone/i18n';
+
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import { getAllSelectOptions, manyToArray, Nil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
@@ -61,7 +63,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
   }
 
   @Input()
-  maxOptionsSize: number = 15;
+  maxOptionsSize = 15;
 
   @Input()
   sortType?: SelectOptionSortType;
@@ -70,7 +72,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
   @Input()
   hint?: string;
   @Input()
-  removeDisabledOptions: boolean = true;
+  removeDisabledOptions = true;
 
   @ViewChild('multiInput')
   multiInput!: ElementRef<HTMLInputElement>;
@@ -122,7 +124,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     if (value == null) return undefined;
     const allOptions = [...this.storedValueOptions, ...this.options];
     const option = allOptions.find(o => o.value === value);
-    if (option) return this.i18n.translate(option.label, this.lang);
+    if (option) return this.i18n.translate(option.label, undefined, this.lang);
     this.storeValueOption(value);
     return (value as unknown) as string;
   };

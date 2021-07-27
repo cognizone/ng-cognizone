@@ -11,7 +11,9 @@ import {
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18nService, LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { I18nService } from '@cognizone/i18n';
+
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import { getAllSelectOptions, LangString, LangStringSimple, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
@@ -41,11 +43,11 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
   sortType?: SelectOptionSortType;
 
   @Input()
-  canBeDiscarded: boolean = false;
+  canBeDiscarded = false;
   @Input()
-  removeDisabledOptions: boolean = true;
+  removeDisabledOptions = true;
   @Input()
-  isCompact: boolean = false;
+  isCompact = false;
   @ContentChild(TemplateRef, { static: false })
   template!: TemplateRef<unknown>;
 

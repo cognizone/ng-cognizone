@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18nService } from '@cognizone/legi-shared/core';
+import { I18nService } from '@cognizone/i18n';
 import {
   getAllSelectOptions,
   LangString,
@@ -58,15 +58,15 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
     this.setOptions();
   }
   @Input()
-  canBeDiscarded: boolean = false;
+  canBeDiscarded = false;
   @Input()
-  canBeFiltered: boolean = false;
+  canBeFiltered = false;
   @Input()
   direction: 'row' | 'column' = 'column';
   @Input()
   inputLabel?: string;
   @Input()
-  filterOutZeroCounts: boolean = true;
+  filterOutZeroCounts = true;
   @ContentChild(TemplateRef, { static: false })
   template!: TemplateRef<unknown>;
 
