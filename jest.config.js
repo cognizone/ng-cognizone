@@ -18,6 +18,8 @@ module.exports = {
     '<rootDir>/libs/legi-styles',
     '<rootDir>/libs/user-action',
     '<rootDir>/libs/elastic-explorer',
-    '<rootDir>/apps/elastic-explorer-chrome-extension'
+    '<rootDir>/apps/elastic-explorer-chrome-extension',
+    '<rootDir>/libs/i18n',
+    '<rootDir>/libs/i18n-transloco'
   ]
 };
