@@ -35,9 +35,25 @@ export abstract class I18nService {
 
   /**
    *
+   * @returns the extracted string from value, but not processed for translation!
+   */
+  abstract czLabelToString(value: CzLabel, lang?: string): string;
+
+  /**
+   *
    * @returns the translation associated to the given `key`, using `params` and
    * in the corresponding `lang`, as an Observable, in case the translation file
    * is not yet loaded, or if the `lang` changes (if not given)
    */
   abstract selectTranslate<T = unknown>(key: CzLabel, params?: {}, lang?: string): Observable<T>;
+
+  /**
+   * @returns the list of available langs
+   */
+  abstract getAvailableLangs(): string[];
+
+  /**
+   * @returns the list of available langs, in short format
+   */
+  abstract getAvailableSimpleLangs(): string[];
 }

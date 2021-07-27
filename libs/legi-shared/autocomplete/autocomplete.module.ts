@@ -9,8 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { I18nModule } from '@cognizone/i18n';
 import { SelectOptionSortModule } from '@cognizone/legi-shared/select-option-sort';
-import { TranslocoLangStringModule } from '@cognizone/transloco-langstring';
 
 import { AutocompleteMultiComponent } from './autocomplete-multi/autocomplete-multi.component';
 import { AutocompleteSingleComponent } from './autocomplete-single/autocomplete-single.component';
@@ -30,8 +30,8 @@ import { AutocompleteComponent } from './autocomplete.component';
     MatInputModule,
     MatOptionModule,
     MatTooltipModule,
-    TranslocoLangStringModule,
     // Cognizone
+    I18nModule,
     SelectOptionSortModule
   ],
   declarations: [AutocompleteComponent, AutocompleteSingleComponent, AutocompleteMultiComponent],

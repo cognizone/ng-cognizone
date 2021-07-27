@@ -8,7 +8,7 @@
         *ngFor="let option of options | selectOptionsSort: sortType"
         [value]="option.value"
         [disabled]="option.disabled"
-        [matTooltip]="option.label | czLangString"
+        [matTooltip]="option.label | czLabel"
         [matTooltipDisabled]="isString(option.label)"
       >
         <ng-container [ngTemplateOutlet]="template || defaultTemplate" [ngTemplateOutletContext]="getContext(option)"></ng-container>
@@ -18,6 +18,6 @@
   </mat-form-field>
   <ng-template #defaultTemplate let-option>
     <ng-container *ngIf="isString(option.label); else langStringTemplate">{{ t(option.label) }}</ng-container>
-    <ng-template #langStringTemplate>{{ option.label | czLangString }} </ng-template>
+    <ng-template #langStringTemplate>{{ option.label | czLabel }} </ng-template>
   </ng-template>
 </label>
