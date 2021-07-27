@@ -1,3 +1,10 @@
+# [2.1.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v2.1.0-beta.1...v2.1.0-beta.2) (2021-07-27)
+
+
+### Bug Fixes
+
+* replaced I18nService from legi-shared with the one from the i18n lib ([c230b09](https://github.com/cognizone/ng-cognizone/commit/c230b099af37aa6ef247a18f3592faf5c845f364))
+
 # [2.1.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v2.0.3...v2.1.0-beta.1) (2021-07-27)
 
 
