@@ -1,3 +1,10 @@
+# [2.1.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v2.1.0-beta.2...v2.1.0-beta.3) (2021-07-27)
+
+
+### Bug Fixes
+
+* **legi-shared:** renamed legacy theme to classic ([9089b56](https://github.com/cognizone/ng-cognizone/commit/9089b566cb8305ce201bc44972b64e3e4e2684e2))
+
 # [2.1.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v2.1.0-beta.1...v2.1.0-beta.2) (2021-07-27)
 
 
