@@ -28,7 +28,7 @@ mat-label {
   }
 }
 
-:not(.is-readonly) mat-form-field.legacy-appearance::ng-deep {
+:not(.is-readonly) mat-form-field.cz-classic-appearance::ng-deep {
   .mat-form-field-outline {
     background-color: $czls-color-off-white;
   }

@@ -46,6 +46,7 @@ jobs:
           cd ./libs/cli
           npm i
           npm run build
+      - run: node ./tools/sync-package-metadata.js
       - run: npx semantic-release
         # - run: node ./tools/npm-publish.js
         env:

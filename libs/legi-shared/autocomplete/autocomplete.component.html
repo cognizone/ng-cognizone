@@ -1,14 +1,14 @@
 <div class="d-flex flex-column">
-  <span *ngIf="label && legacyMode" class="czls-title">{{ label }}</span>
-  <mat-form-field *ngIf="multi; else singleTemplate" [class.mat-form-field-disabled]="disabled" [class.legacy-appearance]="legacyMode">
-    <mat-label *ngIf="label && !legacyMode">{{ label }} </mat-label>
+  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
+  <mat-form-field *ngIf="multi; else singleTemplate" [class.mat-form-field-disabled]="disabled" [class.cz-classic-appearance]="classicMode">
+    <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
     <mat-icon matPrefix>search</mat-icon>
     <mat-chip-list #chipList>
       <mat-chip
         *ngFor="let value of modelAsOptions | selectOptionsSort: 'label'"
         [disabled]="disabled"
         [selectable]="false"
-        [class.legacy-appearance]="legacyMode"
+        [class.cz-classic-appearance]="classicMode"
         [removable]="!disabled"
         (removed)="removeValue(value)"
       >
@@ -32,8 +32,8 @@
   </mat-form-field>
 
   <ng-template #singleTemplate>
-    <mat-form-field class="my-single-field" [class.legacy-appearance]="legacyMode">
-      <mat-label *ngIf="label && !legacyMode">{{ label }} </mat-label>
+    <mat-form-field class="my-single-field" [class.cz-classic-appearance]="classicMode">
+      <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
       <mat-icon matPrefix>search</mat-icon>
       <textarea
         #singleInput

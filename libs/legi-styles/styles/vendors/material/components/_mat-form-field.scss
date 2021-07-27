@@ -19,8 +19,8 @@ mat-form-field * {
   box-sizing: content-box; // to counter bootstrap's reboot
 }
 
-mat-form-field.mat-form-field.legacy-appearance {
-  @extend %legacy-typography;
+mat-form-field.mat-form-field.cz-classic-appearance {
+  @extend %classic-typography;
   &.my-date-picker {
     .mat-form-field-flex {
       .mat-form-field-prefix {

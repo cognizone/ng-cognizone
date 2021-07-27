@@ -1,7 +1,7 @@
 <label class="d-flex flex-column" *transloco="let t" [class.compact-form-field]="isCompact">
-  <span *ngIf="label && legacyMode" class="czls-title">{{ label }}</span>
-  <mat-form-field [class.legacy-appearance]="legacyMode">
-    <mat-label *ngIf="label && !legacyMode">{{ label }}</mat-label>
+  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
+  <mat-form-field [class.cz-classic-appearance]="classicMode">
+    <mat-label *ngIf="label && !classicMode">{{ label }}</mat-label>
     <mat-select [formControl]="embeddedControl" [placeholder]="placeholder">
       <mat-option *ngIf="canBeDiscarded">{{ t('global.none') }}</mat-option>
       <mat-option

@@ -1,7 +1,7 @@
 <label class="d-flex flex-column">
-  <span *ngIf="label && legacyMode" class="czls-title">{{ label }}</span>
-  <mat-form-field [class.legacy-appearance]="legacyMode">
-    <mat-label *ngIf="label && !legacyMode">{{ label }}</mat-label>
+  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
+  <mat-form-field [class.cz-classic-appearance]="classicMode">
+    <mat-label *ngIf="label && !classicMode">{{ label }}</mat-label>
     <textarea
       matInput
       autocomplete="off"

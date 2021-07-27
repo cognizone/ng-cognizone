@@ -100,8 +100,8 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
 
   modelAsOptions: SelectOption<T>[] = [];
 
-  get legacyMode(): boolean {
-    return this.config.appearance === 'legacy';
+  get classicMode(): boolean {
+    return this.config.appearance === 'classic';
   }
 
   private _options: SelectOption<T>[] = [];

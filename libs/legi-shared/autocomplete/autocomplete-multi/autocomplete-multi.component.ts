@@ -97,8 +97,8 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
 
   modelAsOptions: SelectOption<T>[] = [];
 
-  get legacyMode(): boolean {
-    return this.config.appearance === 'legacy';
+  get classicMode(): boolean {
+    return this.config.appearance === 'classic';
   }
 
   private _options: SelectOption<T>[] = [];
@@ -142,7 +142,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     const currentModel = Array.isArray(this.model) ? this.model : [];
     this.newModel = [...currentModel, value];
 
-    if (this.legacyMode) {
+    if (this.classicMode) {
       this.addSelectedValue();
     }
   }

@@ -56,8 +56,8 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
 
   embeddedControl: FormControl = new FormControl();
 
-  get legacyMode(): boolean {
-    return this.config.appearance === 'legacy';
+  get classicMode(): boolean {
+    return this.config.appearance === 'classic';
   }
 
   private allOptions?: SelectOption<T>[];

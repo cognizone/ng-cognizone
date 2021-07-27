@@ -3,7 +3,7 @@ import { InjectionToken } from '@angular/core';
 export const LEGI_SHARED_OPTIONS_TOKEN = new InjectionToken<LegiSharedOptions>('LegiSharedOptions');
 
 export interface LegiSharedOptions {
-  appearance: 'legacy' | 'urban';
+  appearance: 'classic' | 'urban';
   useDefaultMomentLocaleAdapter: boolean;
 }
 
