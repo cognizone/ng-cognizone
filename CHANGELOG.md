@@ -1,3 +1,10 @@
+# [2.1.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v2.1.0-beta.3...v2.1.0-beta.4) (2021-07-27)
+
+
+### Bug Fixes
+
+* deprecating @cognizone/transloco-langstring ([3c60e42](https://github.com/cognizone/ng-cognizone/commit/3c60e42c6293f4e3a0d717e9796e0af7605ece9e))
+
 # [2.1.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v2.1.0-beta.2...v2.1.0-beta.3) (2021-07-27)
 
 
