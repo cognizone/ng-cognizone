@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { LegiSharedModule } from '@cognizone/legi-shared/core';
+import { I18nTranslocoModule } from '@cognizone/i18n-transloco';
 import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
 import { TranslocoModule } from '@ngneat/transloco';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
@@ -16,7 +17,8 @@ import { NgxsModule } from '@ngxs/store';
     LegiSharedModule.forRoot(),
     TranslocoLocaleModule.init(),
     NgxsModule.forRoot([], {}),
-    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: false, name: 'CZ-DATA_EXPLORER' })
+    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: false, name: 'CZ-DATA_EXPLORER' }),
+    I18nTranslocoModule.forRoot()
   ]
 })
 export class CoreModule {}
