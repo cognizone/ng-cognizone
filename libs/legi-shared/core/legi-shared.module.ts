@@ -5,12 +5,10 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { TranslocoService } from '@ngneat/transloco';
 
 import { DEFAULT_LEGI_SHARED_OPTIONS, LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from './models/legi-shared-options';
-import { I18nService } from './services/i18n.service';
 
 @NgModule({
   imports: [MatMomentDateModule],
   providers: [
-    I18nService,
     {
       provide: APP_INITIALIZER,
       deps: [TranslocoService, DateAdapter, LEGI_SHARED_OPTIONS_TOKEN],

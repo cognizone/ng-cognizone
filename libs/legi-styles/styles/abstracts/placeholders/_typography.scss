@@ -88,10 +88,10 @@
   }
 }
 
-%legacy-typography {
+%classic-typography {
   font-size: to-rem(16px);
   color: $czls-font-color-high;
   font-weight: $czls-font-weight-normal;
   font-family: $czls-font-family;
-  line-height: $czls-form-line-height-legacy;
+  line-height: $czls-form-line-height-classic;
 }

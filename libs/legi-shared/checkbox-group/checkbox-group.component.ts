@@ -14,7 +14,8 @@ import {
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18nService } from '@cognizone/legi-shared/core';
+import { I18nService } from '@cognizone/i18n';
+
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import {
   getAllSelectOptions,
@@ -63,23 +64,23 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
     this.setOptions();
   }
   @Input()
-  canBeFiltered: boolean = false;
+  canBeFiltered = false;
   @Input()
   direction: 'row' | 'column' = 'column';
   @Input()
   sortType?: SelectOptionSortType;
   @Input()
-  removeDisabledOptions: boolean = true;
+  removeDisabledOptions = true;
   @Input()
   inputLabel?: string;
 
   @ContentChild(TemplateRef, { static: false })
   template!: TemplateRef<unknown>;
 
-  seeMore: boolean = false;
+  seeMore = false;
 
   selectedOption?: SelectOption<T>;
-  selectedOptionIndex: number = -1;
+  selectedOptionIndex = -1;
 
   embeddedControl: FormControl = new FormControl();
   searchControl: FormControl = new FormControl();

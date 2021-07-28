@@ -1,18 +1,18 @@
-<ng-container *ngIf="legacyMode; else urbanTemplate">
+<ng-container *ngIf="classicMode; else urbanTemplate">
   <span *ngIf="label" class="czls-title">{{ label }}</span>
   <div class="d-flex flex-column">
-    <mat-form-field [class.mat-form-field-disabled]="disabled" class="legacy-appearance">
+    <mat-form-field [class.mat-form-field-disabled]="disabled" class="cz-classic-appearance">
       <mat-icon matPrefix>search</mat-icon>
       <mat-chip-list #chipList>
         <mat-chip
           *ngFor="let value of modelAsOptions | selectOptionsSort: 'label'"
-          class="legacy-appearance"
+          class="cz-classic-appearance"
           [disabled]="disabled"
           [selectable]="false"
           [removable]="!disabled"
           (removed)="removeValue(value)"
         >
-          {{ value.label | czLangString }}
+          {{ value.label | czLabel }}
           <mat-icon *ngIf="!disabled" matChipRemove>cancel</mat-icon>
         </mat-chip>
         <input
@@ -37,8 +37,8 @@
   <mat-option
     *ngFor="let option of options | selectOptionsSort: sortType; trackBy: trackByFn"
     [value]="option.value"
-    [matTooltip]="option.label | czLangString: lang"
-    >{{ option.label | czLangString: lang }}</mat-option
+    [matTooltip]="option.label | czLabel: lang"
+    >{{ option.label | czLabel: lang }}</mat-option
   >
 </mat-autocomplete>
 
@@ -81,5 +81,5 @@
   <mat-hint *ngIf="hint" class="czls-caption"> {{ hint }}</mat-hint>
 </ng-template>
 <ng-template #chipDefaultTemplate let-value>
-  {{ value.label | czLangString }}
+  {{ value.label | czLabel }}
 </ng-template>

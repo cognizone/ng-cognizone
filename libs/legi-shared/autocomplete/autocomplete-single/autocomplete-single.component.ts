@@ -18,7 +18,8 @@ import {
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18nService, LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { I18nService } from '@cognizone/i18n';
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import { getAllSelectOptions, Nil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
@@ -63,7 +64,7 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
   }
 
   @Input()
-  maxOptionsSize: number = 15;
+  maxOptionsSize = 15;
 
   @Input()
   sortType?: SelectOptionSortType;
@@ -71,9 +72,9 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
   panelWidth?: number | string;
 
   @Input()
-  removeDisabledOptions: boolean = true;
+  removeDisabledOptions = true;
   @Input()
-  canBeDiscarded: boolean = false;
+  canBeDiscarded = false;
   @Input()
   hint?: string;
   @Output()
@@ -99,8 +100,8 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
 
   modelAsOptions: SelectOption<T>[] = [];
 
-  get legacyMode(): boolean {
-    return this.config.appearance === 'legacy';
+  get classicMode(): boolean {
+    return this.config.appearance === 'classic';
   }
 
   private _options: SelectOption<T>[] = [];
@@ -133,7 +134,7 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
     if (value == null) return undefined;
     const allOptions = [...this.storedValueOptions, ...this.options];
     const option = allOptions.find(o => o.value === value);
-    if (option) return this.i18n.translate(option.label, this.lang);
+    if (option) return this.i18n.translate(option.label, undefined, this.lang);
     this.storeValueOption(value);
     return (value as unknown) as string;
   };

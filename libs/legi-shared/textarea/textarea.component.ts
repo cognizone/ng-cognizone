@@ -39,8 +39,8 @@ export class TextareaComponent extends ControlComponent<string> {
 
   embeddedControl: FormControl = new FormControl();
 
-  get legacyMode(): boolean {
-    return this.config.appearance === 'legacy';
+  get classicMode(): boolean {
+    return this.config.appearance === 'classic';
   }
 
   constructor(

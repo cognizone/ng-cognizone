@@ -5,8 +5,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { I18nModule } from '@cognizone/i18n';
 import { SelectOptionSortModule } from '@cognizone/legi-shared/select-option-sort';
-import { TranslocoLangStringModule } from '@cognizone/transloco-langstring';
 import { TranslocoModule } from '@ngneat/transloco';
 
 import { SelectComponent } from './select.component';
@@ -23,7 +23,7 @@ import { SelectComponent } from './select.component';
     MatFormFieldModule,
     // Cognizone
     SelectOptionSortModule,
-    TranslocoLangStringModule,
+    I18nModule,
     // Others
     TranslocoModule
   ],

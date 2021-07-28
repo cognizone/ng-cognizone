@@ -53,8 +53,8 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
 
   embeddedControl: AbstractControl = new FormControl();
 
-  get legacyMode(): boolean {
-    return this.config.appearance === 'legacy';
+  get classicMode(): boolean {
+    return this.config.appearance === 'classic';
   }
 
   private _label?: string;

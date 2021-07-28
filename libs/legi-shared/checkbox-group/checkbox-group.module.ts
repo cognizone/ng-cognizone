@@ -5,9 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { I18nModule } from '@cognizone/i18n';
 import { InputModule } from '@cognizone/legi-shared/input';
 import { SelectOptionSortModule } from '@cognizone/legi-shared/select-option-sort';
-import { TranslocoLangStringModule } from '@cognizone/transloco-langstring';
 import { TranslocoModule } from '@ngneat/transloco';
 
 import { CheckboxGroupComponent } from './checkbox-group.component';
@@ -21,9 +21,9 @@ import { CheckboxGroupComponent } from './checkbox-group.component';
     MatButtonModule,
     MatCheckboxModule,
     MatDividerModule,
-    TranslocoLangStringModule,
     MatIconModule,
     // Internal
+    I18nModule,
     InputModule,
     SelectOptionSortModule,
     // Other

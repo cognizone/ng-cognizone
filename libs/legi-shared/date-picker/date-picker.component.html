@@ -1,8 +1,8 @@
 <label class="d-flex flex-column" [class.is-readonly]="readonly">
-  <span *ngIf="label && legacyMode" class="czls-title">{{ label }}</span>
-  <mat-form-field appearance="outline" [class.legacy-appearance]="legacyMode" class="my-date-picker">
-    <mat-label *ngIf="label && !legacyMode">{{ label }} </mat-label>
-    <mat-datepicker-toggle matPrefix [for]="picker" *ngIf="legacyMode; else urbanTemplate">
+  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
+  <mat-form-field appearance="outline" [class.cz-classic-appearance]="classicMode" class="my-date-picker">
+    <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
+    <mat-datepicker-toggle matPrefix [for]="picker" *ngIf="classicMode; else urbanTemplate">
       <mat-icon matDatepickerToggleIcon>event</mat-icon>
     </mat-datepicker-toggle>
 

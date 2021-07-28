@@ -36,7 +36,7 @@
 
   <ng-template #defaultTemplate let-option>
     <ng-container *ngIf="isString(option.label); else langStringTemplate">{{ t(option.label) }}</ng-container>
-    <ng-template #langStringTemplate>{{ option.label | czLangString }} </ng-template>
+    <ng-template #langStringTemplate>{{ option.label | czLabel }} </ng-template>
 
     <span *ngIf="counts">({{ getCount(option) }})</span>
   </ng-template>

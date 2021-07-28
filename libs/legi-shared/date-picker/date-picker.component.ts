@@ -41,8 +41,8 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
 
   embeddedControl!: FormControl;
 
-  get legacyMode(): boolean {
-    return this.config.appearance === 'legacy';
+  get classicMode(): boolean {
+    return this.config.appearance === 'classic';
   }
 
   constructor(

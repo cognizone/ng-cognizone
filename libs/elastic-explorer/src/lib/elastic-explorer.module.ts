@@ -16,12 +16,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { I18nModule } from '@cognizone/i18n';
 import { AutocompleteModule } from '@cognizone/legi-shared/autocomplete';
 import { CheckboxGroupModule } from '@cognizone/legi-shared/checkbox-group';
 import { InputModule } from '@cognizone/legi-shared/input';
 import { ListPaginatorModule } from '@cognizone/legi-shared/list-paginator';
 import { SelectModule } from '@cognizone/legi-shared/select';
-import { TranslocoLangStringModule } from '@cognizone/transloco-langstring';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
@@ -102,7 +102,7 @@ import { ResultsTableComponent } from './components/results-table/results-table.
     MatListModule,
     // Misc
     TranslocoLocaleModule,
-    TranslocoLangStringModule,
+    I18nModule,
     ClipboardModule,
     // TODO add back when migrating to angular 12
     // NgxsModule.forFeature([ElasticExplorerState]),

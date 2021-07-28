@@ -11,7 +11,7 @@ mat-chip.mat-chip.mat-standard-chip {
     color: $czls-color-primary;
     background-color: $czls-color-primary-background-light;
   }
-  &:not(.legacy-appearance) {
+  &:not(.cz-classic-appearance) {
     color: $czls-font-color-high;
     border: 1px solid $czls-color-primary;
     .mat-chip-remove {
