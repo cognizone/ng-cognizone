@@ -16,12 +16,13 @@ import { getSortedObject } from '../../utils/get-sorted-object';
   styleUrls: ['./json-model-flat-graph-details.component.scss']
 })
 export class JsonModelFlatGraphDetailsComponent implements OnInit {
-  jsonModelFlatGraph: JsonModelFlatGraph;
+  jsonModelFlatGraph!: JsonModelFlatGraph;
   textFilter$ = this.detailViewService.textFilter$;
 
   constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}
 
   ngOnInit(): void {
+    if (!this.context.model.jsonModelFlatGraph) return;
     this.jsonModelFlatGraph = { ...this.context.model.jsonModelFlatGraph };
     this.jsonModelFlatGraph.models = getSortedObject(this.jsonModelFlatGraph.models);
   }

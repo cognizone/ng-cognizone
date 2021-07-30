@@ -31,14 +31,14 @@ export class I18nTranslocoService extends I18nService {
   }
 
   translate<T = unknown>(value: CzLabel, params?: {}, lang?: string): T {
-    if (!value) return undefined as T;
+    if (!value) return (undefined as unknown) as T;
     if (typeof value === 'string') return this.transloco.translate(value, params, lang);
 
     return (czLabelToString(value, this.getActiveSimpleLang(), this.getAvailableSimpleLangs()) as unknown) as T;
   }
 
   czLabelToString(value: CzLabel, lang: string = this.getActiveSimpleLang()): string {
-    return czLabelToString(value, lang, this.getAvailableSimpleLangs());
+    return czLabelToString(value, lang, this.getAvailableSimpleLangs()) as string;
   }
 
   selectTranslate<T = unknown>(key: CzLabel, params?: {}, lang?: string): Observable<T> {

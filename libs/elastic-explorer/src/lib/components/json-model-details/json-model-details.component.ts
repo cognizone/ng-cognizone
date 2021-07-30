@@ -16,13 +16,13 @@ import { DetailViewService } from '../../services/detail-view.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class JsonModelDetailsComponent implements OnInit {
-  jsonModel: JsonModel;
+  jsonModel!: JsonModel;
   textFilter$ = this.detailViewService.textFilter$;
 
   constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}
 
   ngOnInit(): void {
-    this.jsonModel = this.context.model.jsonModel;
+    this.jsonModel = this.context.model.jsonModel as JsonModel;
   }
 }
 

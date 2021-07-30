@@ -19,7 +19,7 @@ export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnCh
   model!: FullModel;
   queryControl: FormControl = new FormControl('');
   providers: DetailViewProvider[] = [];
-  myInjector: Injector;
+  myInjector!: Injector;
 
   constructor(
     @Inject(DETAIL_VIEW_PROVIDER_TOKEN) private allProviders: DetailViewProvider[],
