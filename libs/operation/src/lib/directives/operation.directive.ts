@@ -29,6 +29,7 @@ export class OperationDirective extends OnDestroy$ implements OnInit, OnChanges 
   }
 
   operation?: Operation;
+
   private _operation$: Subject<Nil<Operation>> = new BehaviorSubject<Nil<Operation>>(null);
 
   private id$: Subject<string> = new ReplaySubject(1);

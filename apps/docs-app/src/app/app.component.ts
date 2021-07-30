@@ -16,12 +16,13 @@ import { AnchorService } from './shared';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   core$: Observable<CoreStateModel> = this.coreStateFacade.core$;
 
   pages$: Observable<Page[]> = this.core$.pipe(selectProp('pages'), debounceTime(0));
+
   pagination$: Observable<{ previous?: Page; current?: Page; next?: Page }> = this.router.events.pipe(
     isInstanceOf(NavigationEnd),
     startWith({ url: this.route.snapshot.url.map(u => u.path).join('/') }),
@@ -35,6 +36,7 @@ export class AppComponent implements OnInit {
   );
 
   easterPaused = false;
+
   easter$: Observable<SafeHtml> = this.konamiService.codeDetected$.pipe(
     map(() => atob(base64)),
     map(html => this.sanitizer.bypassSecurityTrustHtml(html))
@@ -49,14 +51,18 @@ export class AppComponent implements OnInit {
     .pipe(map(match => match.matches));
 
   startSidenavMode$: Observable<string> = this.isMediumScreen$.pipe(map(match => (match ? 'side' : 'over')));
-  endSidenavOpened$: Observable<boolean> = combineLatest(this.isLargeScreen$, this.anchorService.anchors$).pipe(
+
+  endSidenavOpened$: Observable<boolean> = combineLatest([this.isLargeScreen$, this.anchorService.anchors$]).pipe(
     map(([isLargeScreen, anchors]) => (isLargeScreen ? anchors.length > 0 : false)),
     debounceTime(100)
   );
 
   version$: Observable<string> = this.librariesService.getVersion('ng-core');
+
   title?: string;
+
   subtitle?: string;
+
   hasPages = false;
 
   constructor(

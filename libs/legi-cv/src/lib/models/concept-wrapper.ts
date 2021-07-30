@@ -25,7 +25,6 @@ export const countConceptWrapperSorterFactory: ConceptWrapperSorterFactory = par
 export const labelConceptWrapperSorterFactory: ConceptWrapperSorterFactory = params => {
   const lang = params.lang;
   if (!lang) {
-    // tslint:disable-next-line: no-console
     console.warn('Trying to sort on label, but no lang was provided, skipping');
     return () => 0;
   }
@@ -39,9 +38,8 @@ export const labelConceptWrapperSorterFactory: ConceptWrapperSorterFactory = par
   };
 };
 
-export const uriConceptWrapperSorterFactory: ConceptWrapperSorterFactory = () => (a, b) => {
-  return a.concept['@id'].localeCompare(b.concept['@id'], undefined, { numeric: true });
-};
+export const uriConceptWrapperSorterFactory: ConceptWrapperSorterFactory = () => (a, b) =>
+  a.concept['@id'].localeCompare(b.concept['@id'], undefined, { numeric: true });
 
 export function composeConceptWrapperSorterFactories(sorterFactories: ConceptWrapperSorterFactory[]): ConceptWrapperSorterFactory {
   return params => {

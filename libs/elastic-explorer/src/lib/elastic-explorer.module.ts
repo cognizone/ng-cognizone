@@ -26,6 +26,7 @@ import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 
+import { LoadingService } from '@cognizone/ng-core';
 import { AttributeDisplayComponent } from './components/attribute-display/attribute-display.component';
 import { ElasticInstanceEditorComponent } from './components/elastic-instance-editor/elastic-instance-editor.component';
 import { ElasticInstanceManagementComponent } from './components/elastic-instance-management/elastic-instance-management.component';
@@ -49,7 +50,6 @@ import {
   JsonModelFlatGraphDetailsComponent,
   jsonModelFlatGraphDetailsViewProvider
 } from './components/json-model-flat-graph-details/json-model-flat-graph-details.component';
-import { LoadingService } from '@cognizone/ng-core';
 import { ResultsTableComponent } from './components/results-table/results-table.component';
 
 @NgModule({

@@ -14,6 +14,7 @@ import { OperationsService } from '../../services/operations.service';
 })
 export class OperationViewerModalComponent implements OnInit {
   allOperations?: OperationGroup[];
+
   group?: OperationGroup;
 
   constructor(

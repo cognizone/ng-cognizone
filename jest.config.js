@@ -20,6 +20,7 @@ module.exports = {
     '<rootDir>/libs/elastic-explorer',
     '<rootDir>/apps/elastic-explorer-chrome-extension',
     '<rootDir>/libs/i18n',
-    '<rootDir>/libs/i18n-transloco'
+    '<rootDir>/libs/i18n-transloco',
+    '<rootDir>/libs/eslint-config'
   ]
 };

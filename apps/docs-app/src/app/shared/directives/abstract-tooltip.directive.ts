@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/contextual-lifecycle */
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { AfterViewInit, Directive, ElementRef, HostListener, Injectable, OnDestroy, Type, ViewContainerRef } from '@angular/core';
@@ -10,7 +11,9 @@ export abstract class AbstractTooltipDirective<T> extends OnDestroy$ implements 
   protected abstract component: Type<T>;
 
   private overlayRef!: OverlayRef;
+
   private portal!: ComponentPortal<T>;
+
   private detachTimeout?: Subscription;
 
   constructor(private readonly overlay: Overlay, private readonly elRef: ElementRef, private readonly vcRef: ViewContainerRef) {
@@ -27,8 +30,8 @@ export abstract class AbstractTooltipDirective<T> extends OnDestroy$ implements 
           originX: 'start',
           originY: 'bottom',
           overlayX: 'start',
-          overlayY: 'top'
-        }
+          overlayY: 'top',
+        },
       ]);
     this.overlayRef = this.overlay.create({ positionStrategy });
     this.onDestroy$.subscribe(() => this.overlayRef.dispose());
@@ -53,6 +56,7 @@ export abstract class AbstractTooltipDirective<T> extends OnDestroy$ implements 
       .subscribe(() => this.overlayRef.detach());
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   protected linkInputs(instance: T): void {
     // let children decide
   }

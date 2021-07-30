@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnvApisAndFlagsComponent {
   lastUpdate: Date = new Date('2019-11-09');
-  env1: string = `
+
+  env1 = `
   // @env/environment.ts
   export const environment = {
     production: false,
@@ -21,7 +22,7 @@ export class EnvApisAndFlagsComponent {
   };
   `;
 
-  env2: string = `
+  env2 = `
   // @env/environment.ts
   export const environment = {
     production: false,
@@ -35,7 +36,7 @@ export class EnvApisAndFlagsComponent {
   };
   `;
 
-  proxyConf: string = `
+  proxyConf = `
   // proxy.conf.js
   module.exports = [
     {
@@ -52,7 +53,7 @@ export class EnvApisAndFlagsComponent {
   ];
   `;
 
-  packageJson: string = `
+  packageJson = `
   // package.json
   //...
   "scripts": {
@@ -62,7 +63,7 @@ export class EnvApisAndFlagsComponent {
   // ...
   `;
 
-  routingModuleCode: string = `
+  routingModuleCode = `
   import { environment } from '@env/environment';
 
   const routes: Routes = [

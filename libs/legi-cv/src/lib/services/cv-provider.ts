@@ -11,7 +11,7 @@ export interface CvProvider<T extends Concept = Concept> {
   cvName: string;
   cvUri: string;
 
-  getCv(query: Nil<string>, options: GetCvParams): Observable<(T | ConceptGroup<T>)[]>;
+  getCv(query: Nil<string>, options: GetCvParams): Observable<(ConceptGroup<T> | T)[]>;
   toConceptWrapper(concept: T, query: Nil<string>): Completable<ConceptWrapper>;
   getConceptByUri(conceptUri: string): Observable<T>;
   hasConcept(conceptUri: string): Observable<boolean>;

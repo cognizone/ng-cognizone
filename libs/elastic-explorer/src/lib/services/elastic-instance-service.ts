@@ -9,6 +9,7 @@ import { ElasticInstance } from '../models/elastic-instance';
 })
 export class ElasticInstanceService {
   private readonly LOCAL_STORAGE_KEY: string = 'cz elastic urls';
+
   private _values$: BehaviorSubject<ElasticInstance[]>;
 
   constructor() {
@@ -23,7 +24,7 @@ export class ElasticInstanceService {
       return this.values;
     }
     const raw = JSON.parse(localValues) as (ElasticInstance | string)[];
-    return raw.map(r => (typeof r === 'string' ? { url: r, label: r } : r)).sort((a, b) => a.label.localeCompare(b.label));
+    return raw.map(r => typeof r === 'string' ? { url: r, label: r } : r).sort((a, b) => a.label.localeCompare(b.label));
   }
 
   private set values(v: ElasticInstance[]) {
@@ -58,6 +59,7 @@ export class ElasticInstanceService {
   deleteValue(instance: ElasticInstance): void {
     this.values = this.values.filter(items => items.url !== instance.url);
   }
+
   downloadFile(): void {
     downloadBlob(
       new Blob([JSON.stringify(this.values)], { type: 'application/json' }),

@@ -39,14 +39,12 @@ export class OperationsState {
 
   @Action(UpdateOperationGroups)
   updateOperationGroups(ctx: StateContext<OperationsStateModel>, { groups }: UpdateOperationGroups): void {
-    const filteredGroups = ctx.getState().groups.filter(g => {
-      return groups.some(sub => {
+    const filteredGroups = ctx.getState().groups.filter(g => groups.some(sub => {
         if (sub.uri) {
           return !(g.id === sub.id && g.uri === sub.uri);
         }
         return g.id !== sub.id;
-      });
-    });
+      }));
     ctx.patchState({ groups: [...filteredGroups, ...groups] });
   }
 

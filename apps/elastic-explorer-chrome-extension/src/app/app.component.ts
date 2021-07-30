@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { ProtocolService } from './core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'cz-root',
   template: `
     <router-outlet></router-outlet>
-    <app-copy-link-button></app-copy-link-button>
+    <cz-copy-link-button></cz-copy-link-button>
   `,
-  styles: []
+  styles: [],
 })
 export class AppComponent {
   constructor(protocolService: ProtocolService) {

@@ -6,10 +6,12 @@ import { YASGUI } from '../models/yasgui';
 
 @Injectable()
 export class YasguiService {
-  assetsBasePath: string = 'assets/ng-yasgui';
+  assetsBasePath = 'assets/ng-yasgui';
 
   private script?: HTMLScriptElement;
+
   private style?: HTMLLinkElement;
+
   private yasgui$?: Observable<YASGUI>;
 
   loadYasgui(): Observable<YASGUI> {
@@ -26,7 +28,7 @@ export class YasguiService {
     head?.appendChild(this.style);
 
     return (this.yasgui$ = fromEvent(this.script, 'load').pipe(
-      map(e => {
+      map(() => {
         this.clearYasguiCache();
         return ((window as unknown) as { YASGUI: YASGUI }).YASGUI;
       }),
@@ -45,7 +47,7 @@ export class YasguiService {
   private clearYasguiCache(): void {
     for (let i = 0; i < localStorage.length; ++i) {
       const key = localStorage.key(i);
-      if (key && key.startsWith('yasgui')) {
+      if (key?.startsWith('yasgui')) {
         localStorage.removeItem(key);
       }
     }

@@ -1,13 +1,13 @@
 import { Injectable, OnDestroy, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Nil } from '@cognizone/model-utils';
-import { OnDestroy$ } from '@cognizone/ng-core';
+import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable } from 'rxjs';
 import { debounceTime, first } from 'rxjs/operators';
 
 import {
   OperationViewerModalComponent,
-  OperationViewerModalComponentData
+  OperationViewerModalComponentData,
 } from '../components/operation-viewer-modal/operation-viewer-modal.component';
 import { Operation, OperationGroupDescription } from '../models/operation';
 
@@ -16,11 +16,19 @@ import { OperationsService } from './operations.service';
 @Injectable()
 export class OperationDebug extends OnDestroy$ implements OnDestroy {
   private options?: OperationDebugOptions;
+
   private debugDiv?: HTMLElement;
+
   private unListen?: Function;
 
-  constructor(private renderer: Renderer2, private dialog: MatDialog, private operationsService: OperationsService) {
+  constructor(
+    private renderer: Renderer2,
+    private dialog: MatDialog,
+    private operationsService: OperationsService,
+    private logger: Logger
+  ) {
     super();
+    this.logger = logger.extend('OperationDebug');
   }
 
   ngOnDestroy(): void {
@@ -62,7 +70,7 @@ export class OperationDebug extends OnDestroy$ implements OnDestroy {
       event.stopPropagation();
       event.stopImmediatePropagation();
       event.preventDefault();
-      this.openOperationViewerModal();
+      this.openOperationViewerModal().catch(err => this.logger.error(err));
     });
 
     if (this.options?.el) {
@@ -98,7 +106,7 @@ export class OperationDebug extends OnDestroy$ implements OnDestroy {
     const path = await this.options?.path$.pipe(first()).toPromise();
     const data: OperationViewerModalComponentData = {
       operationGroupDescriptions: path ?? [],
-      operation: operation
+      operation: operation,
     };
     this.dialog.open(OperationViewerModalComponent, { data });
   }

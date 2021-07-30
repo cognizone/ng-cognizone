@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Host, Inject, Input, OnChanges, OnInit, Optional } from '@angular/core';
+import { Directive, ElementRef, Host, Inject, Input, OnChanges, Optional } from '@angular/core';
 import { AbstractControl, FormArrayName, FormControlDirective, FormControlName, FormGroupDirective, FormGroupName } from '@angular/forms';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { Many } from '@cognizone/model-utils';
@@ -7,21 +7,23 @@ import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { GraphAndControlLinkingService } from '../services/graph-and-control-linking.service';
 import { GraphService } from '../services/graph.service';
-
 import { NodeUriDirective } from './node-uri.directive';
 import { RootUriDirective } from './root-uri.directive';
 
 @Directive({
   selector: '[czNodeAttributeLinked]',
-  exportAs: 'czNodeAttributeLinked'
+  exportAs: 'czNodeAttributeLinked',
 })
 export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChanges {
   @Input('czNodeAttributeLinked')
   attributeKey!: string;
+
   @Input()
   cvName?: Many<string>;
+
   @Input()
   control?: AbstractControl;
+
   @Input()
   classId?: string;
 
@@ -40,7 +42,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     private readonly rootUriDirective: RootUriDirective,
     private readonly nodeUriDirective: NodeUriDirective,
     @Inject(DEVTOOLS_ENABLED_TOKEN) private readonly devtoolsEnabled: boolean,
-    @Optional() private elRef?: ElementRef<HTMLElement | Comment | undefined>,
+    @Optional() private elRef?: ElementRef<Comment | HTMLElement | undefined>,
     @Host() @Optional() private formArrayName?: FormArrayName,
     @Host() @Optional() private formGroupName?: FormGroupName,
     @Host() @Optional() private formGroupDirective?: FormGroupDirective,
@@ -52,10 +54,10 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
 
   ngOnChanges(): void {
     this.attributeKey = (
-      this.attributeKey ||
-      this.formControlName?.name ||
-      this.formGroupName?.name ||
-      this.formArrayName?.name ||
+      this.attributeKey ??
+      this.formControlName?.name ??
+      this.formGroupName?.name ??
+      this.formArrayName?.name ??
       ''
     ).toString();
 
@@ -79,7 +81,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
         control: this.control,
         apName: this.rootUriDirective.apName,
         cvName: this.cvName,
-        classId: this.classId
+        classId: this.classId,
       })
       .subscribe();
 
@@ -88,7 +90,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
       try {
         const fullPath = this.getFullAttributePath();
         el.setAttribute('title', `${fullPath.join('>')}`);
-      } catch (err) {
+      } catch (err: unknown) {
         // since it's for debugging purposes, wrap it in try/catch just in case, we don't care about the error though
       }
     }

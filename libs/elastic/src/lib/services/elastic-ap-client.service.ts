@@ -37,7 +37,7 @@ export class ElasticApClient {
 
 export interface ElasticApClientFetchOptions {
   baseUrl: string;
-  fetchMethod: 'POST' | 'GET';
+  fetchMethod: 'GET' | 'POST';
   id: string;
   index: string;
 }

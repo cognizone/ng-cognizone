@@ -32,7 +32,9 @@ import { CvProvider } from './cv-provider';
 
 export abstract class AtomicCvProvider<T extends Concept = Concept> implements CvProvider<T> {
   cvName: string;
+
   cvUri: string;
+
   conceptKeysForFiltering: ConceptFilterableKeys;
 
   protected get allConcepts$(): Observable<T[]> {
@@ -51,7 +53,7 @@ export abstract class AtomicCvProvider<T extends Concept = Concept> implements C
     return this.allConcepts$.pipe(
       switchMap(identity),
       filter(concept => (params.counts ? (params.counts[concept['@id']] ?? 0) > 0 : true)),
-      mergeMap(concept => this.toConceptWrapper(concept, query)),
+      mergeMap(async concept => this.toConceptWrapper(concept, query)),
       filter(concept => concept.score > 0),
       toArray(),
       map(concepts => {

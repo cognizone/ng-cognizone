@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 /**
- * Describe the response of a search done on Elastic 7+, with `_source` in hits beging typed with `T`
+ * Describe the response of a search done on Elastic 7+, with `_source` in hits
+ * being typed with `T`
  */
 export interface ElasticSearchResponse<T> {
   took: number;
@@ -13,7 +15,7 @@ export interface ElasticSearchResponse<T> {
   hits: {
     total: {
       value: number;
-      relation: 'gte' | 'eq';
+      relation: 'eq' | 'gte';
     };
     max_score: number | null;
     hits: ElasticHit<T>[];
@@ -46,13 +48,14 @@ export interface ElasticAggregation {
  * A bucket that is inside an {@link ElasticAggregation}
  */
 export interface ElasticBucket {
-  key: string | number; // maybe unknown
+  key: number | string; // maybe unknown
   key_as_string?: string;
   doc_count: number;
 }
 
 /**
  * Return a transformed {@link ElasticResponse} where all `_source` are transformed using the given `project` function
+ *
  * @param response The json returned by a _search elastic call
  * @param project The projection function
  */
@@ -62,6 +65,7 @@ export function mapElasticSources<T, U>(response: ElasticSearchResponse<T>, proj
 
 /**
  * Aggregate all `_source` in all `hits` of an {@link ElasticResponse} in a single array
+ *
  * @param response The json returned by a _search elastic call
  */
 export function extractSourcesFromElasticResponse<T>(response: ElasticSearchResponse<T>): T[] {
@@ -70,6 +74,7 @@ export function extractSourcesFromElasticResponse<T>(response: ElasticSearchResp
 
 /**
  * Extract the first `_source` of the first `hits` of an {@link ElasticResponse}
+ *
  * @param response The json returned by a _search elastic call
  */
 export function extractOneSourceFromElasticResponse<T>(response: ElasticSearchResponse<T>): T {

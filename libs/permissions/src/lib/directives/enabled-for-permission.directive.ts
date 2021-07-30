@@ -10,14 +10,17 @@ import { PermissionsService } from '../services/permissions.service';
 export class EnabledForPermissionDirective extends OnDestroy$ implements OnInit, OnChanges {
   @HostBinding()
   disabled?: boolean;
+
   @Input('czEnabledForPermission')
   permissions: Nil<Many<string>>;
+
   @Input()
   czAnd?: boolean;
+
   @Input()
   czOr?: boolean;
 
-  private hasPermission: boolean = false;
+  private hasPermission = false;
 
   constructor(private permissionsService: PermissionsService, private cdr: ChangeDetectorRef) {
     super();

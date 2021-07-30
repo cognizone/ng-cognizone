@@ -9,6 +9,7 @@ import { MicroValidatorBuilder } from '../ap-form-builder.service';
 })
 export class CardinalityValidatorService extends MicroValidatorBuilder {
   static readonly MIN_CARDINALITY_ERROR_KEY: string = 'minCardinality';
+
   static readonly MAX_CARDINALITY_ERROR_KEY: string = 'minCardinality';
 
   createValidator(rules: Rule[]): ValidatorFn | null {

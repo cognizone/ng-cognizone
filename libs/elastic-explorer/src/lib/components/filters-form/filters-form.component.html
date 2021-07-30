@@ -11,5 +11,5 @@
     <cz-input formControlName="facets" label="Facets"></cz-input>
     <mat-slide-toggle formControlName="isFuzzy">Enable full text search</mat-slide-toggle>
   </ng-container>
-  <app-elastic-query-editor *ngIf="manualMode.value"></app-elastic-query-editor>
+  <cz-elastic-query-editor *ngIf="manualMode.value"></cz-elastic-query-editor>
 </div>

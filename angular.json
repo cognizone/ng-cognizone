@@ -894,14 +894,7 @@
       "root": "libs/cli",
       "sourceRoot": "libs/cli/src",
       "prefix": "cz",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/cli/src/**/*.ts"]
-          }
-        }
-      }
+      "architect": {}
     },
     "i18n": {
       "projectType": "library",
@@ -967,6 +960,26 @@
           "options": {
             "jestConfig": "libs/i18n-transloco/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "eslint-config": {
+      "projectType": "library",
+      "root": "libs/eslint-config",
+      "sourceRoot": "libs/eslint-config/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/eslint-config/tsconfig.lib.json",
+            "project": "libs/eslint-config/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/eslint-config/tsconfig.lib.prod.json"
+            }
           }
         }
       }

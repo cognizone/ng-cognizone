@@ -3,6 +3,7 @@ import { Many } from '@cognizone/model-utils';
 /**
  * @experimental
  */
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export type Uri<T extends JsonModel> = string & { '@@meta_type_placeholder@@'?: T };
 
 export interface JsonModel {
@@ -15,7 +16,7 @@ export interface JsonModel {
   '@facets'?: {};
 }
 
-export type JsonModelType<T extends Many<string> = string> = T extends string ? T | [T, ...string[]] | Many<string> : Many<string>;
+export type JsonModelType<T extends Many<string> = string> = T extends string ? Many<string> | T | [T, ...string[]] : Many<string>;
 
 export function isJsonModel(o: unknown): o is JsonModel {
   return typeof o === 'object' && o != null && '@id' in o && '@type' in o;

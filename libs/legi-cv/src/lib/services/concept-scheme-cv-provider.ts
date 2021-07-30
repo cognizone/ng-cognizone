@@ -61,9 +61,8 @@ export function provideConceptSchemeCvProvider(config: AtomicCvProviderConfig): 
   return {
     multi: true,
     provide: CV_PROVIDER_TOKEN,
-    useFactory: (cvService: CvStateService, atomicCvClient: AtomicCvClient, options: LegiCvOptions, matcher: ConceptMatcherService) => {
-      return new ConceptSchemeCvProvider(cvService, atomicCvClient, matcher, config, options);
-    },
-    deps: [CvStateService, ATOMIC_CV_CLIENT_TOKEN, LEGI_CV_OPTIONS_TOKEN, ConceptMatcherService]
+    useFactory: (cvService: CvStateService, atomicCvClient: AtomicCvClient, options: LegiCvOptions, matcher: ConceptMatcherService) =>
+      new ConceptSchemeCvProvider(cvService, atomicCvClient, matcher, config, options),
+    deps: [CvStateService, ATOMIC_CV_CLIENT_TOKEN, LEGI_CV_OPTIONS_TOKEN, ConceptMatcherService],
   };
 }

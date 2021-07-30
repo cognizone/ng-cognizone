@@ -10,7 +10,7 @@ import {
   Nil,
   notNil,
   selectProp,
-  SubSink
+  SubSink,
 } from '@cognizone/model-utils';
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
@@ -28,7 +28,7 @@ import {
   SetFilters,
   SetIndices,
   SetManualMode,
-  SetPagination
+  SetPagination,
 } from '../store/elastic-explorer.actions';
 import { ELASTIC_EXPLORER_STATE_TOKEN, ElasticExplorerStateModel } from '../store/elastic-explorer.state';
 import { ElasticClientFactoryService } from './elastic-client-factory.service';
@@ -39,15 +39,25 @@ export class ElasticExplorerService {
   private get state$(): Observable<ElasticExplorerStateModel> {
     return this.store.select(ELASTIC_EXPLORER_STATE_TOKEN);
   }
+
   filters$: Observable<Filters> = this.state$.pipe(selectProp('filters'));
+
   total$: Observable<number> = this.state$.pipe(selectProp('total'));
+
   pagination$: Observable<Pagination> = this.state$.pipe(selectProp('pagination'));
+
   aggregations$: Observable<Dictionary<ElasticAggregation>> = this.state$.pipe(selectProp('aggregations'));
+
   elasticInfo$: Observable<ElasticInfo> = this.state$.pipe(selectProp('elasticInfo'));
+
   models$: Observable<FullModel[]> = this.state$.pipe(selectProp('models'));
+
   indices$: Observable<string[]> = this.state$.pipe(selectProp('indices'));
+
   facetFields$!: Observable<Field[]>;
+
   manualMode$: Observable<boolean> = this.state$.pipe(selectProp('manualMode'));
+
   elasticQuery$: Observable<{}> = this.state$.pipe(selectProp('elasticQuery'));
 
   private subSink: SubSink = new SubSink();
@@ -113,7 +123,7 @@ export class ElasticExplorerService {
           if (!elasticInfo.url) return EMPTY;
           const client = this.elasticClientFactory.create({
             baseUrl: elasticInfo.url,
-            index: elasticInfo.index
+            index: elasticInfo.index,
           });
           return client.search(elasticQuery).pipe(
             catchError(err => {
@@ -181,17 +191,17 @@ export class ElasticExplorerService {
       track_total_hits: true,
       query: {
         bool: {
-          must: [] as unknown[]
-        }
+          must: [] as unknown[],
+        },
       },
       aggs: {
         type: {
           terms: {
             field: 'data.type.keyword',
-            size: 100
-          }
-        }
-      }
+            size: 100,
+          },
+        },
+      },
     };
 
     if (filters.facets) {
@@ -206,8 +216,8 @@ export class ElasticExplorerService {
     if (filters.type && filters.type.length > 0) {
       query.query.bool.must.push({
         terms: {
-          'data.type.keyword': filters.type
-        }
+          'data.type.keyword': filters.type,
+        },
       });
     }
 
@@ -221,13 +231,14 @@ export class ElasticExplorerService {
 
     return query;
   }
+
   private flattenFields(properties: ElasticPropertiesMap, currentPath: string, fields: Field[]): Field[] {
     Object.entries(properties).forEach(([key, value]) => {
       const newPath = `${currentPath}.${key}`;
       if ('type' in value) {
         fields.push({
           path: newPath,
-          type: value.type
+          type: value.type,
         });
       } else {
         this.flattenFields(value.properties, newPath, fields);
@@ -242,10 +253,10 @@ export class ElasticExplorerService {
         match_phrase_prefix: {
           [field]: {
             query: value,
-            boost: 2
-          }
-        }
-      }
+            boost: 2,
+          },
+        },
+      },
     ] as unknown[];
 
     if (isFuzzy) {
@@ -254,51 +265,49 @@ export class ElasticExplorerService {
           match: {
             [field]: {
               query: value,
-              boost: 1.5
-            }
-          }
+              boost: 1.5,
+            },
+          },
         },
         {
           match: {
             [field]: {
               query: value,
-              fuzziness: 'auto'
-            }
-          }
+              fuzziness: 'auto',
+            },
+          },
         }
       );
     }
     return {
       bool: {
         minimum_should_match: 1,
-        should
-      }
+        should,
+      },
     };
   }
 
   private wireStateToRoute(): void {
     this.subSink.add = combineLatest([this.filters$, this.pagination$, this.elasticInfo$, this.manualMode$, this.elasticQuery$])
       .pipe(debounceTime(0))
-      .subscribe(([filters, pagination, elasticInfo, manualMode, elasticQuery]) => {
+      .subscribe(async ([filters, pagination, elasticInfo, manualMode, elasticQuery]) => {
         let queryParams: {} = {
-          elasticInfo: this.toQueryParams(elasticInfo)
+          elasticInfo: this.toQueryParams(elasticInfo),
         };
-        if (manualMode) {
-          queryParams = {
-            ...queryParams,
-            elasticQuery: JSON.stringify(elasticQuery)
-          };
-        } else {
-          queryParams = {
-            ...queryParams,
-            q: this.toQueryParams(filters),
-            from: pagination.from,
-            size: pagination.size
-          };
-        }
-        this.router.navigate([], {
+        queryParams = manualMode
+          ? {
+              ...queryParams,
+              elasticQuery: JSON.stringify(elasticQuery),
+            }
+          : {
+              ...queryParams,
+              q: this.toQueryParams(filters),
+              from: pagination.from,
+              size: pagination.size,
+            };
+        await this.router.navigate([], {
           queryParams,
-          queryParamsHandling: 'merge'
+          queryParamsHandling: 'merge',
         });
       });
   }
@@ -319,7 +328,7 @@ export class ElasticExplorerService {
         filter(params => !params.elasticQuery),
         map(({ from, size }) => ({
           from: parseInt(from ?? '0'),
-          size: parseInt(size ?? '10')
+          size: parseInt(size ?? '10'),
         }))
       )
       .subscribe(pagination => this.setPagination(pagination));

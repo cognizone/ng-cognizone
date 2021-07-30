@@ -11,7 +11,7 @@ export class CodeLinkComponent {
   path!: string;
 
   @Input()
-  showPreview: boolean = true;
+  showPreview = true;
 
   get previewUrl(): string {
     return `assets/src/${this.path}`;

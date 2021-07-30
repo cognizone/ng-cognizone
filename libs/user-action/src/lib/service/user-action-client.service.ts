@@ -10,6 +10,7 @@ export class UserActionClient extends ElasticRawClient {
   get baseUrl(): string {
     return this.optionsService.getOptions().baseUrl;
   }
+
   get index(): string {
     return this.optionsService.getOptions().index;
   }

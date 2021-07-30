@@ -17,8 +17,11 @@ import { DetailViewService } from '../../services/detail-view.service';
 export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnChanges {
   @Input()
   model!: FullModel;
+
   queryControl: FormControl = new FormControl('');
+
   providers: DetailViewProvider[] = [];
+
   myInjector!: Injector;
 
   constructor(

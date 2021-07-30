@@ -4,7 +4,7 @@ import { Nil } from './nil';
 /**
  * Union type that encompass all the usual types we use for labels
  */
-export type CzLabel = string | LangString | LangStringSimple;
+export type CzLabel = LangString | LangStringSimple | string;
 
 /**
  * same as {@link getLangStringValue} but also return label as-is if it's already a string

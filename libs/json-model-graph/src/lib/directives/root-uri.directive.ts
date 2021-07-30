@@ -11,6 +11,7 @@ import { NodeWrapper } from '../services/node-wrapper';
 export class RootUriDirective {
   @Input('czRootUri')
   rootUri!: string;
+
   @Input()
   apName!: string;
 

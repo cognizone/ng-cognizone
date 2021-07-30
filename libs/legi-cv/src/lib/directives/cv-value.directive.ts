@@ -8,13 +8,12 @@ import { filter, first, mergeMap, switchMap } from 'rxjs/operators';
 import { CvService } from '../services/cv.service';
 
 @Directive({
-  selector: '[czCvValue]'
+  selector: '[czCvValue]',
 })
 export class CvValueDirective extends OnDestroy$ implements OnChanges {
   @Input('czCvValueUri')
   uri!: string;
 
-  // tslint:disable-next-line: no-input-rename structural directive
   @Input('czCvValueCvName')
   cvName!: Many<string>;
 
@@ -53,7 +52,7 @@ export class CvValueDirective extends OnDestroy$ implements OnChanges {
       .subscribe(
         concept => {
           this.viewContainer.createEmbeddedView(this.templateRef, {
-            $implicit: concept
+            $implicit: concept,
           });
           this.cdr.markForCheck();
         },

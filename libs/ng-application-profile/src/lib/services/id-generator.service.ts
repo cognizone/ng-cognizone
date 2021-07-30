@@ -3,7 +3,7 @@ import { Many, manyToArray } from '@cognizone/model-utils';
 
 @Injectable()
 export class IdGenerator {
-  private counter: number = 0;
+  private counter = 0;
 
   generateId(types: Many<string>): string {
     types = manyToArray(types).join('-').toLowerCase();

@@ -10,7 +10,7 @@ import { FullModel } from '../models/full-model';
 import { getSortedObject } from '../utils/get-sorted-object';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ElasticClientFactoryService {
   constructor(private http: HttpClient, private resourceGraphService: ResourceGraphService, private jsonModelService: JsonModelService) {}
@@ -29,35 +29,26 @@ export class ElasticClient {
   ) {}
 
   search(query: {}): Observable<ElasticSearchResponse<FullModel>> {
-    return (
-      this.http
-        // tslint:disable-next-line: no-any
-        .post<ElasticSearchResponse<any>>(this.getSearchUrl(), query, {
-          headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Credentials': 'true',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, PUT, OPTIONS',
-            'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
-          }
-        })
-        .pipe(
-          map(response => {
-            return mapElasticSources(response, (_, hit) => this.mapIn(hit));
-          })
-        )
-    );
+    return this.http
+
+      .post<ElasticSearchResponse<unknown>>(this.getSearchUrl(), query, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, PUT, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
+        },
+      })
+      .pipe(map(response => mapElasticSources(response, (_, hit) => this.mapIn(hit))));
   }
 
-  // tslint:disable-next-line: no-any
-  private mapIn(hit: ElasticHit<any>): FullModel {
+  private mapIn(hit: ElasticHit<unknown>): FullModel {
     let source = hit._source;
     if (this.isResourceGraphRaw(source)) {
       source = produce(source, draft => {
         const all = [draft.data, ...(draft.included ?? [])];
-        draft.included?.sort((a, b) => {
-          return a.uri.localeCompare(b.uri, undefined, { numeric: true });
-        });
+        draft.included?.sort((a, b) => a.uri.localeCompare(b.uri, undefined, { numeric: true }));
         all.forEach(node => {
           if (node.attributes) {
             node.attributes = getSortedObject(node.attributes ?? {});
@@ -70,7 +61,7 @@ export class ElasticClient {
       hit = { ...hit, _source: source };
     }
     const fullModel: FullModel = {
-      hit
+      hit,
     };
     if (this.isResourceGraphRaw(source)) {
       fullModel.jsonModel = this.resourceGraphService.resourceGraphRawToJsonModel(source);

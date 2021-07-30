@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoreStateFacade } from '@app/core';
@@ -6,9 +6,9 @@ import { CoreStateFacade } from '@app/core';
 @Component({
   selector: 'app-external-doc',
   templateUrl: './external-doc.view.html',
-  styleUrls: ['./external-doc.view.scss']
+  styleUrls: ['./external-doc.view.scss'],
 })
-export class ExternalDocView implements OnInit, AfterViewInit {
+export class ExternalDocView implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('docFrame')
   docFrame!: ElementRef<HTMLIFrameElement>;
 
@@ -34,10 +34,10 @@ export class ExternalDocView implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     const iframe = this.docFrame.nativeElement;
-    iframe.onload = e => {
+    iframe.onload = async () => {
       iframe.width = iframe.contentWindow?.document.body.scrollWidth.toString() ?? '';
       iframe.height = iframe.contentWindow?.document.body.scrollHeight.toString() ?? '';
-      this.router.navigate([], { queryParams: { src: iframe.contentWindow?.location.href } });
+      await this.router.navigate([], { queryParams: { src: iframe.contentWindow?.location.href } });
     };
   }
 }

@@ -11,9 +11,9 @@ export class ComponentsArchitectureComponent {
 
   numberControl: FormControl = new FormControl(2);
 
-  showIntervalComponent: boolean = false;
+  showIntervalComponent = false;
 
-  catExample: string = `
+  catExample = `
   // cats.component.ts
   @Component(/*...*/)
   class CatsComponent {

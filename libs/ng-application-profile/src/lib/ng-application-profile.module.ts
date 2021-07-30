@@ -52,7 +52,7 @@ export class NgApplicationProfileModule {
 }
 
 export function apServiceInitializerFactory(apService: ApService): () => Promise<void> {
-  const x = () => apService.init();
+  const x = async () => apService.init();
 
   return x;
 }

@@ -10,7 +10,7 @@ import { NgCorePagesService } from '../../services/ng-core-pages.service';
   styleUrls: ['./on-destroy-mixin-doc.component.scss']
 })
 export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
-  code1: string = `
+  code1 = `
   @Component(/*...*/)
   export class MyComponent extends OnDestroyMixin(MyParentComponent) { 
     constructor(private store: MyStore) {
@@ -20,7 +20,7 @@ export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
   }
   `;
 
-  code2: string = `
+  code2 = `
   @Component(/*...*/)
   export class MyComponent extends OnDestroyMixin(MyParentComponent) { 
     constructor(private store: MyStore) {
@@ -30,7 +30,7 @@ export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
   }
   `;
 
-  code3: string = `
+  code3 = `
   @Component(/*...*/)
   export class MyComponent extends OnDestroy$ { 
     constructor(private store: MyStore) {

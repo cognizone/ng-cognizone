@@ -10,9 +10,11 @@ import { Anchor } from '../models/anchor';
 })
 export class AnchorService {
   anchors$: Observable<Anchor[]>;
+
   activeAnchor$: Observable<Maybe<Anchor>>;
 
   private _anchors$: Subject<Anchor[]> = new ReplaySubject(0);
+
   private anchors: Anchor[] = [];
 
   constructor() {

@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 /**
- * This aims to describe an elastic search query, but it can be quite limitative for now
+ * This aims to describe an elastic search query, but it can be quite limitative
+ * for now
+ *
  * @deprecated use the one from `@cognizone/elastic` instead
  */
 export interface ElasticQuery {
@@ -24,26 +27,26 @@ export interface ElasticQuery {
  * @ignore
  */
 export type AggregationQuery =
-  | {
+  unknown | {
       terms: {
         field: string;
         size: number;
       };
-    }
-  | unknown;
+    };
 
 /**
  * @ignore
  */
 export interface ElasticSort {
-  order: 'desc' | 'asc';
-  missing?: '_last' | '_first';
+  order: 'asc' | 'desc';
+  missing?: '_first' | '_last';
   unmapped_type?: string;
-  mode?: 'max' | 'min' | 'sum' | 'avg' | 'median';
+  mode?: 'avg' | 'max' | 'median' | 'min' | 'sum';
 }
 
 /**
  * Create a basic structure for an {@link ElasticQuery}
+ *
  * @deprecated
  */
 export function createElasticQuery(): ElasticQuery {

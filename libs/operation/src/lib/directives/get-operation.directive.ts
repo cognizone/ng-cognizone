@@ -25,13 +25,17 @@ export class GetOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czGetOperationPath')
   set path(value: Many<OperationGroupDescriptionLike> | undefined) {
     const path = value ? manyToArray(value) : [];
-    this.path$.next(path.map(part => (typeof part === 'string' ? { id: part } : part)));
+    this.path$.next(path.map(part => typeof part === 'string' ? { id: part } : part));
   }
 
   private id$: Subject<string> = new ReplaySubject(1);
+
   private path$: Subject<OperationGroupDescription[]> = new BehaviorSubject<OperationGroupDescription[]>([]);
+
   private fullPath$!: Observable<OperationGroupDescription[]>;
+
   private ref?: EmbeddedViewRef<GetOperationContext>;
+
   private operation$!: Observable<Nil<Operation>>;
 
   constructor(

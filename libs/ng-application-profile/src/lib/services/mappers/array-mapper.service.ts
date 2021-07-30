@@ -6,7 +6,7 @@ import { AttributeMapper, MicroAttributeMapper } from './micro-attribute-mapper'
   providedIn: 'root'
 })
 export class ArrayMapper implements MicroAttributeMapper<unknown[], unknown[]> {
-  priority: number = 1000;
+  priority = 1000;
 
   supportDeserialize(dataType: string, value: unknown[]): boolean {
     return Array.isArray(value);

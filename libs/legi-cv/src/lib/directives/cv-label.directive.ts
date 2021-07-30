@@ -3,18 +3,17 @@ import { awaitForCompletable, Many, manyToArray, manyToOne } from '@cognizone/mo
 import { isJsonModel, JsonModel } from '@cognizone/ng-application-profile';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { from, identity } from 'rxjs';
-import { filter, first, map, mergeMap, switchMap } from 'rxjs/operators';
+import { filter, first, mergeMap, switchMap } from 'rxjs/operators';
 
 import { CvService } from '../services/cv.service';
 
 @Directive({
-  selector: '[czCvLabel]'
+  selector: '[czCvLabel]',
 })
 export class CvLabelDirective extends OnDestroy$ implements OnChanges {
   @Input('czCvLabelUri')
-  uri!: Many<string | JsonModel>;
+  uri!: Many<JsonModel | string>;
 
-  // tslint:disable-next-line: no-input-rename structural directive
   @Input('czCvLabelCvName')
   cvName!: Many<string>;
 
@@ -54,7 +53,7 @@ export class CvLabelDirective extends OnDestroy$ implements OnChanges {
       .subscribe(
         label => {
           this.viewContainer.createEmbeddedView(this.templateRef, {
-            $implicit: label
+            $implicit: label,
           });
           this.cdr.markForCheck();
         },

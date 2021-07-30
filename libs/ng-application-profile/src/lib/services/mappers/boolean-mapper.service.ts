@@ -2,7 +2,7 @@ import { Datatype } from '@cognizone/application-profile';
 
 import { MicroAttributeMapper } from './micro-attribute-mapper';
 
-export class BooleanMapper implements MicroAttributeMapper<string | boolean, boolean> {
+export class BooleanMapper implements MicroAttributeMapper<boolean | string, boolean> {
   supportDeserialize(dataType: string, value: string): boolean {
     return value != null && dataType === Datatype.XSD_BOOLEAN;
   }
@@ -19,7 +19,7 @@ export class BooleanMapper implements MicroAttributeMapper<string | boolean, boo
     return value;
   }
 
-  private toBoolean(val: string | boolean): boolean {
+  private toBoolean(val: boolean | string): boolean {
     return typeof val === 'boolean' ? val : val === 'true';
   }
 }

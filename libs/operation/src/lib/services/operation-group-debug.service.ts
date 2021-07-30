@@ -1,13 +1,13 @@
 import { Injectable, OnDestroy, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Nil } from '@cognizone/model-utils';
-import { OnDestroy$ } from '@cognizone/ng-core';
+import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable } from 'rxjs';
 import { debounceTime, first, map } from 'rxjs/operators';
 
 import {
   OperationViewerModalComponent,
-  OperationViewerModalComponentData
+  OperationViewerModalComponentData,
 } from '../components/operation-viewer-modal/operation-viewer-modal.component';
 import { OperationGroup, OperationGroupDescription } from '../models/operation';
 
@@ -17,19 +17,24 @@ import { OperationsService } from './operations.service';
 @Injectable()
 export class OperationGroupDebug extends OnDestroy$ implements OnDestroy {
   private options?: OperationGroupDebugOptions;
+
   private debugDiv?: HTMLElement;
+
   private unListen?: Function;
 
   private colors: string[] = ['#003f5c', '#7a5195', '#ef5675', '#ffa600'];
+
   private borderStyle: string[] = ['dotted', 'solid', 'dashed', 'double'];
 
   constructor(
     private renderer: Renderer2,
     private dialog: MatDialog,
     private operationsService: OperationsService,
-    private operationUtils: OperationUtils
+    private operationUtils: OperationUtils,
+    private logger: Logger
   ) {
     super();
+    this.logger = logger.extend('OperationGroupDebug');
   }
 
   ngOnDestroy(): void {
@@ -85,7 +90,9 @@ export class OperationGroupDebug extends OnDestroy$ implements OnDestroy {
       event.preventDefault();
       event.stopImmediatePropagation();
       event.stopPropagation();
-      this.openOperationViewerModal();
+      this.openOperationViewerModal().catch(err => {
+        this.logger.error('Failed to open debug operation modal', err);
+      });
     });
     this.renderer.appendChild(el, div);
   }
@@ -96,7 +103,7 @@ export class OperationGroupDebug extends OnDestroy$ implements OnDestroy {
     return {
       color: this.colors[depth % this.colors.length],
       borderStyle: this.borderStyle[depth % this.borderStyle.length],
-      zIndex: `${10 + depth}`
+      zIndex: `${10 + depth}`,
     };
   }
 
@@ -115,7 +122,7 @@ export class OperationGroupDebug extends OnDestroy$ implements OnDestroy {
   private async openOperationViewerModal(): Promise<void> {
     const path = await this.options?.path$.pipe(first()).toPromise();
     const data: OperationViewerModalComponentData = {
-      operationGroupDescriptions: path ?? []
+      operationGroupDescriptions: path ?? [],
     };
     this.dialog.open(OperationViewerModalComponent, { data });
   }

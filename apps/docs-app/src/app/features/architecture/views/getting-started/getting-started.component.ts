@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class GettingStartedComponent {
   lastUpdate: Date = new Date('2020-01-15');
 
-  lintingCommand: string = 'npx -p @cognizone/cli cz-cli add-linting -i';
+  lintingCommand = 'npx -p @cognizone/cli cz-cli add-linting -i';
 
-  tsconfig1: string = `
+  tsconfig1 = `
   {
     // ...
     "compilerOptions": {

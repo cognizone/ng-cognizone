@@ -9,7 +9,7 @@ import { AttributeMapper, MICRO_ATTRIBUTE_MAPPER_TOKEN, MicroAttributeMapper } f
 export class ResourceMapper {
   private attributeMapper: AttributeMapper = {
     deserialize: this.deserializeAttribute.bind(this),
-    serialize: this.serializeAttribute.bind(this)
+    serialize: this.serializeAttribute.bind(this),
   };
 
   constructor(@Inject(MICRO_ATTRIBUTE_MAPPER_TOKEN) @Optional() private readonly mappers: MicroAttributeMapper<unknown, unknown>[]) {
@@ -17,11 +17,11 @@ export class ResourceMapper {
     if (!Array.isArray(this.mappers)) {
       throw new Error(`mappers should be an array, did you forget to add 'multi: true' in your provided 'MicroAttributeMapper'?`);
     }
-    this.mappers = [...this.mappers].sort((d1, d2) => (d2.priority || 0) - (d1.priority || 0));
+    this.mappers = [...this.mappers].sort((d1, d2) => (d2.priority ?? 0) - (d1.priority ?? 0));
   }
 
   deserialize<T extends object>(raw: ResourceRaw): Resource<T> {
-    const rawAttributes = raw.attributes || {};
+    const rawAttributes = raw.attributes ?? {};
     const attributes = keys(rawAttributes).reduce<Resource<T>['attributes']>((acc, attributeKey) => {
       const attribute = rawAttributes[attributeKey];
       const dataType = stringKeys(attribute).pop();

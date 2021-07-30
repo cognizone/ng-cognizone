@@ -9,7 +9,7 @@ import { NodeUriDirective } from './node-uri.directive';
   selector: '[czNodeAttribute]'
 })
 export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
-  // tslint:disable: no-input-rename because it's a structural directive
+ 
   @Input('czNodeAttributeAttributeKey')
   attributeKey!: string;
 

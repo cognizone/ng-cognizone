@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ElasticExplorerView } from './views/elastic-explorer/elastic-explorer.view';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const routes: Routes = [{ path: '', component: ElasticExplorerView }];
 
 @NgModule({
@@ -10,6 +11,6 @@ const routes: Routes = [{ path: '', component: ElasticExplorerView }];
   imports: [
     /* RouterModule.forChild(routes) */
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ElasticExplorerRoutingModule {}

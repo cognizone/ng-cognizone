@@ -3,7 +3,7 @@ import { getLangStringValue, LangString, LangStringSimple, Nil } from '@cognizon
 import { TranslocoService } from '@ngneat/transloco';
 
 @Pipe({
-  name: 'czLangString'
+  name: 'czLangString',
 })
 export class LangStringPipe implements PipeTransform {
   constructor(private transloco: TranslocoService) {}
@@ -18,7 +18,7 @@ export class LangStringPipe implements PipeTransform {
   }
 
   private getOtherLangs(): string[] {
-    // tslint:disable-next-line: no-any should compile without that but it doesn't?
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const langs = this.transloco.getAvailableLangs() as any[];
 
     return langs.map(lang => (typeof lang === 'string' ? lang : lang.id)).map(lang => this.toShortLang(lang));

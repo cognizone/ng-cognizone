@@ -19,6 +19,7 @@ import { getSortedObject } from '../../utils/get-sorted-object';
 })
 export class ApDetailsComponent implements OnInit {
   ap!: ApplicationProfile;
+
   textFilter$ = this.detailViewService.textFilter$;
 
   constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}

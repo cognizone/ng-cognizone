@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable()
 export class DetailViewService {
   textFilter$: Observable<string | undefined>;
+
   private _textFilter$: BehaviorSubject<string | undefined> = new BehaviorSubject<string | undefined>('');
 
   constructor() {

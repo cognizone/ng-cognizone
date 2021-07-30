@@ -15,6 +15,7 @@ import {
 @Injectable()
 export class CognizoneMatIconRegistry extends MatIconRegistry {
   private registered: Set<string> = new Set();
+
   private options: Required<CognizoneMaterialIconsOptions>;
 
   constructor(

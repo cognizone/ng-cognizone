@@ -13,16 +13,23 @@ import { UserActionOptionsService } from '../../service/user-actions-options.ser
   selector: 'cz-user-action-table',
   templateUrl: './user-action-table.component.html',
   styleUrls: ['./user-action-table.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserActionTableComponent extends OnDestroy$ implements OnInit {
   actionNameOptionsProvider!: SelectOptionsProvider<string>;
+
   userFullNameAttribute!: string;
+
   userIvAttribute!: string;
+
   actions: UserAction[] = [];
-  pageSize: number = 10;
-  pageIndex: number = 0;
-  totalResults: number = 0;
+
+  pageSize = 10;
+
+  pageIndex = 0;
+
+  totalResults = 0;
+
   possibleActionNames: string[] = [];
 
   columns: string[] = ['action', 'date', 'hour', 'user', 'userId', 'status'];
@@ -32,7 +39,7 @@ export class UserActionTableComponent extends OnDestroy$ implements OnInit {
     dateFrom: [],
     dateTo: [],
     actionName: [],
-    onlyErrors: []
+    onlyErrors: [],
   });
 
   constructor(
@@ -77,10 +84,11 @@ export class UserActionTableComponent extends OnDestroy$ implements OnInit {
       this.cdr.markForCheck();
     });
   }
+
   private initOptionsProvider(): void {
     const toSelectOption = (x: string) => ({ value: x, label: x });
     this.actionNameOptionsProvider = {
-      hasOptionFor: value => of(true),
+      hasOptionFor: () => of(true),
       getValueOption: value => of(toSelectOption(value)),
       getOptions: q =>
         of(
@@ -88,7 +96,7 @@ export class UserActionTableComponent extends OnDestroy$ implements OnInit {
             if (!q) return true;
             return option.value.toLowerCase().includes(q);
           })
-        )
+        ),
     };
   }
 }

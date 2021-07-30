@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { ApplicationProfile, ApplicationProfileOrApName, DatatypeLong } from '@cognizone/application-profile';
 import { Many } from '@cognizone/model-utils';
@@ -7,8 +8,6 @@ import { isJsonModel, JsonModel, JsonModelFlatGraph, JsonModels } from '../model
 import { ApHelper } from './ap-helper.service';
 import { ApService } from './ap.service';
 import { IdGenerator } from './id-generator.service';
-
-// tslint:disable: no-any
 
 @Injectable()
 export class JsonModelService {
@@ -37,7 +36,7 @@ export class JsonModelService {
     const jsonModel: JsonModel = {
       '@id': uri,
       '@type': types,
-      '@context': { rootUri, isNew: true }
+      '@context': { rootUri, isNew: true },
     };
 
     Object.entries(profile.attributes).forEach(([key, attribute]) => {

@@ -5,7 +5,8 @@ import { LangString, LangStringSimple } from './lang-string';
 import { Nil, notNil } from './nil';
 
 /**
- * Kind of an augmented KeyValue type to be used whenever we have case where a user has to select an option, being it in a select, an autocomplete, etc.
+ * Kind of an augmented KeyValue type to be used whenever we have case where a
+ * user has to select an option, being it in a select, an autocomplete, etc.
  * This is mostly there in an effort of consistency, to have interoperable libraries and data models.
  */
 export interface SelectOption<T = string> {
@@ -30,7 +31,7 @@ export interface SelectOption<T = string> {
 /**
  * The label of a {@link SelectOption}
  */
-export type SelectOptionLabel = string | LangString | LangStringSimple;
+export type SelectOptionLabel = LangString | LangStringSimple | string;
 
 /**
  * For consistency, this interface is to be used when needing to use counts for {@link SelectOption}
@@ -88,6 +89,7 @@ export interface GetSelectOptionsParams {
 
 /**
  * Merges multiple SelectOptionsProvider together to form a unified one.
+ *
  * @deprectated
  */
 export class SelectOptionsProvidersMerger<T> implements SelectOptionsProvider<T> {

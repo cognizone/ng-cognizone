@@ -16,7 +16,8 @@ import { GRAPH_STATE_TOKEN, GraphStateModel } from '../store/graph.state';
 })
 export class GraphService {
   state$: Observable<GraphStateModel> = this.store.select(GRAPH_STATE_TOKEN);
-  private copyCount: number = 0;
+
+  private copyCount = 0;
 
   get state(): GraphStateModel {
     return this.store.selectSnapshot(GRAPH_STATE_TOKEN);

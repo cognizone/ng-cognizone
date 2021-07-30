@@ -9,7 +9,7 @@ import { ProtocolService } from '../services/protocol.service';
 export class ProtocolGuard implements CanActivate {
   constructor(private router: Router, private protocolService: ProtocolService) {}
 
-  canActivate(next: ActivatedRouteSnapshot): boolean | UrlTree {
+  canActivate(next: ActivatedRouteSnapshot): UrlTree | boolean {
     const prefix = `${this.protocolService.protocol}://`;
     const url = next.url
       .map(s => s.path)

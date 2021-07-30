@@ -1,27 +1,34 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { isJsonModel } from '@cognizone/ng-application-profile';
 
-// tslint:disable: no-any
 @Component({
-  selector: 'app-attribute-display',
+  selector: 'cz-attribute-display',
   templateUrl: './attribute-display.component.html',
   styleUrls: ['./attribute-display.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AttributeDisplayComponent implements OnChanges {
   @Input()
   model!: any;
+
   @Input()
   modelHit!: any;
+
   @Input()
-  key?: string | number;
+  key?: number | string;
+
   @Input()
-  padded: boolean = false;
+  padded = false;
+
   @Input()
-  opened: boolean = false;
+  opened = false;
+
   value: any;
-  type!: 'string' | 'JsonModel' | 'Date' | 'Array' | 'number' | 'uri' | 'boolean';
+
+  type!: 'Array' | 'boolean' | 'Date' | 'JsonModel' | 'number' | 'string' | 'uri';
+
   subKeys: string[] = [];
 
   constructor(private snackBar: MatSnackBar) {}
@@ -41,7 +48,7 @@ export class AttributeDisplayComponent implements OnChanges {
       this.type = 'number';
     } else if (typeof this.value === 'boolean') {
       this.type = 'boolean';
-    } else if (typeof this.value === 'string' && this.value.match(/^http(s)?\:\/\//)) {
+    } else if (typeof this.value === 'string' && this.value.match(/^http(s)?:\/\//)) {
       this.type = 'uri';
     } else if (isJsonModel(this.value) || typeof this.value === 'object') {
       this.type = 'JsonModel';
@@ -55,7 +62,7 @@ export class AttributeDisplayComponent implements OnChanges {
 
   openSnackbar(message: string): void {
     this.snackBar.open(message, 'dismiss', {
-      duration: 3000
+      duration: 3000,
     });
   }
 }

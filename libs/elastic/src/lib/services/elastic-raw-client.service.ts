@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
 
 export abstract class ElasticRawClient {
   abstract index: string;
+
   abstract baseUrl: string;
 
   constructor(protected http: HttpClient, protected logger: Logger) {}

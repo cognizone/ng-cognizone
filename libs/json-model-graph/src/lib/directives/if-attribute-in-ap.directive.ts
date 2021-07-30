@@ -5,7 +5,7 @@ import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { NodeUriDirective } from './node-uri.directive';
 
 @Directive({
-  selector: '[czIfAttributeInAp]'
+  selector: '[czIfAttributeInAp]',
 })
 export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
   @Input('czIfAttributeInAp')
@@ -37,7 +37,9 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
       this.viewContainer.createEmbeddedView(this.templateRef);
     } else {
       this.logger.info(
-        `Attribute '${this.attributeKey}' is not present in profile of class '${this.nodeUriDirective.typeProfile.classIds}', not rendering`
+        `Attribute '${this.attributeKey}' is not present in profile of class '${this.nodeUriDirective.typeProfile.classIds.join(
+          ', '
+        )}', not rendering`
       );
       this.viewContainer.clear();
     }

@@ -6,7 +6,7 @@ import { JsonModel, JsonModelService } from '@cognizone/ng-application-profile';
 import produce from 'immer';
 import { isEqual } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
-import { distinctUntilChanged, filter, finalize, map, switchMap, tap } from 'rxjs/operators';
+import { filter, finalize, map, switchMap, tap } from 'rxjs/operators';
 
 import { GraphService } from './graph.service';
 
@@ -18,6 +18,7 @@ export class GraphAndControlLinkingService {
     private jsonModelService: JsonModelService,
     private fb: FormBuilder
   ) {}
+
   /**
    *
    * @description at first, the form is updated without emitEvent: false to ensure that local logic in the component is
@@ -31,7 +32,7 @@ export class GraphAndControlLinkingService {
     apName,
     cvName,
     classId,
-    emitEventFromNodeToForm
+    emitEventFromNodeToForm,
   }: LinkControlToNodeAttributeOptions<T>): Observable<unknown> {
     const current = this.graphService.getNodeSnapshot<T>(rootUri, nodeUri);
     const val = current[attributeKey];
@@ -106,7 +107,7 @@ export class GraphAndControlLinkingService {
       if (graph.models[uri] || !uri) continue;
       const actualClassId = classId ?? (await this.getClassId(uri, cvName as Many<string>));
 
-      const model = this.jsonModelService.createNewJsonModel(actualClassId, apName as string, rootUri as string);
+      const model = this.jsonModelService.createNewJsonModel(actualClassId, apName, rootUri);
       model['@id'] = uri;
       newModels.push(model);
     }

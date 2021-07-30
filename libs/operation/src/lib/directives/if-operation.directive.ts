@@ -35,7 +35,7 @@ export class IfOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czIfOperationPath')
   set path(value: Many<OperationGroupDescriptionLike> | undefined) {
     const path = value ? manyToArray(value) : [];
-    this.path$.next(path.map(part => (typeof part === 'string' ? { id: part } : part)));
+    this.path$.next(path.map(part => typeof part === 'string' ? { id: part } : part));
   }
 
   @Input('czIfOperationElse')
@@ -44,10 +44,15 @@ export class IfOperationDirective extends OnDestroy$ implements OnInit {
   }
 
   private id$: Subject<string> = new ReplaySubject(1);
+
   private path$: Subject<OperationGroupDescription[]> = new BehaviorSubject<OperationGroupDescription[]>([]);
+
   private fullPath$!: Observable<OperationGroupDescription[]>;
+
   private else$: Subject<TemplateRef<unknown> | null> = new BehaviorSubject<TemplateRef<unknown> | null>(null);
+
   private operation$!: Observable<Nil<Operation>>;
+
   private ref?: EmbeddedViewRef<unknown>;
 
   constructor(

@@ -7,9 +7,9 @@ import { ElasticInstanceService } from '../../services/elastic-instance-service'
 import { ElasticInstanceEditorComponent } from '../elastic-instance-editor/elastic-instance-editor.component';
 
 @Component({
-  selector: 'app-elastic-instance-management',
+  selector: 'cz-elastic-instance-management',
   templateUrl: './elastic-instance-management.component.html',
-  styleUrls: ['./elastic-instance-management.component.css']
+  styleUrls: ['./elastic-instance-management.component.css'],
 })
 export class ElasticInstanceManagementComponent extends OnDestroy$ implements OnInit {
   values?: ElasticInstance[];
@@ -32,8 +32,8 @@ export class ElasticInstanceManagementComponent extends OnDestroy$ implements On
         data: {
           operation: 'Edit',
           url: elasticInstance.url,
-          label: elasticInstance.label
-        }
+          label: elasticInstance.label,
+        },
       })
       .afterClosed()
       .subscribe(newInstance => this.elasticInstanceService.edit(elasticInstance, newInstance));
@@ -43,8 +43,8 @@ export class ElasticInstanceManagementComponent extends OnDestroy$ implements On
     this.dialog
       .open(ElasticInstanceEditorComponent, {
         data: {
-          operation: 'Add'
-        }
+          operation: 'Add',
+        },
       })
       .afterClosed()
       .subscribe(instance => this.elasticInstanceService.addIfNotPresent(instance));

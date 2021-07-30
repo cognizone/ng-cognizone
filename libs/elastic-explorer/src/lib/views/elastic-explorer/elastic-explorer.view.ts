@@ -10,15 +10,18 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
 @Component({
   selector: 'cz-elastic-explorer',
   templateUrl: `./elastic-explorer.view.html`,
-  styleUrls: ['./elastic-explorer.view.scss']
+  styleUrls: ['./elastic-explorer.view.scss'],
 })
 export class ElasticExplorerView extends OnDestroy$ implements OnInit, OnDestroy, AfterViewInit {
   loading$: Observable<boolean> = this.loadingService.loading$;
+
   showMenu = true;
+
   total$: Observable<number> = this.elasticExplorerService.total$;
 
   @ViewChild('modelDetails')
   modelDetailsTemplateRef!: TemplateRef<unknown>;
+
   private isDetailsOpened = false;
 
   constructor(
@@ -54,12 +57,12 @@ export class ElasticExplorerView extends OnDestroy$ implements OnInit, OnDestroy
   seeDetails(model: FullModel): void {
     const dialog = this.dialog.open(this.modelDetailsTemplateRef, { data: model, width: '80vw', height: '80vh' });
     this.isDetailsOpened = true;
-    this.subSink = dialog.afterClosed().subscribe(() => {
-      this.router.navigate([], {
+    this.subSink = dialog.afterClosed().subscribe(async () => {
+      await this.router.navigate([], {
         queryParams: {
-          _id: null
+          _id: null,
         },
-        queryParamsHandling: 'merge'
+        queryParamsHandling: 'merge',
       });
       this.isDetailsOpened = false;
     });

@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'elastic-explorer',
-    loadChildren: () => import('./features/data-explorer/data-explorer.module').then(m => m.DataExplorerModule)
+    loadChildren: async () => import('./features/data-explorer/data-explorer.module').then(m => m.DataExplorerModule)
   },
   {
     path: '**',

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { interval } from 'rxjs';
 
@@ -6,12 +6,12 @@ import { interval } from 'rxjs';
   selector: 'app-on-push-cd-ref',
   templateUrl: './on-push-cd-ref.component.html',
   styleUrls: ['./on-push-cd-ref.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OnPushCdRefComponent extends OnDestroy$ implements OnInit {
-  number!: number;
+  num!: number;
 
-  templateEvaluations: number = 0;
+  templateEvaluations = 0;
 
   constructor(private cdr: ChangeDetectorRef) {
     super();
@@ -21,7 +21,7 @@ export class OnPushCdRefComponent extends OnDestroy$ implements OnInit {
     interval(1000)
       .pipe(this.untilDestroyed())
       .subscribe(num => {
-        this.number = num;
+        this.num = num;
         this.cdr.markForCheck();
       });
   }

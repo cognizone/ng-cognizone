@@ -5,14 +5,15 @@ import { OnDestroy$ } from '@cognizone/ng-core';
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
 
 @Component({
-  selector: 'app-elastic-query-editor',
+  selector: 'cz-elastic-query-editor',
   templateUrl: './elastic-query-editor.component.html',
-  styleUrls: ['./elastic-query-editor.component.scss']
+  styleUrls: ['./elastic-query-editor.component.scss'],
 })
 export class ElasticQueryEditorComponent extends OnDestroy$ implements OnInit {
   editorOptions: {} = { theme: 'vs-light', language: 'json' };
+
   code: FormControl = new FormControl(undefined, {
-    updateOn: 'blur'
+    updateOn: 'blur',
   });
 
   constructor(private elasticExplorerService: ElasticExplorerService) {

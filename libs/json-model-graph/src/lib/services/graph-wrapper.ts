@@ -48,8 +48,7 @@ export class GraphWrapper {
     referenceType: string
   ): [T, U] {
     const graph = this.getGraphSnapshot();
-    // tslint:disable-next-line: no-any doing funky stuff, cannot make it work with Draft<V> for some reason...
-    const updatedNode = produce(node, (draft: any) => {
+    const updatedNode = produce(node, (draft: Record<keyof T, unknown>) => {
       draft[referenceKey] = referenceUri;
     });
 
@@ -70,8 +69,7 @@ export class GraphWrapper {
     referenceType: string
   ): [T, U] {
     const graph = this.getGraphSnapshot();
-    // tslint:disable-next-line: no-any doing funky stuff, cannot make it work with Draft<V> for some reason...
-    const updatedNode = produce(node, (draft: any) => {
+    const updatedNode = produce(node, (draft: Record<keyof T, unknown[]>) => {
       if (!draft[referenceKey]) draft[referenceKey] = [];
       draft[referenceKey].push(referenceUri);
     });

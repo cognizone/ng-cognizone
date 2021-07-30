@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { Maybe, OnDestroy$ } from '@cognizone/ng-core';
 import { Observable } from 'rxjs';
@@ -12,7 +11,7 @@ import { AnchorService } from '../../services/anchor.service';
   selector: 'app-anchor-nav',
   templateUrl: './anchor-nav.component.html',
   styleUrls: ['./anchor-nav.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AnchorNavComponent extends OnDestroy$ implements OnInit {
   anchors$: Observable<Anchor[]> = this.anchorService.anchors$;
@@ -41,9 +40,9 @@ export class AnchorNavComponent extends OnDestroy$ implements OnInit {
     });
   }
 
-  scrollTo(event: Event, anchor: Anchor): void {
+  async scrollTo(event: Event, anchor: Anchor): Promise<void> {
     event.preventDefault();
-    this.router.navigate(['.'], { fragment: anchor.id, relativeTo: anchor.route });
+    await this.router.navigate(['.'], { fragment: anchor.id, relativeTo: anchor.route });
   }
 
   isActive(anchor: Anchor): boolean {

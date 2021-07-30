@@ -17,6 +17,7 @@ import { DetailViewService } from '../../services/detail-view.service';
 })
 export class JsonModelDetailsComponent implements OnInit {
   jsonModel!: JsonModel;
+
   textFilter$ = this.detailViewService.textFilter$;
 
   constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}

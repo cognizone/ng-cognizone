@@ -32,15 +32,15 @@ export const ELASTIC_EXPLORER_STATE_TOKEN = new StateToken<ElasticExplorerStateM
     aggregations: {},
     pagination: {
       from: 0,
-      size: 10
+      size: 10,
     },
     elasticInfo: {
       index: null,
-      url: null
+      url: null,
     },
     manualMode: false,
-    elasticQuery: {}
-  }
+    elasticQuery: {},
+  },
 })
 @Injectable()
 export class ElasticExplorerState {
@@ -75,12 +75,12 @@ export class ElasticExplorerState {
   }
 
   @Action(SetManualMode)
-  SetManualMode({ patchState }: StateContext<ElasticExplorerStateModel>, { manualMode }: SetManualMode): void {
+  setManualMode({ patchState }: StateContext<ElasticExplorerStateModel>, { manualMode }: SetManualMode): void {
     patchState({ manualMode });
   }
 
   @Action(SetElasticQuery)
-  SetElasticQuery({ patchState }: StateContext<ElasticExplorerStateModel>, { elasticQuery }: SetElasticQuery): void {
+  setElasticQuery({ patchState }: StateContext<ElasticExplorerStateModel>, { elasticQuery }: SetElasticQuery): void {
     patchState({ elasticQuery: elasticQuery });
   }
 }

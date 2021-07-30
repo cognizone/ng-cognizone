@@ -14,7 +14,9 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
 })
 export class FiltersFormComponent extends OnDestroy$ implements OnInit {
   form!: FormGroup;
+
   typeOptionsProvider!: SelectOptionsProvider<string>;
+
   manualMode: FormControl = new FormControl(false);
 
   constructor(private fb: FormBuilder, private elasticExplorerService: ElasticExplorerService) {
@@ -54,14 +56,12 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
 
 class CustomSelectOptionsProvider implements SelectOptionsProvider<string> {
   private options$: Observable<SelectOption[]> = this.aggregation$.pipe(
-    map(aggregation => {
-      return (aggregation?.buckets ?? [])
+    map(aggregation => (aggregation?.buckets ?? [])
         .map(bucket => ({
           label: `${bucket.key} (${bucket.doc_count})`,
           value: bucket.key.toString()
         }))
-        .sort((a, b) => a.label.localeCompare(b.label));
-    })
+        .sort((a, b) => a.label.localeCompare(b.label)))
   );
 
   constructor(private aggregation$: Observable<ElasticAggregation>) {}
@@ -78,12 +78,14 @@ class CustomSelectOptionsProvider implements SelectOptionsProvider<string> {
       toArray()
     );
   }
+
   getValueOption(value: string): Observable<SelectOption> {
     return this.options$.pipe(
       first(),
       map(options => options.find(o => o.value === value) as SelectOption)
     );
   }
+
   hasOptionFor(value: string): Observable<boolean> {
     return this.getValueOption(value).pipe(map(notNil));
   }

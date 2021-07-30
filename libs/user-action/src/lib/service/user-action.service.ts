@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { dateToDateString, Dictionary, ElasticAggregation } from '@cognizone/model-utils';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 import { UserAction } from '../model/user-action';
-
 import { UserActionClient } from './user-action-client.service';
 import { UserActionOptionsService } from './user-actions-options.service';
 
@@ -15,15 +14,14 @@ export class UserActionService {
   search(options: UserActionSearchOptions): Observable<{ actions: UserAction[]; total: number; possibleActionNames: string[] }> {
     const query = this.buildQuery(options);
     return this.client.searchRaw<UserAction>(query).pipe(
-      map(res => {
-        return {
-          actions: res.hits.hits.map(h => h._source),
-          total: res.hits.total.value,
-          possibleActionNames: this.getOptionsFromAggregations(res.aggregations)
-        };
-      })
+      map(res => ({
+        actions: res.hits.hits.map(h => h._source),
+        total: res.hits.total.value,
+        possibleActionNames: this.getOptionsFromAggregations(res.aggregations),
+      }))
     );
   }
+
   getOptionsFromAggregations(aggregation: Dictionary<ElasticAggregation>): string[] {
     const options: string[] = [];
     Object.values(aggregation).forEach(key => {
@@ -43,34 +41,34 @@ export class UserActionService {
         bool: {
           must: [] as {}[],
           must_not: {
-            term: { status: 'hidden' }
-          }
-        }
+            term: { status: 'hidden' },
+          },
+        },
       },
       aggs: {
         action_path: {
           terms: {
             field: 'http.actionPath.keyword',
-            size: 100
-          }
+            size: 100,
+          },
         },
         mthod_name: {
           terms: {
             field: 'methodName.keyword',
-            size: 100
-          }
+            size: 100,
+          },
         },
         name: {
           terms: {
             field: 'name.keyword',
-            size: 100
-          }
-        }
-      }
+            size: 100,
+          },
+        },
+      },
     };
     if (options.username) {
       query.query.bool.must.push({
-        wildcard: { [`${this.optionsService.getOptions().userFullNameAttribute}.keyword`]: `*${options.username}*` }
+        wildcard: { [`${this.optionsService.getOptions().userFullNameAttribute}.keyword`]: `*${options.username}*` },
       });
     }
     if (options.dateFrom) {
@@ -85,8 +83,8 @@ export class UserActionService {
           fields: ['name', 'http.actionPath', 'methodName'],
           query: options.actionName,
           boost: 1,
-          type: 'phrase_prefix'
-        }
+          type: 'phrase_prefix',
+        },
       };
       query.query.bool.must.push(fields);
     }

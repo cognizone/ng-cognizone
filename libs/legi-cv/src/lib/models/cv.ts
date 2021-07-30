@@ -8,11 +8,11 @@ export type CvDictionary = { [uri: string]: Concept };
 export type Cv = CvArray | CvDictionary;
 
 export interface ConceptGroup<T extends Concept = Concept> {
-  label?: string | LangString | LangStringSimple;
+  label?: LangString | LangStringSimple | string;
   concepts: T[];
 }
 
-export function getAllConcepts<T extends Concept>(concepts: (T | ConceptGroup<T>)[]): T[] {
+export function getAllConcepts<T extends Concept>(concepts: (ConceptGroup<T> | T)[]): T[] {
   const allConcepts: T[] = [];
   concepts.forEach(option => {
     if ('@id' in option) {
@@ -24,7 +24,7 @@ export function getAllConcepts<T extends Concept>(concepts: (T | ConceptGroup<T>
   return allConcepts;
 }
 
-export function groupConcepts<T extends Concept>(concepts: (T | ConceptGroup<T>)[]): ConceptGroup<T>[] {
+export function groupConcepts<T extends Concept>(concepts: (ConceptGroup<T> | T)[]): ConceptGroup<T>[] {
   const allGroups: ConceptGroup<T>[] = [];
   let lastDynamicGroup: ConceptGroup<T> | undefined;
   for (const concept of concepts) {
@@ -42,7 +42,7 @@ export function groupConcepts<T extends Concept>(concepts: (T | ConceptGroup<T>)
   return allGroups;
 }
 
-export function areConcepts<T extends Concept>(concepts: (T | ConceptGroup<T>)[]): concepts is T[] {
+export function areConcepts<T extends Concept>(concepts: (ConceptGroup<T> | T)[]): concepts is T[] {
   return concepts.every(isConcept);
 }
 

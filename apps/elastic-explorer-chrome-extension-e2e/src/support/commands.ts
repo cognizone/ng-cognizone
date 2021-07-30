@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -17,9 +18,9 @@ declare namespace Cypress {
 }
 //
 // -- This is a parent command --
-Cypress.Commands.add('login', (email, password) => {
-  console.log('Custom command example: Login', email, password);
-});
+// Cypress.Commands.add('login', (email, password) => {
+//   console.log('Custom command example: Login', email, password);
+// });
 //
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })

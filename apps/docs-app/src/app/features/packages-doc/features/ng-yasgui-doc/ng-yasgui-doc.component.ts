@@ -7,10 +7,10 @@ import { ApiDescription } from '@app/shared';
 @Component({
   selector: 'app-ng-yasgui-doc',
   templateUrl: './ng-yasgui-doc.component.html',
-  styleUrls: ['./ng-yasgui-doc.component.scss']
+  styleUrls: ['./ng-yasgui-doc.component.scss'],
 })
 export class NgYasguiDocComponent implements OnInit {
-  displayYasgui: boolean = false;
+  displayYasgui = false;
 
   form!: FormGroup;
 
@@ -21,29 +21,29 @@ export class NgYasguiDocComponent implements OnInit {
       options: YasguiOptions;
       `,
       description:
-        'Options to be passed to YASGUI at creation. For now, it has to be set when the component is created, and it cannot be changed afterward.'
+        'Options to be passed to YASGUI at creation. For now, it has to be set when the component is created, and it cannot be changed afterward.',
     },
     {
       name: `
       @Input()
       multiple: boolean;
       `,
-      description: 'Whether or not to allow the user to have multiple tabs with multiple queries.'
+      description: 'Whether or not to allow the user to have multiple tabs with multiple queries.',
     },
     {
       name: `
       @Input()
       query: string;
       `,
-      description: 'The value of the query to be displayed in the yasgui component.'
+      description: 'The value of the query to be displayed in the yasgui component.',
     },
     {
       name: `
         @Output() 
         queryChange: EventEmitter<string>;
       `,
-      description: 'When the user change the query by editing it, this event fires with the new value of the query.'
-    }
+      description: 'When the user change the query by editing it, this event fires with the new value of the query.',
+    },
   ];
 
   constructor(private readonly fb: FormBuilder) {}
@@ -58,8 +58,8 @@ PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
 SELECT ?subject WHERE {
   ?subject jolux:userFormat <http://data.legilux.public.lu/resource/authority/user-format/pdf> .
 }
-`.trim()
-      ]
+`.trim(),
+      ],
     });
   }
 

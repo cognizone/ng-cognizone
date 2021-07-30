@@ -17,6 +17,7 @@ import { getSortedObject } from '../../utils/get-sorted-object';
 })
 export class JsonModelFlatGraphDetailsComponent implements OnInit {
   jsonModelFlatGraph!: JsonModelFlatGraph;
+
   textFilter$ = this.detailViewService.textFilter$;
 
   constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}

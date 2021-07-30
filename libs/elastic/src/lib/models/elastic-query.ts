@@ -1,2 +1,3 @@
-// tslint:disable-next-line: no-any one day we'll come around it
+// one day we'll come around it
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ElasticQuery = any;

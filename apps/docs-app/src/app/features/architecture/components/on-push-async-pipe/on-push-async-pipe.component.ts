@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class OnPushAsyncPipeComponent {
   number$: Observable<string> = interval(1000).pipe(map(i => `${i}`));
 
-  templateEvaluations: number = 0;
+  templateEvaluations = 0;
 
   getDouble(x: number): number {
     ++this.templateEvaluations;

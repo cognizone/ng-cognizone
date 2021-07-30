@@ -14,13 +14,16 @@ export class NodeUriDirective extends OnDestroy$ {
   get uri(): string {
     return this._uri;
   }
+
   set uri(value: string) {
     this._uri = value;
     this.onUriChange();
   }
 
   ap!: ApplicationProfile;
+
   typeProfile!: TypeProfile;
+
   type!: string;
 
   private _uri!: string;

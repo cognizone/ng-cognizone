@@ -1,4 +1,4 @@
-import { Directive, Inject, InjectionToken, Input, OnChanges, OnInit, Provider } from '@angular/core';
+import { Directive, Inject, InjectionToken, Input, OnChanges, Provider } from '@angular/core';
 import { Many, manyToArray, SelectOptionsProvider, SelectOptionsProvidersMerger } from '@cognizone/model-utils';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
@@ -13,12 +13,12 @@ export const HAS_OPTIONS_PROVIDER_TOKEN = new InjectionToken<HasOptionsProvider<
 export function provideHasOptionsProvider(type: unknown): Provider {
   return {
     useExisting: type,
-    provide: HAS_OPTIONS_PROVIDER_TOKEN
+    provide: HAS_OPTIONS_PROVIDER_TOKEN,
   };
 }
 
 @Directive({
-  selector: '[czCvOptions]'
+  selector: '[czCvOptions]',
 })
 export class CvOptionsDirective extends OnDestroy$ implements OnChanges {
   @Input()

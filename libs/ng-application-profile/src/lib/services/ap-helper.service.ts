@@ -12,7 +12,7 @@ import {
   isRangeRule,
   RangeRule,
   Rule,
-  TypeProfile
+  TypeProfile,
 } from '@cognizone/application-profile';
 import { Many, manyToArray } from '@cognizone/model-utils';
 import { Logger } from '@cognizone/ng-core';
@@ -21,7 +21,8 @@ import { memoize } from 'lodash-es';
 @Injectable()
 export class ApHelper {
   private apMap: WeakMap<ApplicationProfile, number> = new WeakMap();
-  private weakMapCount: number = 0;
+
+  private weakMapCount = 0;
 
   constructor(private logger: Logger) {
     this.logger = logger.extend('ApHelper');
@@ -37,7 +38,7 @@ export class ApHelper {
   getTypeProfile(ap: ApplicationProfile, classIds: Many<string>): TypeProfile {
     const type = this.getConcreteType(ap, classIds);
     if (!type) {
-      const message = `Could not find most concrete type among given classes ${classIds} in given AP`;
+      const message = `Could not find most concrete type among given classes ${manyToArray(classIds).join(', ')} in given AP`;
       this.logger.error(message, { ap, classIds });
       throw new Error(message);
     }
@@ -54,9 +55,11 @@ export class ApHelper {
 
   getRangeRule(profile: TypeProfile, key: string): RangeRule {
     const attr = profile.attributes[key];
-    if (attr == null) throw new Error(`Could not find attribute '${key}' for type '${profile.classIds}'`);
+    if (attr == null) throw new Error(`Could not find attribute '${key}' for type '${manyToArray(profile.classIds).join(', ')}'`);
     const rangeRule = attr.rules.find(isRangeRule);
-    if (rangeRule == null) throw new Error(`Attribute '${key}' for type '${profile.classIds}' does not have a 'range' rule`);
+    if (rangeRule == null) {
+      throw new Error(`Attribute '${key}' for type '${manyToArray(profile.classIds).join(', ')}' does not have a 'range' rule`);
+    }
     return rangeRule;
   }
 
@@ -111,7 +114,7 @@ export class ApHelper {
       } else if (isOrClassIdRule(rangeRule.value)) {
         const subRules = rangeRule.value.value
           .map(classIdRule => this.getRules(ap, classIdRule.value))
-          .reduce((acc, current) => [...acc, ...current], [] as Rule[]);
+          .reduce<Rule[]>((acc, current) => [...acc, ...current], []);
         rules.push(...subRules);
       }
     } else {

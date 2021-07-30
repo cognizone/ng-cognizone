@@ -16,9 +16,13 @@ export class ResultsTableComponent extends OnDestroy$ {
   columns: string[] = ['index', '@uri', '@type', '@label', 'actions'];
 
   dataSource$: Observable<FullModel[]> = this.elasticExplorerService.models$;
+
   total$: Observable<number> = this.elasticExplorerService.total$;
+
   pagination$: Observable<Pagination> = this.elasticExplorerService.pagination$;
+
   showPaginator$: Observable<boolean> = this.elasticExplorerService.manualMode$.pipe(map(manualMode => !manualMode));
+
   trackBy: TrackByFunction<FullModel> = (_, hit) => hit.hit._id;
 
   constructor(private elasticExplorerService: ElasticExplorerService) {

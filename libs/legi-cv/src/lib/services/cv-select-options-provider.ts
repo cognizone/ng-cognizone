@@ -19,7 +19,7 @@ export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
 
   getOptions(query: Nil<string>, params: GetSelectOptionsParams): Observable<(SelectOption | SelectOptionGroup)[]> {
     return this.cvProvider.getCv(query, params).pipe(
-      switchMap(cv => {
+      switchMap(async cv => {
         if (areConcepts(cv)) {
           return this.toSelectOptions(cv);
         } else {
@@ -31,7 +31,7 @@ export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
   }
 
   getValueOption(value: string): Observable<SelectOption> {
-    return this.cvProvider.getConceptByUri(value).pipe(switchMap(concept => this.toSelectOption(concept)));
+    return this.cvProvider.getConceptByUri(value).pipe(switchMap(async concept => this.toSelectOption(concept)));
   }
 
   hasOptionFor(value: string): Observable<boolean> {

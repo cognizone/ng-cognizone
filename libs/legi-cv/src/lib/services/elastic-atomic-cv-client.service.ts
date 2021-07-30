@@ -13,7 +13,7 @@ import { ATOMIC_CV_CLIENT_TOKEN, AtomicCvClient } from './atomic-cv-client.servi
 import { LegiCvOptionsService } from './legi-cv-options.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ElasticAtomicCvClientService implements AtomicCvClient {
   constructor(private optionsService: LegiCvOptionsService, private http: HttpClient, private resourceGraphService: ResourceGraphService) {}
@@ -22,9 +22,9 @@ export class ElasticAtomicCvClientService implements AtomicCvClient {
     const query = {
       query: {
         term: {
-          'data.uri.keyword': uri
-        }
-      }
+          'data.uri.keyword': uri,
+        },
+      },
     };
 
     return this.searchOneInElastic<ConceptScheme<T>>(query).pipe(
@@ -37,13 +37,13 @@ export class ElasticAtomicCvClientService implements AtomicCvClient {
     );
   }
 
-  getCollection<T extends Concept = Concept>(uri: string, conceptSchemeUri?: string): Completable<Collection<T>> {
+  getCollection<T extends Concept = Concept>(uri: string): Completable<Collection<T>> {
     const query = {
       query: {
         term: {
-          'data.references.hasMicroThesaurus.keyword': uri
-        }
-      }
+          'data.references.hasMicroThesaurus.keyword': uri,
+        },
+      },
     };
 
     return this.searchOneInElastic<ConceptScheme<T>>(query).pipe(
@@ -79,5 +79,5 @@ export class ElasticAtomicCvClientService implements AtomicCvClient {
 
 export const elasticAtomicCvClientServiceProvider = {
   provide: ATOMIC_CV_CLIENT_TOKEN,
-  useExisting: ElasticAtomicCvClientService
+  useExisting: ElasticAtomicCvClientService,
 };

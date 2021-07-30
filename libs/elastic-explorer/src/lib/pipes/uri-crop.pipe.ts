@@ -1,11 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'uriCrop'
+  name: 'uriCrop',
 })
 export class UriCropPipe implements PipeTransform {
-  transform(value: string, enabled: boolean = true): string {
+  transform(value: string): string {
     return value;
-    // return value ? value.replace(/^http(s)?\:\/\/[\w\.]+\//, '') : '';
   }
 }

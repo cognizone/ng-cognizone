@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import produce from 'immer';
 
 @Pipe({
-  name: 'filterObject'
+  name: 'filterObject',
 })
 export class FilterObjectPipe implements PipeTransform {
   transform(value: {}, query: string): {} {
@@ -15,7 +15,7 @@ export class FilterObjectPipe implements PipeTransform {
   private _transform<T>(draft: T, query: string, key: string): boolean {
     if (key.toLowerCase().includes(query)) return true;
     if (draft instanceof Date) return false;
-    if (typeof draft == null) return false;
+    if (draft == null) return false;
     if (typeof draft === 'number') return draft.toString().includes(query) || key.includes(query);
     if (typeof draft === 'string') return draft.toLowerCase().includes(query) || key.toLowerCase().includes(query);
     if (Array.isArray(draft)) {
@@ -32,6 +32,7 @@ export class FilterObjectPipe implements PipeTransform {
       for (const [loopKey, value] of Object.entries(draft)) {
         const doesMatch = this._transform(value, query, loopKey);
         if (doesMatch) findsome = true;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         else delete (draft as any)[loopKey];
       }
       return findsome;

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import {
   ApplicationProfile,
@@ -6,7 +7,7 @@ import {
   Resource,
   ResourceGraph,
   ResourceGraphRaw,
-  ResourceRaw
+  ResourceRaw,
 } from '@cognizone/application-profile';
 import { Many, manyToArray } from '@cognizone/model-utils';
 import { set } from 'lodash-es';
@@ -17,8 +18,6 @@ import { ApHelper } from './ap-helper.service';
 import { ApService } from './ap.service';
 import { PrefixCcService } from './prefix-cc.service';
 import { ResourceMapper } from './resource-mapper.service';
-
-// tslint:disable: no-any
 
 @Injectable()
 export class ResourceGraphService {
@@ -46,12 +45,12 @@ export class ResourceGraphService {
     };
     return {
       data: removeEmpty(this.resourceMapper.serialize(data)),
-      included: included.map(inc => removeEmpty(this.resourceMapper.serialize(inc)))
+      included: included.map(inc => removeEmpty(this.resourceMapper.serialize(inc))),
     };
   }
 
   resourceGraphRawToJsonModel(rawSource: ResourceGraphRaw, apLike?: ApplicationProfileOrApName): JsonModel {
-    const all = [rawSource.data, ...(rawSource.included || [])];
+    const all = [rawSource.data, ...(rawSource.included ?? [])];
     const ap = apLike ? this.getAp(apLike) : undefined;
     // this transformed map is used for perf reason, limiting the number of loops on the models to 1
     const transformed: { [uri: string]: JsonModel } = {};
@@ -100,7 +99,6 @@ export class ResourceGraphService {
       .filter(([key]) => {
         if (key.startsWith('@')) return false;
         if (!this.apHelper.hasAttribute(profile, key)) {
-          // tslint:disable-next-line: no-console we don't want to depend on Logger here
           console.warn('Could not find attribute in profile, skipping', { profile, key });
           return false;
         }
@@ -111,7 +109,7 @@ export class ResourceGraphService {
         if (isDataTypeRule(attrRule)) {
           data.attributes[key] = { dataType: this.shortenUri(attrRule.value), value };
         } else {
-          const workingValue = value as Many<string | JsonModel>;
+          const workingValue = value as Many<JsonModel | string>;
           if (Array.isArray(workingValue)) {
             const references: string[] = [];
             workingValue.forEach((v: JsonModel | string) => {
@@ -152,7 +150,7 @@ export class ResourceGraphService {
   }
 
   private shortenUri(uri: string): string {
-    const prefix = Object.entries(this.prefixCc.prefixes).find(([_, value]) => uri.startsWith(value));
+    const prefix = Object.entries(this.prefixCc.prefixes).find(([, value]) => uri.startsWith(value));
     return prefix ? uri.replace(prefix[1], `${prefix[0]}:`) : uri;
   }
 

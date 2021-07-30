@@ -15,12 +15,12 @@ const routes: Routes = [
   environment.features.ngYasgui
     ? {
         path: 'ng-yasgui',
-        loadChildren: () => import('./features/ng-yasgui-doc/ng-yasgui-doc.module').then(m => m.NgYasguiDocModule)
+        loadChildren: async () => import('./features/ng-yasgui-doc/ng-yasgui-doc.module').then(m => m.NgYasguiDocModule)
       }
     : undefined,
   {
     path: 'ng-core',
-    loadChildren: () => import('./features/ng-core-doc/ng-core-doc.module').then(m => m.NgCoreDocModule)
+    loadChildren: async () => import('./features/ng-core-doc/ng-core-doc.module').then(m => m.NgCoreDocModule)
   },
   { path: 'model-utils', component: ExternalDocView, data: { libName: 'model-utils' } }
 ].filter(notNil);

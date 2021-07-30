@@ -1,9 +1,9 @@
 import { MicroAttributeMapper } from './micro-attribute-mapper';
 
 export class DefaultMapper implements MicroAttributeMapper<unknown, unknown> {
-  priority: number = -1000;
+  priority = -1000;
 
-  supportDeserialize(dataType: string): boolean {
+  supportDeserialize(): boolean {
     return true;
   }
 
@@ -11,7 +11,7 @@ export class DefaultMapper implements MicroAttributeMapper<unknown, unknown> {
     return value;
   }
 
-  supportSerialize(dataType: string): boolean {
+  supportSerialize(): boolean {
     return true;
   }
 

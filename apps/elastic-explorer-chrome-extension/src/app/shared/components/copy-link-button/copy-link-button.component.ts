@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ProtocolService } from '@czee-ce/core';
 
 @Component({
-  selector: 'app-copy-link-button',
+  selector: 'cz-copy-link-button',
   template: `
     <button
       mat-fab
@@ -22,9 +22,9 @@ import { ProtocolService } from '@czee-ce/core';
         bottom: 24px;
         right: 24px;
       }
-    `
+    `,
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CopyLinkButtonComponent {
   constructor(private protocolService: ProtocolService) {}

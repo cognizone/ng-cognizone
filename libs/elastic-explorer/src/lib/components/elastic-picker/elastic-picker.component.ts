@@ -18,9 +18,11 @@ import { ElasticInstanceManagementComponent } from '../elastic-instance-manageme
 })
 export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
   form!: FormGroup;
+
   newUrlControl: AbstractControl = this.fb.control(null);
 
   indexOptions$!: Observable<SelectOption<string | null>[]>;
+
   urlOptions$!: Observable<SelectOption<string | null>[]>;
 
   constructor(

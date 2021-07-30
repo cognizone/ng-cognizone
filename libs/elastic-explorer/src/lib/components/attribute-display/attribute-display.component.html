@@ -36,11 +36,11 @@
       <ng-template matExpansionPanelContent>
         <div *ngIf="value['@id']">
           <span class="czls-title">uri</span>
-          <app-attribute-display [model]="value" [key]="'@id'"></app-attribute-display>
+          <cz-attribute-display [model]="value" [key]="'@id'"></cz-attribute-display>
         </div>
         <div *ngIf="value['@type']">
           <span class="czls-title">type</span>
-          <app-attribute-display [model]="value" [key]="'@type'" [padded]="true"></app-attribute-display>
+          <cz-attribute-display [model]="value" [key]="'@type'" [padded]="true"></cz-attribute-display>
         </div>
         <div *ngIf="value['@facets']">
           <span class="czls-title">facets</span>
@@ -48,14 +48,14 @@
         </div>
         <div *ngFor="let key of subKeys">
           <span class="czls-title">{{ key }}</span>
-          <app-attribute-display [model]="value" [key]="key" [padded]="true"></app-attribute-display>
+          <cz-attribute-display [model]="value" [key]="key" [padded]="true"></cz-attribute-display>
         </div>
       </ng-template>
     </mat-expansion-panel>
   </ng-container>
   <ng-container *ngSwitchCase="'Array'">
     <ng-container *ngFor="let m of value">
-      <app-attribute-display class="d-block" [model]="m"></app-attribute-display>
+      <cz-attribute-display class="d-block" [model]="m"></cz-attribute-display>
     </ng-container>
   </ng-container>
   <ng-container *ngSwitchCase="'boolean'">

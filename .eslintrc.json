@@ -18,18 +18,7 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {
-        "@typescript-eslint/ban-types": [
-          "error",
-          {
-            "types": {
-              "any": "Not good"
-            },
-            "extendDefaults": false
-          }
-        ]
-      }
+      "extends": ["plugin:@nrwl/nx/typescript", "./libs/eslint-config"]
     },
     {
       "files": ["*.js", "*.jsx"],

@@ -37,10 +37,12 @@ export class SetIndices {
 
 export class SetManualMode {
   static readonly type: string = '[ElasticExplorer] set manual mode';
+
   constructor(public manualMode: boolean) {}
 }
 
 export class SetElasticQuery {
   static readonly type: string = '[ElasticExplorer] set elastic query';
+
   constructor(public elasticQuery: {}) {}
 }

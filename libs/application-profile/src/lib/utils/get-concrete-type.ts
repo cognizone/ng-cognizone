@@ -21,13 +21,11 @@ export function getConcreteTypeFromRdfTypesRule(ap: ApplicationProfile, classIds
   return classIds.find(classId => {
     const typeProfile = ap.types[classId];
     if (!typeProfile) {
-      // tslint:disable-next-line: no-console no access to Logger here
-      console.warn(`Failed to find class '${classId}' in AP while searching for concrete type in [${classIds}], skipping`);
+      console.warn(`Failed to find class '${classId}' in AP while searching for concrete type in [${classIds.join(', ')}], skipping`);
       return false;
     }
     const rdfTypesRule = typeProfile.rules.find(isRdfTypesRule);
     if (!rdfTypesRule) {
-      // tslint:disable-next-line: no-console no access to Logger here
       console.warn(`Failed to find rule of type 'rdfTypes' for classId '${classId}', skipping`);
       return false;
     }
@@ -42,8 +40,7 @@ export function getConcreteTypeFromSubClassOfRules(ap: ApplicationProfile, class
   classIds.forEach(classId => {
     const typeProfile = ap.types[classId];
     if (!typeProfile) {
-      // tslint:disable-next-line: no-console no access to Logger here
-      console.warn(`Failed to find class '${classId}' in AP while searching for concrete type in [${classIds}], skipping`);
+      console.warn(`Failed to find class '${classId}' in AP while searching for concrete type in [${classIds.join(', ')}], skipping`);
       return false;
     }
     const subClassOfRule = typeProfile.rules.find(isSubClassOfRule);

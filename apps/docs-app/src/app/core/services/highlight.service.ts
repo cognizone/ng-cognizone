@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable import/no-unassigned-import */
 import { Injectable } from '@angular/core';
-// tslint:disable: no-import-side-effect ordered-imports
+
 import 'clipboard';
 import 'prismjs';
 import 'prismjs/components/prism-scss';
@@ -10,11 +13,10 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 // import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 // import 'prismjs/plugins/line-numbers/prism-line-numbers';
 
-// tslint:disable-next-line: no-any
-declare var Prism: any;
+declare let Prism: any;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HighlightService {
   highlight(code: string, language: string = 'typescript'): string {

@@ -6,10 +6,11 @@ import { OperationUtils } from '../services/operation-utils.service';
 import { OperationsService } from '../services/operations.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OperationGuard implements CanActivate {
   constructor(private operationsService: OperationsService, private operationUtils: OperationUtils) {}
+
   canActivate(route: ActivatedRouteSnapshot): boolean {
     const { path, operationId } = route.data.operationPath as { path: OperationGroupDescription[]; operationId: string };
 

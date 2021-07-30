@@ -8,7 +8,7 @@ export function downloadBlob(data: Blob, fileName?: string): void {
 
   // IE doesn't allow using a blob object directly as link href
   // instead it is necessary to use msSaveOrOpenBlob
-  if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+  if (window.navigator?.msSaveOrOpenBlob) {
     window.navigator.msSaveOrOpenBlob(blob, fileName);
     return;
   }

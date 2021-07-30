@@ -25,6 +25,7 @@ export interface LangStringSimple {
  * If even there nothing is found, it will fallback to the first label found.
  * It is to be noted that even if the label is a string[] with multiple values,
  * only the 0th element will be taken.
+ *
  * @param langString The lang string from which we want to extract a label
  * @param lang The preferred lang to get the label for
  * @param fallbackLangs ordered list of fallback languages

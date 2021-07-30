@@ -65,24 +65,24 @@ export class LoggerDocComponent implements OnInit, OnDestroy {
     },
     {
       name: 'log(...args: unknown[]): void',
-      description: "log input as console.log(...) if logger's log level is >= 1 (LOG)"
+      description: 'log input as console.log(...) if logger\'s log level is >= 1 (LOG)'
     },
     {
       name: 'info(...args: unknown[]): void',
-      description: "log input as console.info(...) if logger's log level is >= 2 (INFO)"
+      description: 'log input as console.info(...) if logger\'s log level is >= 2 (INFO)'
     },
     {
       name: 'warn(...args: unknown[]): void',
-      description: "log input as console.warn(...) if logger's log level is >= 3 (WARN)"
+      description: 'log input as console.warn(...) if logger\'s log level is >= 3 (WARN)'
     },
     {
       name: 'error(...args: unknown[]): void',
-      description: "log input as console.error(...) if logger's log level is >= 4 (ERROR)"
+      description: 'log input as console.error(...) if logger\'s log level is >= 4 (ERROR)'
     },
     {
       name: 'extend(namespace: string): Logger',
       description:
-        "create a new logger which namespace extends the current one. For example, if the root Logger has a namespace 'App', calling logger.extend('Component') will result in a logger having the namespace 'App:Component'"
+        'create a new logger which namespace extends the current one. For example, if the root Logger has a namespace \'App\', calling logger.extend(\'Component\') will result in a logger having the namespace \'App:Component\''
     }
   ];
 
