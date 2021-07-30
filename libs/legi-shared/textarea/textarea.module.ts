@@ -16,9 +16,9 @@ import { TextareaComponent } from './textarea.component';
     MatFormFieldModule,
     MatInputModule,
     // Cognizone
-    ErrorModule
+    ErrorModule,
   ],
   declarations: [TextareaComponent],
-  exports: [TextareaComponent]
+  exports: [TextareaComponent],
 })
 export class TextareaModule {}

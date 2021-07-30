@@ -44,9 +44,9 @@ export class NgApplicationProfileModule {
           provide: APP_INITIALIZER,
           multi: true,
           useFactory: apServiceInitializerFactory,
-          deps: [ApService]
-        }
-      ]
+          deps: [ApService],
+        },
+      ],
     };
   }
 }

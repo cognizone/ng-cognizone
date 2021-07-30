@@ -18,7 +18,7 @@ import { NgxsModule } from '@ngxs/store';
     TranslocoLocaleModule.init(),
     NgxsModule.forRoot([], {}),
     NgxsReduxDevtoolsPluginModule.forRoot({ disabled: false, name: 'CZ-DATA_EXPLORER' }),
-    I18nTranslocoModule.forRoot()
-  ]
+    I18nTranslocoModule.forRoot(),
+  ],
 })
 export class CoreModule {}

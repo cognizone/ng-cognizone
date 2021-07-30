@@ -5,7 +5,7 @@ import { isMaxCardinalityRule, isMinCardinalityRule, MaxCardinalityRule, MinCard
 import { MicroValidatorBuilder } from '../ap-form-builder.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CardinalityValidatorService extends MicroValidatorBuilder {
   static readonly MIN_CARDINALITY_ERROR_KEY: string = 'minCardinality';
@@ -30,7 +30,7 @@ export class CardinalityValidatorService extends MicroValidatorBuilder {
       const { value } = ctrl;
       return Array.isArray(value) && value.length < min.value
         ? {
-            [CardinalityValidatorService.MIN_CARDINALITY_ERROR_KEY]: min.value
+            [CardinalityValidatorService.MIN_CARDINALITY_ERROR_KEY]: min.value,
           }
         : null;
     };
@@ -41,7 +41,7 @@ export class CardinalityValidatorService extends MicroValidatorBuilder {
       const { value } = ctrl;
       return Array.isArray(value) && value.length > max.value
         ? {
-            [CardinalityValidatorService.MAX_CARDINALITY_ERROR_KEY]: max.value
+            [CardinalityValidatorService.MAX_CARDINALITY_ERROR_KEY]: max.value,
           }
         : null;
     };

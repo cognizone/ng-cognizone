@@ -6,7 +6,7 @@ import {
   FormControl,
   FormControlDirective,
   FormControlName,
-  NgControl
+  NgControl,
 } from '@angular/forms';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 

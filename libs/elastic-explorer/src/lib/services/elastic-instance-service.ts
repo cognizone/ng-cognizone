@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { ElasticInstance } from '../models/elastic-instance';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ElasticInstanceService {
   private readonly LOCAL_STORAGE_KEY: string = 'cz elastic urls';
@@ -24,7 +24,7 @@ export class ElasticInstanceService {
       return this.values;
     }
     const raw = JSON.parse(localValues) as (ElasticInstance | string)[];
-    return raw.map(r => typeof r === 'string' ? { url: r, label: r } : r).sort((a, b) => a.label.localeCompare(b.label));
+    return raw.map(r => (typeof r === 'string' ? { url: r, label: r } : r)).sort((a, b) => a.label.localeCompare(b.label));
   }
 
   private set values(v: ElasticInstance[]) {
@@ -72,7 +72,7 @@ export class ElasticInstanceService {
     const label = instance.label?.trim() || url;
     return {
       url,
-      label
+      label,
     };
   }
 }

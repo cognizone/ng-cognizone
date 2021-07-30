@@ -5,9 +5,9 @@ export const environment: Environment = {
   features: {
     architecture: {
       component: true,
-      forms: false
+      forms: false,
     },
     ngCore: true,
-    ngYasgui: true
-  }
+    ngYasgui: true,
+  },
 };

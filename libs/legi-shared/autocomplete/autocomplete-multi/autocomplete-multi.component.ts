@@ -11,7 +11,7 @@ import {
   Optional,
   TemplateRef,
   TrackByFunction,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
 import { ControlContainer, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
@@ -31,9 +31,9 @@ import { distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/op
   styleUrls: ['./autocomplete-multi.component.scss'],
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => AutocompleteMultiComponent), multi: true },
-    provideHasOptionsProvider(forwardRef(() => AutocompleteMultiComponent))
+    provideHasOptionsProvider(forwardRef(() => AutocompleteMultiComponent)),
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> implements HasOptionsProvider<T>, OnInit {
   @Input()
@@ -209,7 +209,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
               (await this.getSelectOption(value)) ??
               ({
                 value,
-                label: (value as unknown) as string
+                label: (value as unknown) as string,
               } as SelectOption<T>);
             options.push(option);
           }

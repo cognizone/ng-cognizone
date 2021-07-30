@@ -11,9 +11,9 @@ export default {
     moduleMetadata({
       declarations: [],
       imports: [LoadingButtonModule, MatButtonModule, MatIconModule],
-      entryComponents: [MatSpinner]
-    })
-  ]
+      entryComponents: [MatSpinner],
+    }),
+  ],
 };
 
 export const LoadingButton = () => ({
@@ -44,10 +44,10 @@ export const LoadingButton = () => ({
     </div>
   `,
   props: {
-    loading: false
-  }
+    loading: false,
+  },
 });
 
 LoadingButton.story = {
-  name: 'czLoadingButton'
+  name: 'czLoadingButton',
 };

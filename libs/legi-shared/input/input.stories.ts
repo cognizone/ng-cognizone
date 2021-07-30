@@ -19,10 +19,10 @@ export default {
         TranslocoModule,
         LegiSharedModule.forRoot(),
         LoggerModule.forRoot('storybook'),
-        InputModule
-      ]
-    })
-  ]
+        InputModule,
+      ],
+    }),
+  ],
 };
 
 export const Input1 = () => ({
@@ -38,14 +38,14 @@ export const Input1 = () => ({
   `,
   props: {
     formGroup: new FormGroup({
-      name: new FormControl(null, [Validators.required, Validators.email])
+      name: new FormControl(null, [Validators.required, Validators.email]),
     }),
-    label: 'Email'
-  }
+    label: 'Email',
+  },
 });
 
 Input1.story = {
-  name: 'basic'
+  name: 'basic',
 };
 
 export const Input3 = () => ({
@@ -61,12 +61,12 @@ export const Input3 = () => ({
   `,
   props: {
     formControl: new FormControl(null, Validators.required),
-    label: 'Name'
-  }
+    label: 'Name',
+  },
 });
 
 Input3.story = {
-  name: 'with prefix icon'
+  name: 'with prefix icon',
 };
 
 export const Input4 = () => ({
@@ -82,12 +82,12 @@ export const Input4 = () => ({
   `,
   props: {
     formControl: new FormControl(null, Validators.required),
-    label: 'Name'
-  }
+    label: 'Name',
+  },
 });
 
 Input4.story = {
-  name: 'with prefix button'
+  name: 'with prefix button',
 };
 
 export const Input2 = () => ({
@@ -103,10 +103,10 @@ export const Input2 = () => ({
   `,
   props: {
     formControl: new FormControl({ value: null, disabled: true }),
-    label: 'Name'
-  }
+    label: 'Name',
+  },
 });
 
 Input2.story = {
-  name: 'readonly'
+  name: 'readonly',
 };

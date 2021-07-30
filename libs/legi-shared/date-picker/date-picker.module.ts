@@ -23,9 +23,9 @@ import { MonthSelectorDirective } from './directives/month-selector.directive';
     MatInputModule,
     // Cognizone
     LabelModule,
-    ErrorModule
+    ErrorModule,
   ],
   declarations: [DatePickerComponent, MonthSelectorDirective],
-  exports: [DatePickerComponent, MonthSelectorDirective]
+  exports: [DatePickerComponent, MonthSelectorDirective],
 })
 export class DatePickerModule {}

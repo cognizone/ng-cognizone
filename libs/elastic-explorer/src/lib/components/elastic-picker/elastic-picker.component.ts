@@ -14,7 +14,7 @@ import { ElasticInstanceManagementComponent } from '../elastic-instance-manageme
   selector: 'cz-elastic-picker',
   templateUrl: `./elastic-picker.component.html`,
   styles: [],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
   form!: FormGroup;
@@ -37,7 +37,7 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       url: [],
-      index: []
+      index: [],
     });
 
     this.subSink = this.elasticExplorerService.elasticInfo$.subscribe(v => this.form.patchValue(v, { emitEvent: false }));
@@ -50,7 +50,7 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
   editElasticUrl(): void {
     this.dialog.open(ElasticInstanceManagementComponent, {
       height: '40vh',
-      width: '40vw'
+      width: '40vw',
     });
   }
 
@@ -59,9 +59,9 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
       map(indices => [
         {
           value: null,
-          label: { en: 'All indices' }
+          label: { en: 'All indices' },
         },
-        ...indices.map(index => ({ label: { en: index }, value: index })).sort((a, b) => a.label.en.localeCompare(b.label.en))
+        ...indices.map(index => ({ label: { en: index }, value: index })).sort((a, b) => a.label.en.localeCompare(b.label.en)),
       ])
     );
   }

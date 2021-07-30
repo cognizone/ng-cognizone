@@ -3,14 +3,14 @@ import { ElevationComponent } from './elevation.component';
 // tslint:disable
 export default {
   title: 'legi-styles/Elevation',
-  component: ElevationComponent
+  component: ElevationComponent,
 };
 
 export const Elevation = () => ({
   component: ElevationComponent,
-  props: {}
+  props: {},
 });
 
 Elevation.story = {
-  name: 'elevation'
+  name: 'elevation',
 };

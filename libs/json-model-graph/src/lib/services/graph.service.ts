@@ -12,7 +12,7 @@ import { RemoveGraph, Reset, SetGraph, UpdateNode } from '../store/graph.actions
 import { GRAPH_STATE_TOKEN, GraphStateModel } from '../store/graph.state';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GraphService {
   state$: Observable<GraphStateModel> = this.store.select(GRAPH_STATE_TOKEN);

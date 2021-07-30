@@ -4,7 +4,7 @@ import { CzLabel, Nil } from '@cognizone/model-utils';
 import { I18nService } from '../services/i18n.service';
 
 @Pipe({
-  name: 'czLabel'
+  name: 'czLabel',
 })
 export class LabelPipe implements PipeTransform {
   constructor(private i18n: I18nService) {}

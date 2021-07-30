@@ -5,8 +5,8 @@ export function getByUriQuery(uri: string, isKeyword: boolean = true): ElasticQu
     size: 1,
     query: {
       bool: {
-        must: { term: { [`data.uri${isKeyword ? '.keyword' : ''}`]: uri } }
-      }
-    }
+        must: { term: { [`data.uri${isKeyword ? '.keyword' : ''}`]: uri } },
+      },
+    },
   };
 }

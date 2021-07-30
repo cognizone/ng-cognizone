@@ -7,6 +7,6 @@ import { YasguiService } from './services/yasgui.service';
   declarations: [YasguiComponent],
   imports: [],
   exports: [YasguiComponent],
-  providers: [YasguiService]
+  providers: [YasguiService],
 })
 export class NgYasguiModule {}

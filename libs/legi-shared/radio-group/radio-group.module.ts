@@ -24,9 +24,9 @@ import { RadioGroupComponent } from './radio-group.component';
     // Internal
     InputModule,
     // Other
-    TranslocoModule
+    TranslocoModule,
   ],
   declarations: [RadioGroupComponent],
-  exports: [RadioGroupComponent]
+  exports: [RadioGroupComponent],
 })
 export class RadioGroupModule {}

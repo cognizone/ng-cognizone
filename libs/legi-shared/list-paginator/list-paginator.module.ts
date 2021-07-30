@@ -23,9 +23,9 @@ import { ListPaginatorComponent } from './list-paginator.component';
     // Cognizone
     TranslocoLangStringModule,
     // Other
-    TranslocoModule
+    TranslocoModule,
   ],
   declarations: [ListPaginatorComponent],
-  exports: [ListPaginatorComponent]
+  exports: [ListPaginatorComponent],
 })
 export class ListPaginatorModule {}

@@ -24,6 +24,6 @@ export function provideCvProvider(type: Type<CvProvider>): Provider {
   return {
     provide: CV_PROVIDER_TOKEN,
     multi: true,
-    useClass: type
+    useClass: type,
   };
 }

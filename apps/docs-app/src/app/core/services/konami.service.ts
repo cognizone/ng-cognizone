@@ -3,7 +3,7 @@ import { from, fromEvent, Observable } from 'rxjs';
 import { filter, map, scan, sequenceEqual, switchMap } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class KonamiService {
   codeDetected$: Observable<boolean> = fromEvent<KeyboardEvent>(window, 'keyup').pipe(
@@ -28,6 +28,6 @@ export class KonamiService {
     'ArrowLeft',
     'ArrowRight',
     'b',
-    'a'
+    'a',
   ];
 }

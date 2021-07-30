@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '@czee-ce/env/environment';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProtocolService {
   get protocol(): string {

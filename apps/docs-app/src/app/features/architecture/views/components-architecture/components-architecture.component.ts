@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-components-architecture',
   templateUrl: './components-architecture.component.html',
-  styleUrls: ['./components-architecture.component.scss']
+  styleUrls: ['./components-architecture.component.scss'],
 })
 export class ComponentsArchitectureComponent {
   lastUpdate: Date = new Date('2019-11-25');

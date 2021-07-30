@@ -10,6 +10,6 @@ const directives = [EnabledForPermissionDirective, GetHasPermissionDirective, If
 @NgModule({
   declarations: [...directives],
   imports: [CommonModule],
-  exports: [...directives]
+  exports: [...directives],
 })
 export class PermissionsModule {}

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-styling',
   templateUrl: './styling.component.html',
-  styleUrls: ['./styling.component.scss']
+  styleUrls: ['./styling.component.scss'],
 })
 export class StylingComponent {
   lastUpdate: Date = new Date('2019-11-20');

@@ -7,8 +7,8 @@ import { TranslocoMatPaginatorIntl } from './transloco-mat-paginator-intl.servic
   providers: [
     {
       provide: MatPaginatorIntl,
-      useClass: TranslocoMatPaginatorIntl
-    }
-  ]
+      useClass: TranslocoMatPaginatorIntl,
+    },
+  ],
 })
 export class TranslocoMatPaginatorAdapterModule {}

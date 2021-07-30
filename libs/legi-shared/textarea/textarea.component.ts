@@ -7,7 +7,7 @@ import {
   Inject,
   Input,
   Optional,
-  TemplateRef
+  TemplateRef,
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
@@ -18,7 +18,7 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
   templateUrl: './textarea.component.html',
   styleUrls: ['./textarea.component.scss'],
   providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => TextareaComponent), multi: true }],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TextareaComponent extends ControlComponent<string> {
   @Input()

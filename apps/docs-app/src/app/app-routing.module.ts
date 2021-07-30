@@ -7,22 +7,22 @@ const routes: Routes = [
   environment.features.architecture
     ? {
         path: 'architecture',
-        loadChildren: async () => import('./features/architecture/architecture.module').then(m => m.ArchitectureModule)
+        loadChildren: async () => import('./features/architecture/architecture.module').then(m => m.ArchitectureModule),
       }
     : {
         path: 'architecture',
-        redirectTo: '/page-not-found'
+        redirectTo: '/page-not-found',
       },
   { path: 'packages', loadChildren: async () => import('./features/packages-doc/packages-doc.module').then(m => m.PackagesDocModule) },
   { path: '', pathMatch: 'full', redirectTo: 'packages' },
   {
     path: '**',
-    component: PageNotFoundComponent
-  }
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', paramsInheritanceStrategy: 'always', useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

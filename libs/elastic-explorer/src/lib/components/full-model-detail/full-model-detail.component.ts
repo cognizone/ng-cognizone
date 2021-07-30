@@ -12,7 +12,7 @@ import { DetailViewService } from '../../services/detail-view.service';
   templateUrl: './full-model-detail.component.html',
   styleUrls: ['./full-model-detail.component.scss'],
   providers: [DetailViewService],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnChanges {
   @Input()
@@ -43,11 +43,11 @@ export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnCh
         {
           provide: DETAIL_VIEW_CONTEXT_TOKEN,
           useValue: {
-            model: this.model
-          }
-        }
+            model: this.model,
+          },
+        },
       ],
-      parent: this.injector
+      parent: this.injector,
     });
   }
 }

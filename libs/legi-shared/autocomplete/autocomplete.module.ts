@@ -32,9 +32,9 @@ import { AutocompleteComponent } from './autocomplete.component';
     MatTooltipModule,
     // Cognizone
     I18nModule,
-    SelectOptionSortModule
+    SelectOptionSortModule,
   ],
   declarations: [AutocompleteComponent, AutocompleteSingleComponent, AutocompleteMultiComponent],
-  exports: [AutocompleteComponent, AutocompleteMultiComponent, AutocompleteSingleComponent]
+  exports: [AutocompleteComponent, AutocompleteMultiComponent, AutocompleteSingleComponent],
 })
 export class AutocompleteModule {}

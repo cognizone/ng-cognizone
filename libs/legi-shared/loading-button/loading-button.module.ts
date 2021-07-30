@@ -9,9 +9,9 @@ import { LoadingButtonDirective } from './loading-button.directive';
     // Angular
     CommonModule,
     // Material
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
   ],
   declarations: [LoadingButtonDirective],
-  exports: [LoadingButtonDirective]
+  exports: [LoadingButtonDirective],
 })
 export class LoadingButtonModule {}

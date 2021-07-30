@@ -6,9 +6,9 @@ export function getByUrisQuery(uris: string[], isKeyword: boolean = true): Elast
     query: {
       bool: {
         must: {
-          terms: { [`data.uri${isKeyword ? '.keyword' : ''}`]: uris }
-        }
-      }
-    }
+          terms: { [`data.uri${isKeyword ? '.keyword' : ''}`]: uris },
+        },
+      },
+    },
   };
 }

@@ -13,7 +13,7 @@ export const LEGI_CV_STATE_TOKEN = new StateToken<LegiCvStateModel>('legi_cv');
 
 @State({
   name: LEGI_CV_STATE_TOKEN,
-  defaults: {}
+  defaults: {},
 })
 @Injectable()
 export class LegiCvState {

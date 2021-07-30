@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 import {
   COGNIZONE_MATERIAL_ICONS_OPTIONS_TOKEN,
   CognizoneMaterialIconsOptions,
-  DEFAULT_COGNIZONE_MATERIAL_ICONS_OPTIONS
+  DEFAULT_COGNIZONE_MATERIAL_ICONS_OPTIONS,
 } from '../models/cognizone-material-icons-options';
 
 @Injectable()

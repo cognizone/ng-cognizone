@@ -7,7 +7,7 @@ export default class CreateNgLibrary extends Command {
   static examples: string[] = [`$ cz-cli create-ng-library`];
 
   static flags: oFlags.Input<{ help: void }> = {
-    help: oFlags.help({ char: 'h' })
+    help: oFlags.help({ char: 'h' }),
   };
 
   static args: Parser.args.IArg[] = [];

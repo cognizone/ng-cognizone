@@ -27,9 +27,9 @@ import { CheckboxGroupComponent } from './checkbox-group.component';
     InputModule,
     SelectOptionSortModule,
     // Other
-    TranslocoModule
+    TranslocoModule,
   ],
   declarations: [CheckboxGroupComponent],
-  exports: [CheckboxGroupComponent]
+  exports: [CheckboxGroupComponent],
 })
 export class CheckboxGroupModule {}

@@ -20,25 +20,25 @@ export default {
         TranslocoModule,
         LegiSharedModule.forRoot(),
         LoggerModule.forRoot('storybook'),
-        AutocompleteModule
-      ]
-    })
-  ]
+        AutocompleteModule,
+      ],
+    }),
+  ],
 };
 
 const options: SelectOption[] = [
   {
     value: '1',
     label: {
-      en: ['bonjour']
-    }
+      en: ['bonjour'],
+    },
   },
   {
     value: '2',
     label: {
-      en: ['hello']
-    }
-  }
+      en: ['hello'],
+    },
+  },
 ];
 
 export const Autocomplete1 = () => ({
@@ -55,12 +55,12 @@ export const Autocomplete1 = () => ({
   props: {
     formControl: new FormControl(),
     label: 'Pick a value',
-    options
-  }
+    options,
+  },
 });
 
 Autocomplete1.story = {
-  name: 'simple'
+  name: 'simple',
 };
 
 export const Autocomplete2 = () => ({
@@ -76,10 +76,10 @@ export const Autocomplete2 = () => ({
   `,
   props: {
     formControl: new FormControl(),
-    label: 'Pick a value'
-  }
+    label: 'Pick a value',
+  },
 });
 
 Autocomplete2.story = {
-  name: 'multi'
+  name: 'multi',
 };

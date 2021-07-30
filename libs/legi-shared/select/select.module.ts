@@ -25,9 +25,9 @@ import { SelectComponent } from './select.component';
     SelectOptionSortModule,
     I18nModule,
     // Others
-    TranslocoModule
+    TranslocoModule,
   ],
   declarations: [SelectComponent],
-  exports: [SelectComponent]
+  exports: [SelectComponent],
 })
 export class SelectModule {}

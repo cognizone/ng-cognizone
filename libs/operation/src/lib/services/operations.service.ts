@@ -8,7 +8,7 @@ import { RemoveOperationGroup, SetOperationGroups, ToggleDebugEnabled, UpdateOpe
 import { OPERATIONS_STATE_TOKEN, OperationsStateModel } from '../store/operations.state';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OperationsService {
   get groups$(): Observable<OperationGroup[]> {

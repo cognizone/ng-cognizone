@@ -10,7 +10,7 @@ import { OperationsService } from '../../services/operations.service';
 @Component({
   selector: 'cz-operation-viewer-modal',
   templateUrl: './operation-viewer-modal.component.html',
-  styleUrls: ['./operation-viewer-modal.component.scss']
+  styleUrls: ['./operation-viewer-modal.component.scss'],
 })
 export class OperationViewerModalComponent implements OnInit {
   allOperations?: OperationGroup[];

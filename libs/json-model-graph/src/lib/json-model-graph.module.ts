@@ -10,17 +10,17 @@ const directives = [IfAttributeInApDirective, NodeAttributeDirective, NodeUriDir
 
 @NgModule({
   declarations: [...directives],
-  exports: [...directives]
+  exports: [...directives],
 })
 export class JsonModelGraphModule {
   static forRoot(): ModuleWithProviders<JsonModelGraphRootModule> {
     return {
-      ngModule: JsonModelGraphRootModule
+      ngModule: JsonModelGraphRootModule,
     };
   }
 }
 
 @NgModule({
-  imports: []
+  imports: [],
 })
 export class JsonModelGraphRootModule {}

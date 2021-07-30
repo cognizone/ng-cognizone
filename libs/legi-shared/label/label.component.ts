@@ -6,7 +6,7 @@ import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
   selector: 'cz-label',
   templateUrl: './label.component.html',
   styleUrls: ['./label.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LabelComponent implements OnInit {
   @Input()

@@ -64,5 +64,5 @@ export class I18nTranslocoService extends I18nService {
 
 export const i18nTranslocoServiceProvider: Provider = {
   provide: I18nService,
-  useClass: I18nTranslocoService
+  useClass: I18nTranslocoService,
 };

@@ -5,7 +5,7 @@ import { Nil } from '@cognizone/model-utils';
 import { HighlightMatch } from './highlight-match.service';
 
 @Pipe({
-  name: 'highlight'
+  name: 'highlight',
 })
 export class HighlightPipe implements PipeTransform {
   constructor(private highlightMatch: HighlightMatch) {}

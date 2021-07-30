@@ -7,7 +7,7 @@ import { OnDestroy$ } from '@cognizone/ng-core';
   selector: 'cz-error',
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ErrorComponent extends OnDestroy$ implements OnInit {
   @Input()

@@ -5,11 +5,11 @@ export const environment: Environment = {
   features: {
     architecture: {
       component: true,
-      forms: true
+      forms: true,
     },
     ngCore: true,
-    ngYasgui: true
-  }
+    ngYasgui: true,
+  },
 };
 
 /*

@@ -11,9 +11,9 @@ export class ApFetchService {
     const body = {
       query: {
         terms: {
-          _id: [id]
-        }
-      }
+          _id: [id],
+        },
+      },
     };
     const { data } = await axios.post(fullUrl, body, { headers });
     const source = extractOneSourceFromElasticResponse(data) as { json: string };

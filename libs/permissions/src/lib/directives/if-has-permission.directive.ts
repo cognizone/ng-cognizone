@@ -5,7 +5,7 @@ import { OnDestroy$ } from '@cognizone/ng-core';
 import { PermissionsService } from '../services/permissions.service';
 
 @Directive({
-  selector: '[czIfHasPermission]'
+  selector: '[czIfHasPermission]',
 })
 export class IfHasPermissionDirective extends OnDestroy$ implements OnInit {
   @Input('czIfHasPermission')

@@ -4,7 +4,7 @@ import {
   Nil,
   SelectOption,
   SelectOptionGroup,
-  SelectOptionsProvider
+  SelectOptionsProvider,
 } from '@cognizone/model-utils';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -50,7 +50,7 @@ export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
   private async toSelectOptionGroup(group: ConceptGroup): Promise<SelectOptionGroup> {
     return {
       label: group.label,
-      options: await this.toSelectOptions(group.concepts)
+      options: await this.toSelectOptions(group.concepts),
     };
   }
 
@@ -71,7 +71,7 @@ export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
       label,
       value,
       disabled: concept.deprecated,
-      data: { concept }
+      data: { concept },
     };
   }
 }

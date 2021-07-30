@@ -14,7 +14,7 @@ import { OperationGroupDirective } from './operation-group.directive';
 
 @Directive({
   selector: '[czGetOperation]',
-  providers: [OperationDebug]
+  providers: [OperationDebug],
 })
 export class GetOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czGetOperation')
@@ -25,7 +25,7 @@ export class GetOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czGetOperationPath')
   set path(value: Many<OperationGroupDescriptionLike> | undefined) {
     const path = value ? manyToArray(value) : [];
-    this.path$.next(path.map(part => typeof part === 'string' ? { id: part } : part));
+    this.path$.next(path.map(part => (typeof part === 'string' ? { id: part } : part)));
   }
 
   private id$: Subject<string> = new ReplaySubject(1);
@@ -85,7 +85,7 @@ export class GetOperationDirective extends OnDestroy$ implements OnInit {
       el: this.ref?.rootNodes[0],
       operationId: this.id,
       operation$: this.operation$,
-      path$: this.fullPath$
+      path$: this.fullPath$,
     });
   }
 }

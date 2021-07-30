@@ -10,7 +10,7 @@ import {
   isOrDataTypeRule,
   isRangeRule,
   Rule,
-  TypeProfile
+  TypeProfile,
 } from '@cognizone/application-profile';
 
 import { DEFAULT_PREFIXES } from '../models/default-prefixes';
@@ -33,7 +33,7 @@ export class ApRawInterfacesGenerationService {
 
     await TemplateService.process('ap-interfaces-raw.ts.hbs', this.options.targetPath, {
       context: { types },
-      force: true
+      force: true,
     });
   }
 
@@ -50,7 +50,7 @@ export class ApRawInterfacesGenerationService {
       name: normalizedName,
       attributes: attributes,
       references: references,
-      hasReferences: references.length > 0
+      hasReferences: references.length > 0,
     };
   }
 
@@ -78,19 +78,19 @@ export class ApRawInterfacesGenerationService {
       return {
         ...base,
         type: ruleToTypeString(dataTypeRule),
-        isAttribute: true
+        isAttribute: true,
       };
     } else if (classIdRule || classIdOrRule) {
       return {
         ...base,
         type: isSingle ? 'string' : 'string[]',
-        isReference: true
+        isReference: true,
       };
     } else if (orDataTypeRule) {
       return {
         ...base,
         type: orDataTypeRule.value.map(ruleToTypeString).join(' | '),
-        isAttribute: true
+        isAttribute: true,
       };
     }
 
@@ -150,5 +150,5 @@ export const DEFAULT_RAW_DATATYPE_MAPPINGS: RawDatatypeMappings = {
   [Datatype.RDF_LANG_STRING]: { type: 'LangString', isAlwaysSingle: true },
   [Datatype.XSD_BOOLEAN]: { type: 'boolean' },
   [Datatype.XSD_LONG]: { type: 'number' },
-  ['xsd:int']: { type: 'number' }
+  ['xsd:int']: { type: 'number' },
 };

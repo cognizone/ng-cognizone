@@ -13,6 +13,6 @@ const components = [EmptyComponent, CopyLinkButtonComponent];
 @NgModule({
   declarations: [...components],
   exports: [...components],
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatTooltipModule, ClipboardModule]
+  imports: [CommonModule, MatButtonModule, MatIconModule, MatTooltipModule, ClipboardModule],
 })
 export class SharedModule {}

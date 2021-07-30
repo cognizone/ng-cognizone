@@ -3,7 +3,7 @@ import { getLangStringValue, Nil, SelectOption } from '@cognizone/model-utils';
 import { TranslocoService } from '@ngneat/transloco';
 
 @Pipe({
-  name: 'selectOptionsSort'
+  name: 'selectOptionsSort',
 })
 export class SelectOptionSortPipe implements PipeTransform {
   constructor(private transloco: TranslocoService) {}

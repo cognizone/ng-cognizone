@@ -13,7 +13,7 @@ import {
   isRdfTypesRule,
   isSubClassOfRule,
   Prefixes,
-  TypeProfile
+  TypeProfile,
 } from '@cognizone/application-profile';
 import { Dictionary, notNil } from '@cognizone/model-utils';
 import { existsSync } from 'fs';
@@ -44,7 +44,7 @@ export class ApInterfacesGenerationService {
     const imports = flatten(types.map(t => t.imports)).sort((a, b) => a.from.localeCompare(b.from));
     await TemplateService.process('ap-interfaces.ts.hbs', this.options.targetPath, {
       context: { types, imports },
-      force: true
+      force: true,
     });
   }
 
@@ -82,7 +82,7 @@ export class ApInterfacesGenerationService {
       facets = `${normalizedName}Facets`;
       imports.push({
         element: facets,
-        from: `./${facetsFileName}`.replace('.ts', '')
+        from: `./${facetsFileName}`.replace('.ts', ''),
       });
     }
 
@@ -105,7 +105,7 @@ export class ApInterfacesGenerationService {
       attributes: attributes.sort((a, b) => a.name.localeCompare(b.name)),
       extendClass,
       imports,
-      facets
+      facets,
     };
   }
 
@@ -209,7 +209,7 @@ export class ApInterfacesGenerationService {
     return {
       name: attributeProfile.attributeId,
       type,
-      isOptional: !isRequired
+      isOptional: !isRequired,
     };
   }
 
@@ -288,5 +288,5 @@ export const DEFAULT_DATATYPE_MAPPINGS: DatatypeMappings = {
   [Datatype.XSD_DATE]: { type: 'Date' },
   [Datatype.XSD_DATE_TIME]: { type: 'Date' },
   [Datatype.RDFS_RESOURCE]: { type: 'string' },
-  [Datatype.XSD_STRING]: { type: 'string' }
+  [Datatype.XSD_STRING]: { type: 'string' },
 };

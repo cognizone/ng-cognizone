@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-global-architecture',
   templateUrl: './global-architecture.component.html',
-  styleUrls: ['./global-architecture.component.scss']
+  styleUrls: ['./global-architecture.component.scss'],
 })
 export class GlobalArchitectureComponent {
   lastUpdate: Date = new Date('2019-12-06');

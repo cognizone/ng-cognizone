@@ -8,7 +8,7 @@ import {
   OnInit,
   Optional,
   Self,
-  TemplateRef
+  TemplateRef,
 } from '@angular/core';
 import { AbstractControl, ControlContainer, FormControl, NgControl } from '@angular/forms';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
@@ -20,7 +20,7 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
 
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputComponent extends ControlComponent<string> implements OnInit {
   @Input()

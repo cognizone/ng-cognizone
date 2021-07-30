@@ -33,8 +33,8 @@ export const GRAPH_STATE_TOKEN = new StateToken<GraphStateModel>('cz_graph');
   defaults: {
     graphs: {},
     linkedGraphs: {},
-    apName: {}
-  }
+    apName: {},
+  },
 })
 @Injectable()
 export class GraphState {

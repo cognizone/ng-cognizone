@@ -39,10 +39,10 @@ const components = [UserActionTableComponent];
     // Cognizone
     InputModule,
     DatePickerModule,
-    AutocompleteModule
+    AutocompleteModule,
   ],
   exports: [...components],
-  providers: [UserActionService, UserActionOptionsService, UserActionClient]
+  providers: [UserActionService, UserActionOptionsService, UserActionClient],
 })
 export class UserActionModule {
   static withOptions(options?: UserActionsModuleOptions): ModuleWithProviders<UserActionModule> {
@@ -51,9 +51,9 @@ export class UserActionModule {
       providers: [
         {
           provide: USER_ACTIONS_MODULE_OPTIONS_TOKEN,
-          useValue: options
-        }
-      ]
+          useValue: options,
+        },
+      ],
     };
   }
 }

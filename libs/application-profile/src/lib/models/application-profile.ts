@@ -21,5 +21,5 @@ export type AttributeProfile = {
 
 export const EMPTY_APPLICATION_PROFILE: ApplicationProfile = {
   uri: 'this is an empty Ap',
-  types: {}
+  types: {},
 };

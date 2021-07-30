@@ -7,7 +7,7 @@ import {
   LangString,
   Nil,
   notNil,
-  Sorter
+  Sorter,
 } from '@cognizone/model-utils';
 import { identity, Observable } from 'rxjs';
 import { filter, first, map, mergeMap, shareReplay, switchMap, toArray } from 'rxjs/operators';
@@ -21,7 +21,7 @@ import {
   countConceptWrapperSorterFactory,
   orderConceptWrapperSorterFactory,
   scoreConceptWrapperSorterFactory,
-  uriConceptWrapperSorterFactory
+  uriConceptWrapperSorterFactory,
 } from '../models/concept-wrapper';
 import { GetCvParams } from '../models/get-cv-params';
 import { LegiCvOptions } from '../models/legi-cv-options';
@@ -70,7 +70,7 @@ export abstract class AtomicCvProvider<T extends Concept = Concept> implements C
     return {
       concept,
       label,
-      score
+      score,
     };
   }
 
@@ -96,7 +96,7 @@ export abstract class AtomicCvProvider<T extends Concept = Concept> implements C
       scoreConceptWrapperSorterFactory,
       countConceptWrapperSorterFactory,
       orderConceptWrapperSorterFactory,
-      uriConceptWrapperSorterFactory
+      uriConceptWrapperSorterFactory,
     ];
 
     return composeConceptWrapperSorterFactories(sorters)(params);

@@ -4,7 +4,7 @@ import { ActivatedRouteSnapshot, CanActivate, Router, UrlTree } from '@angular/r
 import { ProtocolService } from '../services/protocol.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProtocolGuard implements CanActivate {
   constructor(private router: Router, private protocolService: ProtocolService) {}

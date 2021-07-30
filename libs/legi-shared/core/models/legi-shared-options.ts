@@ -9,5 +9,5 @@ export interface LegiSharedOptions {
 
 export const DEFAULT_LEGI_SHARED_OPTIONS: LegiSharedOptions = {
   appearance: 'urban',
-  useDefaultMomentLocaleAdapter: true
+  useDefaultMomentLocaleAdapter: true,
 };

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AttributeMapper, MicroAttributeMapper } from './micro-attribute-mapper';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ArrayMapper implements MicroAttributeMapper<unknown[], unknown[]> {
   priority = 1000;

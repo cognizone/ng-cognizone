@@ -25,9 +25,9 @@ import { InputComponent } from './input.component';
     LabelModule,
     ErrorModule,
     // Others
-    TranslocoModule
+    TranslocoModule,
   ],
   declarations: [InputComponent],
-  exports: [InputComponent]
+  exports: [InputComponent],
 })
 export class InputModule {}

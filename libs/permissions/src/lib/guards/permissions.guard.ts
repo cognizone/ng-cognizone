@@ -7,7 +7,7 @@ import { first } from 'rxjs/operators';
 import { PermissionsService } from '../services/permissions.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PermissionsGuard implements CanActivate {
   constructor(private permissionsService: PermissionsService) {}

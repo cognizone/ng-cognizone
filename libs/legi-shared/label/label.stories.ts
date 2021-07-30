@@ -9,18 +9,18 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [],
-      imports: [LegiSharedModule.forRoot(), LoggerModule.forRoot('storybook'), LabelModule]
-    })
-  ]
+      imports: [LegiSharedModule.forRoot(), LoggerModule.forRoot('storybook'), LabelModule],
+    }),
+  ],
 };
 
 export const Label1 = () => ({
   template: `
     <cz-label>Hello</cz-label>
   `,
-  props: {}
+  props: {},
 });
 
 Label1.story = {
-  name: 'basic'
+  name: 'basic',
 };

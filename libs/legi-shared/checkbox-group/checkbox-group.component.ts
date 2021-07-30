@@ -9,7 +9,7 @@ import {
   OnInit,
   Optional,
   SimpleChanges,
-  TemplateRef
+  TemplateRef,
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatCheckboxChange } from '@angular/material/checkbox';
@@ -27,7 +27,7 @@ import {
   SelectOptionCounts,
   SelectOptionGroup,
   SelectOptionsProvider,
-  trackBySelectOption
+  trackBySelectOption,
 } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { startWith, switchMap } from 'rxjs/operators';
@@ -38,9 +38,9 @@ import { startWith, switchMap } from 'rxjs/operators';
   styleUrls: ['./checkbox-group.component.scss'],
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => CheckboxGroupComponent), multi: true },
-    provideHasOptionsProvider(forwardRef(() => CheckboxGroupComponent))
+    provideHasOptionsProvider(forwardRef(() => CheckboxGroupComponent)),
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements HasOptionsProvider<T>, OnInit, OnChanges {
   @Input()
@@ -158,7 +158,7 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
         switchMap(q =>
           this.optionsProvider.getOptions(q, {
             lang: this.i18n.getActiveSimpleLang(),
-            counts: this.counts
+            counts: this.counts,
           })
         )
       )

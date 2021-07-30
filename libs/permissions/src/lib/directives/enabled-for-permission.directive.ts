@@ -5,7 +5,7 @@ import { OnDestroy$ } from '@cognizone/ng-core';
 import { PermissionsService } from '../services/permissions.service';
 
 @Directive({
-  selector: '[czEnabledForPermission]'
+  selector: '[czEnabledForPermission]',
 })
 export class EnabledForPermissionDirective extends OnDestroy$ implements OnInit, OnChanges {
   @HostBinding()

@@ -5,7 +5,7 @@ import { environment } from '@env/environment';
 @Component({
   selector: 'app-architecture',
   templateUrl: './architecture.component.html',
-  styleUrls: ['./architecture.component.scss']
+  styleUrls: ['./architecture.component.scss'],
 })
 export class ArchitectureComponent implements OnInit, OnDestroy {
   constructor(private coreStateFacade: CoreStateFacade) {}
@@ -17,7 +17,7 @@ export class ArchitectureComponent implements OnInit, OnDestroy {
       { label: '03 Env, apis and flags', path: 'architecture/env-apis-and-flags' },
       { label: '04 Styling', path: 'architecture/styling' },
       ...insertIf(environment.features.architecture.component, { label: '05 Components', path: 'architecture/components' }),
-      ...insertIf(environment.features.architecture.forms, { label: '06 Forms', path: 'architecture/forms' })
+      ...insertIf(environment.features.architecture.forms, { label: '06 Forms', path: 'architecture/forms' }),
     ]);
   }
 

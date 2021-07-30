@@ -7,7 +7,7 @@ export class I18nTranslocoModule {
   static forRoot(): ModuleWithProviders<I18nTranslocoModule> {
     return {
       ngModule: I18nTranslocoModule,
-      providers: [i18nTranslocoServiceProvider]
+      providers: [i18nTranslocoServiceProvider],
     };
   }
 }

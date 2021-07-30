@@ -7,7 +7,7 @@ import { DatePickerType } from '../models/date-picker-type';
 
 @Directive({
   selector: 'cz-date-picker[monthSelector]',
-  providers: [{ provide: MAT_DATE_FORMATS, useFactory: getFormat, deps: [TranslocoService] }]
+  providers: [{ provide: MAT_DATE_FORMATS, useFactory: getFormat, deps: [TranslocoService] }],
 })
 export class MonthSelectorDirective {
   constructor(private datePicker: DatePickerComponent) {
@@ -23,13 +23,13 @@ export function getFormat(transloco: TranslocoService): MatDateFormats {
       .find(part => part.type === 'literal')?.value ?? '.';
   return {
     parse: {
-      dateInput: `MM${separator}YYYY`
+      dateInput: `MM${separator}YYYY`,
     },
     display: {
       dateInput: `MM${separator}YYYY`,
       monthYearLabel: 'MMM YYYY',
       dateA11yLabel: 'LL',
-      monthYearA11yLabel: 'MMMM YYYY'
-    }
+      monthYearA11yLabel: 'MMMM YYYY',
+    },
   };
 }

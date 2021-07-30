@@ -10,9 +10,9 @@ import { ErrorComponent } from './error.component';
     // Angular
     CommonModule,
     MatFormFieldModule,
-    TranslocoModule
+    TranslocoModule,
   ],
   declarations: [ErrorComponent],
-  exports: [ErrorComponent]
+  exports: [ErrorComponent],
 })
 export class ErrorModule {}

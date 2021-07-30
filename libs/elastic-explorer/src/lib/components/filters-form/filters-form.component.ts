@@ -10,7 +10,7 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
 @Component({
   selector: 'cz-filters-form',
   templateUrl: './filters-form.component.html',
-  styleUrls: ['./filters-form.component.scss']
+  styleUrls: ['./filters-form.component.scss'],
 })
 export class FiltersFormComponent extends OnDestroy$ implements OnInit {
   form!: FormGroup;
@@ -42,7 +42,7 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
       type: [],
       included: [],
       facets: [],
-      isFuzzy: []
+      isFuzzy: [],
     });
     this.subSink = this.elasticExplorerService.filters$.subscribe(filters => this.form.patchValue(filters, { emitEvent: false }));
     this.subSink = this.form.valueChanges.subscribe(filters => this.elasticExplorerService.setFilters(filters));
@@ -56,12 +56,14 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
 
 class CustomSelectOptionsProvider implements SelectOptionsProvider<string> {
   private options$: Observable<SelectOption[]> = this.aggregation$.pipe(
-    map(aggregation => (aggregation?.buckets ?? [])
+    map(aggregation =>
+      (aggregation?.buckets ?? [])
         .map(bucket => ({
           label: `${bucket.key} (${bucket.doc_count})`,
-          value: bucket.key.toString()
+          value: bucket.key.toString(),
         }))
-        .sort((a, b) => a.label.localeCompare(b.label)))
+        .sort((a, b) => a.label.localeCompare(b.label))
+    )
   );
 
   constructor(private aggregation$: Observable<ElasticAggregation>) {}

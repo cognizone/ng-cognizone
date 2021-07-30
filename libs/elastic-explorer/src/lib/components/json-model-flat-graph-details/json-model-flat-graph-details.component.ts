@@ -5,7 +5,7 @@ import {
   DETAIL_VIEW_CONTEXT_TOKEN,
   DETAIL_VIEW_PROVIDER_TOKEN,
   DetailViewContext,
-  DetailViewProvider
+  DetailViewProvider,
 } from '../../services/detail-view-provider.service';
 import { DetailViewService } from '../../services/detail-view.service';
 import { getSortedObject } from '../../utils/get-sorted-object';
@@ -13,7 +13,7 @@ import { getSortedObject } from '../../utils/get-sorted-object';
 @Component({
   selector: 'cz-json-model-flat-graph-details',
   templateUrl: './json-model-flat-graph-details.component.html',
-  styleUrls: ['./json-model-flat-graph-details.component.scss']
+  styleUrls: ['./json-model-flat-graph-details.component.scss'],
 })
 export class JsonModelFlatGraphDetailsComponent implements OnInit {
   jsonModelFlatGraph!: JsonModelFlatGraph;
@@ -35,6 +35,6 @@ export const jsonModelFlatGraphDetailsViewProvider: Provider = {
   useValue: {
     component: JsonModelFlatGraphDetailsComponent,
     label: 'JsonModelFlatGraph',
-    shouldShow: model => !!model.jsonModelFlatGraph
-  } as DetailViewProvider
+    shouldShow: model => !!model.jsonModelFlatGraph,
+  } as DetailViewProvider,
 };

@@ -7,7 +7,7 @@ import {
   Inject,
   Input,
   Optional,
-  TemplateRef
+  TemplateRef,
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
@@ -24,9 +24,9 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
   styleUrls: ['./select.component.scss'],
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => SelectComponent), multi: true },
-    provideHasOptionsProvider(forwardRef(() => SelectComponent))
+    provideHasOptionsProvider(forwardRef(() => SelectComponent)),
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SelectComponent<T> extends ControlComponent<T> implements HasOptionsProvider<T> {
   @Input()

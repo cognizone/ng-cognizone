@@ -6,7 +6,7 @@ import { GraphWrapperFactory } from '../services/graph-wrapper.factory';
 import { NodeWrapper } from '../services/node-wrapper';
 
 @Directive({
-  selector: '[czRootUri]'
+  selector: '[czRootUri]',
 })
 export class RootUriDirective {
   @Input('czRootUri')

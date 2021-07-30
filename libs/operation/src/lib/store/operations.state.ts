@@ -16,8 +16,8 @@ export const OPERATIONS_STATE_TOKEN = new StateToken<OperationsStateModel>('cz_o
   name: OPERATIONS_STATE_TOKEN,
   defaults: {
     groups: [],
-    debugEnabled: false
-  }
+    debugEnabled: false,
+  },
 })
 @Injectable()
 export class OperationsState {
@@ -39,12 +39,14 @@ export class OperationsState {
 
   @Action(UpdateOperationGroups)
   updateOperationGroups(ctx: StateContext<OperationsStateModel>, { groups }: UpdateOperationGroups): void {
-    const filteredGroups = ctx.getState().groups.filter(g => groups.some(sub => {
+    const filteredGroups = ctx.getState().groups.filter(g =>
+      groups.some(sub => {
         if (sub.uri) {
           return !(g.id === sub.id && g.uri === sub.uri);
         }
         return g.id !== sub.id;
-      }));
+      })
+    );
     ctx.patchState({ groups: [...filteredGroups, ...groups] });
   }
 

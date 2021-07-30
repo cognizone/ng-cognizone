@@ -9,7 +9,7 @@ import { NgCorePagesService } from '../../services/ng-core-pages.service';
 @Component({
   selector: 'app-logger-doc',
   templateUrl: './logger-doc.component.html',
-  styleUrls: ['./logger-doc.component.scss']
+  styleUrls: ['./logger-doc.component.scss'],
 })
 export class LoggerDocComponent implements OnInit, OnDestroy {
   form!: FormGroup;
@@ -54,36 +54,36 @@ export class LoggerDocComponent implements OnInit, OnDestroy {
   loggerModuleMethods: ApiDescription[] = [
     {
       name: 'static forRoot(namespace: string): ModuleWithProviders',
-      description: 'import for the root of your application, "namespace" will be the namespace of the root Logger.'
-    }
+      description: 'import for the root of your application, "namespace" will be the namespace of the root Logger.',
+    },
   ];
 
   loggerMethods: ApiDescription[] = [
     {
       name: 'debug(...args: unknown[]): void',
-      description: `log input as console.debug(...) if logger's log level is >= 0 (DEBUG). Beware that your browser log level should accept "Verbose" level for you to see this kind of message`
+      description: `log input as console.debug(...) if logger's log level is >= 0 (DEBUG). Beware that your browser log level should accept "Verbose" level for you to see this kind of message`,
     },
     {
       name: 'log(...args: unknown[]): void',
-      description: 'log input as console.log(...) if logger\'s log level is >= 1 (LOG)'
+      description: "log input as console.log(...) if logger's log level is >= 1 (LOG)",
     },
     {
       name: 'info(...args: unknown[]): void',
-      description: 'log input as console.info(...) if logger\'s log level is >= 2 (INFO)'
+      description: "log input as console.info(...) if logger's log level is >= 2 (INFO)",
     },
     {
       name: 'warn(...args: unknown[]): void',
-      description: 'log input as console.warn(...) if logger\'s log level is >= 3 (WARN)'
+      description: "log input as console.warn(...) if logger's log level is >= 3 (WARN)",
     },
     {
       name: 'error(...args: unknown[]): void',
-      description: 'log input as console.error(...) if logger\'s log level is >= 4 (ERROR)'
+      description: "log input as console.error(...) if logger's log level is >= 4 (ERROR)",
     },
     {
       name: 'extend(namespace: string): Logger',
       description:
-        'create a new logger which namespace extends the current one. For example, if the root Logger has a namespace \'App\', calling logger.extend(\'Component\') will result in a logger having the namespace \'App:Component\''
-    }
+        "create a new logger which namespace extends the current one. For example, if the root Logger has a namespace 'App', calling logger.extend('Component') will result in a logger having the namespace 'App:Component'",
+    },
   ];
 
   constructor(
@@ -98,7 +98,7 @@ export class LoggerDocComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.coreStateFacade.setPageTitle('@cognizone/ng-core', 'Logger');
     this.form = this.fb.group({
-      logMessage: ['This is my message']
+      logMessage: ['This is my message'],
     });
     this.ngCorePagesService.setPages();
   }

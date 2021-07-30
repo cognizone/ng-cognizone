@@ -5,7 +5,7 @@ import {
   DETAIL_VIEW_CONTEXT_TOKEN,
   DETAIL_VIEW_PROVIDER_TOKEN,
   DetailViewContext,
-  DetailViewProvider
+  DetailViewProvider,
 } from '../../services/detail-view-provider.service';
 import { DetailViewService } from '../../services/detail-view.service';
 
@@ -13,7 +13,7 @@ import { DetailViewService } from '../../services/detail-view.service';
   selector: 'cz-json-model-details',
   templateUrl: './json-model-details.component.html',
   styleUrls: ['./json-model-details.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class JsonModelDetailsComponent implements OnInit {
   jsonModel!: JsonModel;
@@ -33,6 +33,6 @@ export const jsonModelDetailsViewProvider: Provider = {
   useValue: {
     component: JsonModelDetailsComponent,
     label: 'JsonModel',
-    shouldShow: model => !!model.jsonModel
-  } as DetailViewProvider
+    shouldShow: model => !!model.jsonModel,
+  } as DetailViewProvider,
 };

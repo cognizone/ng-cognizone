@@ -14,7 +14,7 @@ const directives = [CvLabelDirective, CvOptionsDirective, CvValueDirective];
 @NgModule({
   declarations: [...directives],
   imports: [],
-  exports: [...directives]
+  exports: [...directives],
 })
 export class LegiCvModule {
   static forRoot(options: LegiCvOptions = DEFAULT_LEGI_CV_OPTIONS): ModuleWithProviders<LegiCvModule> {
@@ -23,13 +23,13 @@ export class LegiCvModule {
       providers: [
         {
           provide: LEGI_CV_OPTIONS_TOKEN,
-          useValue: options
+          useValue: options,
         },
         CvService,
         CvStateService,
         ConceptMatcherService,
-        elasticAtomicCvClientServiceProvider
-      ]
+        elasticAtomicCvClientServiceProvider,
+      ],
     };
   }
 }

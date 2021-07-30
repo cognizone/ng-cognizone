@@ -6,7 +6,7 @@ import {
   DETAIL_VIEW_CONTEXT_TOKEN,
   DETAIL_VIEW_PROVIDER_TOKEN,
   DetailViewContext,
-  DetailViewProvider
+  DetailViewProvider,
 } from '../../services/detail-view-provider.service';
 import { DetailViewService } from '../../services/detail-view.service';
 import { getSortedObject } from '../../utils/get-sorted-object';
@@ -15,7 +15,7 @@ import { getSortedObject } from '../../utils/get-sorted-object';
   selector: 'cz-ap-details',
   templateUrl: './ap-details.component.html',
   styleUrls: ['./ap-details.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ApDetailsComponent implements OnInit {
   ap!: ApplicationProfile;
@@ -42,8 +42,8 @@ export const apDetailsViewProvider: Provider = {
   useValue: {
     component: ApDetailsComponent,
     label: 'Ap',
-    shouldShow: model => 'json' in (model.hit._source as ApHitSource)
-  } as DetailViewProvider
+    shouldShow: model => 'json' in (model.hit._source as ApHitSource),
+  } as DetailViewProvider,
 };
 
 interface ApHitSource {

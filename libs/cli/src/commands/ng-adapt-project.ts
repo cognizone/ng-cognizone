@@ -21,7 +21,7 @@ export default class NgAdaptProject extends Command {
     interactive: oFlags.boolean({ char: 'i', default: true }),
     project: oFlags.string({ char: 'p' }),
     backendPort: oFlags.integer(),
-    backendRootApi: oFlags.string()
+    backendRootApi: oFlags.string(),
   };
 
   static args: Parser.args.IArg[] = [];
@@ -53,7 +53,7 @@ export default class NgAdaptProject extends Command {
             {
               title: 'generation using ng cli',
               task: () => execa.command(`npx ng generate module core --project=${options.project}`),
-              skip: () => (existsSync(coreFolderPath) ? `app/core folder is already present in ${options.project}` : false)
+              skip: () => (existsSync(coreFolderPath) ? `app/core folder is already present in ${options.project}` : false),
             },
             this.createEmptyFolderTask('guards folder', join(coreFolderPath, 'guards')),
             this.createEmptyFolderTask('interceptors folder', join(coreFolderPath, 'interceptors')),
@@ -64,9 +64,9 @@ export default class NgAdaptProject extends Command {
               title: 'index.ts',
               task: () =>
                 TemplateService.process('index.ts.hbs', join(coreFolderPath, 'index.ts'), { context: { files: ['./core.module'] } }),
-              skip: () => existsSync(join(coreFolderPath, 'index.ts'))
-            }
-          ])
+              skip: () => existsSync(join(coreFolderPath, 'index.ts')),
+            },
+          ]),
       },
       {
         title: 'SharedModule',
@@ -75,7 +75,7 @@ export default class NgAdaptProject extends Command {
             {
               title: 'generation using ng cli',
               task: () => execa.command(`npx ng generate module shared --project=${options.project}`),
-              skip: () => (existsSync(sharedFolderPath) ? `app/shared folder is already present in ${options.project}` : false)
+              skip: () => (existsSync(sharedFolderPath) ? `app/shared folder is already present in ${options.project}` : false),
             },
             this.createEmptyFolderTask('components folder', join(sharedFolderPath, 'components')),
             this.createEmptyFolderTask('directives folder', join(sharedFolderPath, 'directives')),
@@ -86,9 +86,9 @@ export default class NgAdaptProject extends Command {
               title: 'index.ts',
               task: () =>
                 TemplateService.process('index.ts.hbs', join(sharedFolderPath, 'index.ts'), { context: { files: ['./shared.module'] } }),
-              skip: () => existsSync(join(sharedFolderPath, 'index.ts'))
-            }
-          ])
+              skip: () => existsSync(join(sharedFolderPath, 'index.ts')),
+            },
+          ]),
       },
       this.createEmptyFolderTask('features folder', join(sourceRoot, 'app/features')),
       {
@@ -117,11 +117,11 @@ export default class NgAdaptProject extends Command {
           TemplateService.process('main.scss.hbs', join(stylesRoot, 'main.scss'));
 
           this.angularJson.projects[options.project].architect.build.options.stylePreprocessorOptions = {
-            includePaths: [`${sourceRoot}/styles`]
+            includePaths: [`${sourceRoot}/styles`],
           };
 
           this.angularJson.projects[options.project].architect.build.options.styles = [`${sourceRoot}/styles/main.scss`];
-        }
+        },
       },
       {
         title: 'Proxy setup',
@@ -129,7 +129,7 @@ export default class NgAdaptProject extends Command {
         task: () => {
           const proxyFilePath = join(this.angularJson.projects[options.project].root, 'proxy.conf.js');
           TemplateService.process('proxy.conf.js.hbs', proxyFilePath, {
-            context: { context: options.backendRootApi || '', backendPort: options.backendPort }
+            context: { context: options.backendRootApi || '', backendPort: options.backendPort },
           });
           const packageJson = JsonService.readJsonSync<PackageJson>('package.json', { strict: true });
           if (options.project === this.angularJson.defaultProject) {
@@ -138,13 +138,13 @@ export default class NgAdaptProject extends Command {
             packageJson.scripts[`start:${options.project}`] = `ng serve --project=${options.project} --proxy-config=${proxyFilePath}`;
           }
           JsonService.writeJsonSync('package.json', packageJson);
-        }
+        },
       },
       {
         title: 'Save changes to angular.json',
         skip: () => (JSON.stringify(this.angularJson) === this.initialAngularJsonString ? 'no modifications' : false),
-        task: () => JsonService.writeJsonSync('angular.json', this.angularJson)
-      }
+        task: () => JsonService.writeJsonSync('angular.json', this.angularJson),
+      },
     ]);
   }
 
@@ -155,7 +155,7 @@ export default class NgAdaptProject extends Command {
         mkdir('-p', path);
         touch(join(path, '.gitkeep'));
       },
-      skip: () => (existsSync(path) ? `${path} already exists` : false)
+      skip: () => (existsSync(path) ? `${path} already exists` : false),
     };
   }
 
@@ -171,25 +171,25 @@ export default class NgAdaptProject extends Command {
           message: 'Select the project you want to adapt',
           choices: projects.map(p => ({
             title: `${p.name} (${p.type})`,
-            value: p.name
-          }))
+            value: p.name,
+          })),
         },
         {
           type: 'confirm',
           name: 'addProxyToBackend',
-          message: 'Should we add a proxy to target the backend?'
+          message: 'Should we add a proxy to target the backend?',
         },
         {
           type: addProxyToBackend => (addProxyToBackend ? 'number' : undefined),
           name: 'backendPort',
           message: "(Proxy) What is the backend's port",
-          initial: 8080
+          initial: 8080,
         },
         {
           type: (_, answers) => (answers.addProxyToBackend ? 'text' : undefined),
           name: 'backendApiRoot',
-          message: "(Proxy) What is the backend's api root? Ideally it should be behind something like '/api'"
-        }
+          message: "(Proxy) What is the backend's api root? Ideally it should be behind something like '/api'",
+        },
       ],
       { onCancel: () => this.exit() }
     );
@@ -204,7 +204,7 @@ export default class NgAdaptProject extends Command {
     return Object.entries(angularJson.projects).map(([name, project]) => ({
       name,
       type: project.projectType,
-      isDefault: name === angularJson.defaultProject
+      isDefault: name === angularJson.defaultProject,
     }));
   }
 }

@@ -8,25 +8,25 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'elastic-explorer',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'elastic-explorer',
-    loadChildren: async () => import('./features/data-explorer/data-explorer.module').then(m => m.DataExplorerModule)
+    loadChildren: async () => import('./features/data-explorer/data-explorer.module').then(m => m.DataExplorerModule),
   },
   {
     path: '**',
     canActivate: [ProtocolGuard],
-    component: EmptyComponent
-  }
+    component: EmptyComponent,
+  },
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true
-    })
+      useHash: true,
+    }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

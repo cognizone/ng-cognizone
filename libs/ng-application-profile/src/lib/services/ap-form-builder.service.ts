@@ -87,6 +87,6 @@ export function createMicroValidatorProvider(service: Type<MicroValidatorBuilder
   return {
     multi: true,
     useClass: service,
-    provide: MicroValidatorBuilder
+    provide: MicroValidatorBuilder,
   };
 }

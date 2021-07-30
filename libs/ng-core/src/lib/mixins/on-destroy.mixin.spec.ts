@@ -24,7 +24,7 @@ describe('Mixin: OnDestroyMixin', () => {
   let fixture: ComponentFixture<TestComponent>;
   beforeEach(async(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TestComponent]
+      declarations: [TestComponent],
     }).compileComponents();
     fixture = TestBed.createComponent(TestComponent);
     await fixture.whenStable();

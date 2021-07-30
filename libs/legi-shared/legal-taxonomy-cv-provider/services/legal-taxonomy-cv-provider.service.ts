@@ -30,7 +30,7 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
     const value = this.casematesClient.search<LegalTaxonomy>(esQuery).pipe(map(extractSourcesFromElasticResponse), shareReplay(1));
     this.getCvCache.push({
       key: cacheKey,
-      value
+      value,
     });
     if (this.getCvCache.length > this.optionsService.getOptions().maxCacheSize) {
       this.getCvCache.shift();
@@ -42,26 +42,23 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
     return {
       concept,
       label: this.getLabel(concept),
-      score: 1
+      score: 1,
     };
   }
 
   getConceptByUri(conceptUri: string): Observable<LegalTaxonomy> {
-    const esQuery =
-      ({
-        size: 1,
-        query: {
-          bool: {
-            filter: {
-              term: {
-                'data.uri.keyword': conceptUri
-              }
-            }
-          }
-        }
-      } as
-        unknown) as
-      ElasticQuery;
+    const esQuery = ({
+      size: 1,
+      query: {
+        bool: {
+          filter: {
+            term: {
+              'data.uri.keyword': conceptUri,
+            },
+          },
+        },
+      },
+    } as unknown) as ElasticQuery;
 
     const cacheKey = JSON.stringify(esQuery);
     const cached = this.getConceptByUriCache.find(cache => cache.key === cacheKey);
@@ -75,7 +72,7 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
     );
     this.getConceptByUriCache.push({
       key: cacheKey,
-      value
+      value,
     });
     if (this.getConceptByUriCache.length > this.optionsService.getOptions().maxCacheSize) {
       this.getConceptByUriCache.shift();
@@ -102,14 +99,14 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
             {
               match_phrase_prefix: {
                 [`data.attributes.idSystematique.${this.optionsService.getOptions().idSystematiqueType}`]: {
-                  query
-                }
-              }
-            }
-          ]
-        }
+                  query,
+                },
+              },
+            },
+          ],
+        },
       },
-      size: 10
+      size: 10,
     };
   }
 }
@@ -117,5 +114,5 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
 export const legalTaxonomyOptionsServiceProvider: Provider = {
   multi: true,
   provide: CV_PROVIDER_TOKEN,
-  useClass: LegalTaxonomyCvProvider
+  useClass: LegalTaxonomyCvProvider,
 };

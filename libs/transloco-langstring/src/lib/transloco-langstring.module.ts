@@ -8,6 +8,6 @@ import { LangStringPipe } from './pipes/lang-string.pipe';
 @NgModule({
   declarations: [LangStringPipe],
   imports: [],
-  exports: [LangStringPipe]
+  exports: [LangStringPipe],
 })
 export class TranslocoLangStringModule {}

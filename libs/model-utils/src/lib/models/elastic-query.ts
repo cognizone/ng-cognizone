@@ -27,7 +27,8 @@ export interface ElasticQuery {
  * @ignore
  */
 export type AggregationQuery =
-  unknown | {
+  | unknown
+  | {
       terms: {
         field: string;
         size: number;
@@ -56,9 +57,9 @@ export function createElasticQuery(): ElasticQuery {
         filter: [],
         must: [],
         must_not: [],
-        should: []
-      }
+        should: [],
+      },
     },
-    aggs: {}
+    aggs: {},
   };
 }

@@ -26,13 +26,13 @@ const routes: Routes = [
         : { path: 'components', redirectTo: '/page-not-found' },
       environment.features.architecture.forms
         ? { path: 'forms', component: GeneralFormArticleComponent }
-        : { path: 'forms', redirectTo: '/page-not-found' }
-    ]
-  }
+        : { path: 'forms', redirectTo: '/page-not-found' },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ArchitectureRoutingModule {}

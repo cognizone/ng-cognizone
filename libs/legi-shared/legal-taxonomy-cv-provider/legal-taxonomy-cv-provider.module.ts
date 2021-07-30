@@ -5,6 +5,6 @@ import { LegalTaxonomyCvProviderOptionsService } from './services/legal-taxonomy
 import { legalTaxonomyOptionsServiceProvider } from './services/legal-taxonomy-cv-provider.service';
 
 @NgModule({
-  providers: [LegalTaxonomyCvProviderOptionsService, LegalTaxonomyClientService, legalTaxonomyOptionsServiceProvider]
+  providers: [LegalTaxonomyCvProviderOptionsService, LegalTaxonomyClientService, legalTaxonomyOptionsServiceProvider],
 })
 export class LegalTaxonomyCvProviderModule {}

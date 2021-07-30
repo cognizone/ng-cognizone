@@ -17,6 +17,6 @@ const directives = [IfOperationDirective, OperationDirective, OperationGroupDire
 @NgModule({
   declarations: [...directives, ...components],
   exports: [...directives, ...components],
-  imports: [CommonModule, MatButtonModule, MatDialogModule, NgxJsonViewerModule]
+  imports: [CommonModule, MatButtonModule, MatDialogModule, NgxJsonViewerModule],
 })
 export class OperationsModule {}

@@ -15,7 +15,7 @@ import { OperationGroupDirective } from './operation-group.directive';
 @Directive({
   selector: '[czOperation]',
   exportAs: 'czOperation',
-  providers: [OperationDebug]
+  providers: [OperationDebug],
 })
 export class OperationDirective extends OnDestroy$ implements OnInit, OnChanges {
   @Input('czOperation')
@@ -80,7 +80,7 @@ export class OperationDirective extends OnDestroy$ implements OnInit, OnChanges 
       el: this.elRef.nativeElement,
       operationId: this.id,
       operation$: this.operation$,
-      path$: this.parent.path$
+      path$: this.parent.path$,
     });
   }
 }

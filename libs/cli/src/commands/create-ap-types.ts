@@ -12,7 +12,7 @@ import { ApRawGenerationOptions, ApRawInterfacesGenerationService } from '../ser
 import {
   SubClassMappingGenerationOptions,
   SubClassMappingGenerationService,
-  SubClassOfMappings
+  SubClassOfMappings,
 } from '../services/ap-sub-class-mapping-generation.service';
 
 export default class CreateApTypes extends Command {
@@ -24,7 +24,7 @@ export default class CreateApTypes extends Command {
     help: oFlags.help({ char: 'h' }),
     init: oFlags.boolean({}),
     verbose: oFlags.boolean({}),
-    apName: oFlags.string({ multiple: true })
+    apName: oFlags.string({ multiple: true }),
   };
 
   static args: Parser.args.IArg[] = [];
@@ -111,7 +111,7 @@ export default class CreateApTypes extends Command {
       Object.entries(subClassOfMappings).forEach(([classId, parent]) => {
         draft.types[classId].rules.push({
           name: 'subClassOf',
-          value: parent
+          value: parent,
         });
       });
     });
@@ -129,38 +129,38 @@ const defaultConfig: ApGenerationConfigs = {
   'casemates-ch-local': {
     name: 'casemates-ch-local',
     generationOptions: {
-      targetPath: 'src/app/core/models/casemates-ch-local.ap.ts'
+      targetPath: 'src/app/core/models/casemates-ch-local.ap.ts',
     },
     apFetchOptions: {
       type: 'file',
-      path: 'node_modules/@cognizone/cz-cli/assets/ap/ch-casemates.ap.json'
-    }
+      path: 'node_modules/@cognizone/cz-cli/assets/ap/ch-casemates.ap.json',
+    },
   },
   'casemates-ch-elastic': {
     name: 'casemates-ch-elastic',
     generationOptions: {
-      targetPath: 'src/app/core/models/casemates-ch-elastic.ap.ts'
+      targetPath: 'src/app/core/models/casemates-ch-elastic.ap.ts',
     },
     apFetchOptions: {
       type: 'elastic',
       url: 'http://ch-casemates-dev-elastic.cz-aws.net:9200',
       index: 'config',
-      id: 'casemates-ap.json'
-    }
+      id: 'casemates-ap.json',
+    },
   },
   'legipro-ch-api': {
     name: 'legipro-ch-api',
     generationOptions: {
-      targetPath: 'src/app/core/models/legipro-ch-api.ap.ts'
+      targetPath: 'src/app/core/models/legipro-ch-api.ap.ts',
     },
     apFetchOptions: {
       type: 'apiGet',
       url: 'http://localhost:8080/legipro/api/application-profile/draft',
       headers: {
-        Authorization: 'Basic dGVjaG5pY2FsX2FkbWluOnRlc3Q='
-      }
-    }
-  }
+        Authorization: 'Basic dGVjaG5pY2FsX2FkbWluOnRlc3Q=',
+      },
+    },
+  },
 };
 
 interface ApGenerationConfigs {

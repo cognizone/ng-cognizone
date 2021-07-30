@@ -9,13 +9,13 @@ import {
   OnChanges,
   OnDestroy,
   OnInit,
-  SimpleChanges
+  SimpleChanges,
 } from '@angular/core';
 import { MatSpinner } from '@angular/material/progress-spinner';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 
 @Directive({
-  selector: '[czLoadingButton]'
+  selector: '[czLoadingButton]',
 })
 export class LoadingButtonDirective implements OnInit, OnChanges, OnDestroy {
   @Input('czLoadingButton')

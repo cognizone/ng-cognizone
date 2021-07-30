@@ -8,6 +8,6 @@ import { NgYasguiDocComponent } from './ng-yasgui-doc.component';
 
 @NgModule({
   declarations: [NgYasguiDocComponent],
-  imports: [CommonModule, SharedModule, NgYasguiModule, NgYasguiDocRoutingModule]
+  imports: [CommonModule, SharedModule, NgYasguiModule, NgYasguiDocRoutingModule],
 })
 export class NgYasguiDocModule {}

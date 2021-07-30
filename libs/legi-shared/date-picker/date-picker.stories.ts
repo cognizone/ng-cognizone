@@ -19,10 +19,10 @@ export default {
         TranslocoModule,
         LegiSharedModule.forRoot(),
         DatePickerModule,
-        LoggerModule.forRoot('storybook')
-      ]
-    })
-  ]
+        LoggerModule.forRoot('storybook'),
+      ],
+    }),
+  ],
 };
 
 export const DatePicker1 = () => ({
@@ -38,12 +38,12 @@ export const DatePicker1 = () => ({
   `,
   props: {
     formControl: new FormControl(null, Validators.required),
-    label: 'Pick a date'
-  }
+    label: 'Pick a date',
+  },
 });
 
 DatePicker1.story = {
-  name: 'basic'
+  name: 'basic',
 };
 
 export const DatePicker2 = () => ({
@@ -59,12 +59,12 @@ export const DatePicker2 = () => ({
   `,
   props: {
     label: 'Pick a date',
-    formControl: new FormControl(new Date())
-  }
+    formControl: new FormControl(new Date()),
+  },
 });
 
 DatePicker2.story = {
-  name: 'filled'
+  name: 'filled',
 };
 
 const days = (n: number) => n * 24 * 60 * 60 * 1000;
@@ -84,12 +84,12 @@ export const DatePicker3 = () => ({
     label: 'Pick a date',
     formControl: new FormControl(new Date()),
     min: new Date(Date.now() - days(7)),
-    max: new Date(Date.now() + days(7))
-  }
+    max: new Date(Date.now() + days(7)),
+  },
 });
 
 DatePicker3.story = {
-  name: 'with min/max'
+  name: 'with min/max',
 };
 
 export const DatePicker4 = () => ({
@@ -105,12 +105,12 @@ export const DatePicker4 = () => ({
   `,
   props: {
     label: 'Disabled date picker',
-    formControl: new FormControl({ value: new Date(), disabled: true })
-  }
+    formControl: new FormControl({ value: new Date(), disabled: true }),
+  },
 });
 
 DatePicker4.story = {
-  name: 'disabled'
+  name: 'disabled',
 };
 
 export const DatePicker5 = () => ({
@@ -126,10 +126,10 @@ export const DatePicker5 = () => ({
   `,
   props: {
     label: 'Readonly date picker (need to be disabled as well)',
-    formControl: new FormControl({ value: new Date(), disabled: true })
-  }
+    formControl: new FormControl({ value: new Date(), disabled: true }),
+  },
 });
 
 DatePicker5.story = {
-  name: 'readonly'
+  name: 'readonly',
 };

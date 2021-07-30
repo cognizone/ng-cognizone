@@ -6,7 +6,7 @@ import { map, startWith, throttleTime } from 'rxjs/operators';
 import { Anchor } from '../models/anchor';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AnchorService {
   anchors$: Observable<Anchor[]>;

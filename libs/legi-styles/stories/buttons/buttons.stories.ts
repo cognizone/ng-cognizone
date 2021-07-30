@@ -11,16 +11,16 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [ButtonsComponent],
-      imports: [CommonModule, MatButtonModule, MatIconModule]
-    })
-  ]
+      imports: [CommonModule, MatButtonModule, MatIconModule],
+    }),
+  ],
 };
 
 export const Buttons = () => ({
   component: ButtonsComponent,
-  props: {}
+  props: {},
 });
 
 Buttons.story = {
-  name: 'buttons'
+  name: 'buttons',
 };

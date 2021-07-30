@@ -7,7 +7,7 @@ import {
   OnInit,
   Optional,
   TemplateRef,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { Many, manyToArray, Nil } from '@cognizone/model-utils';
@@ -24,7 +24,7 @@ import { OperationGroupDirective } from './operation-group.directive';
 
 @Directive({
   selector: '[czIfOperation]',
-  providers: [OperationDebug]
+  providers: [OperationDebug],
 })
 export class IfOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czIfOperation')
@@ -35,7 +35,7 @@ export class IfOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czIfOperationPath')
   set path(value: Many<OperationGroupDescriptionLike> | undefined) {
     const path = value ? manyToArray(value) : [];
-    this.path$.next(path.map(part => typeof part === 'string' ? { id: part } : part));
+    this.path$.next(path.map(part => (typeof part === 'string' ? { id: part } : part)));
   }
 
   @Input('czIfOperationElse')
@@ -104,7 +104,7 @@ export class IfOperationDirective extends OnDestroy$ implements OnInit {
       el: this.ref?.rootNodes[0],
       operationId: this.id,
       operation$: this.operation$,
-      path$: this.fullPath$
+      path$: this.fullPath$,
     });
   }
 }

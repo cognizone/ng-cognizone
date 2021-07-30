@@ -7,5 +7,5 @@ export const DEVTOOLS_ENABLED_TOKEN = new InjectionToken<boolean>('DEVTOOLS_ENAB
       return storage === 'true';
     }
     return location.host.includes('localhost') || location.host.includes('-dev.cogni.zone');
-  }
+  },
 });

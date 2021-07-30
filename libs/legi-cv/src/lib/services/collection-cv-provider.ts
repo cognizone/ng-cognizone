@@ -45,6 +45,6 @@ export function provideCollectionCvProvider(config: AtomicCvProviderConfig): Pro
     provide: CV_PROVIDER_TOKEN,
     useFactory: (cvService: CvStateService, atomicCvClient: AtomicCvClient, options: LegiCvOptions, matcher: ConceptMatcherService) =>
       new CollectionCvProvider(cvService, atomicCvClient, matcher, config, options),
-    deps: [CvStateService, ATOMIC_CV_CLIENT_TOKEN, LEGI_CV_OPTIONS_TOKEN, ConceptMatcherService]
+    deps: [CvStateService, ATOMIC_CV_CLIENT_TOKEN, LEGI_CV_OPTIONS_TOKEN, ConceptMatcherService],
   };
 }

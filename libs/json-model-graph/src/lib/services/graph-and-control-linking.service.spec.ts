@@ -13,7 +13,7 @@ describe('GraphAndControlLinkingService', () => {
   const createService = createServiceFactory({
     service: GraphAndControlLinkingService,
     providers: [mockProvider(CvService)],
-    imports: [ReactiveFormsModule, NgApplicationProfileModule.forRoot(), NgxsModule.forRoot([GraphState])]
+    imports: [ReactiveFormsModule, NgApplicationProfileModule.forRoot(), NgxsModule.forRoot([GraphState])],
   });
 
   beforeEach(() => (spectator = createService()));

@@ -16,5 +16,5 @@ export const DEFAULT_LEGAL_TAXONOMY_CV_PROVIDER_OPTIONS: LegalTaxonomyCvProvider
   legalTaxonomyIndex: 'taxonomy',
   idSystematiqueType: 'https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique',
   maxCacheSize: 100,
-  apName: 'casemates'
+  apName: 'casemates',
 };

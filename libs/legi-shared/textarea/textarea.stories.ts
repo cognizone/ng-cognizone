@@ -19,10 +19,10 @@ export default {
         TranslocoModule,
         LegiSharedModule.forRoot(),
         LoggerModule.forRoot('storybook'),
-        TextareaModule
-      ]
-    })
-  ]
+        TextareaModule,
+      ],
+    }),
+  ],
 };
 
 export const Textarea1 = () => ({
@@ -38,10 +38,10 @@ export const Textarea1 = () => ({
   `,
   props: {
     formControl: new FormControl(),
-    label: 'Textarea bla bli blou'
-  }
+    label: 'Textarea bla bli blou',
+  },
 });
 
 Textarea1.story = {
-  name: 'basic'
+  name: 'basic',
 };

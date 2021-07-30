@@ -16,7 +16,7 @@ export default class AddLinting extends Command {
   static flags: oFlags.Input<{ prettify: boolean; interactive: boolean; help: void }> = {
     help: oFlags.help({ char: 'h' }),
     prettify: oFlags.boolean({ default: false, description: 'format all (compatible) files using prettier' }),
-    interactive: oFlags.boolean({ char: 'i', description: 'launch the cli in interactive mode' })
+    interactive: oFlags.boolean({ char: 'i', description: 'launch the cli in interactive mode' }),
   };
 
   static args: Parser.args.IArg[] = [];
@@ -32,7 +32,7 @@ export default class AddLinting extends Command {
           type: 'confirm',
           name: 'prettify',
           message: 'Format all (compatible) files using prettier?',
-          initial: flags.prettify
+          initial: flags.prettify,
         },
         { onCancel: () => this.exit() }
       );
@@ -41,7 +41,7 @@ export default class AddLinting extends Command {
     const tasks = new Listr([
       {
         title: 'Installing npm dependencies',
-        task: () => execa.command('npm install -D @cognizone/tslint-config @cognizone/prettier-config prettier tslint')
+        task: () => execa.command('npm install -D @cognizone/tslint-config @cognizone/prettier-config prettier tslint'),
       },
       {
         title: 'Setting up linting',
@@ -50,19 +50,19 @@ export default class AddLinting extends Command {
             { title: 'Git hooks', task: () => execa.command('npx mrm lint-staged') },
             {
               title: 'Adapting package.json',
-              task: () => this.adaptPackageJson()
+              task: () => this.adaptPackageJson(),
             },
             {
               title: 'Adapting tslint.json',
-              task: () => this.adaptTslintJson()
-            }
-          ])
+              task: () => this.adaptTslintJson(),
+            },
+          ]),
       },
       {
         title: `Formatting ${this.prettifyable}`,
         enabled: () => flags.prettify,
-        task: () => execa.command(`npx prettier --write **/*.{${this.prettifyable}}`)
-      }
+        task: () => execa.command(`npx prettier --write **/*.{${this.prettifyable}}`),
+      },
     ]);
 
     await tasks.run();
@@ -80,7 +80,7 @@ export default class AddLinting extends Command {
     const pkg = JsonService.readJsonSync<PackageJson>('package.json', { strict: true });
     pkg['lint-staged'] = {
       [`*.{${this.prettifyable.filter(ext => ext !== 'ts')}}`]: ['prettier --write'],
-      '*.ts': ['prettier --write', 'tslint -c tslint.json --project tsconfig.json --fix']
+      '*.ts': ['prettier --write', 'tslint -c tslint.json --project tsconfig.json --fix'],
     };
 
     pkg.prettier = '@cognizone/prettier-config';
@@ -90,7 +90,7 @@ export default class AddLinting extends Command {
   private adaptTslintJson(): void {
     JsonService.writeJsonSync('tslint.json', {
       extends: '@cognizone/tslint-config',
-      rulesDirectory: ['codelyzer']
+      rulesDirectory: ['codelyzer'],
     });
   }
 }

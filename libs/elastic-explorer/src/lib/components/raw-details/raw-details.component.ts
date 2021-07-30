@@ -4,7 +4,7 @@ import {
   DETAIL_VIEW_CONTEXT_TOKEN,
   DETAIL_VIEW_PROVIDER_TOKEN,
   DetailViewContext,
-  DetailViewProvider
+  DetailViewProvider,
 } from '../../services/detail-view-provider.service';
 import { DetailViewService } from '../../services/detail-view.service';
 
@@ -12,7 +12,7 @@ import { DetailViewService } from '../../services/detail-view.service';
   selector: 'cz-raw-details',
   templateUrl: './raw-details.component.html',
   styleUrls: ['./raw-details.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RawDetailsComponent {
   textFilter$ = this.detailViewService.textFilter$;
@@ -26,6 +26,6 @@ export const rawDetailsViewProvider: Provider = {
   useValue: {
     component: RawDetailsComponent,
     label: 'Raw',
-    shouldShow: () => true
-  } as DetailViewProvider
+    shouldShow: () => true,
+  } as DetailViewProvider,
 };

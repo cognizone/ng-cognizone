@@ -19,11 +19,11 @@ import { SharedModule } from './shared';
       useValue: translocoConfig({
         availableLangs: ['en-BE'],
         defaultLang: 'en-BE',
-        prodMode: true
-      })
+        prodMode: true,
+      }),
     },
-    { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader }
+    { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

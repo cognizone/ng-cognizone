@@ -6,10 +6,9 @@ import { snakeCase } from 'lodash-es';
 import { NodeUriDirective } from './node-uri.directive';
 
 @Directive({
-  selector: '[czNodeAttribute]'
+  selector: '[czNodeAttribute]',
 })
 export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
- 
   @Input('czNodeAttributeAttributeKey')
   attributeKey!: string;
 

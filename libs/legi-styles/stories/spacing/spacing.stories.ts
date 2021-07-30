@@ -3,14 +3,14 @@ import { SpacingComponent } from './spacing.component';
 // tslint:disable
 export default {
   title: 'legi-styles/Spacing',
-  component: SpacingComponent
+  component: SpacingComponent,
 };
 
 export const Spacing = () => ({
   component: SpacingComponent,
-  props: {}
+  props: {},
 });
 
 Spacing.story = {
-  name: 'spacing'
+  name: 'spacing',
 };

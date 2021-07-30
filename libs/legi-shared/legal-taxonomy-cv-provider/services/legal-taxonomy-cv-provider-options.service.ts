@@ -3,7 +3,7 @@ import { Inject, Injectable } from '@angular/core';
 import {
   DEFAULT_LEGAL_TAXONOMY_CV_PROVIDER_OPTIONS,
   LEGAL_TAXONOMY_CV_PROVIDER_OPTIONS_TOKEN,
-  LegalTaxonomyCvProviderOptions
+  LegalTaxonomyCvProviderOptions,
 } from '../models/legal-taxonomy-cv-provider-options';
 
 @Injectable()

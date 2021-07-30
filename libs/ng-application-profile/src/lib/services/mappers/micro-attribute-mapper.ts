@@ -19,6 +19,6 @@ export function provideMicroAttributeMapper(service: Type<MicroAttributeMapper<u
   return {
     multi: true,
     useClass: service,
-    provide: MICRO_ATTRIBUTE_MAPPER_TOKEN
+    provide: MICRO_ATTRIBUTE_MAPPER_TOKEN,
   };
 }

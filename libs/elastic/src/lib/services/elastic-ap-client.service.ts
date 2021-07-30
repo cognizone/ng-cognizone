@@ -21,9 +21,9 @@ export class ElasticApClient {
       query$ = this.http.post<Response>(url, {
         query: {
           terms: {
-            _id: [id]
-          }
-        }
+            _id: [id],
+          },
+        },
       });
     }
 

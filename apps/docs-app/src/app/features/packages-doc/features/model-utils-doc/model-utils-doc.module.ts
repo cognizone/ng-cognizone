@@ -5,6 +5,6 @@ import { ModelUtilsDocRoutingModule } from './model-utils-doc-routing.module';
 
 @NgModule({
   declarations: [],
-  imports: [SharedModule, ModelUtilsDocRoutingModule]
+  imports: [SharedModule, ModelUtilsDocRoutingModule],
 })
 export class ModelUtilsDocModule {}

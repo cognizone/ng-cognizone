@@ -3,7 +3,7 @@ import { CzLabel } from '@cognizone/model-utils';
 import { I18nService } from '../services/i18n.service';
 
 @Pipe({
-  name: 'czTranslate'
+  name: 'czTranslate',
 })
 export class TranslatePipe implements PipeTransform {
   constructor(private i18nService: I18nService) {}

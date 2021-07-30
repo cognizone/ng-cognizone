@@ -7,7 +7,7 @@ import { GraphService } from '../services/graph.service';
 import { RootUriDirective } from './root-uri.directive';
 
 @Directive({
-  selector: '[czNodeUri]'
+  selector: '[czNodeUri]',
 })
 export class NodeUriDirective extends OnDestroy$ {
   @Input('czNodeUri')

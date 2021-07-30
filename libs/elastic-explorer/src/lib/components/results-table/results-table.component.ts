@@ -10,7 +10,7 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
 @Component({
   selector: 'cz-results-table',
   templateUrl: './results-table.component.html',
-  styleUrls: ['./results-table.component.scss']
+  styleUrls: ['./results-table.component.scss'],
 })
 export class ResultsTableComponent extends OnDestroy$ {
   columns: string[] = ['index', '@uri', '@type', '@label', 'actions'];

@@ -27,8 +27,8 @@ import { StylingComponent } from './views/styling/styling.component';
     OnPushCdRefComponent,
     OnPushAsyncPipeComponent,
     GeneralFormArticleComponent,
-    ArchitectureComponent
+    ArchitectureComponent,
   ],
-  imports: [CommonModule, ArchitectureRoutingModule, SharedModule]
+  imports: [CommonModule, ArchitectureRoutingModule, SharedModule],
 })
 export class ArchitectureModule {}

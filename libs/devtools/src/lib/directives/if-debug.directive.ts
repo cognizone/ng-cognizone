@@ -3,7 +3,7 @@ import { Directive, Inject, OnInit, TemplateRef, ViewContainerRef } from '@angul
 import { DEVTOOLS_ENABLED_TOKEN } from '../models/devtools-enabled.token';
 
 @Directive({
-  selector: '[czIfDebug]'
+  selector: '[czIfDebug]',
 })
 export class IfDebugDirective implements OnInit {
   constructor(

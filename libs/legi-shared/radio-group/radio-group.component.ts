@@ -7,7 +7,7 @@ import {
   Input,
   OnInit,
   Optional,
-  TemplateRef
+  TemplateRef,
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
@@ -20,7 +20,7 @@ import {
   SelectOption,
   SelectOptionCounts,
   SelectOptionsProvider,
-  trackBySelectOption
+  trackBySelectOption,
 } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { Observable, of } from 'rxjs';
@@ -32,9 +32,9 @@ import { map, startWith, switchMap } from 'rxjs/operators';
   styleUrls: ['./radio-group.component.scss'],
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => RadioGroupComponent), multi: true },
-    provideHasOptionsProvider(forwardRef(() => RadioGroupComponent))
+    provideHasOptionsProvider(forwardRef(() => RadioGroupComponent)),
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOptionsProvider<T>, OnInit {
   @Input()
@@ -114,7 +114,7 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
         switchMap(q =>
           this.optionsProvider.getOptions(q, {
             counts: this.counts ?? undefined,
-            lang: this.i18nService.getActiveSimpleLang()
+            lang: this.i18nService.getActiveSimpleLang(),
           })
         ),
         map(getAllSelectOptions),

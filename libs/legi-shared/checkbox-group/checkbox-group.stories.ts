@@ -20,25 +20,25 @@ export default {
         TranslocoModule,
         LegiSharedModule.forRoot(),
         LoggerModule.forRoot('storybook'),
-        CheckboxGroupModule
-      ]
-    })
-  ]
+        CheckboxGroupModule,
+      ],
+    }),
+  ],
 };
 
 const options: SelectOption[] = [
   {
     value: '1',
     label: {
-      en: ['Hello you']
-    }
+      en: ['Hello you'],
+    },
   },
   {
     value: '2',
     label: {
-      en: ['How you doing?']
-    }
-  }
+      en: ['How you doing?'],
+    },
+  },
 ];
 
 export const CheckboxGroup1 = () => ({
@@ -59,12 +59,12 @@ export const CheckboxGroup1 = () => ({
   props: {
     formControl: new FormControl(),
     label: 'Pick a value',
-    options
-  }
+    options,
+  },
 });
 
 CheckboxGroup1.story = {
-  name: 'direction column (default)'
+  name: 'direction column (default)',
 };
 
 export const CheckboxGroup2 = () => ({
@@ -86,10 +86,10 @@ export const CheckboxGroup2 = () => ({
   props: {
     formControl: new FormControl(),
     label: 'Pick a value',
-    options
-  }
+    options,
+  },
 });
 
 CheckboxGroup2.story = {
-  name: 'direction row'
+  name: 'direction row',
 };

@@ -4,6 +4,6 @@ import { IfDebugDirective } from './directives/if-debug.directive';
 
 @NgModule({
   declarations: [IfDebugDirective],
-  exports: [IfDebugDirective]
+  exports: [IfDebugDirective],
 })
 export class DevtoolsModule {}

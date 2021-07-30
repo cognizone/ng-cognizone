@@ -9,7 +9,7 @@ import {
   OnInit,
   Optional,
   Output,
-  SkipSelf
+  SkipSelf,
 } from '@angular/core';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { OnDestroy$ } from '@cognizone/ng-core';
@@ -21,7 +21,7 @@ import { OperationGroupDebug } from '../services/operation-group-debug.service';
 
 @Directive({
   selector: '[czOperationGroup]',
-  providers: [OperationGroupDebug]
+  providers: [OperationGroupDebug],
 })
 export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnChanges, OnDestroy {
   @Input('czOperationGroup')
@@ -55,7 +55,7 @@ export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnCha
         el: this.elRef.nativeElement,
         groupId: this.groupId,
         path$: this.path$,
-        uri: this.uri
+        uri: this.uri,
       });
     }
   }
@@ -79,7 +79,7 @@ export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnCha
   private getDescription(): OperationGroupDescription {
     return {
       id: this.groupId,
-      uri: this.uri
+      uri: this.uri,
     };
   }
 }

@@ -13,7 +13,7 @@ import {
   Output,
   SimpleChanges,
   TrackByFunction,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
@@ -32,9 +32,9 @@ import { debounceTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs
   styleUrls: ['./autocomplete-single.component.scss'],
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => AutocompleteSingleComponent), multi: true },
-    provideHasOptionsProvider(forwardRef(() => AutocompleteSingleComponent))
+    provideHasOptionsProvider(forwardRef(() => AutocompleteSingleComponent)),
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AutocompleteSingleComponent<T> extends ControlComponent<T> implements HasOptionsProvider<T>, OnChanges, OnInit {
   @Input()
@@ -191,7 +191,7 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
         filter(query => typeof query === 'string'),
         switchMap(query =>
           this._optionsProvider.getOptions(query, {
-            lang: this.i18n.getActiveSimpleLang()
+            lang: this.i18n.getActiveSimpleLang(),
           })
         ),
         map(getAllSelectOptions)

@@ -48,7 +48,7 @@ import { ApDetailsComponent, apDetailsViewProvider } from './components/ap-detai
 import { JsonModelDetailsComponent, jsonModelDetailsViewProvider } from './components/json-model-details/json-model-details.component';
 import {
   JsonModelFlatGraphDetailsComponent,
-  jsonModelFlatGraphDetailsViewProvider
+  jsonModelFlatGraphDetailsViewProvider,
 } from './components/json-model-flat-graph-details/json-model-flat-graph-details.component';
 import { ResultsTableComponent } from './components/results-table/results-table.component';
 
@@ -72,7 +72,7 @@ import { ResultsTableComponent } from './components/results-table/results-table.
     ApDetailsComponent,
     JsonModelDetailsComponent,
     JsonModelFlatGraphDetailsComponent,
-    ResultsTableComponent
+    ResultsTableComponent,
   ],
   imports: [
     ElasticExplorerRoutingModule,
@@ -110,7 +110,7 @@ import { ResultsTableComponent } from './components/results-table/results-table.
     // TODO add back when migrating to angular 12
     // MonacoEditorModule.forRoot(),
     MonacoEditorModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     ElasticExplorerService,
@@ -118,7 +118,7 @@ import { ResultsTableComponent } from './components/results-table/results-table.
     rawDetailsViewProvider,
     jsonModelFlatGraphDetailsViewProvider,
     jsonModelDetailsViewProvider,
-    LoadingService
-  ]
+    LoadingService,
+  ],
 })
 export class ElasticExplorerModule {}

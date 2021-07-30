@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-cd-default',
   templateUrl: './cd-default.component.html',
-  styleUrls: ['./cd-default.component.scss']
+  styleUrls: ['./cd-default.component.scss'],
 })
 export class CdDefaultComponent {
   @Input()

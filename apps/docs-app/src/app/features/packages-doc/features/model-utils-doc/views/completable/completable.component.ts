@@ -6,7 +6,7 @@ import { CoreStateFacade } from '@app/core';
 @Component({
   selector: 'app-completable',
   templateUrl: './completable.component.html',
-  styleUrls: ['./completable.component.scss']
+  styleUrls: ['./completable.component.scss'],
 })
 export class CompletableComponent implements OnInit, OnDestroy {
   @ViewChild('docFrame')

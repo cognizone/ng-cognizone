@@ -12,13 +12,13 @@ export class CognizoneMaterialIconsModule {
       providers: [
         {
           provide: MatIconRegistry,
-          useClass: CognizoneMatIconRegistry
+          useClass: CognizoneMatIconRegistry,
         },
         {
           provide: COGNIZONE_MATERIAL_ICONS_OPTIONS_TOKEN,
-          useValue: options
-        }
-      ]
+          useValue: options,
+        },
+      ],
     };
   }
 }

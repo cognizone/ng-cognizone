@@ -13,9 +13,9 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
     RouterModule.forChild([
       {
         path: '',
-        component: ElasticExplorerView
-      }
-    ])
-  ]
+        component: ElasticExplorerView,
+      },
+    ]),
+  ],
 })
 export class DataExplorerModule {}

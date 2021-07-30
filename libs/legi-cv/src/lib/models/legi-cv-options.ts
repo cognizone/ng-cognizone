@@ -15,9 +15,9 @@ export const DEFAULT_LEGI_CV_OPTIONS: LegiCvOptions = {
   elasticAtomicCvClientOptions: {
     index: 'data',
     baseUrl: 'UNKNOWN',
-    apName: 'casemates'
+    apName: 'casemates',
   },
-  defaultConceptFilterableKeys: ['prefLabel', 'altLabel']
+  defaultConceptFilterableKeys: ['prefLabel', 'altLabel'],
 };
 
 export const LEGI_CV_OPTIONS_TOKEN = new InjectionToken<LegiCvOptions>('LegiCvOptions');
