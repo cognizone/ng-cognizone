@@ -35,12 +35,10 @@
       "@cognizone/material-icons": ["libs/material-icons/src/index.ts"],
       "@cognizone/legi-shared": ["libs/legi-shared/src/index.ts"],
       "@cognizone/legi-shared/*": ["libs/legi-shared/*"],
-      "@cognizone/legi-styles": ["libs/legi-styles/src/index.ts"],
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
       "@cognizone/elastic-explorer": ["libs/elastic-explorer/src/index.ts"],
       "@cognizone/i18n": ["libs/i18n/src/index.ts"],
-      "@cognizone/i18n-transloco": ["libs/i18n-transloco/src/index.ts"],
-      "@cognizone/eslint-config": ["libs/eslint-config/src/index.ts"]
+      "@cognizone/i18n-transloco": ["libs/i18n-transloco/src/index.ts"]
     }
   },
   "angularCompilerOptions": {},

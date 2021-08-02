@@ -38,6 +38,7 @@
     "cli": { "tags": [] },
     "i18n": { "tags": [] },
     "i18n-transloco": { "tags": [] },
-    "eslint-config": { "tags": [] }
+    "eslint-config": { "tags": [] },
+    "prettier-config": { "tags": [] }
   }
 }

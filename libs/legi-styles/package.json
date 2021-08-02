@@ -25,5 +25,9 @@
   "private": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "/fonts",
+    "/styles"
+  ]
 }

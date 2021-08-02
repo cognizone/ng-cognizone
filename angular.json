@@ -665,29 +665,10 @@
       "prefix": "cz",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:package",
+          "builder": "./tools/executors/build-assets:build-assets",
           "options": {
-            "tsConfig": "libs/legi-styles/tsconfig.lib.json",
-            "project": "libs/legi-styles/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/legi-styles/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/legi-styles/src/**/*.ts", "libs/legi-styles/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/legi-styles"],
-          "options": {
-            "jestConfig": "libs/legi-styles/jest.config.js",
-            "passWithNoTests": true
+            "root": "libs/legi-styles",
+            "dist": "dist/libs/legi-styles"
           }
         }
       }
@@ -971,15 +952,25 @@
       "prefix": "cz",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:package",
+          "builder": "./tools/executors/build-assets:build-assets",
           "options": {
-            "tsConfig": "libs/eslint-config/tsconfig.lib.json",
-            "project": "libs/eslint-config/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/eslint-config/tsconfig.lib.prod.json"
-            }
+            "root": "libs/eslint-config",
+            "dist": "dist/libs/eslint-config"
+          }
+        }
+      }
+    },
+    "prettier-config": {
+      "projectType": "library",
+      "root": "libs/prettier-config",
+      "sourceRoot": "libs/prettier-config/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "./tools/executors/build-assets:build-assets",
+          "options": {
+            "root": "libs/prettier-config",
+            "dist": "dist/libs/prettier-config"
           }
         }
       }

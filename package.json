@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main && npm run build-tools",
     "nx": "nx",
     "start": "ng serve",
     "start:eece": "ng serve elastic-explorer-chrome-extension",
@@ -41,7 +41,8 @@
     "help": "nx help",
     "cz": "cz",
     "prepare": "husky install",
-    "build-compodoc": "cd ./libs/model-utils && compodoc -c .compodocrc.json ./"
+    "build-compodoc": "cd ./libs/model-utils && compodoc -c .compodocrc.json ./",
+    "build-tools": "tsc tools/executors/build-assets/impl.ts"
   },
   "private": true,
   "dependencies": {
@@ -101,6 +102,7 @@
     "@semantic-release/git": "^9.0.0",
     "@types/jest": "26.0.8",
     "@types/node": "14.14.33",
+    "@types/shelljs": "^0.8.9",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/eslint-plugin-tslint": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
@@ -122,6 +124,7 @@
     "prettier": "2.2.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.4.4",
+    "shelljs": "^0.8.4",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
     "typescript": "~4.0.3"
@@ -135,5 +138,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "prettier": "./libs/prettier-config/index.json"
 }
