@@ -1,3 +1,11 @@
+## [2.1.1](https://github.com/cognizone/ng-cognizone/compare/v2.1.0...v2.1.1) (2021-08-02)
+
+
+### Bug Fixes
+
+* added @cognizone/eslint-config ([47cb636](https://github.com/cognizone/ng-cognizone/commit/47cb6364a78221af9a6050a753f776a3be2d4af2))
+* added @cognizone/prettier ([cb3ad28](https://github.com/cognizone/ng-cognizone/commit/cb3ad285695ec30b8931eedb453bc77f6a7646db))
+
 # [2.1.0](https://github.com/cognizone/ng-cognizone/compare/v2.0.3...v2.1.0) (2021-07-28)
 
 
