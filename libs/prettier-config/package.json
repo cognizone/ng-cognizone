@@ -2,8 +2,7 @@
   "name": "@cognizone/prettier-config",
   "version": "2.1.2",
   "peerDependencies": {
-    "@angular/common": "^11.2.14",
-    "@angular/core": "^11.2.14"
+    "prettier": "^2.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
