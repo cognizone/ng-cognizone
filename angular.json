@@ -974,6 +974,21 @@
           }
         }
       }
+    },
+    "tslint-config": {
+      "projectType": "library",
+      "root": "libs/tslint-config",
+      "sourceRoot": "libs/tslint-config/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "./tools/executors/build-assets:build-assets",
+          "options": {
+            "root": "libs/tslint-config",
+            "dist": "dist/libs/tslint-config"
+          }
+        }
+      }
     }
   }
 }

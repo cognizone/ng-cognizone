@@ -39,6 +39,7 @@
     "i18n": { "tags": [] },
     "i18n-transloco": { "tags": [] },
     "eslint-config": { "tags": [] },
-    "prettier-config": { "tags": [] }
+    "prettier-config": { "tags": [] },
+    "tslint-config": { "tags": [] }
   }
 }

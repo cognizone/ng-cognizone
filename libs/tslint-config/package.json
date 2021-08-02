@@ -1,0 +1,31 @@
+{
+  "name": "@cognizone/tslint-config",
+  "version": "1.31.0",
+  "dependencies": {
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "peerDependencies": {
+    "tslint": "^5.15.0"
+  },
+  "optionalDependencies": {
+    "codelyzer": "^5.0.0"
+  },
+  "main": "./index.json",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git",
+    "directory": "libs/tslint-config"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

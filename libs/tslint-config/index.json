@@ -1,0 +1,194 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    // ----- TSLINT -----
+    "adjacent-overload-signatures": true,
+    "ban-types": [true, ["AnyObject", "This is equivalent to 'any', you might want to be more specific"]],
+    "member-access": false,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "protected-static-field",
+          "private-static-field",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ],
+    "no-any": true,
+    "no-empty-interface": false,
+    "no-import-side-effect": [
+      true,
+      {
+        "ignore-module": "rxjs|reflect-metadata|jquery-ui|@core-lib/locales|zone.js|(\\.html|\\.css|\\.scss)$"
+      }
+    ],
+    "no-inferrable-types": false,
+    "no-internal-module": true,
+    "no-magic-numbers": false,
+    "no-namespace": true,
+    "no-non-null-assertion": true,
+    "no-reference": true,
+    "no-unnecessary-type-assertion": false, // because buggy, some times we have false positive
+    "no-var-requires": true,
+    "only-arrow-functions": [true, "allow-named-functions"],
+    "prefer-for-of": true,
+    "promise-function-async": true,
+    "typedef": [true, "call-signature", "parameter", "property-declaration", "member-variable-declaration"],
+    // "typedef-whitespace": true, // prettier
+    "unified-signatures": true,
+
+    // ----- FUNCTIONALITY -----
+    "await-promise": true,
+    "ban": [true, "fdescribe", "fit"],
+    "ban-comma-operator": true,
+    "curly": [true, "ignore-same-line"],
+    "forin": false,
+    "import-blacklist": [true, "lodash"],
+    "label-position": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-console": true, // should be using logger service
+    "no-construct": true,
+    "no-debugger": true,
+    "no-duplicate-super": true,
+    "no-duplicate-switch-case": true,
+    "no-duplicate-variable": true,
+    "no-dynamic-delete": false,
+    "no-empty": true,
+    "no-eval": true,
+    "no-floating-promises": false,
+    "no-for-in-array": true,
+    "no-implicit-dependencies": false,
+    "no-inferred-empty-object-type": false,
+    "no-invalid-template-strings": true,
+    "no-invalid-this": true,
+    "no-misused-new": true,
+    "no-null-keyword": false,
+    "no-object-literal-type-assertion": false,
+    "no-return-await": true,
+    "no-shadowed-variable": true,
+    "no-sparse-arrays": true,
+    "no-string-literal": true,
+    "no-string-throw": true,
+    "no-submodule-imports": false,
+    "no-switch-case-fall-through": true,
+    "no-this-assignment": [true, "allow-destructuring"],
+    "no-unbound-method": [true, "ignore-static"],
+    "no-unsafe-any": false,
+    "no-unsafe-finally": false,
+    "no-unused-expression": true,
+    "no-unused-variable": false, // TODO put back to true when upgrading typescipt ? For now, with autofix, some used imports are removed
+    "no-use-before-declare": false,
+    "no-var-keyword": true,
+    "no-void-expression": [true, "ignore-arrow-function-shorthand"],
+    "prefer-conditional-expression": false,
+    "prefer-object-spread": true,
+    "radix": false,
+    "restrict-plus-operands": false,
+    "strict-boolean-expressions": false,
+    "strict-type-predicates": false,
+    "switch-default": true,
+    "triple-equals": [true, "allow-null-check", "allow-undefined-check"],
+    "typeof-compare": true,
+    "use-default-type-parameter": true,
+    "use-isnan": true,
+    // ----- MAINTAINABILITY -----
+    "cyclomatic-complexity": [true, 25],
+    // "deprecation": true, TODO re-enable after rxjs update
+    // "eofline": true, // prettier
+    // "indent": [true, "spaces", 4], // prettier
+    "linebreak-style": false, // prettier
+    "max-classes-per-file": [true, 20],
+    "max-file-line-count": [true, 1000],
+    "max-line-length": false, // prettier
+    "no-default-export": true,
+    "no-duplicate-imports": true,
+    "no-mergeable-namespace": true,
+    "no-require-imports": true,
+    "object-literal-sort-keys": false,
+    "prefer-const": true,
+    "prefer-readonly": false,
+    // "trailing-comma": true, // prettier
+    // ----- STYLE -----
+    // "align": true, // prettier
+    "array-type": [true, "array"],
+    // "arrow-parens": [true, "ban-single-arg-parens"], // prettier
+    "arrow-return-shorthand": true,
+    "binary-expression-operand-order": false,
+    "callable-types": true,
+    "class-name": true,
+    "comment-format": [true, "check-space"],
+    "completed-docs": false,
+    "encoding": true,
+    "file-header": false,
+    // "import-spacing": true, // prettier
+    "interface-name": false,
+    "interface-over-type-literal": false,
+    "jsdoc-format": true,
+    "match-default-export-name": true,
+    "newline-before-return": false,
+    "new-parens": false,
+    "newline-per-chained-call": false,
+    "no-angle-bracket-type-assertion": true,
+    "no-boolean-literal-compare": false,
+    // "no-consecutive-blank-lines": true, // prettier
+    // "no-irregular-whitespace": true, // prettier
+    "no-parameter-properties": false,
+    "no-redundant-jsdoc": true,
+    "no-reference-import": true,
+    // "no-trailing-whitespace": true, // prettier
+    "no-unnecessary-callback-wrapper": true,
+    "no-unnecessary-initializer": true,
+    "no-unnecessary-qualifier": true,
+    // "number-literal-format": true, // prettier
+    "object-literal-key-quotes": false,
+    "object-literal-shorthand": false,
+    // "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"], // prettier
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true
+      }
+    ],
+    "prefer-function-over-method": false,
+    "prefer-method-signature": false,
+    "prefer-switch": true,
+    "prefer-template": true,
+    "prefer-while": false,
+    // "quotemark": [true, "single", "avoid-escape"], // prettier
+    "return-undefined": true,
+    // "semicolon": [true, "always"], // prettier
+    // "space-before-function-paren": true, // prettier
+    // "space-within-parens": false, // prettier
+    "switch-final-break": true,
+    "type-literal-delimiter": false,
+    "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords", "allow-snake-case"],
+    // "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"], // prettier
+
+    // Codelyzer
+    "no-conflicting-lifecycle": true,
+    "no-host-metadata-property": true,
+    "no-input-rename": true,
+    "no-inputs-metadata-property": true,
+    "no-output-native": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-outputs-metadata-property": true,
+    "template-banana-in-box": true,
+    "template-no-negated-async": true,
+    "use-lifecycle-interface": true,
+    "use-pipe-transform-interface": true
+  }
+}
