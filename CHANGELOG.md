@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/cognizone/ng-cognizone/compare/v2.1.2...v2.1.3) (2021-08-02)
+
+
+### Bug Fixes
+
+* adapted peer deps ([04444ba](https://github.com/cognizone/ng-cognizone/commit/04444ba40d45efa5a79352ee3a7febf1b7e7d40f))
+
 ## [2.1.2](https://github.com/cognizone/ng-cognizone/compare/v2.1.1...v2.1.2) (2021-08-02)
 
 
