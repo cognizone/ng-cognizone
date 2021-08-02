@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/cognizone/ng-cognizone/compare/v2.1.1...v2.1.2) (2021-08-02)
+
+
+### Bug Fixes
+
+* added @cognizone/tslint-config ([7e9148e](https://github.com/cognizone/ng-cognizone/commit/7e9148ebfa0d85cfa6d7dadd80d4ecb40b1e5a37))
+
 ## [2.1.1](https://github.com/cognizone/ng-cognizone/compare/v2.1.0...v2.1.1) (2021-08-02)
 
 
