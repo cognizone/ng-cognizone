@@ -3,13 +3,12 @@ import { AbstractControl, FormArrayName, FormControlDirective, FormControlName, 
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { Many } from '@cognizone/model-utils';
 import { ApHelper, isJsonModel, JsonModel } from '@cognizone/ng-application-profile';
-import { OnDestroy$ } from '@cognizone/ng-core';
+import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
 import { GraphAndControlLinkingService } from '../services/graph-and-control-linking.service';
 import { GraphService } from '../services/graph.service';
 import { NodeUriDirective } from './node-uri.directive';
 import { RootUriDirective } from './root-uri.directive';
-
 @Directive({
   selector: '[czNodeAttributeLinked]',
   exportAs: 'czNodeAttributeLinked',
@@ -42,6 +41,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     private readonly rootUriDirective: RootUriDirective,
     private readonly nodeUriDirective: NodeUriDirective,
     @Inject(DEVTOOLS_ENABLED_TOKEN) private readonly devtoolsEnabled: boolean,
+    private logger: Logger,
     @Optional() private elRef?: ElementRef<Comment | HTMLElement | undefined>,
     @Host() @Optional() private formArrayName?: FormArrayName,
     @Host() @Optional() private formGroupName?: FormGroupName,
@@ -50,16 +50,19 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     @Host() @Optional() private formControlDirective?: FormControlDirective
   ) {
     super();
+    this.logger = logger.extend('NodeAttributeLinkedDirective');
   }
 
   ngOnChanges(): void {
+    /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
     this.attributeKey = (
-      this.attributeKey ??
-      this.formControlName?.name ??
-      this.formGroupName?.name ??
-      this.formArrayName?.name ??
+      this.attributeKey ||
+      this.formControlName?.name ||
+      this.formGroupName?.name ||
+      this.formArrayName?.name ||
       ''
     ).toString();
+    /* eslint-enable @typescript-eslint/prefer-nullish-coalescing */
 
     this.control =
       this.control ??
@@ -70,7 +73,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
       this.formGroupDirective?.control;
 
     if (!this.control) {
-      throw new Error('Could not find control ti link graph state to');
+      throw new Error('Could not find control to link graph state to');
     }
 
     this.subSink = this.graphControlService
@@ -91,7 +94,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
         const fullPath = this.getFullAttributePath();
         el.setAttribute('title', `${fullPath.join('>')}`);
       } catch (err: unknown) {
-        // since it's for debugging purposes, wrap it in try/catch just in case, we don't care about the error though
+        this.logger.error('Failed to find data path', err);
       }
     }
   }
