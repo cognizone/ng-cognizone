@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/cognizone/ng-cognizone/compare/v2.1.3...v2.1.4) (2021-08-03)
+
+
+### Bug Fixes
+
+* correct name computation in czNodeAttributeLinked directive ([1a2de0d](https://github.com/cognizone/ng-cognizone/commit/1a2de0d4dfb24b5b83f13bdc5a2947bfcf5f4da8))
+
 ## [2.1.3](https://github.com/cognizone/ng-cognizone/compare/v2.1.2...v2.1.3) (2021-08-02)
 
 
