@@ -41,8 +41,8 @@ export class ResourceMapper {
       const { value, dataType } = model.attributes[attributeKey];
 
       const rawValue = dataType ? this.serializeAttribute(dataType, value) : undefined;
-      // we keep null values but no undefined, since undefined properties will disappear on JSON serialization
-      if (rawValue !== undefined) {
+
+      if (rawValue != null) {
         attributes[attributeKey] = { [dataType]: rawValue };
       }
     }, {});

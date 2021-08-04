@@ -21,6 +21,6 @@ export class ArrayMapper implements MicroAttributeMapper<unknown[], unknown[]> {
   }
 
   serialize(dataType: string, value: unknown[], macroMapper: AttributeMapper): unknown[] {
-    return value.map(v => macroMapper.serialize(dataType, v));
+    return value.filter(v => v != null).map(v => macroMapper.serialize(dataType, v));
   }
 }

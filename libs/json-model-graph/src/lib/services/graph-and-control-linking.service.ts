@@ -46,7 +46,7 @@ export class GraphAndControlLinkingService {
         if (isEqual(node[attributeKey], value)) return;
         allUpdatedNodes.push(
           produce(node, (draft: T) => {
-            draft[attributeKey] = value;
+            draft[attributeKey] = value ?? undefined;
           })
         );
         if (cvName || classId) {
