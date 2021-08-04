@@ -1,3 +1,10 @@
+## [2.1.5](https://github.com/cognizone/ng-cognizone/compare/v2.1.4...v2.1.5) (2021-08-04)
+
+
+### Bug Fixes
+
+* discard null values whenever possible in favor of undefined ([c8be24b](https://github.com/cognizone/ng-cognizone/commit/c8be24b80792632137f84ff4e86c1079f28f2b9d))
+
 ## [2.1.4](https://github.com/cognizone/ng-cognizone/compare/v2.1.3...v2.1.4) (2021-08-03)
 
 
