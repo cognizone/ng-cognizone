@@ -1,3 +1,10 @@
+## [2.1.6](https://github.com/cognizone/ng-cognizone/compare/v2.1.5...v2.1.6) (2021-08-05)
+
+
+### Bug Fixes
+
+* accept "/" as last delimiting charater for rdf types uris ([c0d5154](https://github.com/cognizone/ng-cognizone/commit/c0d51548d1a75f695ffa1de540ade0b790af695b))
+
 ## [2.1.5](https://github.com/cognizone/ng-cognizone/compare/v2.1.4...v2.1.5) (2021-08-04)
 
 
