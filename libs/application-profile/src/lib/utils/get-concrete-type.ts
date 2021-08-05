@@ -29,7 +29,7 @@ export function getConcreteTypeFromRdfTypesRule(ap: ApplicationProfile, classIds
       console.warn(`Failed to find rule of type 'rdfTypes' for classId '${classId}', skipping`);
       return false;
     }
-    const types = rdfTypesRule.value.map(fullLengthType => fullLengthType.split('#').pop());
+    const types = rdfTypesRule.value.map(fullLengthType => fullLengthType.split(/[#/]/).pop());
     // because sometimes we have jolux:Collection in node types
     return classIds.map(type => type.split(':').pop() as string).every(type => types.includes(type));
   }) as string;
