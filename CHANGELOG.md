@@ -1,3 +1,10 @@
+## [2.1.8](https://github.com/cognizone/ng-cognizone/compare/v2.1.7...v2.1.8) (2021-08-09)
+
+
+### Bug Fixes
+
+* stricter check for reference linking ([983122e](https://github.com/cognizone/ng-cognizone/commit/983122ebed3fa83a66c2285d2b455eda9c5e3f4a))
+
 ## [2.1.7](https://github.com/cognizone/ng-cognizone/compare/v2.1.6...v2.1.7) (2021-08-09)
 
 
