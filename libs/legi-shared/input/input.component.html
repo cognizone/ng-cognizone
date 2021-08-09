@@ -1,27 +1,25 @@
-<div class="d-flex flex-column">
-  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
-  <mat-form-field #outlineFieldRef appearance="outline" [ngClass]="{ 'is-readonly': readonly, 'cz-classic-appearance': classicMode }">
-    <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
-    <input
-      matInput
-      [autocomplete]="inputAutocomplete"
-      [type]="type"
-      [formControl]="embeddedControl"
-      [placeholder]="placeholder"
-      [name]="name"
-      (focus)="outlineFieldRef.updateOutlineGap()"
-      [attr.aria-label]="ariaLabel"
-      (blur)="onBlur()"
-    />
-    <span *ngIf="suffixTpl" matSuffix>
-      <ng-container *ngTemplateOutlet="suffixTpl"></ng-container>
-    </span>
-    <span class="d-block pr-3" *ngIf="prefixTpl" matPrefix>
-      <ng-container *ngTemplateOutlet="prefixTpl"></ng-container>
-    </span>
-    <mat-hint *ngIf="hint" class="czls-caption"> {{ hint }}</mat-hint>
-    <mat-error>
-      <cz-error></cz-error>
-    </mat-error>
-  </mat-form-field>
-</div>
+<div *ngIf="label && classicMode" class="czls-title">{{ label }}</div>
+<mat-form-field #outlineFieldRef appearance="outline" [ngClass]="{ 'is-readonly': readonly, 'cz-classic-appearance': classicMode }">
+  <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
+  <input
+    matInput
+    [autocomplete]="inputAutocomplete"
+    [type]="type"
+    [formControl]="embeddedControl"
+    [placeholder]="placeholder"
+    [name]="name"
+    (focus)="outlineFieldRef.updateOutlineGap()"
+    [attr.aria-label]="ariaLabel"
+    (blur)="onBlur()"
+  />
+  <span *ngIf="suffixTpl" matSuffix>
+    <ng-container *ngTemplateOutlet="suffixTpl"></ng-container>
+  </span>
+  <span class="d-block pr-3" *ngIf="prefixTpl" matPrefix>
+    <ng-container *ngTemplateOutlet="prefixTpl"></ng-container>
+  </span>
+  <mat-hint *ngIf="hint" class="czls-caption"> {{ hint }}</mat-hint>
+  <mat-error>
+    <cz-error></cz-error>
+  </mat-error>
+</mat-form-field>

@@ -19,6 +19,14 @@ mat-form-field * {
   box-sizing: content-box; // to counter bootstrap's reboot
 }
 
+mat-form-field.mat-form-field {
+  .mat-form-field-subscript-wrapper {
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: visible;
+  }
+}
+
 mat-form-field.mat-form-field.cz-classic-appearance {
   @extend %classic-typography;
   &.my-date-picker {
