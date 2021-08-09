@@ -1,3 +1,10 @@
+## [2.1.7](https://github.com/cognizone/ng-cognizone/compare/v2.1.6...v2.1.7) (2021-08-09)
+
+
+### Bug Fixes
+
+* better spacing for mat-error ([09fd742](https://github.com/cognizone/ng-cognizone/commit/09fd74275dfbf8256dfb7d87300df450cadebbae))
+
 ## [2.1.6](https://github.com/cognizone/ng-cognizone/compare/v2.1.5...v2.1.6) (2021-08-05)
 
 
