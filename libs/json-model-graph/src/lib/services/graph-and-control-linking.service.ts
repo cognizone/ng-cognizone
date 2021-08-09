@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { CvService } from '@cognizone/legi-cv';
 import { Many, manyToArray } from '@cognizone/model-utils';
-import { JsonModel, JsonModelService } from '@cognizone/ng-application-profile';
+import { ApHelper, ApService, JsonModel, JsonModelService } from '@cognizone/ng-application-profile';
 import produce from 'immer';
 import { isEqual } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
@@ -16,7 +16,9 @@ export class GraphAndControlLinkingService {
     private graphService: GraphService,
     private cvService: CvService,
     private jsonModelService: JsonModelService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private apHelper: ApHelper,
+    private apService: ApService
   ) {}
 
   /**
@@ -49,7 +51,7 @@ export class GraphAndControlLinkingService {
             draft[attributeKey] = value ?? undefined;
           })
         );
-        if (cvName || classId) {
+        if (this.isReference({ apName, attributeKey: attributeKey as keyof JsonModel, nodeUri, rootUri })) {
           const references = await this.addReferencesInGraph(value, { apName, cvName, classId, rootUri });
           allUpdatedNodes.push(...references);
         }
@@ -90,6 +92,18 @@ export class GraphAndControlLinkingService {
         }
       })
     );
+  }
+
+  private isReference({
+    apName,
+    attributeKey,
+    nodeUri,
+    rootUri,
+  }: Pick<LinkControlToNodeAttributeOptions<JsonModel>, 'apName' | 'attributeKey' | 'nodeUri' | 'rootUri'>): boolean {
+    const ap = this.apService.getAp(apName);
+    const node = this.graphService.getNodeSnapshot(rootUri, nodeUri);
+    const typeProfile = this.apHelper.getTypeProfile(ap, node['@type']);
+    return this.apHelper.isReference(typeProfile, attributeKey);
   }
 
   private async addReferencesInGraph(
