@@ -24,6 +24,11 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { combineLatest, of, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/operators';
 
+let deprecatedWarned = false;
+
+/**
+ * @deprecated use cz-autocomplete-single or cz-autocomplete-multi instead, depending
+ */
 @Component({
   selector: 'cz-autocomplete',
   templateUrl: './autocomplete.component.html',
@@ -114,6 +119,10 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
     @Optional() controlContainer: ControlContainer
   ) {
     super(logger, cdr, controlContainer);
+    if (deprecatedWarned) {
+      deprecatedWarned = true;
+      this.logger.warn('cz-autocomplete is deprecated, please use cz-autocomplete-single or cz-autocomplete-multi instead');
+    }
   }
 
   ngOnInit(): void {
