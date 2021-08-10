@@ -1,3 +1,10 @@
+## [2.1.9](https://github.com/cognizone/ng-cognizone/compare/v2.1.8...v2.1.9) (2021-08-10)
+
+
+### Bug Fixes
+
+* correct use of control in cz-error ([c339d65](https://github.com/cognizone/ng-cognizone/commit/c339d650480506273a1615b37a332dbe7dcb4c42))
+
 ## [2.1.8](https://github.com/cognizone/ng-cognizone/compare/v2.1.7...v2.1.8) (2021-08-09)
 
 
