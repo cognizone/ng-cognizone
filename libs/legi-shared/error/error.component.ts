@@ -24,9 +24,9 @@ export class ErrorComponent extends OnDestroy$ implements OnInit {
       this.control = extractControlFromNgControl(this.ngControl);
     }
 
-    if (this.ngControl?.statusChanges) {
+    if (this.control.statusChanges) {
       this.computeError();
-      this.subSink = this.ngControl.statusChanges.subscribe(() => this.computeError());
+      this.subSink = this.control.statusChanges.subscribe(() => this.computeError());
     }
   }
 

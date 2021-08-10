@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Host, Inject, Input, OnChanges, Optional } from '@angular/core';
-import { AbstractControl, FormArrayName, FormControlDirective, FormControlName, FormGroupDirective, FormGroupName } from '@angular/forms';
+import { AbstractControl, ControlContainer, FormGroupDirective, NgControl, FormArrayName } from '@angular/forms';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { Many } from '@cognizone/model-utils';
 import { ApHelper, isJsonModel, JsonModel } from '@cognizone/ng-application-profile';
@@ -9,6 +9,7 @@ import { GraphAndControlLinkingService } from '../services/graph-and-control-lin
 import { GraphService } from '../services/graph.service';
 import { NodeUriDirective } from './node-uri.directive';
 import { RootUriDirective } from './root-uri.directive';
+
 @Directive({
   selector: '[czNodeAttributeLinked]',
   exportAs: 'czNodeAttributeLinked',
@@ -22,6 +23,9 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
 
   @Input()
   control?: AbstractControl;
+
+  @Input()
+  controlName?: string;
 
   @Input()
   classId?: string;
@@ -43,37 +47,33 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     @Inject(DEVTOOLS_ENABLED_TOKEN) private readonly devtoolsEnabled: boolean,
     private logger: Logger,
     @Optional() private elRef?: ElementRef<Comment | HTMLElement | undefined>,
-    @Host() @Optional() private formArrayName?: FormArrayName,
-    @Host() @Optional() private formGroupName?: FormGroupName,
-    @Host() @Optional() private formGroupDirective?: FormGroupDirective,
-    @Host() @Optional() private formControlName?: FormControlName,
-    @Host() @Optional() private formControlDirective?: FormControlDirective
+    @Host() @Optional() private ngControl?: NgControl,
+    @Host() @Optional() private controlContainer?: ControlContainer
   ) {
     super();
     this.logger = logger.extend('NodeAttributeLinkedDirective');
   }
 
   ngOnChanges(): void {
-    /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
-    this.attributeKey = (
-      this.attributeKey ||
-      this.formControlName?.name ||
-      this.formGroupName?.name ||
-      this.formArrayName?.name ||
-      ''
-    ).toString();
-    /* eslint-enable @typescript-eslint/prefer-nullish-coalescing */
+    // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+    this.attributeKey = (this.attributeKey || this.controlName || this.ngControl?.name || this.controlContainer?.name || '').toString();
 
-    this.control =
-      this.control ??
-      this.formControlName?.control ??
-      this.formGroupName?.control ??
-      this.formArrayName?.control ??
-      this.formControlDirective?.control ??
-      this.formGroupDirective?.control;
+    if (!this.attributeKey) {
+      throw new Error('Could not find attribute key to link graph state to');
+    }
+
+    this.control = this.control ?? this.ngControl?.control ?? undefined;
+
+    if (!this.control && this.controlName && this.controlContainer) {
+      this.control = this.controlContainer?.control?.get(this.controlName) ?? undefined;
+    }
 
     if (!this.control) {
-      throw new Error('Could not find control to link graph state to');
+      this.control = this.controlContainer?.control ?? undefined;
+    }
+
+    if (!this.control) {
+      throw new Error(`Could not find control to link graph state to ${this.attributeKey}`);
     }
 
     this.subSink = this.graphControlService
