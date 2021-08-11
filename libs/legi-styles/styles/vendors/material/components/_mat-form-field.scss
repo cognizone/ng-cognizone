@@ -21,9 +21,13 @@ mat-form-field * {
 
 mat-form-field.mat-form-field {
   .mat-form-field-subscript-wrapper {
-    margin-top: 0;
     white-space: nowrap;
     overflow: visible;
+
+    mat-error {
+      // margin-top value for .mat-form-field-subscript-wrapper
+      margin-top: -(2em/3);
+    }
   }
 }
 

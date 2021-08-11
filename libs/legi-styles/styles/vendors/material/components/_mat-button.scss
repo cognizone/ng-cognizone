@@ -15,6 +15,10 @@ a.mat-button-base {
     mat-icon {
       color: $czls-font-color-disabled;
     }
+    &:hover,
+    &:hover * {
+      background-color: inherit;
+    }
   }
 }
 
