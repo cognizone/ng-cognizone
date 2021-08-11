@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-model-graph",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "peerDependencies": {
     "@angular/common": ">=9.1.0",
     "@angular/core": ">=9.1.0",

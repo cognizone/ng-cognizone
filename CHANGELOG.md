@@ -1,3 +1,10 @@
+## [2.1.10](https://github.com/cognizone/ng-cognizone/compare/v2.1.9...v2.1.10) (2021-08-11)
+
+
+### Bug Fixes
+
+* styling of mat components ([1dbd7a4](https://github.com/cognizone/ng-cognizone/commit/1dbd7a43cce07682ca25216c6ee19dcd43ebab04))
+
 ## [2.1.9](https://github.com/cognizone/ng-cognizone/compare/v2.1.8...v2.1.9) (2021-08-10)
 
 
