@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { getLangStringValue, LangString, LangStringSimple, Nil } from '@cognizone/model-utils';
-import { TranslocoService } from '@ngneat/transloco';
+import { I18nService } from '@cognizone/i18n';
 
 import { Concept } from '../models/concept';
 import { ConceptFilterableKeys } from '../models/concept-filterable-keys';
@@ -8,7 +8,7 @@ import { MatchType } from '../models/match-type';
 
 @Injectable()
 export class ConceptMatcherService {
-  constructor(private transloco: TranslocoService) {}
+  constructor(private i18nService: I18nService) {}
 
   match(concept: Concept, keys: ConceptFilterableKeys, query: Nil<string>, matchType: MatchType = 'includes'): number {
     if (!query) return 1;
@@ -24,7 +24,7 @@ export class ConceptMatcherService {
   }
 
   getAllLabels(concept: Concept, keys: ConceptFilterableKeys): string[] {
-    const lang = this.transloco.getActiveLang().split('-')[0];
+    const lang = this.i18nService.getActiveLang().split('-')[0];
     const allLabels: string[] = [];
     keys
       .map(key => concept[key])
