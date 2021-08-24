@@ -1,3 +1,11 @@
+## [2.1.11](https://github.com/cognizone/ng-cognizone/compare/v2.1.10...v2.1.11) (2021-08-24)
+
+
+### Bug Fixes
+
+* **legi-cv:** migrated from transloco to I18nService ([2f3e978](https://github.com/cognizone/ng-cognizone/commit/2f3e97823581df492be8aa8d72b3d634f96ee584))
+* **legi-shared:** migrated from transloco to I18nService ([e609f9b](https://github.com/cognizone/ng-cognizone/commit/e609f9b6e14e36c1e40b0bcafabb4b4d6ecf8ae0))
+
 ## [2.1.10](https://github.com/cognizone/ng-cognizone/compare/v2.1.9...v2.1.10) (2021-08-11)
 
 
