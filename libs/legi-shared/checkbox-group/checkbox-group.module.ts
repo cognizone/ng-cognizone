@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { I18nModule } from '@cognizone/i18n';
 import { InputModule } from '@cognizone/legi-shared/input';
 import { SelectOptionSortModule } from '@cognizone/legi-shared/select-option-sort';
-import { TranslocoModule } from '@ngneat/transloco';
 
 import { CheckboxGroupComponent } from './checkbox-group.component';
 
@@ -26,8 +25,6 @@ import { CheckboxGroupComponent } from './checkbox-group.component';
     I18nModule,
     InputModule,
     SelectOptionSortModule,
-    // Other
-    TranslocoModule,
   ],
   declarations: [CheckboxGroupComponent],
   exports: [CheckboxGroupComponent],

@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { MatPaginatorIntl } from '@angular/material/paginator';
-import { TranslocoService } from '@ngneat/transloco';
+import { I18nService } from '@cognizone/i18n';
 
 @Injectable()
 export class TranslocoMatPaginatorIntl extends MatPaginatorIntl {
-  constructor(private transloco: TranslocoService) {
+  constructor(private i18nService: I18nService) {
     super();
-    this.adaptLabels();
-    this.transloco.langChanges$.subscribe(() => {
+    this.i18nService.selectActiveLang().subscribe(() => {
       this.adaptLabels();
       this.changes.next();
     });
@@ -15,7 +14,7 @@ export class TranslocoMatPaginatorIntl extends MatPaginatorIntl {
 
   getRangeLabel: MatPaginatorIntl['getRangeLabel'] = (page, pageSize, length) => {
     if (length === 0 || pageSize === 0) {
-      return this.transloco.translate('global.table.range', { from: '0', to: `${length}` });
+      return this.i18nService.translate('global.table.range', { from: '0', to: `${length}` });
     }
 
     length = Math.max(length, 0);
@@ -24,14 +23,14 @@ export class TranslocoMatPaginatorIntl extends MatPaginatorIntl {
 
     const from = `${startIndex + 1} – ${endIndex}`;
     const to = `${length}`;
-    return this.transloco.translate('global.table.range', { from, to });
+    return this.i18nService.translate('global.table.range', { from, to });
   };
 
   private adaptLabels(): void {
-    this.firstPageLabel = this.transloco.translate('global.table.first_page');
-    this.itemsPerPageLabel = this.transloco.translate('global.table.items_per_page');
-    this.lastPageLabel = this.transloco.translate('global.table.last_page');
-    this.nextPageLabel = this.transloco.translate('global.table.next_page');
-    this.previousPageLabel = this.transloco.translate('global.table.previous_page');
+    this.firstPageLabel = this.i18nService.translate('global.table.first_page');
+    this.itemsPerPageLabel = this.i18nService.translate('global.table.items_per_page');
+    this.lastPageLabel = this.i18nService.translate('global.table.last_page');
+    this.nextPageLabel = this.i18nService.translate('global.table.next_page');
+    this.previousPageLabel = this.i18nService.translate('global.table.previous_page');
   }
 }

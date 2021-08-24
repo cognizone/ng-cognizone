@@ -5,8 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatOptionModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
-import { TranslocoLangStringModule } from '@cognizone/transloco-langstring';
-import { TranslocoModule } from '@ngneat/transloco';
+import { I18nModule } from '@cognizone/i18n';
 
 import { ListPaginatorComponent } from './list-paginator.component';
 
@@ -21,9 +20,7 @@ import { ListPaginatorComponent } from './list-paginator.component';
     MatOptionModule,
     MatSelectModule,
     // Cognizone
-    TranslocoLangStringModule,
-    // Other
-    TranslocoModule,
+    I18nModule,
   ],
   declarations: [ListPaginatorComponent],
   exports: [ListPaginatorComponent],

@@ -1,13 +1,13 @@
 import { Directive } from '@angular/core';
 import { MAT_DATE_FORMATS, MatDateFormats } from '@angular/material/core';
-import { TranslocoService } from '@ngneat/transloco';
+import { I18nService } from '@cognizone/i18n';
 
 import { DatePickerComponent } from '../date-picker.component';
 import { DatePickerType } from '../models/date-picker-type';
 
 @Directive({
   selector: 'cz-date-picker[monthSelector]',
-  providers: [{ provide: MAT_DATE_FORMATS, useFactory: getFormat, deps: [TranslocoService] }],
+  providers: [{ provide: MAT_DATE_FORMATS, useFactory: getFormat, deps: [I18nService] }],
 })
 export class MonthSelectorDirective {
   constructor(private datePicker: DatePickerComponent) {
@@ -15,8 +15,8 @@ export class MonthSelectorDirective {
   }
 }
 
-export function getFormat(transloco: TranslocoService): MatDateFormats {
-  const locale = transloco.getActiveLang();
+export function getFormat(i18nService: I18nService): MatDateFormats {
+  const locale = i18nService.getActiveLang();
   const separator =
     Intl.DateTimeFormat(locale)
       .formatToParts(new Date())

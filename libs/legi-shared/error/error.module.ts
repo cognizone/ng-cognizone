@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { TranslocoModule } from '@ngneat/transloco';
+import { I18nModule } from '@cognizone/i18n';
 
 import { ErrorComponent } from './error.component';
 
@@ -10,7 +10,7 @@ import { ErrorComponent } from './error.component';
     // Angular
     CommonModule,
     MatFormFieldModule,
-    TranslocoModule,
+    I18nModule,
   ],
   declarations: [ErrorComponent],
   exports: [ErrorComponent],

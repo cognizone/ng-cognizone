@@ -62,7 +62,7 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   @Input()
   canBeFiltered = false;
   @Input()
-  direction: 'row' | 'column' = 'column';
+  direction: 'column' | 'row' = 'column';
   @Input()
   inputLabel?: string;
   @Input()
@@ -89,7 +89,7 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
     });
   }
 
-  isString(label: string | LangString | LangStringSimple): label is string {
+  isString(label: LangString | LangStringSimple | string): label is string {
     return typeof label === 'string';
   }
 
@@ -129,11 +129,7 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   private checkForMissing(options: SelectOption<T>[]): Observable<SelectOption<T>[]> {
     const value = this.model;
     if (value && !this.options.find(o => o.value === value)) {
-      return this.optionsProvider.getValueOption(value).pipe(
-        map(missingOption => {
-          return [missingOption, ...options];
-        })
-      );
+      return this.optionsProvider.getValueOption(value).pipe(map(missingOption => [missingOption, ...options]));
     }
 
     return of(options);

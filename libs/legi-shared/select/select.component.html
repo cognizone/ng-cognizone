@@ -1,9 +1,9 @@
-<label class="d-flex flex-column" *transloco="let t" [class.compact-form-field]="isCompact">
+<label class="d-flex flex-column" [class.compact-form-field]="isCompact">
   <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
   <mat-form-field [class.cz-classic-appearance]="classicMode">
     <mat-label *ngIf="label && !classicMode">{{ label }}</mat-label>
     <mat-select [formControl]="embeddedControl" [placeholder]="placeholder">
-      <mat-option *ngIf="canBeDiscarded">{{ t('global.none') }}</mat-option>
+      <mat-option *ngIf="canBeDiscarded">{{ 'global.none' | czTranslate }}</mat-option>
       <mat-option
         *ngFor="let option of options | selectOptionsSort: sortType"
         [value]="option.value"
@@ -17,7 +17,7 @@
     <mat-hint *ngIf="hint">{{ hint }}</mat-hint>
   </mat-form-field>
   <ng-template #defaultTemplate let-option>
-    <ng-container *ngIf="isString(option.label); else langStringTemplate">{{ t(option.label) }}</ng-container>
+    <ng-container *ngIf="isString(option.label); else langStringTemplate">{{ option.label | czTranslate }}</ng-container>
     <ng-template #langStringTemplate>{{ option.label | czLabel }} </ng-template>
   </ng-template>
 </label>

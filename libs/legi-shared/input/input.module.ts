@@ -7,7 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { ErrorModule } from '@cognizone/legi-shared/error';
 import { LabelModule } from '@cognizone/legi-shared/label';
-import { TranslocoModule } from '@ngneat/transloco';
 
 import { InputComponent } from './input.component';
 
@@ -24,8 +23,6 @@ import { InputComponent } from './input.component';
     // Cognizone
     LabelModule,
     ErrorModule,
-    // Others
-    TranslocoModule,
   ],
   declarations: [InputComponent],
   exports: [InputComponent],

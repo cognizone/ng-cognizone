@@ -1,4 +1,4 @@
-<div class="d-flex flex-column" *transloco="let t">
+<div class="d-flex flex-column">
   <span *ngIf="label" class="czls-title">{{ label }} {{ required ? '*' : '' }}</span>
 
   <cz-input
@@ -35,7 +35,7 @@
   </div>
 
   <ng-template #defaultTemplate let-option>
-    <ng-container *ngIf="isString(option.label); else langStringTemplate">{{ t(option.label) }}</ng-container>
+    <ng-container *ngIf="isString(option.label); else langStringTemplate">{{ option.label | czTranslate }}</ng-container>
     <ng-template #langStringTemplate>{{ option.label | czLabel }} </ng-template>
 
     <span *ngIf="counts">({{ getCount(option) }})</span>

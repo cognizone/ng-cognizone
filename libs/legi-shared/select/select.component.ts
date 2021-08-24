@@ -81,7 +81,7 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
     return { $implicit: option, option };
   }
 
-  isString(label: string | LangString | LangStringSimple): label is string {
+  isString(label: LangString | LangStringSimple | string): label is string {
     return typeof label === 'string';
   }
 

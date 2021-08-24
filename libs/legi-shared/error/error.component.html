@@ -1,3 +1,1 @@
-<ng-container *transloco="let t">
-  <span *ngFor="let error of errors" class="czls-caption"> {{ t(error.key, { value: error.value }) }} </span>
-</ng-container>
+<span *ngFor="let error of errors" class="czls-caption"> {{ error.key | czTranslate: { value: error.value } }} </span>

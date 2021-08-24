@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 import { I18nModule } from '@cognizone/i18n';
 import { InputModule } from '@cognizone/legi-shared/input';
-import { TranslocoModule } from '@ngneat/transloco';
 
 import { RadioGroupComponent } from './radio-group.component';
 
@@ -23,8 +22,6 @@ import { RadioGroupComponent } from './radio-group.component';
     I18nModule,
     // Internal
     InputModule,
-    // Other
-    TranslocoModule,
   ],
   declarations: [RadioGroupComponent],
   exports: [RadioGroupComponent],
