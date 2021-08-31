@@ -16,7 +16,7 @@ export class ElasticInstanceEditorComponent implements OnInit {
   constructor(private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: ElasticInstanceEditorComponentData) {}
 
   ngOnInit(): void {
-    if (this.data) this.form.setValue({ url: this.data.url, label: this.data.label });
+    if (this.data) this.form.patchValue({ url: this.data.url, label: this.data.label });
   }
 }
 

@@ -15,4 +15,16 @@ export interface MetadataIndices {
   [index: string]: IndexState;
 }
 
-export interface IndexState {}
+export interface IndexState {
+  mappings: {
+    _doc: {
+      properties: ElasticProperties;
+    };
+  };
+}
+
+interface ElasticProperties {
+  [key: string]: ElasticPropertyType | { properties: ElasticProperties };
+}
+
+export type ElasticPropertyType = { type: 'keyword' } | { type: 'text'; fields: { [key: string]: ElasticPropertyType } };

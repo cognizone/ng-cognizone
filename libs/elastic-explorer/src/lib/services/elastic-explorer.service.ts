@@ -15,7 +15,7 @@ import {
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import { combineLatest, EMPTY, Observable, of } from 'rxjs';
-import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap } from 'rxjs/operators';
+import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap, tap } from 'rxjs/operators';
 
 import { ElasticInfo } from '../models/elastic-info';
 import { ElasticState } from '../models/elastic-state';
@@ -25,6 +25,7 @@ import {
   SetData,
   SetElasticInfo,
   SetElasticQuery,
+  SetElasticState,
   SetFilters,
   SetIndices,
   SetManualMode,
@@ -33,6 +34,7 @@ import {
 import { ELASTIC_EXPLORER_STATE_TOKEN, ElasticExplorerStateModel } from '../store/elastic-explorer.state';
 import { ElasticClientFactoryService } from './elastic-client-factory.service';
 import { ElasticInstanceService } from './elastic-instance-service';
+import { ElasticStateUtils } from './elastic-state-utils.service';
 
 @Injectable()
 export class ElasticExplorerService {
@@ -70,13 +72,15 @@ export class ElasticExplorerService {
     private logger: Logger,
     private elasticInstanceService: ElasticInstanceService,
     private snack: MatSnackBar,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private elasticStateUtils: ElasticStateUtils
   ) {
     this.logger = logger.extend('DataExplorerService');
-    this.initFields();
+    this.initFacetFields();
   }
 
   onPageLoad(route: ActivatedRoute): void {
+    this.initElasticState();
     this.initIndices();
     this.parseFiltersFromRoute(route);
     this.parseElasticInfoFromRoute(route);
@@ -115,6 +119,23 @@ export class ElasticExplorerService {
     this.store.dispatch(new SetManualMode(manualMode));
   }
 
+  private initElasticState(): void {
+    this.subSink.add = this.elasticInfo$
+      .pipe(
+        selectProp('url'),
+        tap(() => this.store.dispatch(new SetElasticState(undefined))),
+        filter(notNil),
+        switchMap(url => this.http.get<ElasticState>(`${url}/_cluster/state`)),
+        catchError(err => {
+          this.logger.error('Failed to fetch elastic state', err);
+          return EMPTY;
+        })
+      )
+      .subscribe(response => {
+        this.store.dispatch(new SetElasticState(response));
+      });
+  }
+
   private initModels(): void {
     this.subSink.add = combineLatest([this.elasticInfo$, this.elasticQuery$])
       .pipe(
@@ -143,12 +164,10 @@ export class ElasticExplorerService {
   }
 
   private initIndices(): void {
-    this.subSink.add = this.elasticInfo$
+    this.subSink.add = this.state$
       .pipe(
-        selectProp('url'),
-        filter(notNil),
-        switchMap(url => this.http.get<ElasticState>(`${url}/_cluster/state`)),
-        map(state => Object.keys(state.metadata.indices)),
+        selectProp('elasticState'),
+        map(state => Object.keys(state?.metadata?.indices ?? {})),
         catchError(err => {
           this.logger.error('Failed to fetch elastic state', err);
           return of([]);
@@ -159,33 +178,38 @@ export class ElasticExplorerService {
       });
   }
 
-  private initFields(): void {
-    this.facetFields$ = this.elasticInfo$.pipe(
-      debounceTime(10),
-      switchMap(({ index, url }) => {
-        if (!index) return of(undefined);
-        return this.http
-          .get<ElasticMappingResponse>(`${url}/${index}/_mapping`)
-          .pipe(map(response => (response?.[index]?.mappings?.properties?.facets as Nil<ElasticProperties>)?.properties));
-      }),
-      map(properties => (properties ? this.flattenFields(properties, 'facets', []) : [])),
-      catchError(err => {
-        this.logger.error('Failed to fetch elastic mapping', err);
-        return of([]);
+  private initFacetFields(): void {
+    const elasticState$ = this.state$.pipe(selectProp('elasticState'));
+    const index$ = this.elasticInfo$.pipe(selectProp('index'));
+    this.facetFields$ = combineLatest([elasticState$, index$]).pipe(
+      map(([state, index]) => {
+        if (!index) return [];
+        const facetsProperties = state?.metadata?.indices?.[index]?.mappings?._doc?.properties?.facets;
+        if (facetsProperties && 'properties' in facetsProperties) {
+          return this.flattenFields(facetsProperties.properties, 'facets', []);
+        }
+        return [];
       }),
       shareReplay(1)
     );
   }
 
   private initElasticQuery(): void {
-    this.subSink.add = combineLatest([this.manualMode$, this.filters$, this.pagination$, this.facetFields$])
+    this.subSink.add = combineLatest([
+      this.manualMode$,
+      this.filters$,
+      this.pagination$,
+      this.facetFields$,
+      this.state$.pipe(selectProp('elasticState')),
+      this.state$.pipe(selectProp('elasticInfo')),
+    ])
       .pipe(filter(([manualMode]) => !manualMode))
-      .subscribe(([, filters, pagination, facetsFields]) => {
-        this.setElasticQuery(this.getQuery(filters, pagination, facetsFields));
+      .subscribe(([, filters, pagination, facetsFields, elasticState, elasticInfo]) => {
+        this.setElasticQuery(this.getQuery(filters, pagination, facetsFields, elasticState, elasticInfo));
       });
   }
 
-  private getQuery(filters: Filters, pagination: Pagination, fields: Field[]): {} {
+  private getQuery(filters: Filters, pagination: Pagination, fields: Field[], state: Nil<ElasticState>, elasticInfo: ElasticInfo): {} {
     const query = {
       ...pagination,
       track_total_hits: true,
@@ -208,7 +232,7 @@ export class ElasticExplorerService {
       const subQuery = { bool: { should: [] as unknown[], minimum_should_match: 1 } };
       fields
         .filter(field => field.type === 'text')
-        .map(f => this.getMatchFilters(f.path, filters.facets as string, filters.isFuzzy))
+        .map(f => this.getFieldBoolQuery(f.path, filters.facets as string, state, elasticInfo, filters.isFuzzy))
         .forEach(f => subQuery.bool.should.push(f));
       query.query.bool.must.push(subQuery);
     }
@@ -222,11 +246,11 @@ export class ElasticExplorerService {
     }
 
     if (filters.uri) {
-      query.query.bool.must.push(this.getMatchFilters('data.uri', filters.uri, filters.isFuzzy));
+      query.query.bool.must.push(this.getFieldBoolQuery('data.uri', filters.uri, state, elasticInfo, filters.isFuzzy));
     }
 
     if (filters.included) {
-      query.query.bool.must.push(this.getMatchFilters('included.uri', filters.included, filters.isFuzzy));
+      query.query.bool.must.push(this.getFieldBoolQuery('included.uri', filters.included, state, elasticInfo, filters.isFuzzy));
     }
 
     return query;
@@ -247,19 +271,39 @@ export class ElasticExplorerService {
     return fields;
   }
 
-  private getMatchFilters(field: string, value: string, isFuzzy: boolean = false): unknown {
-    const should = [
-      {
+  private getFieldBoolQuery(
+    field: string,
+    value: string,
+    state: Nil<ElasticState>,
+    elasticInfo: ElasticInfo,
+    isFuzzy: boolean = false
+  ): unknown {
+    let isKeyword = true;
+    if (state) {
+      const typeProfile = this.elasticStateUtils.getPropertyType(state, elasticInfo.index, field);
+      isKeyword = typeProfile ? typeProfile?.type === 'keyword' : true;
+    }
+
+    const should: unknown[] = [];
+
+    if (isKeyword) {
+      should.push({
+        term: {
+          [field]: value,
+        },
+      });
+    } else {
+      should.push({
         match_phrase_prefix: {
           [field]: {
             query: value,
             boost: 2,
           },
         },
-      },
-    ] as unknown[];
+      });
+    }
 
-    if (isFuzzy) {
+    if (isFuzzy && !isKeyword) {
       should.push(
         {
           match: {
@@ -304,6 +348,7 @@ export class ElasticExplorerService {
               q: this.toQueryParams(filters),
               from: pagination.from,
               size: pagination.size,
+              elasticQuery: undefined,
             };
         await this.router.navigate([], {
           queryParams,
@@ -375,11 +420,6 @@ export class ElasticExplorerService {
   }
 }
 
-type ElasticMappingResponse = {
-  [index: string]: {
-    mappings: ElasticProperties;
-  };
-};
 type ElasticPropertiesMap = { [key: string]: ElasticProperties | ElasticType };
 type ElasticProperties = { properties: ElasticPropertiesMap };
 type ElasticType = { type: string };

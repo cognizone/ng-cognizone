@@ -2,6 +2,7 @@ import { Pagination } from '@cognizone/legi-shared/list-paginator';
 import { Dictionary, ElasticAggregation } from '@cognizone/model-utils';
 
 import { ElasticInfo } from '../models/elastic-info';
+import { ElasticState } from '../models/elastic-state';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
 
@@ -45,4 +46,10 @@ export class SetElasticQuery {
   static readonly type: string = '[ElasticExplorer] set elastic query';
 
   constructor(public elasticQuery: {}) {}
+}
+
+export class SetElasticState {
+  static readonly type: string = '[ElasticExplorer] set elastic state';
+
+  constructor(public elasticState?: ElasticState) {}
 }

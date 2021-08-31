@@ -4,9 +4,19 @@ import { Dictionary, ElasticAggregation } from '@cognizone/model-utils';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
 
 import { ElasticInfo } from '../models/elastic-info';
+import { ElasticState } from '../models/elastic-state';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
-import { SetData, SetElasticInfo, SetElasticQuery, SetFilters, SetIndices, SetManualMode, SetPagination } from './elastic-explorer.actions';
+import {
+  SetData,
+  SetElasticInfo,
+  SetElasticQuery,
+  SetElasticState,
+  SetFilters,
+  SetIndices,
+  SetManualMode,
+  SetPagination,
+} from './elastic-explorer.actions';
 
 export interface ElasticExplorerStateModel {
   models: FullModel[];
@@ -18,6 +28,7 @@ export interface ElasticExplorerStateModel {
   indices: string[];
   manualMode: boolean;
   elasticQuery: {};
+  elasticState?: ElasticState;
 }
 
 export const ELASTIC_EXPLORER_STATE_TOKEN = new StateToken<ElasticExplorerStateModel>('elasticExplorer');
@@ -82,5 +93,10 @@ export class ElasticExplorerState {
   @Action(SetElasticQuery)
   setElasticQuery({ patchState }: StateContext<ElasticExplorerStateModel>, { elasticQuery }: SetElasticQuery): void {
     patchState({ elasticQuery: elasticQuery });
+  }
+
+  @Action(SetElasticState)
+  setElasticState({ patchState }: StateContext<ElasticExplorerStateModel>, { elasticState }: SetElasticState): void {
+    patchState({ elasticState });
   }
 }
