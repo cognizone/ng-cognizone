@@ -1,4 +1,5 @@
 export * from './lib/models/application-profile';
+export * from './lib/models/application-profile-raw';
 export * from './lib/models/data-type';
 export * from './lib/models/prefixes';
 export * from './lib/models/resource-graph';
