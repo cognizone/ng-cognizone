@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/permissions",
-  "version": "2.1.11",
+  "version": "2.2.0",
   "peerDependencies": {
     "@angular/common": ">=8",
     "@angular/core": ">=8",

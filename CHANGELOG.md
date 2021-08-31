@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/cognizone/ng-cognizone/compare/v2.1.11...v2.2.0) (2021-08-31)
+
+
+### Features
+
+* **cz-cli:** added sorting and validation commands for Ap ([e385757](https://github.com/cognizone/ng-cognizone/commit/e3857571f4ba1cadb5d18b7c581ea751343a83df))
+* **elastic-explorer:** more lenient uri filter ([a81d14e](https://github.com/cognizone/ng-cognizone/commit/a81d14e54be3eebcf4eb58008868dd33d5e85183))
+
 ## [2.1.11](https://github.com/cognizone/ng-cognizone/compare/v2.1.10...v2.1.11) (2021-08-24)
 
 
