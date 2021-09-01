@@ -3,18 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-styling',
   templateUrl: './styling.component.html',
-  styleUrls: ['./styling.component.scss']
+  styleUrls: ['./styling.component.scss'],
 })
 export class StylingComponent {
   lastUpdate: Date = new Date('2019-11-20');
-  badImportsScss: string = `
+
+  badImportsScss = `
   // shared/components/my-component/my-component.scss
   @import '../../../../styles/abstracts/variables';
   @import '../../../../styles/abstracts/mixins';
   // ...
   `;
 
-  angularJsonImports: string = `
+  angularJsonImports = `
   // ...
   "architect": {
     "build": {
@@ -36,7 +37,7 @@ export class StylingComponent {
     // ...
   `;
 
-  angularJsonDarkTheme1: string = `
+  angularJsonDarkTheme1 = `
   // under "configurations"
   "production-dark": {
     "fileReplacements": [
@@ -81,17 +82,17 @@ export class StylingComponent {
   }
   `;
 
-  darkThemeScripts: string = `
+  darkThemeScripts = `
     ng serve --configuration=dark
     ng build --configuration=production-dark
   `;
 
-  darkThemeScripts9: string = `
+  darkThemeScripts9 = `
     ng serve --configuration=dark
     ng build --configuration=production,dark
   `;
 
-  bootstrapScss: string = `
+  bootstrapScss = `
   // src/styles/vendors/_bootstrap.scss
   // Configuration
   @import "~bootstrap/scss/functions";

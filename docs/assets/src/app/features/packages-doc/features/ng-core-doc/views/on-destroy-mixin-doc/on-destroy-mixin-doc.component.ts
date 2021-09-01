@@ -7,10 +7,10 @@ import { NgCorePagesService } from '../../services/ng-core-pages.service';
 @Component({
   selector: 'app-on-destroy-mixin-doc',
   templateUrl: './on-destroy-mixin-doc.component.html',
-  styleUrls: ['./on-destroy-mixin-doc.component.scss']
+  styleUrls: ['./on-destroy-mixin-doc.component.scss'],
 })
 export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
-  code1: string = `
+  code1 = `
   @Component(/*...*/)
   export class MyComponent extends OnDestroyMixin(MyParentComponent) { 
     constructor(private store: MyStore) {
@@ -20,7 +20,7 @@ export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
   }
   `;
 
-  code2: string = `
+  code2 = `
   @Component(/*...*/)
   export class MyComponent extends OnDestroyMixin(MyParentComponent) { 
     constructor(private store: MyStore) {
@@ -30,7 +30,7 @@ export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
   }
   `;
 
-  code3: string = `
+  code3 = `
   @Component(/*...*/)
   export class MyComponent extends OnDestroy$ { 
     constructor(private store: MyStore) {
@@ -43,19 +43,19 @@ export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
   onDestroyMixinProperties: ApiDescription[] = [
     {
       name: 'onDestroy$: Observable<void>',
-      description: 'Observable that is fired when ngOnDestroy() si called'
-    }
+      description: 'Observable that is fired when ngOnDestroy() si called',
+    },
   ];
 
   onDestroyMixinMethods: ApiDescription[] = [
     {
       name: 'untilDestroyed<U>(): MonoTypeOperatorFunction<U>',
-      description: 'Wrapper for takeUntil(this.onDestroy$)'
+      description: 'Wrapper for takeUntil(this.onDestroy$)',
     },
     {
       name: 'firstUntilDestroyed<U>(): MonoTypeOperatorFunction<U>',
-      description: 'Wrapper for pipe(first(), this.untilDestroyed())'
-    }
+      description: 'Wrapper for pipe(first(), this.untilDestroyed())',
+    },
   ];
 
   constructor(private coreStateFacade: CoreStateFacade, private ngCorePagesService: NgCorePagesService) {}

@@ -1,11 +1,11 @@
-import { Directive, ElementRef, HostBinding, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Anchor } from '../models/anchor';
 import { AnchorService } from '../services/anchor.service';
 
 @Directive({
-  selector: '[appAnchor]'
+  selector: '[appAnchor]',
 })
 export class AnchorDirective implements OnInit, OnDestroy {
   @HostBinding('id')
@@ -26,7 +26,7 @@ export class AnchorDirective implements OnInit, OnDestroy {
       text,
       id: this.id,
       route: this.route,
-      target: this.elRef.nativeElement
+      target: this.elRef.nativeElement,
     };
     this.anchorService.register(this.anchor);
   }

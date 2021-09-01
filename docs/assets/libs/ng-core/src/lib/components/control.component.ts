@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @angular-eslint/directive-class-suffix */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeDetectorRef, Directive, Input, OnInit, Optional } from '@angular/core';
 import { AbstractControl, ControlContainer, ControlValueAccessor, FormControl, FormGroupDirective, FormGroupName } from '@angular/forms';
 import { merge, noop, Observable, Subject } from 'rxjs';
@@ -7,7 +10,6 @@ import { OnDestroy$ } from '../mixins/on-destroy.mixin';
 import { Logger } from '../modules/logger/logger.service';
 import { Maybe } from '../types/maybe';
 
-// tslint:disable:no-any
 // put @Directive so that @Input are kept
 /**
  * @deprecated you should implement ControlValueAccessor yourself, this was not a great idea in the end
@@ -16,6 +18,7 @@ import { Maybe } from '../types/maybe';
 export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestroy$ implements OnInit, ControlValueAccessor {
   @Input()
   required?: boolean;
+
   @Input()
   name?: string;
 
@@ -23,6 +26,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   get formControlName(): Maybe<string> {
     return this._formControlName;
   }
+
   set formControlName(value: Maybe<string>) {
     this._formControlName = value;
     this.bindEmbeddedControl();
@@ -32,6 +36,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   get formControl(): Maybe<AbstractControl> {
     return this._formControl;
   }
+
   set formControl(value: Maybe<AbstractControl>) {
     this._formControl = value;
     this.bindEmbeddedControl();
@@ -44,16 +49,21 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   set model(value: MODEL) {
     this._model = value;
   }
-  disabled: boolean = false;
+
+  disabled = false;
 
   embeddedControl?: AbstractControl;
+
   valueChanges?: Observable<any>;
+
   defaultValue?: MODEL;
 
   protected controlChanged: Subject<void> = new Subject();
+
   protected _model!: MODEL;
 
   private _formControl?: AbstractControl;
+
   private _formControlName?: string;
 
   constructor(protected logger: Logger, protected cdr: ChangeDetectorRef, @Optional() protected controlContainer?: ControlContainer) {
@@ -115,15 +125,15 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   }
 
   // depending on life-cycle of the component, those methods might not be attached yet
-  // tslint:disable:no-empty
+
   protected onModelChange: Function = () => {};
+
   protected onModelTouched: Function = () => {};
-  // tslint:enable:no-empty
 
   private bindEmbeddedControl(): void {
     this.controlChanged.next();
     if (!this.embeddedControl) return;
-    const valueChanges = this.valueChanges || this.embeddedControl.valueChanges;
+    const valueChanges = this.valueChanges ?? this.embeddedControl.valueChanges;
     valueChanges
       .pipe(
         map(value => this.embeddedValueToValue(value)),
@@ -144,7 +154,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
     }
     if (!control || !control.validator) return;
     const errors = control.validator(new FormControl());
-    if (errors && errors.required) this.required = true;
+    if (errors?.required) this.required = true;
   }
 
   private computeName(): void {
@@ -155,14 +165,10 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
         if (parent.name) {
           name = `${parent.name}-${name}`;
         }
-        if ('_parent' in parent) {
-          parent = (parent as any)._parent as ControlContainer;
-        } else {
-          parent = undefined;
-        }
+        parent = '_parent' in parent ? ((parent as any)._parent as ControlContainer) : undefined;
       }
       this.name = name;
-    } else if (this.formControl && this.formControl.parent) {
+    } else if (this.formControl?.parent) {
       const { controls } = this.formControl.parent;
       if (controls instanceof Array) {
         const index = controls.findIndex(c => c === this.formControl);

@@ -5,7 +5,7 @@ import { LOGGER_NAMESPACE_TOKEN } from './models/logger-namespace.token';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule]
+  imports: [CommonModule],
 })
 export class LoggerModule {
   static forRoot(namespace: string): ModuleWithProviders<LoggerModule> {
@@ -14,9 +14,9 @@ export class LoggerModule {
       providers: [
         {
           provide: LOGGER_NAMESPACE_TOKEN,
-          useValue: namespace
-        }
-      ]
+          useValue: namespace,
+        },
+      ],
     };
   }
 }

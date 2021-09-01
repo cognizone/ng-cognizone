@@ -1,18 +1,25 @@
 import { AfterViewInit, Directive } from '@angular/core';
 import { MatTabGroup } from '@angular/material/tabs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { OnDestroy$ } from '@cognizone/ng-core';
+import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { map } from 'rxjs/operators';
 
 @Directive({
-  selector: '[appMatTabRouted]'
+  selector: '[appMatTabRouted]',
 })
 export class MatTabRoutedDirective extends OnDestroy$ implements AfterViewInit {
-  private tabRouteParamKey: string = 'tab';
+  private tabRouteParamKey = 'tab';
 
-  constructor(private readonly route: ActivatedRoute, private readonly router: Router, private readonly tabGroup: MatTabGroup) {
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly router: Router,
+    private readonly tabGroup: MatTabGroup,
+    private readonly logger: Logger
+  ) {
     super();
+    this.logger = logger.extend('MatTabRoutedDirective');
   }
+
   ngAfterViewInit(): void {
     this.route.queryParams
       .pipe(
@@ -26,10 +33,12 @@ export class MatTabRoutedDirective extends OnDestroy$ implements AfterViewInit {
     if (!this.route.snapshot.queryParams[this.tabRouteParamKey]) this.goToTab(0);
   }
 
-  private goToTab(tab: string | number): void {
+  private goToTab(tab: number | string): void {
     if (typeof tab === 'number') {
       tab = this.tabGroup._tabs.toArray()[tab].textLabel;
     }
-    this.router.navigate(['.'], { relativeTo: this.route, queryParams: { [this.tabRouteParamKey]: tab } });
+    this.router
+      .navigate(['.'], { relativeTo: this.route, queryParams: { [this.tabRouteParamKey]: tab } })
+      .catch(err => this.logger.error(err));
   }
 }

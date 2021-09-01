@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @typescript-eslint/no-redeclare */
 import { OnDestroy, Type } from '@angular/core';
 import { MonoTypeOperatorFunction, Observable, pipe, Subject, Subscription } from 'rxjs';
 import { first, takeUntil } from 'rxjs/operators';
@@ -10,7 +13,6 @@ export interface OnDestroyMixin extends OnDestroy {
   emptySink(): void;
 }
 
-// tslint:disable:no-any no-shadowed-variable
 /**
  *
  * @description beware that if you use this with a base class that has injection, it will not work in AOT
@@ -28,10 +30,12 @@ export interface OnDestroyMixin extends OnDestroy {
  * All those issues should be fixed with Ivy (Angular 9+) https://github.com/angular/angular/issues/19145
  *
  */
-export function OnDestroyMixin<T extends Type<any>>(base: T): Type<OnDestroyMixin> & T {
+export function OnDestroyMixin<T extends Type<any>>(base: T): T & Type<OnDestroyMixin> {
   return class extends base implements OnDestroyMixin {
     onDestroy$: Observable<void>;
+
     private _onDestroy$: Subject<void>;
+
     private subscriptions: Subscription[] = [];
 
     constructor(...args: any[]) {

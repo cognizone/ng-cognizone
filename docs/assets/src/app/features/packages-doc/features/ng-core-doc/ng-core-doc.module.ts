@@ -8,6 +8,6 @@ import { OnDestroyMixinDocComponent } from './views/on-destroy-mixin-doc/on-dest
 
 @NgModule({
   declarations: [OnDestroyMixinDocComponent, LoggerDocComponent],
-  imports: [CommonModule, NgCoreDocRoutingModule, SharedModule]
+  imports: [CommonModule, NgCoreDocRoutingModule, SharedModule],
 })
 export class NgCoreDocModule {}

@@ -6,7 +6,7 @@ import { ArticleComponent } from '../article/article.component';
   selector: 'app-article-title',
   templateUrl: './article-title.component.html',
   styleUrls: ['./article-title.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticleTitleComponent implements OnInit {
   @Input()
@@ -17,6 +17,6 @@ export class ArticleTitleComponent implements OnInit {
   constructor(private parent: ArticleComponent) {}
 
   ngOnInit(): void {
-    this.textContent = this.parent.textContent || '';
+    this.textContent = this.parent.textContent ?? '';
   }
 }

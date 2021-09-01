@@ -6,13 +6,15 @@ import { map, startWith, throttleTime } from 'rxjs/operators';
 import { Anchor } from '../models/anchor';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AnchorService {
   anchors$: Observable<Anchor[]>;
+
   activeAnchor$: Observable<Maybe<Anchor>>;
 
   private _anchors$: Subject<Anchor[]> = new ReplaySubject(0);
+
   private anchors: Anchor[] = [];
 
   constructor() {

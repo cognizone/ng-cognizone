@@ -6,12 +6,12 @@ import { map } from 'rxjs/operators';
   selector: 'app-on-push-async-pipe',
   templateUrl: './on-push-async-pipe.component.html',
   styleUrls: ['./on-push-async-pipe.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OnPushAsyncPipeComponent {
   number$: Observable<string> = interval(1000).pipe(map(i => `${i}`));
 
-  templateEvaluations: number = 0;
+  templateEvaluations = 0;
 
   getDouble(x: number): number {
     ++this.templateEvaluations;

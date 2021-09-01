@@ -4,14 +4,14 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   selector: 'app-code-link',
   templateUrl: './code-link.component.html',
   styleUrls: ['./code-link.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CodeLinkComponent {
   @Input()
   path!: string;
 
   @Input()
-  showPreview: boolean = true;
+  showPreview = true;
 
   get previewUrl(): string {
     return `assets/src/${this.path}`;

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-inline-code',
   templateUrl: './inline-code.component.html',
-  styleUrls: ['./inline-code.component.scss']
+  styleUrls: ['./inline-code.component.scss'],
 })
 export class InlineCodeComponent {}

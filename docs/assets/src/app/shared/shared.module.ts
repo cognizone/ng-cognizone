@@ -48,7 +48,7 @@ const material = [
   MatSlideToggleModule,
   MatTableModule,
   MatTabsModule,
-  MatToolbarModule
+  MatToolbarModule,
 ];
 
 const components = [
@@ -62,7 +62,7 @@ const components = [
   ExternalDocView,
   ImgTooltipComponent,
   InlineCodeComponent,
-  SectionNavComponent
+  SectionNavComponent,
 ];
 const pipes = [EscapeHtmlPipe, ReadingTimePipe];
 const directives = [MatTabRoutedDirective, AnchorDirective, ImgTooltipDirective, ComponentTooltipDirective];
@@ -78,16 +78,16 @@ const directives = [MatTabRoutedDirective, AnchorDirective, ImgTooltipDirective,
       multi: true,
       useValue: {
         class: CodeBlockComponent,
-        type: 'code'
-      } as TooltipComponent
-    }
-  ]
+        type: 'code',
+      } as TooltipComponent,
+    },
+  ],
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModuleRoot> {
     return {
       ngModule: SharedModuleRoot,
-      providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }]
+      providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }],
     };
   }
 }
@@ -95,6 +95,6 @@ export class SharedModule {
 @NgModule({
   declarations: [],
   imports: [BrowserAnimationsModule, SharedModule, OverlayModule],
-  exports: [BrowserAnimationsModule, SharedModule]
+  exports: [BrowserAnimationsModule, SharedModule],
 })
 export class SharedModuleRoot {}

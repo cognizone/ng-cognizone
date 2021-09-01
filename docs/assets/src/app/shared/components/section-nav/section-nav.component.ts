@@ -5,7 +5,7 @@ import { Page } from '@app/core';
   selector: 'app-section-nav',
   templateUrl: './section-nav.component.html',
   styleUrls: ['./section-nav.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionNavComponent {
   @Input()

@@ -72,7 +72,8 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Describe the response of a search done on Elastic 7+, with <code>_source</code> in hits beging typed with <code>T</code></p>
+                <p>Describe the response of a search done on Elastic 7+, with <code>_source</code> in hits
+being typed with <code>T</code></p>
 
             </p>
 
@@ -312,7 +313,7 @@
   hits: {
     total: {
       value: number;
-      relation: &#x27;gte&#x27; | &#x27;eq&#x27;;
+      relation: &#x27;eq&#x27; | &#x27;gte&#x27;;
     };
     max_score: number | null;
     hits: ElasticHit&lt;T&gt;[];
@@ -345,13 +346,14 @@ export interface ElasticAggregation {
  * A bucket that is inside an {@link ElasticAggregation}
  */
 export interface ElasticBucket {
-  key: string | number; // maybe unknown
+  key: number | string; // maybe unknown
   key_as_string?: string;
   doc_count: number;
 }
 
 /**
  * Return a transformed {@link ElasticResponse} where all &#x60;_source&#x60; are transformed using the given &#x60;project&#x60; function
+ *
  * @param response The json returned by a _search elastic call
  * @param project The projection function
  */
@@ -361,6 +363,7 @@ export function mapElasticSources&lt;T, U&gt;(response: ElasticSearchResponse&lt
 
 /**
  * Aggregate all &#x60;_source&#x60; in all &#x60;hits&#x60; of an {@link ElasticResponse} in a single array
+ *
  * @param response The json returned by a _search elastic call
  */
 export function extractSourcesFromElasticResponse&lt;T&gt;(response: ElasticSearchResponse&lt;T&gt;): T[] {
@@ -369,6 +372,7 @@ export function extractSourcesFromElasticResponse&lt;T&gt;(response: ElasticSear
 
 /**
  * Extract the first &#x60;_source&#x60; of the first &#x60;hits&#x60; of an {@link ElasticResponse}
+ *
  * @param response The json returned by a _search elastic call
  */
 export function extractOneSourceFromElasticResponse&lt;T&gt;(response: ElasticSearchResponse&lt;T&gt;): T {

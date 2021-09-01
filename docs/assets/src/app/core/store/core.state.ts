@@ -13,8 +13,8 @@ export interface CoreStateModel {
 @State<CoreStateModel>({
   name: 'core',
   defaults: {
-    pages: []
-  }
+    pages: [],
+  },
 })
 export class CoreState {
   @Action(SetPages)

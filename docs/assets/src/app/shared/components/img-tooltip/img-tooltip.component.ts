@@ -7,7 +7,7 @@ import { filter } from 'rxjs/operators';
   selector: 'app-img-tooltip',
   templateUrl: './img-tooltip.component.html',
   styleUrls: ['./img-tooltip.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ImgTooltipComponent extends OnDestroy$ implements OnInit {
   @Input()

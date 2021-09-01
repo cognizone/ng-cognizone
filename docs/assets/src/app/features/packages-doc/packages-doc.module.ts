@@ -6,6 +6,6 @@ import { LibrariesListView } from './views/libraries-list/libraries-list.view';
 
 @NgModule({
   imports: [SharedModule, PackagesDocRoutingModule],
-  declarations: [LibrariesListView]
+  declarations: [LibrariesListView],
 })
 export class PackagesDocModule {}

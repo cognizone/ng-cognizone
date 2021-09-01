@@ -17,7 +17,7 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
     HttpClientModule,
     LoggerModule.forRoot('CZ-DOCS'),
     NgxsModule.forRoot([CoreState], { developmentMode: !environment.production }),
-    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production })
-  ]
+    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production }),
+  ],
 })
 export class CoreModule {}

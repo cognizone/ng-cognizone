@@ -79,13 +79,6 @@
     <mat-card>
       <mat-card-title>Current log level in local storage</mat-card-title>
       <mat-card-subtitle>If you change it, you have to refresh the page</mat-card-subtitle>
-      <mat-card-content>
-        <app-code-block [code]="logLevelMap$ | async" language="json"></app-code-block>
-      </mat-card-content>
-      <mat-card-actions *ngIf="logLevelChanged$ | async">
-        <button mat-raised-button color="error" (click)="refreshPage()">REFRESH</button>
-        Log level changed, please refresh the page
-      </mat-card-actions>
     </mat-card>
   </mat-tab>
 </mat-tab-group>

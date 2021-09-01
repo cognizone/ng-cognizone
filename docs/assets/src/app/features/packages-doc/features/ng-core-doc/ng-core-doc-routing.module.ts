@@ -8,16 +8,16 @@ const routes: Routes = [
   { path: '', redirectTo: 'on-destroy-mixin' },
   {
     path: 'on-destroy-mixin',
-    component: OnDestroyMixinDocComponent
+    component: OnDestroyMixinDocComponent,
   },
   {
     path: 'logger',
-    component: LoggerDocComponent
-  }
+    component: LoggerDocComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class NgCoreDocRoutingModule {}

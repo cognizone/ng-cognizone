@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, forwardRef, ViewChild } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, FormControl, FormGroup, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -8,22 +9,21 @@ import { LoggerModule } from '../modules/logger/logger.module';
 import { ControlComponent } from './control.component';
 
 @Component({
-  selector: 'lib-dummy-input',
+  selector: 'cz-dummy-input',
   template: '<input [formControl]="embeddedControl" />',
-  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => DummyInputComponent), multi: true }]
+  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => DummyInputComponent), multi: true }],
 })
 class DummyInputComponent extends ControlComponent<unknown> {
   embeddedControl: FormControl = new FormControl();
 }
 
 @Component({
-  template: `
-    <lib-dummy-input #input [formControl]="control"></lib-dummy-input>
-  `
+  template: ` <cz-dummy-input #input [formControl]="control"></cz-dummy-input> `,
 })
 class DummyReactiveSimpleFormComponent {
   @ViewChild('input', { static: true })
   input!: DummyInputComponent;
+
   control: FormControl = new FormControl(null, Validators.required);
 }
 
@@ -33,33 +33,34 @@ class DummyReactiveSimpleFormComponent {
       <div formGroupName="group1">
         <div formArrayName="arr">
           <div formGroupName="0">
-            <lib-dummy-input #input1 formControlName="input1"></lib-dummy-input>
+            <cz-dummy-input #input1 formControlName="input1"></cz-dummy-input>
           </div>
         </div>
       </div>
     </form>
-  `
+  `,
 })
 class DummyReactiveComplexFormComponent {
   @ViewChild('input1', { static: true })
   input1!: DummyInputComponent;
+
   form: FormGroup = this.fb.group({
     group1: this.fb.group({
-      arr: this.fb.array([this.fb.group({ input1: [] })])
-    })
+      arr: this.fb.array([this.fb.group({ input1: [] })]),
+    }),
   });
+
   constructor(private fb: FormBuilder) {}
 }
 
 @Component({
-  template: `
-    <lib-dummy-input #input [(ngModel)]="value"></lib-dummy-input>
-  `
+  template: ` <cz-dummy-input #input [(ngModel)]="value"></cz-dummy-input> `,
 })
 class DummyTemplateFormComponent {
   @ViewChild('input', { static: true })
   input!: DummyInputComponent;
-  value: string = '';
+
+  value = '';
 }
 
 describe('ControlComponentComponent', () => {
@@ -69,7 +70,7 @@ describe('ControlComponentComponent', () => {
     beforeEach(async(async () => {
       TestBed.configureTestingModule({
         imports: [ReactiveFormsModule, FormsModule, LoggerModule.forRoot('test')],
-        declarations: [DummyInputComponent, DummyReactiveSimpleFormComponent]
+        declarations: [DummyInputComponent, DummyReactiveSimpleFormComponent],
       });
 
       await TestBed.compileComponents();
@@ -96,7 +97,6 @@ describe('ControlComponentComponent', () => {
     }));
 
     test('should adapt to control change', async(async () => {
-      // tslint:disable-next-line: no-any
       const getOnModelChange = (c: ControlComponent<any>) => (c as any).onModelChange;
 
       const value = 'hello';
@@ -128,7 +128,7 @@ describe('ControlComponentComponent', () => {
     beforeEach(async(async () => {
       TestBed.configureTestingModule({
         imports: [ReactiveFormsModule, FormsModule, LoggerModule.forRoot('test')],
-        declarations: [DummyInputComponent, DummyReactiveComplexFormComponent]
+        declarations: [DummyInputComponent, DummyReactiveComplexFormComponent],
       });
 
       await TestBed.compileComponents();
@@ -158,7 +158,7 @@ describe('ControlComponentComponent', () => {
     beforeEach(async(async () => {
       TestBed.configureTestingModule({
         imports: [ReactiveFormsModule, FormsModule, LoggerModule.forRoot('test')],
-        declarations: [DummyInputComponent, DummyTemplateFormComponent]
+        declarations: [DummyInputComponent, DummyTemplateFormComponent],
       });
 
       await TestBed.compileComponents();
@@ -182,7 +182,6 @@ describe('ControlComponentComponent', () => {
     }));
 
     test('should adapt to control change', async(async () => {
-      // tslint:disable-next-line: no-any
       const getOnModelChange = (c: ControlComponent<any>) => (c as any).onModelChange;
 
       const value = 'hello';

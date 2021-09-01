@@ -5,7 +5,7 @@ import { ImgTooltipComponent } from '../components/img-tooltip/img-tooltip.compo
 import { AbstractTooltipDirective } from './abstract-tooltip.directive';
 
 @Directive({
-  selector: '[appImgTooltip]'
+  selector: '[appImgTooltip]',
 })
 export class ImgTooltipDirective extends AbstractTooltipDirective<ImgTooltipComponent> {
   @Input()

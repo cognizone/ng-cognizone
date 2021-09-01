@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { calculateReadingTimeMinutes } from '@app/core';
 
 @Pipe({
-  name: 'readingTime'
+  name: 'readingTime',
 })
 export class ReadingTimePipe implements PipeTransform {
   transform(value?: string): string {

@@ -4,16 +4,16 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-components-architecture',
   templateUrl: './components-architecture.component.html',
-  styleUrls: ['./components-architecture.component.scss']
+  styleUrls: ['./components-architecture.component.scss'],
 })
 export class ComponentsArchitectureComponent {
   lastUpdate: Date = new Date('2019-11-25');
 
   numberControl: FormControl = new FormControl(2);
 
-  showIntervalComponent: boolean = false;
+  showIntervalComponent = false;
 
-  catExample: string = `
+  catExample = `
   // cats.component.ts
   @Component(/*...*/)
   class CatsComponent {

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnChanges } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 import { HighlightService } from '@app/core/services/highlight.service';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { map } from 'rxjs/operators';
@@ -8,14 +8,14 @@ import { map } from 'rxjs/operators';
   selector: 'app-code-block',
   templateUrl: './code-block.component.html',
   styleUrls: ['./code-block.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CodeBlockComponent extends OnDestroy$ {
   @Input()
   language?: string;
 
   @Input()
-  prefix: string = '';
+  prefix = '';
 
   @Input()
   range?: [number, number];
@@ -64,7 +64,7 @@ export class CodeBlockComponent extends OnDestroy$ {
     this.codeHtml = this.highlightService.highlight(code, language);
   }
 
-  codeHtml: string = '';
+  codeHtml = '';
 
   constructor(private highlightService: HighlightService, private http: HttpClient, private cdr: ChangeDetectorRef) {
     super();

@@ -127,7 +127,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/lib/models/select-option.ts:93</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/lib/models/select-option.ts:95</a></div>
                             </td>
                         </tr>
 
@@ -191,8 +191,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="99"
-                            class="link-to-prism">src/lib/models/select-option.ts:99</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/lib/models/select-option.ts:101</a></div>
                 </td>
             </tr>
 
@@ -273,8 +273,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">src/lib/models/select-option.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/lib/models/select-option.ts:109</a></div>
                 </td>
             </tr>
 
@@ -343,8 +343,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="120"
-                            class="link-to-prism">src/lib/models/select-option.ts:120</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="122"
+                            class="link-to-prism">src/lib/models/select-option.ts:122</a></div>
                 </td>
             </tr>
 
@@ -410,7 +410,8 @@ import { LangString, LangStringSimple } from &#x27;./lang-string&#x27;;
 import { Nil, notNil } from &#x27;./nil&#x27;;
 
 /**
- * Kind of an augmented KeyValue type to be used whenever we have case where a user has to select an option, being it in a select, an autocomplete, etc.
+ * Kind of an augmented KeyValue type to be used whenever we have case where a
+ * user has to select an option, being it in a select, an autocomplete, etc.
  * This is mostly there in an effort of consistency, to have interoperable libraries and data models.
  */
 export interface SelectOption&lt;T &#x3D; string&gt; {
@@ -435,7 +436,7 @@ export interface SelectOption&lt;T &#x3D; string&gt; {
 /**
  * The label of a {@link SelectOption}
  */
-export type SelectOptionLabel &#x3D; string | LangString | LangStringSimple;
+export type SelectOptionLabel &#x3D; LangString | LangStringSimple | string;
 
 /**
  * For consistency, this interface is to be used when needing to use counts for {@link SelectOption}
@@ -493,6 +494,7 @@ export interface GetSelectOptionsParams {
 
 /**
  * Merges multiple SelectOptionsProvider together to form a unified one.
+ *
  * @deprectated
  */
 export class SelectOptionsProvidersMerger&lt;T&gt; implements SelectOptionsProvider&lt;T&gt; {

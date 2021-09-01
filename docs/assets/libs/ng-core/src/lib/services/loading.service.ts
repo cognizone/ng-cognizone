@@ -13,7 +13,8 @@ export class LoadingService implements OnDestroy {
   }
 
   private _loading$: BehaviorSubject<boolean>;
-  private loadingCount: number = 0;
+
+  private loadingCount = 0;
 
   constructor() {
     this._loading$ = new BehaviorSubject<boolean>(false);

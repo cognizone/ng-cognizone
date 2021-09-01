@@ -91,7 +91,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/lib/models/lang-string.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/lib/models/lang-string.ts:18</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -106,8 +106,11 @@
 import { Nil } from &#x27;./nil&#x27;;
 
 /**
- * This represents an rdf:langString as usually indexed in our elastic. Each key is a lang (usually simple, like &#x27;en&#x27; or &#x27;fr&#x27;) and its corersponding value is the label in that language. In here, there can be multiple values, that&#x27;s why it is a &#x60;string[]&#x60;.
- * Also, keys could be more complex, like uri of the languages
+ * This represents an rdf:langString as usually indexed in our elastic. Each key
+ * is a lang (usually simple, like &#x27;en&#x27; or &#x27;fr&#x27;) and its corersponding value is
+ * the label in that language. In here, there can be multiple values, that&#x27;s why
+ * it is a &#x60;string[]&#x60;. Also, keys could be more complex, like uri of the
+ * languages
  */
 export interface LangString {
   [lang: string]: string[];
@@ -121,9 +124,12 @@ export interface LangStringSimple {
 }
 
 /**
- * Extract from a {@link LangString} the label in a corresponding &#x60;lang&#x60;. If not found, it will try extract the label of one of the fallback languages.
+ * Extract from a {@link LangString} the label in a corresponding &#x60;lang&#x60;. If not
+ * found, it will try extract the label of one of the fallback languages.
  * If even there nothing is found, it will fallback to the first label found.
- * It is to be noted that even if the label is a string[] with multiple values, only the 0th element will be taken.
+ * It is to be noted that even if the label is a string[] with multiple values,
+ * only the 0th element will be taken.
+ *
  * @param langString The lang string from which we want to extract a label
  * @param lang The preferred lang to get the label for
  * @param fallbackLangs ordered list of fallback languages

@@ -6,6 +6,6 @@ const routes: Routes = [{ path: '', component: ExternalDocView, data: { libName:
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ModelUtilsDocRoutingModule {}
