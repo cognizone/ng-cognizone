@@ -4,19 +4,23 @@
   "overrides": [
     {
       "files": ["*.ts"],
-      "extends": [
-        "plugin:@nrwl/nx/angular",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ],
-      "parserOptions": { "project": ["libs/model-utils/tsconfig.*?.json"] },
+      "extends": ["plugin:@nrwl/nx/angular", "plugin:@angular-eslint/template/process-inline-templates"],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
-          { "type": "attribute", "prefix": "cz", "style": "camelCase" }
+          {
+            "type": "attribute",
+            "prefix": "cz",
+            "style": "camelCase"
+          }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          { "type": "element", "prefix": "cz", "style": "kebab-case" }
+          {
+            "type": "element",
+            "prefix": "cz",
+            "style": "kebab-case"
+          }
         ]
       }
     },

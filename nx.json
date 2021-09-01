@@ -1,45 +1,121 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": { "defaultBase": "main" },
+  "affected": {
+    "defaultBase": "main"
+  },
   "npmScope": "cz",
   "tasksRunnerOptions": {
-    "default": { "runner": "@nrwl/workspace/tasks-runners/default", "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] } }
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
   },
   "projects": {
-    "ng-core": { "tags": [] },
-    "model-utils": { "tags": [] },
-    "workspace": { "tags": [] },
-    "application-profile": { "tags": [] },
-    "devtools": { "tags": [] },
-    "ng-application-profile": { "tags": [] },
-    "elastic": { "tags": [] },
-    "transloco-langstring": { "tags": [] },
-    "ng-yasgui": { "tags": [] },
-    "docs-app": { "tags": [] },
-    "docs-app-e2e": { "tags": [], "implicitDependencies": ["docs-app"] },
-    "permissions": { "tags": [] },
-    "operation": { "tags": [] },
-    "legi-cv": { "tags": [] },
-    "json-model-graph": { "tags": [] },
-    "material-icons": { "tags": [] },
-    "legi-shared": { "tags": [] },
-    "legi-styles": { "tags": [] },
-    "user-action": { "tags": [] },
-    "elastic-explorer": { "tags": [] },
-    "elastic-explorer-chrome-extension": { "tags": [] },
-    "elastic-explorer-chrome-extension-e2e": { "tags": [], "implicitDependencies": ["elastic-explorer-chrome-extension"] },
-    "cli": { "tags": [] },
-    "i18n": { "tags": [] },
-    "i18n-transloco": { "tags": [] },
-    "eslint-config": { "tags": [] },
-    "prettier-config": { "tags": [] },
-    "tslint-config": { "tags": [] }
+    "application-profile": {
+      "tags": []
+    },
+    "cli": {
+      "tags": []
+    },
+    "devtools": {
+      "tags": []
+    },
+    "docs-app": {
+      "tags": []
+    },
+    "docs-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["docs-app"]
+    },
+    "elastic": {
+      "tags": []
+    },
+    "elastic-explorer": {
+      "tags": []
+    },
+    "elastic-explorer-chrome-extension": {
+      "tags": []
+    },
+    "elastic-explorer-chrome-extension-e2e": {
+      "tags": [],
+      "implicitDependencies": ["elastic-explorer-chrome-extension"]
+    },
+    "eslint-config": {
+      "tags": []
+    },
+    "i18n": {
+      "tags": []
+    },
+    "i18n-transloco": {
+      "tags": []
+    },
+    "json-model-graph": {
+      "tags": []
+    },
+    "legi-cv": {
+      "tags": []
+    },
+    "legi-shared": {
+      "tags": []
+    },
+    "legi-styles": {
+      "tags": []
+    },
+    "material-icons": {
+      "tags": []
+    },
+    "model-utils": {
+      "tags": []
+    },
+    "ng-application-profile": {
+      "tags": []
+    },
+    "ng-core": {
+      "tags": []
+    },
+    "ng-yasgui": {
+      "tags": []
+    },
+    "operation": {
+      "tags": []
+    },
+    "permissions": {
+      "tags": []
+    },
+    "prettier-config": {
+      "tags": []
+    },
+    "transloco-langstring": {
+      "tags": []
+    },
+    "tslint-config": {
+      "tags": []
+    },
+    "user-action": {
+      "tags": []
+    },
+    "workspace": {
+      "tags": []
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }

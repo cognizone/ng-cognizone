@@ -1,5 +1,8 @@
+const { getJestProjects } = require('@nrwl/jest');
+
 module.exports = {
   projects: [
+    ...getJestProjects(),
     '<rootDir>/libs/ng-core',
     '<rootDir>/libs/model-utils',
     '<rootDir>/libs/application-profile',

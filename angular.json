@@ -32,85 +32,6 @@
     }
   },
   "projects": {
-    "ng-core": {
-      "projectType": "library",
-      "root": "libs/ng-core",
-      "sourceRoot": "libs/ng-core/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/ng-core/tsconfig.lib.json",
-            "project": "libs/ng-core/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/ng-core/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/ng-core/src/**/*.ts", "libs/ng-core/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ng-core"],
-          "options": {
-            "jestConfig": "libs/ng-core/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "model-utils": {
-      "projectType": "library",
-      "root": "libs/model-utils",
-      "sourceRoot": "libs/model-utils/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/model-utils/tsconfig.lib.json",
-            "project": "libs/model-utils/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/model-utils/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/model-utils/src/**/*.ts", "libs/model-utils/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/model-utils"],
-          "options": {
-            "jestConfig": "libs/model-utils/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "workspace": {
-      "architect": {
-        "version": {
-          "builder": "@jscutlery/semver:version",
-          "options": {
-            "syncVersions": true
-          }
-        }
-      },
-      "root": "."
-    },
     "application-profile": {
       "projectType": "library",
       "root": "libs/application-profile",
@@ -132,18 +53,30 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/application-profile/src/**/*.ts", "libs/application-profile/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/application-profile/src/**/*.ts",
+              "libs/application-profile/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/application-profile"],
+          "outputs": [
+            "coverage/libs/application-profile"
+          ],
           "options": {
             "jestConfig": "libs/application-profile/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
+    },
+    "cli": {
+      "projectType": "library",
+      "root": "libs/cli",
+      "sourceRoot": "libs/cli/src",
+      "prefix": "cz",
+      "architect": {}
     },
     "devtools": {
       "projectType": "library",
@@ -166,150 +99,19 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/devtools/src/**/*.ts", "libs/devtools/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/devtools/src/**/*.ts",
+              "libs/devtools/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/devtools"],
+          "outputs": [
+            "coverage/libs/devtools"
+          ],
           "options": {
             "jestConfig": "libs/devtools/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "ng-application-profile": {
-      "projectType": "library",
-      "root": "libs/ng-application-profile",
-      "sourceRoot": "libs/ng-application-profile/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/ng-application-profile/tsconfig.lib.json",
-            "project": "libs/ng-application-profile/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/ng-application-profile/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/ng-application-profile/src/**/*.ts", "libs/ng-application-profile/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ng-application-profile"],
-          "options": {
-            "jestConfig": "libs/ng-application-profile/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "elastic": {
-      "projectType": "library",
-      "root": "libs/elastic",
-      "sourceRoot": "libs/elastic/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/elastic/tsconfig.lib.json",
-            "project": "libs/elastic/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/elastic/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/elastic/src/**/*.ts", "libs/elastic/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/elastic"],
-          "options": {
-            "jestConfig": "libs/elastic/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "transloco-langstring": {
-      "projectType": "library",
-      "root": "libs/transloco-langstring",
-      "sourceRoot": "libs/transloco-langstring/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/transloco-langstring/tsconfig.lib.json",
-            "project": "libs/transloco-langstring/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/transloco-langstring/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/transloco-langstring/src/**/*.ts", "libs/transloco-langstring/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/transloco-langstring"],
-          "options": {
-            "jestConfig": "libs/transloco-langstring/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "ng-yasgui": {
-      "projectType": "library",
-      "root": "libs/ng-yasgui",
-      "sourceRoot": "libs/ng-yasgui/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/ng-yasgui/tsconfig.lib.json",
-            "project": "libs/ng-yasgui/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/ng-yasgui/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/ng-yasgui/src/**/*.ts", "libs/ng-yasgui/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ng-yasgui"],
-          "options": {
-            "jestConfig": "libs/ng-yasgui/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -329,7 +131,6 @@
             "main": "apps/docs-app/src/main.ts",
             "polyfills": "apps/docs-app/src/polyfills.ts",
             "tsConfig": "apps/docs-app/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/docs-app/src/favicon.ico",
               "apps/docs-app/src/assets",
@@ -360,10 +161,20 @@
               }
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["apps/docs-app/src/styles"]
+              "includePaths": [
+                "apps/docs-app/src/styles"
+              ]
             },
-            "styles": ["apps/docs-app/src/styles/main.scss"],
-            "scripts": []
+            "styles": [
+              "apps/docs-app/src/styles/main.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -393,7 +204,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -415,12 +227,17 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/docs-app/src/**/*.ts", "apps/docs-app/src/**/*.html"]
+            "lintFilePatterns": [
+              "apps/docs-app/src/**/*.ts",
+              "apps/docs-app/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/docs-app"],
+          "outputs": [
+            "coverage/apps/docs-app"
+          ],
           "options": {
             "jestConfig": "apps/docs-app/jest.config.js",
             "passWithNoTests": true
@@ -449,259 +266,47 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/docs-app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/docs-app-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
     },
-    "permissions": {
+    "elastic": {
       "projectType": "library",
-      "root": "libs/permissions",
-      "sourceRoot": "libs/permissions/src",
+      "root": "libs/elastic",
+      "sourceRoot": "libs/elastic/src",
       "prefix": "cz",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:package",
           "options": {
-            "tsConfig": "libs/permissions/tsconfig.lib.json",
-            "project": "libs/permissions/ng-package.json"
+            "tsConfig": "libs/elastic/tsconfig.lib.json",
+            "project": "libs/elastic/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "libs/permissions/tsconfig.lib.prod.json"
+              "tsConfig": "libs/elastic/tsconfig.lib.prod.json"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/permissions/src/**/*.ts", "libs/permissions/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/elastic/src/**/*.ts",
+              "libs/elastic/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/permissions"],
+          "outputs": [
+            "coverage/libs/elastic"
+          ],
           "options": {
-            "jestConfig": "libs/permissions/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "operation": {
-      "projectType": "library",
-      "root": "libs/operation",
-      "sourceRoot": "libs/operation/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/operation/tsconfig.lib.json",
-            "project": "libs/operation/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/operation/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/operation/src/**/*.ts", "libs/operation/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/operation"],
-          "options": {
-            "jestConfig": "libs/operation/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "legi-cv": {
-      "projectType": "library",
-      "root": "libs/legi-cv",
-      "sourceRoot": "libs/legi-cv/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/legi-cv/tsconfig.lib.json",
-            "project": "libs/legi-cv/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/legi-cv/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/legi-cv/src/**/*.ts", "libs/legi-cv/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/legi-cv"],
-          "options": {
-            "jestConfig": "libs/legi-cv/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "json-model-graph": {
-      "projectType": "library",
-      "root": "libs/json-model-graph",
-      "sourceRoot": "libs/json-model-graph/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/json-model-graph/tsconfig.lib.json",
-            "project": "libs/json-model-graph/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/json-model-graph/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/json-model-graph/src/**/*.ts", "libs/json-model-graph/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/json-model-graph"],
-          "options": {
-            "jestConfig": "libs/json-model-graph/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "material-icons": {
-      "projectType": "library",
-      "root": "libs/material-icons",
-      "sourceRoot": "libs/material-icons/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/material-icons/tsconfig.lib.json",
-            "project": "libs/material-icons/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/material-icons/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/material-icons/src/**/*.ts", "libs/material-icons/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/material-icons"],
-          "options": {
-            "jestConfig": "libs/material-icons/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "legi-shared": {
-      "projectType": "library",
-      "root": "libs/legi-shared",
-      "sourceRoot": "libs/legi-shared/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/legi-shared/tsconfig.lib.json",
-            "project": "libs/legi-shared/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/legi-shared/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/legi-shared/src/**/*.ts", "libs/legi-shared/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/legi-shared"],
-          "options": {
-            "jestConfig": "libs/legi-shared/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "legi-styles": {
-      "projectType": "library",
-      "root": "libs/legi-styles",
-      "sourceRoot": "libs/legi-styles/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "./tools/executors/build-assets:build-assets",
-          "options": {
-            "root": "libs/legi-styles",
-            "dist": "dist/libs/legi-styles"
-          }
-        }
-      }
-    },
-    "user-action": {
-      "projectType": "library",
-      "root": "libs/user-action",
-      "sourceRoot": "libs/user-action/src",
-      "prefix": "cz",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/user-action/tsconfig.lib.json",
-            "project": "libs/user-action/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/user-action/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/user-action/src/**/*.ts", "libs/user-action/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/user-action"],
-          "options": {
-            "jestConfig": "libs/user-action/jest.config.js",
+            "jestConfig": "libs/elastic/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -728,12 +333,17 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/elastic-explorer/src/**/*.ts", "libs/elastic-explorer/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/elastic-explorer/src/**/*.ts",
+              "libs/elastic-explorer/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/elastic-explorer"],
+          "outputs": [
+            "coverage/libs/elastic-explorer"
+          ],
           "options": {
             "jestConfig": "libs/elastic-explorer/jest.config.js",
             "passWithNoTests": true
@@ -755,7 +365,6 @@
             "main": "apps/elastic-explorer-chrome-extension/src/main.ts",
             "polyfills": "apps/elastic-explorer-chrome-extension/src/polyfills.ts",
             "tsConfig": "apps/elastic-explorer-chrome-extension/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/elastic-explorer-chrome-extension/src/favicon.ico",
               "apps/elastic-explorer-chrome-extension/src/assets",
@@ -772,11 +381,21 @@
                 "output": "./assets/min-maps/"
               }
             ],
-            "styles": ["apps/elastic-explorer-chrome-extension/src/styles/main.scss"],
+            "styles": [
+              "apps/elastic-explorer-chrome-extension/src/styles/main.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["apps/elastic-explorer-chrome-extension/src/styles"]
+              "includePaths": [
+                "apps/elastic-explorer-chrome-extension/src/styles"
+              ]
             },
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -806,7 +425,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -836,7 +456,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/elastic-explorer-chrome-extension"],
+          "outputs": [
+            "coverage/apps/elastic-explorer-chrome-extension"
+          ],
           "options": {
             "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.js",
             "passWithNoTests": true
@@ -865,17 +487,27 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/elastic-explorer-chrome-extension-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/elastic-explorer-chrome-extension-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
     },
-    "cli": {
+    "eslint-config": {
       "projectType": "library",
-      "root": "libs/cli",
-      "sourceRoot": "libs/cli/src",
+      "root": "libs/eslint-config",
+      "sourceRoot": "libs/eslint-config/src",
       "prefix": "cz",
-      "architect": {}
+      "architect": {
+        "build": {
+          "builder": "./tools/executors/build-assets:build-assets",
+          "options": {
+            "root": "libs/eslint-config",
+            "dist": "dist/libs/eslint-config"
+          }
+        }
+      }
     },
     "i18n": {
       "projectType": "library",
@@ -898,12 +530,17 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/i18n/src/**/*.ts", "libs/i18n/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/i18n/src/**/*.ts",
+              "libs/i18n/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/i18n"],
+          "outputs": [
+            "coverage/libs/i18n"
+          ],
           "options": {
             "jestConfig": "libs/i18n/jest.config.js",
             "passWithNoTests": true
@@ -932,12 +569,17 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/i18n-transloco/src/**/*.ts", "libs/i18n-transloco/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/i18n-transloco/src/**/*.ts",
+              "libs/i18n-transloco/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/i18n-transloco"],
+          "outputs": [
+            "coverage/libs/i18n-transloco"
+          ],
           "options": {
             "jestConfig": "libs/i18n-transloco/jest.config.js",
             "passWithNoTests": true
@@ -945,17 +587,407 @@
         }
       }
     },
-    "eslint-config": {
+    "json-model-graph": {
       "projectType": "library",
-      "root": "libs/eslint-config",
-      "sourceRoot": "libs/eslint-config/src",
+      "root": "libs/json-model-graph",
+      "sourceRoot": "libs/json-model-graph/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/json-model-graph/tsconfig.lib.json",
+            "project": "libs/json-model-graph/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/json-model-graph/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/json-model-graph/src/**/*.ts",
+              "libs/json-model-graph/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/json-model-graph"
+          ],
+          "options": {
+            "jestConfig": "libs/json-model-graph/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "legi-cv": {
+      "projectType": "library",
+      "root": "libs/legi-cv",
+      "sourceRoot": "libs/legi-cv/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/legi-cv/tsconfig.lib.json",
+            "project": "libs/legi-cv/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/legi-cv/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/legi-cv/src/**/*.ts",
+              "libs/legi-cv/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/legi-cv"
+          ],
+          "options": {
+            "jestConfig": "libs/legi-cv/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "legi-shared": {
+      "projectType": "library",
+      "root": "libs/legi-shared",
+      "sourceRoot": "libs/legi-shared/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/legi-shared/tsconfig.lib.json",
+            "project": "libs/legi-shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/legi-shared/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/legi-shared/src/**/*.ts",
+              "libs/legi-shared/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/legi-shared"
+          ],
+          "options": {
+            "jestConfig": "libs/legi-shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "legi-styles": {
+      "projectType": "library",
+      "root": "libs/legi-styles",
+      "sourceRoot": "libs/legi-styles/src",
       "prefix": "cz",
       "architect": {
         "build": {
           "builder": "./tools/executors/build-assets:build-assets",
           "options": {
-            "root": "libs/eslint-config",
-            "dist": "dist/libs/eslint-config"
+            "root": "libs/legi-styles",
+            "dist": "dist/libs/legi-styles"
+          }
+        }
+      }
+    },
+    "material-icons": {
+      "projectType": "library",
+      "root": "libs/material-icons",
+      "sourceRoot": "libs/material-icons/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/material-icons/tsconfig.lib.json",
+            "project": "libs/material-icons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/material-icons/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/material-icons/src/**/*.ts",
+              "libs/material-icons/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/material-icons"
+          ],
+          "options": {
+            "jestConfig": "libs/material-icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "model-utils": {
+      "projectType": "library",
+      "root": "libs/model-utils",
+      "sourceRoot": "libs/model-utils/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/model-utils/tsconfig.lib.json",
+            "project": "libs/model-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/model-utils/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/model-utils/src/**/*.ts",
+              "libs/model-utils/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/model-utils"
+          ],
+          "options": {
+            "jestConfig": "libs/model-utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ng-application-profile": {
+      "projectType": "library",
+      "root": "libs/ng-application-profile",
+      "sourceRoot": "libs/ng-application-profile/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ng-application-profile/tsconfig.lib.json",
+            "project": "libs/ng-application-profile/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-application-profile/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ng-application-profile/src/**/*.ts",
+              "libs/ng-application-profile/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ng-application-profile"
+          ],
+          "options": {
+            "jestConfig": "libs/ng-application-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ng-core": {
+      "projectType": "library",
+      "root": "libs/ng-core",
+      "sourceRoot": "libs/ng-core/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ng-core/tsconfig.lib.json",
+            "project": "libs/ng-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-core/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ng-core/src/**/*.ts",
+              "libs/ng-core/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ng-core"
+          ],
+          "options": {
+            "jestConfig": "libs/ng-core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ng-yasgui": {
+      "projectType": "library",
+      "root": "libs/ng-yasgui",
+      "sourceRoot": "libs/ng-yasgui/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ng-yasgui/tsconfig.lib.json",
+            "project": "libs/ng-yasgui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-yasgui/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ng-yasgui/src/**/*.ts",
+              "libs/ng-yasgui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ng-yasgui"
+          ],
+          "options": {
+            "jestConfig": "libs/ng-yasgui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "operation": {
+      "projectType": "library",
+      "root": "libs/operation",
+      "sourceRoot": "libs/operation/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/operation/tsconfig.lib.json",
+            "project": "libs/operation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/operation/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/operation/src/**/*.ts",
+              "libs/operation/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/operation"
+          ],
+          "options": {
+            "jestConfig": "libs/operation/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "permissions": {
+      "projectType": "library",
+      "root": "libs/permissions",
+      "sourceRoot": "libs/permissions/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/permissions/tsconfig.lib.json",
+            "project": "libs/permissions/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/permissions/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/permissions/src/**/*.ts",
+              "libs/permissions/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/permissions"
+          ],
+          "options": {
+            "jestConfig": "libs/permissions/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
@@ -975,6 +1007,45 @@
         }
       }
     },
+    "transloco-langstring": {
+      "projectType": "library",
+      "root": "libs/transloco-langstring",
+      "sourceRoot": "libs/transloco-langstring/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/transloco-langstring/tsconfig.lib.json",
+            "project": "libs/transloco-langstring/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/transloco-langstring/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/transloco-langstring/src/**/*.ts",
+              "libs/transloco-langstring/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/transloco-langstring"
+          ],
+          "options": {
+            "jestConfig": "libs/transloco-langstring/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "tslint-config": {
       "projectType": "library",
       "root": "libs/tslint-config",
@@ -989,6 +1060,56 @@
           }
         }
       }
+    },
+    "user-action": {
+      "projectType": "library",
+      "root": "libs/user-action",
+      "sourceRoot": "libs/user-action/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/user-action/tsconfig.lib.json",
+            "project": "libs/user-action/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/user-action/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/user-action/src/**/*.ts",
+              "libs/user-action/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/user-action"
+          ],
+          "options": {
+            "jestConfig": "libs/user-action/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "workspace": {
+      "architect": {
+        "version": {
+          "builder": "@jscutlery/semver:version",
+          "options": {
+            "syncVersions": true
+          }
+        }
+      },
+      "root": "."
     }
   }
 }

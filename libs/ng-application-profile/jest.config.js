@@ -4,19 +4,18 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
-      tsConfig: '<rootDir>/tsconfig.spec.json',
       stringifyContentPathRegex: '\\.(html|svg)$',
-      astTransformers: {
-        before: ['jest-preset-angular/build/InlineFilesTransformer', 'jest-preset-angular/build/StripStylesTransformer']
-      }
-    }
+
+      tsconfig: '<rootDir>/tsconfig.spec.json',
+    },
   },
   transformIgnorePatterns: ['node_modules/(?!lodash-es)'],
   testPathIgnorePatterns: ['.*'], // TODO fix lodash-es import for tests
   coverageDirectory: '../../coverage/libs/ng-application-profile',
   snapshotSerializers: [
-    'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
-    'jest-preset-angular/build/AngularSnapshotSerializer.js',
-    'jest-preset-angular/build/HTMLCommentSerializer.js'
-  ]
+    'jest-preset-angular/build/serializers/no-ng-attributes',
+    'jest-preset-angular/build/serializers/ng-snapshot',
+    'jest-preset-angular/build/serializers/html-comment',
+  ],
+  transform: { '^.+\\.(ts|js|html)$': 'jest-preset-angular' },
 };
