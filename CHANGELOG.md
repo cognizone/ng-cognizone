@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/cognizone/ng-cognizone/compare/v2.2.0...v2.3.0) (2021-09-01)
+
+
+### Features
+
+* updated to angular 12, but not shipping ivy yet ([c9a4052](https://github.com/cognizone/ng-cognizone/commit/c9a405298d3e4a8206003d3d18200442e6877d23))
+
 # [2.2.0](https://github.com/cognizone/ng-cognizone/compare/v2.1.11...v2.2.0) (2021-08-31)
 
 
