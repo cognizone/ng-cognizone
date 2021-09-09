@@ -35,7 +35,7 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm i --verbose
+      - run: npm i
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
       # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
