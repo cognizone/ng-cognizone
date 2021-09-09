@@ -1,7 +1,7 @@
 {
   "name": "@cognizone/cli",
   "description": "a cool cli for cool devs",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "author": "William Chelman @WilliamChelman",
   "bin": {
     "cz-cli": "./bin/run"

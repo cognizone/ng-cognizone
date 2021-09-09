@@ -1,3 +1,11 @@
+## [2.3.1](https://github.com/cognizone/ng-cognizone/compare/v2.3.0...v2.3.1) (2021-09-09)
+
+
+### Bug Fixes
+
+* **application-profile:** better logging of issues ([95f8b8e](https://github.com/cognizone/ng-cognizone/commit/95f8b8e6eb4c16b52dabecf29c258d627cb96a22))
+* **legi-cv:** more lenient way to detect Concept ([47ab834](https://github.com/cognizone/ng-cognizone/commit/47ab83480adb3d68b28aec661ea96d69acba2a03))
+
 # [2.3.0](https://github.com/cognizone/ng-cognizone/compare/v2.2.0...v2.3.0) (2021-09-01)
 
 
