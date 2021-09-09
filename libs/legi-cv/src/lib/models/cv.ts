@@ -1,5 +1,5 @@
 import { LangString, LangStringSimple } from '@cognizone/model-utils';
-import { isJsonModel, isOfType } from '@cognizone/ng-application-profile';
+import { isJsonModel } from '@cognizone/ng-application-profile';
 
 import { Concept } from './concept';
 
@@ -47,5 +47,5 @@ export function areConcepts<T extends Concept>(concepts: (ConceptGroup<T> | T)[]
 }
 
 export function isConcept(o: unknown): o is Concept {
-  return isJsonModel(o) && isOfType(o, 'Concept');
+  return isJsonModel(o);
 }
