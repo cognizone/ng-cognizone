@@ -1,4 +1,4 @@
-import { Many, manyToArray } from '@cognizone/model-utils';
+import { Many, manyToArray, notNil } from '@cognizone/model-utils';
 
 import { ApplicationProfile } from '../models/application-profile';
 import { isRdfTypesRule, isSubClassOfRule } from '../models/rule';
@@ -9,7 +9,17 @@ export function getConcreteType(ap: ApplicationProfile, classIds: Many<string>):
     throw new Error('Failed to find most concrete type in empty list');
   }
   if (classIdsList.length === 1) return classIdsList[0];
-  const hasSubClassOfRule = classIdsList.map(classId => ap.types[classId]).some(typeProfile => typeProfile.rules.some(isSubClassOfRule));
+  const hasSubClassOfRule = classIdsList
+    .map(classId => {
+      const typeProfile = ap.types[classId];
+      if (!typeProfile) {
+        console.warn(`Failed to find class '${classId}' in AP while searching for concrete type in [${classIdsList.join(', ')}], skipping`);
+        return undefined;
+      }
+      return typeProfile;
+    })
+    .filter(notNil)
+    .some(typeProfile => typeProfile.rules.some(isSubClassOfRule));
 
   if (hasSubClassOfRule) {
     return getConcreteTypeFromSubClassOfRules(ap, classIdsList);
