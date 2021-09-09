@@ -12,7 +12,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.2.0
         with:
-          node-version: 14.x
+          node-version: 14.15.x
       - name: Git checkout
         uses: actions/checkout@v2
         with:
