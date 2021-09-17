@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/cognizone/ng-cognizone/compare/v2.3.1...v2.3.2) (2021-09-17)
+
+
+### Bug Fixes
+
+* **cli:** better sort-ap, handles imports ([570ef78](https://github.com/cognizone/ng-cognizone/commit/570ef78e6d46ca46ffc31be10904b9ad6b03c351))
+
 ## [2.3.1](https://github.com/cognizone/ng-cognizone/compare/v2.3.0...v2.3.1) (2021-09-09)
 
 
