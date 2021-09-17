@@ -22,11 +22,10 @@ export default class SortAp extends Command {
   async run(): Promise<void> {
     const { args } = this.parse(SortAp);
     const { path } = args;
-    console.log('🚀 ~ SortAp ~ path', path);
     let ap = JsonService.readJsonSync(path) as any;
-    ap = this.getSortedObject(ap, ['uri'], 'uri');
+    ap = this.getSortedObject(ap, ['uri', 'imports'], 'uri');
     Object.keys(ap)
-      .filter(key => typeof ap[key] === 'object')
+      .filter(key => typeof ap[key] === 'object' && !Array.isArray(ap[key]))
       .forEach(typeKey => {
         ap[typeKey] = this.getSortedObject(ap[typeKey], ['constraints'], 'uri');
         Object.keys(ap[typeKey])
