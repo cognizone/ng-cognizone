@@ -2,13 +2,22 @@ import { Injectable, Provider } from '@angular/core';
 import { I18nService } from '@cognizone/i18n';
 import { CzLabel, czLabelToString } from '@cognizone/model-utils';
 import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoLocaleService } from '@ngneat/transloco-locale';
 import { Observable, of } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 @Injectable()
 export class I18nTranslocoService extends I18nService {
-  constructor(private transloco: TranslocoService) {
+  constructor(private transloco: TranslocoService, private translocoLocaleService: TranslocoLocaleService) {
     super();
+  }
+
+  selectActiveLocale(): Observable<string> {
+    return this.translocoLocaleService.localeChanges$.pipe(startWith(this.translocoLocaleService.getLocale()));
+  }
+
+  getActiveLocale(): string {
+    return this.translocoLocaleService.getLocale();
   }
 
   selectActiveSimpleLang(): Observable<string> {
@@ -31,10 +40,10 @@ export class I18nTranslocoService extends I18nService {
   }
 
   translate<T = unknown>(value: CzLabel, params?: {}, lang?: string): T {
-    if (!value) return (undefined as unknown) as T;
+    if (!value) return undefined as unknown as T;
     if (typeof value === 'string') return this.transloco.translate(value, params, lang);
 
-    return (czLabelToString(value, this.getActiveSimpleLang(), this.getAvailableSimpleLangs()) as unknown) as T;
+    return czLabelToString(value, this.getActiveSimpleLang(), this.getAvailableSimpleLangs()) as unknown as T;
   }
 
   czLabelToString(value: CzLabel, lang: string = this.getActiveSimpleLang()): string {

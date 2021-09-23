@@ -1,3 +1,4 @@
+const esModules = ['lodash-es'].join('|');
 module.exports = {
   displayName: 'json-model-graph',
   preset: '../../jest.preset.js',
@@ -9,7 +10,6 @@ module.exports = {
       tsconfig: '<rootDir>/tsconfig.spec.json',
     },
   },
-  testPathIgnorePatterns: ['.*'], // TODO fix lodash-es import for tests
   coverageDirectory: '../../coverage/libs/json-model-graph',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
@@ -17,4 +17,7 @@ module.exports = {
     'jest-preset-angular/build/serializers/html-comment',
   ],
   transform: { '^.+\\.(ts|js|html)$': 'jest-preset-angular' },
+  moduleNameMapper: {
+    '^lodash-es$': 'lodash',
+  },
 };

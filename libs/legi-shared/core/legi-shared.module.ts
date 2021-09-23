@@ -36,7 +36,7 @@ export class LegiSharedModule {
 export function dateLocaleHandlerFactory(i18nService: I18nService, adapter: DateAdapter<unknown>, options: LegiSharedOptions): Function {
   const x = () => {
     if (options.useDefaultMomentLocaleAdapter) {
-      i18nService.selectActiveLang().subscribe(lang => {
+      i18nService.selectActiveLocale().subscribe(lang => {
         adapter.setLocale(lang);
       });
     }

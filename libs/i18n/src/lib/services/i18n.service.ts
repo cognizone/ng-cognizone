@@ -27,6 +27,17 @@ export abstract class I18nService {
   abstract getActiveLang(): string;
 
   /**
+   * @returns the currently active locale in the app
+   */
+  abstract selectActiveLocale(): Observable<string>;
+
+  /**
+   * @returns the currently active lang in the app, in a short ('en') or long
+   * ('en-BE') format.
+   */
+  abstract getActiveLocale(): string;
+
+  /**
    *
    * @returns the translation associated to the given `key`, using `params` and
    * in the corresponding `lang`

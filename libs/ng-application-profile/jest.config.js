@@ -10,7 +10,6 @@ module.exports = {
     },
   },
   transformIgnorePatterns: ['node_modules/(?!lodash-es)'],
-  testPathIgnorePatterns: ['.*'], // TODO fix lodash-es import for tests
   coverageDirectory: '../../coverage/libs/ng-application-profile',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
@@ -18,4 +17,7 @@ module.exports = {
     'jest-preset-angular/build/serializers/html-comment',
   ],
   transform: { '^.+\\.(ts|js|html)$': 'jest-preset-angular' },
+  moduleNameMapper: {
+    '^lodash-es$': 'lodash',
+  },
 };
