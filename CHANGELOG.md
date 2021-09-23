@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/cognizone/ng-cognizone/compare/v2.3.2...v2.4.0) (2021-09-23)
+
+
+### Features
+
+* **i18n:** adding missing locale handling ([684936e](https://github.com/cognizone/ng-cognizone/commit/684936e3fe9dfaf82e15b70536dea6a4d2b1f1bb))
+
 ## [2.3.2](https://github.com/cognizone/ng-cognizone/compare/v2.3.1...v2.3.2) (2021-09-17)
 
 
