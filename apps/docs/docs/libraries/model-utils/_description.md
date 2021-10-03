@@ -1,0 +1,1 @@
+This library aims to provide utility models and functions, a bit like [lodash](https://lodash.com/), but on a smaller scale. It also presents some model that we see and use a lot in Cognizone's applications.
