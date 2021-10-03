@@ -19,24 +19,19 @@ jobs:
         run: |
           git config --local user.email "$(git log --format='%ae' HEAD^!)"
           git config --local user.name "$(git log --format='%an' HEAD^!)"
-      - name: Cache node modules global
+      - name: Cache docs node modules
         uses: actions/cache@v2
         env:
-          cache-name: cache-node-modules
+          cache-name: cache-node-modules-docs
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - name: Cache node modules local
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules-local
-        with:
-          path: ./node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm i
-      - run: npm run build-compodoc
-      - run: npx rimraf ./docs
-      - run: npm run nx -- run docs-app:build --prod --base-href=/ng-cognizone/ --deploy-url=/ng-cognizone/
+          path: ./apps/docs/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./apps/docs/package-lock.json') }}
+      - name: 'Build docs'
+        run: |
+          cd ./apps/docs
+          npm i
+          npm run build
       - run: git add ./docs
+      - run: git add ./apps/docs
       - run: git commit -m="[skip ci] deploy docs-app"
       - run: git push
