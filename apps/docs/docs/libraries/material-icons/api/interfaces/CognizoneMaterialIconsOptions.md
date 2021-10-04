@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/material-icons/src/lib/models/cognizone-material-icons-options.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/models/cognizone-material-icons-options.ts#L12)
+[libs/material-icons/src/lib/models/cognizone-material-icons-options.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/models/cognizone-material-icons-options.ts#L12)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/material-icons/src/lib/models/cognizone-material-icons-options.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/models/cognizone-material-icons-options.ts#L13)
+[libs/material-icons/src/lib/models/cognizone-material-icons-options.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/models/cognizone-material-icons-options.ts#L13)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[libs/material-icons/src/lib/models/cognizone-material-icons-options.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/models/cognizone-material-icons-options.ts#L14)
+[libs/material-icons/src/lib/models/cognizone-material-icons-options.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/models/cognizone-material-icons-options.ts#L14)

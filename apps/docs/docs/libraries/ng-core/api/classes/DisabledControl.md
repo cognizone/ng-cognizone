@@ -24,7 +24,7 @@ FormControl.constructor
 
 #### Defined in
 
-[libs/ng-core/src/lib/models/disabled-control.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/models/disabled-control.ts#L4)
+[libs/ng-core/src/lib/models/disabled-control.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/models/disabled-control.ts#L4)
 
 ## Properties
 
@@ -601,7 +601,7 @@ FormControl.enable
 
 #### Defined in
 
-[libs/ng-core/src/lib/models/disabled-control.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/models/disabled-control.ts#L9)
+[libs/ng-core/src/lib/models/disabled-control.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/models/disabled-control.ts#L9)
 
 ___
 

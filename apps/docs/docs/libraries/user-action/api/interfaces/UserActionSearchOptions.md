@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:105](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L105)
+[libs/user-action/src/lib/service/user-action.service.ts:105](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L105)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:103](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L103)
+[libs/user-action/src/lib/service/user-action.service.ts:103](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L103)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:104](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L104)
+[libs/user-action/src/lib/service/user-action.service.ts:104](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L104)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:100](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L100)
+[libs/user-action/src/lib/service/user-action.service.ts:100](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L100)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:106](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L106)
+[libs/user-action/src/lib/service/user-action.service.ts:106](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L106)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:101](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L101)
+[libs/user-action/src/lib/service/user-action.service.ts:101](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L101)
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:102](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L102)
+[libs/user-action/src/lib/service/user-action.service.ts:102](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L102)

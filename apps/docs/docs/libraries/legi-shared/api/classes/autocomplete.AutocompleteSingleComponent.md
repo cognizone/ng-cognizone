@@ -53,7 +53,7 @@ ControlComponent&lt;T\&gt;.constructor
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L112)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L112)
 
 ## Properties
 
@@ -67,7 +67,7 @@ ControlComponent.\_model
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L63)
+[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L63)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:107](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L107)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:107](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L107)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:109](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L109)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:109](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L109)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:77](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L77)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:77](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L77)
 
 ___
 
@@ -121,7 +121,7 @@ ControlComponent.controlChanged
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L61)
+[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L61)
 
 ___
 
@@ -145,7 +145,7 @@ ControlComponent.defaultValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L59)
+[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L59)
 
 ___
 
@@ -159,7 +159,7 @@ ControlComponent.disabled
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L53)
+[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L53)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:133](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L133)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:133](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L133)
 
 ___
 
@@ -197,7 +197,7 @@ ControlComponent.embeddedControl
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:55](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L55)
+[libs/ng-core/src/lib/components/control.component.ts:55](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L55)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:79](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L79)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:79](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L79)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:43](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L43)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:43](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L43)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L45)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L45)
 
 ___
 
@@ -247,7 +247,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:67](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L67)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:67](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L67)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:101](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L101)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:101](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L101)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:90](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L90)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:90](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L90)
 
 ___
 
@@ -281,7 +281,7 @@ ControlComponent.name
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L23)
+[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L23)
 
 ___
 
@@ -295,7 +295,7 @@ ControlComponent.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -309,7 +309,7 @@ ControlComponent.onModelChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L129)
+[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L129)
 
 ___
 
@@ -323,7 +323,7 @@ ControlComponent.onModelTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L131)
+[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L131)
 
 ___
 
@@ -333,7 +333,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:81](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L81)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:81](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L81)
 
 ___
 
@@ -343,7 +343,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:72](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L72)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:72](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L72)
 
 ___
 
@@ -353,7 +353,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L41)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L41)
 
 ___
 
@@ -363,7 +363,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:88](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L88)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:88](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L88)
 
 ___
 
@@ -373,7 +373,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:110](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L110)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:110](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L110)
 
 ___
 
@@ -383,7 +383,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:75](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L75)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:75](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L75)
 
 ___
 
@@ -397,7 +397,7 @@ ControlComponent.required
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L20)
+[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L20)
 
 ___
 
@@ -407,7 +407,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:84](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L84)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:84](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L84)
 
 ___
 
@@ -417,7 +417,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:86](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L86)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:86](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L86)
 
 ___
 
@@ -427,7 +427,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:70](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L70)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:70](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L70)
 
 ___
 
@@ -437,7 +437,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:108](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L108)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:108](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L108)
 
 ___
 
@@ -451,7 +451,7 @@ ControlComponent.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -461,7 +461,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:142](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L142)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:142](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L142)
 
 ___
 
@@ -475,7 +475,7 @@ ControlComponent.valueChanges
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L57)
+[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L57)
 
 ___
 
@@ -547,7 +547,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:103](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L103)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:103](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L103)
 
 ___
 
@@ -561,7 +561,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L36)
+[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L36)
 
 • `set` **formControl**(`value`): `void`
 
@@ -577,7 +577,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L40)
+[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L40)
 
 ___
 
@@ -591,7 +591,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L26)
+[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L26)
 
 • `set` **formControlName**(`value`): `void`
 
@@ -607,7 +607,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L30)
+[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L30)
 
 ___
 
@@ -621,7 +621,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:97](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L97)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:97](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L97)
 
 • `set` **model**(`val`): `void`
 
@@ -637,7 +637,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:92](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L92)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:92](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L92)
 
 ___
 
@@ -651,7 +651,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L53)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L53)
 
 • `set` **options**(`value`): `void`
 
@@ -667,7 +667,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L47)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L47)
 
 ___
 
@@ -681,7 +681,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:62](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L62)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:62](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L62)
 
 • `set` **optionsProvider**(`value`): `void`
 
@@ -697,7 +697,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:58](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L58)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:58](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L58)
 
 ## Methods
 
@@ -711,7 +711,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:220](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L220)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:220](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L220)
 
 ___
 
@@ -725,7 +725,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:173](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L173)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:173](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L173)
 
 ___
 
@@ -749,7 +749,7 @@ ControlComponent.embeddedValueToValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L123)
+[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L123)
 
 ___
 
@@ -767,7 +767,7 @@ ControlComponent.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -791,7 +791,7 @@ ControlComponent.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -815,7 +815,7 @@ OnChanges.ngOnChanges
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:127](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L127)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:127](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L127)
 
 ___
 
@@ -858,7 +858,7 @@ ControlComponent.ngOnInit
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:122](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L122)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:122](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L122)
 
 ___
 
@@ -878,7 +878,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:144](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L144)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:144](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L144)
 
 ___
 
@@ -892,7 +892,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:164](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L164)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:164](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L164)
 
 ___
 
@@ -906,7 +906,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:178](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L178)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:178](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L178)
 
 ___
 
@@ -930,7 +930,7 @@ ControlComponent.registerOnChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L96)
+[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L96)
 
 ___
 
@@ -954,7 +954,7 @@ ControlComponent.registerOnTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L100)
+[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L100)
 
 ___
 
@@ -978,7 +978,7 @@ ControlComponent.setDisabledState
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:149](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L149)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:149](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L149)
 
 ___
 
@@ -1002,7 +1002,7 @@ ControlComponent.setModelAndEmit
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L112)
+[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L112)
 
 ___
 
@@ -1022,7 +1022,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:210](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L210)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:210](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L210)
 
 ___
 
@@ -1046,7 +1046,7 @@ ControlComponent.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 
@@ -1060,7 +1060,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:184](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L184)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:184](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L184)
 
 ___
 
@@ -1084,7 +1084,7 @@ ControlComponent.valueToEmbeddedValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L119)
+[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L119)
 
 ___
 
@@ -1108,7 +1108,7 @@ ControlComponent.writeValue
 
 #### Defined in
 
-[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:159](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L159)
+[libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts:159](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/autocomplete/autocomplete-single/autocomplete-single.component.ts#L159)
 
 ___
 

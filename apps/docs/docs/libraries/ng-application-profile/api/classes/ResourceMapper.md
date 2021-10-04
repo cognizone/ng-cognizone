@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-mapper.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L15)
+[ng-application-profile/src/lib/services/resource-mapper.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L15)
 
 ## Properties
 
@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-mapper.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L10)
+[ng-application-profile/src/lib/services/resource-mapper.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L10)
 
 ## Methods
 
@@ -56,7 +56,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-mapper.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L23)
+[ng-application-profile/src/lib/services/resource-mapper.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L23)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-mapper.service.ts:52](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L52)
+[ng-application-profile/src/lib/services/resource-mapper.service.ts:52](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L52)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-mapper.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L38)
+[ng-application-profile/src/lib/services/resource-mapper.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L38)
 
 ___
 
@@ -132,4 +132,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-mapper.service.ts:58](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L58)
+[ng-application-profile/src/lib/services/resource-mapper.service.ts:58](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-mapper.service.ts#L58)

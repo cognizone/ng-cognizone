@@ -35,7 +35,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/any-object.ts:1](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/any-object.ts#L1)
+[lib/models/any-object.ts:1](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/any-object.ts#L1)
 
 ___
 
@@ -55,7 +55,7 @@ Observable sense. A `Completable` is either directly the generic type given, a `
 
 #### Defined in
 
-[lib/models/completable.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/completable.ts#L9)
+[lib/models/completable.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/completable.ts#L9)
 
 ___
 
@@ -67,7 +67,7 @@ Union type that encompass all the usual types we use for labels
 
 #### Defined in
 
-[lib/models/cz-label.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/cz-label.ts#L7)
+[lib/models/cz-label.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/cz-label.ts#L7)
 
 ___
 
@@ -89,7 +89,7 @@ A shorthand for indexed object with `string` as keys
 
 #### Defined in
 
-[lib/models/dictionary.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/dictionary.ts#L4)
+[lib/models/dictionary.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/dictionary.ts#L4)
 
 ___
 
@@ -107,7 +107,7 @@ A shorthand to specify if it's either the given type or an array of it
 
 #### Defined in
 
-[lib/models/many.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/many.ts#L4)
+[lib/models/many.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/many.ts#L4)
 
 ___
 
@@ -125,7 +125,7 @@ Shorthand type for type being either itself, null or undefined
 
 #### Defined in
 
-[lib/models/nil.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/nil.ts#L4)
+[lib/models/nil.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/nil.ts#L4)
 
 ___
 
@@ -137,7 +137,7 @@ The label of a [SelectOption](interfaces/SelectOption)
 
 #### Defined in
 
-[lib/models/select-option.ts:34](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L34)
+[lib/models/select-option.ts:34](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L34)
 
 ___
 
@@ -170,7 +170,7 @@ Describes a function to be used as argument for `Array<T>::sort`
 
 #### Defined in
 
-[lib/models/sorter.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/sorter.ts#L4)
+[lib/models/sorter.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/sorter.ts#L4)
 
 ## Functions
 
@@ -200,7 +200,7 @@ This is deprecated, use [completableToPromise](modules#completabletopromise) ins
 
 #### Defined in
 
-[lib/models/completable.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/completable.ts#L16)
+[lib/models/completable.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/completable.ts#L16)
 
 ___
 
@@ -230,7 +230,7 @@ resource as an `Observable`
 
 #### Defined in
 
-[lib/models/completable.ts:39](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/completable.ts#L39)
+[lib/models/completable.ts:39](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/completable.ts#L39)
 
 ___
 
@@ -260,7 +260,7 @@ resource as a `Promise`
 
 #### Defined in
 
-[lib/models/completable.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/completable.ts#L25)
+[lib/models/completable.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/completable.ts#L25)
 
 ___
 
@@ -278,7 +278,7 @@ Create a basic structure for an [ElasticQuery](interfaces/ElasticQuery)
 
 #### Defined in
 
-[lib/models/elastic-query.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-query.ts#L53)
+[lib/models/elastic-query.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-query.ts#L53)
 
 ___
 
@@ -302,7 +302,7 @@ same as [getLangStringValue](modules#getlangstringvalue) but also return label a
 
 #### Defined in
 
-[lib/models/cz-label.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/cz-label.ts#L12)
+[lib/models/cz-label.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/cz-label.ts#L12)
 
 ___
 
@@ -324,7 +324,7 @@ Returns the given `Date` as a `string` in the YYYY-MM-dd format
 
 #### Defined in
 
-[lib/utils/date-to-date-string.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/utils/date-to-date-string.ts#L5)
+[lib/utils/date-to-date-string.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/utils/date-to-date-string.ts#L5)
 
 ___
 
@@ -346,7 +346,7 @@ rxjs operator to be used for debouncing the source in a synchronous way
 
 #### Defined in
 
-[lib/operators/debounce-sync.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/operators/debounce-sync.ts#L7)
+[lib/operators/debounce-sync.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/operators/debounce-sync.ts#L7)
 
 ___
 
@@ -370,7 +370,7 @@ compatible (looking at you IE).
 
 #### Defined in
 
-[lib/utils/download-blob.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/utils/download-blob.ts#L5)
+[lib/utils/download-blob.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/utils/download-blob.ts#L5)
 
 ___
 
@@ -398,7 +398,7 @@ Extract the first `_source` of the first `hits` of an {@link ElasticResponse}
 
 #### Defined in
 
-[lib/models/elastic-response.ts:80](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L80)
+[lib/models/elastic-response.ts:80](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L80)
 
 ___
 
@@ -426,7 +426,7 @@ Aggregate all `_source` in all `hits` of an {@link ElasticResponse} in a single 
 
 #### Defined in
 
-[lib/models/elastic-response.ts:71](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L71)
+[lib/models/elastic-response.ts:71](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L71)
 
 ___
 
@@ -449,7 +449,7 @@ is mostly useful for debugging purposes and javascript digging.
 
 #### Defined in
 
-[lib/utils/get-all-properties.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/utils/get-all-properties.ts#L5)
+[lib/utils/get-all-properties.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/utils/get-all-properties.ts#L5)
 
 ___
 
@@ -475,7 +475,7 @@ ___
 
 #### Defined in
 
-[lib/models/select-option.ts:146](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L146)
+[lib/models/select-option.ts:146](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L146)
 
 ___
 
@@ -503,7 +503,7 @@ only the 0th element will be taken.
 
 #### Defined in
 
-[lib/models/lang-string.ts:33](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/lang-string.ts#L33)
+[lib/models/lang-string.ts:33](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/lang-string.ts#L33)
 
 ___
 
@@ -529,7 +529,7 @@ ___
 
 #### Defined in
 
-[lib/models/select-option.ts:158](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L158)
+[lib/models/select-option.ts:158](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L158)
 
 ___
 
@@ -557,7 +557,7 @@ Convert a `Many` to an array. Beware that it is nullish-safe, so you could end u
 
 #### Defined in
 
-[lib/models/many.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/many.ts#L9)
+[lib/models/many.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/many.ts#L9)
 
 ___
 
@@ -585,7 +585,7 @@ Convert a `Many` to its base type, taking the 0th element of the array if applic
 
 #### Defined in
 
-[lib/models/many.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/many.ts#L16)
+[lib/models/many.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/many.ts#L16)
 
 ___
 
@@ -615,7 +615,7 @@ Return a transformed {@link ElasticResponse} where all `_source` are transformed
 
 #### Defined in
 
-[lib/models/elastic-response.ts:62](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L62)
+[lib/models/elastic-response.ts:62](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L62)
 
 ___
 
@@ -645,7 +645,7 @@ o is Exclude<T, undefined \| null\>
 
 #### Defined in
 
-[lib/models/nil.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/nil.ts#L11)
+[lib/models/nil.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/nil.ts#L11)
 
 ___
 
@@ -675,7 +675,7 @@ rxjs operator to be used for defaulting to a given value if the stream passes a 
 
 #### Defined in
 
-[lib/operators/or-else.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/operators/or-else.ts#L8)
+[lib/operators/or-else.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/operators/or-else.ts#L8)
 
 ___
 
@@ -704,7 +704,7 @@ This will (naively) check that on the labels of the given option matches the que
 
 #### Defined in
 
-[lib/models/select-option.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L53)
+[lib/models/select-option.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L53)
 
 ___
 
@@ -734,7 +734,7 @@ This is mostly used for selecting parts of a reactive state. (Like we mostly do 
 
 #### Defined in
 
-[lib/operators/select-prop.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/operators/select-prop.ts#L8)
+[lib/operators/select-prop.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/operators/select-prop.ts#L8)
 
 ___
 
@@ -762,7 +762,7 @@ Same as `Object.entries`, but strongly typed
 
 #### Defined in
 
-[lib/utils/strict-entries.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/utils/strict-entries.ts#L4)
+[lib/utils/strict-entries.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/utils/strict-entries.ts#L4)
 
 ___
 
@@ -791,4 +791,4 @@ a TrackByFn to be used with an `*ngFor` in case it is used on an array of [Selec
 
 #### Defined in
 
-[lib/models/select-option.ts:46](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L46)
+[lib/models/select-option.ts:46](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L46)

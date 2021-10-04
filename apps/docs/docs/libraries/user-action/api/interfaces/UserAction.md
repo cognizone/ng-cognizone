@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L23)
+[libs/user-action/src/lib/model/user-action.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L23)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L22)
+[libs/user-action/src/lib/model/user-action.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L22)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L21)
+[libs/user-action/src/lib/model/user-action.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L21)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L19)
+[libs/user-action/src/lib/model/user-action.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L19)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L17)
+[libs/user-action/src/lib/model/user-action.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L17)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L11)
+[libs/user-action/src/lib/model/user-action.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L11)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L7)
+[libs/user-action/src/lib/model/user-action.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L7)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L13)
+[libs/user-action/src/lib/model/user-action.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L13)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L12)
+[libs/user-action/src/lib/model/user-action.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L12)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L8)
+[libs/user-action/src/lib/model/user-action.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L8)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L9)
+[libs/user-action/src/lib/model/user-action.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L9)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L10)
+[libs/user-action/src/lib/model/user-action.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L10)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L6)
+[libs/user-action/src/lib/model/user-action.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L6)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:2](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L2)
+[libs/user-action/src/lib/model/user-action.ts:2](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L2)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L14)
+[libs/user-action/src/lib/model/user-action.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L14)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L15)
+[libs/user-action/src/lib/model/user-action.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L15)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L3)
+[libs/user-action/src/lib/model/user-action.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L3)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L20)
+[libs/user-action/src/lib/model/user-action.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L20)
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L16)
+[libs/user-action/src/lib/model/user-action.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L16)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L18)
+[libs/user-action/src/lib/model/user-action.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L18)
 
 ___
 
@@ -218,7 +218,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L4)
+[libs/user-action/src/lib/model/user-action.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L4)
 
 ___
 
@@ -228,4 +228,4 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action.ts#L5)
+[libs/user-action/src/lib/model/user-action.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action.ts#L5)

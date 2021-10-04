@@ -24,7 +24,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/models/json-model.ts:43](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L43)
+[ng-application-profile/src/lib/models/json-model.ts:43](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L43)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/models/json-model.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L42)
+[ng-application-profile/src/lib/models/json-model.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L42)

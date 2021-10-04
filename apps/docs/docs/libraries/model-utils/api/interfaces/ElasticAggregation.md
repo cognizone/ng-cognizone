@@ -16,7 +16,7 @@ The content of an elastic aggregation done trough a _search call
 
 #### Defined in
 
-[lib/models/elastic-response.ts:44](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L44)
+[lib/models/elastic-response.ts:44](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L44)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L42)
+[lib/models/elastic-response.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L42)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:43](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L43)
+[lib/models/elastic-response.ts:43](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L43)

@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L13)
+[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L13)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L11)
+[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L11)
 
 ## Methods
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L15)
+[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L15)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:39](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L39)
+[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:39](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L39)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:28](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L28)
+[ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts:28](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/validators/cardinality-validator.service.ts#L28)

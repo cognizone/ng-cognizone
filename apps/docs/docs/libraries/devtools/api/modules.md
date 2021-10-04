@@ -19,4 +19,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/devtools-enabled.token.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/devtools/src/lib/models/devtools-enabled.token.ts#L3)
+[lib/models/devtools-enabled.token.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/devtools/src/lib/models/devtools-enabled.token.ts#L3)

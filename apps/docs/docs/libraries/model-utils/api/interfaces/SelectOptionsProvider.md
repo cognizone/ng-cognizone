@@ -39,7 +39,7 @@ Given the query, will return a filtered array of `SelectOption` that all matches
 
 #### Defined in
 
-[lib/models/select-option.ts:72](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L72)
+[lib/models/select-option.ts:72](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L72)
 
 ___
 
@@ -61,7 +61,7 @@ Given a value, will return the SelectOption corresponding that value.
 
 #### Defined in
 
-[lib/models/select-option.ts:77](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L77)
+[lib/models/select-option.ts:77](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L77)
 
 ___
 
@@ -83,4 +83,4 @@ Returns `true` if this provider has a `SelectOption` that is linked to the given
 
 #### Defined in
 
-[lib/models/select-option.ts:82](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L82)
+[lib/models/select-option.ts:82](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L82)

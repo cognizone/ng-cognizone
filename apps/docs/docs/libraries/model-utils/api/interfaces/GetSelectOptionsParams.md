@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/select-option.ts:86](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L86)
+[lib/models/select-option.ts:86](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L86)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[lib/models/select-option.ts:87](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L87)
+[lib/models/select-option.ts:87](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L87)

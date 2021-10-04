@@ -31,7 +31,7 @@ MatPaginatorIntl.constructor
 
 #### Defined in
 
-[libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts#L7)
+[libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts#L7)
 
 ## Properties
 
@@ -96,7 +96,7 @@ MatPaginatorIntl.getRangeLabel
 
 #### Defined in
 
-[libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts#L15)
+[libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts#L15)
 
 ___
 
@@ -188,4 +188,4 @@ node_modules/@angular/material/paginator/paginator-intl.d.ts:33
 
 #### Defined in
 
-[libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts#L29)
+[libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/transloco-mat-paginator-adapter/transloco-mat-paginator-intl.service.ts#L29)

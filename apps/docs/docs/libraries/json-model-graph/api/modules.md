@@ -40,7 +40,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/models/graph-status.ts:1](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/models/graph-status.ts#L1)
+[libs/json-model-graph/src/lib/models/graph-status.ts:1](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/models/graph-status.ts#L1)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/models/node-recipe.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/models/node-recipe.ts#L3)
+[libs/json-model-graph/src/lib/models/node-recipe.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/models/node-recipe.ts#L3)
 
 ## Variables
 
@@ -80,4 +80,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L29)
+[libs/json-model-graph/src/lib/store/graph.state.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L29)

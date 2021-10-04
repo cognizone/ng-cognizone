@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:157](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L157)
+[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:157](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L157)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:159](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L159)
+[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:159](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L159)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:158](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L158)
+[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:158](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L158)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:156](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L156)
+[libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts:156](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-and-control-linking.service.ts#L156)

@@ -21,7 +21,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L12)
+[libs/user-action/src/lib/service/user-action.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L12)
 
 ## Methods
 
@@ -41,7 +41,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:35](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L35)
+[libs/user-action/src/lib/service/user-action.service.ts:35](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L35)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L25)
+[libs/user-action/src/lib/service/user-action.service.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L25)
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action.service.ts#L14)
+[libs/user-action/src/lib/service/user-action.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action.service.ts#L14)

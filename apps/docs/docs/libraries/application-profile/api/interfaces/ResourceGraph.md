@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/resource-graph.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource-graph.ts#L4)
+[lib/models/resource-graph.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource-graph.ts#L4)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[lib/models/resource-graph.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource-graph.ts#L6)
+[lib/models/resource-graph.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource-graph.ts#L6)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[lib/models/resource-graph.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource-graph.ts#L5)
+[lib/models/resource-graph.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource-graph.ts#L5)

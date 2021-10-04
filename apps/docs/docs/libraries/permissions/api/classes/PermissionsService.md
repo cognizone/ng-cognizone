@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/permissions/src/lib/services/permissions.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/services/permissions.service.ts#L12)
+[libs/permissions/src/lib/services/permissions.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/services/permissions.service.ts#L12)
 
 ## Properties
 
@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/permissions/src/lib/services/permissions.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/services/permissions.service.ts#L10)
+[libs/permissions/src/lib/services/permissions.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/services/permissions.service.ts#L10)
 
 ## Methods
 
@@ -44,7 +44,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/permissions/src/lib/services/permissions.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/services/permissions.service.ts#L20)
+[libs/permissions/src/lib/services/permissions.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/services/permissions.service.ts#L20)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[libs/permissions/src/lib/services/permissions.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/services/permissions.service.ts#L14)
+[libs/permissions/src/lib/services/permissions.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/services/permissions.service.ts#L14)

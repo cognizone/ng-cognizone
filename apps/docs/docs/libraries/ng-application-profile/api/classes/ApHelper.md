@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L27)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L27)
 
 ## Properties
 
@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L23)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L23)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L25)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L25)
 
 ## Methods
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:126](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L126)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:126](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L126)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:56](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L56)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:56](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L56)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:105](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L105)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:105](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L105)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L38)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L38)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:52](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L52)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:52](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L52)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:66](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L66)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:66](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L66)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:72](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L72)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:72](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L72)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:95](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L95)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:95](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L95)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:78](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L78)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:78](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L78)
 
 ___
 
@@ -249,4 +249,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-helper.service.ts:83](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L83)
+[ng-application-profile/src/lib/services/ap-helper.service.ts:83](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-helper.service.ts#L83)

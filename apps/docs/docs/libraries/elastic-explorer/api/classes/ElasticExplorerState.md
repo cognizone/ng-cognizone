@@ -31,7 +31,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L59)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L59)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:75](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L75)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:75](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L75)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:94](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L94)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:94](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L94)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:99](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L99)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:99](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L99)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:64](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L64)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:64](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L64)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:84](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L84)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:84](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L84)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:89](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L89)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:89](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L89)
 
 ___
 
@@ -178,4 +178,4 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:70](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L70)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:70](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L70)

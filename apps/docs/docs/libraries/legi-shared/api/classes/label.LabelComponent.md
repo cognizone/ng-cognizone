@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/label/label.component.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/label/label.component.ts#L15)
+[libs/legi-shared/label/label.component.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/label/label.component.ts#L15)
 
 ## Properties
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/label/label.component.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/label/label.component.ts#L13)
+[libs/legi-shared/label/label.component.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/label/label.component.ts#L13)
 
 ## Methods
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/label/label.component.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/label/label.component.ts#L21)
+[libs/legi-shared/label/label.component.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/label/label.component.ts#L21)
 
 ___
 
@@ -74,4 +74,4 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/legi-shared/label/label.component.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/label/label.component.ts#L17)
+[libs/legi-shared/label/label.component.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/label/label.component.ts#L17)

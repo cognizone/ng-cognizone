@@ -25,7 +25,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L9)
+[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L9)
 
 ## Properties
 
@@ -35,7 +35,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L19)
+[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L19)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L18)
+[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L18)
 
 ## Methods
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L25)
+[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L25)
 
 ___
 
@@ -91,4 +91,4 @@ PipeTransform.transform
 
 #### Defined in
 
-[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L11)
+[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L11)

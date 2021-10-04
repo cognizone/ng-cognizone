@@ -48,7 +48,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-filterable-keys.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-filterable-keys.ts#L6)
+[libs/legi-cv/src/lib/models/concept-filterable-keys.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-filterable-keys.ts#L6)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-filterable-keys.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-filterable-keys.ts#L7)
+[libs/legi-cv/src/lib/models/concept-filterable-keys.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-filterable-keys.ts#L7)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L12)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L12)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/cv.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/cv.ts#L8)
+[libs/legi-cv/src/lib/models/cv.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/cv.ts#L8)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/cv.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/cv.ts#L6)
+[libs/legi-cv/src/lib/models/cv.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/cv.ts#L6)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/cv.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/cv.ts#L7)
+[libs/legi-cv/src/lib/models/cv.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/cv.ts#L7)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/get-cv-params.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/get-cv-params.ts#L3)
+[libs/legi-cv/src/lib/models/get-cv-params.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/get-cv-params.ts#L3)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/match-type.ts:1](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/match-type.ts#L1)
+[libs/legi-cv/src/lib/models/match-type.ts:1](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/match-type.ts#L1)
 
 ## Variables
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/atomic-cv-client.service.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/atomic-cv-client.service.ts#L8)
+[libs/legi-cv/src/lib/services/atomic-cv-client.service.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/atomic-cv-client.service.ts#L8)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L21)
+[libs/legi-cv/src/lib/services/cv-provider.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L21)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/legi-cv-options.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/legi-cv-options.ts#L14)
+[libs/legi-cv/src/lib/models/legi-cv-options.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/legi-cv-options.ts#L14)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/directives/cv-options.directive.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/directives/cv-options.directive.ts#L11)
+[libs/legi-cv/src/lib/directives/cv-options.directive.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/directives/cv-options.directive.ts#L11)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/legi-cv-options.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/legi-cv-options.ts#L23)
+[libs/legi-cv/src/lib/models/legi-cv-options.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/legi-cv-options.ts#L23)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/store/cv.state.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/store/cv.state.ts#L12)
+[libs/legi-cv/src/lib/store/cv.state.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/store/cv.state.ts#L12)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:80](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L80)
+[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:80](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L80)
 
 ## Functions
 
@@ -239,7 +239,7 @@ concepts is T[]
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/cv.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/cv.ts#L45)
+[libs/legi-cv/src/lib/models/cv.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/cv.ts#L45)
 
 ___
 
@@ -259,7 +259,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:44](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L44)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:44](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L44)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L19)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L19)
 
 ___
 
@@ -305,7 +305,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/cv.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/cv.ts#L15)
+[libs/legi-cv/src/lib/models/cv.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/cv.ts#L15)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/cv.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/cv.ts#L27)
+[libs/legi-cv/src/lib/models/cv.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/cv.ts#L27)
 
 ___
 
@@ -351,7 +351,7 @@ o is Concept
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/cv.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/cv.ts#L49)
+[libs/legi-cv/src/lib/models/cv.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/cv.ts#L49)
 
 ___
 
@@ -371,7 +371,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L25)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L25)
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L16)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L16)
 
 ___
 
@@ -411,7 +411,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/collection-cv-provider.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/collection-cv-provider.ts#L42)
+[libs/legi-cv/src/lib/services/collection-cv-provider.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/collection-cv-provider.ts#L42)
 
 ___
 
@@ -431,7 +431,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/concept-scheme-cv-provider.ts:60](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/concept-scheme-cv-provider.ts#L60)
+[libs/legi-cv/src/lib/services/concept-scheme-cv-provider.ts:60](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/concept-scheme-cv-provider.ts#L60)
 
 ___
 
@@ -451,7 +451,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L23)
+[libs/legi-cv/src/lib/services/cv-provider.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L23)
 
 ___
 
@@ -471,7 +471,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/directives/cv-options.directive.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/directives/cv-options.directive.ts#L13)
+[libs/legi-cv/src/lib/directives/cv-options.directive.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/directives/cv-options.directive.ts#L13)
 
 ___
 
@@ -491,7 +491,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L14)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L14)
 
 ___
 
@@ -511,4 +511,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L41)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L41)

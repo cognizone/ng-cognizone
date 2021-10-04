@@ -36,7 +36,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:35](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L35)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:35](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L35)
 
 ## Properties
 
@@ -46,7 +46,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L29)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L29)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L23)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L23)
 
 ___
 
@@ -70,7 +70,7 @@ OnDestroy$.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -84,7 +84,7 @@ OnDestroy$.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L27)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L27)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L25)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L25)
 
 ___
 
@@ -176,7 +176,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L31)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L31)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L14)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L14)
 
 • `set` **uri**(`value`): `void`
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L18)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L18)
 
 ## Methods
 
@@ -224,7 +224,7 @@ OnDestroy$.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -248,7 +248,7 @@ OnDestroy$.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -283,7 +283,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:47](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L47)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:47](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L47)
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:61](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L61)
+[libs/json-model-graph/src/lib/directives/node-uri.directive.ts:61](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/directives/node-uri.directive.ts#L61)
 
 ___
 
@@ -327,7 +327,7 @@ OnDestroy$.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 

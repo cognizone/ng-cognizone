@@ -40,7 +40,7 @@ Merges multiple SelectOptionsProvider together to form a unified one.
 
 #### Defined in
 
-[lib/models/select-option.ts:96](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L96)
+[lib/models/select-option.ts:96](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L96)
 
 ## Methods
 
@@ -67,7 +67,7 @@ see [SelectOptionsProvider](../interfaces/SelectOptionsProvider)
 
 #### Defined in
 
-[lib/models/select-option.ts:101](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L101)
+[lib/models/select-option.ts:101](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L101)
 
 ___
 
@@ -93,7 +93,7 @@ see [SelectOptionsProvider](../interfaces/SelectOptionsProvider)
 
 #### Defined in
 
-[lib/models/select-option.ts:109](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L109)
+[lib/models/select-option.ts:109](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L109)
 
 ___
 
@@ -119,4 +119,4 @@ see [SelectOptionsProvider](../interfaces/SelectOptionsProvider)
 
 #### Defined in
 
-[lib/models/select-option.ts:122](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L122)
+[lib/models/select-option.ts:122](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L122)

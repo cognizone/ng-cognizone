@@ -16,7 +16,7 @@ A bucket that is inside an [ElasticAggregation](ElasticAggregation)
 
 #### Defined in
 
-[lib/models/elastic-response.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L53)
+[lib/models/elastic-response.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L53)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:51](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L51)
+[lib/models/elastic-response.ts:51](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L51)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:52](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L52)
+[lib/models/elastic-response.ts:52](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L52)

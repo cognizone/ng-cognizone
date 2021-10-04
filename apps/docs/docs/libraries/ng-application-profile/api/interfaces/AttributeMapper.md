@@ -32,7 +32,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L14)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L14)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L15)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L15)

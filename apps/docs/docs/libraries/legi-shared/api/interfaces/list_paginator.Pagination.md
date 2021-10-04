@@ -15,7 +15,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:69](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L69)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:69](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L69)
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:70](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L70)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:70](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L70)

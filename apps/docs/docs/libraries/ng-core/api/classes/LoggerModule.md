@@ -30,4 +30,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.module.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.module.ts#L11)
+[libs/ng-core/src/lib/modules/logger/logger.module.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.module.ts#L11)

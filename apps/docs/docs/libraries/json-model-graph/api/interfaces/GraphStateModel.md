@@ -18,7 +18,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:24](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L24)
+[libs/json-model-graph/src/lib/store/graph.state.ts:24](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L24)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L18)
+[libs/json-model-graph/src/lib/store/graph.state.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L18)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L21)
+[libs/json-model-graph/src/lib/store/graph.state.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L21)

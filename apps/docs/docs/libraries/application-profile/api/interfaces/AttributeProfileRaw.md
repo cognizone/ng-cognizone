@@ -18,4 +18,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/application-profile-raw.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/application-profile-raw.ts#L14)
+[lib/models/application-profile-raw.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/application-profile-raw.ts#L14)

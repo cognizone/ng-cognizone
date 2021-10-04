@@ -29,7 +29,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L6)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L6)
 
 ## Methods
 
@@ -51,7 +51,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L8)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L8)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L10)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L10)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L7)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L7)
 
 ___
 
@@ -115,4 +115,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L9)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L9)

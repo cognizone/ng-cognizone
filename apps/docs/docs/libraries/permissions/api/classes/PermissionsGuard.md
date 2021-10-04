@@ -24,7 +24,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/permissions/src/lib/guards/permissions.guard.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/guards/permissions.guard.ts#L13)
+[libs/permissions/src/lib/guards/permissions.guard.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/guards/permissions.guard.ts#L13)
 
 ## Methods
 
@@ -48,4 +48,4 @@ CanActivate.canActivate
 
 #### Defined in
 
-[libs/permissions/src/lib/guards/permissions.guard.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/guards/permissions.guard.ts#L15)
+[libs/permissions/src/lib/guards/permissions.guard.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/guards/permissions.guard.ts#L15)

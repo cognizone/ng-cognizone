@@ -23,7 +23,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L9)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L9)
 
 ## Properties
 
@@ -59,7 +59,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:65](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L65)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:65](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L65)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L36)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L36)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:24](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L24)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:24](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L24)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:28](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L28)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:28](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L28)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:32](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L32)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:32](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L32)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L16)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L16)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L20)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L20)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:44](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L44)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:44](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L44)
 
 ___
 
@@ -235,4 +235,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L40)
+[libs/json-model-graph/src/lib/services/graph-wrapper.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.ts#L40)

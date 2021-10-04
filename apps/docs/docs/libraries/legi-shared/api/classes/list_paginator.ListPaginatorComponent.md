@@ -36,7 +36,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L23)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L18)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L18)
 
 ___
 
@@ -60,7 +60,7 @@ OnDestroy$.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L13)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L13)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L21)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L21)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L20)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L20)
 
 ___
 
@@ -104,7 +104,7 @@ OnDestroy$.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L15)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L15)
 
 ___
 
@@ -186,7 +186,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:37](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L37)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:37](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L37)
 
 • `set` **activePage**(`value`): `void`
 
@@ -202,7 +202,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L41)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L41)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L45)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L45)
 
 ___
 
@@ -230,7 +230,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:52](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L52)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:52](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L52)
 
 ## Methods
 
@@ -248,7 +248,7 @@ OnDestroy$.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -272,7 +272,7 @@ OnDestroy$.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -296,7 +296,7 @@ OnChanges.ngOnChanges
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L31)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L31)
 
 ___
 
@@ -335,7 +335,7 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/legi-shared/list-paginator/list-paginator.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/list-paginator/list-paginator.component.ts#L27)
+[libs/legi-shared/list-paginator/list-paginator.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/list-paginator/list-paginator.component.ts#L27)
 
 ___
 
@@ -359,7 +359,7 @@ OnDestroy$.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 

@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/legi-cv-options.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/legi-cv-options.service.ts#L9)
+[libs/legi-cv/src/lib/services/legi-cv-options.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/legi-cv-options.service.ts#L9)
 
 ## Properties
 
@@ -46,4 +46,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/legi-cv-options.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/legi-cv-options.service.ts#L11)
+[libs/legi-cv/src/lib/services/legi-cv-options.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/legi-cv-options.service.ts#L11)

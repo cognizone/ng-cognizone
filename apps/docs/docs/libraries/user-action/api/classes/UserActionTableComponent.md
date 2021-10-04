@@ -37,7 +37,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L45)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L45)
 
 ## Properties
 
@@ -47,7 +47,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L19)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L19)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L25)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L25)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:35](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L35)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:35](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L35)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:37](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L37)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:37](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L37)
 
 ___
 
@@ -91,7 +91,7 @@ OnDestroy$.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L29)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L29)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L27)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L27)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:33](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L33)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:33](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L33)
 
 ___
 
@@ -135,7 +135,7 @@ OnDestroy$.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L31)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L31)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L21)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L21)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L23)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L23)
 
 ___
 
@@ -243,7 +243,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:71](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L71)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:71](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L71)
 
 ___
 
@@ -261,7 +261,7 @@ OnDestroy$.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -285,7 +285,7 @@ OnDestroy$.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -299,7 +299,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:76](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L76)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:76](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L76)
 
 ___
 
@@ -313,7 +313,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:88](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L88)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:88](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L88)
 
 ___
 
@@ -352,7 +352,7 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:54](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L54)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:54](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L54)
 
 ___
 
@@ -372,7 +372,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:65](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L65)
+[libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts:65](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/components/user-action-table/user-action-table.component.ts#L65)
 
 ___
 
@@ -396,7 +396,7 @@ OnDestroy$.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 

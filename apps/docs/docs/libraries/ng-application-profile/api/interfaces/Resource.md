@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[application-profile/src/lib/models/resource.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource.ts#L16)
+[application-profile/src/lib/models/resource.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource.ts#L16)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/resource.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource.ts#L15)
+[application-profile/src/lib/models/resource.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource.ts#L15)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/resource.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource.ts#L14)
+[application-profile/src/lib/models/resource.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource.ts#L14)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/resource.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource.ts#L13)
+[application-profile/src/lib/models/resource.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource.ts#L13)

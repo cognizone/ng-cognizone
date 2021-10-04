@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L20)
+[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L20)
 
 ## Properties
 
@@ -36,7 +36,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L16)
+[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L16)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L18)
+[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L18)
 
 ## Methods
 
@@ -70,4 +70,4 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L26)
+[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L26)

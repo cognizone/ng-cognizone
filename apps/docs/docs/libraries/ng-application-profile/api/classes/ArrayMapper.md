@@ -28,7 +28,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L9)
+[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L9)
 
 ## Methods
 
@@ -54,7 +54,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L15)
+[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L15)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L23)
+[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L23)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L11)
+[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L11)
 
 ___
 
@@ -130,4 +130,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L19)
+[ng-application-profile/src/lib/services/mappers/array-mapper.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/array-mapper.service.ts#L19)

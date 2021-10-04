@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-loader.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-loader.ts#L6)
+[ng-application-profile/src/lib/services/ap-loader.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-loader.ts#L6)
 
 ## Methods
 
@@ -28,4 +28,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-loader.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-loader.ts#L8)
+[ng-application-profile/src/lib/services/ap-loader.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-loader.ts#L8)

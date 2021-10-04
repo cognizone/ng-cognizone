@@ -37,7 +37,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/get-has-permission.directive.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L16)
+[libs/permissions/src/lib/directives/get-has-permission.directive.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L16)
 
 ## Properties
 
@@ -51,7 +51,7 @@ OnDestroy$.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/get-has-permission.directive.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L12)
+[libs/permissions/src/lib/directives/get-has-permission.directive.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L12)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/get-has-permission.directive.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L14)
+[libs/permissions/src/lib/directives/get-has-permission.directive.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L14)
 
 ___
 
@@ -85,7 +85,7 @@ OnDestroy$.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -161,7 +161,7 @@ OnDestroy$.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -185,7 +185,7 @@ OnDestroy$.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -224,7 +224,7 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/get-has-permission.directive.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L25)
+[libs/permissions/src/lib/directives/get-has-permission.directive.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L25)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/get-has-permission.directive.ts:32](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L32)
+[libs/permissions/src/lib/directives/get-has-permission.directive.ts:32](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L32)
 
 ___
 
@@ -268,7 +268,7 @@ OnDestroy$.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 

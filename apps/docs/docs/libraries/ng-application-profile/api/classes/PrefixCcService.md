@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/prefix-cc.service.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/prefix-cc.service.ts#L6)
+[ng-application-profile/src/lib/services/prefix-cc.service.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/prefix-cc.service.ts#L6)
 
 ## Methods
 
@@ -40,7 +40,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/prefix-cc.service.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/prefix-cc.service.ts#L8)
+[ng-application-profile/src/lib/services/prefix-cc.service.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/prefix-cc.service.ts#L8)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/prefix-cc.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/prefix-cc.service.ts#L12)
+[ng-application-profile/src/lib/services/prefix-cc.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/prefix-cc.service.ts#L12)

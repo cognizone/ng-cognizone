@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/models/operation.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/models/operation.ts#L21)
+[libs/operation/src/lib/models/operation.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/models/operation.ts#L21)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/models/operation.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/models/operation.ts#L19)
+[libs/operation/src/lib/models/operation.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/models/operation.ts#L19)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/models/operation.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/models/operation.ts#L22)
+[libs/operation/src/lib/models/operation.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/models/operation.ts#L22)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/models/operation.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/models/operation.ts#L20)
+[libs/operation/src/lib/models/operation.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/models/operation.ts#L20)

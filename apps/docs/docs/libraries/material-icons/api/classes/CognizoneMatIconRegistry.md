@@ -34,7 +34,7 @@ MatIconRegistry.constructor
 
 #### Defined in
 
-[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L21)
+[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L21)
 
 ## Properties
 
@@ -44,7 +44,7 @@ MatIconRegistry.constructor
 
 #### Defined in
 
-[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L19)
+[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L19)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L17)
+[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L17)
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 #### Defined in
 
-[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:55](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L55)
+[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:55](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L55)
 
 ___
 
@@ -418,7 +418,7 @@ MatIconRegistry.getNamedSvgIcon
 
 #### Defined in
 
-[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:37](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L37)
+[libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts:37](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/services/cognizone-mat-icon-registry.service.ts#L37)
 
 ___
 

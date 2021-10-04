@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L11)
+[libs/legi-cv/src/lib/services/cv-provider.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L11)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L12)
+[libs/legi-cv/src/lib/services/cv-provider.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L12)
 
 ## Methods
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L16)
+[libs/legi-cv/src/lib/services/cv-provider.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L16)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L14)
+[libs/legi-cv/src/lib/services/cv-provider.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L14)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L18)
+[libs/legi-cv/src/lib/services/cv-provider.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L18)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L17)
+[libs/legi-cv/src/lib/services/cv-provider.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L17)
 
 ___
 
@@ -138,4 +138,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv-provider.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv-provider.ts#L15)
+[libs/legi-cv/src/lib/services/cv-provider.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv-provider.ts#L15)

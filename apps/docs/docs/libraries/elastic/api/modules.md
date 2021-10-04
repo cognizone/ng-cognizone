@@ -25,7 +25,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic/src/lib/models/elastic-query.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/models/elastic-query.ts#L3)
+[libs/elastic/src/lib/models/elastic-query.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/models/elastic-query.ts#L3)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:28](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L28)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:28](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L28)
 
 ## Functions
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/utils/get-by-uri-query.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/utils/get-by-uri-query.ts#L3)
+[libs/elastic/src/lib/utils/get-by-uri-query.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/utils/get-by-uri-query.ts#L3)
 
 ___
 
@@ -77,4 +77,4 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/utils/get-by-uris-query.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/utils/get-by-uris-query.ts#L3)
+[libs/elastic/src/lib/utils/get-by-uris-query.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/utils/get-by-uris-query.ts#L3)

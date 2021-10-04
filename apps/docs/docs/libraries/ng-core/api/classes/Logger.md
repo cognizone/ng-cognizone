@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L23)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L23)
 
 ## Properties
 
@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L11)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L11)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L19)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L19)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L15)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L15)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L13)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L13)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L21)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L21)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L17)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L17)
 
 ## Accessors
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L38)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L38)
 
 ## Methods
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L42)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L42)
 
 ___
 
@@ -140,4 +140,4 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L31)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L31)

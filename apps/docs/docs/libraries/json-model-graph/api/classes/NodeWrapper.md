@@ -34,7 +34,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/node-wrapper.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/node-wrapper.ts#L14)
+[libs/json-model-graph/src/lib/services/node-wrapper.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/node-wrapper.ts#L14)
 
 ## Properties
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/node-wrapper.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/node-wrapper.ts#L8)
+[libs/json-model-graph/src/lib/services/node-wrapper.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/node-wrapper.ts#L8)
 
 ## Accessors
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/node-wrapper.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/node-wrapper.ts#L10)
+[libs/json-model-graph/src/lib/services/node-wrapper.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/node-wrapper.ts#L10)
 
 ## Methods
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/node-wrapper.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/node-wrapper.ts#L16)
+[libs/json-model-graph/src/lib/services/node-wrapper.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/node-wrapper.ts#L16)

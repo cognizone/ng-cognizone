@@ -23,7 +23,7 @@ for now
 
 #### Defined in
 
-[lib/models/elastic-query.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-query.ts#L22)
+[lib/models/elastic-query.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-query.ts#L22)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-query.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-query.ts#L9)
+[lib/models/elastic-query.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-query.ts#L9)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-query.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-query.ts#L12)
+[lib/models/elastic-query.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-query.ts#L12)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-query.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-query.ts#L10)
+[lib/models/elastic-query.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-query.ts#L10)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-query.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-query.ts#L23)
+[lib/models/elastic-query.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-query.ts#L23)
 
 ___
 
@@ -89,4 +89,4 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-query.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-query.ts#L11)
+[lib/models/elastic-query.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-query.ts#L11)

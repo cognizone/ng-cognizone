@@ -25,7 +25,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/guards/operation.guard.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/guards/operation.guard.ts#L12)
+[libs/operation/src/lib/guards/operation.guard.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/guards/operation.guard.ts#L12)
 
 ## Methods
 
@@ -49,4 +49,4 @@ CanActivate.canActivate
 
 #### Defined in
 
-[libs/operation/src/lib/guards/operation.guard.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/guards/operation.guard.ts#L14)
+[libs/operation/src/lib/guards/operation.guard.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/guards/operation.guard.ts#L14)

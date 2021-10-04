@@ -24,7 +24,7 @@ Label of the group
 
 #### Defined in
 
-[lib/models/select-option.ts:138](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L138)
+[lib/models/select-option.ts:138](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L138)
 
 ___
 
@@ -36,4 +36,4 @@ Options that are inside that group
 
 #### Defined in
 
-[lib/models/select-option.ts:143](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L143)
+[lib/models/select-option.ts:143](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L143)

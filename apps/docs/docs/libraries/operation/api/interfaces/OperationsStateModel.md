@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.state.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.state.ts#L10)
+[libs/operation/src/lib/store/operations.state.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.state.ts#L10)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.state.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.state.ts#L9)
+[libs/operation/src/lib/store/operations.state.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.state.ts#L9)

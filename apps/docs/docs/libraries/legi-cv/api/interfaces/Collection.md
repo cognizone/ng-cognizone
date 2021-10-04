@@ -37,7 +37,7 @@ JsonModel.@context
 
 #### Defined in
 
-[libs/ng-application-profile/src/lib/models/json-model.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L12)
+[libs/ng-application-profile/src/lib/models/json-model.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L12)
 
 ___
 
@@ -51,7 +51,7 @@ JsonModel.@facets
 
 #### Defined in
 
-[libs/ng-application-profile/src/lib/models/json-model.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L16)
+[libs/ng-application-profile/src/lib/models/json-model.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L16)
 
 ___
 
@@ -65,7 +65,7 @@ JsonModel.@id
 
 #### Defined in
 
-[libs/ng-application-profile/src/lib/models/json-model.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L10)
+[libs/ng-application-profile/src/lib/models/json-model.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L10)
 
 ___
 
@@ -79,7 +79,7 @@ JsonModel.@type
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/collection.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/collection.ts#L7)
+[libs/legi-cv/src/lib/models/collection.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/collection.ts#L7)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/collection.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/collection.ts#L9)
+[libs/legi-cv/src/lib/models/collection.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/collection.ts#L9)
 
 ___
 
@@ -99,4 +99,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/collection.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/collection.ts#L8)
+[libs/legi-cv/src/lib/models/collection.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/collection.ts#L8)

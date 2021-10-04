@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L7)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L7)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L8)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L8)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/models/concept-wrapper.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/models/concept-wrapper.ts#L9)
+[libs/legi-cv/src/lib/models/concept-wrapper.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/models/concept-wrapper.ts#L9)

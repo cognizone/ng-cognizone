@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/models/log-level.ts:2](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L2)
+[libs/ng-core/src/lib/modules/logger/models/log-level.ts:2](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L2)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/models/log-level.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L6)
+[libs/ng-core/src/lib/modules/logger/models/log-level.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L6)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/models/log-level.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L4)
+[libs/ng-core/src/lib/modules/logger/models/log-level.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L4)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/models/log-level.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L3)
+[libs/ng-core/src/lib/modules/logger/models/log-level.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L3)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/models/log-level.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L7)
+[libs/ng-core/src/lib/modules/logger/models/log-level.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L7)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/models/log-level.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L5)
+[libs/ng-core/src/lib/modules/logger/models/log-level.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/models/log-level.ts#L5)

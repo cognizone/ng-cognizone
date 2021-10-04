@@ -24,4 +24,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/json-model-graph.module.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/json-model-graph.module.ts#L16)
+[libs/json-model-graph/src/lib/json-model-graph.module.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/json-model-graph.module.ts#L16)

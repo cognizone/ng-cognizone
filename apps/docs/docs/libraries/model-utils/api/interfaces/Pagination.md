@@ -20,7 +20,7 @@ absolute index of the first item of the page
 
 #### Defined in
 
-[lib/models/pagination.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/pagination.ts#L10)
+[lib/models/pagination.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/pagination.ts#L10)
 
 ___
 
@@ -32,4 +32,4 @@ Size of the page
 
 #### Defined in
 
-[lib/models/pagination.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/pagination.ts#L14)
+[lib/models/pagination.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/pagination.ts#L14)

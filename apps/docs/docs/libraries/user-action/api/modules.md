@@ -28,4 +28,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/user-action/src/lib/model/user-action-module-options.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/model/user-action-module-options.ts#L12)
+[libs/user-action/src/lib/model/user-action-module-options.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/model/user-action-module-options.ts#L12)

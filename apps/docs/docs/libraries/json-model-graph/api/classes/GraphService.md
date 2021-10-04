@@ -22,7 +22,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L26)
+[libs/json-model-graph/src/lib/services/graph.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L26)
 
 ## Properties
 
@@ -32,7 +32,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L20)
+[libs/json-model-graph/src/lib/services/graph.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L20)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L18)
+[libs/json-model-graph/src/lib/services/graph.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L18)
 
 ## Accessors
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L22)
+[libs/json-model-graph/src/lib/services/graph.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L22)
 
 ## Methods
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:87](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L87)
+[libs/json-model-graph/src/lib/services/graph.service.ts:87](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L87)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:34](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L34)
+[libs/json-model-graph/src/lib/services/graph.service.ts:34](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L34)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:50](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L50)
+[libs/json-model-graph/src/lib/services/graph.service.ts:50](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L50)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:58](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L58)
+[libs/json-model-graph/src/lib/services/graph.service.ts:58](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L58)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:65](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L65)
+[libs/json-model-graph/src/lib/services/graph.service.ts:65](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L65)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L42)
+[libs/json-model-graph/src/lib/services/graph.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L42)
 
 ___
 
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:54](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L54)
+[libs/json-model-graph/src/lib/services/graph.service.ts:54](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L54)
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L30)
+[libs/json-model-graph/src/lib/services/graph.service.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L30)
 
 ___
 
@@ -283,7 +283,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:82](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L82)
+[libs/json-model-graph/src/lib/services/graph.service.ts:82](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L82)
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:102](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L102)
+[libs/json-model-graph/src/lib/services/graph.service.ts:102](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L102)
 
 ___
 
@@ -317,7 +317,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:78](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L78)
+[libs/json-model-graph/src/lib/services/graph.service.ts:78](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L78)
 
 ___
 
@@ -344,7 +344,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:73](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L73)
+[libs/json-model-graph/src/lib/services/graph.service.ts:73](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L73)
 
 ___
 
@@ -365,4 +365,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph.service.ts:69](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph.service.ts#L69)
+[libs/json-model-graph/src/lib/services/graph.service.ts:69](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph.service.ts#L69)

@@ -26,7 +26,7 @@ Can store whatever, placeholder for library to put whatever they need here.
 
 #### Defined in
 
-[lib/models/select-option.ts:28](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L28)
+[lib/models/select-option.ts:28](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L28)
 
 ___
 
@@ -38,7 +38,7 @@ Set tu true if this option is disabled, useful when needing to display historica
 
 #### Defined in
 
-[lib/models/select-option.ts:24](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L24)
+[lib/models/select-option.ts:24](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L24)
 
 ___
 
@@ -50,7 +50,7 @@ The label, used for presentational purposes
 
 #### Defined in
 
-[lib/models/select-option.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L20)
+[lib/models/select-option.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L20)
 
 ___
 
@@ -62,4 +62,4 @@ The value associated to the SelectOption. In a given set, this should be unique.
 
 #### Defined in
 
-[lib/models/select-option.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/select-option.ts#L16)
+[lib/models/select-option.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/select-option.ts#L16)

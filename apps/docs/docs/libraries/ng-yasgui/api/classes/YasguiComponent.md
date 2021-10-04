@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L30)
+[lib/components/yasgui/yasgui.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L30)
 
 ## Properties
 
@@ -36,7 +36,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L17)
+[lib/components/yasgui/yasgui.component.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L17)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L14)
+[lib/components/yasgui/yasgui.component.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L14)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L20)
+[lib/components/yasgui/yasgui.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L20)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L26)
+[lib/components/yasgui/yasgui.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L26)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:28](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L28)
+[lib/components/yasgui/yasgui.component.ts:28](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L28)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L23)
+[lib/components/yasgui/yasgui.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L23)
 
 ## Methods
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L63)
+[lib/components/yasgui/yasgui.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L63)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:54](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L54)
+[lib/components/yasgui/yasgui.component.ts:54](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L54)
 
 ___
 
@@ -138,7 +138,7 @@ OnChanges.ngOnChanges
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L47)
+[lib/components/yasgui/yasgui.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L47)
 
 ___
 
@@ -156,7 +156,7 @@ OnDestroy.ngOnDestroy
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:43](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L43)
+[lib/components/yasgui/yasgui.component.ts:43](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L43)
 
 ___
 
@@ -174,4 +174,4 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[lib/components/yasgui/yasgui.component.ts:32](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L32)
+[lib/components/yasgui/yasgui.component.ts:32](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/components/yasgui/yasgui.component.ts#L32)

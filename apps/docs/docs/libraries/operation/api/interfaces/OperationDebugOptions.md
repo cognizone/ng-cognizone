@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-debug.service.ts:117](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-debug.service.ts#L117)
+[libs/operation/src/lib/services/operation-debug.service.ts:117](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-debug.service.ts#L117)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-debug.service.ts:118](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-debug.service.ts#L118)
+[libs/operation/src/lib/services/operation-debug.service.ts:118](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-debug.service.ts#L118)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-debug.service.ts:116](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-debug.service.ts#L116)
+[libs/operation/src/lib/services/operation-debug.service.ts:116](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-debug.service.ts#L116)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-debug.service.ts:119](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-debug.service.ts#L119)
+[libs/operation/src/lib/services/operation-debug.service.ts:119](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-debug.service.ts#L119)

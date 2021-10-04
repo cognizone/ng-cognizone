@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-ap-client.service.ts:39](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L39)
+[libs/elastic/src/lib/services/elastic-ap-client.service.ts:39](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L39)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-ap-client.service.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L40)
+[libs/elastic/src/lib/services/elastic-ap-client.service.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L40)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-ap-client.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L41)
+[libs/elastic/src/lib/services/elastic-ap-client.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L41)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-ap-client.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L42)
+[libs/elastic/src/lib/services/elastic-ap-client.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L42)

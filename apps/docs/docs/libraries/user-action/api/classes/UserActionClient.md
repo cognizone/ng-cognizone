@@ -32,7 +32,7 @@ ElasticRawClient.constructor
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action-client.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action-client.service.ts#L18)
+[libs/user-action/src/lib/service/user-action-client.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action-client.service.ts#L18)
 
 ## Properties
 
@@ -66,7 +66,7 @@ ElasticRawClient.logger
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action-client.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action-client.service.ts#L10)
+[libs/user-action/src/lib/service/user-action-client.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action-client.service.ts#L10)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[libs/user-action/src/lib/service/user-action-client.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/user-action/src/lib/service/user-action-client.service.ts#L14)
+[libs/user-action/src/lib/service/user-action-client.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/user-action/src/lib/service/user-action-client.service.ts#L14)
 
 ## Methods
 
@@ -98,7 +98,7 @@ ElasticRawClient.getSearchUrl
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L23)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L23)
 
 ___
 
@@ -136,7 +136,7 @@ ElasticRawClient.searchOneRaw
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L19)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L19)
 
 ___
 
@@ -174,4 +174,4 @@ ElasticRawClient.searchRaw
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L15)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L15)

@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L19)
+[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L19)
 
 ## Methods
 
@@ -56,7 +56,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L40)
+[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L40)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L21)
+[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L21)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:74](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L74)
+[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:74](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L74)
 
 ___
 
@@ -126,4 +126,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:63](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L63)
+[libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts:63](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/elastic-atomic-cv-client.service.ts#L63)

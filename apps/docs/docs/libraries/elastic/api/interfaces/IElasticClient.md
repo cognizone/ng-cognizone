@@ -28,7 +28,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic/src/lib/models/elastic-client.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/models/elastic-client.ts#L7)
+[libs/elastic/src/lib/models/elastic-client.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/models/elastic-client.ts#L7)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/models/elastic-client.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/models/elastic-client.ts#L8)
+[libs/elastic/src/lib/models/elastic-client.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/models/elastic-client.ts#L8)

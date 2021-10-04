@@ -23,7 +23,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-graph.service.ts:24](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L24)
+[ng-application-profile/src/lib/services/resource-graph.service.ts:24](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L24)
 
 ## Methods
 
@@ -55,7 +55,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-graph.service.ts:157](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L157)
+[ng-application-profile/src/lib/services/resource-graph.service.ts:157](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L157)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-graph.service.ts:176](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L176)
+[ng-application-profile/src/lib/services/resource-graph.service.ts:176](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L176)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-graph.service.ts:88](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L88)
+[ng-application-profile/src/lib/services/resource-graph.service.ts:88](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L88)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-graph.service.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L31)
+[ng-application-profile/src/lib/services/resource-graph.service.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L31)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-graph.service.ts:52](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L52)
+[ng-application-profile/src/lib/services/resource-graph.service.ts:52](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L52)
 
 ___
 
@@ -159,4 +159,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/resource-graph.service.ts:152](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L152)
+[ng-application-profile/src/lib/services/resource-graph.service.ts:152](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/resource-graph.service.ts#L152)

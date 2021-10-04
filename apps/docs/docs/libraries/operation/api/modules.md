@@ -44,7 +44,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/models/operation.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/models/operation.ts#L12)
+[libs/operation/src/lib/models/operation.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/models/operation.ts#L12)
 
 ## Variables
 
@@ -54,7 +54,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.state.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.state.ts#L13)
+[libs/operation/src/lib/store/operations.state.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.state.ts#L13)
 
 ## Functions
 
@@ -74,4 +74,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/models/operation.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/models/operation.ts#L14)
+[libs/operation/src/lib/models/operation.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/models/operation.ts#L14)

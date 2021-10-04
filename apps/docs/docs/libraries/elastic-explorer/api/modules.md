@@ -24,4 +24,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:34](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L34)
+[libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts:34](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/store/elastic-explorer.state.ts#L34)

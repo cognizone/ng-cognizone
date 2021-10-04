@@ -45,7 +45,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-core/src/lib/modules/logger/logger.service.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/modules/logger/logger.service.ts#L6)
+[libs/ng-core/src/lib/modules/logger/logger.service.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/modules/logger/logger.service.ts#L6)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/types/maybe.ts:1](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/types/maybe.ts#L1)
+[libs/ng-core/src/lib/types/maybe.ts:1](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/types/maybe.ts#L1)
 
 ## Functions
 
@@ -101,7 +101,7 @@ All those issues should be fixed with Ivy (Angular 9+) https://github.com/angula
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:33](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L33)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:33](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L33)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/operators/is-instance-of.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/operators/is-instance-of.ts#L5)
+[libs/ng-core/src/lib/operators/is-instance-of.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/operators/is-instance-of.ts#L5)
 
 ▸ **isInstanceOf**<`T`, `U`, `V`\>(`typeA`, `typeB`): `OperatorFunction`<`T`, `U` \| `V`\>
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/operators/is-instance-of.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/operators/is-instance-of.ts#L10)
+[libs/ng-core/src/lib/operators/is-instance-of.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/operators/is-instance-of.ts#L10)
 
 ▸ **isInstanceOf**<`T`, `U`\>(`type`): `OperatorFunction`<`T`, `U`\>
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/operators/is-instance-of.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/operators/is-instance-of.ts#L11)
+[libs/ng-core/src/lib/operators/is-instance-of.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/operators/is-instance-of.ts#L11)
 
 ___
 
@@ -218,4 +218,4 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/operators/start-with-tap.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/operators/start-with-tap.ts#L4)
+[libs/ng-core/src/lib/operators/start-with-tap.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/operators/start-with-tap.ts#L4)

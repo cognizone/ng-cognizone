@@ -21,7 +21,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts#L10)
+[libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts#L10)
 
 ## Methods
 
@@ -48,7 +48,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts#L16)
+[libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts#L16)
 
 ___
 
@@ -69,4 +69,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts#L12)
+[libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/services/graph-wrapper.factory.ts#L12)

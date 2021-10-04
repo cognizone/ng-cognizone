@@ -30,4 +30,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/material-icons/src/lib/cognizone-material-icons.module.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/material-icons/src/lib/cognizone-material-icons.module.ts#L9)
+[libs/material-icons/src/lib/cognizone-material-icons.module.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/material-icons/src/lib/cognizone-material-icons.module.ts#L9)

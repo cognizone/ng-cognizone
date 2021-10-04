@@ -52,7 +52,7 @@ ControlComponent&lt;T[]\&gt;.constructor
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:94](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L94)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:94](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L94)
 
 ## Properties
 
@@ -62,7 +62,7 @@ ControlComponent&lt;T[]\&gt;.constructor
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:91](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L91)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:91](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L91)
 
 ___
 
@@ -76,7 +76,7 @@ ControlComponent.\_model
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L63)
+[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L63)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:90](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L90)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:90](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L90)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:92](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L92)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:92](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L92)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:67](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L67)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:67](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L67)
 
 ___
 
@@ -130,7 +130,7 @@ ControlComponent.controlChanged
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L61)
+[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L61)
 
 ___
 
@@ -154,7 +154,7 @@ ControlComponent.defaultValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L59)
+[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L59)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:69](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L69)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:69](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L69)
 
 ___
 
@@ -178,7 +178,7 @@ ControlComponent.disabled
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L53)
+[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L53)
 
 ___
 
@@ -192,7 +192,7 @@ ControlComponent.embeddedControl
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L85)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L85)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:75](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L75)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:75](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L75)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L47)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L47)
 
 ___
 
@@ -236,7 +236,7 @@ ControlComponent.name
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L23)
+[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L23)
 
 ___
 
@@ -250,7 +250,7 @@ ControlComponent.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -264,7 +264,7 @@ ControlComponent.onModelChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L129)
+[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L129)
 
 ___
 
@@ -278,7 +278,7 @@ ControlComponent.onModelTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L131)
+[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L131)
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L57)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L57)
 
 ___
 
@@ -298,7 +298,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:88](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L88)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:88](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L88)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:73](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L73)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:73](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L73)
 
 ___
 
@@ -322,7 +322,7 @@ ControlComponent.required
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L20)
+[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L20)
 
 ___
 
@@ -332,7 +332,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:86](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L86)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:86](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L86)
 
 ___
 
@@ -342,7 +342,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:80](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L80)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:80](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L80)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:82](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L82)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:82](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L82)
 
 ___
 
@@ -362,7 +362,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:83](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L83)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:83](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L83)
 
 ___
 
@@ -372,7 +372,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:71](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L71)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:71](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L71)
 
 ___
 
@@ -386,7 +386,7 @@ ControlComponent.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -396,7 +396,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:78](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L78)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:78](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L78)
 
 ___
 
@@ -429,7 +429,7 @@ a TrackByFn to be used with an `*ngFor` in case it is used on an array of {@link
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:87](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L87)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:87](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L87)
 
 ___
 
@@ -443,7 +443,7 @@ ControlComponent.valueChanges
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L57)
+[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L57)
 
 ___
 
@@ -515,7 +515,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L59)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L59)
 
 • `set` **counts**(`value`): `void`
 
@@ -531,7 +531,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:62](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L62)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:62](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L62)
 
 ___
 
@@ -545,7 +545,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L36)
+[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L36)
 
 • `set` **formControl**(`value`): `void`
 
@@ -561,7 +561,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L40)
+[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L40)
 
 ___
 
@@ -575,7 +575,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L26)
+[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L26)
 
 • `set` **formControlName**(`value`): `void`
 
@@ -591,7 +591,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L30)
+[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L30)
 
 ___
 
@@ -605,7 +605,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L45)
+[libs/ng-core/src/lib/components/control.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L45)
 
 • `set` **model**(`value`): `void`
 
@@ -621,7 +621,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L49)
+[libs/ng-core/src/lib/components/control.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L49)
 
 ___
 
@@ -635,7 +635,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L53)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L53)
 
 • `set` **optionsProvider**(`value`): `void`
 
@@ -651,7 +651,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L49)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L49)
 
 ## Methods
 
@@ -675,7 +675,7 @@ ControlComponent.embeddedValueToValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L123)
+[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L123)
 
 ___
 
@@ -693,7 +693,7 @@ ControlComponent.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -717,7 +717,7 @@ ControlComponent.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -742,7 +742,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:144](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L144)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:144](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L144)
 
 ___
 
@@ -762,7 +762,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:135](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L135)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:135](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L135)
 
 ___
 
@@ -782,7 +782,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:118](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L118)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:118](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L118)
 
 ___
 
@@ -802,7 +802,7 @@ label is string
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:114](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L114)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:114](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L114)
 
 ___
 
@@ -826,7 +826,7 @@ OnChanges.ngOnChanges
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:108](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L108)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:108](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L108)
 
 ___
 
@@ -869,7 +869,7 @@ ControlComponent.ngOnInit
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:98](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L98)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:98](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L98)
 
 ___
 
@@ -890,7 +890,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L123)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L123)
 
 ___
 
@@ -914,7 +914,7 @@ ControlComponent.registerOnChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L96)
+[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L96)
 
 ___
 
@@ -938,7 +938,7 @@ ControlComponent.registerOnTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L100)
+[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L100)
 
 ___
 
@@ -962,7 +962,7 @@ ControlComponent.setDisabledState
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:104](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L104)
+[libs/ng-core/src/lib/components/control.component.ts:104](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L104)
 
 ___
 
@@ -986,7 +986,7 @@ ControlComponent.setModelAndEmit
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L112)
+[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L112)
 
 ___
 
@@ -1000,7 +1000,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:148](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L148)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:148](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L148)
 
 ___
 
@@ -1020,7 +1020,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:139](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L139)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:139](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L139)
 
 ___
 
@@ -1034,7 +1034,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/checkbox-group/checkbox-group.component.ts:130](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L130)
+[libs/legi-shared/checkbox-group/checkbox-group.component.ts:130](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/checkbox-group/checkbox-group.component.ts#L130)
 
 ___
 
@@ -1058,7 +1058,7 @@ ControlComponent.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 
@@ -1082,7 +1082,7 @@ ControlComponent.valueToEmbeddedValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L119)
+[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L119)
 
 ___
 
@@ -1106,7 +1106,7 @@ ControlComponent.writeValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L85)
+[libs/ng-core/src/lib/components/control.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L85)
 
 ___
 

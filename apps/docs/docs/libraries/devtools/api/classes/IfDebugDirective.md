@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/directives/if-debug.directive.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/devtools/src/lib/directives/if-debug.directive.ts#L9)
+[lib/directives/if-debug.directive.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/devtools/src/lib/directives/if-debug.directive.ts#L9)
 
 ## Methods
 
@@ -44,4 +44,4 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[lib/directives/if-debug.directive.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/devtools/src/lib/directives/if-debug.directive.ts#L15)
+[lib/directives/if-debug.directive.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/devtools/src/lib/directives/if-debug.directive.ts#L15)

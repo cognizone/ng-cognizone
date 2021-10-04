@@ -22,7 +22,7 @@ Utility class used for handling rxjs subscription in a gracefull manner.
 
 #### Defined in
 
-[lib/models/sub-sink.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/sub-sink.ts#L7)
+[lib/models/sub-sink.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/sub-sink.ts#L7)
 
 ## Accessors
 
@@ -48,7 +48,7 @@ This was done to avoid having to wrap a subscription in a method call, like
 
 #### Defined in
 
-[lib/models/sub-sink.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/sub-sink.ts#L16)
+[lib/models/sub-sink.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/sub-sink.ts#L16)
 
 ## Methods
 
@@ -64,4 +64,4 @@ Unsuscribe from all the added subscriptions and empties the internal pool.
 
 #### Defined in
 
-[lib/models/sub-sink.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/sub-sink.ts#L23)
+[lib/models/sub-sink.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/sub-sink.ts#L23)

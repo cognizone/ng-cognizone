@@ -32,7 +32,7 @@ being typed with `T`
 
 #### Defined in
 
-[lib/models/elastic-response.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L9)
+[lib/models/elastic-response.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L9)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L23)
+[lib/models/elastic-response.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L23)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L15)
+[lib/models/elastic-response.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L15)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L8)
+[lib/models/elastic-response.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L8)
 
 ___
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-[lib/models/elastic-response.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/model-utils/src/lib/models/elastic-response.ts#L7)
+[lib/models/elastic-response.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/model-utils/src/lib/models/elastic-response.ts#L7)

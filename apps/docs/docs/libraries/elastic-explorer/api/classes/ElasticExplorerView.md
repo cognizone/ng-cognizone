@@ -40,7 +40,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L27)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L27)
 
 ## Properties
 
@@ -50,7 +50,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L25)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L25)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L16)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L16)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L23)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L23)
 
 ___
 
@@ -84,7 +84,7 @@ OnDestroy$.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L18)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L18)
 
 ___
 
@@ -108,7 +108,7 @@ OnDestroy$.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L20)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L20)
 
 ___
 
@@ -194,7 +194,7 @@ OnDestroy$.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -218,7 +218,7 @@ OnDestroy$.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -236,7 +236,7 @@ AfterViewInit.ngAfterViewInit
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L41)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L41)
 
 ___
 
@@ -258,7 +258,7 @@ OnDestroy$.ngOnDestroy
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:52](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L52)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:52](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L52)
 
 ___
 
@@ -276,7 +276,7 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:37](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L37)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:37](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L37)
 
 ___
 
@@ -296,7 +296,7 @@ ___
 
 #### Defined in
 
-[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:57](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L57)
+[libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts:57](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic-explorer/src/lib/views/elastic-explorer/elastic-explorer.view.ts#L57)
 
 ___
 
@@ -320,7 +320,7 @@ OnDestroy$.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 

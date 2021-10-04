@@ -15,7 +15,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L8)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L8)
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L4)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L4)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L6)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L6)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L5)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L5)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L7)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L7)

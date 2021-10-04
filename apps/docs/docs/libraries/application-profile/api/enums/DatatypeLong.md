@@ -14,4 +14,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/data-type.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/data-type.ts#L14)
+[lib/models/data-type.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/data-type.ts#L14)

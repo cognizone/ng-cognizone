@@ -31,7 +31,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.state.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.state.ts#L30)
+[libs/operation/src/lib/store/operations.state.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.state.ts#L30)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.state.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.state.ts#L25)
+[libs/operation/src/lib/store/operations.state.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.state.ts#L25)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.state.ts:54](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.state.ts#L54)
+[libs/operation/src/lib/store/operations.state.ts:54](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.state.ts#L54)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.state.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.state.ts#L41)
+[libs/operation/src/lib/store/operations.state.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.state.ts#L41)

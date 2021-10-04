@@ -24,7 +24,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/pipes/lang-string.pipe.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L9)
+[lib/pipes/lang-string.pipe.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L9)
 
 ## Methods
 
@@ -38,7 +38,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/pipes/lang-string.pipe.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L20)
+[lib/pipes/lang-string.pipe.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L20)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[lib/pipes/lang-string.pipe.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L16)
+[lib/pipes/lang-string.pipe.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L16)
 
 ___
 
@@ -83,4 +83,4 @@ PipeTransform.transform
 
 #### Defined in
 
-[lib/pipes/lang-string.pipe.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L11)
+[lib/pipes/lang-string.pipe.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/transloco-langstring/src/lib/pipes/lang-string.pipe.ts#L11)

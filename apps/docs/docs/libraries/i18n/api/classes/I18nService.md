@@ -33,7 +33,7 @@ the extracted string from value, but not processed for translation!
 
 #### Defined in
 
-[lib/services/i18n.service.ts:51](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L51)
+[lib/services/i18n.service.ts:51](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L51)
 
 ___
 
@@ -50,7 +50,7 @@ the currently active lang in the app, in a short ('en') or long
 
 #### Defined in
 
-[lib/services/i18n.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L27)
+[lib/services/i18n.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L27)
 
 ___
 
@@ -67,7 +67,7 @@ the currently active lang in the app, in a short ('en') or long
 
 #### Defined in
 
-[lib/services/i18n.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L38)
+[lib/services/i18n.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L38)
 
 ___
 
@@ -84,7 +84,7 @@ the currently active lang in the app, in a short format (so like
 
 #### Defined in
 
-[lib/services/i18n.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L15)
+[lib/services/i18n.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L15)
 
 ___
 
@@ -100,7 +100,7 @@ the list of available langs
 
 #### Defined in
 
-[lib/services/i18n.service.ts:64](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L64)
+[lib/services/i18n.service.ts:64](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L64)
 
 ___
 
@@ -116,7 +116,7 @@ the list of available langs, in short format
 
 #### Defined in
 
-[lib/services/i18n.service.ts:69](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L69)
+[lib/services/i18n.service.ts:69](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L69)
 
 ___
 
@@ -133,7 +133,7 @@ the currently active lang in the app, in a short ('en') or long
 
 #### Defined in
 
-[lib/services/i18n.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L21)
+[lib/services/i18n.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L21)
 
 ___
 
@@ -149,7 +149,7 @@ the currently active locale in the app
 
 #### Defined in
 
-[lib/services/i18n.service.ts:32](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L32)
+[lib/services/i18n.service.ts:32](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L32)
 
 ___
 
@@ -166,7 +166,7 @@ the currently active lang in the app, in a short format (so like
 
 #### Defined in
 
-[lib/services/i18n.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L9)
+[lib/services/i18n.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L9)
 
 ___
 
@@ -198,7 +198,7 @@ is not yet loaded, or if the `lang` changes (if not given)
 
 #### Defined in
 
-[lib/services/i18n.service.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L59)
+[lib/services/i18n.service.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L59)
 
 ___
 
@@ -229,4 +229,4 @@ in the corresponding `lang`
 
 #### Defined in
 
-[lib/services/i18n.service.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n/src/lib/services/i18n.service.ts#L45)
+[lib/services/i18n.service.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n/src/lib/services/i18n.service.ts#L45)

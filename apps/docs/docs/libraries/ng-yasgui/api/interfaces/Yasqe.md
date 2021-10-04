@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/yasgui.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/models/yasgui.ts#L13)
+[lib/models/yasgui.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/models/yasgui.ts#L13)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[lib/models/yasgui.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/models/yasgui.ts#L12)
+[lib/models/yasgui.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/models/yasgui.ts#L12)
 
 ## Methods
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[lib/models/yasgui.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/models/yasgui.ts#L15)
+[lib/models/yasgui.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/models/yasgui.ts#L15)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[lib/models/yasgui.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/models/yasgui.ts#L16)
+[lib/models/yasgui.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/models/yasgui.ts#L16)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[lib/models/yasgui.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/models/yasgui.ts#L17)
+[lib/models/yasgui.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/models/yasgui.ts#L17)
 
 ___
 
@@ -99,4 +99,4 @@ ___
 
 #### Defined in
 
-[lib/models/yasgui.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/models/yasgui.ts#L14)
+[lib/models/yasgui.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/models/yasgui.ts#L14)

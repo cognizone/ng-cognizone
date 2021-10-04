@@ -28,7 +28,7 @@ const typedocPlugins = libs.map(lib => {
     title: 'Ng-Cognizone',
     tagline: "Open source hub for Cognizone's work in the frontend, having both guides and documentation for libraries",
     url: 'https://cognizone.github.io',
-    baseUrl: '/',
+    baseUrl: '/ng-cognizone/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/logo.png',

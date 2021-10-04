@@ -25,7 +25,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/highlight/highlight.pipe.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/highlight/highlight.pipe.ts#L11)
+[libs/legi-shared/highlight/highlight.pipe.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/highlight/highlight.pipe.ts#L11)
 
 ## Methods
 
@@ -51,4 +51,4 @@ PipeTransform.transform
 
 #### Defined in
 
-[libs/legi-shared/highlight/highlight.pipe.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/highlight/highlight.pipe.ts#L13)
+[libs/legi-shared/highlight/highlight.pipe.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/highlight/highlight.pipe.ts#L13)

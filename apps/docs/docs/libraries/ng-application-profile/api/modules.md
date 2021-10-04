@@ -63,7 +63,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[application-profile/src/lib/models/application-profile.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/application-profile.ts#L5)
+[application-profile/src/lib/models/application-profile.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/application-profile.ts#L5)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/application-profile.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/application-profile.ts#L3)
+[application-profile/src/lib/models/application-profile.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/application-profile.ts#L3)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/application-profile.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/application-profile.ts#L16)
+[application-profile/src/lib/models/application-profile.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/application-profile.ts#L16)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L4)
+[application-profile/src/lib/models/rule.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L4)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L3)
+[application-profile/src/lib/models/rule.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L3)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/models/json-model.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L29)
+[ng-application-profile/src/lib/models/json-model.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L29)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/models/json-model.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L19)
+[ng-application-profile/src/lib/models/json-model.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L19)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L10)
+[application-profile/src/lib/models/rule.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L10)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L9)
+[application-profile/src/lib/models/rule.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L9)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L6)
+[application-profile/src/lib/models/rule.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L6)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L7)
+[application-profile/src/lib/models/rule.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L7)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:2](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L2)
+[application-profile/src/lib/models/rule.ts:2](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L2)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L8)
+[application-profile/src/lib/models/rule.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L8)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L11)
+[application-profile/src/lib/models/rule.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L11)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/resource.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource.ts#L10)
+[application-profile/src/lib/models/resource.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource.ts#L10)
 
 ___
 
@@ -251,7 +251,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/resource-graph.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource-graph.ts#L9)
+[application-profile/src/lib/models/resource-graph.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource-graph.ts#L9)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:1](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L1)
+[application-profile/src/lib/models/rule.ts:1](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L1)
 
 ___
 
@@ -285,7 +285,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L5)
+[application-profile/src/lib/models/rule.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L5)
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/application-profile.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/application-profile.ts#L10)
+[application-profile/src/lib/models/application-profile.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/application-profile.ts#L10)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/models/json-model.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L7)
+[ng-application-profile/src/lib/models/json-model.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L7)
 
 ## Variables
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-loader.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-loader.ts#L11)
+[ng-application-profile/src/lib/services/ap-loader.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-loader.ts#L11)
 
 ___
 
@@ -341,7 +341,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/application-profile.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/application-profile.ts#L22)
+[application-profile/src/lib/models/application-profile.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/application-profile.ts#L22)
 
 ___
 
@@ -351,7 +351,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/prefixes.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/prefixes.ts#L5)
+[application-profile/src/lib/models/prefixes.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/prefixes.ts#L5)
 
 ___
 
@@ -361,7 +361,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L3)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L3)
 
 ## Functions
 
@@ -381,7 +381,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-form-builder.service.ts:86](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-form-builder.service.ts#L86)
+[ng-application-profile/src/lib/services/ap-form-builder.service.ts:86](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-form-builder.service.ts#L86)
 
 ___
 
@@ -402,7 +402,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/utils/get-concrete-type.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/utils/get-concrete-type.ts#L6)
+[application-profile/src/lib/utils/get-concrete-type.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/utils/get-concrete-type.ts#L6)
 
 ___
 
@@ -423,7 +423,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/utils/get-concrete-type.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/utils/get-concrete-type.ts#L30)
+[application-profile/src/lib/utils/get-concrete-type.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/utils/get-concrete-type.ts#L30)
 
 ___
 
@@ -444,7 +444,7 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/utils/get-concrete-type.ts:48](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/utils/get-concrete-type.ts#L48)
+[application-profile/src/lib/utils/get-concrete-type.ts:48](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/utils/get-concrete-type.ts#L48)
 
 ___
 
@@ -464,7 +464,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/utils/get-uri.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/utils/get-uri.ts#L3)
+[ng-application-profile/src/lib/utils/get-uri.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/utils/get-uri.ts#L3)
 
 ___
 
@@ -484,7 +484,7 @@ o is ClassIdRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L22)
+[application-profile/src/lib/models/rule.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L22)
 
 ___
 
@@ -504,7 +504,7 @@ o is DataTypeRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L42)
+[application-profile/src/lib/models/rule.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L42)
 
 ___
 
@@ -524,7 +524,7 @@ o is JsonModel
 
 #### Defined in
 
-[ng-application-profile/src/lib/models/json-model.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L21)
+[ng-application-profile/src/lib/models/json-model.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L21)
 
 ___
 
@@ -551,7 +551,7 @@ model is JsonModelFlat<T\>
 
 #### Defined in
 
-[ng-application-profile/src/lib/utils/is-of-type.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L15)
+[ng-application-profile/src/lib/utils/is-of-type.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L15)
 
 ___
 
@@ -589,7 +589,7 @@ model is JsonModelFlat<T\>
 
 #### Defined in
 
-[ng-application-profile/src/lib/utils/is-of-type.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L19)
+[ng-application-profile/src/lib/utils/is-of-type.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L19)
 
 ___
 
@@ -616,7 +616,7 @@ model is T
 
 #### Defined in
 
-[ng-application-profile/src/lib/utils/is-of-type.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L11)
+[ng-application-profile/src/lib/utils/is-of-type.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L11)
 
 ___
 
@@ -636,7 +636,7 @@ o is MaxCardinalityRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:34](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L34)
+[application-profile/src/lib/models/rule.ts:34](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L34)
 
 ___
 
@@ -656,7 +656,7 @@ o is MinCardinalityRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:38](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L38)
+[application-profile/src/lib/models/rule.ts:38](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L38)
 
 ___
 
@@ -677,7 +677,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/utils/is-of-type.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L5)
+[ng-application-profile/src/lib/utils/is-of-type.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/utils/is-of-type.ts#L5)
 
 ___
 
@@ -697,7 +697,7 @@ o is OrClassIdRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L26)
+[application-profile/src/lib/models/rule.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L26)
 
 ___
 
@@ -717,7 +717,7 @@ o is OrClassIdRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L30)
+[application-profile/src/lib/models/rule.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L30)
 
 ___
 
@@ -737,7 +737,7 @@ o is OrRule<Rule<string, unknown\>\>
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L18)
+[application-profile/src/lib/models/rule.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L18)
 
 ___
 
@@ -757,7 +757,7 @@ o is RangeRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:46](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L46)
+[application-profile/src/lib/models/rule.ts:46](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L46)
 
 ___
 
@@ -777,7 +777,7 @@ o is RdfTypesRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:50](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L50)
+[application-profile/src/lib/models/rule.ts:50](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L50)
 
 ___
 
@@ -797,7 +797,7 @@ o is Rule<string, unknown\>
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L13)
+[application-profile/src/lib/models/rule.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L13)
 
 ___
 
@@ -817,7 +817,7 @@ o is SubClassOfRule
 
 #### Defined in
 
-[application-profile/src/lib/models/rule.ts:54](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/rule.ts#L54)
+[application-profile/src/lib/models/rule.ts:54](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/rule.ts#L54)
 
 ___
 
@@ -843,7 +843,7 @@ keyof `T`[]
 
 #### Defined in
 
-[ng-application-profile/src/lib/utils/keys.ts:1](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/utils/keys.ts#L1)
+[ng-application-profile/src/lib/utils/keys.ts:1](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/utils/keys.ts#L1)
 
 ___
 
@@ -863,7 +863,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/ap-loader.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/ap-loader.ts#L13)
+[ng-application-profile/src/lib/services/ap-loader.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/ap-loader.ts#L13)
 
 ___
 
@@ -883,7 +883,7 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L18)
+[ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/services/mappers/micro-attribute-mapper.ts#L18)
 
 ___
 
@@ -909,4 +909,4 @@ ___
 
 #### Defined in
 
-[ng-application-profile/src/lib/utils/keys.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/utils/keys.ts#L5)
+[ng-application-profile/src/lib/utils/keys.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/utils/keys.ts#L5)

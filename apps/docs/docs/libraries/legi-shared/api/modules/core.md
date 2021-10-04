@@ -23,7 +23,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/core/models/legi-shared-options.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/core/models/legi-shared-options.ts#L10)
+[libs/legi-shared/core/models/legi-shared-options.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/core/models/legi-shared-options.ts#L10)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/core/models/legi-shared-options.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/core/models/legi-shared-options.ts#L3)
+[libs/legi-shared/core/models/legi-shared-options.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/core/models/legi-shared-options.ts#L3)
 
 ## Functions
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/core/legi-shared.module.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/core/legi-shared.module.ts#L36)
+[libs/legi-shared/core/legi-shared.module.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/core/legi-shared.module.ts#L36)

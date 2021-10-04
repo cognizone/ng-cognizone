@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:35](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L35)
+[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:35](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L35)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:34](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L34)
+[libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts:34](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/components/operation-viewer-modal/operation-viewer-modal.component.ts#L34)

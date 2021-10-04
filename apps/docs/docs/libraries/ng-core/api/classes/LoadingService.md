@@ -18,7 +18,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L19)
+[libs/ng-core/src/lib/services/loading.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L19)
 
 ## Properties
 
@@ -28,7 +28,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L15)
+[libs/ng-core/src/lib/services/loading.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L15)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L9)
+[libs/ng-core/src/lib/services/loading.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L9)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L17)
+[libs/ng-core/src/lib/services/loading.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L17)
 
 ## Accessors
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L11)
+[libs/ng-core/src/lib/services/loading.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L11)
 
 ## Methods
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:24](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L24)
+[libs/ng-core/src/lib/services/loading.service.ts:24](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L24)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:34](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L34)
+[libs/ng-core/src/lib/services/loading.service.ts:34](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L34)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L45)
+[libs/ng-core/src/lib/services/loading.service.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L45)
 
 ___
 
@@ -128,7 +128,7 @@ OnDestroy.ngOnDestroy
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L41)
+[libs/ng-core/src/lib/services/loading.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L41)
 
 ___
 
@@ -142,4 +142,4 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/services/loading.service.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/services/loading.service.ts#L29)
+[libs/ng-core/src/lib/services/loading.service.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/services/loading.service.ts#L29)

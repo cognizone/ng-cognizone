@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:116](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L116)
+[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:116](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L116)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:115](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L115)
+[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:115](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L115)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:114](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L114)
+[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:114](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L114)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:118](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L118)
+[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:118](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L118)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:117](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L117)
+[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:117](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L117)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:119](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L119)
+[libs/legi-cv/src/lib/services/atomic-cv-provider.ts:119](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/atomic-cv-provider.ts#L119)

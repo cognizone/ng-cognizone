@@ -34,7 +34,7 @@ ElasticClient.constructor
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L21)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L21)
 
 ## Properties
 
@@ -78,7 +78,7 @@ ElasticClient.resourceGraphService
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L11)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L11)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L17)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L17)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L14)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-client.service.ts#L14)
 
 ## Methods
 
@@ -124,7 +124,7 @@ ElasticClient.getSearchUrl
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L23)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L23)
 
 ___
 
@@ -162,7 +162,7 @@ ElasticClient.search
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-client.service.ts#L19)
+[libs/elastic/src/lib/services/elastic-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-client.service.ts#L19)
 
 ___
 
@@ -200,7 +200,7 @@ ElasticClient.searchOne
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-client.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-client.service.ts#L26)
+[libs/elastic/src/lib/services/elastic-client.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-client.service.ts#L26)
 
 ___
 
@@ -238,7 +238,7 @@ ElasticClient.searchOneRaw
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L19)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L19)
 
 ___
 
@@ -276,4 +276,4 @@ ElasticClient.searchRaw
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L15)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L15)

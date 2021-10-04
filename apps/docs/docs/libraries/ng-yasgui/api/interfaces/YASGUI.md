@@ -18,4 +18,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/models/yasgui.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/models/yasgui.ts#L4)
+[lib/models/yasgui.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/models/yasgui.ts#L4)

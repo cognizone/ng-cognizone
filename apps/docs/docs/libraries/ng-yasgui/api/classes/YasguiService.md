@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/services/yasgui.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L9)
+[lib/services/yasgui.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L9)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[lib/services/yasgui.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L11)
+[lib/services/yasgui.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L11)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[lib/services/yasgui.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L13)
+[lib/services/yasgui.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L13)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[lib/services/yasgui.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L15)
+[lib/services/yasgui.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L15)
 
 ## Methods
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[lib/services/yasgui.service.ts:47](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L47)
+[lib/services/yasgui.service.ts:47](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L47)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[lib/services/yasgui.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L17)
+[lib/services/yasgui.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L17)
 
 ___
 
@@ -92,4 +92,4 @@ ___
 
 #### Defined in
 
-[lib/services/yasgui.service.ts:39](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L39)
+[lib/services/yasgui.service.ts:39](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-yasgui/src/lib/services/yasgui.service.ts#L39)

@@ -18,4 +18,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/permissions/src/lib/services/permissions-provider.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/services/permissions-provider.ts#L5)
+[libs/permissions/src/lib/services/permissions-provider.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/services/permissions-provider.ts#L5)

@@ -23,7 +23,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/store/cv.actions.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/store/cv.actions.ts#L6)
+[libs/legi-cv/src/lib/store/cv.actions.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/store/cv.actions.ts#L6)
 
 ## Properties
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/store/cv.actions.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/store/cv.actions.ts#L4)
+[libs/legi-cv/src/lib/store/cv.actions.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/store/cv.actions.ts#L4)

@@ -34,7 +34,7 @@ ControlComponent&lt;string\&gt;.constructor
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:46](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L46)
+[libs/legi-shared/textarea/textarea.component.ts:46](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L46)
 
 ## Properties
 
@@ -48,7 +48,7 @@ ControlComponent.\_model
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L63)
+[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L63)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L29)
+[libs/legi-shared/textarea/textarea.component.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L29)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:33](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L33)
+[libs/legi-shared/textarea/textarea.component.ts:33](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L33)
 
 ___
 
@@ -92,7 +92,7 @@ ControlComponent.controlChanged
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L61)
+[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L61)
 
 ___
 
@@ -116,7 +116,7 @@ ControlComponent.defaultValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L59)
+[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L59)
 
 ___
 
@@ -130,7 +130,7 @@ ControlComponent.disabled
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L53)
+[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L53)
 
 ___
 
@@ -144,7 +144,7 @@ ControlComponent.embeddedControl
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L40)
+[libs/legi-shared/textarea/textarea.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L40)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L31)
+[libs/legi-shared/textarea/textarea.component.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L31)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L27)
+[libs/legi-shared/textarea/textarea.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L27)
 
 ___
 
@@ -188,7 +188,7 @@ ControlComponent.name
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L23)
+[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L23)
 
 ___
 
@@ -202,7 +202,7 @@ ControlComponent.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -216,7 +216,7 @@ ControlComponent.onModelChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L129)
+[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L129)
 
 ___
 
@@ -230,7 +230,7 @@ ControlComponent.onModelTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L131)
+[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L131)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L25)
+[libs/legi-shared/textarea/textarea.component.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L25)
 
 ___
 
@@ -250,7 +250,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L36)
+[libs/legi-shared/textarea/textarea.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L36)
 
 ___
 
@@ -264,7 +264,7 @@ ControlComponent.required
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L20)
+[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L20)
 
 ___
 
@@ -278,7 +278,7 @@ ControlComponent.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:38](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L38)
+[libs/legi-shared/textarea/textarea.component.ts:38](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L38)
 
 ___
 
@@ -302,7 +302,7 @@ ControlComponent.valueChanges
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L57)
+[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L57)
 
 ___
 
@@ -374,7 +374,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L42)
+[libs/legi-shared/textarea/textarea.component.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L42)
 
 ___
 
@@ -388,7 +388,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L36)
+[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L36)
 
 • `set` **formControl**(`value`): `void`
 
@@ -404,7 +404,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L40)
+[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L40)
 
 ___
 
@@ -418,7 +418,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L26)
+[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L26)
 
 • `set` **formControlName**(`value`): `void`
 
@@ -434,7 +434,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L30)
+[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L30)
 
 ___
 
@@ -448,7 +448,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L45)
+[libs/ng-core/src/lib/components/control.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L45)
 
 • `set` **model**(`value`): `void`
 
@@ -464,7 +464,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L49)
+[libs/ng-core/src/lib/components/control.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L49)
 
 ## Methods
 
@@ -488,7 +488,7 @@ ControlComponent.embeddedValueToValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L123)
+[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L123)
 
 ___
 
@@ -506,7 +506,7 @@ ControlComponent.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -530,7 +530,7 @@ ControlComponent.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -569,7 +569,7 @@ ControlComponent.ngOnInit
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:73](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L73)
+[libs/ng-core/src/lib/components/control.component.ts:73](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L73)
 
 ___
 
@@ -583,7 +583,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/textarea/textarea.component.ts:55](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/textarea/textarea.component.ts#L55)
+[libs/legi-shared/textarea/textarea.component.ts:55](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/textarea/textarea.component.ts#L55)
 
 ___
 
@@ -607,7 +607,7 @@ ControlComponent.registerOnChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L96)
+[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L96)
 
 ___
 
@@ -631,7 +631,7 @@ ControlComponent.registerOnTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L100)
+[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L100)
 
 ___
 
@@ -655,7 +655,7 @@ ControlComponent.setDisabledState
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:104](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L104)
+[libs/ng-core/src/lib/components/control.component.ts:104](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L104)
 
 ___
 
@@ -679,7 +679,7 @@ ControlComponent.setModelAndEmit
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L112)
+[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L112)
 
 ___
 
@@ -703,7 +703,7 @@ ControlComponent.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 
@@ -727,7 +727,7 @@ ControlComponent.valueToEmbeddedValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L119)
+[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L119)
 
 ___
 
@@ -751,7 +751,7 @@ ControlComponent.writeValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L85)
+[libs/ng-core/src/lib/components/control.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L85)
 
 ___
 

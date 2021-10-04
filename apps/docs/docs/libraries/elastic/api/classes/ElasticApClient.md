@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-ap-client.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L10)
+[libs/elastic/src/lib/services/elastic-ap-client.service.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L10)
 
 ## Methods
 
@@ -40,4 +40,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-ap-client.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L12)
+[libs/elastic/src/lib/services/elastic-ap-client.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-ap-client.service.ts#L12)

@@ -39,7 +39,7 @@ ControlComponent&lt;string\&gt;.constructor
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:62](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L62)
+[libs/legi-shared/input/input.component.ts:62](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L62)
 
 ## Properties
 
@@ -49,7 +49,7 @@ ControlComponent&lt;string\&gt;.constructor
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:60](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L60)
+[libs/legi-shared/input/input.component.ts:60](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L60)
 
 ___
 
@@ -63,7 +63,7 @@ ControlComponent.\_model
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L63)
+[libs/ng-core/src/lib/components/control.component.ts:63](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L63)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:37](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L37)
+[libs/legi-shared/input/input.component.ts:37](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L37)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:39](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L39)
+[libs/legi-shared/input/input.component.ts:39](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L39)
 
 ___
 
@@ -107,7 +107,7 @@ ControlComponent.controlChanged
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L61)
+[libs/ng-core/src/lib/components/control.component.ts:61](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L61)
 
 ___
 
@@ -131,7 +131,7 @@ ControlComponent.defaultValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L59)
+[libs/ng-core/src/lib/components/control.component.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L59)
 
 ___
 
@@ -145,7 +145,7 @@ ControlComponent.disabled
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L53)
+[libs/ng-core/src/lib/components/control.component.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L53)
 
 ___
 
@@ -159,7 +159,7 @@ ControlComponent.embeddedControl
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:54](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L54)
+[libs/legi-shared/input/input.component.ts:54](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L54)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L41)
+[libs/legi-shared/input/input.component.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L41)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L47)
+[libs/legi-shared/input/input.component.ts:47](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L47)
 
 ___
 
@@ -203,7 +203,7 @@ ControlComponent.name
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L23)
+[libs/ng-core/src/lib/components/control.component.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L23)
 
 ___
 
@@ -217,7 +217,7 @@ ControlComponent.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -231,7 +231,7 @@ ControlComponent.onModelChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L129)
+[libs/ng-core/src/lib/components/control.component.ts:129](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L129)
 
 ___
 
@@ -245,7 +245,7 @@ ControlComponent.onModelTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L131)
+[libs/ng-core/src/lib/components/control.component.ts:131](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L131)
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L27)
+[libs/legi-shared/input/input.component.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L27)
 
 ___
 
@@ -265,7 +265,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:50](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L50)
+[libs/legi-shared/input/input.component.ts:50](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L50)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:43](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L43)
+[libs/legi-shared/input/input.component.ts:43](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L43)
 
 ___
 
@@ -289,7 +289,7 @@ ControlComponent.required
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L20)
+[libs/ng-core/src/lib/components/control.component.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L20)
 
 ___
 
@@ -303,7 +303,7 @@ ControlComponent.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -313,7 +313,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:52](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L52)
+[libs/legi-shared/input/input.component.ts:52](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L52)
 
 ___
 
@@ -323,7 +323,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L45)
+[libs/legi-shared/input/input.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L45)
 
 ___
 
@@ -337,7 +337,7 @@ ControlComponent.valueChanges
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L57)
+[libs/ng-core/src/lib/components/control.component.ts:57](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L57)
 
 ___
 
@@ -409,7 +409,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:56](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L56)
+[libs/legi-shared/input/input.component.ts:56](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L56)
 
 ___
 
@@ -423,7 +423,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L36)
+[libs/ng-core/src/lib/components/control.component.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L36)
 
 • `set` **formControl**(`value`): `void`
 
@@ -439,7 +439,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L40)
+[libs/ng-core/src/lib/components/control.component.ts:40](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L40)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L26)
+[libs/ng-core/src/lib/components/control.component.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L26)
 
 • `set` **formControlName**(`value`): `void`
 
@@ -469,7 +469,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L30)
+[libs/ng-core/src/lib/components/control.component.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L30)
 
 ___
 
@@ -483,7 +483,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:33](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L33)
+[libs/legi-shared/input/input.component.ts:33](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L33)
 
 • `set` **label**(`label`): `void`
 
@@ -499,7 +499,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:29](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L29)
+[libs/legi-shared/input/input.component.ts:29](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L29)
 
 ___
 
@@ -513,7 +513,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L45)
+[libs/ng-core/src/lib/components/control.component.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L45)
 
 • `set` **model**(`value`): `void`
 
@@ -529,7 +529,7 @@ ___
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L49)
+[libs/ng-core/src/lib/components/control.component.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L49)
 
 ## Methods
 
@@ -553,7 +553,7 @@ ControlComponent.embeddedValueToValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L123)
+[libs/ng-core/src/lib/components/control.component.ts:123](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L123)
 
 ___
 
@@ -571,7 +571,7 @@ ControlComponent.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -595,7 +595,7 @@ ControlComponent.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -638,7 +638,7 @@ ControlComponent.ngOnInit
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:76](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L76)
+[libs/legi-shared/input/input.component.ts:76](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L76)
 
 ___
 
@@ -652,7 +652,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/input/input.component.ts:86](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/input/input.component.ts#L86)
+[libs/legi-shared/input/input.component.ts:86](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/input/input.component.ts#L86)
 
 ___
 
@@ -676,7 +676,7 @@ ControlComponent.registerOnChange
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L96)
+[libs/ng-core/src/lib/components/control.component.ts:96](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L96)
 
 ___
 
@@ -700,7 +700,7 @@ ControlComponent.registerOnTouched
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L100)
+[libs/ng-core/src/lib/components/control.component.ts:100](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L100)
 
 ___
 
@@ -724,7 +724,7 @@ ControlComponent.setDisabledState
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:104](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L104)
+[libs/ng-core/src/lib/components/control.component.ts:104](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L104)
 
 ___
 
@@ -748,7 +748,7 @@ ControlComponent.setModelAndEmit
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L112)
+[libs/ng-core/src/lib/components/control.component.ts:112](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L112)
 
 ___
 
@@ -772,7 +772,7 @@ ControlComponent.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 
@@ -796,7 +796,7 @@ ControlComponent.valueToEmbeddedValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L119)
+[libs/ng-core/src/lib/components/control.component.ts:119](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L119)
 
 ___
 
@@ -820,7 +820,7 @@ ControlComponent.writeValue
 
 #### Defined in
 
-[libs/ng-core/src/lib/components/control.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/components/control.component.ts#L85)
+[libs/ng-core/src/lib/components/control.component.ts:85](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/components/control.component.ts#L85)
 
 ___
 

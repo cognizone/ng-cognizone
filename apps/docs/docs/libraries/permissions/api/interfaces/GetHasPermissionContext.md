@@ -14,4 +14,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/get-has-permission.directive.ts:44](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L44)
+[libs/permissions/src/lib/directives/get-has-permission.directive.ts:44](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/get-has-permission.directive.ts#L44)

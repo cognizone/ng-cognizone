@@ -41,7 +41,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L41)
+[libs/operation/src/lib/directives/get-operation.directive.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L41)
 
 ## Properties
 
@@ -51,7 +51,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:35](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L35)
+[libs/operation/src/lib/directives/get-operation.directive.ts:35](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L35)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L31)
+[libs/operation/src/lib/directives/get-operation.directive.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L31)
 
 ___
 
@@ -75,7 +75,7 @@ OnDestroy$.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:39](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L39)
+[libs/operation/src/lib/directives/get-operation.directive.ts:39](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L39)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:33](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L33)
+[libs/operation/src/lib/directives/get-operation.directive.ts:33](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L33)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:37](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L37)
+[libs/operation/src/lib/directives/get-operation.directive.ts:37](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L37)
 
 ___
 
@@ -119,7 +119,7 @@ OnDestroy$.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -197,7 +197,7 @@ apps/docs/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L21)
+[libs/operation/src/lib/directives/get-operation.directive.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L21)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L26)
+[libs/operation/src/lib/directives/get-operation.directive.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L26)
 
 ## Methods
 
@@ -235,7 +235,7 @@ OnDestroy$.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -259,7 +259,7 @@ OnDestroy$.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:82](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L82)
+[libs/operation/src/lib/directives/get-operation.directive.ts:82](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L82)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L59)
+[libs/operation/src/lib/directives/get-operation.directive.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L59)
 
 ___
 
@@ -326,7 +326,7 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/operation/src/lib/directives/get-operation.directive.ts:54](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/directives/get-operation.directive.ts#L54)
+[libs/operation/src/lib/directives/get-operation.directive.ts:54](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/directives/get-operation.directive.ts#L54)
 
 ___
 
@@ -350,7 +350,7 @@ OnDestroy$.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 

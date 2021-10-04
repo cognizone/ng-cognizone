@@ -19,4 +19,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:32](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L32)
+[libs/legi-shared/select-option-sort/select-option-sort.pipe.ts:32](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/select-option-sort/select-option-sort.pipe.ts#L32)

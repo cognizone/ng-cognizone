@@ -31,7 +31,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-utils.service.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-utils.service.ts#L8)
+[libs/operation/src/lib/services/operation-utils.service.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-utils.service.ts#L8)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-utils.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-utils.service.ts#L20)
+[libs/operation/src/lib/services/operation-utils.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-utils.service.ts#L20)

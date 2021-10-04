@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L20)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L20)
 
 ## Properties
 
@@ -36,7 +36,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L14)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L14)
 
 ___
 
@@ -50,7 +50,7 @@ CvProvider.cvName
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L13)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L13)
 
 ___
 
@@ -64,7 +64,7 @@ CvProvider.cvUri
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L15)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L15)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L18)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L18)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L17)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L17)
 
 ## Methods
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:91](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L91)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:91](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L91)
 
 ___
 
@@ -128,7 +128,7 @@ CvProvider.getConceptByUri
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L49)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L49)
 
 ___
 
@@ -152,7 +152,7 @@ CvProvider.getCv
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L22)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L22)
 
 ___
 
@@ -176,7 +176,7 @@ CvProvider.getLabel
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:87](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L87)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:87](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L87)
 
 ___
 
@@ -200,7 +200,7 @@ CvProvider.hasConcept
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:83](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L83)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:83](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L83)
 
 ___
 
@@ -225,4 +225,4 @@ CvProvider.toConceptWrapper
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L41)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L41)

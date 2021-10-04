@@ -27,7 +27,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L15)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L15)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L11)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy-cv-provider-options.ts#L11)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:114](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L114)
+[libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts:114](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/services/legal-taxonomy-cv-provider.service.ts#L114)

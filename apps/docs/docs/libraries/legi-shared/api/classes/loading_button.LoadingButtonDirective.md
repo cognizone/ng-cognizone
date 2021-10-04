@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:28](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L28)
+[libs/legi-shared/loading-button/loading-button.directive.ts:28](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L28)
 
 ## Properties
 
@@ -40,7 +40,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L22)
+[libs/legi-shared/loading-button/loading-button.directive.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L22)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L25)
+[libs/legi-shared/loading-button/loading-button.directive.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L25)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L26)
+[libs/legi-shared/loading-button/loading-button.directive.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L26)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:24](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L24)
+[libs/legi-shared/loading-button/loading-button.directive.ts:24](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L24)
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:65](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L65)
+[libs/legi-shared/loading-button/loading-button.directive.ts:65](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L65)
 
 ___
 
@@ -108,7 +108,7 @@ OnChanges.ngOnChanges
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:39](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L39)
+[libs/legi-shared/loading-button/loading-button.directive.ts:39](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L39)
 
 ___
 
@@ -126,7 +126,7 @@ OnDestroy.ngOnDestroy
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L45)
+[libs/legi-shared/loading-button/loading-button.directive.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L45)
 
 ___
 
@@ -144,7 +144,7 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:35](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L35)
+[libs/legi-shared/loading-button/loading-button.directive.ts:35](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L35)
 
 ___
 
@@ -158,4 +158,4 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/loading-button/loading-button.directive.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/loading-button/loading-button.directive.ts#L49)
+[libs/legi-shared/loading-button/loading-button.directive.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/loading-button/loading-button.directive.ts#L49)

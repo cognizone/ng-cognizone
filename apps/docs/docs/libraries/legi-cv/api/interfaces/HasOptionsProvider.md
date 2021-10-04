@@ -20,4 +20,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/directives/cv-options.directive.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/directives/cv-options.directive.ts#L8)
+[libs/legi-cv/src/lib/directives/cv-options.directive.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/directives/cv-options.directive.ts#L8)

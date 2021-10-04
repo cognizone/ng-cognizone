@@ -28,4 +28,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/utils/extract-control-from-ng-control.ts:3](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/utils/extract-control-from-ng-control.ts#L3)
+[libs/legi-shared/utils/extract-control-from-ng-control.ts:3](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/utils/extract-control-from-ng-control.ts#L3)

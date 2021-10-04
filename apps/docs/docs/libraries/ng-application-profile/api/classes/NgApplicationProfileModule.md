@@ -24,4 +24,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[ng-application-profile/src/lib/ng-application-profile.module.ts:25](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/ng-application-profile.module.ts#L25)
+[ng-application-profile/src/lib/ng-application-profile.module.ts:25](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/ng-application-profile.module.ts#L25)

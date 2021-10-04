@@ -31,7 +31,7 @@ I18nService.constructor
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L11)
+[lib/services/i18n-transloco.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L11)
 
 ## Methods
 
@@ -56,7 +56,7 @@ I18nService.czLabelToString
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:49](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L49)
+[lib/services/i18n-transloco.service.ts:49](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L49)
 
 ___
 
@@ -74,7 +74,7 @@ I18nService.getActiveLang
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L38)
+[lib/services/i18n-transloco.service.ts:38](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L38)
 
 ___
 
@@ -92,7 +92,7 @@ I18nService.getActiveLocale
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L19)
+[lib/services/i18n-transloco.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L19)
 
 ___
 
@@ -110,7 +110,7 @@ I18nService.getActiveSimpleLang
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L27)
+[lib/services/i18n-transloco.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L27)
 
 ___
 
@@ -128,7 +128,7 @@ I18nService.getAvailableLangs
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:59](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L59)
+[lib/services/i18n-transloco.service.ts:59](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L59)
 
 ___
 
@@ -146,7 +146,7 @@ I18nService.getAvailableSimpleLangs
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:65](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L65)
+[lib/services/i18n-transloco.service.ts:65](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L65)
 
 ___
 
@@ -164,7 +164,7 @@ I18nService.selectActiveLang
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:31](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L31)
+[lib/services/i18n-transloco.service.ts:31](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L31)
 
 ___
 
@@ -182,7 +182,7 @@ I18nService.selectActiveLocale
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L15)
+[lib/services/i18n-transloco.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L15)
 
 ___
 
@@ -200,7 +200,7 @@ I18nService.selectActiveSimpleLang
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L23)
+[lib/services/i18n-transloco.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L23)
 
 ___
 
@@ -232,7 +232,7 @@ I18nService.selectTranslate
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:53](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L53)
+[lib/services/i18n-transloco.service.ts:53](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L53)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:69](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L69)
+[lib/services/i18n-transloco.service.ts:69](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L69)
 
 ___
 
@@ -284,4 +284,4 @@ I18nService.translate
 
 #### Defined in
 
-[lib/services/i18n-transloco.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L42)
+[lib/services/i18n-transloco.service.ts:42](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/services/i18n-transloco.service.ts#L42)

@@ -21,7 +21,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L41)
+[libs/json-model-graph/src/lib/store/graph.state.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L41)
 
 ## Methods
 
@@ -42,7 +42,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:58](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L58)
+[libs/json-model-graph/src/lib/store/graph.state.ts:58](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L58)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:86](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L86)
+[libs/json-model-graph/src/lib/store/graph.state.ts:86](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L86)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:46](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L46)
+[libs/json-model-graph/src/lib/store/graph.state.ts:46](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L46)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.state.ts:69](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.state.ts#L69)
+[libs/json-model-graph/src/lib/store/graph.state.ts:69](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.state.ts#L69)

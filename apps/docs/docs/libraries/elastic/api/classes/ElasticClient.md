@@ -36,7 +36,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-client.service.ts#L15)
+[libs/elastic/src/lib/services/elastic-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-client.service.ts#L15)
 
 ## Properties
 
@@ -46,7 +46,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-client.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-client.service.ts#L13)
+[libs/elastic/src/lib/services/elastic-client.service.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-client.service.ts#L13)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L11)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L11)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L9)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L9)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L23)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L23)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-client.service.ts#L19)
+[libs/elastic/src/lib/services/elastic-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-client.service.ts#L19)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-client.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-client.service.ts#L26)
+[libs/elastic/src/lib/services/elastic-client.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-client.service.ts#L26)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L19)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L19)
 
 ___
 
@@ -270,4 +270,4 @@ ___
 
 #### Defined in
 
-[libs/elastic/src/lib/services/elastic-raw-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L15)
+[libs/elastic/src/lib/services/elastic-raw-client.service.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/elastic/src/lib/services/elastic-raw-client.service.ts#L15)

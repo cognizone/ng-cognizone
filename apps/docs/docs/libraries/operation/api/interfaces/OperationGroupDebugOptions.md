@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-group-debug.service.ts:132](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-group-debug.service.ts#L132)
+[libs/operation/src/lib/services/operation-group-debug.service.ts:132](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-group-debug.service.ts#L132)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-group-debug.service.ts:133](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-group-debug.service.ts#L133)
+[libs/operation/src/lib/services/operation-group-debug.service.ts:133](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-group-debug.service.ts#L133)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-group-debug.service.ts:135](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-group-debug.service.ts#L135)
+[libs/operation/src/lib/services/operation-group-debug.service.ts:135](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-group-debug.service.ts#L135)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operation-group-debug.service.ts:134](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operation-group-debug.service.ts#L134)
+[libs/operation/src/lib/services/operation-group-debug.service.ts:134](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operation-group-debug.service.ts#L134)

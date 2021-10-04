@@ -20,4 +20,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.actions.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.actions.ts#L22)
+[libs/operation/src/lib/store/operations.actions.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.actions.ts#L22)

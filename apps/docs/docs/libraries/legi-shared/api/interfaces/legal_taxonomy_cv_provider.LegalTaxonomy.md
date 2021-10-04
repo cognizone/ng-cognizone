@@ -32,7 +32,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/ng-application-profile/src/lib/models/json-model.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L12)
+[libs/ng-application-profile/src/lib/models/json-model.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L12)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[libs/ng-application-profile/src/lib/models/json-model.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L16)
+[libs/ng-application-profile/src/lib/models/json-model.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L16)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[libs/ng-application-profile/src/lib/models/json-model.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-application-profile/src/lib/models/json-model.ts#L10)
+[libs/ng-application-profile/src/lib/models/json-model.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-application-profile/src/lib/models/json-model.ts#L10)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:5](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L5)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:5](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L5)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L11)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L11)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:19](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L19)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:19](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L19)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L20)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L20)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L7)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L7)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L12)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L12)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:8](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L8)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:8](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L8)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L6)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L6)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy.ts#L4)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/legal-taxonomy.ts#L4)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L14)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L14)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L10)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L10)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L18)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L18)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:17](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L17)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:17](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L17)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L21)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L21)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L9)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L9)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L15)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L15)
 
 ___
 
@@ -298,4 +298,4 @@ ___
 
 #### Defined in
 
-[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:16](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L16)
+[libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts:16](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/legal-taxonomy-cv-provider/models/concept.ts#L16)

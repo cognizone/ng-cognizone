@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[application-profile/src/lib/models/resource.ts:21](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource.ts#L21)
+[application-profile/src/lib/models/resource.ts:21](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource.ts#L21)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 #### Defined in
 
-[application-profile/src/lib/models/resource.ts:20](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/application-profile/src/lib/models/resource.ts#L20)
+[application-profile/src/lib/models/resource.ts:20](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/application-profile/src/lib/models/resource.ts#L20)

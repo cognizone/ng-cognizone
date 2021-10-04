@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.actions.ts:15](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.actions.ts#L15)
+[libs/json-model-graph/src/lib/store/graph.actions.ts:15](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.actions.ts#L15)
 
 ## Properties
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-[libs/json-model-graph/src/lib/store/graph.actions.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/json-model-graph/src/lib/store/graph.actions.ts#L13)
+[libs/json-model-graph/src/lib/store/graph.actions.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/json-model-graph/src/lib/store/graph.actions.ts#L13)

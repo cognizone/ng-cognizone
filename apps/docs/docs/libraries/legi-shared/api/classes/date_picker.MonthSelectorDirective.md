@@ -21,4 +21,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-shared/date-picker/directives/month-selector.directive.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-shared/date-picker/directives/month-selector.directive.ts#L13)
+[libs/legi-shared/date-picker/directives/month-selector.directive.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-shared/date-picker/directives/month-selector.directive.ts#L13)

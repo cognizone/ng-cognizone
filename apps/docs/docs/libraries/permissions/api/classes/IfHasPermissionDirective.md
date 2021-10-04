@@ -37,7 +37,7 @@ OnDestroy$.constructor
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/if-has-permission.directive.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L14)
+[libs/permissions/src/lib/directives/if-has-permission.directive.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L14)
 
 ## Properties
 
@@ -51,7 +51,7 @@ OnDestroy$.onDestroy$
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:9](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L9)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/if-has-permission.directive.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L12)
+[libs/permissions/src/lib/directives/if-has-permission.directive.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L12)
 
 ___
 
@@ -75,7 +75,7 @@ OnDestroy$.subSink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:10](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L10)
 
 ___
 
@@ -151,7 +151,7 @@ OnDestroy$.emptySink
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:13](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L13)
 
 ___
 
@@ -175,7 +175,7 @@ OnDestroy$.firstUntilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L12)
 
 ___
 
@@ -214,7 +214,7 @@ OnInit.ngOnInit
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/if-has-permission.directive.ts:23](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L23)
+[libs/permissions/src/lib/directives/if-has-permission.directive.ts:23](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L23)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[libs/permissions/src/lib/directives/if-has-permission.directive.ts:30](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L30)
+[libs/permissions/src/lib/directives/if-has-permission.directive.ts:30](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/permissions/src/lib/directives/if-has-permission.directive.ts#L30)
 
 ___
 
@@ -258,7 +258,7 @@ OnDestroy$.untilDestroyed
 
 #### Defined in
 
-[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
+[libs/ng-core/src/lib/mixins/on-destroy.mixin.ts:11](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/ng-core/src/lib/mixins/on-destroy.mixin.ts#L11)
 
 ___
 

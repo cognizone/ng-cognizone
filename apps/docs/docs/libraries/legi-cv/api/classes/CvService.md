@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv.service.ts#L12)
+[libs/legi-cv/src/lib/services/cv.service.ts:12](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv.service.ts#L12)
 
 ## Methods
 
@@ -40,7 +40,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv.service.ts#L27)
+[libs/legi-cv/src/lib/services/cv.service.ts:27](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv.service.ts#L27)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv.service.ts#L14)
+[libs/legi-cv/src/lib/services/cv.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv.service.ts#L14)
 
 ___
 
@@ -80,4 +80,4 @@ ___
 
 #### Defined in
 
-[libs/legi-cv/src/lib/services/cv.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/legi-cv/src/lib/services/cv.service.ts#L22)
+[libs/legi-cv/src/lib/services/cv.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/legi-cv/src/lib/services/cv.service.ts#L22)

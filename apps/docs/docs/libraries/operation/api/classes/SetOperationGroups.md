@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.actions.ts:6](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.actions.ts#L6)
+[libs/operation/src/lib/store/operations.actions.ts:6](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.actions.ts#L6)
 
 ## Properties
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/store/operations.actions.ts:4](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/store/operations.actions.ts#L4)
+[libs/operation/src/lib/store/operations.actions.ts:4](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/store/operations.actions.ts#L4)

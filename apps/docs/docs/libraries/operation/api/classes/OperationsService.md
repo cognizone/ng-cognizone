@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L26)
+[libs/operation/src/lib/services/operations.service.ts:26](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L26)
 
 ## Accessors
 
@@ -34,7 +34,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L18)
+[libs/operation/src/lib/services/operations.service.ts:18](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L18)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L22)
+[libs/operation/src/lib/services/operations.service.ts:22](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L22)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L14)
+[libs/operation/src/lib/services/operations.service.ts:14](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L14)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:45](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L45)
+[libs/operation/src/lib/services/operations.service.ts:45](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L45)
 
 ## Methods
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:32](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L32)
+[libs/operation/src/lib/services/operations.service.ts:32](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L32)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:28](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L28)
+[libs/operation/src/lib/services/operations.service.ts:28](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L28)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L41)
+[libs/operation/src/lib/services/operations.service.ts:41](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L41)
 
 ___
 
@@ -150,4 +150,4 @@ ___
 
 #### Defined in
 
-[libs/operation/src/lib/services/operations.service.ts:36](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/operation/src/lib/services/operations.service.ts#L36)
+[libs/operation/src/lib/services/operations.service.ts:36](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/operation/src/lib/services/operations.service.ts#L36)

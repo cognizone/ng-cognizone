@@ -24,4 +24,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/i18n-transloco.module.ts:7](https://github.com/cognizone/ng-cognizone/blob/0401c67/libs/i18n-transloco/src/lib/i18n-transloco.module.ts#L7)
+[lib/i18n-transloco.module.ts:7](https://github.com/cognizone/ng-cognizone/blob/861cbad/libs/i18n-transloco/src/lib/i18n-transloco.module.ts#L7)
