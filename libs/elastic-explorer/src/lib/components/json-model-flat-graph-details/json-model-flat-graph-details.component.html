@@ -1,1 +1,1 @@
-<ngx-json-viewer [json]="jsonModelFlatGraph | filterObject: (textFilter$ | async)" [depth]="1"></ngx-json-viewer>
+<ngx-json-viewer [json]="jsonModelFlatGraph | filterObject: (textFilter$ | async):['@id', '@type']" [depth]="1"></ngx-json-viewer>
