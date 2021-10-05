@@ -5,29 +5,27 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ### Installation
 
 ```
-$ yarn
+$ npm i
 ```
 
 ### Local Development
 
 ```
-$ yarn start
+$ npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server to list on localhost:3000. Most changes are reflected live without having to restart the server.
 
 ### Build
 
 ```
-$ yarn build
+$ npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command generates static content into the root `docs` directory and can be served using any static contents hosting service.
 
-### Deployment
+### Contributing
 
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
+#### Libraries
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The "api" part for each library is generated based on the [tsdoc comments](http://typedoc.org/guides/doccomments/) present in the source .ts files of that library. For example for model-utils, everything behind the [api section](https://cognizone.github.io/ng-cognizone/docs/libraries/model-utils/api/) is generated. As an example, [here](https://github.com/cognizone/ng-cognizone/blob/main/libs/model-utils/src/lib/models/sub-sink.ts) is the source of the SubSink class, and [here](https://cognizone.github.io/ng-cognizone/docs/libraries/model-utils/api/) is the generated documentation.

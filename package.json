@@ -41,7 +41,6 @@
     "help": "nx help",
     "cz": "cz",
     "prepare": "husky install",
-    "build-compodoc": "cd ./libs/model-utils && compodoc -c .compodocrc.json ./",
     "build-tools": "tsc tools/executors/build-assets/impl.ts"
   },
   "private": true,
@@ -58,7 +57,6 @@
     "@angular/platform-browser": "12.2.3",
     "@angular/platform-browser-dynamic": "12.2.3",
     "@angular/router": "12.2.3",
-    "@compodoc/compodoc": "^1.1.13",
     "@ngneat/transloco": "^2.22.0",
     "@ngneat/transloco-locale": "^1.4.0",
     "@ngxs/devtools-plugin": "^3.7.2",

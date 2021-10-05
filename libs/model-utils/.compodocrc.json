@@ -1,7 +1,0 @@
-{
-  "name": "@cognizone/model-utils",
-  "output": "../../dist/docs/model-utils",
-  "tsconfig": "../../tsconfig.base.json",
-  "disablePrivate": true,
-  "disableRoutesGraph": true
-}
