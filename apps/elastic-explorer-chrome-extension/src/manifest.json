@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Cognizone elastic explorer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Elastic explorer in chrome extension form",
   "browser_action": {
     "default_icon": "assets/cognizone-icon-150x150.png",
@@ -11,7 +11,7 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "content_security_policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'self';",
   "content_scripts": [
     {
       "all_frames": false,
