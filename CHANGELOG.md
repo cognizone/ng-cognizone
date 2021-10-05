@@ -1,3 +1,12 @@
+## [2.4.1](https://github.com/cognizone/ng-cognizone/compare/v2.4.0...v2.4.1) (2021-10-05)
+
+
+### Bug Fixes
+
+* **elastic-explorer:** keep some attributes when filtering ([6d8fed4](https://github.com/cognizone/ng-cognizone/commit/6d8fed4213dd212b2d1b43961355300d155ab96f))
+* **elastic-explorer-chrome-extension:** make it work again with angular 12 ([e30cd49](https://github.com/cognizone/ng-cognizone/commit/e30cd49d868954c9ac960595fea0a213fa39e703))
+* **i18n:** added the pipes to exported modules ([7e8f863](https://github.com/cognizone/ng-cognizone/commit/7e8f8631e1d05bc3ee089ca67cf86c9888217a37))
+
 # [2.4.0](https://github.com/cognizone/ng-cognizone/compare/v2.3.2...v2.4.0) (2021-09-23)
 
 
