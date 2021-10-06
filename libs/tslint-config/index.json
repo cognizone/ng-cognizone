@@ -3,7 +3,6 @@
   "rules": {
     // ----- TSLINT -----
     "adjacent-overload-signatures": true,
-    "ban-types": [true, ["AnyObject", "This is equivalent to 'any', you might want to be more specific"]],
     "member-access": false,
     "member-ordering": [
       true,

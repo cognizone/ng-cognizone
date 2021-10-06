@@ -2,7 +2,6 @@
  * Public API Surface of model-utils
  */
 
-export * from './lib/models/any-object';
 export * from './lib/models/completable';
 export * from './lib/models/cz-label';
 export * from './lib/models/dictionary';
@@ -15,6 +14,7 @@ export * from './lib/models/pagination';
 export * from './lib/models/select-option';
 export * from './lib/models/sorter';
 export * from './lib/models/sub-sink';
+export * from './lib/models/unknown-object';
 
 export * from './lib/operators/debounce-sync';
 export * from './lib/operators/or-else';
