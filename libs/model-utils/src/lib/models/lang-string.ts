@@ -3,17 +3,18 @@ import { Nil } from './nil';
 
 /**
  * This represents an rdf:langString as usually indexed in our elastic. Each key
- * is a lang (usually simple, like 'en' or 'fr') and its corersponding value is
+ * is a lang (usually simple, like 'en' or 'fr') and its corresponding value is
  * the label in that language. In here, there can be multiple values, that's why
  * it is a `string[]`. Also, keys could be more complex, like uri of the
- * languages
+ * languages for example.
  */
 export interface LangString {
   [lang: string]: string[];
 }
 
 /**
- * Same as {@link LangString} but the value linked to a lang is unique. We usually see those in facets.
+ * Same as {@link LangString} but the value linked to a lang is unique.
+ * We usually see those in facets.
  */
 export interface LangStringSimple {
   [lang: string]: string;
@@ -21,7 +22,7 @@ export interface LangStringSimple {
 
 /**
  * Extract from a {@link LangString} the label in a corresponding `lang`. If not
- * found, it will try extract the label of one of the fallback languages.
+ * found, it will try to extract the label of one of the fallback languages.
  * If even there nothing is found, it will fallback to the first label found.
  * It is to be noted that even if the label is a string[] with multiple values,
  * only the 0th element will be taken.

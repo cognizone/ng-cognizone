@@ -4,14 +4,16 @@
 export type Many<T> = T | T[];
 
 /**
- * Convert a `Many` to an array. Beware that it is nullish-safe, so you could end up with `[undefined]`.
+ * Convert a {@link Many} to an array. Beware that it is not checking for
+ * nullish values, so you could end up with `[undefined]`.
  */
 export function manyToArray<T>(x: Many<T>): T[] {
   return Array.isArray(x) ? x : [x];
 }
 
 /**
- * Convert a `Many` to its base type, taking the 0th element of the array if applicable.
+ * Convert a {@link Many} to its base type, taking the 0th element of the array,
+ * if applicable.
  */
 export function manyToOne<T>(x: Many<T>): T {
   return Array.isArray(x) ? x[0] : x;

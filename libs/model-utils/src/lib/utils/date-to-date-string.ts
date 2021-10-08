@@ -1,5 +1,4 @@
 /**
- *
  * Returns the given `Date` as a `string` in the YYYY-MM-dd format
  */
 export function dateToDateString(value: Date): string {

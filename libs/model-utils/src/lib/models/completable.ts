@@ -3,15 +3,13 @@ import { first } from 'rxjs/operators';
 
 /**
  * The `Completable` type represents a resource that should "complete" in the
- * Observable sense. A `Completable` is either directly the generic type given, a `Promise` that returns that type or an
- * `Observable` that does the same.
+ * Observable sense. A `Completable` is either directly the generic type given,
+ * a `Promise` that returns that type or an `Observable` that does the same.
  */
 export type Completable<T> = Observable<T> | Promise<T> | T;
 
 /**
- * This is deprecated, use {@link completableToPromise} instead
- *
- * @deprecated use `completableToPromise` instead
+ * @deprecated use {@link completableToPromise} instead
  */
 export const awaitForCompletable = completableToPromise;
 

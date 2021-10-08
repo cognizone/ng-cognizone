@@ -1,5 +1,5 @@
 /**
- * get all properties of the given object, and goes of the prototype chain. This
+ * get all properties of the given object, and goes up the prototype chain. This
  * is mostly useful for debugging purposes and javascript digging.
  */
 export function getAllProperties(obj: {}): string[] {

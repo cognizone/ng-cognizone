@@ -7,7 +7,8 @@ import { Nil, notNil } from './nil';
 /**
  * Kind of an augmented KeyValue type to be used whenever we have case where a
  * user has to select an option, being it in a select, an autocomplete, etc.
- * This is mostly there in an effort of consistency, to have interoperable libraries and data models.
+ * This is mostly there in an effort of consistency, to have interoperable
+ * libraries and data models.
  */
 export interface SelectOption<T = string> {
   /**
