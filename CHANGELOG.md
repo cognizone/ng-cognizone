@@ -1,3 +1,10 @@
+## [2.4.2](https://github.com/cognizone/ng-cognizone/compare/v2.4.1...v2.4.2) (2021-10-08)
+
+
+### Bug Fixes
+
+* **model-utils:** removed AnyObject model in favor of UnknownObject ([c5b3f22](https://github.com/cognizone/ng-cognizone/commit/c5b3f22664771d8a08f4628c821b85f91610da6a))
+
 ## [2.4.1](https://github.com/cognizone/ng-cognizone/compare/v2.4.0...v2.4.1) (2021-10-05)
 
 
