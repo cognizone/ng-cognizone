@@ -1,3 +1,10 @@
+## [2.4.3](https://github.com/cognizone/ng-cognizone/compare/v2.4.2...v2.4.3) (2021-10-19)
+
+
+### Bug Fixes
+
+* **legi-shared:** remove duplicating option in radio-group ([5fddfee](https://github.com/cognizone/ng-cognizone/commit/5fddfeeccabda9cfbae49cd5ce686be3a8a55e57))
+
 ## [2.4.2](https://github.com/cognizone/ng-cognizone/compare/v2.4.1...v2.4.2) (2021-10-08)
 
 
