@@ -102,7 +102,7 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   }
 
   getCount(option: SelectOption<T>): number {
-    return this.counts?.[(option.value as unknown) as string] ?? 0;
+    return this.counts?.[option.value as unknown as string] ?? 0;
   }
 
   private setOptions(): void {
@@ -128,7 +128,7 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
 
   private checkForMissing(options: SelectOption<T>[]): Observable<SelectOption<T>[]> {
     const value = this.model;
-    if (value && !this.options.find(o => o.value === value)) {
+    if (value && !options.find(o => o.value === value)) {
       return this.optionsProvider.getValueOption(value).pipe(map(missingOption => [missingOption, ...options]));
     }
 
