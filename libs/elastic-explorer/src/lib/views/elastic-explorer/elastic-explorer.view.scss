@@ -15,6 +15,7 @@ mat-toolbar {
 
 .my-side-menu {
   min-width: 20%;
+  min-height: calc(100vh - 64px);
   resize: both;
   overflow: auto;
 }
