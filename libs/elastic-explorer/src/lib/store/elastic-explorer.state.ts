@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Pagination } from '@cognizone/legi-shared/list-paginator';
-import { Dictionary, ElasticAggregation } from '@cognizone/model-utils';
+import { Dictionary, ElasticAggregation, ElasticSearchResponse, extractSourcesFromElasticResponse } from '@cognizone/model-utils';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
 
 import { ElasticInfo } from '../models/elastic-info';
 import { ElasticState } from '../models/elastic-state';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
+import { ViewType } from '../models/view-type';
 import {
+  ResetData,
   SetData,
   SetElasticInfo,
   SetElasticQuery,
@@ -16,6 +18,7 @@ import {
   SetIndices,
   SetManualMode,
   SetPagination,
+  SetViewType,
 } from './elastic-explorer.actions';
 
 export interface ElasticExplorerStateModel {
@@ -29,6 +32,8 @@ export interface ElasticExplorerStateModel {
   manualMode: boolean;
   elasticQuery: {};
   elasticState?: ElasticState;
+  viewType: ViewType;
+  elasticResponse?: ElasticSearchResponse<FullModel>;
 }
 
 export const ELASTIC_EXPLORER_STATE_TOKEN = new StateToken<ElasticExplorerStateModel>('elasticExplorer');
@@ -51,13 +56,24 @@ export const ELASTIC_EXPLORER_STATE_TOKEN = new StateToken<ElasticExplorerStateM
     },
     manualMode: false,
     elasticQuery: {},
+    viewType: 'table',
   },
 })
 @Injectable()
 export class ElasticExplorerState {
   @Action(SetData)
-  setData({ patchState }: StateContext<ElasticExplorerStateModel>, { models, total, aggregations }: SetData): void {
-    patchState({ models, total, aggregations });
+  setData({ patchState }: StateContext<ElasticExplorerStateModel>, { response }: SetData): void {
+    patchState({
+      elasticResponse: response,
+      models: extractSourcesFromElasticResponse(response),
+      total: response.hits.total.value,
+      aggregations: response.aggregations,
+    });
+  }
+
+  @Action(ResetData)
+  resetData({ patchState }: StateContext<ElasticExplorerStateModel>): void {
+    patchState({ elasticResponse: undefined, models: [], total: 0, aggregations: {} });
   }
 
   @Action(SetFilters)
@@ -98,5 +114,10 @@ export class ElasticExplorerState {
   @Action(SetElasticState)
   setElasticState({ patchState }: StateContext<ElasticExplorerStateModel>, { elasticState }: SetElasticState): void {
     patchState({ elasticState });
+  }
+
+  @Action(SetViewType)
+  setViewType({ patchState }: StateContext<ElasticExplorerStateModel>, { viewType }: SetViewType): void {
+    patchState({ viewType });
   }
 }

@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, Inject, OnInit, Provider } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit, Provider } from '@angular/core';
 import { ApplicationProfile } from '@cognizone/application-profile';
+import { OnDestroy$ } from '@cognizone/ng-core';
 import produce from 'immer';
 
 import {
@@ -17,12 +18,17 @@ import { getSortedObject } from '../../utils/get-sorted-object';
   styleUrls: ['./ap-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ApDetailsComponent implements OnInit {
+export class ApDetailsComponent extends OnDestroy$ implements OnInit {
   ap!: ApplicationProfile;
+  textFilter?: string;
 
-  textFilter$ = this.detailViewService.textFilter$;
-
-  constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}
+  constructor(
+    @Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext,
+    private detailViewService: DetailViewService,
+    private cdr: ChangeDetectorRef
+  ) {
+    super();
+  }
 
   ngOnInit(): void {
     const ap = JSON.parse((this.context.model.hit._source as ApHitSource).json) as ApplicationProfile;
@@ -32,6 +38,11 @@ export class ApDetailsComponent implements OnInit {
       Object.keys(draft.types).forEach(type => {
         draft.types[type].attributes = getSortedObject(draft.types[type].attributes);
       });
+    });
+
+    this.subSink = this.detailViewService.textFilter$.subscribe(textFilter => {
+      this.textFilter = textFilter;
+      this.cdr.markForCheck();
     });
   }
 }

@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, Inject, OnInit, Provider } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit, Provider } from '@angular/core';
 import { JsonModel } from '@cognizone/ng-application-profile';
+import { OnDestroy$ } from '@cognizone/ng-core';
 
 import {
   DETAIL_VIEW_CONTEXT_TOKEN,
@@ -15,15 +16,25 @@ import { DetailViewService } from '../../services/detail-view.service';
   styleUrls: ['./json-model-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class JsonModelDetailsComponent implements OnInit {
+export class JsonModelDetailsComponent extends OnDestroy$ implements OnInit {
   jsonModel!: JsonModel;
 
-  textFilter$ = this.detailViewService.textFilter$;
+  textFilter?: string;
 
-  constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}
+  constructor(
+    @Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext,
+    private detailViewService: DetailViewService,
+    private cdr: ChangeDetectorRef
+  ) {
+    super();
+  }
 
   ngOnInit(): void {
     this.jsonModel = this.context.model.jsonModel as JsonModel;
+    this.subSink = this.detailViewService.textFilter$.subscribe(textFilter => {
+      this.textFilter = textFilter;
+      this.cdr.markForCheck();
+    });
   }
 }
 

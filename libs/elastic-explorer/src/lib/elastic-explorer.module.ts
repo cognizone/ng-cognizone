@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,6 +26,7 @@ import { SelectModule } from '@cognizone/legi-shared/select';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { LoadingService } from '@cognizone/ng-core';
 import { AttributeDisplayComponent } from './components/attribute-display/attribute-display.component';
@@ -51,28 +53,32 @@ import {
   jsonModelFlatGraphDetailsViewProvider,
 } from './components/json-model-flat-graph-details/json-model-flat-graph-details.component';
 import { ResultsTableComponent } from './components/results-table/results-table.component';
+import { ResultsRawComponent } from './components/results-raw/results-raw.component';
+import { ResultsStructuredComponent } from './components/results-structured/results-structured.component';
 
 @NgModule({
   declarations: [
-    ElasticExplorerView,
-    AttributeDisplayComponent,
-    EllipsisPipe,
-    UriCropPipe,
-    JsonModelLabelComponent,
-    RemoveCircularFromJsonModelPipe,
-    FullModelDetailComponent,
-    FiltersFormComponent,
-    ElasticPickerComponent,
-    JsonModelLabelPipe,
-    ElasticInstanceManagementComponent,
-    ElasticInstanceEditorComponent,
-    FilterObjectPipe,
-    ElasticQueryEditorComponent,
-    RawDetailsComponent,
     ApDetailsComponent,
+    AttributeDisplayComponent,
+    ElasticExplorerView,
+    ElasticInstanceEditorComponent,
+    ElasticInstanceManagementComponent,
+    ElasticPickerComponent,
+    ElasticQueryEditorComponent,
+    EllipsisPipe,
+    FilterObjectPipe,
+    FiltersFormComponent,
+    FullModelDetailComponent,
     JsonModelDetailsComponent,
     JsonModelFlatGraphDetailsComponent,
+    JsonModelLabelComponent,
+    JsonModelLabelPipe,
+    RawDetailsComponent,
+    RemoveCircularFromJsonModelPipe,
+    ResultsRawComponent,
+    ResultsStructuredComponent,
     ResultsTableComponent,
+    UriCropPipe,
   ],
   imports: [
     ElasticExplorerRoutingModule,
@@ -87,6 +93,8 @@ import { ResultsTableComponent } from './components/results-table/results-table.
     SelectModule,
     // Material
     MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
     MatDialogModule,
     MatDividerModule,
     MatExpansionModule,

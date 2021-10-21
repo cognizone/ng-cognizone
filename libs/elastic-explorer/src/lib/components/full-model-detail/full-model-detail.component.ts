@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Inject, Injector, Input, OnChanges, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { debounceTime } from 'rxjs/operators';
 
@@ -27,13 +28,16 @@ export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnCh
   constructor(
     @Inject(DETAIL_VIEW_PROVIDER_TOKEN) private allProviders: DetailViewProvider[],
     private injector: Injector,
-    private detailViewService: DetailViewService
+    private detailViewService: DetailViewService,
+    private route: ActivatedRoute
   ) {
     super();
   }
 
   ngOnInit(): void {
     this.subSink = this.queryControl.valueChanges.pipe(debounceTime(100)).subscribe(v => this.detailViewService.setTextFilter(v));
+    this.subSink = this.detailViewService.textFilter$.subscribe(v => this.queryControl.setValue(v, { emitEvent: false }));
+    this.detailViewService.onPageLoad(this.route);
   }
 
   ngOnChanges(): void {
@@ -49,5 +53,9 @@ export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnCh
       ],
       parent: this.injector,
     });
+  }
+
+  ngOnDestroy(): void {
+    this.detailViewService.onPageUnload();
   }
 }

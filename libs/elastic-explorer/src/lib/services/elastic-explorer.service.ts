@@ -6,6 +6,7 @@ import { Pagination } from '@cognizone/legi-shared/list-paginator';
 import {
   Dictionary,
   ElasticAggregation,
+  ElasticSearchResponse,
   extractSourcesFromElasticResponse,
   Nil,
   notNil,
@@ -21,7 +22,9 @@ import { ElasticInfo } from '../models/elastic-info';
 import { ElasticState } from '../models/elastic-state';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
+import { ViewType } from '../models/view-type';
 import {
+  ResetData,
   SetData,
   SetElasticInfo,
   SetElasticQuery,
@@ -30,6 +33,7 @@ import {
   SetIndices,
   SetManualMode,
   SetPagination,
+  SetViewType,
 } from '../store/elastic-explorer.actions';
 import { ELASTIC_EXPLORER_STATE_TOKEN, ElasticExplorerStateModel } from '../store/elastic-explorer.state';
 import { ElasticClientFactoryService } from './elastic-client-factory.service';
@@ -43,24 +47,17 @@ export class ElasticExplorerService {
   }
 
   filters$: Observable<Filters> = this.state$.pipe(selectProp('filters'));
-
   total$: Observable<number> = this.state$.pipe(selectProp('total'));
-
   pagination$: Observable<Pagination> = this.state$.pipe(selectProp('pagination'));
-
   aggregations$: Observable<Dictionary<ElasticAggregation>> = this.state$.pipe(selectProp('aggregations'));
-
   elasticInfo$: Observable<ElasticInfo> = this.state$.pipe(selectProp('elasticInfo'));
-
   models$: Observable<FullModel[]> = this.state$.pipe(selectProp('models'));
-
   indices$: Observable<string[]> = this.state$.pipe(selectProp('indices'));
-
   facetFields$!: Observable<Field[]>;
-
   manualMode$: Observable<boolean> = this.state$.pipe(selectProp('manualMode'));
-
   elasticQuery$: Observable<{}> = this.state$.pipe(selectProp('elasticQuery'));
+  viewType$: Observable<ViewType> = this.state$.pipe(selectProp('viewType'));
+  elasticResponse$: Observable<Nil<ElasticSearchResponse<FullModel>>> = this.state$.pipe(selectProp('elasticResponse'));
 
   private subSink: SubSink = new SubSink();
 
@@ -84,6 +81,7 @@ export class ElasticExplorerService {
     this.initIndices();
     this.parseFiltersFromRoute(route);
     this.parseElasticInfoFromRoute(route);
+    this.parseViewTypeRoute(route);
     this.parsePaginationFromRoute(route);
     this.parseElasticQueryFromRoute(route);
     this.wireStateToRoute();
@@ -119,6 +117,10 @@ export class ElasticExplorerService {
     this.store.dispatch(new SetManualMode(manualMode));
   }
 
+  setViewType(viewType: ViewType): void {
+    this.store.dispatch(new SetViewType(viewType));
+  }
+
   private initElasticState(): void {
     this.subSink.add = this.elasticInfo$
       .pipe(
@@ -151,7 +153,7 @@ export class ElasticExplorerService {
               const message = 'Failed to fetch entries from elastic';
               this.logger.error(message, err);
               this.snack.open(message, 'Dismiss', { duration: 5000 });
-              this.store.dispatch(new SetData([], 0, {}));
+              this.store.dispatch(new ResetData());
               return EMPTY;
             }),
             this.loadingService.asOperator()
@@ -159,7 +161,7 @@ export class ElasticExplorerService {
         })
       )
       .subscribe(response => {
-        this.store.dispatch(new SetData(extractSourcesFromElasticResponse(response), response.hits.total.value, response.aggregations));
+        this.store.dispatch(new SetData(response));
       });
   }
 
@@ -332,11 +334,19 @@ export class ElasticExplorerService {
   }
 
   private wireStateToRoute(): void {
-    this.subSink.add = combineLatest([this.filters$, this.pagination$, this.elasticInfo$, this.manualMode$, this.elasticQuery$])
+    this.subSink.add = combineLatest([
+      this.filters$,
+      this.pagination$,
+      this.elasticInfo$,
+      this.manualMode$,
+      this.elasticQuery$,
+      this.viewType$,
+    ])
       .pipe(debounceTime(0))
-      .subscribe(async ([filters, pagination, elasticInfo, manualMode, elasticQuery]) => {
+      .subscribe(async ([filters, pagination, elasticInfo, manualMode, elasticQuery, viewType]) => {
         let queryParams: {} = {
           elasticInfo: this.toQueryParams(elasticInfo),
+          viewType,
         };
         queryParams = manualMode
           ? {
@@ -361,7 +371,7 @@ export class ElasticExplorerService {
     const cleaned = {} as T;
     Object.entries(obj)
       .filter(([, value]) => value != null && value !== '' && (Array.isArray(value) ? value.length > 0 : true))
-      .forEach(([key, value]) => (cleaned[(key as unknown) as keyof T] = value as T[keyof T]));
+      .forEach(([key, value]) => (cleaned[key as unknown as keyof T] = value as T[keyof T]));
 
     const s = JSON.stringify(cleaned);
     return s === '{}' ? undefined : s;
@@ -417,6 +427,14 @@ export class ElasticExplorerService {
           if (elasticInfo.url) this.elasticInstanceService.addIfNotPresent({ url: elasticInfo.url, label: elasticInfo.url });
         }
       });
+  }
+
+  private parseViewTypeRoute(route: ActivatedRoute): void {
+    this.subSink.add = route.queryParams.pipe(selectProp('viewType')).subscribe(viewType => {
+      if (viewType) {
+        this.setViewType(viewType);
+      }
+    });
   }
 }
 
