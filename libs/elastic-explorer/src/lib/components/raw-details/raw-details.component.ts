@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Inject, Provider } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit, Provider } from '@angular/core';
+import { OnDestroy$ } from '@cognizone/ng-core';
 
 import {
   DETAIL_VIEW_CONTEXT_TOKEN,
@@ -14,10 +15,23 @@ import { DetailViewService } from '../../services/detail-view.service';
   styleUrls: ['./raw-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RawDetailsComponent {
-  textFilter$ = this.detailViewService.textFilter$;
+export class RawDetailsComponent extends OnDestroy$ implements OnInit {
+  textFilter?: string;
 
-  constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) public context: DetailViewContext, private detailViewService: DetailViewService) {}
+  constructor(
+    @Inject(DETAIL_VIEW_CONTEXT_TOKEN) public context: DetailViewContext,
+    private detailViewService: DetailViewService,
+    private cdr: ChangeDetectorRef
+  ) {
+    super();
+  }
+
+  ngOnInit(): void {
+    this.subSink = this.detailViewService.textFilter$.subscribe(textFilter => {
+      this.textFilter = textFilter;
+      this.cdr.markForCheck();
+    });
+  }
 }
 
 export const rawDetailsViewProvider: Provider = {

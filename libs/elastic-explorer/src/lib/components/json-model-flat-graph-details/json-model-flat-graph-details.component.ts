@@ -1,5 +1,6 @@
-import { Component, Inject, OnInit, Provider } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit, Provider } from '@angular/core';
 import { JsonModelFlatGraph } from '@cognizone/ng-application-profile';
+import { OnDestroy$ } from '@cognizone/ng-core';
 
 import {
   DETAIL_VIEW_CONTEXT_TOKEN,
@@ -14,15 +15,26 @@ import { getSortedObject } from '../../utils/get-sorted-object';
   selector: 'cz-json-model-flat-graph-details',
   templateUrl: './json-model-flat-graph-details.component.html',
   styleUrls: ['./json-model-flat-graph-details.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class JsonModelFlatGraphDetailsComponent implements OnInit {
+export class JsonModelFlatGraphDetailsComponent extends OnDestroy$ implements OnInit {
   jsonModelFlatGraph!: JsonModelFlatGraph;
 
-  textFilter$ = this.detailViewService.textFilter$;
+  textFilter?: string;
 
-  constructor(@Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext, private detailViewService: DetailViewService) {}
+  constructor(
+    @Inject(DETAIL_VIEW_CONTEXT_TOKEN) private context: DetailViewContext,
+    private detailViewService: DetailViewService,
+    private cdr: ChangeDetectorRef
+  ) {
+    super();
+  }
 
   ngOnInit(): void {
+    this.subSink = this.detailViewService.textFilter$.subscribe(textFilter => {
+      this.textFilter = textFilter;
+      this.cdr.markForCheck();
+    });
     if (!this.context.model.jsonModelFlatGraph) return;
     this.jsonModelFlatGraph = { ...this.context.model.jsonModelFlatGraph };
     this.jsonModelFlatGraph.models = getSortedObject(this.jsonModelFlatGraph.models);

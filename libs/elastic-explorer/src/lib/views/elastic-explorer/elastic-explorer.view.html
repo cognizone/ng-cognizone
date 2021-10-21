@@ -9,6 +9,11 @@
       <div *ngIf="loading$ | async" class="my-progress-bar-container">
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
       </div>
+      <mat-button-toggle-group aria-label="View type" [value]="viewType" (change)="setViewType($event)">
+        <mat-button-toggle value="table"><mat-icon>table_view</mat-icon></mat-button-toggle>
+        <mat-button-toggle value="structured"><mat-icon>code</mat-icon></mat-button-toggle>
+        <mat-button-toggle value="raw">Raw</mat-button-toggle>
+      </mat-button-toggle-group>
     </div>
   </mat-toolbar>
 </header>
@@ -19,9 +24,11 @@
       <mat-divider></mat-divider>
       <cz-filters-form></cz-filters-form>
     </div>
-    <div class="col">
-      <cz-results-table></cz-results-table>
-    </div>
+    <main class="col" [ngSwitch]="viewType">
+      <cz-results-structured *ngSwitchCase="'structured'"></cz-results-structured>
+      <cz-results-raw *ngSwitchCase="'raw'"></cz-results-raw>
+      <cz-results-table *ngSwitchDefault></cz-results-table>
+    </main>
   </div>
 </div>
 <ng-template #modelDetails let-model>

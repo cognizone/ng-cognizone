@@ -1,1 +1,1 @@
-<ngx-json-viewer [json]="ap | filterObject: (textFilter$ | async)" [depth]="1"></ngx-json-viewer>
+<ngx-json-viewer [json]="ap | filterObject: textFilter" [depth]="textFilter ? -1 : 1"></ngx-json-viewer>

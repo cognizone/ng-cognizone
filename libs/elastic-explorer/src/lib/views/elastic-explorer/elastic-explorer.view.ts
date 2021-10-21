@@ -1,15 +1,17 @@
-import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable } from 'rxjs';
 
 import { FullModel } from '../../models/full-model';
+import { ViewType } from '../../models/view-type';
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
 
 @Component({
   selector: 'cz-elastic-explorer',
-  templateUrl: `./elastic-explorer.view.html`,
+  templateUrl: './elastic-explorer.view.html',
   styleUrls: ['./elastic-explorer.view.scss'],
 })
 export class ElasticExplorerView extends OnDestroy$ implements OnInit, OnDestroy, AfterViewInit {
@@ -23,19 +25,25 @@ export class ElasticExplorerView extends OnDestroy$ implements OnInit, OnDestroy
   modelDetailsTemplateRef!: TemplateRef<unknown>;
 
   private isDetailsOpened = false;
+  viewType?: ViewType;
 
   constructor(
     private dialog: MatDialog,
     private route: ActivatedRoute,
     private elasticExplorerService: ElasticExplorerService,
     private router: Router,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private cdr: ChangeDetectorRef
   ) {
     super();
   }
 
   ngOnInit(): void {
     this.elasticExplorerService.onPageLoad(this.route);
+    this.elasticExplorerService.viewType$.subscribe(viewType => {
+      this.viewType = viewType;
+      this.cdr.markForCheck();
+    });
   }
 
   ngAfterViewInit(): void {
@@ -52,6 +60,10 @@ export class ElasticExplorerView extends OnDestroy$ implements OnInit, OnDestroy
   ngOnDestroy(): void {
     super.ngOnDestroy();
     this.elasticExplorerService.onPageUnload();
+  }
+
+  setViewType(event: MatButtonToggleChange): void {
+    this.elasticExplorerService.setViewType(event.value);
   }
 
   seeDetails(model: FullModel): void {

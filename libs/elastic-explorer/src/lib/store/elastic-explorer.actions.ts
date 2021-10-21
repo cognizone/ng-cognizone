@@ -1,15 +1,20 @@
 import { Pagination } from '@cognizone/legi-shared/list-paginator';
-import { Dictionary, ElasticAggregation } from '@cognizone/model-utils';
+import { ElasticSearchResponse } from '@cognizone/model-utils';
 
 import { ElasticInfo } from '../models/elastic-info';
 import { ElasticState } from '../models/elastic-state';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
+import { ViewType } from '../models/view-type';
 
 export class SetData {
   static readonly type: string = '[ElasticExplorer] set data';
 
-  constructor(public models: FullModel[], public total: number, public aggregations: Dictionary<ElasticAggregation>) {}
+  constructor(public response: ElasticSearchResponse<FullModel>) {}
+}
+
+export class ResetData {
+  static readonly type: string = '[ElasticExplorer] reset data';
 }
 
 export class SetFilters {
@@ -52,4 +57,10 @@ export class SetElasticState {
   static readonly type: string = '[ElasticExplorer] set elastic state';
 
   constructor(public elasticState?: ElasticState) {}
+}
+
+export class SetViewType {
+  static readonly type: string = '[ElasticExplorer] set view type';
+
+  constructor(public viewType: ViewType) {}
 }
