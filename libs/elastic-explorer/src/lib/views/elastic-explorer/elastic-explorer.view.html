@@ -5,32 +5,19 @@
         <mat-icon>menu</mat-icon>
       </button>
       <span class="mr-3">Elastic Explorer</span>
+      <a mat-button routerLink="search">
+        <mat-icon>search</mat-icon>
+        Search
+      </a>
+      <a mat-button routerLink="data-validation">
+        <mat-icon>assessment</mat-icon>
+        Data Validation
+      </a>
       <div style="flex-grow: 1"></div>
       <div *ngIf="loading$ | async" class="my-progress-bar-container">
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
       </div>
-      <mat-button-toggle-group aria-label="View type" [value]="viewType" (change)="setViewType($event)">
-        <mat-button-toggle value="table"><mat-icon>table_view</mat-icon></mat-button-toggle>
-        <mat-button-toggle value="structured"><mat-icon>code</mat-icon></mat-button-toggle>
-        <mat-button-toggle value="raw">Raw</mat-button-toggle>
-      </mat-button-toggle-group>
     </div>
   </mat-toolbar>
 </header>
-<div class="container-fluid">
-  <div class="row flex-nowrap">
-    <div *ngIf="showMenu" class="my-side-menu">
-      <cz-elastic-picker></cz-elastic-picker>
-      <mat-divider></mat-divider>
-      <cz-filters-form></cz-filters-form>
-    </div>
-    <main class="col" [ngSwitch]="viewType">
-      <cz-results-structured *ngSwitchCase="'structured'"></cz-results-structured>
-      <cz-results-raw *ngSwitchCase="'raw'"></cz-results-raw>
-      <cz-results-table *ngSwitchDefault></cz-results-table>
-    </main>
-  </div>
-</div>
-<ng-template #modelDetails let-model>
-  <cz-full-model-detail [model]="model"></cz-full-model-detail>
-</ng-template>
+<router-outlet></router-outlet>

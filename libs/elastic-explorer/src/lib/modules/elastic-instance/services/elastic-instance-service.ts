@@ -14,22 +14,7 @@ export class ElasticInstanceService {
 
   constructor() {
     this._values$ = new BehaviorSubject<ElasticInstance[]>([]);
-    this._values$.next(this.values);
-  }
-
-  private get values(): ElasticInstance[] {
-    const localValues = localStorage.getItem(this.LOCAL_STORAGE_KEY);
-    if (!localValues) {
-      this.values = [];
-      return this.values;
-    }
-    const raw = JSON.parse(localValues) as (ElasticInstance | string)[];
-    return raw.map(r => (typeof r === 'string' ? { url: r, label: r } : r)).sort((a, b) => a.label.localeCompare(b.label));
-  }
-
-  private set values(v: ElasticInstance[]) {
-    localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(v));
-    this._values$.next(v);
+    this._values$.next(this.options);
   }
 
   edit(oldInstance: ElasticInstance, newInstance: ElasticInstance): void {
@@ -40,7 +25,7 @@ export class ElasticInstanceService {
   readFile(file: Blob): void {
     const fileReader = new FileReader();
     fileReader.onload = () => {
-      if (fileReader.result) this.values = JSON.parse(fileReader.result.toString());
+      if (fileReader.result) this.options = JSON.parse(fileReader.result.toString());
     };
     fileReader.readAsText(file);
   }
@@ -49,7 +34,7 @@ export class ElasticInstanceService {
     instance = this.cleanUp(instance);
     const current = this._values$.value;
     if (current.find(v => v.url === instance.url)) return;
-    this.values = [...current, instance];
+    this.options = [...current, instance];
   }
 
   get values$(): Observable<ElasticInstance[]> {
@@ -57,14 +42,29 @@ export class ElasticInstanceService {
   }
 
   deleteValue(instance: ElasticInstance): void {
-    this.values = this.values.filter(items => items.url !== instance.url);
+    this.options = this.options.filter(items => items.url !== instance.url);
   }
 
   downloadFile(): void {
     downloadBlob(
-      new Blob([JSON.stringify(this.values)], { type: 'application/json' }),
+      new Blob([JSON.stringify(this.options)], { type: 'application/json' }),
       `elastic-instances-${new Date().toISOString()}.json`
     );
+  }
+
+  private get options(): ElasticInstance[] {
+    const localValues = localStorage.getItem(this.LOCAL_STORAGE_KEY);
+    if (!localValues) {
+      this.options = [];
+      return this.options;
+    }
+    const raw = JSON.parse(localValues) as (ElasticInstance | string)[];
+    return raw.map(r => (typeof r === 'string' ? { url: r, label: r } : r)).sort((a, b) => a.label.localeCompare(b.label));
+  }
+
+  private set options(v: ElasticInstance[]) {
+    localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(v));
+    this._values$.next(v);
   }
 
   private cleanUp(instance: ElasticInstance): ElasticInstance {

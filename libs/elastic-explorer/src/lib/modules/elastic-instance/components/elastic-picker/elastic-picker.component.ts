@@ -6,14 +6,14 @@ import { OnDestroy$ } from '@cognizone/ng-core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { ElasticExplorerService } from '../../services/elastic-explorer.service';
+import { ElasticInstanceHandlerService } from '../../services/elastic-instance-handler.service';
 import { ElasticInstanceService } from '../../services/elastic-instance-service';
 import { ElasticInstanceManagementComponent } from '../elastic-instance-management/elastic-instance-management.component';
 
 @Component({
   selector: 'cz-elastic-picker',
-  templateUrl: `./elastic-picker.component.html`,
-  styles: [],
+  templateUrl: './elastic-picker.component.html',
+  styleUrls: ['./elastic-picker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
@@ -27,7 +27,7 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private elasticExplorerService: ElasticExplorerService,
+    private elasticHandler: ElasticInstanceHandlerService,
     private elasticInstanceService: ElasticInstanceService,
     private dialog: MatDialog
   ) {
@@ -40,8 +40,10 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
       index: [],
     });
 
-    this.subSink = this.elasticExplorerService.elasticInfo$.subscribe(v => this.form.patchValue(v, { emitEvent: false }));
-    this.subSink = this.form.valueChanges.subscribe(v => this.elasticExplorerService.setElasticInfo(v));
+    this.subSink = this.elasticHandler.url$.subscribe(url => this.form.patchValue({ url }, { emitEvent: false }));
+    this.subSink = this.form.controls.url.valueChanges.subscribe(v => this.elasticHandler.setUrl(v));
+    this.subSink = this.elasticHandler.index$.subscribe(index => this.form.patchValue({ index }, { emitEvent: false }));
+    this.subSink = this.form.controls.index.valueChanges.subscribe(v => this.elasticHandler.setIndex(v));
 
     this.initIndexOptions();
     this.initUrlOptions();
@@ -55,7 +57,7 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
   }
 
   private initIndexOptions(): void {
-    this.indexOptions$ = this.elasticExplorerService.indices$.pipe(
+    this.indexOptions$ = this.elasticHandler.indices$.pipe(
       map(indices => [
         {
           value: null,
