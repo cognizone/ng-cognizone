@@ -1,0 +1,16 @@
+.my-side-menu {
+  min-width: 20%;
+  min-height: calc(100vh - 64px);
+  resize: both;
+  overflow: auto;
+}
+
+main {
+  overflow-x: auto;
+}
+
+.my-view-type-selector {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+}

@@ -1,44 +1,32 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Pagination } from '@cognizone/legi-shared/list-paginator';
-import {
-  Dictionary,
-  ElasticAggregation,
-  ElasticSearchResponse,
-  extractSourcesFromElasticResponse,
-  Nil,
-  notNil,
-  selectProp,
-  SubSink,
-} from '@cognizone/model-utils';
+import { Dictionary, ElasticAggregation, ElasticHit, ElasticSearchResponse, Nil, selectProp, SubSink } from '@cognizone/model-utils';
+import { JsonModelService, ResourceGraphRaw, ResourceGraphService } from '@cognizone/ng-application-profile';
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
-import { combineLatest, EMPTY, Observable, of } from 'rxjs';
-import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap, tap } from 'rxjs/operators';
+import produce from 'immer';
+import { combineLatest, EMPTY, Observable } from 'rxjs';
+import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap, take } from 'rxjs/operators';
 
+import { ElasticClient, ElasticState, getPropertyType } from '../../core';
+import { ElasticInstanceHandlerService, ElasticInstanceService } from '../../elastic-instance';
 import { ElasticInfo } from '../models/elastic-info';
-import { ElasticState } from '../models/elastic-state';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
 import { ViewType } from '../models/view-type';
 import {
   ResetData,
   SetData,
-  SetElasticInfo,
   SetElasticQuery,
-  SetElasticState,
   SetFilters,
-  SetIndices,
   SetManualMode,
   SetPagination,
   SetViewType,
 } from '../store/elastic-explorer.actions';
 import { ELASTIC_EXPLORER_STATE_TOKEN, ElasticExplorerStateModel } from '../store/elastic-explorer.state';
-import { ElasticClientFactoryService } from './elastic-client-factory.service';
-import { ElasticInstanceService } from './elastic-instance-service';
-import { ElasticStateUtils } from './elastic-state-utils.service';
+import { getSortedObject } from '../utils/get-sorted-object';
 
 @Injectable()
 export class ElasticExplorerService {
@@ -50,9 +38,7 @@ export class ElasticExplorerService {
   total$: Observable<number> = this.state$.pipe(selectProp('total'));
   pagination$: Observable<Pagination> = this.state$.pipe(selectProp('pagination'));
   aggregations$: Observable<Dictionary<ElasticAggregation>> = this.state$.pipe(selectProp('aggregations'));
-  elasticInfo$: Observable<ElasticInfo> = this.state$.pipe(selectProp('elasticInfo'));
   models$: Observable<FullModel[]> = this.state$.pipe(selectProp('models'));
-  indices$: Observable<string[]> = this.state$.pipe(selectProp('indices'));
   facetFields$!: Observable<Field[]>;
   manualMode$: Observable<boolean> = this.state$.pipe(selectProp('manualMode'));
   elasticQuery$: Observable<{}> = this.state$.pipe(selectProp('elasticQuery'));
@@ -63,22 +49,21 @@ export class ElasticExplorerService {
 
   constructor(
     private store: Store,
-    private elasticClientFactory: ElasticClientFactoryService,
-    private http: HttpClient,
     private router: Router,
     private logger: Logger,
     private elasticInstanceService: ElasticInstanceService,
     private snack: MatSnackBar,
     private loadingService: LoadingService,
-    private elasticStateUtils: ElasticStateUtils
+    private elasticInstanceHandler: ElasticInstanceHandlerService,
+    private elasticClient: ElasticClient,
+    private resourceGraphService: ResourceGraphService,
+    private jsonModelService: JsonModelService
   ) {
     this.logger = logger.extend('DataExplorerService');
     this.initFacetFields();
   }
 
   onPageLoad(route: ActivatedRoute): void {
-    this.initElasticState();
-    this.initIndices();
     this.parseFiltersFromRoute(route);
     this.parseElasticInfoFromRoute(route);
     this.parseViewTypeRoute(route);
@@ -101,14 +86,6 @@ export class ElasticExplorerService {
     this.store.dispatch(new SetPagination(pagination));
   }
 
-  setElasticInfo(elasticInfo: ElasticInfo): void {
-    this.store.dispatch(new SetElasticInfo(elasticInfo));
-  }
-
-  setIndices(indices: string[]): void {
-    this.store.dispatch(new SetIndices(indices));
-  }
-
   setElasticQuery(elasticQuery: {}): void {
     this.store.dispatch(new SetElasticQuery(elasticQuery));
   }
@@ -121,34 +98,13 @@ export class ElasticExplorerService {
     this.store.dispatch(new SetViewType(viewType));
   }
 
-  private initElasticState(): void {
-    this.subSink.add = this.elasticInfo$
-      .pipe(
-        selectProp('url'),
-        tap(() => this.store.dispatch(new SetElasticState(undefined))),
-        filter(notNil),
-        switchMap(url => this.http.get<ElasticState>(`${url}/_cluster/state`)),
-        catchError(err => {
-          this.logger.error('Failed to fetch elastic state', err);
-          return EMPTY;
-        })
-      )
-      .subscribe(response => {
-        this.store.dispatch(new SetElasticState(response));
-      });
-  }
-
   private initModels(): void {
-    this.subSink.add = combineLatest([this.elasticInfo$, this.elasticQuery$])
+    this.subSink.add = combineLatest([this.getElasticInfo(), this.elasticQuery$])
       .pipe(
         debounceTime(200),
         switchMap(([elasticInfo, elasticQuery]) => {
           if (!elasticInfo.url) return EMPTY;
-          const client = this.elasticClientFactory.create({
-            baseUrl: elasticInfo.url,
-            index: elasticInfo.index,
-          });
-          return client.search(elasticQuery).pipe(
+          return this.elasticClient.search({ baseUrl: elasticInfo.url, index: elasticInfo.index as string, body: elasticQuery }).pipe(
             catchError(err => {
               const message = 'Failed to fetch entries from elastic';
               this.logger.error(message, err);
@@ -158,31 +114,48 @@ export class ElasticExplorerService {
             }),
             this.loadingService.asOperator()
           );
-        })
+        }),
+        map(response => mapElasticSources(response, (_, hit) => this.mapIn(hit)))
       )
       .subscribe(response => {
         this.store.dispatch(new SetData(response));
       });
   }
 
-  private initIndices(): void {
-    this.subSink.add = this.state$
-      .pipe(
-        selectProp('elasticState'),
-        map(state => Object.keys(state?.metadata?.indices ?? {})),
-        catchError(err => {
-          this.logger.error('Failed to fetch elastic state', err);
-          return of([]);
-        })
-      )
-      .subscribe(response => {
-        this.setIndices(response);
+  private mapIn(hit: ElasticHit<unknown>): FullModel {
+    let source = hit._source;
+    if (this.isResourceGraphRaw(source)) {
+      source = produce(source, draft => {
+        const all = [draft.data, ...(draft.included ?? [])];
+        draft.included?.sort((a, b) => a.uri.localeCompare(b.uri, undefined, { numeric: true }));
+        all.forEach(node => {
+          if (node.attributes) {
+            node.attributes = getSortedObject(node.attributes ?? {});
+          }
+          if (node.references) {
+            node.references = getSortedObject(node.references ?? {});
+          }
+        });
       });
+      hit = { ...hit, _source: source };
+    }
+    const fullModel: FullModel = {
+      hit,
+    };
+    if (this.isResourceGraphRaw(source)) {
+      fullModel.jsonModel = this.resourceGraphService.resourceGraphRawToJsonModel(source);
+      fullModel.jsonModelFlatGraph = this.jsonModelService.toFlatGraph(fullModel.jsonModel);
+    }
+    return fullModel;
+  }
+
+  private isResourceGraphRaw(obj: unknown): obj is ResourceGraphRaw {
+    return typeof obj === 'object' && obj != null && 'data' in obj;
   }
 
   private initFacetFields(): void {
-    const elasticState$ = this.state$.pipe(selectProp('elasticState'));
-    const index$ = this.elasticInfo$.pipe(selectProp('index'));
+    const elasticState$ = this.elasticInstanceHandler.state$;
+    const index$ = this.getElasticInfo().pipe(selectProp('index'));
     this.facetFields$ = combineLatest([elasticState$, index$]).pipe(
       map(([state, index]) => {
         if (!index) return [];
@@ -202,8 +175,8 @@ export class ElasticExplorerService {
       this.filters$,
       this.pagination$,
       this.facetFields$,
-      this.state$.pipe(selectProp('elasticState')),
-      this.state$.pipe(selectProp('elasticInfo')),
+      this.elasticInstanceHandler.state$,
+      this.getElasticInfo(),
     ])
       .pipe(filter(([manualMode]) => !manualMode))
       .subscribe(([, filters, pagination, facetsFields, elasticState, elasticInfo]) => {
@@ -282,7 +255,7 @@ export class ElasticExplorerService {
   ): unknown {
     let isKeyword = true;
     if (state) {
-      const typeProfile = this.elasticStateUtils.getPropertyType(state, elasticInfo.index, field);
+      const typeProfile = getPropertyType(state, elasticInfo.index, field);
       isKeyword = typeProfile ? typeProfile?.type === 'keyword' : true;
     }
 
@@ -337,7 +310,7 @@ export class ElasticExplorerService {
     this.subSink.add = combineLatest([
       this.filters$,
       this.pagination$,
-      this.elasticInfo$,
+      this.getElasticInfo(),
       this.manualMode$,
       this.elasticQuery$,
       this.viewType$,
@@ -423,7 +396,8 @@ export class ElasticExplorerService {
       )
       .subscribe(elasticInfo => {
         if (elasticInfo) {
-          this.store.dispatch(new SetElasticInfo(elasticInfo));
+          this.elasticInstanceHandler.setUrl(elasticInfo.url as string);
+          this.elasticInstanceHandler.setIndex(elasticInfo.index as string);
           if (elasticInfo.url) this.elasticInstanceService.addIfNotPresent({ url: elasticInfo.url, label: elasticInfo.url });
         }
       });
@@ -436,9 +410,22 @@ export class ElasticExplorerService {
       }
     });
   }
+
+  private getElasticInfo(): Observable<ElasticInfo> {
+    return combineLatest([this.elasticInstanceHandler.url$, this.elasticInstanceHandler.index$]).pipe(
+      map(([url, index]) => ({ url, index }))
+    );
+  }
 }
 
 type ElasticPropertiesMap = { [key: string]: ElasticProperties | ElasticType };
 type ElasticProperties = { properties: ElasticPropertiesMap };
 type ElasticType = { type: string };
 export type Field = { path: string; type: string };
+
+export function mapElasticSources<T, U>(
+  response: ElasticSearchResponse<T>,
+  project: (data: T, hit: ElasticHit<T>) => U
+): ElasticSearchResponse<U> {
+  return { ...response, hits: { ...response.hits, hits: response.hits.hits.map(hit => ({ ...hit, _source: project(hit._source, hit) })) } };
+}
