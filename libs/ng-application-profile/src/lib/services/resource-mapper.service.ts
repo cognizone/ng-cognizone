@@ -26,7 +26,7 @@ export class ResourceMapper {
       const attribute = rawAttributes[attributeKey];
       const dataType = stringKeys(attribute).pop();
       if (!dataType) return acc;
-      const value = attribute[dataType as keyof typeof attribute];
+      const value = Object.values(attribute);
 
       const newValue = this.deserializeAttribute(dataType, value);
 
