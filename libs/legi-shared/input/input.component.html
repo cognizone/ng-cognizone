@@ -8,9 +8,9 @@
     [formControl]="embeddedControl"
     [placeholder]="placeholder"
     [name]="name"
-    (focus)="outlineFieldRef.updateOutlineGap()"
+    (focus)="onFocus($event, outlineFieldRef)"
     [attr.aria-label]="ariaLabel"
-    (blur)="onBlur()"
+    (blur)="onBlur($event)"
   />
   <span *ngIf="suffixTpl" matSuffix>
     <ng-container *ngTemplateOutlet="suffixTpl"></ng-container>

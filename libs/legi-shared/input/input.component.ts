@@ -3,14 +3,17 @@ import {
   ChangeDetectorRef,
   Component,
   ContentChild,
+  EventEmitter,
   Inject,
   Input,
   OnInit,
   Optional,
+  Output,
   Self,
   TemplateRef,
 } from '@angular/core';
 import { AbstractControl, ControlContainer, FormControl, NgControl } from '@angular/forms';
+import { MatFormField } from '@angular/material/form-field';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
@@ -45,6 +48,11 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
   type: string = 'text';
   @Input()
   inputAutocomplete: string = 'off';
+
+  @Output()
+  inputFocus: EventEmitter<FocusEvent> = new EventEmitter();
+  @Output()
+  inputBlur: EventEmitter<FocusEvent> = new EventEmitter();
 
   @ContentChild('czPrefix', { static: false, read: TemplateRef })
   prefixTpl?: TemplateRef<unknown>;
@@ -83,9 +91,15 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
     }
   }
 
-  onBlur(): void {
+  onBlur(event: FocusEvent): void {
     if (!this.model || !this.autoTrim) return;
     const newVal = this.model.trim();
     if (newVal !== this.model) this.embeddedControl.setValue(newVal);
+    this.inputBlur.emit(event);
+  }
+
+  onFocus(event: FocusEvent, matFormField: MatFormField): void {
+    matFormField.updateOutlineGap();
+    this.inputFocus.emit(event);
   }
 }
