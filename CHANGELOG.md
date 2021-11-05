@@ -1,3 +1,16 @@
+# [2.5.0](https://github.com/cognizone/ng-cognizone/compare/v2.4.3...v2.5.0) (2021-11-05)
+
+
+### Bug Fixes
+
+* **legi-shared:** added blur & focus for cz-input ([c0fbd04](https://github.com/cognizone/ng-cognizone/commit/c0fbd0485cfc94e76976246a72d98d58c21213ce))
+
+
+### Features
+
+* **elastic-explorer:** add data validator ([6cdddf3](https://github.com/cognizone/ng-cognizone/commit/6cdddf383b719ce12f025f349c9e7fb6035a9040))
+* **elastic-explorer:** view types & local search ([8fcc172](https://github.com/cognizone/ng-cognizone/commit/8fcc1721920a75b8e76afaf14b427410d95520a3))
+
 ## [2.4.3](https://github.com/cognizone/ng-cognizone/compare/v2.4.2...v2.4.3) (2021-10-19)
 
 
