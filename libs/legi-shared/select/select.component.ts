@@ -3,10 +3,12 @@ import {
   ChangeDetectorRef,
   Component,
   ContentChild,
+  EventEmitter,
   forwardRef,
   Inject,
   Input,
   Optional,
+  Output,
   TemplateRef,
 } from '@angular/core';
 import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -53,6 +55,9 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
 
   @Input()
   hint?: string;
+
+  @Output()
+  selectionChange: EventEmitter<unknown> = new EventEmitter();
 
   embeddedControl: FormControl = new FormControl();
 
