@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/cognizone/ng-cognizone/compare/v2.5.0...v2.5.1) (2021-11-18)
+
+
+### Bug Fixes
+
+* **legi-shared:** added selectionChange output to cz-select ([652a6e3](https://github.com/cognizone/ng-cognizone/commit/652a6e3feabff3416c1e6672fc50c4e479dd9747))
+
 # [2.5.0](https://github.com/cognizone/ng-cognizone/compare/v2.4.3...v2.5.0) (2021-11-05)
 
 

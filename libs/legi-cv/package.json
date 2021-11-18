@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/legi-cv",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "peerDependencies": {
     "@angular/common": ">=9.1.0",
     "@angular/core": ">=9.1.0",
