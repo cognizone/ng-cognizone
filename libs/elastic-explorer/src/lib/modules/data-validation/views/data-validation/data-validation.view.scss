@@ -1,6 +1,13 @@
 .my-side-menu {
-  min-width: 20%;
+  min-width: 40%;
   min-height: calc(100vh - 64px);
   resize: both;
   overflow: auto;
+}
+
+.editor-container {
+  height: 500px;
+}
+.code-editor {
+  height: 100%;
 }

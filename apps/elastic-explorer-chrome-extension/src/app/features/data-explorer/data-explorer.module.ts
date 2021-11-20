@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ElasticExplorerModule as LibDataExplorerModule, ElasticExplorerState, routes } from '@cognizone/elastic-explorer';
+import {
+  DataValidationState,
+  ElasticExplorerModule as LibDataExplorerModule,
+  ElasticExplorerState,
+  routes,
+} from '@cognizone/elastic-explorer';
 import { NgxsModule } from '@ngxs/store';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 
@@ -8,7 +13,7 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
   declarations: [],
   imports: [
     LibDataExplorerModule,
-    NgxsModule.forFeature([ElasticExplorerState]),
+    NgxsModule.forFeature([ElasticExplorerState, DataValidationState]),
     MonacoEditorModule.forRoot(),
     RouterModule.forChild(routes),
   ],

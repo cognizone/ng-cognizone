@@ -7,6 +7,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsModule } from '@ngxs/store';
+import { environment } from '@czee-ce/env/environment';
 
 @NgModule({
   declarations: [],
@@ -16,8 +17,8 @@ import { NgxsModule } from '@ngxs/store';
     TranslocoModule,
     LegiSharedModule.forRoot(),
     TranslocoLocaleModule.init(),
-    NgxsModule.forRoot([], {}),
-    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: false, name: 'CZ-DATA_EXPLORER' }),
+    NgxsModule.forRoot([], { developmentMode: !environment.production }),
+    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production, name: 'CZ-DATA_EXPLORER' }),
     I18nTranslocoModule.forRoot(),
   ],
 })

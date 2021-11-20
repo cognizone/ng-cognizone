@@ -11,8 +11,7 @@ import { combineLatest, EMPTY, Observable } from 'rxjs';
 import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap, take } from 'rxjs/operators';
 
 import { ElasticClient, ElasticState, getPropertyType } from '../../core';
-import { ElasticInstanceHandlerService, ElasticInstanceService } from '../../elastic-instance';
-import { ElasticInfo } from '../models/elastic-info';
+import { ElasticInfo, ElasticInstanceHandlerService, ElasticInstanceService } from '../../elastic-instance';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
 import { ViewType } from '../models/view-type';

@@ -1,52 +1,98 @@
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ResourceGraphRaw } from '@cognizone/application-profile';
-import { extractSourcesFromElasticResponse, manyToArray } from '@cognizone/model-utils';
-import { LoadingService } from '@cognizone/ng-core';
+import { downloadBlob, extractSourcesFromElasticResponse, manyToArray, selectProp, SubSink } from '@cognizone/model-utils';
+import { LoadingService, Logger } from '@cognizone/ng-core';
+import { Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
 import { ElasticClient } from '../../core';
 import { ElasticInstanceHandlerService } from '../../elastic-instance';
 import { DataError } from '../models/data-error';
+import { AddErrors, SetElasticQuery, SetErrors } from '../store/data-validation.actions';
+import { DataValidationStateModel, DATA_VALIDATION_STATE_TOKEN } from '../store/data-validation.state';
 
 @Injectable()
 export class DataValidationViewService {
+  errors$: Observable<DataError[]> = this.state$.pipe(selectProp('errors'));
+  elasticQuery$: Observable<{}> = this.state$.pipe(selectProp('elasticQuery'));
+  private subSink: SubSink = new SubSink();
+
   constructor(
     private elastic: ElasticClient,
     private elasticInstanceHandler: ElasticInstanceHandlerService,
-    private loadingService: LoadingService
-  ) {}
+    private loadingService: LoadingService,
+    private router: Router,
+    private store: Store,
+    private matSnackBar: MatSnackBar,
+    private logger: Logger
+  ) {
+    this.logger = logger.extend('DataValidationViewService');
+  }
+
+  onPageLoad(route: ActivatedRoute): void {
+    this.linkRouteToState(route);
+    this.linkStateToRoute(route);
+  }
+
+  onPageUnload(): void {
+    this.subSink.empty();
+  }
 
   generateReport(): void {
-    const { control$, response$ } = this.elastic.fromCrawl({
+    this.store.dispatch(new SetErrors([]));
+    const { control$, response$ } = this.elastic.searchAfterCrawl({
       baseUrl: this.elasticInstanceHandler.getUrl() as string,
       index: this.elasticInstanceHandler.getIndex() as string,
-      body: {
-        query: {
-          bool: {
-            must: {
-              exists: {
-                field: 'data.uri',
-              },
-            },
-          },
-        },
-      },
+      body: this.state.elasticQuery,
     });
-    const errors: DataError[] = [];
+
     this.loadingService.addLoading();
-    response$.pipe(map(extractSourcesFromElasticResponse)).subscribe({
+    let docCount = 0;
+    let errorCount = 0;
+    this.subSink.add = response$.pipe(map(extractSourcesFromElasticResponse)).subscribe({
       next: response => {
         response.forEach(item => {
-          errors.push(...this.computeErrors(item as ResourceGraphRaw));
+          ++docCount;
+          const newErrors = this.computeErrors(item as ResourceGraphRaw);
+          errorCount += newErrors.length;
+          if (newErrors.length) {
+            this.store.dispatch(new AddErrors(newErrors));
+          }
         });
         control$.next();
       },
+      error: err => {
+        this.logger.error('Failed to crawl elastic index', err);
+        this.loadingService.removeLoading();
+        this.matSnackBar.open(`Failed to crawl given elastic index`, 'Dismiss');
+      },
       complete: () => {
         this.loadingService.removeLoading();
-        const lines = [`"Graph Uri","Node Uri","Property Key","Error Message"`];
-        errors.forEach(error => lines.push(`"${error.graphUri}","${error.nodeUri}","${error.propertyKey}","${error.errorMessage}"`));
-        download('report.csv', lines.join('\n'));
+        this.matSnackBar.open(`Done processing ${docCount} documents, found ${errorCount} errors.`, 'Dismiss');
       },
     });
+  }
+
+  downloadReport(): void {
+    const lines = [`"Graph Uri","Node Uri","Property Key","Value","Error Message"`];
+    this.state.errors.forEach(error =>
+      lines.push(`"${error.graphUri}","${error.nodeUri}","${error.propertyKey}","${error.value}","${error.errorMessage}"`)
+    );
+    const file = new Blob(
+      [
+        new Uint8Array([0xef, 0xbb, 0xbf]), // UTF-8 BOM for excel
+        lines.join('\n'),
+      ],
+      { type: 'text/plain' }
+    );
+    downloadBlob(file, 'report.csv');
+  }
+
+  setElasticQuery(elasticQuery: {}): void {
+    this.store.dispatch(new SetElasticQuery(elasticQuery));
   }
 
   private computeErrors(graph: ResourceGraphRaw): DataError[] {
@@ -60,7 +106,8 @@ export class DataValidationViewService {
             graphUri: graph.data.uri,
             nodeUri: node.uri,
             propertyKey: key,
-            errorMessage: `${uri} cannot be found in either data or included`,
+            value: uri,
+            errorMessage: `value cannot be found in either data or included`,
           });
         })
       );
@@ -68,17 +115,32 @@ export class DataValidationViewService {
 
     return errors;
   }
-}
 
-function download(filename: string, text: string): void {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
+  private linkRouteToState(route: ActivatedRoute): void {
+    this.subSink.add = route.queryParams
+      .pipe(map(params => this.elasticInstanceHandler.getElasticInfoFromQueryParams(params)))
+      .subscribe(elasticInfo => {
+        if (elasticInfo) {
+          this.elasticInstanceHandler.setElasticInfo(elasticInfo);
+        }
+      });
+  }
 
-  element.style.display = 'none';
-  document.body.appendChild(element);
+  private linkStateToRoute(route: ActivatedRoute): void {
+    this.elasticInstanceHandler.elasticInfo$.subscribe(elasticInfo => {
+      const queryParams = this.elasticInstanceHandler.elasticInfoToQueryParams(elasticInfo);
+      this.router.navigate([], {
+        relativeTo: route,
+        queryParams,
+      });
+    });
+  }
 
-  element.click();
+  private get state$(): Observable<DataValidationStateModel> {
+    return this.store.select(DATA_VALIDATION_STATE_TOKEN);
+  }
 
-  document.body.removeChild(element);
+  private get state(): DataValidationStateModel {
+    return this.store.selectSnapshot(DATA_VALIDATION_STATE_TOKEN);
+  }
 }
