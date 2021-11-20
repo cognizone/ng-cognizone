@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Params } from '@angular/router';
 import { Nil } from '@cognizone/model-utils';
-import { BehaviorSubject, EMPTY, Observable } from 'rxjs';
-import { map, shareReplay, switchMap } from 'rxjs/operators';
+import { BehaviorSubject, combineLatest, EMPTY, Observable } from 'rxjs';
+import { distinctUntilChanged, map, shareReplay, switchMap } from 'rxjs/operators';
+
 import { ElasticClient, ElasticState, getIndices } from '../../core';
+import { ElasticInfo } from '../models/elastic-info';
+import { ElasticInstanceService } from './elastic-instance-service';
 
 @Injectable()
 export class ElasticInstanceHandlerService {
@@ -23,17 +27,39 @@ export class ElasticInstanceHandlerService {
     return this.state$.pipe(map(getIndices));
   }
 
-  constructor(private elastic: ElasticClient) {
+  get elasticInfo$(): Observable<ElasticInfo> {
+    return combineLatest([this.index$, this.url$]).pipe(map(([index, url]) => ({ index, url })));
+  }
+
+  constructor(private elastic: ElasticClient, private elasticInstanceService: ElasticInstanceService) {
     this._url$ = new BehaviorSubject<Nil<string>>(undefined);
     this._index$ = new BehaviorSubject<Nil<string>>(undefined);
     this.state$ = this.getElasticState();
   }
 
-  setUrl(url: string): void {
+  getElasticInfoFromQueryParams({ elasticInfo }: Params): ElasticInfo | undefined {
+    if (!elasticInfo) return undefined;
+    return JSON.parse(elasticInfo);
+  }
+
+  elasticInfoToQueryParams(elasticInfo: ElasticInfo | undefined): Params {
+    if (!elasticInfo) return {};
+    return { elasticInfo: JSON.stringify(elasticInfo) };
+  }
+
+  setElasticInfo(info: ElasticInfo): void {
+    this.setUrl(info.url);
+    this.setIndex(info.index);
+  }
+
+  setUrl(url: Nil<string>): void {
+    if (url) {
+      this.elasticInstanceService.addIfNotPresent({ url: url, label: url });
+    }
     this._url$.next(url);
   }
 
-  setIndex(index: string): void {
+  setIndex(index: Nil<string>): void {
     this._index$.next(index);
   }
 
@@ -47,6 +73,7 @@ export class ElasticInstanceHandlerService {
 
   private getElasticState(): Observable<ElasticState> {
     return this.url$.pipe(
+      distinctUntilChanged(),
       switchMap(url => (url ? this.elastic.getClusterState(url) : EMPTY)),
       shareReplay(1)
     );

@@ -20,7 +20,7 @@ export class ElasticClient {
     const control$ = new Subject<void>();
     const response$ = control$.asObservable().pipe(
       startWith(null),
-      switchMap(() => this.http.post<{ id: string }>(this.getPath(baseUrl, index, '_pit'), {})),
+      switchMap(() => this.http.post<{ id: string }>(this.getPath(baseUrl, index, '_pit'), {}, { params: { keep_alive: '1m' } })),
       selectProp('id'),
       switchMap(fetchedPitId => {
         pitId = fetchedPitId;
@@ -78,21 +78,21 @@ export class ElasticClient {
     return { control$, response$ };
   }
 
-  fromCrawl<T>({ baseUrl, index, body }: SearchOptions): CrawlResponse<T> {
-    let size = 1000;
-    let from = 0;
-    body = { ...body, sort: ['_doc'] };
+  searchAfterCrawl<T>({ baseUrl, index, body }: SearchOptions): CrawlResponse<T> {
+    body = { ...body, from: undefined, size: 1000, sort: ['_doc'] };
+    let searchAfter: unknown[] | undefined = undefined;
+
     const control$ = new Subject<void>();
     const response$ = control$.asObservable().pipe(
       startWith(null),
-      switchMap(() => this.http.post<ElasticSearchResponse<T>>(this.getPath(baseUrl, index, '_search'), { ...body, from, size })),
+      switchMap(() =>
+        this.http.post<ElasticSearchResponse<T>>(this.getPath(baseUrl, index, '_search'), { ...body, search_after: searchAfter })
+      ),
       tap(response => {
-        from += size;
-        if (from + size > 10_000) {
-          size = 10_000 - from;
-        }
         if (!response.hits.hits.length) {
           control$.complete();
+        } else {
+          searchAfter = response.hits.hits[response.hits.hits.length - 1].sort;
         }
       })
     );

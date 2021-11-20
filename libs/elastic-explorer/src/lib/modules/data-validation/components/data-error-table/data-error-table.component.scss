@@ -1,0 +1,19 @@
+@import 'abstracts';
+
+.my-table-container,
+table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+:host {
+  display: block;
+  border: 1px solid $czls-border-color;
+  margin: 1.5rem 0;
+}
+
+td {
+  word-wrap: break-word;
+}

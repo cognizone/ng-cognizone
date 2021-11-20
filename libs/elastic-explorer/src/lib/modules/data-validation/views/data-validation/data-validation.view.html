@@ -3,11 +3,18 @@
     <div class="my-side-menu">
       <cz-elastic-picker></cz-elastic-picker>
       <mat-divider></mat-divider>
-      <button mat-button (click)="generateReport()">Generate Report</button>
-      <!-- <cz-filters-form></cz-filters-form> -->
+      <div class="editor-container">
+        <ngx-monaco-editor class="code-editor" [options]="editorOptions" [formControl]="code"></ngx-monaco-editor>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="mt-3 d-flex justify-content-end">
+        <button mat-flat-button color="primary" [disabled]="loading$ | async" (click)="generateReport()">Generate Report</button>
+      </div>
     </div>
     <main class="col">
-      <div class="container">hello there</div>
+      <div class="container">
+        <cz-data-error-table></cz-data-error-table>
+      </div>
     </main>
   </div>
 </div>
