@@ -21,7 +21,7 @@ import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-c
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { I18nService } from '@cognizone/i18n';
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
-import { getAllSelectOptions, Nil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
+import { CzLabel, getAllSelectOptions, Nil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { combineLatest, of, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs/operators';
@@ -43,6 +43,8 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
   label?: string;
   @Input()
   lang?: string;
+  @Input()
+  getTooltip: (option: SelectOption) => CzLabel = option => option.label;
   @Input()
   set options(value: SelectOption<T>[]) {
     this._options = value;
