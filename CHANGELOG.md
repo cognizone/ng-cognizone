@@ -1,3 +1,10 @@
+## [2.5.2](https://github.com/cognizone/ng-cognizone/compare/v2.5.1...v2.5.2) (2021-12-15)
+
+
+### Bug Fixes
+
+* **legi-shared:** add possibility for custom tooltip on autocomplete-single ([63c1b8e](https://github.com/cognizone/ng-cognizone/commit/63c1b8e9eec4401333782f27e754829f10eb4422))
+
 ## [2.5.1](https://github.com/cognizone/ng-cognizone/compare/v2.5.0...v2.5.1) (2021-11-18)
 
 
