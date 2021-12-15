@@ -28,7 +28,7 @@
   <mat-option
     *ngFor="let option of options | selectOptionsSort: sortType; trackBy: trackByFn"
     [value]="option.value"
-    [matTooltip]="option.label | czLabel: lang"
+    [matTooltip]="getTooltip(option) | czLabel: lang"
     >{{ option.label | czLabel: lang }}</mat-option
   >
 </mat-autocomplete>
