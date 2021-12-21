@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/cognizone/ng-cognizone/compare/v2.5.2...v2.6.0) (2021-12-21)
+
+
+### Features
+
+* **elastic-explorer:** data validation ui ([077a44f](https://github.com/cognizone/ng-cognizone/commit/077a44f0664bc15d66a7efcc9a66c7936fa641c0))
+
 ## [2.5.2](https://github.com/cognizone/ng-cognizone/compare/v2.5.1...v2.5.2) (2021-12-15)
 
 
