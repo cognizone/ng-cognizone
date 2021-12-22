@@ -16,6 +16,11 @@ import { DatePickerType } from './models/date-picker-type';
 
 const moment = _moment;
 
+/**
+ * `DatePickerComponent` allows user to pass a pick a date from a calendar
+ *  Component has 2 modes, classic and urban, which determine it's appearance
+ *  appearance config should be passed in app.module
+ */
 @Component({
   selector: 'cz-date-picker',
   templateUrl: './date-picker.component.html',
@@ -45,6 +50,9 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     return this.config.appearance === 'classic';
   }
 
+  /**
+   * @ignore
+   */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
     logger: Logger,
@@ -54,11 +62,17 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     super(logger, cdr, controlContainer);
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.embeddedControl = new FormControl(null, { updateOn: this.updateOnBlur ? 'blur' : 'change' });
     super.ngOnInit();
   }
 
+  /**
+   * `chosenYearHandler` setting the year in embeddedControl date value
+   */
   chosenYearHandler(normalizedYear: Moment): void {
     if (this.type !== DatePickerType.MONTH) return;
     const ctrlValue = this.embeddedControl.value ? moment(this.embeddedControl.value) : moment();
@@ -66,6 +80,9 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     this.embeddedControl.setValue(ctrlValue);
   }
 
+  /**
+   * `chosenMonthHandler` setting the month in embeddedControl date value
+   */
   chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<Moment>): void {
     if (this.type !== DatePickerType.MONTH) return;
     const ctrlValue = this.embeddedControl.value ? moment(this.embeddedControl.value) : moment();
@@ -74,6 +91,9 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     datepicker.close();
   }
 
+  /**
+   * `embeddedValueToValue` maps selected value of a calendar to a value of type Date
+   */
   embeddedValueToValue(value: Moment | Date | null): Date | null {
     if (!value) return value as null;
     else if (value instanceof Date) return value;

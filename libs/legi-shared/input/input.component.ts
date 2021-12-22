@@ -18,6 +18,14 @@ import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-sh
 import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 
+/**
+ * `InputComponent` uses a standard mat-input, with customized parameters and properties,
+ * like label and placeholder, passed as `@Input()` by the app that uses the component.
+ *  the component text entry is connected to an embeddedControl, and every change
+ *  on the text entered, should reflect on the control value.
+ *  This component has 2 modes, classic and urban, which determine it's appearance
+ *  appearance config should be passed in app.module
+ */
 @Component({
   selector: 'cz-input',
   templateUrl: './input.component.html',
@@ -67,6 +75,9 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
 
   private _label?: string;
 
+  /**
+   * @ignore
+   */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
     logger: Logger,
@@ -81,6 +92,9 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.controlChanged.complete();
     super.ngOnInit();
@@ -91,6 +105,10 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
     }
   }
 
+  /**
+   * `onBlur` update embeddedControl value with `model.trim()` latest value,
+   * triggered by @event blur
+   */
   onBlur(event: FocusEvent): void {
     if (!this.model || !this.autoTrim) return;
     const newVal = this.model.trim();
@@ -98,6 +116,9 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
     this.inputBlur.emit(event);
   }
 
+  /**
+   * @ignore
+   */
   onFocus(event: FocusEvent, matFormField: MatFormField): void {
     matFormField.updateOutlineGap();
     this.inputFocus.emit(event);

@@ -3,6 +3,9 @@ import { AbstractControl, NgControl } from '@angular/forms';
 import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
+/**
+ * `ErrorComponent` lists the errors of a provided control.
+ */
 @Component({
   selector: 'cz-error',
   templateUrl: './error.component.html',
@@ -15,10 +18,16 @@ export class ErrorComponent extends OnDestroy$ implements OnInit {
 
   errors: ValidationError[] = [];
 
+  /**
+   * @ignore
+   */
   constructor(private cdr: ChangeDetectorRef, @Optional() private ngControl?: NgControl) {
     super();
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     if (!this.control && this.ngControl) {
       this.control = extractControlFromNgControl(this.ngControl);
@@ -30,6 +39,9 @@ export class ErrorComponent extends OnDestroy$ implements OnInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   private computeError(): void {
     this.errors = Object.entries(this.control.errors ?? {}).map(([key, value]) => ({ key: `global.validation.${key}`, value }));
     this.cdr.markForCheck();

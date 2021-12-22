@@ -2,6 +2,9 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnI
 import { FormBuilder, FormControl } from '@angular/forms';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
+/**
+ * `ListPaginatorComponent` a paginator enables iterating over an entire result set.
+ */
 @Component({
   selector: 'cz-list-paginator',
   templateUrl: './list-paginator.component.html',
@@ -17,6 +20,9 @@ export class ListPaginatorComponent extends OnDestroy$ implements OnInit, OnChan
   @Output()
   changePagination: EventEmitter<Pagination> = new EventEmitter();
 
+  /**
+   *  Property determines how many items should be displayed per page
+   */
   sizes: number[] = [10, 25, 50, 100];
   sizeControl: FormControl = this.fb.control(null);
 
@@ -24,10 +30,16 @@ export class ListPaginatorComponent extends OnDestroy$ implements OnInit, OnChan
     super();
   }
 
+  /**
+   *  @ignore
+   */
   ngOnInit(): void {
     this.sizeControl.valueChanges.pipe(this.untilDestroyed()).subscribe(size => this.changePagination.emit({ ...this.pagination, size }));
   }
 
+  /**
+   *  @ignore
+   */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.pagination) {
       this.sizeControl.setValue(this.pagination.size, { emitEvent: false });
@@ -42,6 +54,9 @@ export class ListPaginatorComponent extends OnDestroy$ implements OnInit, OnChan
     this.changePagination.emit({ ...this.pagination, from: value * this.pagination.size });
   }
 
+  /**
+   *  @ignore
+   */
   get lastPage(): number {
     // elastic has a 10.000 limitation for pagination
     const total = Math.min(10_000, this.total);
@@ -49,6 +64,9 @@ export class ListPaginatorComponent extends OnDestroy$ implements OnInit, OnChan
     return Math.max(0, lastPage);
   }
 
+  /**
+   *  `pages` calculates and returns the list of pages
+   */
   get pages(): number[] {
     const numberOfPages = 7;
     const activePage = this.activePage;

@@ -13,6 +13,14 @@ import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 
+/**
+ * `TextareaComponent` uses a standard textarea, with customized parameters and properties,
+ * like label and placeholder, passed as `@Input()` by the app that uses the component.
+ *  the component text entry is connected to an embeddedControl, and every change
+ *  on the text entered, should reflect on the control value.
+ * This component has 2 modes, classic and urban, which determine it's appearance
+ *  appearance config should be passed in app.module
+ */
 @Component({
   selector: 'cz-textarea',
   templateUrl: './textarea.component.html',
@@ -43,6 +51,9 @@ export class TextareaComponent extends ControlComponent<string> {
     return this.config.appearance === 'classic';
   }
 
+  /**
+   * @ignore
+   */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
     logger: Logger,
@@ -52,6 +63,10 @@ export class TextareaComponent extends ControlComponent<string> {
     super(logger, cdr, controlContainer);
   }
 
+  /**
+   * `onBlur` update embeddedControl value with `model.trim()` latest value
+   *  triggered by @event blur
+   */
   onBlur(): void {
     if (!this.model || !this.autoTrim) return;
     const newVal = this.model.trim();

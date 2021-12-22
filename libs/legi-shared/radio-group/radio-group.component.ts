@@ -26,6 +26,15 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { Observable, of } from 'rxjs';
 import { map, startWith, switchMap } from 'rxjs/operators';
 
+/**
+ * `RadioGroupComponent` allows user to pass a list of options and choose one
+ *  using radio buttons. It is possible to filter the list of
+ *  options by a search query using a searchControl,
+ * this option is determined using `canBeFiltered`
+ *  the RadioGroupComponent value is connected to an embeddedControl, and every change
+ *  on selection, should reflect on the control value.
+ *
+ */
 @Component({
   selector: 'cz-radio-group',
   templateUrl: './radio-group.component.html',
@@ -77,10 +86,16 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   private _optionsProvider!: SelectOptionsProvider<T>;
   private _counts: Nil<SelectOptionCounts>;
 
+  /**
+   * @ignore
+   */
   constructor(private i18nService: I18nService, logger: Logger, cdr: ChangeDetectorRef, @Optional() controlContainer: ControlContainer) {
     super(logger, cdr, controlContainer);
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     super.ngOnInit();
 
@@ -89,22 +104,41 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
     });
   }
 
+  /**
+   * @ignore
+   */
   isString(label: LangString | LangStringSimple | string): label is string {
     return typeof label === 'string';
   }
 
+  /**
+   * @ignore
+   */
   discard(): void {
     this.embeddedControl.setValue(null);
   }
 
+  /**
+   * `getContext` provides option context for ng-template
+   * adding more flexibility for customizing option template of mat-radio-button
+   */
   getContext(option: SelectOption<T>): { $implicit: SelectOption<T>; option: SelectOption<T> } {
     return { $implicit: option, option };
   }
 
+  /**
+   * `getCount` provides count of each option
+   */
   getCount(option: SelectOption<T>): number {
     return this.counts?.[option.value as unknown as string] ?? 0;
   }
 
+  /**
+   * `setOptions` provides the list of options and count on each one
+   *
+   * list updates with searchControl value changes, which filters list of options
+   * based on search query
+   */
   private setOptions(): void {
     this.emptySink();
     if (!this.optionsProvider) return;
@@ -126,6 +160,9 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
       });
   }
 
+  /**
+   * @ignore
+   */
   private checkForMissing(options: SelectOption<T>[]): Observable<SelectOption<T>[]> {
     const value = this.model;
     if (value && !options.find(o => o.value === value)) {

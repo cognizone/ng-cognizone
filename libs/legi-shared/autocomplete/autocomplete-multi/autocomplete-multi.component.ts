@@ -25,6 +25,14 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { Subject } from 'rxjs';
 import { distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/operators';
 
+/**
+ * `AutocompleteMultiComponent` allows user to pass a set of options and select multiple ones
+ *  along with other inputs, the optionsProvider determines the set of options passed to the autocomplete list
+ *  component is connected to a model, and every change on selection, should reflect on model value.
+ *
+ *  Component has 2 modes, classic and urban, which determine it's appearance
+ *  appearance config should be passed in app.module
+ */
 @Component({
   selector: 'cz-autocomplete-multi',
   templateUrl: './autocomplete-multi.component.html',
@@ -49,6 +57,9 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     this._options = value;
   }
 
+  /**
+   * @ignore
+   */
   get options(): SelectOption<T>[] {
     return this._options;
   }
@@ -58,6 +69,10 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     this._optionsProvider = value;
     this.useOptionsProvider();
   }
+
+  /**
+   * @ignore
+   */
   get optionsProvider(): SelectOptionsProvider<T> {
     return this._optionsProvider;
   }
@@ -89,6 +104,9 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     this.modelChanged$.next(this._model);
   }
 
+  /**
+   * @ignore
+   */
   get model(): T[] {
     return this._model;
   }
@@ -97,6 +115,9 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
 
   modelAsOptions: SelectOption<T>[] = [];
 
+  /**
+   * @ignore
+   */
   get classicMode(): boolean {
     return this.config.appearance === 'classic';
   }
@@ -105,6 +126,9 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
   private storedValueOptions: SelectOption<T>[] = [];
   private _optionsProvider!: SelectOptionsProvider<T>;
 
+  /**
+   * @ignore
+   */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
     private i18n: I18nService,
@@ -115,28 +139,48 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     super(logger, cdr, controlContainer);
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     super.ngOnInit();
     this.initModelChange();
   }
 
+  /**
+   * Linked to displayWith property of mat-autocomplete
+   *
+   * @param value The `displayFn` searches for option inside list of options.
+   * when option matching the value is found, displayFn translates the label of
+   *  the option found, considering that label is an instance of @typedef SelectOptionLabel
+   */
   displayFn: (value?: T) => Nil<string> = value => {
     if (value == null) return undefined;
     const allOptions = [...this.storedValueOptions, ...this.options];
     const option = allOptions.find(o => o.value === value);
     if (option) return this.i18n.translate(option.label, undefined, this.lang);
     this.storeValueOption(value);
-    return (value as unknown) as string;
+    return value as unknown as string;
   };
 
+  /**
+   * @ignore
+   */
   trackByFn: TrackByFunction<SelectOption<T>> = (index, option) => option.value;
 
+  /**
+   * `removeValue` will filter the value of the current model list of selected values
+   */
   removeValue(value: SelectOption<T>): void {
     const currentModel = Array.isArray(this.model) ? this.model : [];
     const newModel = currentModel.filter(v => v !== value.value);
     this.setModelAndEmit(newModel);
   }
 
+  /**
+   * `onOptionSelected` adds the selected option value to the list of current
+   *  model selected values
+   */
   onOptionSelected(event: MatAutocompleteSelectedEvent): void {
     const value = event.option.value;
     const currentModel = Array.isArray(this.model) ? this.model : [];
@@ -147,21 +191,37 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     }
   }
 
+  /**
+   * `addSelectedValue` resets value of input,
+   * this behavior is only necessary in classic mode
+   */
   addSelectedValue(): void {
     this.setModelAndEmit(this.newModel as T[]);
     this.newModel = undefined;
     this.multiInput.nativeElement.value = '';
   }
 
+  /**
+   * @ignore
+   */
   setDisabledState(isDisabled: boolean): void {
     super.setDisabledState(isDisabled);
     this.cdr.markForCheck();
   }
 
+  /**
+   * `getContext` provides option context for ng-template
+   * adding more flexibility for customizing chip template of selected options
+   */
   getContext(option: SelectOption<T>): { $implicit: SelectOption<T>; option: SelectOption<T> } {
     return { $implicit: option, option };
   }
 
+  /**
+   * `useOptionsProvider` updates the list of options based on user query changes,
+   * filtering disabled options, and returning all the matched options (or a
+   *  slice of options list with a predefined maxOptionsSize)
+   */
   private useOptionsProvider(): void {
     this.modelChanged$.next(this.model);
 
@@ -181,6 +241,10 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
       });
   }
 
+  /**
+   * `storeValueOption` stores an option in storedValueOptions
+   *
+   */
   private async storeValueOption(value: T): Promise<SelectOption<T> | undefined> {
     if (!this._optionsProvider || !value) return undefined;
     const hasOption = await this.optionsProvider.hasOptionFor(value).toPromise();
@@ -190,6 +254,10 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     return option;
   }
 
+  /**
+   * `getSelectOption` returns option object with a matching value
+   *
+   */
   private async getSelectOption(value: T): Promise<SelectOption<T> | undefined> {
     if (value == null) return undefined;
     const allOptions = [...this.storedValueOptions, ...this.options];
@@ -197,6 +265,9 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     return option ?? this.storeValueOption(value);
   }
 
+  /**
+   * `initModelChange` updates model value with selected options
+   */
   private initModelChange(): void {
     this.subSink = this.modelChanged$
       .pipe(
@@ -209,7 +280,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
               (await this.getSelectOption(value)) ??
               ({
                 value,
-                label: (value as unknown) as string,
+                label: value as unknown as string,
               } as SelectOption<T>);
             options.push(option);
           }

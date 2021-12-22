@@ -6,6 +6,10 @@ import { Logger } from '@cognizone/ng-core';
 
 import { LegalTaxonomyCvProviderOptionsService } from './legal-taxonomy-cv-provider-options.service';
 
+/**
+ * `LegalTaxonomyClientService` behaves as a special {@link ElasticClient}
+ * built specifically to serve legal-taxonomy cv service provider
+ */
 @Injectable()
 export class LegalTaxonomyClientService extends ElasticClient {
   get apName(): string {

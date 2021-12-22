@@ -144,6 +144,9 @@ export interface SelectOptionGroup<T = string> {
   options: SelectOption<T>[];
 }
 
+/**
+ * `getAllSelectOptions` spread options and sub options into one flat list of options @typedef SelectOption []
+ */
 export function getAllSelectOptions<T>(options: (SelectOption<T> | SelectOptionGroup<T>)[]): SelectOption<T>[] {
   const allOptions: SelectOption<T>[] = [];
   options.forEach(option => {
