@@ -19,6 +19,9 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
 
   constructor(private casematesClient: LegalTaxonomyClientService, private optionsService: LegalTaxonomyCvProviderOptionsService) {}
 
+  /**
+   * `getCv` returns all Legal taxonomies matching a provided query
+   */
   getCv(query?: string): Observable<LegalTaxonomy[]> {
     const esQuery = this.buildElasticQuery(query);
 
@@ -38,6 +41,9 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
     return value;
   }
 
+  /**
+   * @ignore
+   */
   toConceptWrapper(concept: LegalTaxonomy, query: Nil<string>): ConceptWrapper<LegalTaxonomy> {
     return {
       concept,
@@ -46,8 +52,12 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
     };
   }
 
+  /**
+   * `getConceptByUri` checks if Concept of type LegalTaxonomy exists in CV,
+   * by constructing an {@link ElasticQuery} with conceptUri value in the filter for term `data.uri.keyword`
+   */
   getConceptByUri(conceptUri: string): Observable<LegalTaxonomy> {
-    const esQuery = ({
+    const esQuery = {
       size: 1,
       query: {
         bool: {
@@ -58,7 +68,7 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
           },
         },
       },
-    } as unknown) as ElasticQuery;
+    } as unknown as ElasticQuery;
 
     const cacheKey = JSON.stringify(esQuery);
     const cached = this.getConceptByUriCache.find(cache => cache.key === cacheKey);
@@ -80,14 +90,23 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
     return value;
   }
 
+  /**
+   * `hasConcept` checks if CV contains a concept with uri equals to conceptUri
+   */
   hasConcept(conceptUri: string): Observable<boolean> {
     return this.getConceptByUri(conceptUri).pipe(map(notNil));
   }
 
+  /**
+   * `getLabel` of a legal taxonomy
+   */
   getLabel(concept: LegalTaxonomy): string {
     return concept.idSystematique;
   }
 
+  /**
+   * `buildElasticQuery` to search for a legal taxonomy
+   */
   protected buildElasticQuery(query?: string): ElasticQuery {
     return {
       query: {

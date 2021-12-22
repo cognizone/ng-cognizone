@@ -6,6 +6,10 @@ import {
   LegalTaxonomyCvProviderOptions,
 } from '../models/legal-taxonomy-cv-provider-options';
 
+/**
+ * `LegalTaxonomyCvProviderOptionsService` behaves as a getter/patcher service
+ * for all options available in LegalTaxonomy provided CV
+ */
 @Injectable()
 export class LegalTaxonomyCvProviderOptionsService {
   private options: Required<LegalTaxonomyCvProviderOptions>;

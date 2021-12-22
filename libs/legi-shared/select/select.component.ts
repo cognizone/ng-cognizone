@@ -20,6 +20,16 @@ import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort'
 import { getAllSelectOptions, LangString, LangStringSimple, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 
+/**
+ * `SelectComponent` shows a list of options in a dropdown list, where user can select only one
+ *
+ *  The SelectComponent value is connected to an embeddedControl, and every change
+ *  on selection, should reflect on the control value.
+ *
+ *  This component has 2 modes, classic and urban, which determine it's appearance
+ *  appearance config should be passed in app.module
+ *
+ */
 @Component({
   selector: 'cz-select',
   templateUrl: './select.component.html',
@@ -67,6 +77,9 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
 
   private allOptions?: SelectOption<T>[];
 
+  /**
+   * @ignore
+   */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
     private i18nService: I18nService,
@@ -77,19 +90,33 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
     super(logger, cdr, controlContainer);
   }
 
+  /**
+   * @ignore
+   */
   writeValue(value: T): void {
     super.writeValue(value);
     this.evaluateOptions();
   }
 
+  /**
+   * `getContext` provides option context for ng-template
+   * adding more flexibility for customizing option template of mat-radio-button
+   */
   getContext(option: SelectOption<T>): { $implicit: SelectOption<T>; option: SelectOption<T> } {
     return { $implicit: option, option };
   }
 
+  /**
+   * @ignore
+   */
   isString(label: LangString | LangStringSimple | string): label is string {
     return typeof label === 'string';
   }
 
+  /**
+   * `evaluateOptions` removes disabled option from list of options
+   *  if @Input() removeDisabledOptions is true
+   */
   private evaluateOptions(): void {
     this.options = (this.allOptions ?? this.options ?? []).filter(option => {
       if (option.disabled && this.removeDisabledOptions) {
@@ -99,6 +126,9 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
     });
   }
 
+  /**
+   * `useOptionsProvider` sets the list of allOptions from @param {provider: SelectOptionsProvider}
+   */
   private useOptionsProvider(provider: SelectOptionsProvider<T>): void {
     this.subSink = provider.getOptions(undefined, { lang: this.i18nService.getActiveSimpleLang() }).subscribe(options => {
       this.allOptions = getAllSelectOptions(options);

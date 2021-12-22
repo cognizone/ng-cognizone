@@ -12,6 +12,9 @@ import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
 import { extractControlFromNgControl } from './extract-control-from-ng-control';
 
+/**
+ * `ControlComponent` serves as an abstract component
+ */
 @Injectable()
 export class ControlComponent extends OnDestroy$ implements OnInit, ControlValueAccessor {
   control!: AbstractControl;
@@ -19,6 +22,9 @@ export class ControlComponent extends OnDestroy$ implements OnInit, ControlValue
   onChange!: Function;
   onTouched!: Function;
 
+  /**
+   * @ignore
+   */
   constructor(
     protected logger: Logger,
     protected cdr: ChangeDetectorRef,
@@ -32,6 +38,9 @@ export class ControlComponent extends OnDestroy$ implements OnInit, ControlValue
     }
   }
 
+  /**
+   * @ignore
+   */
   writeValue(value: unknown): void {
     if (this.control.value !== value) {
       this.control.setValue(value);
@@ -39,14 +48,23 @@ export class ControlComponent extends OnDestroy$ implements OnInit, ControlValue
     }
   }
 
+  /**
+   * @ignore
+   */
   registerOnChange(fn: Function): void {
     this.onChange = fn;
   }
 
+  /**
+   * @ignore
+   */
   registerOnTouched(fn: Function): void {
     this.onTouched = fn;
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     if (this.control || !this.ngControl) return;
     extractControlFromNgControl(this.ngControl);

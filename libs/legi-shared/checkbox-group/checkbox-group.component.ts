@@ -32,6 +32,15 @@ import {
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { startWith, switchMap } from 'rxjs/operators';
 
+/**
+ * `CheckboxGroupComponent` allows user to pass a list of options and check
+ *  multiple ones using checkboxes. It is possible to filter the list of
+ *  options by a search query using a searchControl,
+ * this option is determined using `canBeFiltered`.
+ *  The CheckboxGroupComponent is connected to an embeddedControl, and every change
+ *  on selection, should reflect on control value.
+ *
+ */
 @Component({
   selector: 'cz-checkbox-group',
   templateUrl: './checkbox-group.component.html',
@@ -111,15 +120,24 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
     }
   }
 
+  /**
+   * @ignore
+   */
   isString(label: string | LangString | LangStringSimple): label is string {
     return typeof label === 'string';
   }
 
+  /**
+   * @ignore
+   */
   isChecked(option: SelectOption<T>): boolean {
     const model = this.model ?? [];
     return model.includes(option.value);
   }
 
+  /**
+   * `onChange` update list of checked options and refreshes the value of embeddedControl
+   */
   onChange(event: MatCheckboxChange, option: SelectOption<T>): void {
     let model = this.model ?? [];
     if (event.checked) model = [...model, option.value];
@@ -127,24 +145,43 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
     this.embeddedControl.setValue(model);
   }
 
+  /**
+   * @ignore
+   */
   toggleSeeMore(): void {
     this.seeMore = !this.seeMore;
     this.cdr.markForCheck();
   }
 
+  /**
+   * `getCount` provides count of each option
+   */
   getCount(option: SelectOption<T>): number {
-    return this.counts ? this.counts[(option.value as unknown) as string] : 0;
+    return this.counts ? this.counts[option.value as unknown as string] : 0;
   }
 
+  /**
+   * @ignore
+   */
   showSelectedOptionAtTheEnd(actualOptions: SelectOption<T>[]): boolean {
     const index = this.selectedOption ? actualOptions.findIndex(o => o.value === this.selectedOption?.value) : -1;
     return index > actualOptions.length - 1;
   }
 
+  /**
+   * `getContext` provides option context for ng-template
+   * adding more flexibility for customizing chip template of selected options
+   */
   getContext(option: SelectOption<T>): { $implicit: SelectOption<T>; option: SelectOption<T> } {
     return { $implicit: option, option };
   }
 
+  /**
+   * `setOptions` provides the list of options and optionsGroups
+   *
+   * list updates with searchControl value changes, which filters list of options
+   * based on search query
+   */
   private setOptions(): void {
     this.emptySink();
     if (this.options && !this.optionsProvider) {

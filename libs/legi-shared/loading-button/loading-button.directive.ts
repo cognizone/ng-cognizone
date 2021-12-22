@@ -14,6 +14,10 @@ import {
 import { MatSpinner } from '@angular/material/progress-spinner';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 
+/**
+ *  `LoadingButtonDirective` passed on a button to show a spinner when `loading` input boolean is true
+ *
+ */
 @Directive({
   selector: '[czLoadingButton]',
 })
@@ -32,20 +36,36 @@ export class LoadingButtonDirective implements OnInit, OnChanges, OnDestroy {
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions
   ) {}
 
+  /**
+   * @ignore
+   *
+   */
   ngOnInit(): void {
     this.toggleLoading();
   }
 
+  /**
+   * @ignore
+   *
+   */
   ngOnChanges(changes: SimpleChanges): void {
     if (!changes.loading.isFirstChange()) {
       this.toggleLoading();
     }
   }
 
+  /**
+   * @ignore
+   *
+   */
   ngOnDestroy(): void {
     this.spinner?.destroy();
   }
 
+  /**
+   * `toggleLoading` shows/hides spinner on button based on `this.loading` value
+   *
+   */
   private toggleLoading(): void {
     const wrapper = this.elRef.nativeElement.getElementsByClassName('mat-button-wrapper').item(0);
 
@@ -62,6 +82,11 @@ export class LoadingButtonDirective implements OnInit, OnChanges, OnDestroy {
     }
   }
 
+  /**
+   * `getSpinnerDiv` creates a div element, and appends a spinner to it.
+   * Styles of this div vary based on config.appearance
+   *
+   */
   private getSpinnerDiv(): HTMLElement {
     if (this.spinnerDiv) return this.spinnerDiv;
     const factory = this.componentFactoryResolver.resolveComponentFactory(MatSpinner);
