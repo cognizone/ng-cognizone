@@ -18,6 +18,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterModule } from '@angular/router';
 import { I18nModule } from '@cognizone/i18n';
 import { AutocompleteModule } from '@cognizone/legi-shared/autocomplete';
 import { CheckboxGroupModule } from '@cognizone/legi-shared/checkbox-group';
@@ -77,6 +78,7 @@ import { SearchView } from './views/search/search.view';
     // Angular
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
     // Cognizone
     AutocompleteModule,
     CheckboxGroupModule,
