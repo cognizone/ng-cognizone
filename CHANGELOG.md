@@ -1,3 +1,10 @@
+## [2.6.1](https://github.com/cognizone/ng-cognizone/compare/v2.6.0...v2.6.1) (2021-12-22)
+
+
+### Bug Fixes
+
+* **elastic-explorer:** doc details available again ([7cc43b8](https://github.com/cognizone/ng-cognizone/commit/7cc43b855bfc80056cfd87050478f4ceadb157e8))
+
 # [2.6.0](https://github.com/cognizone/ng-cognizone/compare/v2.5.2...v2.6.0) (2021-12-21)
 
 
