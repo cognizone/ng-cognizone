@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ElasticExplorerView } from './views/elastic-explorer/elastic-explorer.view';
-import { SearchView } from './modules/search';
-import { DataValidationView } from './modules/data-validation';
+import { SearchView } from './features/search';
+import { DataValidationView } from './features/data-validation';
 
 export const routes: Routes = [
   {

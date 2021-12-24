@@ -7,8 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { LoadingService } from '@cognizone/ng-core';
 
 import { ElasticExplorerRoutingModule } from './elastic-explorer-routing.module';
-import { DataValidationModule } from './modules/data-validation';
-import { SearchModule } from './modules/search';
+import { DataValidationModule } from './features/data-validation';
+import { SearchModule } from './features/search';
 import { ElasticExplorerView } from './views/elastic-explorer/elastic-explorer.view';
 
 @NgModule({

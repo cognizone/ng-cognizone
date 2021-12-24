@@ -4,13 +4,11 @@ import { Nil } from '@cognizone/model-utils';
 import { BehaviorSubject, combineLatest, EMPTY, Observable } from 'rxjs';
 import { distinctUntilChanged, map, shareReplay, switchMap } from 'rxjs/operators';
 
-import { ElasticClient, ElasticState, getIndices } from '../../core';
-import { ElasticInfo } from '../models/elastic-info';
-import { ElasticInstanceService } from './elastic-instance-service';
+import { ElasticInfo, ElasticInstanceService, ElasticClient, ElasticState, getIndices } from '../../../core';
 
 @Injectable()
 export class ElasticInstanceHandlerService {
-  state$: Observable<ElasticState>;
+  elasticState$: Observable<ElasticState>;
 
   private _url$: BehaviorSubject<Nil<string>>;
   private _index$: BehaviorSubject<Nil<string>>;
@@ -24,7 +22,7 @@ export class ElasticInstanceHandlerService {
   }
 
   get indices$(): Observable<string[]> {
-    return this.state$.pipe(map(getIndices));
+    return this.elasticState$.pipe(map(getIndices));
   }
 
   get elasticInfo$(): Observable<ElasticInfo> {
@@ -34,7 +32,7 @@ export class ElasticInstanceHandlerService {
   constructor(private elastic: ElasticClient, private elasticInstanceService: ElasticInstanceService) {
     this._url$ = new BehaviorSubject<Nil<string>>(undefined);
     this._index$ = new BehaviorSubject<Nil<string>>(undefined);
-    this.state$ = this.getElasticState();
+    this.elasticState$ = this.getElasticState();
   }
 
   getElasticInfoFromQueryParams({ elasticInfo }: Params): ElasticInfo | undefined {

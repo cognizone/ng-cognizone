@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
-import { ElasticInstance } from '../../models/elastic-instance';
-import { ElasticInstanceService } from '../../services/elastic-instance-service';
+import { ElasticInstance, ElasticInstanceService } from '../../../../core';
 import { ElasticInstanceEditorComponent } from '../elastic-instance-editor/elastic-instance-editor.component';
 
 @Component({

@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
 import { Observable } from 'rxjs';
-import { ElasticInstanceHandlerService } from '../../../elastic-instance';
+import { ElasticInstanceHandlerService } from '../../../../shared-features/elastic-instance';
 import { DataError } from '../../models/data-error';
 import { DataValidationViewService } from '../../services/data-validation-view.service';
 

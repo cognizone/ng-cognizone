@@ -1,13 +1,13 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, OnInit, Optional } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, NgControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { SelectOption } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
+import { ElasticInstanceService } from '../../../../core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { ElasticInstanceHandlerService } from '../../services/elastic-instance-handler.service';
-import { ElasticInstanceService } from '../../services/elastic-instance-service';
 import { ElasticInstanceManagementComponent } from '../elastic-instance-management/elastic-instance-management.component';
 
 @Component({
@@ -27,9 +27,10 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private elasticHandler: ElasticInstanceHandlerService,
     private elasticInstanceService: ElasticInstanceService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    @Optional() private elasticHandler?: ElasticInstanceHandlerService,
+    @Optional() private ngControl?: NgControl
   ) {
     super();
   }
@@ -40,10 +41,12 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
       index: [],
     });
 
-    this.subSink = this.elasticHandler.url$.subscribe(url => this.form.patchValue({ url }, { emitEvent: false }));
-    this.subSink = this.form.controls.url.valueChanges.subscribe(v => this.elasticHandler.setUrl(v));
-    this.subSink = this.elasticHandler.index$.subscribe(index => this.form.patchValue({ index }, { emitEvent: false }));
-    this.subSink = this.form.controls.index.valueChanges.subscribe(v => this.elasticHandler.setIndex(v));
+    if (this.elasticHandler) {
+      this.subSink = this.elasticHandler.url$.subscribe(url => this.form.patchValue({ url }, { emitEvent: false }));
+      this.subSink = this.form.controls.url.valueChanges.subscribe(v => this.elasticHandler?.setUrl(v));
+      this.subSink = this.elasticHandler.index$.subscribe(index => this.form.patchValue({ index }, { emitEvent: false }));
+      this.subSink = this.form.controls.index.valueChanges.subscribe(v => this.elasticHandler?.setIndex(v));
+    }
 
     this.initIndexOptions();
     this.initUrlOptions();

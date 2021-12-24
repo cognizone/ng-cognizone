@@ -10,8 +10,8 @@ import produce from 'immer';
 import { combineLatest, EMPTY, Observable } from 'rxjs';
 import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap, take } from 'rxjs/operators';
 
-import { ElasticClient, ElasticState, getPropertyType } from '../../core';
-import { ElasticInfo, ElasticInstanceHandlerService, ElasticInstanceService } from '../../elastic-instance';
+import { ElasticClient, ElasticState, getPropertyType } from '../../../core';
+import { ElasticInfo, ElasticInstanceHandlerService, ElasticInstanceService } from '../../../shared-features/elastic-instance';
 import { Filters } from '../models/filters';
 import { FullModel } from '../models/full-model';
 import { ViewType } from '../models/view-type';
@@ -153,7 +153,7 @@ export class ElasticExplorerService {
   }
 
   private initFacetFields(): void {
-    const elasticState$ = this.elasticInstanceHandler.state$;
+    const elasticState$ = this.elasticInstanceHandler.elasticState$;
     const index$ = this.getElasticInfo().pipe(selectProp('index'));
     this.facetFields$ = combineLatest([elasticState$, index$]).pipe(
       map(([state, index]) => {
@@ -174,7 +174,7 @@ export class ElasticExplorerService {
       this.filters$,
       this.pagination$,
       this.facetFields$,
-      this.elasticInstanceHandler.state$,
+      this.elasticInstanceHandler.elasticState$,
       this.getElasticInfo(),
     ])
       .pipe(filter(([manualMode]) => !manualMode))

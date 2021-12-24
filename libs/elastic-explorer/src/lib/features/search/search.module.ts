@@ -18,7 +18,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { RouterModule } from '@angular/router';
 import { I18nModule } from '@cognizone/i18n';
 import { AutocompleteModule } from '@cognizone/legi-shared/autocomplete';
 import { CheckboxGroupModule } from '@cognizone/legi-shared/checkbox-group';
@@ -29,7 +28,7 @@ import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 
-import { ElasticInstanceModule } from '../elastic-instance';
+import { ElasticInstanceModule } from '../../shared-features/elastic-instance';
 import { ApDetailsComponent, apDetailsViewProvider } from './components/ap-details/ap-details.component';
 import { AttributeDisplayComponent } from './components/attribute-display/attribute-display.component';
 import { ElasticQueryEditorComponent } from './components/elastic-query-editor/elastic-query-editor.component';
@@ -78,7 +77,6 @@ import { SearchView } from './views/search/search.view';
     // Angular
     CommonModule,
     ReactiveFormsModule,
-    RouterModule,
     // Cognizone
     AutocompleteModule,
     CheckboxGroupModule,

@@ -6,7 +6,7 @@ import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
 import { Observable, combineLatest } from 'rxjs';
 import { FullModel } from '../../models/full-model';
 import { ViewType } from '../../models/view-type';
-import { ElasticInstanceHandlerService } from '../../../elastic-instance';
+import { ElasticInstanceHandlerService } from '../../../../shared-features/elastic-instance';
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
 
 @Component({

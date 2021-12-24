@@ -8,8 +8,8 @@ import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { ElasticClient } from '../../core';
-import { ElasticInstanceHandlerService } from '../../elastic-instance';
+import { ElasticClient } from '../../../core';
+import { ElasticInstanceHandlerService } from '../../../shared-features/elastic-instance';
 import { DataError } from '../models/data-error';
 import { AddErrors, SetElasticQuery, SetErrors } from '../store/data-validation.actions';
 import { DataValidationStateModel, DATA_VALIDATION_STATE_TOKEN } from '../store/data-validation.state';
