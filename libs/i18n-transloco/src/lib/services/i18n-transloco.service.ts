@@ -46,8 +46,12 @@ export class I18nTranslocoService extends I18nService {
     return czLabelToString(value, this.getActiveSimpleLang(), this.getAvailableSimpleLangs()) as unknown as T;
   }
 
-  czLabelToString(value: CzLabel, lang: string = this.getActiveSimpleLang()): string {
-    return czLabelToString(value, lang, this.getAvailableSimpleLangs()) as string;
+  czLabelToString(
+    value: CzLabel,
+    lang: string = this.getActiveSimpleLang(),
+    fallbackLangs: string[] = this.getAvailableSimpleLangs()
+  ): string {
+    return czLabelToString(value, lang, fallbackLangs) as string;
   }
 
   selectTranslate<T = unknown>(key: CzLabel, params?: {}, lang?: string): Observable<T> {

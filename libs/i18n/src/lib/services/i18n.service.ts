@@ -48,7 +48,7 @@ export abstract class I18nService {
    *
    * @returns the extracted string from value, but not processed for translation!
    */
-  abstract czLabelToString(value: CzLabel, lang?: string): string;
+  abstract czLabelToString(value: CzLabel, lang?: string, fallbackLangs?: string[]): string;
 
   /**
    *
