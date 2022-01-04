@@ -1,3 +1,10 @@
+## [2.6.3](https://github.com/cognizone/ng-cognizone/compare/v2.6.2...v2.6.3) (2022-01-04)
+
+
+### Bug Fixes
+
+* **i18n:** added missing fallbackLangs as argument ([6ffabf6](https://github.com/cognizone/ng-cognizone/commit/6ffabf6de60f3c7fbade87d3c1ce5e2144cce015))
+
 ## [2.6.2](https://github.com/cognizone/ng-cognizone/compare/v2.6.1...v2.6.2) (2022-01-04)
 
 

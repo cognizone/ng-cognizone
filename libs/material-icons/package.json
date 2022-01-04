@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/material-icons",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "peerDependencies": {
     "@angular/common": ">=9.1.0",
     "@angular/core": ">=9.1.0",
