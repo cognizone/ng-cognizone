@@ -1,3 +1,10 @@
+## [2.6.2](https://github.com/cognizone/ng-cognizone/compare/v2.6.1...v2.6.2) (2022-01-04)
+
+
+### Bug Fixes
+
+* **model-utils:** remove "first lang found" fallback from czLabelToString ([428a85b](https://github.com/cognizone/ng-cognizone/commit/428a85b219e110cd1ab9a73bcdfca343251029fa))
+
 ## [2.6.1](https://github.com/cognizone/ng-cognizone/compare/v2.6.0...v2.6.1) (2021-12-22)
 
 
