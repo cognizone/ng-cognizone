@@ -38,6 +38,9 @@ export type YasqeOptions = {
   };
 };
 
+/**
+ * @ignore
+ */
 export interface YASGUI {
   (target: HTMLElement, options?: YasguiOptions): Yasgui;
   YASQE: any;

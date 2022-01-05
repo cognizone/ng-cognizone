@@ -19,6 +19,21 @@ jobs:
         run: |
           git config --local user.email "$(git log --format='%ae' HEAD^!)"
           git config --local user.name "$(git log --format='%an' HEAD^!)"
+      - name: Cache node modules global
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
+      - name: Cache node modules local
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules-local
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
+      - run: npm i
       - name: Cache docs node modules
         uses: actions/cache@v2
         env:
@@ -33,5 +48,5 @@ jobs:
           npm run build
       - run: git add ./docs
       - run: git add ./apps/docs
-      - run: git commit -m="[skip ci] deploy docs-app"
+      - run: git commit -m="[skip ci] deploy docs"
       - run: git push
