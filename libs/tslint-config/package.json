@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/tslint-config",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "dependencies": {
     "tslint-config-prettier": "^1.18.0"
   },

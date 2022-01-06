@@ -1,3 +1,10 @@
+## [2.6.4](https://github.com/cognizone/ng-cognizone/compare/v2.6.3...v2.6.4) (2022-01-06)
+
+
+### Bug Fixes
+
+* **model-utils:** add nullish check to manyToArray ([451b1e3](https://github.com/cognizone/ng-cognizone/commit/451b1e3ac0ba953337280bb9e77e769faf3a83e1))
+
 ## [2.6.3](https://github.com/cognizone/ng-cognizone/compare/v2.6.2...v2.6.3) (2022-01-04)
 
 
