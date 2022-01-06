@@ -1,0 +1,3566 @@
+{
+  "types": {
+    "ReferralToConseilGouvernement": {
+      "attributes": {
+        "draftLegislationApprovalDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftLegislationApprovalDate",
+          "attributeId": "draftLegislationApprovalDate"
+        },
+        "draftLegislationApprovalPublishedInLabel": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftLegislationApprovalPublishedInLabel",
+          "attributeId": "draftLegislationApprovalPublishedInLabel"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "draftLegislationInitialInformationPublishedIn": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftLegislationInitialInformationPublishedIn",
+          "attributeId": "draftLegislationInitialInformationPublishedIn"
+        },
+        "referralToConseilGouvernementDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#referralToConseilGouvernementDate",
+          "attributeId": "referralToConseilGouvernementDate"
+        },
+        "draftLegislationApprovalPublishedIn": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftLegislationApprovalPublishedIn",
+          "attributeId": "draftLegislationApprovalPublishedIn"
+        },
+        "draftLegislationInitialInformationPublishedInLabel": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftLegislationInitialInformationPublishedInLabel",
+          "attributeId": "draftLegislationInitialInformationPublishedInLabel"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#ReferralToConseilGouvernement",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["ReferralToConseilGouvernement"]
+    },
+    "SignedTreatyReception": {
+      "attributes": {
+        "signedTreatyReceptionDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#signedTreatyReceptionDate",
+          "attributeId": "signedTreatyReceptionDate"
+        },
+        "signedTreatyCopyReceptionDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#signedTreatyCopyReceptionDate",
+          "attributeId": "signedTreatyCopyReceptionDate"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#SignedTreatyReception",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["SignedTreatyReception"]
+    },
+    "UserFormat": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#UserFormat", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["UserFormat"]
+    },
+    "TreatyAccessionType": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TreatyAccessionType",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatyAccessionType"]
+    },
+    "ExplanatoryMemorandumRequest": {
+      "attributes": {
+        "resumptionOf": {
+          "rules": [
+            {
+              "value": {
+                "value": "ExplanatoryMemorandumRequest",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#resumptionOf",
+          "attributeId": "resumptionOf"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "explanatoryMemorandumReceptionDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#explanatoryMemorandumReceptionDate",
+          "attributeId": "explanatoryMemorandumReceptionDate"
+        },
+        "explanatoryMemorandumRequestTo": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitution",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#explanatoryMemorandumRequestTo",
+          "attributeId": "explanatoryMemorandumRequestTo"
+        },
+        "explanatoryMemorandumRequestDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#explanatoryMemorandumRequestDate",
+          "attributeId": "explanatoryMemorandumRequestDate"
+        },
+        "explanatoryMemorandumRequestFrom": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitution",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#explanatoryMemorandumRequestFrom",
+          "attributeId": "explanatoryMemorandumRequestFrom"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#ExplanatoryMemorandumRequest",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["ExplanatoryMemorandumRequest"]
+    },
+    "LegalInstitutionHistory": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegalInstitutionHistory",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["LegalInstitutionHistory"]
+    },
+    "ExchangeOfNote": {
+      "attributes": {
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "noteDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#noteDate",
+          "attributeId": "noteDate"
+        },
+        "noteTo": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#noteTo",
+          "attributeId": "noteTo"
+        },
+        "noteFrom": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#noteFrom",
+          "attributeId": "noteFrom"
+        },
+        "exchangeOfNoteObservation": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#exchangeOfNoteObservation",
+          "attributeId": "exchangeOfNoteObservation"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#ExchangeOfNote",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["ExchangeOfNote"]
+    },
+    "RatificationRestriction": {
+      "attributes": {
+        "ratificationRestrictionDescription": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#ratificationRestrictionDescription",
+          "attributeId": "ratificationRestrictionDescription"
+        },
+        "ratificationRestrictionId": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#ratificationRestrictionId",
+          "attributeId": "ratificationRestrictionId"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#RatificationRestriction"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["RatificationRestriction"]
+    },
+    "EntryIntoForce": {
+      "attributes": {
+        "entryIntoForceDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#entryIntoForceDate",
+          "attributeId": "entryIntoForceDate"
+        },
+        "entryIntoForceFor": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#entryIntoForceFor",
+          "attributeId": "entryIntoForceFor"
+        },
+        "entryIntoForceBasedOn": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "ExchangeOfNote",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "Instrument",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#entryIntoForceBasedOn",
+          "attributeId": "entryIntoForceBasedOn"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "provisionalApplicationDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#provisionalApplicationDate",
+          "attributeId": "provisionalApplicationDate"
+        },
+        "entryIntoForceRelatedAct": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#entryIntoForceRelatedAct",
+          "attributeId": "entryIntoForceRelatedAct"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#EntryIntoForce",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["EntryIntoForce"]
+    },
+    "InstrumentType": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#InstrumentType", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["InstrumentType"]
+    },
+    "TreatySubjectTheme": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TreatySubjectTheme",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatySubjectTheme"]
+    },
+    "TreatyDocument": {
+      "attributes": {
+        "created": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://purl.org/dc/terms/created",
+          "attributeId": "created"
+        },
+        "isAnnexOfWork": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyDocument",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isAnnexOfWork",
+          "attributeId": "isAnnexOfWork"
+        },
+        "modifies": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyDocument",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#modifies",
+          "attributeId": "modifies"
+        },
+        "workHasAnnex": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyDocument",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#workHasAnnex",
+          "attributeId": "workHasAnnex"
+        },
+        "isRealizedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Expression",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "modifiedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyDocument",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#modifiedBy",
+          "attributeId": "modifiedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "ResourceType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TreatyDocument",
+            "http://data.legilux.public.lu/resource/ontology/jolux#WorkAtOj",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegalResource"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatyDocument"]
+    },
+    "TaskForTreaty": {
+      "attributes": {
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TaskForTreaty"]
+    },
+    "NationalLegalResource": {
+      "attributes": {
+        "isRealizedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Expression",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "ResourceType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work",
+            "http://data.legilux.public.lu/resource/ontology/jolux#WorkAtOj",
+            "http://data.legilux.public.lu/resource/ontology/jolux#NationalLegalResource",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegalResource"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["NationalLegalResource"]
+    },
+    "Notification": {
+      "attributes": {
+        "notificationDepositary": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#notificationDepositary",
+          "attributeId": "notificationDepositary"
+        },
+        "toBePublishedInTheOj": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#toBePublishedInTheOj",
+          "attributeId": "toBePublishedInTheOj"
+        },
+        "treatyPartyReservationAndDeclaration": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPartyReservationAndDeclaration",
+          "attributeId": "treatyPartyReservationAndDeclaration"
+        },
+        "treatyPartyAccessionType": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyAccessionType",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPartyAccessionType",
+          "attributeId": "treatyPartyAccessionType"
+        },
+        "notificationType": {
+          "rules": [
+            {
+              "value": {
+                "value": "NotificationType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#notificationType",
+          "attributeId": "notificationType"
+        },
+        "notificationFrom": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#notificationFrom",
+          "attributeId": "notificationFrom"
+        },
+        "notificationScope": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#notificationScope",
+          "attributeId": "notificationScope"
+        },
+        "ratificationRestriction": {
+          "rules": [
+            {
+              "value": {
+                "value": "RatificationRestriction",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#ratificationRestriction",
+          "attributeId": "ratificationRestriction"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "treatyPerimeterComment": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPerimeterComment",
+          "attributeId": "treatyPerimeterComment"
+        },
+        "notificationEntryIntoForceDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#notificationEntryIntoForceDate",
+          "attributeId": "notificationEntryIntoForceDate"
+        },
+        "notificationComment": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#notificationComment",
+          "attributeId": "notificationComment"
+        },
+        "treatyPartyObjection": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPartyObjection",
+          "attributeId": "treatyPartyObjection"
+        },
+        "notificationDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#notificationDate",
+          "attributeId": "notificationDate"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Notification"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Notification"]
+    },
+    "Remark": {
+      "attributes": {
+        "creator": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://purl.org/dc/terms/creator",
+          "attributeId": "creator"
+        },
+        "created": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#created",
+          "attributeId": "created"
+        },
+        "remarkText": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#remarkText",
+          "attributeId": "remarkText"
+        },
+        "remarkCreatorPersonOrganisation": {
+          "rules": [
+            {
+              "value": {
+                "value": "Membership",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#remarkCreatorPersonOrganisation",
+          "attributeId": "remarkCreatorPersonOrganisation"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Remark"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Remark"]
+    },
+    "TreatyRatification": {
+      "attributes": {
+        "treatyPartyRatificationDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPartyRatificationDate",
+          "attributeId": "treatyPartyRatificationDate"
+        },
+        "treatyRatificationParty": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyRatificationParty",
+          "attributeId": "treatyRatificationParty"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "hasExchangeNote": {
+          "rules": [
+            {
+              "value": {
+                "value": "ExchangeOfNote",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasExchangeNote",
+          "attributeId": "hasExchangeNote"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TreatyRatification"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatyRatification"]
+    },
+    "Language": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Language", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Language"]
+    },
+    "Registration": {
+      "attributes": {
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "depositary": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#depositary",
+          "attributeId": "depositary"
+        },
+        "registrationDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#registrationDate",
+          "attributeId": "registrationDate"
+        },
+        "registrationId": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#registrationId",
+          "attributeId": "registrationId"
+        },
+        "registrationTo": {
+          "rules": [
+            {
+              "value": {
+                "value": "InternationalActor",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#registrationTo",
+          "attributeId": "registrationTo"
+        },
+        "registrationBy": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#registrationBy",
+          "attributeId": "registrationBy"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Registration",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Registration"]
+    },
+    "EULegalResource": {
+      "attributes": {
+        "legalResourceIsPartOfMemorialLabel": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#legalResourceIsPartOfMemorialLabel",
+          "attributeId": "legalResourceIsPartOfMemorialLabel"
+        },
+        "workIdDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#workIdDocument",
+          "attributeId": "workIdDocument"
+        },
+        "isRealizedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Expression",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "ResourceType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#EULegalResource",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work",
+            "http://data.legilux.public.lu/resource/ontology/jolux#WorkAtOj",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegalResource"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["EULegalResource"]
+    },
+    "Work": {
+      "attributes": {
+        "isRealizedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Expression",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "ResourceType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Work"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Work"]
+    },
+    "Membership": {
+      "attributes": {
+        "hasMember": {
+          "rules": [
+            {
+              "value": {
+                "value": "Person",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasMember",
+          "attributeId": "hasMember"
+        },
+        "organization": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitution",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#organization",
+          "attributeId": "organization"
+        },
+        "ministry": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitutionHistory",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#ministry",
+          "attributeId": "ministry"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Membership"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Membership"]
+    },
+    "LegalInstitution": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegalInstitution",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["LegalInstitution"]
+    },
+    "WorkAtOj": {
+      "attributes": {
+        "isRealizedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Expression",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "ResourceType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work",
+            "http://data.legilux.public.lu/resource/ontology/jolux#WorkAtOj"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["WorkAtOj"]
+    },
+    "Initiation": {
+      "attributes": {
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "factor": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "EULegalResource",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "TreatyProcess",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#factor",
+          "attributeId": "factor"
+        },
+        "eventOrder": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#int",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 0,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventOrder",
+          "attributeId": "eventOrder"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Initiation",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Initiation"]
+    },
+    "FullPowersDelivery": {
+      "attributes": {
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#FullPowersDelivery"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["FullPowersDelivery"]
+    },
+    "Concept": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Concept"]
+    },
+    "Manifestation": {
+      "attributes": {
+        "uploadBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#uploadBy",
+          "attributeId": "uploadBy"
+        },
+        "fileName": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#fileName",
+          "attributeId": "fileName"
+        },
+        "userFormat": {
+          "rules": [
+            {
+              "value": {
+                "value": "UserFormat",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#userFormat",
+          "attributeId": "userFormat"
+        },
+        "uploadDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "xsd:dateTime",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#uploadDate",
+          "attributeId": "uploadDate"
+        },
+        "isExemplifiedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isExemplifiedBy",
+          "attributeId": "isExemplifiedBy"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Manifestation"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Manifestation"]
+    },
+    "TreatyNegociation": {
+      "attributes": {
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TreatyNegociation",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatyNegociation"]
+    },
+    "ResourceType": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#ResourceType", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["ResourceType"]
+    },
+    "PartyConditionToTreaty": {
+      "attributes": {
+        "hasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "partyConditionObjection": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyConditionObjection",
+          "attributeId": "partyConditionObjection"
+        },
+        "partyConditionAccessionType": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyAccessionType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyConditionAccessionType",
+          "attributeId": "partyConditionAccessionType"
+        },
+        "partyConditionReservationAndDeclaration": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyConditionReservationAndDeclaration",
+          "attributeId": "partyConditionReservationAndDeclaration"
+        },
+        "partyConditionToBePublishedInTheOj": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyConditionToBePublishedInTheOj",
+          "attributeId": "partyConditionToBePublishedInTheOj"
+        },
+        "partyConditionComment": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyConditionComment",
+          "attributeId": "partyConditionComment"
+        },
+        "partyConditionHasRatificationRestriction": {
+          "rules": [
+            {
+              "value": {
+                "value": "RatificationRestriction",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyConditionHasRatificationRestriction",
+          "attributeId": "partyConditionHasRatificationRestriction"
+        },
+        "partyConditionOfParty": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyConditionOfParty",
+          "attributeId": "partyConditionOfParty"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#PartyConditionToTreaty"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["PartyConditionToTreaty"]
+    },
+    "LegalTaxonomy": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#LegalTaxonomy", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["LegalTaxonomy"]
+    },
+    "FullPowersSignature": {
+      "attributes": {
+        "fullPowersSignatureBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitution",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#fullPowersSignatureBy",
+          "attributeId": "fullPowersSignatureBy"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#FullPowersSignature"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["FullPowersSignature"]
+    },
+    "TreatyProcess": {
+      "attributes": {
+        "treatyProcessHasResultingTreatyDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyDocument",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyProcessHasResultingTreatyDocument",
+          "attributeId": "treatyProcessHasResultingTreatyDocument"
+        },
+        "hasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "confidentialTreaty": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#confidentialTreaty",
+          "attributeId": "confidentialTreaty"
+        },
+        "treatyLegalResourceForOtherParty": {
+          "rules": [
+            {
+              "value": {
+                "value": "EULegalResource",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyLegalResourceForOtherParty",
+          "attributeId": "treatyLegalResourceForOtherParty"
+        },
+        "firstEntryIntoForceDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#firstEntryIntoForceDate",
+          "attributeId": "firstEntryIntoForceDate"
+        },
+        "treatyProcessHasPartyCondition": {
+          "rules": [
+            {
+              "value": {
+                "value": "PartyConditionToTreaty",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyProcessHasPartyCondition",
+          "attributeId": "treatyProcessHasPartyCondition"
+        },
+        "treatyCommentAboutValidity": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyCommentAboutValidity",
+          "attributeId": "treatyCommentAboutValidity"
+        },
+        "treatyDepositary": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "LegalInstitution",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyDepositary",
+          "attributeId": "treatyDepositary"
+        },
+        "institutionInChargeOfTheTreatyLevel2": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitution",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTreatyLevel2",
+          "attributeId": "institutionInChargeOfTheTreatyLevel2"
+        },
+        "treatyComment": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyComment",
+          "attributeId": "treatyComment"
+        },
+        "needForRatification": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#needForRatification",
+          "attributeId": "needForRatification"
+        },
+        "eventOrder": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 0,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventOrder",
+          "attributeId": "eventOrder"
+        },
+        "treatySignatureDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatySignatureDate",
+          "attributeId": "treatySignatureDate"
+        },
+        "treatyNotificationPublishedIn": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyNotificationPublishedIn",
+          "attributeId": "treatyNotificationPublishedIn"
+        },
+        "treatyProcessIdentificationInCms": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyProcessIdentificationInCms",
+          "attributeId": "treatyProcessIdentificationInCms"
+        },
+        "treatySignaturePlace": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatySignaturePlace",
+          "attributeId": "treatySignaturePlace"
+        },
+        "treatyBasedOnTreaty": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyProcess",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyBasedOnTreaty",
+          "attributeId": "treatyBasedOnTreaty"
+        },
+        "euConventionDomain": {
+          "rules": [
+            {
+              "value": {
+                "value": "EUTextSubjectTheme",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euConventionDomain",
+          "attributeId": "euConventionDomain"
+        },
+        "treatyExpirationDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyExpirationDate",
+          "attributeId": "treatyExpirationDate"
+        },
+        "treatyBasisForTreaty": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyProcess",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyBasisForTreaty",
+          "attributeId": "treatyBasisForTreaty"
+        },
+        "exportFlag": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#exportFlag",
+          "attributeId": "exportFlag"
+        },
+        "treatyIdForNationalArchives": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyIdForNationalArchives",
+          "attributeId": "treatyIdForNationalArchives"
+        },
+        "classifiedByTaxonomyEntry": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalTaxonomy",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#classifiedByTaxonomyEntry",
+          "attributeId": "classifiedByTaxonomyEntry"
+        },
+        "treatyDateNoLongerInForceForOurCountry": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyDateNoLongerInForceForOurCountry",
+          "attributeId": "treatyDateNoLongerInForceForOurCountry"
+        },
+        "producedIn": {
+          "rules": [
+            {
+              "value": {
+                "value": "Initiation",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#producedIn",
+          "attributeId": "producedIn"
+        },
+        "treatyInForceStatusForOurCountry": {
+          "rules": [
+            {
+              "value": {
+                "value": "InforcementStatus",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyInForceStatusForOurCountry",
+          "attributeId": "treatyInForceStatusForOurCountry"
+        },
+        "institutionInChargeOfTheTreaty": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitution",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTreaty",
+          "attributeId": "institutionInChargeOfTheTreaty"
+        },
+        "treatyConsolidatedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Consolidation",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyConsolidatedBy",
+          "attributeId": "treatyConsolidatedBy"
+        },
+        "needForOfficialPublication": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#needForOfficialPublication",
+          "attributeId": "needForOfficialPublication"
+        },
+        "treatyOtherPublicationReference": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/joswiss#treatyOtherPublicationReference",
+          "attributeId": "treatyOtherPublicationReference"
+        },
+        "treatyReferendumDeadlineDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyReferendumDeadlineDate",
+          "attributeId": "treatyReferendumDeadlineDate"
+        },
+        "treatySubject": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatySubjectTheme",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatySubject",
+          "attributeId": "treatySubject"
+        },
+        "bilateral": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#boolean",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#bilateral",
+          "attributeId": "bilateral"
+        },
+        "treatyLimitDateForSignature": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyLimitDateForSignature",
+          "attributeId": "treatyLimitDateForSignature"
+        },
+        "treatyInForceDateForOurCountry": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyInForceDateForOurCountry",
+          "attributeId": "treatyInForceDateForOurCountry"
+        },
+        "treatyProcessHasTaskDraft": {
+          "rules": [
+            {
+              "value": {
+                "value": "Draft",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyProcessHasTaskDraft",
+          "attributeId": "treatyProcessHasTaskDraft"
+        },
+        "treatyHasRatificationRestriction": {
+          "rules": [
+            {
+              "value": {
+                "value": "RatificationRestriction",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyHasRatificationRestriction",
+          "attributeId": "treatyHasRatificationRestriction"
+        },
+        "treatyNotificationPublishedInLabel": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyNotificationPublishedInLabel",
+          "attributeId": "treatyNotificationPublishedInLabel"
+        },
+        "treatyUnderUmbrellaOf": {
+          "rules": [
+            {
+              "value": {
+                "value": "InternationalActor",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyUnderUmbrellaOf",
+          "attributeId": "treatyUnderUmbrellaOf"
+        },
+        "treatyProcessHasTask": {
+          "rules": [
+            {
+              "value": {
+                "value": "TaskForTreaty",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyProcessHasTask",
+          "attributeId": "treatyProcessHasTask"
+        },
+        "treatyLimitDateForSignatureComment": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyLimitDateForSignatureComment",
+          "attributeId": "treatyLimitDateForSignatureComment"
+        },
+        "institutionInChargeOfTheTreatyLevel2Label": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTreatyLevel2Label",
+          "attributeId": "institutionInChargeOfTheTreatyLevel2Label"
+        },
+        "treatyType": {
+          "rules": [
+            {
+              "value": {
+                "value": "TreatyType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyType",
+          "attributeId": "treatyType"
+        },
+        "treatyId": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyId",
+          "attributeId": "treatyId"
+        },
+        "treatyPartyCountry": {
+          "rules": [
+            {
+              "value": {
+                "value": "Country",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPartyCountry",
+          "attributeId": "treatyPartyCountry"
+        },
+        "approbationActLabel": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#approbationActLabel",
+          "attributeId": "approbationActLabel"
+        },
+        "titleTreaty": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#titleTreaty",
+          "attributeId": "titleTreaty"
+        },
+        "treatyPartyOrganisation": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "LegalInstitution",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPartyOrganisation",
+          "attributeId": "treatyPartyOrganisation"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "approbationAct": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#approbationAct",
+          "attributeId": "approbationAct"
+        },
+        "treatyAppliesEULegalResource": {
+          "rules": [
+            {
+              "value": {
+                "value": "EULegalResource",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyAppliesEULegalResource",
+          "attributeId": "treatyAppliesEULegalResource"
+        },
+        "treatyRelatedLegalResource": {
+          "rules": [
+            {
+              "value": {
+                "value": "NationalLegalResource",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyRelatedLegalResource",
+          "attributeId": "treatyRelatedLegalResource"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TreatyProcess",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatyProcess"]
+    },
+    "InforcementStatus": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#InforcementStatus"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["InforcementStatus"]
+    },
+    "TreatyType": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#TreatyType", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatyType"]
+    },
+    "TreatySignature": {
+      "attributes": {
+        "treatySignatureDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatySignatureDate",
+          "attributeId": "treatySignatureDate"
+        },
+        "treatyRatificationDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyRatificationDate",
+          "attributeId": "treatyRatificationDate"
+        },
+        "languageLabel": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#languageLabel",
+          "attributeId": "languageLabel"
+        },
+        "treatyPartySignatureDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyPartySignatureDate",
+          "attributeId": "treatyPartySignatureDate"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "treatySignaturePlace": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatySignaturePlace",
+          "attributeId": "treatySignaturePlace"
+        },
+        "treatyComment": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatyComment",
+          "attributeId": "treatyComment"
+        },
+        "language": {
+          "rules": [
+            {
+              "value": {
+                "value": "Language",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#language",
+          "attributeId": "language"
+        },
+        "treatySignatureParty": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  {
+                    "value": "Country",
+                    "name": "classId"
+                  },
+                  {
+                    "value": "InternationalActor",
+                    "name": "classId"
+                  }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#treatySignatureParty",
+          "attributeId": "treatySignatureParty"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TreatySignature",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TreatySignature"]
+    },
+    "EUTextSubjectTheme": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#EUTextSubjectTheme",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["EUTextSubjectTheme"]
+    },
+    "Expression": {
+      "attributes": {
+        "isEmbodiedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Manifestation",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isEmbodiedBy",
+          "attributeId": "isEmbodiedBy"
+        },
+        "language": {
+          "rules": [
+            {
+              "value": {
+                "value": "Language",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#language",
+          "attributeId": "language"
+        },
+        "title": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#title",
+          "attributeId": "title"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Expression"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Expression"]
+    },
+    "NotificationType": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#NotificationType",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["NotificationType"]
+    },
+    "Instrument": {
+      "attributes": {
+        "instrumentSignatureDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#instrumentSignatureDate",
+          "attributeId": "instrumentSignatureDate"
+        },
+        "instrumentType": {
+          "rules": [
+            {
+              "value": {
+                "value": "InstrumentType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#instrumentType",
+          "attributeId": "instrumentType"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "signedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "LegalInstitution",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#signedBy",
+          "attributeId": "signedBy"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Instrument",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Instrument"]
+    },
+    "Country": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Country", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Country"]
+    },
+    "Event": {
+      "attributes": {
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        }
+      },
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Event"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Event"]
+    },
+    "TransmissionOfSignedInstrument": {
+      "attributes": {
+        "reservationAndDeclaration": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#reservationAndDeclaration",
+          "attributeId": "reservationAndDeclaration"
+        },
+        "eventHasRemark": {
+          "rules": [
+            {
+              "value": {
+                "value": "Remark",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasRemark",
+          "attributeId": "eventHasRemark"
+        },
+        "relatedInstrument": {
+          "rules": [
+            {
+              "value": {
+                "value": "Instrument",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#relatedInstrument",
+          "attributeId": "relatedInstrument"
+        },
+        "signedInstrumentTransmissionTo": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#signedInstrumentTransmissionTo",
+          "attributeId": "signedInstrumentTransmissionTo"
+        },
+        "signedInstrumentTransmissionDate": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#date",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#signedInstrumentTransmissionDate",
+          "attributeId": "signedInstrumentTransmissionDate"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TransmissionOfSignedInstrument",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskForTreaty",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["TransmissionOfSignedInstrument"]
+    },
+    "Person": {
+      "attributes": {},
+      "rules": [
+        {
+          "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Person", "http://www.w3.org/2004/02/skos/core#Concept"],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["Person"]
+    },
+    "InternationalActor": {
+      "attributes": {
+        "partyOrganisationOfTreaty": {
+          "rules": [
+            {
+              "value": {
+                "value": "Initiation",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#partyOrganisationOfTreaty",
+          "attributeId": "partyOrganisationOfTreaty"
+        },
+        "legalBase": {
+          "rules": [
+            {
+              "value": {
+                "value": "http://www.w3.org/2001/XMLSchema#string",
+                "name": "datatype"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#legalBase",
+          "attributeId": "legalBase"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#InternationalActor",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["InternationalActor"]
+    },
+    "LegalResource": {
+      "attributes": {
+        "isRealizedBy": {
+          "rules": [
+            {
+              "value": {
+                "value": "Expression",
+                "name": "classId"
+              },
+              "name": "range"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            {
+              "value": {
+                "value": "ResourceType",
+                "name": "classId"
+              },
+              "name": "range"
+            },
+            {
+              "value": 1,
+              "name": "minCardinality"
+            },
+            {
+              "value": 1,
+              "name": "maxCardinality"
+            }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        }
+      },
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work",
+            "http://data.legilux.public.lu/resource/ontology/jolux#WorkAtOj",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegalResource"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "classIds": ["LegalResource"]
+    }
+  },
+  "uri": "http://data.legilux.public.lu/resource/ontology/jolux#"
+}
