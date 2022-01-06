@@ -4,11 +4,10 @@
 export type Many<T> = T | T[];
 
 /**
- * Convert a {@link Many} to an array. Beware that it is not checking for
- * nullish values, so you could end up with `[undefined]`.
+ * Convert a {@link Many} to an array. It gives an empty array if the given value is nullish.
  */
 export function manyToArray<T>(x: Many<T>): T[] {
-  return Array.isArray(x) ? x : [x];
+  return x == null ? [] : Array.isArray(x) ? x : [x];
 }
 
 /**
