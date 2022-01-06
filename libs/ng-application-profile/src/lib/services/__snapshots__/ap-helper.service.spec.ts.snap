@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApHelper should get EUDossier type 1`] = `
+Object {
+  "attributes": Object {
+    "contentsEvent": Object {
+      "attributeId": "contentsEvent",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EUEventLegal",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierContentsEvent",
+    },
+    "euDossierProducesResourceLegal": Object {
+      "attributeId": "euDossierProducesResourceLegal",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EULegalResource",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierProducesResourceLegal",
+    },
+    "euDossierResponsibilityOfAgent": Object {
+      "attributeId": "euDossierResponsibilityOfAgent",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EULegalInstitution",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierResponsibilityOfAgent",
+    },
+    "eventRiskLevel": Object {
+      "attributeId": "eventRiskLevel",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          },
+        },
+        Object {
+          "name": "maxCardinality",
+          "value": 1,
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventRiskLevel",
+    },
+    "hasDocument": Object {
+      "attributeId": "hasDocument",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "Document",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasDocument",
+    },
+    "hasEventRemark": Object {
+      "attributeId": "hasEventRemark",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "Remark",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasEventRemark",
+    },
+    "identifier": Object {
+      "attributeId": "identifier",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/2001/XMLSchema#string",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierIdentifier",
+    },
+    "initiatedByActPreparatory": Object {
+      "attributeId": "initiatedByActPreparatory",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EUPreparatoryAct",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierInitiatedByActPreparatory",
+    },
+    "initiatesTransposition": Object {
+      "attributeId": "initiatesTransposition",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "Transposition",
+          },
+        },
+        Object {
+          "name": "minCardinality",
+          "value": 1,
+        },
+        Object {
+          "name": "maxCardinality",
+          "value": 1,
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierInitiatesTransposition",
+    },
+    "isAboutConceptTypeDossier": Object {
+      "attributeId": "isAboutConceptTypeDossier",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EUDossierType",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierIsAboutConceptTypeDossier",
+    },
+    "relatedToToDo": Object {
+      "attributeId": "relatedToToDo",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventRelatedToToDo",
+    },
+    "title": Object {
+      "attributeId": "title",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          },
+        },
+        Object {
+          "name": "minCardinality",
+          "value": 1,
+        },
+        Object {
+          "name": "maxCardinality",
+          "value": 1,
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierTitle",
+    },
+  },
+  "classIds": Array [
+    "EUDossier",
+  ],
+  "rules": Array [
+    Object {
+      "name": "rdfTypes",
+      "value": Array [
+        "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+        "http://data.legilux.public.lu/resource/ontology/jolux#EUDossier",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`ApHelper should get Event type 1`] = `
+Object {
+  "attributes": Object {
+    "contentsEvent": Object {
+      "attributeId": "contentsEvent",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EUEventLegal",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierContentsEvent",
+    },
+    "euDossierProducesResourceLegal": Object {
+      "attributeId": "euDossierProducesResourceLegal",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EULegalResource",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierProducesResourceLegal",
+    },
+    "euDossierResponsibilityOfAgent": Object {
+      "attributeId": "euDossierResponsibilityOfAgent",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EULegalInstitution",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierResponsibilityOfAgent",
+    },
+    "eventRiskLevel": Object {
+      "attributeId": "eventRiskLevel",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          },
+        },
+        Object {
+          "name": "maxCardinality",
+          "value": 1,
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventRiskLevel",
+    },
+    "hasDocument": Object {
+      "attributeId": "hasDocument",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "Document",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasDocument",
+    },
+    "hasEventRemark": Object {
+      "attributeId": "hasEventRemark",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "Remark",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventHasEventRemark",
+    },
+    "identifier": Object {
+      "attributeId": "identifier",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/2001/XMLSchema#string",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierIdentifier",
+    },
+    "initiatedByActPreparatory": Object {
+      "attributeId": "initiatedByActPreparatory",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EUPreparatoryAct",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierInitiatedByActPreparatory",
+    },
+    "initiatesTransposition": Object {
+      "attributeId": "initiatesTransposition",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "Transposition",
+          },
+        },
+        Object {
+          "name": "minCardinality",
+          "value": 1,
+        },
+        Object {
+          "name": "maxCardinality",
+          "value": 1,
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierInitiatesTransposition",
+    },
+    "isAboutConceptTypeDossier": Object {
+      "attributeId": "isAboutConceptTypeDossier",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "classId",
+            "value": "EUDossierType",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierIsAboutConceptTypeDossier",
+    },
+    "relatedToToDo": Object {
+      "attributeId": "relatedToToDo",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          },
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventRelatedToToDo",
+    },
+    "title": Object {
+      "attributeId": "title",
+      "rules": Array [
+        Object {
+          "name": "range",
+          "value": Object {
+            "name": "datatype",
+            "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          },
+        },
+        Object {
+          "name": "minCardinality",
+          "value": 1,
+        },
+        Object {
+          "name": "maxCardinality",
+          "value": 1,
+        },
+      ],
+      "uri": "http://data.legilux.public.lu/resource/ontology/jolux#euDossierTitle",
+    },
+  },
+  "classIds": Array [
+    "EUDossier",
+  ],
+  "rules": Array [
+    Object {
+      "name": "rdfTypes",
+      "value": Array [
+        "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+        "http://data.legilux.public.lu/resource/ontology/jolux#EUDossier",
+      ],
+    },
+  ],
+}
+`;
