@@ -52,31 +52,3 @@ export interface ElasticBucket {
   key_as_string?: string;
   doc_count: number;
 }
-
-/**
- * Return a transformed {@link ElasticResponse} where all `_source` are transformed using the given `project` function
- *
- * @param response The json returned by a _search elastic call
- * @param project The projection function
- */
-export function mapElasticSources<T, U>(response: ElasticSearchResponse<T>, project: (data: T) => U): ElasticSearchResponse<U> {
-  return { ...response, hits: { ...response.hits, hits: response.hits.hits.map(hit => ({ ...hit, _source: project(hit._source) })) } };
-}
-
-/**
- * Aggregate all `_source` in all `hits` of an {@link ElasticResponse} in a single array
- *
- * @param response The json returned by a _search elastic call
- */
-export function extractSourcesFromElasticResponse<T>(response: ElasticSearchResponse<T>): T[] {
-  return response.hits.hits.map(hit => hit._source);
-}
-
-/**
- * Extract the first `_source` of the first `hits` of an {@link ElasticResponse}
- *
- * @param response The json returned by a _search elastic call
- */
-export function extractOneSourceFromElasticResponse<T>(response: ElasticSearchResponse<T>): T {
-  return extractSourcesFromElasticResponse(response)[0];
-}

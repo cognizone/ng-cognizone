@@ -1,0 +1,590 @@
+{
+  "took": 15,
+  "timed_out": false,
+  "_shards": { "total": 17, "successful": 17, "skipped": 0, "failed": 0 },
+  "hits": {
+    "total": { "value": 100, "relation": "eq" },
+    "max_score": 18.942982,
+    "hits": [
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10027",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10027",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "deprecated": { "xsd:boolean": true },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": [
+                    "Verordnung vom 16. August 1978 betreffend eine Erhebung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge"
+                  ],
+                  "it": [
+                    "Ordinanza del 16 agosto 1978 per un'indagine sulle istituzioni di previdenza professionale vecchiaia, superstiti e invalidità"
+                  ],
+                  "fr": [
+                    "Ordonnance du 16 août 1978 prescrivant une enquête sur les institutions de prévoyance professionnelle, vieillesse, survivants et invalidité"
+                  ]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.135.2" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/DEPRECATED" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "2008-01-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Verordnung vom 16. August 1978 betreffend eine Erhebung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Ordonnance du 16 août 1978 prescrivant une enquête sur les institutions de prévoyance professionnelle, vieillesse, survivants et invalidité",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Ordinanza del 16 agosto 1978 per un'indagine sulle istituzioni di previdenza professionale vecchiaia, superstiti e invalidità"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/1978/1278_1278_1278"
+            },
+            "classifies": ["https://fedlex.data.admin.ch/eli/cc/1978/1278_1278_1278"]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10028",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10028",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "deprecated": { "xsd:boolean": true },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": [
+                    "Bundesratsbeschluss vom 28. September 1969 betreffend eine Übergangsregelung bei Kürzungen von Renten gemäss Artikel 48 des Bundesgesetzes über die Alters- und Hinterlassenenversicherung"
+                  ],
+                  "it": [
+                    "Decreto del Consiglio federale del 28 settembre 1969 concernente un regime transitorio secondo l'articolo 48 della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+                  ],
+                  "fr": [
+                    "Arrêté du Conseil fédéral du 28 septembre 1969 concernant un régime transitoire lors de la réduction de rentes selon l'article 48 de la loi fédérale sur l'assurance-vieillesse et survivants"
+                  ]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.135.7" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/DEPRECATED" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "1973-01-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Bundesratsbeschluss vom 28. September 1969 betreffend eine Übergangsregelung bei Kürzungen von Renten gemäss Artikel 48 des Bundesgesetzes über die Alters- und Hinterlassenenversicherung",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Arrêté du Conseil fédéral du 28 septembre 1969 concernant un régime transitoire lors de la réduction de rentes selon l'article 48 de la loi fédérale sur l'assurance-vieillesse et survivants",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Decreto del Consiglio federale del 28 settembre 1969 concernente un regime transitorio secondo l'articolo 48 della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/1969/969_993_991"
+            },
+            "classifies": ["https://fedlex.data.admin.ch/eli/cc/1969/969_993_991"]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10029",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10029",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "deprecated": { "xsd:boolean": true },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": [
+                    "Verfügung des Eidgenössischen Departements des Innern vom 19. Februar 1960 über Errichtung und Umwandlung von Ausgleichskassen in der Alters- und Hinterlassenenversicherung"
+                  ],
+                  "it": [
+                    "Ordinanza del Dipartimento federale dell'interno del 19 febbraio 1960 concernente la costituzione e la trasformazione di casse di compensazione dell'assicirazione per la vecchiaia e i superstiti"
+                  ],
+                  "fr": [
+                    "Ordonnance du départemetn fédéral de l'intérieur du 19 février 1960 concernant la création ou la transformation de caisses de compensation de l'assurance-vieillesse et survivants"
+                  ]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.143.11" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/DEPRECATED" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "1979-01-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Verfügung des Eidgenössischen Departements des Innern vom 19. Februar 1960 über Errichtung und Umwandlung von Ausgleichskassen in der Alters- und Hinterlassenenversicherung",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Ordonnance du départemetn fédéral de l'intérieur du 19 février 1960 concernant la création ou la transformation de caisses de compensation de l'assurance-vieillesse et survivants",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Ordinanza del Dipartimento federale dell'interno del 19 febbraio 1960 concernente la costituzione e la trasformazione di casse di compensazione dell'assicirazione per la vecchiaia e i superstiti"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/1960/282_296_290"
+            },
+            "classifies": ["https://fedlex.data.admin.ch/eli/cc/1960/282_296_290"]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F1003",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1003",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/900",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/901",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/815",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/906"
+                ]
+              },
+              "deprecated": { "xsd:boolean": false },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": ["Meistbegünstigungsklausel zwischen der Schweiz und Uruguay"],
+                  "it": ["Clausola della nazione più favorita tra la Svizzera e l'Uruguay"],
+                  "fr": ["Clause de la nation la plus favorisée entre la Suisse et l'Uruguay"]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "0.230.977.6" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/906" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/CURRENT" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "references": [{ "taxonomyId": "0.975.277.6", "comment": { "de": "Art. 1, 3", "it": "art. 1, 3", "fr": "art. 1, 3" } }]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10030",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10030",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "subject": { "rdfs:Resource": ["https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/33144"] },
+              "deprecated": { "xsd:boolean": false },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": ["Reglement vom 11. Oktober 1972 für das Schiedsgericht der Eidgenössischen AHV/IV-Kommission"],
+                  "it": [
+                    "Regolamento dell'11 ottobre 1972 del Tribunale arbitrale della Commissione federale dell'assicurazione per la vecchiaia, i superstiti e l'invalidità"
+                  ],
+                  "fr": ["Règlement du Tribunal arbitral de la Commission fédérale de l'AVS/AI, du 11 octobre 1972"]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.143.15" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/CURRENT" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "9999-01-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Reglement vom 11. Oktober 1972 für das Schiedsgericht der Eidgenössischen AHV/IV-Kommission",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Règlement du Tribunal arbitral de la Commission fédérale de l'AVS/AI, du 11 octobre 1972",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Regolamento dell'11 ottobre 1972 del Tribunale arbitrale della Commissione federale dell'assicurazione per la vecchiaia, i superstiti e l'invalidità"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/1972/2530_2582_2361"
+            },
+            "classifies": ["https://fedlex.data.admin.ch/eli/cc/1972/2530_2582_2361"]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10031",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10031",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "deprecated": { "xsd:boolean": true },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": ["Verordnung vom 7. Mai 1991 über die Eidgenössische Ausgleichskasse (EAK-Verordnung)"],
+                  "it": ["Ordinanza del 7 maggio 1991 sulla Cassa federale di compensazione (Ordinanza CFC)"],
+                  "fr": ["Ordonnance du 7 mai 1991 concernant la Caisse fédérale de compensation (Ordonnance CFC)"]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.143.31" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/DEPRECATED" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "1999-10-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Verordnung vom 7. Mai 1991 über die Eidgenössische Ausgleichskasse (EAK-Verordnung)",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Ordonnance du 7 mai 1991 concernant la Caisse fédérale de compensation (Ordonnance CFC)",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Ordinanza del 7 maggio 1991 sulla Cassa federale di compensazione (Ordinanza CFC)"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/1991/1156_1156_1156"
+            },
+            "classifies": ["https://fedlex.data.admin.ch/eli/cc/1991/1156_1156_1156"]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10032",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10032",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "subject": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/30336",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/38146",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/38148",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/38147",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/29076",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/43409",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/38149",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/29469",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/38150"
+                ]
+              },
+              "deprecated": { "xsd:boolean": false },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": ["Verordnung des EFD vom 3. Dezember 2008 über die Zentrale Ausgleichsstelle (ZAS-Verordnung)"],
+                  "it": ["Ordinanza del DFF del 3 dicembre 2008 sull'Ufficio centrale di compensazione (Ordinanza UCC)"],
+                  "fr": ["Ordonnance du DFF du 3 décembre 2008 sur la Centrale de compensation (Ordonnance sur la CdC)"]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.143.32" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/CURRENT" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "9999-01-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Verordnung des EFD <bd>vom 3. Dezember 2008</bd> über die Zentrale Ausgleichsstelle (ZAS-Verordnung)",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Ordonnance du DFF <bd>du 3 décembre 2008</bd> sur la Centrale de compensation (Ordonnance sur la CdC)",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Ordinanza del DFF <bd>del 3 dicembre 2008</bd> sull'Ufficio centrale di compensazione (Ordinanza UCC)"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/2008/883"
+            },
+            "classifies": [
+              "https://fedlex.data.admin.ch/eli/cc/1987/1340_1340_1340",
+              "https://fedlex.data.admin.ch/eli/cc/1999/444",
+              "https://fedlex.data.admin.ch/eli/cc/2008/883",
+              "https://fedlex.data.admin.ch/eli/cc/1994/2170_2170_2170",
+              "https://fedlex.data.admin.ch/eli/cc/1951/994_996_1023"
+            ]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10033",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10033",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "subject": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/30433",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/43876",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/25065",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/28345",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/43878",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/36871",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/30723",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/40085",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/25178",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/42950",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/25747",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/30950"
+                ]
+              },
+              "deprecated": { "xsd:boolean": false },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": ["Verordnung des EDI vom 19. Oktober 2011 über den Höchstansatz der Verwaltungskostenbeiträge in der AHV"],
+                  "it": [
+                    "Ordinanza del DFI del 19 ottobre 2011 sulle aliquote massime dei contributi alle spese di amministrazione nell'AVS"
+                  ],
+                  "fr": ["Ordonnance du DFI du 19 octobre 2011 sur le taux maximum des contributions aux frais d'administration dans l'AVS"]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.143.41" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/CURRENT" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "9999-01-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Verordnung des EDI <bd>vom 19. Oktober 2011</bd> über den Höchstansatz der Verwaltungskostenbeiträge in der AHV",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Ordonnance du DFI <bd>du 19 octobre 2011</bd> sur le taux maximum des contributions aux frais d'administration dans l'AVS",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Ordinanza del DFI <bd>del 19 ottobre 2011</bd> sulle aliquote massime dei contributi alle spese di amministrazione nell'AVS"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/2011/675"
+            },
+            "classifies": [
+              "https://fedlex.data.admin.ch/eli/cc/1969/62_65_65",
+              "https://fedlex.data.admin.ch/eli/cc/2011/675",
+              "https://fedlex.data.admin.ch/eli/cc/1972/2460_2513_2290",
+              "https://fedlex.data.admin.ch/eli/cc/2009/636"
+            ]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10034",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10034",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "subject": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/33220",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/30433",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/30723",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/30337",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/40262",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-de/40086",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/40261",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-fr/25159",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-subject-theme-it/40259"
+                ]
+              },
+              "deprecated": { "xsd:boolean": false },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": [
+                    "Verordnung des EDI vom 21. Oktober 2009 über die Verwaltungskostenzuschüsse an die kantonalen Ausgleichskassen der AHV"
+                  ],
+                  "it": [
+                    "Ordinanza del DFI del 21 ottobre 2009 sui sussidi per le spese di amministrazione destinati alle casse cantonali di compensazione dell'AVS"
+                  ],
+                  "fr": [
+                    "Ordonnance du DFI du 21 octobre 2009 sur les subsides accordés aux caisses cantonales de compensation de l'AVS pour couvrir leurs frais d'administration"
+                  ]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.143.42" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/CURRENT" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "9999-01-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Verordnung des EDI <bd>vom 21. Oktober 2009</bd> über die Verwaltungskostenzuschüsse an die kantonalen Ausgleichskassen der AHV",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Ordonnance du DFI <bd>du 21 octobre 2009</bd> sur les subsides accordés aux caisses cantonales de compensation de l'AVS pour couvrir leurs frais d'administration",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Ordinanza del DFI <bd>del 21 ottobre 2009</bd> sui sussidi per le spese di amministrazione destinati alle casse cantonali di compensazione dell'AVS"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/2009/637"
+            },
+            "classifies": [
+              "https://fedlex.data.admin.ch/eli/cc/1965/1055_1067_1051",
+              "https://fedlex.data.admin.ch/eli/cc/1971/1404_1400_1400",
+              "https://fedlex.data.admin.ch/eli/cc/2009/637",
+              "https://fedlex.data.admin.ch/eli/cc/1972/2455_2508_2285",
+              "https://fedlex.data.admin.ch/eli/cc/1982/2280_2280_2280"
+            ]
+          },
+          "timestampms": 1641301758042
+        }
+      },
+      {
+        "_index": "taxonomy",
+        "_type": "_doc",
+        "_id": "https%3A%2F%2Ffedlex.data.admin.ch%2Fvocabulary%2Flegal-taxonomy%2F10035",
+        "_score": 18.942982,
+        "_source": {
+          "data": {
+            "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10035",
+            "type": ["Concept", "LegalTaxonomy"],
+            "attributes": {
+              "inScheme": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy" },
+              "broaderTransitive": {
+                "rdfs:Resource": [
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10000",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9991",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001",
+                  "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9225"
+                ]
+              },
+              "deprecated": { "xsd:boolean": true },
+              "prefLabel": {
+                "rdf:langString": {
+                  "de": [
+                    "Verordnung vom 3. September 1975 über verschiedene Rekurskommissionen (VVRK) (Eidgenössische Rekurskommission der Alters-, Hinterlassenen- und Invalidenversicherung für die im Ausland wohnenden Personen, Eidgenössische Alkoholrekurskommission, Eidgenössische Getreiderekurskommission, Eidgenössische Zollrekurskommission)"
+                  ],
+                  "it": [
+                    "Ordinanza del 3 settembre 1975 concernente diverse commissioni di ricorso (ODCR) (Commissione federale di ricorso in materia d'assicurazione per la vecchiaia, i superstiti e l'invalidi tà per le persone residenti all'estero, Commissione federale di ricorso dell'alcool, Commissione federale di ricorso dei cereali e la Commissione federale di ricorso in materia doganale)"
+                  ],
+                  "fr": [
+                    "Ordonnance du 3 septembre 1975 concernant diverses commissions de recours (ODCR) (Commission fédérale de recours en matière d'assurance-vieillesse et survivants et invalidité pour les personnes résidant à l'étranger, Commission fédérale de recours de l'alcool, Commission fédérale de recours des blés et Commission fédérale de recours en matière de douane)"
+                  ]
+                }
+              },
+              "idSystematique": { "https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique": "831.161" },
+              "broader": { "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10001" },
+              "status": { "rdfs:Resource": "http://publications.europa.eu/resource/authority/concept-status/DEPRECATED" }
+            }
+          },
+          "graph": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/graph",
+          "facets": {
+            "consolidationAbstract": {
+              "dateNoLongerInForce": "1971-02-01",
+              "title": {
+                "http://publications.europa.eu/resource/authority/language/DEU": "Reglement der Rekurskommission der Schweizerischen Ausgleichskasse vom 19. November 1960",
+                "http://publications.europa.eu/resource/authority/language/FRA": "Règlement de la commission de recours de la caisse suisse de compensation du 19 novembre 1960",
+                "http://publications.europa.eu/resource/authority/language/ITA": "Regolamento della Commissione di ricorso della Cassa svizzera di compensazione del 19 novembre 1960"
+              },
+              "uri": "https://fedlex.data.admin.ch/eli/cc/1961/114_116_120"
+            },
+            "classifies": [
+              "https://fedlex.data.admin.ch/eli/cc/1961/114_116_120",
+              "https://fedlex.data.admin.ch/eli/cc/1975/1642_1642_1642",
+              "https://fedlex.data.admin.ch/eli/cc/1971/214_219_219"
+            ]
+          },
+          "timestampms": 1641301758042
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "type": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        { "key": "Concept", "doc_count": 100 },
+        { "key": "LegalTaxonomy", "doc_count": 100 }
+      ]
+    }
+  }
+}
