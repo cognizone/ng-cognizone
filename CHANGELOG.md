@@ -1,3 +1,10 @@
+## [2.6.5](https://github.com/cognizone/ng-cognizone/compare/v2.6.4...v2.6.5) (2022-01-24)
+
+
+### Bug Fixes
+
+* correctly set peer dependencies for all libs ([8d0eef2](https://github.com/cognizone/ng-cognizone/commit/8d0eef26c53209ae95f6f32d5831abf04e565d21))
+
 ## [2.6.4](https://github.com/cognizone/ng-cognizone/compare/v2.6.3...v2.6.4) (2022-01-06)
 
 
