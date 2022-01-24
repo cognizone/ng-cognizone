@@ -2,9 +2,16 @@
   "name": "@cognizone/json-model-graph",
   "version": "2.6.4",
   "peerDependencies": {
-    "@angular/common": ">=9.1.0",
-    "@angular/core": ">=9.1.0",
-    "immer": "^9.0.0"
+    "@angular/core": ">=11.0.0",
+    "@angular/forms": ">=11.0.0",
+    "@cognizone/devtools": ">=2.0.0",
+    "@cognizone/legi-cv": ">=2.0.0",
+    "@cognizone/model-utils": ">=2.0.0",
+    "@cognizone/ng-application-profile": ">=2.0.0",
+    "@cognizone/ng-core": ">=2.0.0",
+    "@ngxs/store": "^3.7.2",
+    "immer": "^9.0.5",
+    "lodash-es": "^4.17.21"
   },
   "dependencies": {
     "tslib": "^2.0.0"

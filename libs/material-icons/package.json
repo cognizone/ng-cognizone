@@ -2,8 +2,11 @@
   "name": "@cognizone/material-icons",
   "version": "2.6.4",
   "peerDependencies": {
-    "@angular/common": ">=9.1.0",
-    "@angular/core": ">=9.1.0",
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/material": ">=11.0.0",
+    "@angular/platform-browser": ">=11.0.0",
+    "@cognizone/ng-core": ">=2.0.0",
     "@material-icons/svg": "^1.0.4"
   },
   "dependencies": {

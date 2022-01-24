@@ -2,8 +2,7 @@
   "name": "@cognizone/devtools",
   "version": "2.6.4",
   "peerDependencies": {
-    "@angular/common": ">=9.0.6",
-    "@angular/core": ">=9.0.6"
+    "@angular/core": ">=11.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
