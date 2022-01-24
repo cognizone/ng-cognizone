@@ -1,4 +1,4 @@
-import { flatten } from '@angular/compiler';
+import { flatten } from 'lodash-es';
 import { Inject, Injectable } from '@angular/core';
 import { getAllSelectOptions, Many, manyToArray, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { identity, Observable, of } from 'rxjs';

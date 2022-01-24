@@ -2,11 +2,11 @@
   "name": "@cognizone/permissions",
   "version": "2.6.4",
   "peerDependencies": {
-    "@angular/common": ">=8",
-    "@angular/core": ">=8",
-    "@angular/router": ">=8",
-    "@cognizone/model-utils": "^1.30.0",
-    "@cognizone/ng-core": "^1.30.0"
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/router": ">=11.0.0",
+    "@cognizone/model-utils": ">=2.0.0",
+    "@cognizone/ng-core": ">=2.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

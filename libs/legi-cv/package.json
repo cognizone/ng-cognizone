@@ -2,11 +2,13 @@
   "name": "@cognizone/legi-cv",
   "version": "2.6.4",
   "peerDependencies": {
-    "@angular/common": ">=9.1.0",
-    "@angular/core": ">=9.1.0",
-    "@cognizone/model-utils": "^1.29.0",
-    "@cognizone/ng-application-profile": "^1.29.0",
-    "@cognizone/ng-core": "^1.29.0"
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@cognizone/i18n": ">=2.0.0",
+    "@cognizone/model-utils": ">=2.0.0",
+    "@cognizone/ng-application-profile": ">=2.0.0",
+    "@cognizone/ng-core": ">=2.0.0",
+    "lodash-es": "^4.17.21"
   },
   "dependencies": {
     "tslib": "^2.0.0"

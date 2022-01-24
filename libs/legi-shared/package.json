@@ -4,7 +4,16 @@
   "peerDependencies": {
     "@angular/common": ">=11.0.0",
     "@angular/core": ">=11.0.0",
-    "@cognizone/model-utils": "^1.29.1"
+    "@angular/forms": ">=11.0.0",
+    "@angular/material-moment-adapter": ">=11.0.0",
+    "@angular/material": ">=11.0.0",
+    "@angular/platform-browser": ">=11.0.0",
+    "@cognizone/elastic": ">=2.0.0",
+    "@cognizone/i18n": ">=2.0.0",
+    "@cognizone/legi-cv": ">=2.0.0",
+    "@cognizone/model-utils": ">=2.0.0",
+    "@cognizone/ng-application-profile": ">=2.0.0",
+    "@cognizone/ng-core": ">=2.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

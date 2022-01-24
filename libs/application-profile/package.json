@@ -2,7 +2,7 @@
   "name": "@cognizone/application-profile",
   "version": "2.6.4",
   "peerDependencies": {
-    "@cognizone/model-utils": "^1.28.0"
+    "@cognizone/model-utils": ">=2.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

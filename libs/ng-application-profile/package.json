@@ -2,10 +2,11 @@
   "name": "@cognizone/ng-application-profile",
   "version": "2.6.4",
   "peerDependencies": {
-    "@angular/common": ">=8.0.0 <11",
-    "@angular/core": ">=8.0.0 <11",
-    "@cognizone/application-profile": "^1.28.0",
-    "@cognizone/model-utils": "^1.28.0",
+    "@angular/common": ">=11.0.0",
+    "@angular/form": ">=11.0.0",
+    "@cognizone/application-profile": ">=2.0.0",
+    "@cognizone/model-utils": ">=2.0.0",
+    "@cognizone/ng-core": ">=2.0.0",
     "lodash-es": "^4.17.15"
   },
   "dependencies": {
