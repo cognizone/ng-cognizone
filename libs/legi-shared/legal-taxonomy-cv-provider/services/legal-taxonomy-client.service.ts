@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ElasticClient } from '@cognizone/elastic';
-import { ResourceGraphService } from '@cognizone/ng-application-profile';
+import { ResourceGraphService } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
 
 import { LegalTaxonomyCvProviderOptionsService } from './legal-taxonomy-cv-provider-options.service';

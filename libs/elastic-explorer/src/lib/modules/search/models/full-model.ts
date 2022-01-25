@@ -1,5 +1,5 @@
 import { ElasticHit } from '@cognizone/model-utils';
-import { JsonModel, JsonModelFlatGraph } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelFlatGraph } from '@cognizone/json-model';
 
 export interface FullModel {
   hit: ElasticHit<unknown>;

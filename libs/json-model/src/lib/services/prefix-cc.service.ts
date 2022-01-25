@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { KNOWN_PREFIXES, Prefixes } from '@cognizone/application-profile';
+import { KNOWN_PREFIXES, Prefixes } from '@cognizone/model-utils';
 
 @Injectable({ providedIn: 'root' })
 export class PrefixCcService {

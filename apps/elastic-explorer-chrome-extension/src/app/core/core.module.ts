@@ -8,6 +8,7 @@ import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from '@czee-ce/env/environment';
+import { JsonModelModule } from '@cognizone/json-model';
 
 @NgModule({
   declarations: [],
@@ -20,6 +21,7 @@ import { environment } from '@czee-ce/env/environment';
     NgxsModule.forRoot([], { developmentMode: !environment.production }),
     NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production, name: 'CZ-DATA_EXPLORER' }),
     I18nTranslocoModule.forRoot(),
+    JsonModelModule.forRoot(),
   ],
 })
 export class CoreModule {}

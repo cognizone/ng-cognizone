@@ -1,5 +1,5 @@
 import { Directive, Input } from '@angular/core';
-import { JsonModel, Uri } from '@cognizone/ng-application-profile';
+import { JsonModel, Uri } from '@cognizone/json-model';
 
 import { GraphWrapper } from '../services/graph-wrapper';
 import { GraphWrapperFactory } from '../services/graph-wrapper.factory';

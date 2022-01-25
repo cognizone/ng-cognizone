@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Directive, Input, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 import { awaitForCompletable, Many, manyToArray, manyToOne } from '@cognizone/model-utils';
-import { isJsonModel, JsonModel } from '@cognizone/ng-application-profile';
+import { isJsonModel, JsonModel } from '@cognizone/json-model';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { from, identity } from 'rxjs';
 import { filter, first, mergeMap, switchMap } from 'rxjs/operators';

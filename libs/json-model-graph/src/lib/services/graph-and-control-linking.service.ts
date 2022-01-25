@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { CvService } from '@cognizone/legi-cv';
 import { Many, manyToArray } from '@cognizone/model-utils';
-import { ApHelper, ApService, JsonModel, JsonModelService } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelService } from '@cognizone/json-model';
+import { ApHelper, ApService } from '@cognizone/ng-application-profile';
 import produce from 'immer';
 import { isEqual } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
@@ -100,10 +101,8 @@ export class GraphAndControlLinkingService {
     nodeUri,
     rootUri,
   }: Pick<LinkControlToNodeAttributeOptions<JsonModel>, 'apName' | 'attributeKey' | 'nodeUri' | 'rootUri'>): boolean {
-    const ap = this.apService.getAp(apName);
     const node = this.graphService.getNodeSnapshot(rootUri, nodeUri);
-    const typeProfile = this.apHelper.getTypeProfile(ap, node['@type']);
-    return this.apHelper.isReference(typeProfile, attributeKey);
+    return this.apHelper.isReference(apName, node['@type'], attributeKey);
   }
 
   private async addReferencesInGraph(

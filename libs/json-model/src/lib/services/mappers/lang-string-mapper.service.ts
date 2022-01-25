@@ -1,5 +1,4 @@
-import { Datatype } from '@cognizone/application-profile';
-import { LangString } from '@cognizone/model-utils';
+import { Datatype, LangString } from '@cognizone/model-utils';
 
 import { MicroAttributeMapper } from './micro-attribute-mapper';
 
@@ -17,6 +16,6 @@ export class LangStringMapper implements MicroAttributeMapper<LangString, LangSt
   }
 
   serialize(dataType: string, value: LangString): LangString {
-    return Object.keys(value).length > 0 ? value : ((undefined as unknown) as LangString);
+    return Object.keys(value).length > 0 ? value : (undefined as unknown as LangString);
   }
 }

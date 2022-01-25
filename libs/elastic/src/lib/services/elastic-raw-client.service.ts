@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { ElasticSearchResponse, extractOneSourceFromElasticResponse } from '@cognizone/model-utils';
-import { ResourceGraphRaw } from '@cognizone/ng-application-profile';
+import { TypedResourceGraph } from '@cognizone/model-utils';
 import { Logger } from '@cognizone/ng-core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -12,11 +12,11 @@ export abstract class ElasticRawClient {
 
   constructor(protected http: HttpClient, protected logger: Logger) {}
 
-  searchRaw<T = ResourceGraphRaw>(query: {}, options?: ElasticSearchOptions): Observable<ElasticSearchResponse<T>> {
+  searchRaw<T = TypedResourceGraph>(query: {}, options?: ElasticSearchOptions): Observable<ElasticSearchResponse<T>> {
     return this.http.post<ElasticSearchResponse<T>>(this.getSearchUrl(), query, options);
   }
 
-  searchOneRaw<T = ResourceGraphRaw>(query: {}, options?: ElasticSearchOptions): Observable<T> {
+  searchOneRaw<T = TypedResourceGraph>(query: {}, options?: ElasticSearchOptions): Observable<T> {
     return this.searchRaw<T>(query, options).pipe(map(extractOneSourceFromElasticResponse));
   }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { JsonModel, JsonModelService } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelService } from '@cognizone/json-model';
 
 import { GraphWrapper } from './graph-wrapper';
 import { GraphService } from './graph.service';

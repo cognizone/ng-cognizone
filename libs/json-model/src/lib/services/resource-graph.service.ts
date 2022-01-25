@@ -1,38 +1,30 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Injectable } from '@angular/core';
-import {
-  ApplicationProfile,
-  ApplicationProfileOrApName,
-  isDataTypeRule,
-  Resource,
-  ResourceGraph,
-  ResourceGraphRaw,
-  ResourceRaw,
-} from '@cognizone/application-profile';
-import { Many, manyToArray } from '@cognizone/model-utils';
+import { Inject, Injectable } from '@angular/core';
+import { TypedResourceGraph, Many, manyToArray, TypedResource } from '@cognizone/model-utils';
 import { set } from 'lodash-es';
+import { Resource, ResourceGraph } from '../models';
 
 import { JsonModel } from '../models/json-model';
-
-import { ApHelper } from './ap-helper.service';
-import { ApService } from './ap.service';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
 import { PrefixCcService } from './prefix-cc.service';
 import { ResourceMapper } from './resource-mapper.service';
+
+// TODO rename according to new model name
 
 @Injectable()
 export class ResourceGraphService {
   constructor(
-    private readonly apHelper: ApHelper,
-    private readonly apService: ApService,
+    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
+    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
     private readonly resourceMapper: ResourceMapper,
     private readonly prefixCc: PrefixCcService
   ) {}
 
-  jsonModelToResourceGraphRaw(json: JsonModel | undefined, apLike: ApplicationProfileOrApName): ResourceGraphRaw | undefined {
+  // TODO rename according to new model name
+  jsonModelToResourceGraphRaw(json: JsonModel | undefined, definition: unknown): TypedResourceGraph | undefined {
     if (!json) return undefined;
-    const ap = this.getAp(apLike);
-    const { data, included = [] } = this.jsonModelToResourceGraph(json, ap) as ResourceGraph;
-    const removeEmpty = (d: ResourceRaw) => {
+    const { data, included = [] } = this.jsonModelToResourceGraph(json, definition) as ResourceGraph;
+    const removeEmpty = (d: TypedResource) => {
       if (JSON.stringify(d.attributes) === '{}') {
         d = { ...d, attributes: undefined };
         delete d.attributes;
@@ -49,15 +41,14 @@ export class ResourceGraphService {
     };
   }
 
-  resourceGraphRawToJsonModel(rawSource: ResourceGraphRaw, apLike?: ApplicationProfileOrApName): JsonModel {
+  // TODO rename according to new model name
+  resourceGraphRawToJsonModel(rawSource: TypedResourceGraph, definition?: unknown): JsonModel {
     const all = [rawSource.data, ...(rawSource.included ?? [])];
-    const ap = apLike ? this.getAp(apLike) : undefined;
     // this transformed map is used for perf reason, limiting the number of loops on the models to 1
     const transformed: { [uri: string]: JsonModel } = {};
     all.forEach(resource => {
       const temp = this.resourceMapper.deserialize(resource);
-      const profile = ap ? this.apHelper.getTypeProfile(ap, resource.type) : undefined;
-      const { json, references } = this._resourceToJsonModel<JsonModel>(temp, ap);
+      const { json, references } = this._resourceToJsonModel<JsonModel>(temp, definition);
       json['@context'].rootUri = rawSource.data.uri;
 
       if (!transformed[resource.uri]) transformed[resource.uri] = {} as any;
@@ -65,8 +56,8 @@ export class ResourceGraphService {
 
       Object.entries(references).forEach(([refKey, referenceUris]) => {
         let isSingle = false;
-        if (profile) {
-          isSingle = this.apHelper.isSingle(profile, refKey);
+        if (definition) {
+          isSingle = this.dataModelDefinitionHelper.isSingle(definition, resource.type, refKey);
         } else if (typeof referenceUris === 'string') {
           isSingle = true;
         }
@@ -87,27 +78,26 @@ export class ResourceGraphService {
 
   private jsonModelToResourceGraph(
     json: JsonModel | undefined,
-    ap: ApplicationProfile,
+    definition: unknown,
     alreadyTransformed: Set<string> = new Set()
   ): ResourceGraph | undefined {
     if (!json) return undefined;
     const data: Resource<any> = { uri: json['@id'], type: json['@type'], references: {}, attributes: {} };
     const included: Resource[] = [];
-    const profile = this.apHelper.getTypeProfile(ap, data.type);
     alreadyTransformed.add(json['@id']);
     Object.entries(json)
       .filter(([key]) => {
         if (key.startsWith('@')) return false;
-        if (!this.apHelper.hasAttribute(profile, key)) {
-          console.warn('Could not find attribute in profile, skipping', { profile, key });
+        if (!this.dataModelDefinitionHelper.hasProperty(definition, data.type, key)) {
+          console.warn('Could not find property in model definition, skipping', { definition, data, key });
           return false;
         }
         return true;
       })
       .forEach(([key, value]) => {
-        const attrRule = this.apHelper.getRangeRule(profile, key).value;
-        if (isDataTypeRule(attrRule)) {
-          data.attributes[key] = { dataType: this.shortenUri(attrRule.value), value };
+        if (this.dataModelDefinitionHelper.isAttribute(definition, data.type, key)) {
+          const targetType = this.dataModelDefinitionHelper.getTargetType(definition, data.type, key)[0];
+          data.attributes[key] = { dataType: this.shortenUri(targetType), value };
         } else {
           const workingValue = value as Many<JsonModel | string>;
           if (Array.isArray(workingValue)) {
@@ -121,7 +111,7 @@ export class ResourceGraphService {
                 references.push(v['@id']);
                 return;
               }
-              const subSource = this.jsonModelToResourceGraph(v, ap, alreadyTransformed);
+              const subSource = this.jsonModelToResourceGraph(v, definition, alreadyTransformed);
               if (!subSource) return;
               references.push(subSource.data.uri);
               included.push(subSource.data, ...(subSource.included || []));
@@ -136,7 +126,7 @@ export class ResourceGraphService {
               data.references[key] = workingValue['@id'];
               return;
             }
-            const subSource = this.jsonModelToResourceGraph(workingValue, ap, alreadyTransformed);
+            const subSource = this.jsonModelToResourceGraph(workingValue, definition, alreadyTransformed);
             if (!subSource) return;
             data.references[key] = subSource.data.uri;
             included.push(subSource.data, ...(subSource.included || []));
@@ -154,26 +144,18 @@ export class ResourceGraphService {
     return prefix ? uri.replace(prefix[1], `${prefix[0]}:`) : uri;
   }
 
-  private _resourceToJsonModel<T extends JsonModel>(
-    data: Resource,
-    ap?: ApplicationProfile
-  ): { json: T; references: Resource['references'] } {
+  private _resourceToJsonModel<T extends JsonModel>(data: Resource, definition?: unknown): { json: T; references: Resource['references'] } {
     const json = { '@id': data.uri, '@type': data.type, '@context': {} } as T;
-    const profile = ap ? this.apHelper.getTypeProfile(ap, data.type) : undefined;
 
     Object.entries(data.attributes || {}).forEach(([key, attribute]) => {
       const { value } = attribute as any;
       let newValue = value;
-      if (profile) {
-        newValue = Array.isArray(value) && this.apHelper.isSingle(profile, key) ? value[0] : value;
+      if (definition) {
+        newValue = Array.isArray(value) && this.dataModelDefinitionHelper.isSingle(definition, data.type, key) ? value[0] : value;
       }
       set(json, key, newValue);
     });
 
     return { json, references: data.references };
-  }
-
-  private getAp(ap: ApplicationProfileOrApName): ApplicationProfile {
-    return typeof ap === 'string' ? this.apService.getAp(ap) : ap;
   }
 }

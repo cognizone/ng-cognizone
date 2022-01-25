@@ -1,5 +1,5 @@
 import { Many } from '@cognizone/model-utils';
-import { JsonModelFlat, JsonModelFlatGraph } from '@cognizone/ng-application-profile';
+import { JsonModelFlat, JsonModelFlatGraph } from '@cognizone/json-model';
 
 import { GraphStatus } from '../models/graph-status';
 

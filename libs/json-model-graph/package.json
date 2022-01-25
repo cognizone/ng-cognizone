@@ -5,6 +5,7 @@
     "@angular/core": ">=11.0.0",
     "@angular/forms": ">=11.0.0",
     "@cognizone/devtools": ">=2.0.0",
+    "@cognizone/json-model": ">=2.0.0",
     "@cognizone/legi-cv": ">=2.0.0",
     "@cognizone/model-utils": ">=2.0.0",
     "@cognizone/ng-application-profile": ">=2.0.0",

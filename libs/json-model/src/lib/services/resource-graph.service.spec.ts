@@ -1,11 +1,13 @@
-import { ApplicationProfile, ResourceGraphRaw } from '@cognizone/application-profile';
+import { TypedResourceGraph } from '@cognizone/model-utils';
 import { LoggerModule } from '@cognizone/ng-core';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 
 import { JsonModel } from '../models/json-model';
-import { NgApplicationProfileModule } from '../ng-application-profile.module';
+import { ApplicationProfile } from '@cognizone/application-profile';
+import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
 
 import { ResourceGraphService } from './resource-graph.service';
+import { JsonModelModule } from '../json-model.module';
 
 // tslint:disable: no-require-imports no-var-requires
 const directiveAp: ApplicationProfile = require('../../test/directive-ap.json');
@@ -15,7 +17,7 @@ const treatyProcess1: JsonModel = require('../../test/data/treaty-json-model-1.j
 describe('ResourceGraphService', () => {
   const createService = createServiceFactory({
     service: ResourceGraphService,
-    imports: [NgApplicationProfileModule.forRoot(), LoggerModule.forRoot('TEST')],
+    imports: [JsonModelModule.forRoot(), NgApplicationProfileModule.forRoot(), LoggerModule.forRoot('TEST')],
   });
 
   let spectator: SpectatorService<ResourceGraphService>;
@@ -151,7 +153,7 @@ describe('ResourceGraphService', () => {
 });
 
 // from Casemates + facets
-const rawResourceGraph1: ResourceGraphRaw = {
+const rawResourceGraph1: TypedResourceGraph = {
   facets: {
     some: 'thing',
   },
@@ -217,7 +219,7 @@ const rawResourceGraph1: ResourceGraphRaw = {
 };
 
 // eudossier form directives
-const rawResourceGraph2: ResourceGraphRaw = {
+const rawResourceGraph2: TypedResourceGraph = {
   data: {
     uri: 'http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1',
     type: ['EUDossier', 'Event'],
@@ -277,7 +279,7 @@ const rawResourceGraph2: ResourceGraphRaw = {
 };
 
 // eudossier form directives
-const rawResourceGraph3: ResourceGraphRaw = {
+const rawResourceGraph3: TypedResourceGraph = {
   data: {
     uri: 'http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1',
     type: ['EUDossier', 'Event'],
@@ -354,7 +356,7 @@ const rawResourceGraph3: ResourceGraphRaw = {
 };
 
 // from legiswiss
-const rawResourceGraph4: ResourceGraphRaw = {
+const rawResourceGraph4: TypedResourceGraph = {
   data: {
     uri: 'https://fedlex.data.admin.ch/eli/oc/2014/797',
     type: ['Act', 'Work'],
@@ -427,7 +429,7 @@ const rawResourceGraph4: ResourceGraphRaw = {
 };
 
 // circular graph
-const rawResourceGraph5: ResourceGraphRaw = {
+const rawResourceGraph5: TypedResourceGraph = {
   data: {
     uri: 'uri1',
     type: 'root',

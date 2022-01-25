@@ -1,7 +1,6 @@
 import {
   ApplicationProfile,
   AttributeProfile,
-  Datatype,
   isClassIdRule,
   isDataTypeRule,
   isMaxCardinalityRule,
@@ -12,6 +11,7 @@ import {
   Rule,
   TypeProfile,
 } from '@cognizone/application-profile';
+import { Datatype } from '@cognizone/model-utils';
 
 import { DEFAULT_PREFIXES } from '../models/default-prefixes';
 import { normalizeClassId } from '../utils/normalize-class-id';

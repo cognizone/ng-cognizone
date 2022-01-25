@@ -1,8 +1,8 @@
 import { Inject, Injectable, Optional } from '@angular/core';
-import { Resource, ResourceRaw } from '@cognizone/application-profile';
+import { TypedResource } from '@cognizone/model-utils';
 
+import { Resource } from '../models';
 import { keys, stringKeys } from '../utils/keys';
-
 import { AttributeMapper, MICRO_ATTRIBUTE_MAPPER_TOKEN, MicroAttributeMapper } from './mappers/micro-attribute-mapper';
 
 @Injectable()
@@ -20,7 +20,7 @@ export class ResourceMapper {
     this.mappers = [...this.mappers].sort((d1, d2) => (d2.priority ?? 0) - (d1.priority ?? 0));
   }
 
-  deserialize<T extends object>(raw: ResourceRaw): Resource<T> {
+  deserialize<T extends object>(raw: TypedResource): Resource<T> {
     const rawAttributes = raw.attributes ?? {};
     const attributes = keys(rawAttributes).reduce<Resource<T>['attributes']>((acc, attributeKey) => {
       const attribute = rawAttributes[attributeKey];
@@ -35,8 +35,8 @@ export class ResourceMapper {
     return { references: {}, ...raw, attributes };
   }
 
-  serialize(model: Resource): ResourceRaw {
-    const attributes: ResourceRaw['attributes'] = {};
+  serialize(model: Resource): TypedResource {
+    const attributes: TypedResource['attributes'] = {};
     keys(model.attributes).forEach(attributeKey => {
       const { value, dataType } = model.attributes[attributeKey];
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ResourceGraphRaw } from '@cognizone/application-profile';
+import { TypedResourceGraph } from '@cognizone/model-utils';
 import { downloadBlob, extractSourcesFromElasticResponse, manyToArray, selectProp, SubSink } from '@cognizone/model-utils';
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
@@ -56,7 +56,7 @@ export class DataValidationViewService {
       next: response => {
         response.forEach(item => {
           ++docCount;
-          const newErrors = this.computeErrors(item as ResourceGraphRaw);
+          const newErrors = this.computeErrors(item as TypedResourceGraph);
           errorCount += newErrors.length;
           if (newErrors.length) {
             this.store.dispatch(new AddErrors(newErrors));
@@ -95,7 +95,7 @@ export class DataValidationViewService {
     this.store.dispatch(new SetElasticQuery(elasticQuery));
   }
 
-  private computeErrors(graph: ResourceGraphRaw): DataError[] {
+  private computeErrors(graph: TypedResourceGraph): DataError[] {
     const errors: DataError[] = [];
     const allNodes = [graph.data, ...(graph.included ?? [])];
     allNodes.forEach(node => {

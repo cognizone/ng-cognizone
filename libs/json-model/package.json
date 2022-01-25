@@ -1,0 +1,13 @@
+{
+  "name": "@cognizone/json-model",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/core": ">=11.0.0",
+    "@cognizone/model-utils": ">=2.0.0",
+    "@cognizone/ng-core": ">=2.0.0",
+    "lodash-es": "^4.17.15"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}

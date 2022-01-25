@@ -1,5 +1,5 @@
 import { LangString, LangStringSimple } from '@cognizone/model-utils';
-import { isJsonModel } from '@cognizone/ng-application-profile';
+import { isJsonModel } from '@cognizone/json-model';
 
 import { Concept } from './concept';
 

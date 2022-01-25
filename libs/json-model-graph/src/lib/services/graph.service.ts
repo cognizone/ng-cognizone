@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { notNil } from '@cognizone/model-utils';
-import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import produce from 'immer';

@@ -1,5 +1,5 @@
 import { Many } from '@cognizone/model-utils';
-import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService, Uri } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService, Uri } from '@cognizone/json-model';
 import produce from 'immer';
 import { Observable } from 'rxjs';
 

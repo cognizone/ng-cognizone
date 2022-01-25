@@ -1,4 +1,4 @@
-import { Prefixes } from '@cognizone/application-profile';
+import { Prefixes } from '@cognizone/model-utils';
 
 export class PrefixService {
   shortenUri(uri: string, prefixes: Prefixes): string {
