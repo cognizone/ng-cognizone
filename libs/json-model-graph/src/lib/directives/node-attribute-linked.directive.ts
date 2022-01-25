@@ -1,8 +1,9 @@
 import { Directive, ElementRef, Host, Inject, Input, OnChanges, Optional } from '@angular/core';
-import { AbstractControl, ControlContainer, FormGroupDirective, NgControl, FormArrayName } from '@angular/forms';
+import { AbstractControl, ControlContainer, NgControl } from '@angular/forms';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
+import { isJsonModel, JsonModel } from '@cognizone/json-model';
 import { Many } from '@cognizone/model-utils';
-import { ApHelper, isJsonModel, JsonModel } from '@cognizone/ng-application-profile';
+import { ApHelper } from '@cognizone/ng-application-profile';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
 import { GraphAndControlLinkingService } from '../services/graph-and-control-linking.service';

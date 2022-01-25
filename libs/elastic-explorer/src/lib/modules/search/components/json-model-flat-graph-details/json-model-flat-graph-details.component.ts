@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit, Provider } from '@angular/core';
-import { JsonModelFlatGraph } from '@cognizone/ng-application-profile';
+import { JsonModelFlatGraph } from '@cognizone/json-model';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 import {

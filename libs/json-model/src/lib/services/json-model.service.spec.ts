@@ -1,10 +1,10 @@
 import { ApplicationProfile } from '@cognizone/application-profile';
+import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
 import { LoggerModule } from '@cognizone/ng-core';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 
+import { JsonModelModule } from '../json-model.module';
 import { JsonModel, JsonModelFlatGraph } from '../models/json-model';
-import { NgApplicationProfileModule } from '../ng-application-profile.module';
-
 import { JsonModelService } from './json-model.service';
 
 // tslint:disable: no-require-imports no-var-requires no-any
@@ -15,7 +15,7 @@ const treatyGraph1: JsonModelFlatGraph = require('../../test/treaty-process-flat
 describe('JsonModelService', () => {
   const createService = createServiceFactory({
     service: JsonModelService,
-    imports: [NgApplicationProfileModule.forRoot(), LoggerModule.forRoot('TEST')],
+    imports: [NgApplicationProfileModule.forRoot(), LoggerModule.forRoot('TEST'), JsonModelModule.forRoot()],
   });
   let spectator: SpectatorService<JsonModelService>;
   beforeEach(() => (spectator = createService()));

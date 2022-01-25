@@ -29,8 +29,9 @@
     "tslib": "^1.10.0"
   },
   "peerDependencies": {
-    "@cognizone/application-profile": "^0.0.1",
-    "@cognizone/model-utils": "^0.0.1"
+    "@cognizone/application-profile": ">=2.0.0",
+    "@cognizone/json-model": ">=2.0.0",
+    "@cognizone/model-utils": ">=2.0.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.22.2",

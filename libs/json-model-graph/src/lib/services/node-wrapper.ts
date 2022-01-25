@@ -1,4 +1,4 @@
-import { JsonModel, JsonModelFlat, Uri } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelFlat, Uri } from '@cognizone/json-model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 

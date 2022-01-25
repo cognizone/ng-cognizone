@@ -21,4 +21,6 @@ export function czLabelToString(label: Nil<CzLabel>, lang: string, fallbackLangs
     const value = manyToOne(label[language]);
     if (value) return value;
   }
+
+  return undefined;
 }

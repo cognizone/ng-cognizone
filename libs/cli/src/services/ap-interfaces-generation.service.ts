@@ -1,7 +1,6 @@
 import {
   ApplicationProfile,
   AttributeProfile,
-  Datatype,
   getConcreteType,
   isClassIdRule,
   isDataTypeRule,
@@ -12,10 +11,9 @@ import {
   isRangeRule,
   isRdfTypesRule,
   isSubClassOfRule,
-  Prefixes,
   TypeProfile,
 } from '@cognizone/application-profile';
-import { Dictionary, notNil } from '@cognizone/model-utils';
+import { Dictionary, notNil, Datatype, Prefixes } from '@cognizone/model-utils';
 import { existsSync } from 'fs';
 import { flatten, kebabCase } from 'lodash';
 import { dirname, join } from 'path';

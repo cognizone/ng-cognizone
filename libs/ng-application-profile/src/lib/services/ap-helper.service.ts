@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {
   ApplicationProfile,
+  ApplicationProfileOrApName,
   AttributeProfile,
-  DatatypeLong,
   getConcreteType,
   isClassIdRule,
   isDataTypeRule,
@@ -14,17 +14,19 @@ import {
   Rule,
   TypeProfile,
 } from '@cognizone/application-profile';
-import { Many, manyToArray } from '@cognizone/model-utils';
+import { DatatypeLong, Many, manyToArray } from '@cognizone/model-utils';
+import { DataModelDefinitionHelper } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
 import { memoize } from 'lodash-es';
+import { ApService } from './ap.service';
 
 @Injectable()
-export class ApHelper {
+export class ApHelper implements DataModelDefinitionHelper<ApplicationProfileOrApName> {
   private apMap: WeakMap<ApplicationProfile, number> = new WeakMap();
 
   private weakMapCount = 0;
 
-  constructor(private logger: Logger) {
+  constructor(private logger: Logger, private apService: ApService) {
     this.logger = logger.extend('ApHelper');
     this.getConcreteType = memoize(this.getConcreteType.bind(this), (ap: ApplicationProfile, classIds: Many<string>) => {
       if (!this.apMap.has(ap)) {
@@ -49,11 +51,14 @@ export class ApHelper {
     return typeProfile;
   }
 
-  hasAttribute(profile: TypeProfile, key: string): boolean {
-    return profile.attributes[key] != null;
+  hasProperty(definition: ApplicationProfileOrApName, type: Many<string>, key: string): boolean {
+    const ap = this.getAp(definition);
+    return this.getTypeProfile(ap, type).attributes[key] != null;
   }
 
-  getRangeRule(profile: TypeProfile, key: string): RangeRule {
+  getRangeRule(definition: ApplicationProfileOrApName, type: Many<string>, key: string): RangeRule {
+    const ap = this.getAp(definition);
+    const profile = this.getTypeProfile(ap, type);
     const attr = profile.attributes[key];
     if (attr == null) throw new Error(`Could not find attribute '${key}' for type '${manyToArray(profile.classIds).join(', ')}'`);
     const rangeRule = attr.rules.find(isRangeRule);
@@ -63,20 +68,21 @@ export class ApHelper {
     return rangeRule;
   }
 
-  isAttribute(profile: TypeProfile, key: string): boolean {
-    if (!this.hasAttribute(profile, key)) return false;
-    const rangeRule = this.getRangeRule(profile, key);
+  isAttribute(definition: ApplicationProfileOrApName, type: Many<string>, key: string): boolean {
+    if (!this.hasProperty(definition, type, key)) return false;
+    const rangeRule = this.getRangeRule(definition, type, key);
     return isDataTypeRule(rangeRule.value);
   }
 
-  isReference(profile: TypeProfile, key: string): boolean {
-    if (!this.hasAttribute(profile, key)) return false;
-    const rangeRule = this.getRangeRule(profile, key);
+  isReference(definition: ApplicationProfileOrApName, type: Many<string>, key: string): boolean {
+    if (!this.hasProperty(definition, type, key)) return false;
+    const rangeRule = this.getRangeRule(definition, type, key);
     return isClassIdRule(rangeRule.value) || isOrClassIdRule(rangeRule.value);
   }
 
-  isSingle(profile: TypeProfile, attributeKey: string): boolean {
-    const attr = profile.attributes[attributeKey];
+  isSingle(definition: ApplicationProfileOrApName, type: Many<string>, key: string): boolean {
+    const ap = this.getAp(definition);
+    const attr = this.getTypeProfile(ap, type).attributes[key];
     return this.isSingleAttribute(attr);
   }
 
@@ -92,7 +98,9 @@ export class ApHelper {
     return maxRule.value === 1;
   }
 
-  isRequiredAttribute(attr: AttributeProfile): boolean {
+  isRequired(definition: ApplicationProfileOrApName, type: Many<string>, propertyKey: string): boolean {
+    const ap = this.getAp(definition);
+    const attr = this.getTypeProfile(ap, type).attributes[propertyKey];
     if (!attr) return false;
 
     const minRule = attr.rules.find(isMinCardinalityRule);
@@ -108,7 +116,7 @@ export class ApHelper {
     if (key) {
       const attributeRules = profile.attributes[key].rules;
       rules.push(...attributeRules);
-      const rangeRule = this.getRangeRule(profile, key);
+      const rangeRule = this.getRangeRule(ap, types, key);
       if (isClassIdRule(rangeRule.value)) {
         rules.push(...this.getRules(ap, rangeRule.value.value));
       } else if (isOrClassIdRule(rangeRule.value)) {
@@ -123,7 +131,28 @@ export class ApHelper {
     return rules;
   }
 
+  getTargetType(definition: ApplicationProfileOrApName, type: Many<string>, propertyKey: string): string[] {
+    const rangeRule = this.getRangeRule(definition, type, propertyKey);
+    if (isDataTypeRule(rangeRule.value) || isClassIdRule(rangeRule.value)) {
+      return [rangeRule.value.value];
+    } else if (isOrClassIdRule(rangeRule.value)) {
+      return rangeRule.value.value.map(r => r.value);
+    }
+
+    throw new Error(`Could not find target type for type ${type} and property ${propertyKey}`);
+  }
+
+  getProperties(definition: ApplicationProfileOrApName, type: Many<string>): string[] {
+    const ap = this.getAp(definition);
+    const typeProfile = this.getTypeProfile(ap, type);
+    return Object.keys(typeProfile.attributes);
+  }
+
   getConcreteType(ap: ApplicationProfile, classIds: Many<string>): string {
     return getConcreteType(ap, classIds);
+  }
+
+  private getAp(ap: ApplicationProfileOrApName): ApplicationProfile {
+    return typeof ap === 'string' ? this.apService.getAp(ap) : ap;
   }
 }

@@ -3,6 +3,7 @@ import { ApHelper } from '@cognizone/ng-application-profile';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
 import { NodeUriDirective } from './node-uri.directive';
+import { RootUriDirective } from './root-uri.directive';
 
 @Directive({
   selector: '[czIfAttributeInAp]',
@@ -18,6 +19,7 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
     private readonly cdr: ChangeDetectorRef,
     private readonly apHelper: ApHelper,
     private readonly nodeUriDirective: NodeUriDirective,
+    private readonly rootUriDirective: RootUriDirective,
     @Attribute('formGroupName') private readonly formGroupName?: string,
     @Attribute('formControlName') private readonly formControlName?: string,
     @Attribute('formArrayName') private readonly formArrayName?: string
@@ -32,7 +34,7 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
   }
 
   private renderIfExistsInAP(): void {
-    const hasAttribute = this.apHelper.hasAttribute(this.nodeUriDirective.typeProfile, this.attributeKey);
+    const hasAttribute = this.apHelper.hasProperty(this.rootUriDirective.apName, this.nodeUriDirective.type, this.attributeKey);
     if (hasAttribute) {
       this.viewContainer.createEmbeddedView(this.templateRef);
     } else {

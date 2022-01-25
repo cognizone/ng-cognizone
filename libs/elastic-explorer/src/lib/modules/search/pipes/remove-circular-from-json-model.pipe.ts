@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { isJsonModel, JsonModel } from '@cognizone/ng-application-profile';
+import { isJsonModel, JsonModel } from '@cognizone/json-model';
 import produce from 'immer';
 
 // FIXME still buggy

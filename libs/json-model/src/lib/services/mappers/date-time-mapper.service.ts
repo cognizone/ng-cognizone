@@ -1,4 +1,4 @@
-import { Datatype } from '@cognizone/application-profile';
+import { Datatype } from '@cognizone/model-utils';
 
 import { MicroAttributeMapper } from './micro-attribute-mapper';
 

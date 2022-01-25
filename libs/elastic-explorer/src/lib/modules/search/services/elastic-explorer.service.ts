@@ -2,8 +2,17 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Pagination } from '@cognizone/legi-shared/list-paginator';
-import { Dictionary, ElasticAggregation, ElasticHit, ElasticSearchResponse, Nil, selectProp, SubSink } from '@cognizone/model-utils';
-import { JsonModelService, ResourceGraphRaw, ResourceGraphService } from '@cognizone/ng-application-profile';
+import {
+  Dictionary,
+  ElasticAggregation,
+  ElasticHit,
+  ElasticSearchResponse,
+  TypedResourceGraph,
+  Nil,
+  selectProp,
+  SubSink,
+} from '@cognizone/model-utils';
+import { JsonModelService, ResourceGraphService } from '@cognizone/json-model';
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import produce from 'immer';
@@ -148,7 +157,7 @@ export class ElasticExplorerService {
     return fullModel;
   }
 
-  private isResourceGraphRaw(obj: unknown): obj is ResourceGraphRaw {
+  private isResourceGraphRaw(obj: unknown): obj is TypedResourceGraph {
     return typeof obj === 'object' && obj != null && 'data' in obj;
   }
 

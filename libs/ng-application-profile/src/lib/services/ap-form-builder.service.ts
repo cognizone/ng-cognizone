@@ -43,8 +43,7 @@ export class ApFormBuilder {
     Object.entries(control.controls).forEach(([subKey, subControl]) => {
       if (subControl instanceof FormControl) this.addValidatorsToFormControl(subControl, ap, types, subKey);
       else if (subControl instanceof FormGroup) {
-        const profile = this.apService.getTypeProfile(ap, types);
-        const rangeRule = this.apService.getRangeRule(profile, subKey);
+        const rangeRule = this.apService.getRangeRule(ap, types, subKey);
         if (rangeRule.value.name === 'classId') {
           this.addValidatorsToFormGroup(subControl, ap, rangeRule.value.value);
         } else {

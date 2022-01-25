@@ -1,13 +1,6 @@
-import { Resource, ResourceRaw } from './resource';
+import { TypedResourceGraph } from '@cognizone/model-utils';
 
-export interface ResourceGraph {
-  data: Resource;
-  included: Resource[];
-  facets?: {};
-}
-
-export type ResourceGraphRaw = {
-  data: ResourceRaw;
-  included?: ResourceRaw[];
-  facets?: {};
-};
+/**
+ * @deprecated use TypedResourceGraph from @cognizone/model-utils
+ */
+export type ResourceGraphRaw = TypedResourceGraph;
