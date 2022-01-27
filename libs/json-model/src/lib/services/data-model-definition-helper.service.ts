@@ -1,7 +1,7 @@
 import { InjectionToken } from '@angular/core';
 import { Many } from '@cognizone/model-utils';
 
-export interface DataModelDefinitionHelper<T> {
+export interface DataModelDefinitionHelper<T = unknown> {
   hasProperty(definition: T, type: Many<string>, propertyKey: string): boolean;
   isAttribute(definition: T, type: Many<string>, propertyKey: string): boolean;
   isReference(definition: T, type: Many<string>, propertyKey: string): boolean;

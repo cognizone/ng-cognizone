@@ -1,0 +1,10 @@
+<main *ngIf="shapesGraph" class="container">
+  <div class="row">
+    <cz-graph-card
+      *ngFor="let graph of graphs$ | async"
+      class="col-3 col-lg-4 mt-3"
+      [graph]="graph"
+      [shapesGraph]="shapesGraph"
+    ></cz-graph-card>
+  </div>
+</main>

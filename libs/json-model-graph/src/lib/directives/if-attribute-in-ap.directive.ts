@@ -18,7 +18,7 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
     private readonly logger: Logger,
     private readonly cdr: ChangeDetectorRef,
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private readonly nodeUriDirective: NodeUriDirective,
     private readonly rootUriDirective: RootUriDirective,
     @Attribute('formGroupName') private readonly formGroupName?: string,

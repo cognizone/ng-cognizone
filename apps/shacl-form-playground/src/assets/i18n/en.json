@@ -1,0 +1,16 @@
+{
+  "details": {
+    "save": "Save"
+  },
+  "global": {
+    "validation": {
+      "required": "This field is required"
+    }
+  },
+  "root": {
+    "create": "Create"
+  },
+  "shacl": {
+    "new_node": "New {{type}}"
+  }
+}

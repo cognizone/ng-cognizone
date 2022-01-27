@@ -40,7 +40,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
 
   constructor(
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private readonly graphService: GraphService,
     private readonly graphControlService: GraphAndControlLinkingService,
     private readonly rootUriDirective: RootUriDirective,
@@ -113,8 +113,9 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     if (isJsonModel(o)) {
       if (o['@id'] === uri) return path;
       if (alreadySeenUris.includes(o['@id'])) return undefined;
+      const wrapper = this.rootUriDirective.getWrapper();
       for (const [key, value] of Object.entries(o)) {
-        const type = this.dataModelDefinitionHelper.getConcreteType(this.rootUriDirective.getWrapper().getDefinition(), o['@type']);
+        const type = this.dataModelDefinitionHelper.getConcreteType(wrapper.getDefinition(), o['@type']);
         const foundPath = this.findUriPath(value, uri, [...path, this.getPartialPath(o['@id'], type, key)], [...alreadySeenUris, o['@id']]);
         if (foundPath) return foundPath;
       }
@@ -125,6 +126,8 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
         if (foundPath) return foundPath;
       }
     }
+
+    return undefined;
   }
 
   private getPartialPath(uri: string, type: string, key: string): string {

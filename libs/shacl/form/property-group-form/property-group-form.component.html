@@ -1,0 +1,4 @@
+<fieldset>
+  <legend *ngIf="title">{{ title }}</legend>
+  <cz-property-field *ngFor="let property of properties" [property]="property"></cz-property-field>
+</fieldset>

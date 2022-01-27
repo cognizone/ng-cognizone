@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.my-add-card {
+  cursor: pointer;
+  mat-icon {
+    height: 100px;
+    width: auto;
+    font-size: 100px;
+  }
+}
+
+.my-legend {
+  width: unset;
+}

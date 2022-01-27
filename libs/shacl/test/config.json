@@ -1,0 +1,7 @@
+{
+  "defaultContext": {
+    "base": "http://example.org/person#"
+  },
+  "graphRootUriBase": "http://cogni.zone/data-model#",
+  "graphRootType": "Person"
+}

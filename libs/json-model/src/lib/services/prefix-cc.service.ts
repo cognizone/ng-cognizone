@@ -33,6 +33,11 @@ export class PrefixCcService {
     return uri;
   }
 
+  convertUri(uri: string, srcContext: TypedResourceContext, distContext: TypedResourceContext): string {
+    const expandedUri = this.expandUri(uri, srcContext);
+    return this.compactUri(expandedUri, distContext);
+  }
+
   private getFullPrefix(prefix: string): string {
     return prefix.endsWith(':') ? prefix : prefix + ':';
   }

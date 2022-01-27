@@ -991,6 +991,173 @@
         }
       }
     },
+    "shacl": {
+      "projectType": "library",
+      "root": "libs/shacl",
+      "sourceRoot": "libs/shacl/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/shacl"],
+          "options": {
+            "project": "libs/shacl/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shacl/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shacl/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shacl"],
+          "options": {
+            "jestConfig": "libs/shacl/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shacl/src/**/*.ts", "libs/shacl/src/**/*.html"]
+          }
+        }
+      }
+    },
+    "shacl-form-playground": {
+      "projectType": "application",
+      "root": "apps/shacl-form-playground",
+      "sourceRoot": "apps/shacl-form-playground/src",
+      "prefix": "cz",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/shacl-form-playground",
+            "index": "apps/shacl-form-playground/src/index.html",
+            "main": "apps/shacl-form-playground/src/main.ts",
+            "polyfills": "apps/shacl-form-playground/src/polyfills.ts",
+            "tsConfig": "apps/shacl-form-playground/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/shacl-form-playground/src/favicon.ico",
+              "apps/shacl-form-playground/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/shacl/test/",
+                "output": "./assets/shacl/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@material-icons/svg/svg",
+                "output": "./assets/material-icons/"
+              }
+            ],
+            "styles": ["apps/shacl-form-playground/src/styles/main.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/shacl-form-playground/src/styles"]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "2mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/shacl-form-playground/src/environments/environment.ts",
+                  "with": "apps/shacl-form-playground/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "shacl-form-playground:build:production"
+            },
+            "development": {
+              "browserTarget": "shacl-form-playground:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "shacl-form-playground:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/shacl-form-playground/src/**/*.ts", "apps/shacl-form-playground/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/shacl-form-playground"],
+          "options": {
+            "jestConfig": "apps/shacl-form-playground/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shacl-form-playground-e2e": {
+      "root": "apps/shacl-form-playground-e2e",
+      "sourceRoot": "apps/shacl-form-playground-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/shacl-form-playground-e2e/cypress.json",
+            "devServerTarget": "shacl-form-playground:serve:development",
+            "tsConfig": "apps/shacl-form-playground-e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "shacl-form-playground:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/shacl-form-playground-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "transloco-langstring": {
       "projectType": "library",
       "root": "libs/transloco-langstring",

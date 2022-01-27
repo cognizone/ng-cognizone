@@ -1,0 +1,20 @@
+<mat-card *czNodeUri="nodeUri" [formGroup]="formGroup">
+  <mat-card-header>
+    <mat-card-title *ngIf="shortTemplate">
+      <cz-shacl-template *ngIf="node$ | async as node" [model]="node" [template]="shortTemplate">
+        {{ 'new_node' | addI18nPrefix | czTranslate : {type} }}
+      </cz-shacl-template>
+    </mat-card-title>
+    <mat-card-subtitle>{{ nodeUri }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <cz-property-group-form *ngFor="let group of groups" class="d-block pt-3" [properties]="group.properties"></cz-property-group-form>
+  </mat-card-content>
+  <ng-container *ngIf="canBeRemoved">
+    <mat-divider></mat-divider>
+    <mat-card-actions align="end">
+      <button *ngIf="canBeRemoved" color="warn" type="button" mat-icon-button (click)="remove.emit()"><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+  </ng-container>
+</mat-card>

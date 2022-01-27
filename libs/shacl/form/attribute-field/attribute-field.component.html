@@ -1,0 +1,24 @@
+<ng-container [ngSwitch]="type">
+  <cz-date-picker
+    *ngSwitchCase="'date'"
+    [class.compact-form-field]="!showLabel"
+    [label]="showLabel ? label : undefined"
+    [formControl]="control"
+  ></cz-date-picker>
+  <cz-input
+    *ngSwitchCase="'number'"
+    type="number"
+    [class.compact-form-field]="!showLabel"
+    [label]="showLabel ? label : undefined"
+    [formControl]="control"
+  ></cz-input>
+  <mat-checkbox *ngSwitchCase="'bool'" class="ml-2" [formControl]="control">
+    {{ showLabel ? label : '' }}
+  </mat-checkbox>
+  <cz-input
+    *ngSwitchDefault
+    [class.compact-form-field]="!showLabel"
+    [label]="showLabel ? label : undefined"
+    [formControl]="control"
+  ></cz-input>
+</ng-container>

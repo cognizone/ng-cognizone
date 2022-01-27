@@ -1,0 +1,434 @@
+{
+  "context": {
+    "base": "https://data.cogni.zone/model/person/",
+    "prefix": {
+      "ex": "http://example.org/person#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "sh": "http://www.w3.org/ns/shacl#",
+      "shacz": "https://data.cogni.zone/model/ui/shacl-extension/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  },
+  "data": {
+    "uri": "ShapesGraph",
+    "type": "shacz:ShapesGraph",
+    "references": {
+      "shacz:shapes": ["Person", "Pet"]
+    }
+  },
+  "included": [
+    {
+      "uri": "Person",
+      "type": "sh:NodeShape",
+      "attributes": {
+        "shacz:shortTemplate": {
+          "xsd:string": "{{ item.firstName }} {{ item.lastName }}"
+        },
+        "sh:targetClass": {
+          "rdfs:Resource": "ex:Person"
+        }
+      },
+      "references": {
+        "sh:property": [
+          "postalCode",
+          "locality",
+          "streetAddress",
+          "lastName",
+          "firstName",
+          "grossIncome",
+          "pet",
+          "personBirthday",
+          "isReal"
+        ]
+      }
+    },
+    {
+      "uri": "AddressGroup",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Address"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      }
+    },
+    {
+      "uri": "postalCode",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:integer"
+        },
+        "sh:description": {
+          "xsd:string": "The postal code of the locality"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Postal Code"
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:postalCode"
+        },
+        "sh:order": {
+          "xsd:integer": 13
+        }
+      },
+      "references": {
+        "sh:group": "AddressGroup"
+      }
+    },
+    {
+      "uri": "locality",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "The suburb, city or town of the address"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Locality"
+        },
+        "sh:order": {
+          "xsd:integer": 12
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:locality"
+        }
+      },
+      "references": {
+        "sh:group": "AddressGroup"
+      }
+    },
+    {
+      "uri": "streetAddress",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "The street address including number"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Street Address"
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:streetAddress"
+        },
+        "sh:order": {
+          "xsd:integer": 11
+        }
+      },
+      "references": {
+        "sh:group": "AddressGroup"
+      }
+    },
+    {
+      "uri": "NameGroup",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Name"
+        },
+        "sh:order": {
+          "xsd:integer": 0
+        }
+      }
+    },
+    {
+      "uri": "lastName",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "The person's last name"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Last Name"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:lastName"
+        }
+      },
+      "references": {
+        "sh:group": "NameGroup"
+      }
+    },
+    {
+      "uri": "firstName",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "The person's given name(s)"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "First Name"
+        },
+        "sh:order": {
+          "xsd:integer": 0
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:firstName"
+        }
+      },
+      "references": {
+        "sh:group": "NameGroup"
+      }
+    },
+    {
+      "uri": "pet",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "ex:Pet"
+        },
+        "sh:description": {
+          "xsd:string": "The person's pet(s)"
+        },
+        "sh:name": {
+          "xsd:string": "Pets"
+        },
+        "sh:order": {
+          "xsd:integer": 0
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:pet"
+        }
+      },
+      "references": {
+        "sh:group": "PetGroup"
+      }
+    },
+    {
+      "uri": "PetGroup",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Pets"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        }
+      }
+    },
+    {
+      "uri": "grossIncome",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:int"
+        },
+        "sh:description": {
+          "xsd:string": "The person's gross income per year, in euro"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Gross Income (€)"
+        },
+        "sh:order": {
+          "xsd:integer": 0
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:grossIncome"
+        }
+      },
+      "references": {
+        "sh:group": "PersonMiscGroup"
+      }
+    },
+    {
+      "uri": "medicalCheckup",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:description": {
+          "xsd:string": "Date of medical checkup"
+        },
+        "sh:name": {
+          "xsd:string": "Medical checkup date(s)"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:medicalCheckup"
+        }
+      }
+    },
+    {
+      "uri": "personBirthday",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:description": {
+          "xsd:string": "Birthday of the person"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Birthday"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:birthday"
+        }
+      },
+      "references": {
+        "sh:group": "PersonMiscGroup"
+      }
+    },
+    {
+      "uri": "isReal",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:boolean"
+        },
+        "sh:description": {
+          "xsd:string": "is this person real of fictional?"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Is Real"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:isReal"
+        }
+      },
+      "references": {
+        "sh:group": "PersonMiscGroup"
+      }
+    },
+    {
+      "uri": "PersonMiscGroup",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Miscellaneous"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        }
+      }
+    },
+    {
+      "uri": "Pet",
+      "type": "sh:NodeShape",
+      "attributes": {
+        "shacz:shortTemplate": {
+          "xsd:string": "{{ item.petName }}"
+        },
+        "sh:targetClass": {
+          "rdfs:Resource": "ex:Pet"
+        }
+      },
+      "references": {
+        "sh:property": ["petName", "petBirthday", "medicalCheckup"]
+      }
+    },
+    {
+      "uri": "petName",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "The pet's given name"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Name"
+        },
+        "sh:order": {
+          "xsd:integer": 0
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:petName"
+        }
+      }
+    },
+    {
+      "uri": "petBirthday",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:description": {
+          "xsd:string": "The pet's birthday"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Birthday"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "ex:birthday"
+        }
+      }
+    }
+  ]
+}

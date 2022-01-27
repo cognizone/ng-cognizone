@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@angular/core';
-import { TypedResourceGraph, Many, manyToArray, TypedResource } from '@cognizone/model-utils';
+import { Many, manyToArray, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
 import { set } from 'lodash-es';
-import { Resource, ResourceGraph } from '../models';
 
+import { Resource, ResourceGraph } from '../models';
 import { JsonModel } from '../models/json-model';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
 import { PrefixCcService } from './prefix-cc.service';
@@ -15,7 +15,7 @@ import { ResourceMapper } from './resource-mapper.service';
 export class ResourceGraphService {
   constructor(
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private readonly resourceMapper: ResourceMapper,
     private readonly prefixCc: PrefixCcService
   ) {}

@@ -8,7 +8,8 @@ export class IdGenerator {
   private counter = 0;
 
   generateId(types: Many<string>): string {
-    types = manyToArray(types).join('-').toLowerCase();
-    return `new-model-uri-${types}-${this.counter++}-${Date.now()}`;
+    const prefix = 'http://resource';
+    types = manyToArray(types).map(encodeURIComponent).join('-');
+    return `${prefix}/${types}/${this.counter++}-${Date.now()}`;
   }
 }

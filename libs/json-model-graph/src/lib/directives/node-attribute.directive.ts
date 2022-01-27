@@ -19,7 +19,7 @@ export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
     private readonly logger: Logger,
     private readonly cdr: ChangeDetectorRef,
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private readonly rootUriDirective: RootUriDirective,
     private readonly nodeUriDirective: NodeUriDirective,
     @Attribute('formGroupName') private readonly formGroupName?: string,
@@ -49,11 +49,8 @@ export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
   }
 
   private get existsInAp(): boolean {
-    return this.dataModelDefinitionHelper.hasProperty(
-      this.rootUriDirective.getWrapper().getDefinition(),
-      this.nodeUriDirective.type,
-      this.attributeKey
-    );
+    const wrapper = this.rootUriDirective.getWrapper();
+    return this.dataModelDefinitionHelper.hasProperty(wrapper.getDefinition(), this.nodeUriDirective.type, this.attributeKey);
   }
 
   private clear(): void {
