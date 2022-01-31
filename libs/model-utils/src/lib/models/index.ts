@@ -12,5 +12,6 @@ export * from './prefixes';
 export * from './select-option';
 export * from './sorter';
 export * from './typed-resource';
+export * from './typed-resource-context';
 export * from './typed-resource-graph';
 export * from './unknown-object';

@@ -42,6 +42,14 @@ Object {
 
 exports[`ResourceGraphService should serialize treaty process 1 1`] = `
 Object {
+  "context": Object {
+    "base": "http://example.org/",
+    "prefix": Object {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+    },
+  },
   "data": Object {
     "attributes": Object {
       "bilateral": Object {
@@ -75,10 +83,13 @@ Object {
         "http://resource/TreatySignature/1-1591712631407",
         "http://resource/EntryIntoForce/2-1591712631410",
       ],
-      "treatyType": "https://fedlex.data.admin.ch/vocabulary/treaty-type/1",
+      "treatyType": "http://resource/my-domain/1",
     },
     "type": "TreatyProcess",
     "uri": "http://resource/TreatyProcess/0-1591712631312",
+  },
+  "facets": Object {
+    "someTitle": "I love titles",
   },
   "included": Array [
     Object {
@@ -151,7 +162,7 @@ Object {
     },
     Object {
       "type": "TreatyType",
-      "uri": "https://fedlex.data.admin.ch/vocabulary/treaty-type/1",
+      "uri": "http://resource/my-domain/1",
     },
   ],
 }
@@ -159,146 +170,62 @@ Object {
 
 exports[`ResourceGraphService should transform ResourceGraph 1 to JsonModel 1`] = `
 Object {
-  "@context": Object {
-    "rootUri": "http://data.legilux.public.lu/resource/authority/draft-document-type/1",
-  },
   "@facets": Object {
     "some": "thing",
   },
-  "@id": "http://data.legilux.public.lu/resource/authority/draft-document-type/1",
+  "@id": "http://resource/my-domain/1",
   "@type": "Concept",
   "created": Array [
-    2018-03-01T00:00:00.000Z,
+    2022-02-01T15:55:23.473Z,
   ],
   "definition": Object {
-    "fr": Array [
-      "Documents concernant le projet d'arrêté grand-ducal (texte de l'arrêté et pièces afférentes)",
+    "en": Array [
+      "en label5",
     ],
   },
   "inScheme": Array [
     Object {
-      "@context": Object {
-        "rootUri": "http://data.legilux.public.lu/resource/authority/draft-document-type/1",
-      },
-      "@id": "http://data.legilux.public.lu/resource/authority/draft-document-type",
+      "@id": "http://resource/my-domain/2",
       "@type": "ConceptScheme",
     },
   ],
   "prefLabel": Object {
-    "fr": Array [
-      "projet d'arrêté grand-ducal",
+    "en": Array [
+      "en label4",
     ],
   },
   "status": Array [
     Object {
-      "@context": Object {
-        "rootUri": "http://data.legilux.public.lu/resource/authority/draft-document-type/1",
-      },
-      "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT",
+      "@id": "http://resource/my-domain/3",
       "@type": "Concept",
       "authorityCode": Array [
-        "CURRENT",
+        "string-9",
       ],
       "identifier": Array [
-        "CURRENT",
+        "string-7",
       ],
       "inScheme": Array [
         Object {
-          "@context": Object {
-            "rootUri": "http://data.legilux.public.lu/resource/authority/draft-document-type/1",
-          },
-          "@id": "http://publications.europa.eu/resource/authority/concept-status",
+          "@id": "http://resource/my-domain/6",
           "@type": "ConceptScheme",
         },
       ],
       "opCode": Array [
-        "CURRENT",
+        "string-11",
       ],
       "prefLabel": Object {
-        "bg": Array [
-          "актуално",
-        ],
-        "cs": Array [
-          "stávájící",
-        ],
-        "da": Array [
-          "gældende",
-        ],
-        "de": Array [
-          "aktuell",
-        ],
-        "el": Array [
-          "ισχύει",
-        ],
         "en": Array [
-          "current",
-        ],
-        "es": Array [
-          "actual",
-        ],
-        "et": Array [
-          "praegune",
-        ],
-        "fi": Array [
-          "nykyinen",
-        ],
-        "fr": Array [
-          "en vigueur",
-        ],
-        "ga": Array [
-          "i bhfeidhm",
-        ],
-        "hr": Array [
-          "trenutačni",
-        ],
-        "hu": Array [
-          "aktuális",
-        ],
-        "it": Array [
-          "attuale",
-        ],
-        "lt": Array [
-          "dabartinis",
-        ],
-        "lv": Array [
-          "pašreizējs",
-        ],
-        "mt": Array [
-          "attwali",
-        ],
-        "nl": Array [
-          "actueel",
-        ],
-        "pl": Array [
-          "obecny",
-        ],
-        "pt": Array [
-          "comum",
-        ],
-        "ro": Array [
-          "actual",
-        ],
-        "sk": Array [
-          "súčasný",
-        ],
-        "sl": Array [
-          "sedanje",
-        ],
-        "sv": Array [
-          "gällande",
+          "en label8",
         ],
       },
       "startUse": Array [
-        "2009-12-01",
+        "string-10",
       ],
     },
   ],
   "topConceptOf": Array [
     Object {
-      "@context": Object {
-        "rootUri": "http://data.legilux.public.lu/resource/authority/draft-document-type/1",
-      },
-      "@id": "http://data.legilux.public.lu/resource/authority/draft-document-type",
+      "@id": "http://resource/my-domain/2",
       "@type": "ConceptScheme",
     },
   ],
@@ -307,48 +234,39 @@ Object {
 
 exports[`ResourceGraphService should transform ResourceGraph 2 to JsonModel 1`] = `
 Object {
-  "@context": Object {
-    "rootUri": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
-  },
-  "@id": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
+  "@id": "http://resource/my-domain/1",
   "@type": Array [
     "EUDossier",
     "Event",
   ],
   "eventRiskLevel": Array [
-    "4 or something",
+    "http://resource/my-domain/6",
   ],
   "identifier": Array [
-    "1983/1041/CNS",
+    "string-5",
   ],
   "initiatedByActPreparatory": Array [
     Object {
-      "@context": Object {
-        "rootUri": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
-      },
-      "@id": "http://publications.europa.eu/resource/cellar/bf93a1e3-0c39-11e4-a7d0-01aa75ed71a1",
+      "@id": "http://resource/my-domain/2",
       "@type": Array [
         "EUPreparatoryAct",
         "Work",
       ],
       "dateDocument": Array [
-        1983-12-20T00:00:00.000Z,
+        2022-02-01T00:00:00.000Z,
       ],
       "preparatoryActCelexId": Array [
-        "51983PC0786",
+        "string-9",
       ],
       "preparatoryActReference": Array [
-        "CS/1983/11591/83/FISC111",
-        "JO C/1984/17/6",
-        "COM/1983/786/FINAL",
-        "1/1983/1307",
+        "string-10",
+        "string-11",
+        "string-12",
+        "string-13",
       ],
       "responsibilityOfEUInstitution": Array [
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://publications.europa.eu/resource/authority/corporate-body/DG15",
+          "@id": "http://resource/my-domain/8",
           "@type": Array [
             "Concept",
             "EULegalInstitution",
@@ -356,37 +274,28 @@ Object {
         },
       ],
       "title": Object {
-        "fr": Array [
-          "PROPOSITION DE DIRECTIVE DU CONSEIL PROROGEANT LA DEROGATION ACCORDEE A L' IRLANDE EN MATIERE DE TAXES SUR LE CHIFFRE D' AFFAIRES ET D' ACCISES APPLICABLES DANS LE TRAFIC INTERNATIONAL DE VOYAGEURS",
+        "en": Array [
+          "en label14",
         ],
       },
     },
   ],
   "initiatesTransposition": Object {
-    "@context": Object {
-      "rootUri": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
-    },
-    "@id": "http://data.legilux.public.lu/resource/transposition/e9ce66c3-c0cf-477b-bf57-eae1c4c1e8f6",
+    "@id": "http://resource/my-domain/3",
     "@type": Array [
       "Event",
       "Transposition",
     ],
     "hasTranspositionAction": Array [
       Object {
-        "@context": Object {
-          "rootUri": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
-        },
-        "@id": "http://data.legilux.public.lu/resource/transpositionaction/636d0338-0c7a-4e5e-9a1e-5501199f7c17",
+        "@id": "http://resource/my-domain/15",
         "@type": Array [
           "Event",
           "TranspositionAction",
         ],
-        "created": 2019-09-12T05:04:37.039Z,
+        "created": 2022-02-01T16:04:01.159Z,
         "transpositionActionType": Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://data.legilux.public.lu/resource/authority/transposition-action-type/6",
+          "@id": "http://resource/my-domain/16",
           "@type": Array [
             "Concept",
             "TranspositionActionType",
@@ -398,10 +307,7 @@ Object {
   },
   "isAboutConceptTypeDossier": Array [
     Object {
-      "@context": Object {
-        "rootUri": "http://publications.europa.eu/resource/cellar/3b417b98-d0e9-11e1-905c-01aa75ed71a1",
-      },
-      "@id": "http://publications.europa.eu/resource/authority/fd_612/1130",
+      "@id": "http://resource/my-domain/4",
       "@type": Array [
         "Concept",
         "EUDossierType",
@@ -409,8 +315,8 @@ Object {
     },
   ],
   "title": Object {
-    "fr": Array [
-      "PROPOSITION DE DIRECTIVE DU CONSEILPROROGEANT LA DEROGATION ACCORDEE A L'IRLANDE EN MATIERE DE TAXES SUR LE CHIFFRE D'AFFAIRES ET D'ACCISES APPLICABLES DANS LE TRAFIC INTERNATIONAL DE VOYAGEURS",
+    "en": Array [
+      "en label7",
     ],
   },
 }
@@ -418,95 +324,65 @@ Object {
 
 exports[`ResourceGraphService should transform ResourceGraph 3 to JsonModel 1`] = `
 Object {
-  "@context": Object {
-    "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-  },
-  "@id": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
+  "@id": "http://resource/my-domain/1",
   "@type": Array [
     "EUDossier",
     "Event",
   ],
   "identifier": Array [
-    "1990/0313/COD",
+    "string-5",
   ],
   "initiatedByActPreparatory": Array [
     Object {
-      "@context": Object {
-        "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-      },
-      "@id": "http://publications.europa.eu/resource/cellar/2224d5cc-2c56-429a-b9a8-5d13207dbed1",
+      "@id": "http://resource/my-domain/2",
       "@type": Array [
         "EUPreparatoryAct",
         "Work",
       ],
       "dateDocument": Array [
-        1990-11-20T00:00:00.000Z,
+        2022-02-01T00:00:00.000Z,
       ],
       "preparatoryActCelexId": Array [
-        "51990PC0525",
+        "string-15",
       ],
       "preparatoryActReference": Array [
-        "CS/1990/10402",
-        "COM/1990/525/FINAL",
-        "JO C/1990/306/7",
+        "string-16",
+        "string-17",
+        "string-18",
       ],
       "preparatoryActSubject": Array [
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://eurovoc.europa.eu/3167",
+          "@id": "http://resource/my-domain/7",
           "@type": "Concept",
         },
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://eurovoc.europa.eu/1015",
+          "@id": "http://resource/my-domain/8",
           "@type": "Concept",
         },
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://eurovoc.europa.eu/4078",
+          "@id": "http://resource/my-domain/9",
           "@type": "Concept",
         },
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://eurovoc.europa.eu/4585",
+          "@id": "http://resource/my-domain/10",
           "@type": "Concept",
         },
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://eurovoc.europa.eu/206",
+          "@id": "http://resource/my-domain/11",
           "@type": "Concept",
         },
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://eurovoc.europa.eu/978",
+          "@id": "http://resource/my-domain/12",
           "@type": "Concept",
         },
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://eurovoc.europa.eu/2591",
+          "@id": "http://resource/my-domain/13",
           "@type": "Concept",
         },
       ],
       "responsibilityOfEUInstitution": Array [
         Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://publications.europa.eu/resource/authority/corporate-body/TAXUD",
+          "@id": "http://resource/my-domain/14",
           "@type": Array [
             "Concept",
             "EULegalInstitution",
@@ -514,37 +390,28 @@ Object {
         },
       ],
       "title": Object {
-        "fr": Array [
-          "PROPOSITION DE DIRECTIVE DU PARLEMENT EUROPEEN ET DU CONSEIL MODIFIANT LA DIRECTIVE 76/308/CEE CONCERNANT L' ASSISTANCE MUTUELLE EN MATIERE DE RECOUVREMENT DES CREANCES RESULTANT D' OPERATIONS FAISANT PARTIE DU SYSTEME DE FINANCEMENT DU FONDS EUROPEEN D' ORIENTATION ET DE GARANTIE AGRICOLE, AINSI QUE DE PRELEVEMENTS AGRICOLES ET DE DROITS DE DOUANE, ET RELATIVE A LA TAXE SUR LA VALEUR AJOUTEE",
+        "en": Array [
+          "en label19",
         ],
       },
     },
   ],
   "initiatesTransposition": Object {
-    "@context": Object {
-      "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-    },
-    "@id": "http://data.legilux.public.lu/resource/transposition/7b8834e4-2016-4605-9fe1-c66418f6f62d",
+    "@id": "http://resource/my-domain/3",
     "@type": Array [
       "Event",
       "Transposition",
     ],
     "hasTranspositionAction": Array [
       Object {
-        "@context": Object {
-          "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-        },
-        "@id": "http://data.legilux.public.lu/resource/transpositionaction/2d55604c-2322-4984-a275-785d75094163",
+        "@id": "http://resource/my-domain/20",
         "@type": Array [
           "Event",
           "TranspositionAction",
         ],
-        "created": 2019-09-12T05:04:56.336Z,
+        "created": 2022-02-01T15:56:07.288Z,
         "transpositionActionType": Object {
-          "@context": Object {
-            "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-          },
-          "@id": "http://data.legilux.public.lu/resource/authority/transposition-action-type/6",
+          "@id": "http://resource/my-domain/21",
           "@type": Array [
             "Concept",
             "TranspositionActionType",
@@ -556,10 +423,7 @@ Object {
   },
   "isAboutConceptTypeDossier": Array [
     Object {
-      "@context": Object {
-        "rootUri": "http://publications.europa.eu/resource/cellar/6b71aff2-d243-11e1-905c-01aa75ed71a1",
-      },
-      "@id": "http://publications.europa.eu/resource/authority/fd_612/1130",
+      "@id": "http://resource/my-domain/4",
       "@type": Array [
         "Concept",
         "EUDossierType",
@@ -567,8 +431,8 @@ Object {
     },
   ],
   "title": Object {
-    "fr": Array [
-      "PROPOSITION DE DIRECTIVE DU PARLEMENT EUROPEEN ET DU CONSEILMODIFIANT LA DIRECTIVE 76/308/CEE CONCERNANT L'ASSISTANCE MUTUELLE EN MATIERE DE RECOUVREMENT DES CREANCES RESULTANT D'OPERATIONS FAISANT PARTIE DU SYSTEME DE FINANCEMENT DU FONDS EUROPEEN D'ORIENTATION ET DE GARANTIE AGRICOLE, AINSI QUE DE PRELEVEMENTS AGRICOLES ET DE DROITS DE DOUANE, ET RELATIVE A LA TAXE SUR LA VALEUR AJOUTEE",
+    "en": Array [
+      "en label6",
     ],
   },
 }
@@ -576,132 +440,93 @@ Object {
 
 exports[`ResourceGraphService should transform ResourceGraph 4 to JsonModel 1`] = `
 Object {
-  "@context": Object {
-    "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-  },
-  "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797",
+  "@id": "http://resource/my-domain/1",
   "@type": Array [
     "Act",
     "Work",
   ],
   "dateDocument": Array [
-    2014-12-23T00:00:00.000Z,
+    2022-02-01T00:00:00.000Z,
   ],
   "dateEntryInForce": Array [
-    2015-01-01T00:00:00.000Z,
+    2022-02-01T00:00:00.000Z,
   ],
   "isRealizedBy": Array [
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-      },
-      "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/it",
+      "@id": "http://resource/my-domain/2",
       "@type": "Expression",
       "isEmbodiedBy": Array [
         Object {
-          "@context": Object {
-            "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-          },
-          "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/it/doc",
+          "@id": "http://resource/my-domain/5",
           "@type": "Manifestation",
           "isExemplifiedBy": Array [
-            "http://cpo-data.cogni.zone/20161206/kavworkflow/X/i/as/2014/4715.doc",
+            "http://resource/my-domain/11",
           ],
         },
         Object {
-          "@context": Object {
-            "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-          },
-          "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/it/pdf",
+          "@id": "http://resource/my-domain/6",
           "@type": "Manifestation",
           "isExemplifiedBy": Array [
-            "http://cpo-data.cogni.zone/20161206/kavworkflow/X/i/as/2014/4715.pdf",
+            "http://resource/my-domain/12",
           ],
         },
       ],
     },
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-      },
-      "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/fr",
+      "@id": "http://resource/my-domain/3",
       "@type": "Expression",
       "isEmbodiedBy": Array [
         Object {
-          "@context": Object {
-            "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-          },
-          "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/fr/pdf",
+          "@id": "http://resource/my-domain/7",
           "@type": "Manifestation",
           "isExemplifiedBy": Array [
-            "http://cpo-data.cogni.zone/20161206/kavworkflow/X/f/as/2014/4715.pdf",
+            "http://resource/my-domain/13",
           ],
         },
         Object {
-          "@context": Object {
-            "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-          },
-          "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/fr/doc",
+          "@id": "http://resource/my-domain/8",
           "@type": "Manifestation",
           "isExemplifiedBy": Array [
-            "http://cpo-data.cogni.zone/20161206/kavworkflow/X/f/as/2014/4715.doc",
+            "http://resource/my-domain/14",
           ],
         },
       ],
     },
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-      },
-      "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/de",
+      "@id": "http://resource/my-domain/4",
       "@type": "Expression",
       "isEmbodiedBy": Array [
         Object {
-          "@context": Object {
-            "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-          },
-          "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/de/pdf",
+          "@id": "http://resource/my-domain/9",
           "@type": "Manifestation",
           "isExemplifiedBy": Array [
-            "http://cpo-data.cogni.zone/20161206/kavworkflow/X/d/as/2014/4715.pdf",
+            "http://resource/my-domain/15",
           ],
         },
         Object {
-          "@context": Object {
-            "rootUri": "https://fedlex.data.admin.ch/eli/oc/2014/797",
-          },
-          "@id": "https://fedlex.data.admin.ch/eli/oc/2014/797/de/doc",
+          "@id": "http://resource/my-domain/10",
           "@type": "Manifestation",
           "isExemplifiedBy": Array [
-            "http://cpo-data.cogni.zone/20161206/kavworkflow/X/d/as/2014/4715.doc",
+            "http://resource/my-domain/16",
           ],
         },
       ],
     },
   ],
   "publicationDate": Array [
-    2014-12-23T00:00:00.000Z,
+    2022-02-01T00:00:00.000Z,
   ],
 }
 `;
 
 exports[`ResourceGraphService should transform ResourceGraph 5 to JsonModel (circular graph) 1`] = `
 Object {
-  "@context": Object {
-    "rootUri": "uri1",
-  },
   "@id": "uri1",
   "@type": "root",
   "child": Object {
-    "@context": Object {
-      "rootUri": "uri1",
-    },
     "@id": "uri2",
     "@type": "root",
     "child": Object {
-      "@context": Object {
-        "rootUri": "uri1",
-      },
       "@id": "uri3",
       "@type": "grandChild",
       "grandParent": [Circular],

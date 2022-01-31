@@ -1,0 +1,89 @@
+{
+  "facets": {
+    "some": "thing"
+  },
+  "data": {
+    "uri": "http://resource/my-domain/1",
+    "type": "Concept",
+    "references": {
+      "inScheme": [
+        "http://resource/my-domain/2"
+      ],
+      "topConceptOf": [
+        "http://resource/my-domain/2"
+      ],
+      "status": [
+        "http://resource/my-domain/3"
+      ]
+    },
+    "attributes": {
+      "created": {
+        "xsd:dateTime": [
+          "2022-02-01T15:55:23.473Z"
+        ]
+      },
+      "prefLabel": {
+        "rdf:langString": {
+          "en": [
+            "en label4"
+          ]
+        }
+      },
+      "definition": {
+        "rdf:langString": {
+          "en": [
+            "en label5"
+          ]
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "uri": "http://resource/my-domain/2",
+      "type": "ConceptScheme"
+    },
+    {
+      "uri": "http://resource/my-domain/3",
+      "type": "Concept",
+      "attributes": {
+        "identifier": {
+          "xsd:string": [
+            "string-7"
+          ]
+        },
+        "prefLabel": {
+          "rdf:langString": {
+            "en": [
+              "en label8"
+            ]
+          }
+        },
+        "authorityCode": {
+          "xsd:string": [
+            "string-9"
+          ]
+        },
+        "startUse": {
+          "xsd:string": [
+            "string-10"
+          ]
+        },
+        "opCode": {
+          "xsd:string": [
+            "string-11"
+          ]
+        }
+      },
+      "references": {
+        "inScheme": [
+          "http://resource/my-domain/6"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/6",
+      "type": "ConceptScheme"
+    }
+  ]
+}

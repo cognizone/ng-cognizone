@@ -91,7 +91,6 @@ export class GraphService {
       draft.models[targetUri] = draft.models[sourceUri];
       delete draft.models[sourceUri];
       draft.models[targetUri]['@id'] = targetUri;
-      Object.values(draft.models).forEach(node => (node['@context'].rootUri = targetUri));
     });
     const apName = this.state.apName[sourceUri];
     this.store.dispatch(new SetGraph(copy, apName));

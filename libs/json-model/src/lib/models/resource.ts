@@ -1,4 +1,4 @@
-import { Many } from '@cognizone/model-utils';
+import { Many, TypedResourceContext } from '@cognizone/model-utils';
 
 /**
  * @description intermediary model used internally to convert JsonModel to
@@ -8,6 +8,7 @@ export interface ResourceGraph {
   data: Resource;
   included: Resource[];
   facets?: {};
+  context?: TypedResourceContext;
 }
 
 /**
