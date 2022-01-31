@@ -16,25 +16,33 @@ export class JsonModelService {
 
   toFlatGraph(root: JsonModel): JsonModelFlatGraph {
     const all: JsonModelFlatGraph = { rootUri: root['@id'], models: {} };
+    if (root['@context']) {
+      all.context = root['@context'];
+    }
+    if (root['@facets']) {
+      all.facets = root['@facets'];
+    }
     this._toGraph(root, all);
     return all;
   }
 
   fromFlatGraph<T extends JsonModel>(graph: JsonModelFlatGraph, dataModelDefinition: unknown): T {
     const root = graph.models[graph.rootUri];
-    return this._fromGraph(root, graph, {}, dataModelDefinition) as T;
+    const jsonModel = this._fromGraph(root, graph, {}, dataModelDefinition) as T;
+    if (graph.context) {
+      jsonModel['@context'] = graph.context;
+    }
+    if (graph.facets) {
+      jsonModel['@facets'] = graph.facets;
+    }
+    return jsonModel;
   }
 
   createNewJsonModel(types: Many<string>, dataModelDefinition: unknown, root?: JsonModel | string): JsonModel {
     const uri = this.idGenerator.generateId(types);
-    let rootUri = uri;
-    if (root) {
-      rootUri = typeof root === 'string' ? root : root['@context'].rootUri;
-    }
     const jsonModel: JsonModel = {
       '@id': uri,
       '@type': types,
-      '@context': { rootUri, isNew: true },
     };
 
     // TODO remove this part maybe?
@@ -88,6 +96,8 @@ export class JsonModelService {
     if (all.models[o['@id']]) return o['@id'];
 
     const flattened = { ...o };
+    delete flattened['@context'];
+    delete flattened['@facets'];
     all.models[o['@id']] = flattened;
 
     Object.entries(flattened)

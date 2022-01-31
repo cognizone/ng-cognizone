@@ -1,4 +1,4 @@
-import { Many } from '@cognizone/model-utils';
+import { Many, TypedResourceContext } from '@cognizone/model-utils';
 
 /**
  * @experimental
@@ -9,10 +9,7 @@ export type Uri<T extends JsonModel> = string & { '@@meta_type_placeholder@@'?: 
 export interface JsonModel {
   '@id': string;
   '@type': JsonModelType;
-  '@context': {
-    rootUri: string;
-    isNew?: boolean;
-  };
+  '@context'?: TypedResourceContext;
   '@facets'?: {};
 }
 
@@ -40,6 +37,8 @@ export type JsonModelFlat<T = JsonModel> = {
 
 export interface JsonModelFlatGraph<T extends JsonModelFlat = JsonModelFlat> {
   rootUri: string;
+  context?: TypedResourceContext;
+  facets?: {};
   models: {
     [uri: string]: T;
   };

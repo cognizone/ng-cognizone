@@ -1,12 +1,21 @@
 {
   "@id": "http://resource/TreatyProcess/0-1591712631312",
   "@type": "TreatyProcess",
-  "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true },
+  "@context": {
+    "base": "http://example.org/",
+    "prefix": {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+  },
+  "@facets": {
+    "someTitle": "I love titles"
+  },
   "treatyProcessHasResultingTreatyDocument": [
     {
       "@id": "http://resource/TreatyDocument/3-1591712645034",
       "@type": "TreatyDocument",
-      "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true },
       "isAnnexOfWork": [],
       "modifies": [],
       "workHasAnnex": [],
@@ -14,14 +23,12 @@
       "modifiedBy": [],
       "typeDocument": {
         "@id": "https://fedlex.data.admin.ch/vocabulary/resource-type/31",
-        "@type": "ResourceType",
-        "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true }
+        "@type": "ResourceType"
       }
     },
     {
       "@id": "http://resource/TreatyDocument/8-1591712649311",
       "@type": "TreatyDocument",
-      "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true },
       "isAnnexOfWork": [],
       "modifies": [],
       "workHasAnnex": [],
@@ -29,12 +36,10 @@
         {
           "@id": "http://resource/Expression/7-1591712649311",
           "@type": "Expression",
-          "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true },
           "isEmbodiedBy": [
             {
               "@id": "http://resource/Manifestation/6-1591712649311",
               "@type": "Manifestation",
-              "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true },
               "fileName": "there-it-is.gif",
               "userFormat": [],
               "uploadDate": "2020-06-09T14:24:09.311Z",
@@ -66,7 +71,6 @@
     {
       "@id": "http://resource/TreatySignature/1-1591712631407",
       "@type": "TreatySignature",
-      "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true },
       "languageLabel": [],
       "eventHasRemark": [],
       "treatyComment": [],
@@ -75,14 +79,12 @@
     {
       "@id": "http://resource/EntryIntoForce/2-1591712631410",
       "@type": "EntryIntoForce",
-      "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true },
       "eventHasRemark": []
     }
   ],
   "treatyType": {
-    "@id": "https://fedlex.data.admin.ch/vocabulary/treaty-type/1",
-    "@type": "TreatyType",
-    "@context": { "rootUri": "http://resource/TreatyProcess/0-1591712631312", "isNew": true }
+    "@id": "http://resource/my-domain/1",
+    "@type": "TreatyType"
   },
   "treatyPartyCountry": [],
   "titleTreaty": {},

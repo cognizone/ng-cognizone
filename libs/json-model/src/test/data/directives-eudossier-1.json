@@ -1,0 +1,162 @@
+{
+  "data": {
+    "uri": "http://resource/my-domain/1",
+    "type": [
+      "EUDossier",
+      "Event"
+    ],
+    "attributes": {
+      "identifier": {
+        "xsd:string": [
+          "string-5"
+        ]
+      },
+      "title": {
+        "rdf:langString": {
+          "en": [
+            "en label6"
+          ]
+        }
+      }
+    },
+    "references": {
+      "initiatedByActPreparatory": [
+        "http://resource/my-domain/2"
+      ],
+      "initiatesTransposition": "http://resource/my-domain/3",
+      "isAboutConceptTypeDossier": [
+        "http://resource/my-domain/4"
+      ]
+    }
+  },
+  "included": [
+    {
+      "uri": "http://resource/my-domain/2",
+      "type": [
+        "EUPreparatoryAct",
+        "Work"
+      ],
+      "attributes": {
+        "dateDocument": {
+          "xsd:date": [
+            "2022-02-01"
+          ]
+        },
+        "preparatoryActCelexId": {
+          "xsd:string": [
+            "string-15"
+          ]
+        },
+        "preparatoryActReference": {
+          "xsd:string": [
+            "string-16",
+            "string-17",
+            "string-18"
+          ]
+        },
+        "title": {
+          "rdf:langString": {
+            "en": [
+              "en label19"
+            ]
+          }
+        }
+      },
+      "references": {
+        "preparatoryActSubject": [
+          "http://resource/my-domain/7",
+          "http://resource/my-domain/8",
+          "http://resource/my-domain/9",
+          "http://resource/my-domain/10",
+          "http://resource/my-domain/11",
+          "http://resource/my-domain/12",
+          "http://resource/my-domain/13"
+        ],
+        "responsibilityOfEUInstitution": [
+          "http://resource/my-domain/14"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/7",
+      "type": "Concept"
+    },
+    {
+      "uri": "http://resource/my-domain/8",
+      "type": "Concept"
+    },
+    {
+      "uri": "http://resource/my-domain/9",
+      "type": "Concept"
+    },
+    {
+      "uri": "http://resource/my-domain/10",
+      "type": "Concept"
+    },
+    {
+      "uri": "http://resource/my-domain/11",
+      "type": "Concept"
+    },
+    {
+      "uri": "http://resource/my-domain/12",
+      "type": "Concept"
+    },
+    {
+      "uri": "http://resource/my-domain/13",
+      "type": "Concept"
+    },
+    {
+      "uri": "http://resource/my-domain/14",
+      "type": [
+        "Concept",
+        "EULegalInstitution"
+      ]
+    },
+    {
+      "uri": "http://resource/my-domain/3",
+      "type": [
+        "Event",
+        "Transposition"
+      ],
+      "references": {
+        "hasTranspositionAction": [
+          "http://resource/my-domain/20"
+        ]
+      },
+      "attributes": {
+        "transpositionRequestedCorrespondenceTable": {
+          "xsd:boolean": false
+        }
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/20",
+      "type": [
+        "Event",
+        "TranspositionAction"
+      ],
+      "attributes": {
+        "created": {
+          "xsd:dateTime": "2022-02-01T15:56:07.288Z"
+        }
+      },
+      "references": {
+        "transpositionActionType": "http://resource/my-domain/21"
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/21",
+      "type": [
+        "Concept",
+        "TranspositionActionType"
+      ]
+    },
+    {
+      "uri": "http://resource/my-domain/4",
+      "type": [
+        "Concept",
+        "EUDossierType"
+      ]
+    }
+  ]
+}

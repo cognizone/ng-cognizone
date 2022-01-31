@@ -35,10 +35,17 @@ export class ResourceGraphService {
       }
       return d;
     };
-    return {
+    const typedResourceGraph: TypedResourceGraph = {
       data: removeEmpty(this.resourceMapper.serialize(data)),
       included: included.map(inc => removeEmpty(this.resourceMapper.serialize(inc))),
     };
+    if (json['@context']) {
+      typedResourceGraph.context = json['@context'];
+    }
+    if (json['@facets']) {
+      typedResourceGraph.facets = json['@facets'];
+    }
+    return typedResourceGraph;
   }
 
   // TODO rename according to new model name
@@ -49,7 +56,6 @@ export class ResourceGraphService {
     all.forEach(resource => {
       const temp = this.resourceMapper.deserialize(resource);
       const { json, references } = this._resourceToJsonModel<JsonModel>(temp, definition);
-      json['@context'].rootUri = rawSource.data.uri;
 
       if (!transformed[resource.uri]) transformed[resource.uri] = {} as any;
       Object.assign(transformed[resource.uri], json);
@@ -72,6 +78,9 @@ export class ResourceGraphService {
     const root = transformed[rawSource.data.uri];
     if (rawSource.facets) {
       root['@facets'] = rawSource.facets;
+    }
+    if (rawSource.context) {
+      root['@context'] = rawSource.context;
     }
     return root;
   }
@@ -136,7 +145,7 @@ export class ResourceGraphService {
           }
         }
       });
-    return { data, included };
+    return { data, included, context: json['@context'], facets: json['@facets'] };
   }
 
   private shortenUri(uri: string): string {
@@ -145,7 +154,7 @@ export class ResourceGraphService {
   }
 
   private _resourceToJsonModel<T extends JsonModel>(data: Resource, definition?: unknown): { json: T; references: Resource['references'] } {
-    const json = { '@id': data.uri, '@type': data.type, '@context': {} } as T;
+    const json = { '@id': data.uri, '@type': data.type } as T;
 
     Object.entries(data.attributes || {}).forEach(([key, attribute]) => {
       const { value } = attribute as any;

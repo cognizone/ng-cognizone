@@ -33,14 +33,20 @@ describe('JsonModelService', () => {
     expect(spectator.service.toFlatGraph(root)).toMatchSnapshot();
   });
 
-  test('should create a new JsonModel based on directive ap', () => {
+  it('should create a new JsonModel based on directive ap', () => {
     const json = spectator.service.createNewJsonModel(['EUDossier', 'Event'], directiveAp);
     expect(json).toMatchSnapshot();
   });
 
-  test('should transform treaty flat graph to JsonModel', () => {
+  it('should transform treaty flat graph to JsonModel', () => {
     const json = spectator.service.fromFlatGraph(treatyGraph1, treatyAp);
     expect(json).toMatchSnapshot();
+  });
+
+  it('should transform treaty flat graph to JsonModel and back', () => {
+    const jsonModel = spectator.service.fromFlatGraph(treatyGraph1, treatyAp);
+    const newGraph = spectator.service.toFlatGraph(jsonModel);
+    expect(newGraph).toEqual(treatyGraph1);
   });
 });
 
@@ -50,7 +56,12 @@ function getRoot(): JsonModel {
     '@id': rootUri,
     '@type': 'root',
     '@context': {
-      rootUri,
+      base: 'http://example.org/',
+      prefix: {
+        xsd: 'http://www.w3.org/2001/XMLSchema#',
+        rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+        rdfs: 'http://www.w3.org/2000/01/rdf-schema#',
+      },
     },
     a: 4,
     children: ['just a uri, the is no JsonModel'],
@@ -61,9 +72,6 @@ function getRoot(): JsonModel {
   const sibling = {
     '@id': 'uri2',
     '@type': 'root',
-    '@context': {
-      rootUri,
-    },
     b: [4, 5, 6],
     sibling: root,
   };
@@ -71,9 +79,6 @@ function getRoot(): JsonModel {
   const child = {
     '@id': 'uri3',
     '@type': 'root',
-    '@context': {
-      rootUri,
-    },
     a: true,
     parent: root,
   };

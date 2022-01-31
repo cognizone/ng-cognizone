@@ -2,10 +2,6 @@
 
 exports[`JsonModelService should create a new JsonModel based on directive ap 1`] = `
 Object {
-  "@context": Object {
-    "isNew": true,
-    "rootUri": "new-model-uri-eudossier-event-0-0",
-  },
   "@id": "new-model-uri-eudossier-event-0-0",
   "@type": Array [
     "EUDossier",
@@ -28,11 +24,16 @@ Object {
 
 exports[`JsonModelService should transform to a JsonModelFlatGraph 1`] = `
 Object {
+  "context": Object {
+    "base": "http://example.org/",
+    "prefix": Object {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+    },
+  },
   "models": Object {
     "uri1": Object {
-      "@context": Object {
-        "rootUri": "uri1",
-      },
       "@id": "uri1",
       "@type": "root",
       "a": 4,
@@ -44,9 +45,6 @@ Object {
       "sibling": "uri2",
     },
     "uri2": Object {
-      "@context": Object {
-        "rootUri": "uri1",
-      },
       "@id": "uri2",
       "@type": "root",
       "b": Array [
@@ -57,9 +55,6 @@ Object {
       "sibling": "uri1",
     },
     "uri3": Object {
-      "@context": Object {
-        "rootUri": "uri1",
-      },
       "@id": "uri3",
       "@type": "root",
       "a": true,
@@ -73,7 +68,15 @@ Object {
 exports[`JsonModelService should transform treaty flat graph to JsonModel 1`] = `
 Object {
   "@context": Object {
-    "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
+    "base": "http://example.org/",
+    "prefix": Object {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+    },
+  },
+  "@facets": Object {
+    "someTitle": "I love titles",
   },
   "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
   "@type": "TreatyProcess",
@@ -81,23 +84,14 @@ Object {
   "confidentialTreaty": false,
   "producedIn": Array [
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-      },
       "@id": "new-model-uri-initiation-1-1583078160543",
       "@type": "Initiation",
       "eventHasRemark": Array [],
       "factor": Object {
-        "@context": Object {
-          "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-        },
         "@id": "new-model-uri-internationalactor-0-1583078160540",
         "@type": "InternationalActor",
         "partyOrganisationOfTreaty": Array [
           Object {
-            "@context": Object {
-              "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-            },
             "@id": "new-model-uri-treatyprocess-2-1583078162434",
             "@type": "TreatyProcess",
             "committeeCreationBasedOn": Array [],
@@ -123,9 +117,6 @@ Object {
             "treatyHasEntryIntoForceScope": Array [],
             "treatyHasRatificationRestriction": Array [],
             "treatyLegalResourceForOtherParty": Object {
-              "@context": Object {
-                "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-              },
               "@id": "new-model-uri-eulegalresource-4-1583078162435",
               "@type": "EULegalResource",
             },
@@ -140,9 +131,6 @@ Object {
             "treatyRelatedLegalResource": Array [],
             "treatySubject": Array [],
             "treatyType": Object {
-              "@context": Object {
-                "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-              },
               "@id": "https://fedlex.data.admin.ch/vocabulary/treaty-type/2",
               "@type": "TreatyType",
             },
@@ -167,16 +155,10 @@ Object {
   },
   "treatyAppliesEULegalResource": Array [
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-      },
       "@id": "http://publications.europa.eu/resource/cellar/d67cf7eb-de13-4bcb-9959-0dc0107e102e",
       "@type": "EULegalResource",
     },
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-      },
       "@id": "http://publications.europa.eu/resource/cellar/87245951-547e-11ea-aece-01aa75ed71a1",
       "@type": "EULegalResource",
     },
@@ -186,16 +168,10 @@ Object {
   ],
   "treatyProcessHasResultingTreatyDocument": Array [
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-      },
       "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/1",
       "@type": "TreatyDocument",
     },
     Object {
-      "@context": Object {
-        "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
-      },
       "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/2",
       "@type": "TreatyDocument",
     },
