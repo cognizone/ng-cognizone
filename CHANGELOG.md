@@ -1,3 +1,10 @@
+# [2.7.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v2.6.5...v2.7.0-beta.1) (2022-02-01)
+
+
+### Features
+
+* **json-model:** created dedicated json-model library ([7e07384](https://github.com/cognizone/ng-cognizone/commit/7e073848fe1d4755086102d24178564b2d9f0605))
+
 ## [2.6.5](https://github.com/cognizone/ng-cognizone/compare/v2.6.4...v2.6.5) (2022-01-24)
 
 

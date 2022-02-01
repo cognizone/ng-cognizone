@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-model",
-  "version": "0.0.1",
+  "version": "2.7.0-beta.1",
   "peerDependencies": {
     "@angular/core": ">=11.0.0",
     "@cognizone/model-utils": ">=2.0.0",
@@ -9,5 +9,26 @@
   },
   "dependencies": {
     "tslib": "^2.2.0"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    },
+    {
+      "name": "Farah El Agha",
+      "email": "farah.agha111@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git",
+    "directory": "libs/json-model"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
