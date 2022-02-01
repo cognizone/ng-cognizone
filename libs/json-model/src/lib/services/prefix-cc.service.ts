@@ -1,15 +1,39 @@
 import { Injectable } from '@angular/core';
-import { KNOWN_PREFIXES, Prefixes } from '@cognizone/model-utils';
+import { KNOWN_PREFIXES, TypedResourceContext } from '@cognizone/model-utils';
+
+import { isCurie } from '../utils';
 
 @Injectable({ providedIn: 'root' })
 export class PrefixCcService {
-  prefixes: Prefixes = KNOWN_PREFIXES;
+  globalContext: TypedResourceContext = {
+    prefix: KNOWN_PREFIXES,
+  };
 
-  patchPrefixes(prefixes: Prefixes): void {
-    this.prefixes = { ...this.prefixes, ...prefixes };
+  setGlobalContext(context: TypedResourceContext): void {
+    this.globalContext = context;
   }
 
-  setPrefixes(prefixes: Prefixes): void {
-    this.prefixes = prefixes;
+  compactUri(uri: string, context: TypedResourceContext = this.globalContext): string {
+    if (isCurie(uri)) return uri;
+    for (const [prefix, value] of Object.entries(context.prefix ?? {})) {
+      const fullPrefix = this.getFullPrefix(prefix);
+      if (uri.startsWith(value)) return uri.replace(value, fullPrefix);
+    }
+    if (context.base && uri.startsWith(context.base)) return uri.replace(context.base, '');
+    return uri;
+  }
+
+  expandUri(uri: string, context: TypedResourceContext = this.globalContext): string {
+    if (!isCurie(uri)) return uri;
+    for (const [prefix, value] of Object.entries(context.prefix ?? {})) {
+      const fullPrefix = this.getFullPrefix(prefix);
+      if (uri.startsWith(fullPrefix)) return uri.replace(fullPrefix, value);
+    }
+    if (context.base) return `${context.base}${uri}`;
+    return uri;
+  }
+
+  private getFullPrefix(prefix: string): string {
+    return prefix.endsWith(':') ? prefix : prefix + ':';
   }
 }
