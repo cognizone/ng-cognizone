@@ -149,8 +149,7 @@ export class ResourceGraphService {
   }
 
   private shortenUri(uri: string): string {
-    const prefix = Object.entries(this.prefixCc.prefixes).find(([, value]) => uri.startsWith(value));
-    return prefix ? uri.replace(prefix[1], `${prefix[0]}:`) : uri;
+    return this.prefixCc.compactUri(uri);
   }
 
   private _resourceToJsonModel<T extends JsonModel>(data: Resource, definition?: unknown): { json: T; references: Resource['references'] } {

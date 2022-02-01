@@ -105,6 +105,7 @@ describe('ResourceGraphService', () => {
   });
 
   it('should serialize treaty and remove unknown attribute', () => {
+    jest.spyOn(console, 'warn').mockImplementation();
     const model = {
       '@id': 'https://fedlex.data.admin.ch/treatyProcess/9999/5414',
       '@type': 'TreatyProcess',
@@ -143,6 +144,7 @@ describe('ResourceGraphService', () => {
 
     const raw = spectator.service.jsonModelToResourceGraphRaw(model, treatyAp);
     expect(raw).toMatchSnapshot();
+    expect(console.warn).toHaveBeenCalled();
   });
 });
 

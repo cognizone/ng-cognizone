@@ -102,3 +102,4 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 ## Migrating from v2 to v3
 
 - JsonModel and related types, services and utilities have been moved to @cognizone/json-model, so this library need to be added and imports need to be adapted
+- `JsonModel::@context` is not the same at all following same typing anymore. If ever you were using rootUri or isNew in there, you will need to find another way to get those info.
