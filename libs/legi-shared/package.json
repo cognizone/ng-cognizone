@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/legi-shared",
-  "version": "2.7.0-beta.1",
+  "version": "2.7.0-beta.2",
   "peerDependencies": {
     "@angular/common": ">=11.0.0",
     "@angular/core": ">=11.0.0",

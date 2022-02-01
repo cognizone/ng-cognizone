@@ -1,3 +1,10 @@
+# [2.7.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v2.7.0-beta.1...v2.7.0-beta.2) (2022-02-01)
+
+
+### Bug Fixes
+
+* trigger release again ([3b094b4](https://github.com/cognizone/ng-cognizone/commit/3b094b467cfe5c41c7b232891bcb537839153141))
+
 # [2.7.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v2.6.5...v2.7.0-beta.1) (2022-02-01)
 
 
