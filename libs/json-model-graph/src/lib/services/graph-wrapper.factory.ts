@@ -9,8 +9,8 @@ import { NodeWrapper } from './node-wrapper';
 export class GraphWrapperFactory {
   constructor(private graphService: GraphService, private jsonModelService: JsonModelService) {}
 
-  getWrapper(rootUri: string, apName: string): GraphWrapper {
-    return new GraphWrapper(this.graphService, this.jsonModelService, rootUri, apName);
+  getWrapper(rootUri: string): GraphWrapper {
+    return new GraphWrapper(this.graphService, this.jsonModelService, rootUri);
   }
 
   getNodeWrapper<T extends JsonModel>(rootUri: string, nodeUri: string): NodeWrapper<T> {

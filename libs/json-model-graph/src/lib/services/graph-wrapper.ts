@@ -6,12 +6,7 @@ import { Observable } from 'rxjs';
 import { GraphService } from './graph.service';
 
 export class GraphWrapper {
-  constructor(
-    private graphService: GraphService,
-    private jsonModelService: JsonModelService,
-    public rootUri: string,
-    private apName: string
-  ) {}
+  constructor(private graphService: GraphService, private jsonModelService: JsonModelService, public rootUri: string) {}
 
   getNode<T extends JsonModel>(nodeUri: Uri<T>): Observable<JsonModelFlat<T>> {
     return this.graphService.getNode<T>(this.rootUri, nodeUri);
@@ -34,7 +29,7 @@ export class GraphWrapper {
   }
 
   createNewJsonModel<T extends JsonModel>(types: Many<string>): JsonModelFlat<T> {
-    return this.jsonModelService.createNewJsonModel(types, this.apName, this.rootUri) as JsonModelFlat<T>;
+    return this.jsonModelService.createNewJsonModel(types, this.getDefinition(), this.rootUri) as JsonModelFlat<T>;
   }
 
   update(...nodes: JsonModel[]): void {
@@ -82,5 +77,9 @@ export class GraphWrapper {
       reference['@id'] = referenceUri;
     }
     return [updatedNode, reference];
+  }
+
+  getDefinition(): unknown {
+    return this.graphService.getDefinition(this.rootUri);
   }
 }

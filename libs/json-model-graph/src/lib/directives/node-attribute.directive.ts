@@ -1,5 +1,5 @@
-import { Attribute, ChangeDetectorRef, Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
-import { ApHelper } from '@cognizone/ng-application-profile';
+import { Attribute, ChangeDetectorRef, Directive, Inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from '@cognizone/json-model';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { snakeCase } from 'lodash-es';
 
@@ -18,7 +18,8 @@ export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
     private readonly viewContainer: ViewContainerRef,
     private readonly logger: Logger,
     private readonly cdr: ChangeDetectorRef,
-    private readonly apHelper: ApHelper,
+    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
+    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
     private readonly rootUriDirective: RootUriDirective,
     private readonly nodeUriDirective: NodeUriDirective,
     @Attribute('formGroupName') private readonly formGroupName?: string,
@@ -48,7 +49,11 @@ export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
   }
 
   private get existsInAp(): boolean {
-    return this.apHelper.hasProperty(this.rootUriDirective.apName, this.nodeUriDirective.type, this.attributeKey);
+    return this.dataModelDefinitionHelper.hasProperty(
+      this.rootUriDirective.getWrapper().getDefinition(),
+      this.nodeUriDirective.type,
+      this.attributeKey
+    );
   }
 
   private clear(): void {
