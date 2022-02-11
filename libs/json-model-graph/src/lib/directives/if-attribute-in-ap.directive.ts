@@ -1,5 +1,5 @@
-import { Attribute, ChangeDetectorRef, Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
-import { ApHelper } from '@cognizone/ng-application-profile';
+import { Attribute, ChangeDetectorRef, Directive, Inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+import { DataModelDefinitionHelper, DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
 import { NodeUriDirective } from './node-uri.directive';
@@ -17,7 +17,8 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
     private readonly viewContainer: ViewContainerRef,
     private readonly logger: Logger,
     private readonly cdr: ChangeDetectorRef,
-    private readonly apHelper: ApHelper,
+    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
+    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
     private readonly nodeUriDirective: NodeUriDirective,
     private readonly rootUriDirective: RootUriDirective,
     @Attribute('formGroupName') private readonly formGroupName?: string,
@@ -34,14 +35,16 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
   }
 
   private renderIfExistsInAP(): void {
-    const hasAttribute = this.apHelper.hasProperty(this.rootUriDirective.apName, this.nodeUriDirective.type, this.attributeKey);
+    const hasAttribute = this.dataModelDefinitionHelper.hasProperty(
+      this.rootUriDirective.getWrapper().getDefinition(),
+      this.nodeUriDirective.type,
+      this.attributeKey
+    );
     if (hasAttribute) {
       this.viewContainer.createEmbeddedView(this.templateRef);
     } else {
       this.logger.info(
-        `Attribute '${this.attributeKey}' is not present in profile of class '${this.nodeUriDirective.typeProfile.classIds.join(
-          ', '
-        )}', not rendering`
+        `Attribute '${this.attributeKey}' is not present in profile of class '${this.nodeUriDirective.type}', not rendering`
       );
       this.viewContainer.clear();
     }
