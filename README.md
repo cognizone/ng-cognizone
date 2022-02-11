@@ -55,6 +55,29 @@ Libraries are shareable across libraries and applications. They can be imported 
 
 `nx generate library <LIB_NAME> --buildable --publishable --importPath="@cognizone/<LIB_NAME>"`
 
+## Developing in an external app
+
+Chances are, you're adding a feature or resolving a bug for an app, so here is how to "connect" the lib dev to the actual app.
+
+- copy the file `tools\link-lib\start-lib.config.example.json` and name that copy `tasks\start-lib.config.json`. You can adapt this file as follow:
+
+```jsonc
+{
+  "appPath": "E:/your/project/path/frontend", // absolute path to the root of the frontend app you're working on
+  "libs": ["legi-shared"] // the list of libs you are currently working on, those are the name of the folders inside /projects/libs
+}
+```
+
+- First, make sure to disable cache in your project, under your project's directory, run `ng config cli.cache.enabled false`
+
+- Now you can open 2 terminals in the root of the lib, and you will run both `npm run start:build` and `npm run start:sync`
+-
+- Once the npm run start:build has stabilized, you can run your classic `npm start` in your favorite app, it was already running
+
+- make sure to stop/restart your `npm start` every time you need to update your project with latest changes
+
+And there you have it, now make sure to restart your project compiler whenever you make changes in library
+
 ## Development server
 
 Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
