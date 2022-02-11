@@ -1,9 +1,8 @@
-import { ChangeDetectorRef, Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import { ApHelper, ApplicationProfile, ApService, TypeProfile } from '@cognizone/ng-application-profile';
+import { ChangeDetectorRef, Directive, Inject, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from '@cognizone/json-model';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { GraphService } from '../services/graph.service';
-
 import { RootUriDirective } from './root-uri.directive';
 
 @Directive({
@@ -20,25 +19,17 @@ export class NodeUriDirective extends OnDestroy$ {
     this.onUriChange();
   }
 
-  ap!: ApplicationProfile;
-
-  typeProfile!: TypeProfile;
-
   type!: string;
 
   private _uri!: string;
-
-  private get apName(): string {
-    return this.rootUriDirective.apName;
-  }
 
   constructor(
     private readonly rootUriDirective: RootUriDirective,
     private readonly templateRef: TemplateRef<unknown>,
     private readonly viewContainer: ViewContainerRef,
     private readonly cdr: ChangeDetectorRef,
-    private readonly apService: ApService,
-    private readonly apHelper: ApHelper,
+    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
+    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
     private readonly graphService: GraphService
   ) {
     super();
@@ -51,10 +42,7 @@ export class NodeUriDirective extends OnDestroy$ {
     }
 
     const node = this.graphService.getNodeSnapshot(this.rootUriDirective.rootUri, this.uri);
-    const ap = this.apService.getAp(this.apName);
-    this.ap = ap;
-    this.typeProfile = this.apHelper.getTypeProfile(ap, node['@type']);
-    this.type = this.apHelper.getConcreteType(ap, node['@type']);
+    this.type = this.dataModelDefinitionHelper.getConcreteType(this.rootUriDirective.definition, node['@type']);
     this.render(true);
   }
 

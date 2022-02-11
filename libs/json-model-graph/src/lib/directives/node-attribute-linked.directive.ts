@@ -1,9 +1,8 @@
 import { Directive, ElementRef, Host, Inject, Input, OnChanges, Optional } from '@angular/core';
 import { AbstractControl, ControlContainer, NgControl } from '@angular/forms';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
-import { isJsonModel, JsonModel } from '@cognizone/json-model';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, isJsonModel, JsonModel } from '@cognizone/json-model';
 import { Many } from '@cognizone/model-utils';
-import { ApHelper } from '@cognizone/ng-application-profile';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
 import { GraphAndControlLinkingService } from '../services/graph-and-control-linking.service';
@@ -40,7 +39,8 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
   }
 
   constructor(
-    private readonly apHelper: ApHelper,
+    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
+    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
     private readonly graphService: GraphService,
     private readonly graphControlService: GraphAndControlLinkingService,
     private readonly rootUriDirective: RootUriDirective,
@@ -83,7 +83,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
         nodeUri: this.nodeUri,
         attributeKey: this.attributeKey as keyof JsonModel,
         control: this.control,
-        apName: this.rootUriDirective.apName,
+        definition: this.rootUriDirective.definition,
         cvName: this.cvName,
         classId: this.classId,
       })
@@ -114,7 +114,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
       if (o['@id'] === uri) return path;
       if (alreadySeenUris.includes(o['@id'])) return undefined;
       for (const [key, value] of Object.entries(o)) {
-        const type = this.apHelper.getConcreteType(this.nodeUriDirective.ap, o['@type']);
+        const type = this.dataModelDefinitionHelper.getConcreteType(this.rootUriDirective.definition, o['@type']);
         const foundPath = this.findUriPath(value, uri, [...path, this.getPartialPath(o['@id'], type, key)], [...alreadySeenUris, o['@id']]);
         if (foundPath) return foundPath;
       }

@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, JsonModel, JsonModelService } from '@cognizone/json-model';
 import { CvService } from '@cognizone/legi-cv';
 import { Many, manyToArray } from '@cognizone/model-utils';
-import { JsonModel, JsonModelService } from '@cognizone/json-model';
-import { ApHelper, ApService } from '@cognizone/ng-application-profile';
 import produce from 'immer';
 import { isEqual } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
@@ -18,8 +17,8 @@ export class GraphAndControlLinkingService {
     private cvService: CvService,
     private jsonModelService: JsonModelService,
     private fb: FormBuilder,
-    private apHelper: ApHelper,
-    private apService: ApService
+    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
+    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>
   ) {}
 
   /**
@@ -32,7 +31,7 @@ export class GraphAndControlLinkingService {
     nodeUri,
     attributeKey,
     control,
-    apName,
+    definition,
     cvName,
     classId,
     emitEventFromNodeToForm,
@@ -52,8 +51,8 @@ export class GraphAndControlLinkingService {
             draft[attributeKey] = value ?? undefined;
           })
         );
-        if (this.isReference({ apName, attributeKey: attributeKey as keyof JsonModel, nodeUri, rootUri })) {
-          const references = await this.addReferencesInGraph(value, { apName, cvName, classId, rootUri });
+        if (this.isReference({ definition, attributeKey: attributeKey as keyof JsonModel, nodeUri, rootUri })) {
+          const references = await this.addReferencesInGraph(value, { definition, cvName, classId, rootUri });
           allUpdatedNodes.push(...references);
         }
 
@@ -96,18 +95,18 @@ export class GraphAndControlLinkingService {
   }
 
   private isReference({
-    apName,
+    definition,
     attributeKey,
     nodeUri,
     rootUri,
-  }: Pick<LinkControlToNodeAttributeOptions<JsonModel>, 'apName' | 'attributeKey' | 'nodeUri' | 'rootUri'>): boolean {
+  }: Pick<LinkControlToNodeAttributeOptions<JsonModel>, 'definition' | 'attributeKey' | 'nodeUri' | 'rootUri'>): boolean {
     const node = this.graphService.getNodeSnapshot(rootUri, nodeUri);
-    return this.apHelper.isReference(apName, node['@type'], attributeKey);
+    return this.dataModelDefinitionHelper.isReference(definition, node['@type'], attributeKey);
   }
 
   private async addReferencesInGraph(
     value: Many<string>,
-    { rootUri, apName, cvName, classId }: LinkReferenceOptions
+    { rootUri, definition, cvName, classId }: LinkReferenceOptions
   ): Promise<JsonModel[]> {
     const graph = this.graphService.getGraphSnapshot(rootUri);
     const newModels: JsonModel[] = [];
@@ -120,7 +119,7 @@ export class GraphAndControlLinkingService {
       if (graph.models[uri] || !uri) continue;
       const actualClassId = classId ?? (await this.getClassId(uri, cvName as Many<string>));
 
-      const model = this.jsonModelService.createNewJsonModel(actualClassId, apName, rootUri);
+      const model = this.jsonModelService.createNewJsonModel(actualClassId, definition, rootUri);
       model['@id'] = uri;
       newModels.push(model);
     }
@@ -153,7 +152,7 @@ export class GraphAndControlLinkingService {
 
 export interface LinkReferenceOptions {
   rootUri: string;
-  apName: string;
+  definition: unknown;
   cvName?: Many<string>;
   classId?: string;
 }
@@ -163,7 +162,7 @@ export interface LinkControlToNodeAttributeOptions<T> {
   nodeUri: string;
   attributeKey: keyof T;
   control: AbstractControl;
-  apName: string;
+  definition: unknown;
   cvName?: Many<string>;
   classId?: string;
   emitEventFromNodeToForm?: boolean;

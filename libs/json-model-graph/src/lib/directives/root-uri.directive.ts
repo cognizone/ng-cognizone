@@ -13,12 +13,12 @@ export class RootUriDirective {
   rootUri!: string;
 
   @Input()
-  apName!: string;
+  definition!: unknown;
 
   constructor(private graphWrapperFactory: GraphWrapperFactory) {}
 
   getWrapper(): GraphWrapper {
-    return this.graphWrapperFactory.getWrapper(this.rootUri, this.apName);
+    return this.graphWrapperFactory.getWrapper(this.rootUri, this.definition);
   }
 
   getNodeWrapper<T extends JsonModel>(nodeUri: Uri<T>): NodeWrapper<T> {

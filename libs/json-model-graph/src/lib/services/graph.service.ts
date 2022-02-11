@@ -70,9 +70,9 @@ export class GraphService {
     this.store.dispatch(new UpdateNode(rootUri, models));
   }
 
-  setGraph<T extends JsonModel>(model: T, apName: string): Observable<unknown> {
+  setGraph<T extends JsonModel>(model: T, definition: unknown): Observable<unknown> {
     const flat = this.jsonModelService.toFlatGraph(model);
-    return this.store.dispatch(new SetGraph(flat, apName));
+    return this.store.dispatch(new SetGraph(flat, definition));
   }
 
   reset(): Observable<void> {
@@ -92,8 +92,8 @@ export class GraphService {
       delete draft.models[sourceUri];
       draft.models[targetUri]['@id'] = targetUri;
     });
-    const apName = this.state.apName[sourceUri];
-    this.store.dispatch(new SetGraph(copy, apName));
+    const definition = this.state.definitions[sourceUri];
+    this.store.dispatch(new SetGraph(copy, definition));
 
     return targetUri;
   }

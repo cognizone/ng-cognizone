@@ -21,8 +21,8 @@ export interface GraphStateModel {
   linkedGraphs: {
     [uri: string]: JsonModel;
   };
-  apName: {
-    [uri: string]: string;
+  definitions: {
+    [uri: string]: unknown;
   };
 }
 
@@ -33,7 +33,7 @@ export const GRAPH_STATE_TOKEN = new StateToken<GraphStateModel>('cz_graph');
   defaults: {
     graphs: {},
     linkedGraphs: {},
-    apName: {},
+    definitions: {},
   },
 })
 @Injectable()
@@ -43,12 +43,12 @@ export class GraphState {
   }
 
   @Action(SetGraph)
-  setGraph(ctx: StateContext<GraphStateModel>, { graph, apName }: SetGraph): void {
+  setGraph(ctx: StateContext<GraphStateModel>, { graph, definition }: SetGraph): void {
     ctx.setState(
       produce(ctx.getState(), draft => {
-        draft.apName[graph.rootUri] = apName;
+        draft.definitions[graph.rootUri] = definition;
         draft.graphs[graph.rootUri] = { graph, status: 'pristine' };
-        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[graph.rootUri].graph, apName);
+        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[graph.rootUri].graph, definition);
         draft.linkedGraphs[graph.rootUri] = linkedGraph;
       })
     );
@@ -60,7 +60,7 @@ export class GraphState {
       produce(ctx.getState(), draft => {
         delete draft.graphs[rootUri];
         delete draft.linkedGraphs[rootUri];
-        delete draft.apName[rootUri];
+        delete draft.definitions[rootUri];
       })
     );
   }
@@ -76,7 +76,7 @@ export class GraphState {
         });
 
         draft.graphs[rootUri].status = 'touched';
-        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[rootUri].graph, draft.apName[rootUri]);
+        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[rootUri].graph, draft.definitions[rootUri]);
         draft.linkedGraphs[rootUri] = linkedGraph;
       })
     );
@@ -84,6 +84,6 @@ export class GraphState {
 
   @Action(Reset)
   reset({ setState }: StateContext<GraphStateModel>): void {
-    setState({ graphs: {}, linkedGraphs: {}, apName: {} });
+    setState({ graphs: {}, linkedGraphs: {}, definitions: {} });
   }
 }

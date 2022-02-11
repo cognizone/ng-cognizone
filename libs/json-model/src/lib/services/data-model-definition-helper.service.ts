@@ -9,6 +9,7 @@ export interface DataModelDefinitionHelper<T> {
   isRequired(definition: T, type: Many<string>, propertyKey: string): boolean;
   getTargetType(definition: T, type: Many<string>, propertyKey: string): string[];
   getProperties(definition: T, type: Many<string>): string[];
+  getConcreteType(definition: T, type: Many<string>): string;
 }
 
 export const DATA_MODEL_DEFINITION_HELPER_TOKEN = new InjectionToken<DataModelDefinitionHelper<unknown>>('DataModelDefinitionHelper');

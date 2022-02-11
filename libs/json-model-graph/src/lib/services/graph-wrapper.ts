@@ -10,7 +10,7 @@ export class GraphWrapper {
     private graphService: GraphService,
     private jsonModelService: JsonModelService,
     public rootUri: string,
-    private apName: string
+    private definition: unknown
   ) {}
 
   getNode<T extends JsonModel>(nodeUri: Uri<T>): Observable<JsonModelFlat<T>> {
@@ -34,7 +34,7 @@ export class GraphWrapper {
   }
 
   createNewJsonModel<T extends JsonModel>(types: Many<string>): JsonModelFlat<T> {
-    return this.jsonModelService.createNewJsonModel(types, this.apName, this.rootUri) as JsonModelFlat<T>;
+    return this.jsonModelService.createNewJsonModel(types, this.definition, this.rootUri) as JsonModelFlat<T>;
   }
 
   update(...nodes: JsonModel[]): void {
