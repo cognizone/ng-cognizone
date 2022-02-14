@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/cognizone/ng-cognizone/compare/v2.6.5...v2.7.0) (2022-02-14)
+
+
+### Features
+
+* **elastic explorer:** adding documentation for cognizone elastic explorer[#10560](https://github.com/cognizone/ng-cognizone/issues/10560) ([a254cc7](https://github.com/cognizone/ng-cognizone/commit/a254cc716dd2402455da1678055cb0371977a154))
+
 ## [2.6.5](https://github.com/cognizone/ng-cognizone/compare/v2.6.4...v2.6.5) (2022-01-24)
 
 
