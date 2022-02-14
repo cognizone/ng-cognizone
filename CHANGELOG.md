@@ -1,3 +1,15 @@
+# [3.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2022-02-14)
+
+
+### chore
+
+* **json-model-graph:** make the lib independent from Ap ([1640de3](https://github.com/cognizone/ng-cognizone/commit/1640de36b7857c26f96e3dd522620fb3b10fa684))
+
+
+### BREAKING CHANGES
+
+* **json-model-graph:** removed RootUriDirective:apName, since it was already available from the graph state
+
 # [3.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v2.7.0-beta.2...v3.0.0-beta.1) (2022-02-14)
 
 
