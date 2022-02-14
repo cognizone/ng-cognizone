@@ -1,3 +1,10 @@
+# [3.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.2...v3.0.0-beta.3) (2022-02-14)
+
+
+### Features
+
+* **elastic explorer:** adding documentation for cognizone elastic explorer[#10560](https://github.com/cognizone/ng-cognizone/issues/10560) ([a254cc7](https://github.com/cognizone/ng-cognizone/commit/a254cc716dd2402455da1678055cb0371977a154))
+
 # [3.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2022-02-14)
 
 ### chore
