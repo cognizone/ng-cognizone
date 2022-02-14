@@ -141,5 +141,9 @@
       "@commitlint/config-conventional"
     ]
   },
-  "prettier": "./libs/prettier-config/index.json"
+  "prettier": "./libs/prettier-config/index.json",
+  "volta": {
+    "node": "16.14.0",
+    "npm": "8.5.0"
+  }
 }
