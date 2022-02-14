@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/i18n-transloco",
-  "version": "2.7.0-beta.2",
+  "version": "3.0.0-beta.1",
   "peerDependencies": {
     "@angular/core": ">=11.0.0",
     "@cognizone/i18n": ">=2.0.0",

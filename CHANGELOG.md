@@ -1,3 +1,18 @@
+# [3.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v2.7.0-beta.2...v3.0.0-beta.1) (2022-02-14)
+
+
+### Features
+
+* **json-model:** added more capabilities to PrefixCcService ([66cb86e](https://github.com/cognizone/ng-cognizone/commit/66cb86e450b96ef54cc9125f6e21a318ce3d1fe5))
+* **json-model:** use new [@context](https://github.com/context) typed as TypedResourceContext ([a87f8c4](https://github.com/cognizone/ng-cognizone/commit/a87f8c4945e4e8a4a640e8bdf1a36d079e25385d))
+
+
+### BREAKING CHANGES
+
+* **json-model:** @context is now set as TypedResourceContext, which is more feature-ful than the old type.
+It is expected that the old @context was not used by consumers, it was there for legacy and debugging purposes. This is getting use
+closer to the json-ld spec (but still not there).
+
 # [2.7.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v2.7.0-beta.1...v2.7.0-beta.2) (2022-02-01)
 
 
