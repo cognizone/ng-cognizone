@@ -45,7 +45,8 @@
     "help": "nx help",
     "cz": "cz",
     "prepare": "husky install",
-    "build-tools": "tsc tools/executors/build-assets/impl.ts"
+    "build-tools": "tsc tools/executors/build-assets/impl.ts",
+    "lint-test": "eslint **/*.{ts,js,css,scss,md,html}"
   },
   "private": true,
   "dependencies": {
@@ -122,6 +123,7 @@
     "husky": "^6.0.0",
     "jest": "27.0.3",
     "jest-preset-angular": "9.0.3",
+    "lint-staged": "^12.3.4",
     "ng-packagr": "12.2.1",
     "prettier": "2.3.1",
     "rimraf": "^3.0.2",
@@ -139,6 +141,12 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{ts,js,css,scss,md,html}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "prettier": "./libs/prettier-config/index.json"
