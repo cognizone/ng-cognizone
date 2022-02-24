@@ -1,27 +1,24 @@
 import { Directive, Input } from '@angular/core';
 import { JsonModel, Uri } from '@cognizone/json-model';
 
-import { GraphFormContextService } from '../services';
-import { GraphWrapper } from '../services/graph-wrapper';
-import { GraphWrapperFactory } from '../services/graph-wrapper.factory';
-import { NodeWrapper } from '../services/node-wrapper';
+import { UrisStoreService, GraphWrapper, GraphWrapperFactory, NodeWrapper } from '../services';
 
 @Directive({
   selector: '[czRootUri]',
-  providers: [GraphFormContextService],
+  providers: [UrisStoreService],
 })
 export class RootUriDirective {
   @Input('czRootUri')
   set rootUri(uri: string) {
-    this.graphFormContextService.rootUri = uri;
-    this.graphFormContextService.nodeUri = uri;
+    this.urisStoreService.rootUri = uri;
+    this.urisStoreService.nodeUri = uri;
   }
 
   get rootUri(): string {
-    return this.graphFormContextService.rootUri;
+    return this.urisStoreService.rootUri;
   }
 
-  constructor(private graphWrapperFactory: GraphWrapperFactory, private graphFormContextService: GraphFormContextService) {}
+  constructor(private graphWrapperFactory: GraphWrapperFactory, private urisStoreService: UrisStoreService) {}
 
   /**
    * @deprecated use `GraphFormContextService::getWrapper` instead to the same effect

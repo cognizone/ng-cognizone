@@ -1,11 +1,12 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Inject, Input, OnInit, Optional } from '@angular/core';
-import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, Input, OnInit, Optional, Self } from '@angular/core';
+import { ControlContainer, FormControl, NgControl } from '@angular/forms';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
 import { Moment } from 'moment';
+import { bindControls, extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 
 import { DatePickerType } from './models/date-picker-type';
 
@@ -25,7 +26,6 @@ const moment = _moment;
   selector: 'cz-date-picker',
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.scss'],
-  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => DatePickerComponent), multi: true }],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DatePickerComponent extends ControlComponent<Date | null> implements OnInit {
@@ -57,17 +57,28 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
     logger: Logger,
     cdr: ChangeDetectorRef,
-    @Optional() controlContainer: ControlContainer
+    @Optional() controlContainer: ControlContainer,
+    @Optional() @Self() private ngControl?: NgControl
   ) {
     super(logger, cdr, controlContainer);
+    if (this.ngControl) {
+      this.ngControl.valueAccessor = this;
+    }
   }
 
   /**
    * @ignore
    */
   ngOnInit(): void {
+    this.controlChanged.complete();
     this.embeddedControl = new FormControl(null, { updateOn: this.updateOnBlur ? 'blur' : 'change' });
     super.ngOnInit();
+    if (this.ngControl) {
+      const control = extractControlFromNgControl(this.ngControl);
+      // FIXME Will not work nicely in all cases for validators, because `control` works with `Date`, and `embeddedControl` works with `Moment` (usually)
+      bindControls(control, this.embeddedControl, this.cdr);
+      this.embeddedControl.setValue(control.value, { emitEvent: false });
+    }
   }
 
   /**
@@ -100,23 +111,3 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     return value.toDate();
   }
 }
-
-// constructor(
-//   logger: Logger,
-//   cdr: ChangeDetectorRef,
-//   @Optional() controlContainer: ControlContainer,
-//   @Optional() @Self() private ngControl?: NgControl
-// ) {
-//   super(logger, cdr, controlContainer);
-//   if (this.ngControl != null) {
-//     this.ngControl.valueAccessor = this;
-//   }
-// }
-
-// ngOnInit(): void {
-//   this.embeddedControl = new FormControl(null, { updateOn: this.updateOnBlur ? 'blur' : 'change' });
-//   super.ngOnInit();
-//   if (!this.ngControl) return;
-//   const control = extractControlFromNgControl(this.ngControl);
-//   this.embeddedControl.validator = () => control.validator?.(control) ?? null;
-// }

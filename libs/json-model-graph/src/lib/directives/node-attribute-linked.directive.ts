@@ -5,10 +5,7 @@ import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, isJsonMo
 import { Many } from '@cognizone/model-utils';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
-import { GraphWrapper } from '../services';
-import { GraphAndControlLinkingService } from '../services/graph-and-control-linking.service';
-import { GraphFormContextService } from '../services/graph-form-context.service';
-import { GraphService } from '../services/graph.service';
+import { GraphWrapper, GraphAndControlLinkingService, GraphService, UrisStoreService } from '../services';
 
 @Directive({
   selector: '[czNodeAttributeLinked]',
@@ -31,11 +28,11 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
   classId?: string;
 
   get rootUri(): string {
-    return this.graphFormContextService.rootUri;
+    return this.urisStoreService.rootUri;
   }
 
   get nodeUri(): string {
-    return this.graphFormContextService.nodeUri;
+    return this.urisStoreService.nodeUri;
   }
 
   constructor(
@@ -43,7 +40,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private readonly graphService: GraphService,
     private readonly graphControlService: GraphAndControlLinkingService,
-    private readonly graphFormContextService: GraphFormContextService,
+    private readonly urisStoreService: UrisStoreService,
     @Inject(DEVTOOLS_ENABLED_TOKEN) private readonly devtoolsEnabled: boolean,
     private logger: Logger,
     @Optional() private elRef?: ElementRef<Comment | HTMLElement | undefined>,
@@ -82,7 +79,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
         nodeUri: this.nodeUri,
         attributeKey: this.attributeKey as keyof JsonModel,
         control: this.control,
-        definition: this.graphFormContextService.getWrapper().getDefinition(),
+        definition: this.urisStoreService.getWrapper().getDefinition(),
         cvName: this.cvName,
         classId: this.classId,
       })
@@ -103,9 +100,9 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     const rootUri = this.rootUri;
     const nodeUri = this.nodeUri;
     const fullGraph = this.graphService.getLinkedGraphSnapshot(rootUri);
-    const wrapper = this.graphFormContextService.getWrapper();
+    const wrapper = this.urisStoreService.getWrapper();
     const path = this.findUriPath(fullGraph, nodeUri, wrapper) as string[];
-    path.push(this.getPartialPath(this.nodeUri, this.graphFormContextService.type, this.attributeKey));
+    path.push(this.getPartialPath(this.nodeUri, this.urisStoreService.type, this.attributeKey));
     return path;
   }
 

@@ -5,7 +5,7 @@ import { GraphWrapper } from './graph-wrapper';
 import { GraphWrapperFactory } from './graph-wrapper.factory';
 
 @Injectable()
-export class GraphFormContextService {
+export class UrisStoreService {
   get rootUri(): string {
     return this._rootUri ?? this.parent?.rootUri;
   }
@@ -29,7 +29,7 @@ export class GraphFormContextService {
     private dataModelDefinitionHelper: DataModelDefinitionHelper,
     @Optional()
     @SkipSelf()
-    private parent?: GraphFormContextService
+    private parent?: UrisStoreService
   ) {}
 
   getWrapper(): GraphWrapper {
