@@ -1,9 +1,8 @@
 import { Attribute, ChangeDetectorRef, Directive, Inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
-import { DataModelDefinitionHelper, DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from '@cognizone/json-model';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
-import { NodeUriDirective } from './node-uri.directive';
-import { RootUriDirective } from './root-uri.directive';
+import { GraphFormContextService } from '../services';
 
 @Directive({
   selector: '[czIfAttributeInAp]',
@@ -18,9 +17,8 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
     private readonly logger: Logger,
     private readonly cdr: ChangeDetectorRef,
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
-    private readonly nodeUriDirective: NodeUriDirective,
-    private readonly rootUriDirective: RootUriDirective,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
+    private readonly graphFormContextService: GraphFormContextService,
     @Attribute('formGroupName') private readonly formGroupName?: string,
     @Attribute('formControlName') private readonly formControlName?: string,
     @Attribute('formArrayName') private readonly formArrayName?: string
@@ -36,15 +34,15 @@ export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
 
   private renderIfExistsInAP(): void {
     const hasAttribute = this.dataModelDefinitionHelper.hasProperty(
-      this.rootUriDirective.getWrapper().getDefinition(),
-      this.nodeUriDirective.type,
+      this.graphFormContextService.getWrapper().getDefinition(),
+      this.graphFormContextService.type,
       this.attributeKey
     );
     if (hasAttribute) {
       this.viewContainer.createEmbeddedView(this.templateRef);
     } else {
       this.logger.info(
-        `Attribute '${this.attributeKey}' is not present in profile of class '${this.nodeUriDirective.type}', not rendering`
+        `Attribute '${this.attributeKey}' is not present in profile of class '${this.graphFormContextService.type}', not rendering`
       );
       this.viewContainer.clear();
     }
