@@ -2,7 +2,8 @@
 
 exports[`JsonModelService should create a new JsonModel based on directive ap 1`] = `
 Object {
-  "@id": "new-model-uri-eudossier-event-0-0",
+  "@context": undefined,
+  "@id": "http://resource/EUDossier-Event/0-0",
   "@type": Array [
     "EUDossier",
     "Event",
