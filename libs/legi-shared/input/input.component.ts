@@ -15,7 +15,7 @@ import {
 import { AbstractControl, ControlContainer, FormControl, NgControl } from '@angular/forms';
 import { MatFormField } from '@angular/material/form-field';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
-import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
+import { bindControls, extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 
 /**
@@ -99,9 +99,8 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
     this.controlChanged.complete();
     super.ngOnInit();
     if (this.ngControl) {
-      const control = extractControlFromNgControl(this.ngControl);
-      this.embeddedControl.validator = control.validator;
-      this.subSink = control.statusChanges.subscribe(() => this.embeddedControl.updateValueAndValidity());
+      const control = extractControlFromNgControl(this.ngControl) as FormControl;
+      bindControls(control, this.embeddedControl, this.cdr);
     }
   }
 
@@ -110,6 +109,7 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
    * triggered by @event blur
    */
   onBlur(event: FocusEvent): void {
+    this.onModelTouched?.();
     if (!this.model || !this.autoTrim) return;
     const newVal = this.model.trim();
     if (newVal !== this.model) this.embeddedControl.setValue(newVal);
