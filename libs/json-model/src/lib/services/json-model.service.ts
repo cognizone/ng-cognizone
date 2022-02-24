@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@angular/core';
-import { Many, manyToOne, DatatypeLong } from '@cognizone/model-utils';
+import { DatatypeLong, Many, manyToArray, manyToOne, TypedResourceContext } from '@cognizone/model-utils';
 
 import { isJsonModel, JsonModel, JsonModelFlatGraph, JsonModels } from '../models/json-model';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
@@ -10,7 +10,7 @@ import { IdGenerator } from './id-generator.service';
 export class JsonModelService {
   constructor(
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private idGenerator: IdGenerator
   ) {}
 
@@ -38,22 +38,24 @@ export class JsonModelService {
     return jsonModel;
   }
 
-  createNewJsonModel(types: Many<string>, dataModelDefinition: unknown, root?: JsonModel | string): JsonModel {
-    const uri = this.idGenerator.generateId(types);
+  createNewJsonModel(types: Many<string>, dataModelDefinition: unknown, context?: TypedResourceContext): JsonModel {
+    const compactTypes = manyToArray(types);
+    const uri = this.idGenerator.generateId(compactTypes);
     const jsonModel: JsonModel = {
       '@id': uri,
       '@type': types,
+      '@context': context,
     };
 
-    // TODO remove this part maybe?
-    this.dataModelDefinitionHelper.getProperties(dataModelDefinition, types).forEach(key => {
-      const range = this.dataModelDefinitionHelper.getTargetType(dataModelDefinition, types, key);
+    this.dataModelDefinitionHelper.getProperties(dataModelDefinition, types).forEach(propertyUri => {
+      const range = this.dataModelDefinitionHelper.getTargetType(dataModelDefinition, types, propertyUri);
       let value: unknown;
       if (range.length === 1 && manyToOne(range) === DatatypeLong.RDF_LANG_STRING) {
         value = {};
       } else {
-        value = this.dataModelDefinitionHelper.isSingle(dataModelDefinition, types, key) ? undefined : [];
+        value = this.dataModelDefinitionHelper.isSingle(dataModelDefinition, types, propertyUri) ? undefined : [];
       }
+      const key = propertyUri;
       (jsonModel as any)[key] = value;
     });
 
