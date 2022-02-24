@@ -18,7 +18,7 @@ export class GraphAndControlLinkingService {
     private jsonModelService: JsonModelService,
     private fb: FormBuilder,
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>
+    private dataModelDefinitionHelper: DataModelDefinitionHelper
   ) {}
 
   /**
@@ -78,17 +78,15 @@ export class GraphAndControlLinkingService {
           return;
         } else if (formArray.length > values.length) {
           const formValues = formArray.value as T[];
-          formValues
+          const toRemove = formValues
             .map((value, index) => (values.includes(value) ? -1 : index))
             .filter(index => index >= 0)
-            .sort((a, b) => b - a)
-            .forEach(index => formArray.removeAt(index));
+            .sort((a, b) => b - a);
+          toRemove.forEach(index => formArray.removeAt(index));
         } else {
           const formValues = formArray.value ?? ([] as T[]);
-          values
-            .map((value, index) => (formValues.includes(value) ? -1 : index))
-            .filter(index => index >= 0)
-            .forEach(index => formArray.insert(index, controlBuilder(values[index])));
+          const toAdd = values.map((value, index) => (formValues.includes(value) ? -1 : index)).filter(index => index >= 0);
+          toAdd.forEach(index => formArray.insert(index, controlBuilder(values[index])));
         }
       })
     );
@@ -118,8 +116,7 @@ export class GraphAndControlLinkingService {
     for (const uri of uris) {
       if (graph.models[uri] || !uri) continue;
       const actualClassId = classId ?? (await this.getClassId(uri, cvName as Many<string>));
-
-      const model = this.jsonModelService.createNewJsonModel(actualClassId, definition, rootUri);
+      const model = this.jsonModelService.createNewJsonModel(actualClassId, definition);
       model['@id'] = uri;
       newModels.push(model);
     }

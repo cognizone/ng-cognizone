@@ -5,10 +5,10 @@ import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, isJsonMo
 import { Many } from '@cognizone/model-utils';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
+import { GraphWrapper } from '../services';
 import { GraphAndControlLinkingService } from '../services/graph-and-control-linking.service';
+import { GraphFormContextService } from '../services/graph-form-context.service';
 import { GraphService } from '../services/graph.service';
-import { NodeUriDirective } from './node-uri.directive';
-import { RootUriDirective } from './root-uri.directive';
 
 @Directive({
   selector: '[czNodeAttributeLinked]',
@@ -31,20 +31,19 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
   classId?: string;
 
   get rootUri(): string {
-    return this.rootUriDirective.rootUri;
+    return this.graphFormContextService.rootUri;
   }
 
   get nodeUri(): string {
-    return this.nodeUriDirective.uri;
+    return this.graphFormContextService.nodeUri;
   }
 
   constructor(
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private readonly graphService: GraphService,
     private readonly graphControlService: GraphAndControlLinkingService,
-    private readonly rootUriDirective: RootUriDirective,
-    private readonly nodeUriDirective: NodeUriDirective,
+    private readonly graphFormContextService: GraphFormContextService,
     @Inject(DEVTOOLS_ENABLED_TOKEN) private readonly devtoolsEnabled: boolean,
     private logger: Logger,
     @Optional() private elRef?: ElementRef<Comment | HTMLElement | undefined>,
@@ -83,7 +82,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
         nodeUri: this.nodeUri,
         attributeKey: this.attributeKey as keyof JsonModel,
         control: this.control,
-        definition: this.rootUriDirective.getWrapper().getDefinition(),
+        definition: this.graphFormContextService.getWrapper().getDefinition(),
         cvName: this.cvName,
         classId: this.classId,
       })
@@ -101,30 +100,45 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
   }
 
   private getFullAttributePath(): string[] {
-    const rootUri = this.rootUriDirective.rootUri;
-    const nodeUri = this.nodeUriDirective.uri;
+    const rootUri = this.rootUri;
+    const nodeUri = this.nodeUri;
     const fullGraph = this.graphService.getLinkedGraphSnapshot(rootUri);
-    const path = this.findUriPath(fullGraph, nodeUri) as string[];
-    path.push(this.getPartialPath(this.nodeUri, this.nodeUriDirective.type, this.attributeKey));
+    const wrapper = this.graphFormContextService.getWrapper();
+    const path = this.findUriPath(fullGraph, nodeUri, wrapper) as string[];
+    path.push(this.getPartialPath(this.nodeUri, this.graphFormContextService.type, this.attributeKey));
     return path;
   }
 
-  private findUriPath(o: unknown, uri: string, path: string[] = [], alreadySeenUris: string[] = []): string[] | undefined {
+  private findUriPath(
+    o: unknown,
+    uri: string,
+    wrapper: GraphWrapper,
+    path: string[] = [],
+    alreadySeenUris: string[] = []
+  ): string[] | undefined {
     if (isJsonModel(o)) {
       if (o['@id'] === uri) return path;
       if (alreadySeenUris.includes(o['@id'])) return undefined;
       for (const [key, value] of Object.entries(o)) {
-        const type = this.dataModelDefinitionHelper.getConcreteType(this.rootUriDirective.getWrapper().getDefinition(), o['@type']);
-        const foundPath = this.findUriPath(value, uri, [...path, this.getPartialPath(o['@id'], type, key)], [...alreadySeenUris, o['@id']]);
+        const type = this.dataModelDefinitionHelper.getConcreteType(wrapper.getDefinition(), o['@type']);
+        const foundPath = this.findUriPath(
+          value,
+          uri,
+          wrapper,
+          [...path, this.getPartialPath(o['@id'], type, key)],
+          [...alreadySeenUris, o['@id']]
+        );
         if (foundPath) return foundPath;
       }
     } else if (Array.isArray(o)) {
       for (let i = 0; i < o.length; ++i) {
         const m = o[i];
-        const foundPath = this.findUriPath(m, uri, [...path, i.toString()], alreadySeenUris);
+        const foundPath = this.findUriPath(m, uri, wrapper, [...path, i.toString()], alreadySeenUris);
         if (foundPath) return foundPath;
       }
     }
+
+    return undefined;
   }
 
   private getPartialPath(uri: string, type: string, key: string): string {

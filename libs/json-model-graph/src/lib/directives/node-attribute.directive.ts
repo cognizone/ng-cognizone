@@ -3,8 +3,7 @@ import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from '@
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { snakeCase } from 'lodash-es';
 
-import { NodeUriDirective } from './node-uri.directive';
-import { RootUriDirective } from './root-uri.directive';
+import { GraphFormContextService } from '../services';
 
 @Directive({
   selector: '[czNodeAttribute]',
@@ -19,9 +18,8 @@ export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
     private readonly logger: Logger,
     private readonly cdr: ChangeDetectorRef,
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper<unknown>,
-    private readonly rootUriDirective: RootUriDirective,
-    private readonly nodeUriDirective: NodeUriDirective,
+    private dataModelDefinitionHelper: DataModelDefinitionHelper,
+    private readonly graphFormContextService: GraphFormContextService,
     @Attribute('formGroupName') private readonly formGroupName?: string,
     @Attribute('formControlName') private readonly formControlName?: string,
     @Attribute('formArrayName') private readonly formArrayName?: string
@@ -45,19 +43,18 @@ export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
   }
 
   private get label(): string {
-    return `model.${snakeCase(this.nodeUriDirective.type)}.${snakeCase(this.attributeKey)}`;
+    return `model.${snakeCase(this.graphFormContextService.type)}.${snakeCase(this.attributeKey)}`;
   }
 
   private get existsInAp(): boolean {
-    return this.dataModelDefinitionHelper.hasProperty(
-      this.rootUriDirective.getWrapper().getDefinition(),
-      this.nodeUriDirective.type,
-      this.attributeKey
-    );
+    const wrapper = this.graphFormContextService.getWrapper();
+    return this.dataModelDefinitionHelper.hasProperty(wrapper.getDefinition(), this.graphFormContextService.type, this.attributeKey);
   }
 
   private clear(): void {
-    this.logger.info(`Attribute '${this.attributeKey}' not present in profile of class '${this.nodeUriDirective.type}', not rendering`);
+    this.logger.info(
+      `Attribute '${this.attributeKey}' not present in profile of class '${this.graphFormContextService.type}', not rendering`
+    );
     this.viewContainer.clear();
     this.cdr.markForCheck();
   }
