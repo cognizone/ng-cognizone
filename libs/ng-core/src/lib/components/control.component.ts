@@ -71,15 +71,19 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   }
 
   ngOnInit(): void {
-    this.controlChanged.pipe(takeUntil(this.onDestroy$)).subscribe(() => {
+    this.subSink = this.controlChanged.subscribe(() => {
       this.onModelChange = noop;
       this.onModelTouched = noop;
     });
-    this.onDestroy$.subscribe(() => this.controlChanged.complete());
     this.bindEmbeddedControl();
     if (!this.name) this.computeName();
     this.logger = this.name ? this.logger.extend(this.name) : this.logger;
     this.computeRequired();
+  }
+
+  ngOnDestroy(): void {
+    super.ngOnDestroy();
+    this.controlChanged.complete();
   }
 
   writeValue(value: MODEL): void {
@@ -117,11 +121,11 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   }
 
   protected valueToEmbeddedValue(value: MODEL): EMBEDDED {
-    return (value as unknown) as EMBEDDED;
+    return value as unknown as EMBEDDED;
   }
 
   protected embeddedValueToValue(value: EMBEDDED): MODEL {
-    return (value as unknown) as MODEL;
+    return value as unknown as MODEL;
   }
 
   // depending on life-cycle of the component, those methods might not be attached yet
