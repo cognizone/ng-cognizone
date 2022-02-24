@@ -45,6 +45,9 @@
             "project": "libs/application-profile/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/application-profile/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/application-profile/tsconfig.lib.prod.json"
             }
@@ -86,6 +89,9 @@
             "project": "libs/devtools/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/devtools/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/devtools/tsconfig.lib.prod.json"
             }
@@ -489,6 +495,9 @@
             "project": "libs/i18n/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/i18n/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/i18n/tsconfig.lib.prod.json"
             }
@@ -523,6 +532,9 @@
             "project": "libs/i18n-transloco/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/i18n-transloco/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/i18n-transloco/tsconfig.lib.prod.json"
             }
@@ -595,6 +607,9 @@
             "project": "libs/json-model-graph/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/json-model-graph/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/json-model-graph/tsconfig.lib.prod.json"
             }
@@ -629,6 +644,9 @@
             "project": "libs/legi-cv/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/legi-cv/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/legi-cv/tsconfig.lib.prod.json"
             }
@@ -663,6 +681,9 @@
             "project": "libs/legi-shared/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/legi-shared/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/legi-shared/tsconfig.lib.prod.json"
             }
@@ -746,6 +767,9 @@
             "project": "libs/model-utils/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/model-utils/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/model-utils/tsconfig.lib.prod.json"
             }
@@ -780,6 +804,9 @@
             "project": "libs/ng-application-profile/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/ng-application-profile/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/ng-application-profile/tsconfig.lib.prod.json"
             }
@@ -814,6 +841,9 @@
             "project": "libs/ng-core/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/ng-core/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/ng-core/tsconfig.lib.prod.json"
             }
@@ -848,6 +878,9 @@
             "project": "libs/ng-yasgui/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/ng-yasgui/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/ng-yasgui/tsconfig.lib.prod.json"
             }
@@ -882,6 +915,9 @@
             "project": "libs/operation/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/operation/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/operation/tsconfig.lib.prod.json"
             }
@@ -916,6 +952,9 @@
             "project": "libs/permissions/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/permissions/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/permissions/tsconfig.lib.prod.json"
             }
@@ -965,6 +1004,9 @@
             "project": "libs/transloco-langstring/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/transloco-langstring/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/transloco-langstring/tsconfig.lib.prod.json"
             }
@@ -1014,6 +1056,9 @@
             "project": "libs/user-action/ng-package.json"
           },
           "configurations": {
+            "ivy": {
+              "tsConfig": "libs/user-action/tsconfig.lib.ivy.json"
+            },
             "production": {
               "tsConfig": "libs/user-action/tsconfig.lib.prod.json"
             }
