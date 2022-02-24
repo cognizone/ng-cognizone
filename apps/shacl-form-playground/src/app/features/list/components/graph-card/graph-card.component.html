@@ -1,0 +1,8 @@
+<mat-card role="link" [routerLink]="['/details', path]">
+  <mat-card-header>
+    <mat-card-title *ngIf="shortTemplate">
+      <cz-shacl-template [model]="graph" [template]="shortTemplate"> </cz-shacl-template>
+    </mat-card-title>
+    <mat-card-subtitle>{{ graph['@id'] }}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

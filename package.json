@@ -64,6 +64,7 @@
     "@angular/platform-browser": "12.2.3",
     "@angular/platform-browser-dynamic": "12.2.3",
     "@angular/router": "12.2.3",
+    "@material-icons/svg": "^1.0.5",
     "@ngneat/transloco": "^2.22.0",
     "@ngneat/transloco-locale": "^1.4.0",
     "@ngxs/devtools-plugin": "^3.7.2",
@@ -74,6 +75,7 @@
     "chokidar": "^3.5.3",
     "clipboard": "^2.0.8",
     "copyfiles": "^2.4.1",
+    "handlebars": "^4.7.7",
     "immer": "^9.0.5",
     "lodash-es": "^4.17.21",
     "material-design-icons": "^3.0.1",
@@ -147,5 +149,9 @@
       "@commitlint/config-conventional"
     ]
   },
-  "prettier": "./libs/prettier-config/index.json"
+  "prettier": "./libs/prettier-config/index.json",
+  "volta": {
+    "node": "14.19.0",
+    "npm": "6.14.16"
+  }
 }
