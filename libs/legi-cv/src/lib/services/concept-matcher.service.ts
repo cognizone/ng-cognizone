@@ -12,15 +12,24 @@ export class ConceptMatcherService {
 
   match(concept: Concept, keys: ConceptFilterableKeys, query: Nil<string>, matchType: MatchType = 'includes'): number {
     if (!query) return 1;
-    const lowerQuery = query.toLowerCase();
+    query = this.transformForComparison(query);
     const allLabels = this.getAllLabels(concept, keys);
 
     return allLabels.some(label => {
-      const lowerLabel = label.toLowerCase();
-      return matchType === 'includes' ? lowerLabel.includes(lowerQuery) : lowerLabel.startsWith(lowerQuery);
+      label = this.transformForComparison(label);
+      return matchType === 'includes' ? label.includes(query as string) : label.startsWith(query as string);
     })
       ? 1
       : 0;
+  }
+
+  /**
+   * If the api is available, it will lower case the input and remove diacritics.
+   * e.g. "Décret" => "decret"
+   */
+  transformForComparison(value: string): string {
+    const normalized = value.normalize ? value.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : value;
+    return normalized.toLowerCase();
   }
 
   getAllLabels(concept: Concept, keys: ConceptFilterableKeys): string[] {
