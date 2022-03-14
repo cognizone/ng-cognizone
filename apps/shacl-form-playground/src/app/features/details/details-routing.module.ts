@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DetailsDataResolver } from './resolvers';
+import { DetailsDataNewResolver, DetailsDataResolver } from './resolvers';
 import { DetailsView } from './views/details/details.view';
 
 const routes: Routes = [
@@ -10,10 +10,10 @@ const routes: Routes = [
     redirectTo: 'new',
   },
   {
-    path: 'new',
+    path: 'create/:type',
     component: DetailsView,
     resolve: {
-      detailsData: DetailsDataResolver,
+      detailsData: DetailsDataNewResolver,
     },
   },
   {

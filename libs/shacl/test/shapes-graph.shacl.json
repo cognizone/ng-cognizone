@@ -1,0 +1,829 @@
+{
+  "data": {
+    "uri": "ShapesGraph",
+    "type": "shacz:ShapesGraph",
+    "references": {
+      "shacz:shapes": [
+        "ShapesGraphNode",
+        "NodeShapeNode",
+        "PropertyShapeNode",
+        "PropertyGroupShapeNode",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/0-1651484362472"
+      ]
+    },
+    "attributes": {
+      "sh:name": {
+        "xsd:string": "Root Shapes"
+      }
+    }
+  },
+  "included": [
+    {
+      "uri": "ShapesGraphNode",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": ["shapes", "http://cogni.zone/data-model#/sh%3APropertyShape/0-1651224855162"]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "shacz:ShapesGraph"
+        },
+        "shacz:isRoot": {
+          "xsd:boolean": true
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{ item.[sh:name] }}"
+        }
+      }
+    },
+    {
+      "uri": "shapes",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "ShapesGroup"
+      },
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "sh:NodeShape"
+        },
+        "sh:description": {
+          "xsd:string": "Node Shapes"
+        },
+        "sh:name": {
+          "xsd:string": "Node Shapes"
+        },
+        "sh:order": {
+          "xsd:integer": 0
+        },
+        "sh:path": {
+          "rdfs:Resource": "shacz:shapes"
+        }
+      }
+    },
+    {
+      "uri": "ShapesGroup",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Node Shapes"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/0-1651224855162",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Name"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:name"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      }
+    },
+    {
+      "uri": "NodeShapeNode",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": [
+          "property",
+          "targetClass",
+          "shortTemplate",
+          "isRoot",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/1-1651066700224"
+        ]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "sh:NodeShape"
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{ item.[sh:targetClass] }}"
+        }
+      }
+    },
+    {
+      "uri": "property",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1649775760764"
+      },
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "sh:PropertyShape"
+        },
+        "sh:description": {
+          "xsd:string": "Property Shapes"
+        },
+        "sh:name": {
+          "xsd:string": "Property Shapes"
+        },
+        "sh:order": {
+          "xsd:integer": 0
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:property"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1649775760764",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Property Shapes"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        }
+      }
+    },
+    {
+      "uri": "targetClass",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772130007"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:description": {
+          "xsd:string": "The target class of this NodeShape"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "targetClass"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:targetClass"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772130007",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Model Information"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      }
+    },
+    {
+      "uri": "shortTemplate",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "The shortTemplate of this NodeShape"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "shortTemplate"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "shacz:shortTemplate"
+        },
+        "shacz:fieldType": {
+          "xsd:string": "textarea"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Presentation"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      }
+    },
+    {
+      "uri": "isRoot",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772130007"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:boolean"
+        },
+        "sh:description": {
+          "xsd:string": "Define if this NodeShape can be used as the root of a graph"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "isRoot"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "shacz:isRoot"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/1-1651066700224",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:boolean"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Deactivated"
+        },
+        "sh:order": {
+          "xsd:integer": 10
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:deactivated"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      }
+    },
+    {
+      "uri": "PropertyShapeNode",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": [
+          "class",
+          "datatype",
+          "description",
+          "group",
+          "maxCount",
+          "minCount",
+          "name",
+          "order",
+          "path",
+          "linkingStrategy",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/1-1649782219261",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651066805690",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/3-1651484584420"
+        ]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "sh:PropertyShape"
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{ item.[sh:path] }} -> {{ item.[sh:class] }}{{ item.[sh:datatype] }}"
+        }
+      }
+    },
+    {
+      "uri": "class",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772130007"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:description": {
+          "xsd:string": "The class of nodes this property is pointing to. Cannot be set alongside datatype"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "class"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:class"
+        }
+      }
+    },
+    {
+      "uri": "datatype",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772130007"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:description": {
+          "xsd:string": "The datatype of attribute this property is pointing to. Cannot be set alongside class"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "datatype"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:datatype"
+        }
+      }
+    },
+    {
+      "uri": "description",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "Description of this property"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "description"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:description"
+        },
+        "shacz:fieldType": {
+          "xsd:string": "textarea"
+        }
+      }
+    },
+    {
+      "uri": "group",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "sh:PropertyGroup"
+        },
+        "sh:description": {
+          "xsd:string": "The property group in which this property should be rendered"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Property Group"
+        },
+        "sh:order": {
+          "xsd:integer": 4
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:group"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": ["allow_create", "allow_reference"]
+        }
+      }
+    },
+    {
+      "uri": "maxCount",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772634457"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:integer"
+        },
+        "sh:description": {
+          "xsd:string": "Max cardinality of this property"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "maxCount"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:maxCount"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772634457",
+      "type": "sh:PropertyGroup",
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Validation"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        }
+      }
+    },
+    {
+      "uri": "minCount",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772634457"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:integer"
+        },
+        "sh:description": {
+          "xsd:string": "Min cardinality of this property"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "minCount"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:minCount"
+        }
+      }
+    },
+    {
+      "uri": "name",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "Name of this property"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "name"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:name"
+        }
+      }
+    },
+    {
+      "uri": "order",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:integer"
+        },
+        "sh:description": {
+          "xsd:string": "Order of this property in its given group"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "order"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:order"
+        }
+      }
+    },
+    {
+      "uri": "path",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772130007"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:description": {
+          "xsd:string": "Path of this property"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "path"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:path"
+        }
+      }
+    },
+    {
+      "uri": "linkingStrategy",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772634457"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "Describes how references are handled, can be either \"allow_create\" or \"allow_reference\". If not given, defaults to \"allow_create\""
+        },
+        "sh:maxCount": {
+          "xsd:integer": 2
+        },
+        "sh:name": {
+          "xsd:string": "Linking Strategy"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        },
+        "sh:path": {
+          "rdfs:Resource": "shacz:linkingStrategy"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/1-1649782219261",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "Field type to be used for this property (makes sense only with datatype). Possible values are 'text', 'textarea', 'bool', 'date' and 'number'. If left empty, its value is computed based on given datatype."
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Field Type"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "shacz:fieldType"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651066805690",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772762543"
+      },
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:boolean"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Deactivated"
+        },
+        "sh:order": {
+          "xsd:integer": 10
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:deactivated"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/3-1651484584420",
+      "type": "sh:PropertyShape",
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#sh%3APropertyGroup/0-1649772634457"
+      },
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "shacz:PropertyOption"
+        },
+        "sh:name": {
+          "xsd:string": "Options"
+        },
+        "sh:path": {
+          "rdfs:Resource": "shacz:option"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        },
+        "sh:order": {
+          "xsd:integer": 10
+        }
+      }
+    },
+    {
+      "uri": "PropertyGroupShapeNode",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": ["groupLabel", "groupOrder"]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "sh:PropertyGroup"
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{ item.[sh:label] }}"
+        }
+      }
+    },
+    {
+      "uri": "groupLabel",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:description": {
+          "xsd:string": "Label of this group"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "label"
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:label"
+        }
+      }
+    },
+    {
+      "uri": "groupOrder",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:integer"
+        },
+        "sh:description": {
+          "xsd:string": "Order of this group"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "order"
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:order"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/0-1651484362472",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": [
+          "http://cogni.zone/data-model#/sh%3APropertyShape/1-1651484469719",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651484539991"
+        ]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "shacz:PropertyOption"
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{label item.[sh:label]}}"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/1-1651484469719",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Value"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "shacz:value"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651484539991",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Label"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "sh:label"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      }
+    }
+  ],
+  "context": {
+    "base": "https://data.cogni.zone/model/shapes-graph/",
+    "prefix": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "sh": "http://www.w3.org/ns/shacl#",
+      "shacz": "https://data.cogni.zone/model/ui/shacl-extension/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  }
+}

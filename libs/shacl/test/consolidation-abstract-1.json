@@ -1,0 +1,92 @@
+{
+  "data": {
+    "attributes": {
+      "jolux:basicAct": {
+        "rdfs:Resource": "https://fedlex.data.admin.ch/eli/oc/2009/33"
+      },
+      "jolux:dateDocument": {
+        "xsd:date": "2004-12-07"
+      },
+      "jolux:dateEntryInForce": {
+        "xsd:date": "2008-11-19"
+      },
+      "jolux:title": {
+        "rdf:langString": {
+          "de": [
+            "Abkommen vom 7. Dezember 2004 zwischen dem Schweizerischen Bundesrat und der Regierung der Bundesrepublik Deutschland zum Vertrag vom 23. November 1964 über die Einbeziehung der Gemeinde Büsingen am Hochrhein in das schweizerische Zollgebiet über die Erhebung und die Ausrichtung eines Anteils der von der Schweiz in ihrem Staatsgebiet und im Gebiet der Gemeinde Büsingen am Hochrhein erhobenen leistungsabhängigen Schwerverkehrsabgabe (LSVA-Abkommen Büsingen) (mit Anlage)"
+          ],
+          "fr": [
+            "Accord du 7 décembre 2004 entre le Conseil fédéral suisse et le Gouvernement de la République fédérale d'Allemagne relatif au Traité du 23 novembre 1964 sur l'inclusion de la commune de Büsingen am Hochrhein dans le territoire douanier suisse concernant la perception et la rétrocession d'une part de la redevance sur le trafic des poids lourds liée aux prestations  que la Suisse perçoit sur son territoire national ainsi que sur celui de la commune de Büsingen am Hochrhein (Accord RPLP Büsingen) (avec annexe)"
+          ],
+          "it": [
+            "Accordo del 7 dicembre 2004 tra il Consiglio federale svizzero e il Governo della Repubblica federale di Germania relativo al Trattato del 23 novembre 1964 sull'inclusione del Comune di Büsingen am Hochrhein nel territorio doganale svizzero, concernente la riscossione e il versamento di una quota parte della tassa sul traffico pesante commisurata alle prestazioni riscossa dalla Svizzera sul suo territorio nazionale e su quello del Comune di Büsingen am Hochrhein (Accordo TTPCP-Büsingen) (con allegato)"
+          ]
+        }
+      },
+      "jolux:typeDocument": {
+        "rdfs:Resource": "https://fedlex.data.admin.ch/vocabulary/resource-type/31"
+      }
+    },
+    "references": {
+      "jolux:classifiedByTaxonomyEntry": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2000",
+      "jolux:isRealizedBy": [
+        "https://fedlex.data.admin.ch/eli/cc/2009/33/it",
+        "https://fedlex.data.admin.ch/eli/cc/2009/33/fr",
+        "https://fedlex.data.admin.ch/eli/cc/2009/33/de"
+      ]
+    },
+    "type": "jolux:ConsolidationAbstract",
+    "uri": "https://fedlex.data.admin.ch/eli/cc/2009/33"
+  },
+  "included": [
+    {
+      "type": "jolux:LegalTaxonomy",
+      "uri": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2000"
+    },
+    {
+      "attributes": {
+        "jolux:language": {
+          "rdfs:Resource": "http://publications.europa.eu/resource/authority/language/ITA"
+        },
+        "jolux:title": {
+          "xsd:string": "Accordo del 7 dicembre 2004 tra il Consiglio federale svizzero e il Governo della Repubblica federale di Germania relativo al Trattato del 23 novembre 1964 sull'inclusione del Comune di Büsingen am Hochrhein nel territorio doganale svizzero, concernente la riscossione e il versamento di una quota parte della tassa sul traffico pesante commisurata alle prestazioni riscossa dalla Svizzera sul suo territorio nazionale e su quello del Comune di Büsingen am Hochrhein (Accordo TTPCP-Büsingen) (con allegato)"
+        },
+        "jolux:titleAlternative": {
+          "xsd:string": "Accordo TTPCP-Büsingen"
+        }
+      },
+      "type": "jolux:Expression",
+      "uri": "https://fedlex.data.admin.ch/eli/cc/2009/33/it"
+    },
+    {
+      "attributes": {
+        "jolux:language": {
+          "rdfs:Resource": "http://publications.europa.eu/resource/authority/language/FRA"
+        },
+        "jolux:title": {
+          "xsd:string": "Accord du 7 décembre 2004 entre le Conseil fédéral suisse et le Gouvernement de la République fédérale d'Allemagne relatif au Traité du 23 novembre 1964 sur l'inclusion de la commune de Büsingen am Hochrhein dans le territoire douanier suisse concernant la perception et la rétrocession d'une part de la redevance sur le trafic des poids lourds liée aux prestations  que la Suisse perçoit sur son territoire national ainsi que sur celui de la commune de Büsingen am Hochrhein (Accord RPLP Büsingen) (avec annexe)"
+        },
+        "jolux:titleAlternative": {
+          "xsd:string": "Accord RPLP Büsingen"
+        }
+      },
+      "type": "jolux:Expression",
+      "uri": "https://fedlex.data.admin.ch/eli/cc/2009/33/fr"
+    },
+    {
+      "attributes": {
+        "jolux:language": {
+          "rdfs:Resource": "http://publications.europa.eu/resource/authority/language/DEU"
+        },
+        "jolux:title": {
+          "xsd:string": "Abkommen vom 7. Dezember 2004 zwischen dem Schweizerischen Bundesrat und der Regierung der Bundesrepublik Deutschland zum Vertrag vom 23. November 1964 über die Einbeziehung der Gemeinde Büsingen am Hochrhein in das schweizerische Zollgebiet über die Erhebung und die Ausrichtung eines Anteils der von der Schweiz in ihrem Staatsgebiet und im Gebiet der Gemeinde Büsingen am Hochrhein erhobenen leistungsabhängigen Schwerverkehrsabgabe (LSVA-Abkommen Büsingen) (mit Anlage)"
+        },
+        "jolux:titleAlternative": {
+          "xsd:string": "LSVA-Abkommen Büsingen"
+        }
+      },
+      "type": "jolux:Expression",
+      "uri": "https://fedlex.data.admin.ch/eli/cc/2009/33/de"
+    }
+  ]
+}

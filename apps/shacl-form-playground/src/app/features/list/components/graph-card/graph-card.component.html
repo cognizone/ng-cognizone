@@ -1,8 +1,15 @@
-<mat-card role="link" [routerLink]="['/details', path]">
+<mat-card *transloco="let t; read: 'global'">
   <mat-card-header>
     <mat-card-title *ngIf="shortTemplate">
       <cz-shacl-template [model]="graph" [template]="shortTemplate"> </cz-shacl-template>
+      - {{ graph['@type'] }}
     </mat-card-title>
-    <mat-card-subtitle>{{ graph['@id'] }}</mat-card-subtitle>
+    <mat-card-subtitle>{{ graph['@id'] | collapseUri }}</mat-card-subtitle>
   </mat-card-header>
+  <mat-card-actions align="end">
+    <a mat-flat-button color="primary" [routerLink]="['/details', graph | encodeUri]">
+      <mat-icon svgIcon="edit"></mat-icon>
+      {{ t('edit') }}
+    </a>
+  </mat-card-actions>
 </mat-card>

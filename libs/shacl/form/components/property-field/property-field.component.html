@@ -1,36 +1,67 @@
 <ng-container *ngIf="isReference">
-  <ng-container *ngFor="let uri of values$ | async; let count = count">
-    <!-- TODO use cardinality for canBeRemoved -->
-    <cz-node-form class="d-block mb-3" [nodeUri]="uri" [canBeRemoved]="true" (remove)="removeReference(uri)"></cz-node-form>
+  <div class="my-3 position-relative d-flex align-items-center">
+    <span class="czls-title">
+      {{ property['sh:name'] }} <ng-container *ngIf="(value | manyToArray).length as size">({{ size }})</ng-container>
+    </span>
+    <cz-property-description [property]="property"></cz-property-description>
+    <cz-add-reference-button
+      *ngIf="!isSingle || (isSingle && !value)"
+      [property]="property"
+      [value]="value"
+      [isSingle]="isSingle"
+      [propertyKey]="propertyKey"
+    ></cz-add-reference-button>
+  </div>
+  <ng-container *ngIf="value | manyToArray as uris">
+    <cz-node-forms
+      *ngIf="uris.length > 0"
+      class="d-block mb-3"
+      [uris]="uris"
+      [canBeRemoved]="minCount ? uris.length > minCount : true"
+      (remove)="removeReference($event)"
+    ></cz-node-forms>
   </ng-container>
-  <mat-card *ngIf="!isSingle" class="my-add-card mb-3" matRipple (click)="addReference()">
-    <div class="d-flex justify-content-center">
-      <mat-icon color="primary">add_circle</mat-icon>
-    </div>
-  </mat-card>
 </ng-container>
 
 <ng-container *ngIf="!isReference">
   <div *ngIf="isSingle" class="row">
     <cz-attribute-field
-      class="col-6 col-lg-3"
+      class="col-6"
+      [class.col-lg-3]="!isLarge"
       [czNodeAttributeLinked]="propertyKey"
       [property]="property"
       [propertyKey]="propertyKey"
       [control]="control"
+      (typeSet)="onTypeSet($event)"
     ></cz-attribute-field>
   </div>
   <fieldset *ngIf="!isSingle">
     <div class="row">
       <div class="col-12 d-flex align-items-baseline justify-content-start">
         <legend class="czls-title my-legend">{{ property['sh:name'] }}</legend>
-        <button *ngIf="!isSingle" type="button" color="primary" mat-icon-button (click)="addAttribute()"><mat-icon>add</mat-icon></button>
+        <button
+          type="button"
+          color="primary"
+          mat-icon-button
+          [disabled]="maxCount ? controls.length >= maxCount : false"
+          (click)="addAttribute()"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
       </div>
     </div>
     <div class="row">
-      <div *ngFor="let control of controls" class="col-6 col-lg-3 mt-2 d-flex align-items-baseline">
-        <cz-attribute-field [property]="property" [propertyKey]="propertyKey" [control]="control" [showLabel]="false"></cz-attribute-field>
-        <button *ngIf="controls.length > 1" type="button" mat-icon-button><mat-icon>remove_circle</mat-icon></button>
+      <div *ngFor="let control of controls; let i = index" class="col-6 mt-2 d-flex align-items-baseline" [class.col-lg-3]="!isLarge">
+        <cz-attribute-field
+          [property]="property"
+          [propertyKey]="propertyKey"
+          [control]="control"
+          [showLabel]="false"
+          (typeSet)="onTypeSet($event)"
+        ></cz-attribute-field>
+        <button *ngIf="minCount ? controls.length > minCount : true" type="button" mat-icon-button (click)="removeAttribute(i)">
+          <mat-icon>remove_circle</mat-icon>
+        </button>
       </div>
     </div>
   </fieldset>

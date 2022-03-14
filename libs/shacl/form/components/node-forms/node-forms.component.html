@@ -1,0 +1,23 @@
+<mat-accordion class="my-accordion" multi>
+  <mat-expansion-panel
+    *ngFor="let nodeUri of uris | sortUris; let isFirst = first"
+    [id]="nodeUri"
+    [expanded]="(isFirst && expandFirst) || (nodeUri | isNew)"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <cz-node-title [nodeUri]="nodeUri"></cz-node-title>
+      </mat-panel-title>
+      <mat-panel-description> uri: {{ nodeUri | collapseUri }} </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <cz-node-form [nodeUri]="nodeUri"></cz-node-form>
+    </ng-template>
+    <mat-action-row>
+      <cz-referenced-in [uri]="nodeUri"></cz-referenced-in>
+      <button [disabled]="!canBeRemoved" color="warn" type="button" mat-icon-button (click)="remove.emit(nodeUri)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

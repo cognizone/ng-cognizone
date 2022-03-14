@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, ControlContainer, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { PrefixCcService } from '@cognizone/json-model';
+import { JsonModel, PrefixCcService } from '@cognizone/json-model';
 import { GraphAndControlLinkingService, UrisStoreService } from '@cognizone/json-model-graph';
 import { manyToArray } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
-import { ShaclHelper, ShaclHelperDefinition, ShPropertyShape } from '@cognizone/shacl/core';
+import { ShaclHelper, ShaclHelperDefinition, ShaclOptionsService, ShPropertyShape } from '@cognizone/shacl/core';
 import produce from 'immer';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -23,9 +23,13 @@ export class PropertyFieldComponent extends OnDestroy$ implements OnInit {
   isSingle!: boolean;
   nodeUris: string[] = [];
   propertyKey!: string;
-  control!: FormControl;
+  control!: FormControl | FormGroup;
   formArray!: FormArray;
-  values$!: Observable<unknown[]>;
+  value?: any;
+  minCount?: number;
+  maxCount?: number;
+  // TODO remove this and add fieldSize property?
+  isLarge: boolean = false;
 
   get controls(): FormControl[] {
     return this.formArray.controls as FormControl[];
@@ -38,7 +42,8 @@ export class PropertyFieldComponent extends OnDestroy$ implements OnInit {
     private cdr: ChangeDetectorRef,
     private fb: FormBuilder,
     private graphControlService: GraphAndControlLinkingService,
-    private controlContainer: ControlContainer
+    private controlContainer: ControlContainer,
+    private shaclOptionsService: ShaclOptionsService
   ) {
     super();
   }
@@ -57,15 +62,24 @@ export class PropertyFieldComponent extends OnDestroy$ implements OnInit {
 
     this.isSingle = this.shaclHelper.isSingle(definition, type, this.propertyKey);
     this.isReference = this.shaclHelper.isReference(definition, type, this.propertyKey);
+    this.minCount = this.property['sh:minCount'];
+    this.maxCount = this.property['sh:maxCount'];
 
-    this.values$ = wrapper.getNode(nodeUri).pipe(
-      map(node => node[this.propertyKey as keyof typeof node]),
-      map(manyToArray)
-    );
+    const value$ = wrapper.getNode(nodeUri).pipe(map(node => node[this.propertyKey as keyof typeof node])) as Observable<any>;
+    this.subSink = value$.subscribe(values => {
+      this.value = values;
+      this.cdr.markForCheck();
+    });
+
     if (this.isReference) return;
+
     let control: AbstractControl;
     if (this.isSingle) {
-      this.control = this.fb.control(undefined);
+      if (this.shaclHelper.getTargetType(definition, type, this.propertyKey).includes('rdf:langString')) {
+        this.control = this.generateLangStringFormGroup();
+      } else {
+        this.control = this.fb.control(undefined);
+      }
       if (this.shaclHelper.isRequired(definition, type, this.propertyKey)) {
         this.control.addValidators(Validators.required);
       }
@@ -74,7 +88,7 @@ export class PropertyFieldComponent extends OnDestroy$ implements OnInit {
       this.formArray = this.fb.array([]);
       control = this.formArray;
       this.subSink = this.graphControlService
-        .updateFormArray(this.values$ as Observable<unknown[]>, this.formArray)
+        .updateFormArray(value$.pipe(map(manyToArray)), this.formArray)
         .subscribe(() => this.cdr.markForCheck());
       this.subSink = this.graphControlService
         .linkControlToNodeAttribute({
@@ -111,6 +125,19 @@ export class PropertyFieldComponent extends OnDestroy$ implements OnInit {
     wrapper.update(updatedNode);
   }
 
+  removeAttribute(index: number): void {
+    const wrapper = this.urisStoreService.getWrapper();
+    const nodeUri = this.urisStoreService.nodeUri;
+
+    const updatedNode = produce(wrapper.getNodeSnapshot(nodeUri), (draft: any) => {
+      if (Array.isArray(draft[this.propertyKey])) {
+        draft[this.propertyKey].splice(index, 1);
+      }
+    });
+
+    wrapper.update(updatedNode);
+  }
+
   addReference(): void {
     const wrapper = this.urisStoreService.getWrapper();
     const definition = wrapper.getDefinition() as ShaclHelperDefinition;
@@ -120,12 +147,12 @@ export class PropertyFieldComponent extends OnDestroy$ implements OnInit {
       definition.shapesGraph['@context'] ?? {},
       definition.modelContext
     );
-    const updatedNodes = wrapper.addReference(
-      wrapper.getNodeSnapshot(this.urisStoreService.nodeUri),
-      this.propertyKey as any,
-      undefined,
-      type
-    );
+    let updatedNodes: JsonModel[];
+    if (this.isSingle) {
+      updatedNodes = wrapper.setReference(wrapper.getNodeSnapshot(this.urisStoreService.nodeUri), this.propertyKey as any, undefined, type);
+    } else {
+      updatedNodes = wrapper.addReference(wrapper.getNodeSnapshot(this.urisStoreService.nodeUri), this.propertyKey as any, undefined, type);
+    }
     wrapper.update(...updatedNodes);
   }
 
@@ -134,9 +161,23 @@ export class PropertyFieldComponent extends OnDestroy$ implements OnInit {
     const nodeUri = this.urisStoreService.nodeUri;
 
     const updatedNode = produce(wrapper.getNodeSnapshot(nodeUri), (draft: any) => {
-      draft[this.propertyKey] = draft[this.propertyKey].filter((value: string) => value !== uri);
+      if (Array.isArray(draft[this.propertyKey])) {
+        draft[this.propertyKey] = draft[this.propertyKey].filter((value: string) => value !== uri);
+      } else {
+        delete draft[this.propertyKey];
+      }
     });
 
     wrapper.update(updatedNode);
+  }
+
+  onTypeSet(type: string): void {
+    this.isLarge = ['textarea', 'langString'].includes(type);
+  }
+
+  private generateLangStringFormGroup(): FormGroup {
+    const formDescriptor: { [lang: string]: FormArray } = {};
+    this.shaclOptionsService.getOptions().langStringLangs.forEach(lang => (formDescriptor[lang] = this.fb.array([this.fb.control('')])));
+    return this.fb.group(formDescriptor);
   }
 }

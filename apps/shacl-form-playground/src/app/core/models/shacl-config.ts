@@ -1,7 +1,7 @@
-import { TypedResourceContext } from '@cognizone/model-utils';
+import { Dictionary, Many, TypedResourceContext } from '@cognizone/model-utils';
 
 export interface ShaclConfig {
-  defaultContext: TypedResourceContext;
-  graphRootType: string;
-  graphRootUriBase: string;
+  appContext: TypedResourceContext;
+  newModelUriPrefix: string;
+  datatypeFieldTypeMapping: Dictionary<Many<string>>;
 }

@@ -1,3 +1,3 @@
 <ng-container [czRootUri]="graph['@id']" [formGroup]="formGroup">
-  <cz-node-form [nodeUri]="graph['@id']"></cz-node-form>
+  <cz-node-forms [uris]="[graph['@id']]" [expandFirst]="true"></cz-node-forms>
 </ng-container>

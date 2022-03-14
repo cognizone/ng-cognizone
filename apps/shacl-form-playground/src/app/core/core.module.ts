@@ -10,7 +10,7 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from '@shfp/env/environment';
 
-import { TranslocoHttpLoader } from './services';
+import { configInitProvider, graphClientInitProvider, TranslocoHttpLoader } from './services';
 
 @NgModule({
   imports: [
@@ -38,6 +38,8 @@ import { TranslocoHttpLoader } from './services';
       }),
     },
     { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },
+    configInitProvider,
+    graphClientInitProvider,
   ],
 })
 export class CoreModule {}

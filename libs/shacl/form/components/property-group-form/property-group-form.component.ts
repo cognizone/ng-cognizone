@@ -12,6 +12,6 @@ export class PropertyGroupFormComponent {
   properties!: ShPropertyShape[];
 
   get title(): string | undefined {
-    return this.properties[0]?.['sh:group']?.['sh:label'];
+    return this.properties[0]?.['sh:group']?.['sh:label']?.trim();
   }
 }

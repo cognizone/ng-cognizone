@@ -1,16 +1,29 @@
 {
   "details": {
+    "delete": "Delete",
     "save": "Save"
   },
   "global": {
+    "edit": "edit",
+    "none": "All",
     "validation": {
       "required": "This field is required"
     }
   },
   "root": {
-    "create": "Create"
+    "create": "Create",
+    "graph_type_selection": "Graph Type"
   },
   "shacl": {
-    "new_node": "New {{type}}"
+    "add_name": "Add {{name}}",
+    "add_reference": "Add reference",
+    "cancel": "Cancel",
+    "linking_strategy": {
+      "allow_create": "Create new reference",
+      "allow_reference": "Reference another node"
+    },
+    "new_node": "New {{type}}",
+    "referenced_in": "This node is referenced in:",
+    "see_references": "See where this node is referred to in this graph"
   }
 }

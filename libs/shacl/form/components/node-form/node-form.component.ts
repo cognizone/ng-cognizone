@@ -1,12 +1,10 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ControlContainer, FormBuilder, FormGroup } from '@angular/forms';
-import { JsonModel } from '@cognizone/json-model';
 import { UrisStoreService } from '@cognizone/json-model-graph';
 import { notNil } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { ShaclHelper, ShaclHelperDefinition, ShPropertyGroup, ShPropertyShape } from '@cognizone/shacl/core';
 import { groupBy } from 'lodash-es';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'cz-node-form',
@@ -18,19 +16,9 @@ export class NodeFormComponent extends OnDestroy$ implements OnInit, OnDestroy {
   @Input()
   nodeUri!: string;
 
-  @Input()
-  canBeRemoved: boolean = false;
-
-  @Output()
-  remove: EventEmitter<void> = new EventEmitter();
-
   groups!: PropertyGroup[];
 
   formGroup = this.fb.group({});
-
-  node$!: Observable<JsonModel>;
-  shortTemplate?: string;
-  type?: string;
 
   constructor(
     private urisStoreService: UrisStoreService,
@@ -49,18 +37,22 @@ export class NodeFormComponent extends OnDestroy$ implements OnInit, OnDestroy {
     const definition = wrapper.getDefinition() as ShaclHelperDefinition;
     const type = wrapper.getNodeSnapshot(this.nodeUri)['@type'];
     const properties = this.shaclHelper.getProperties(definition, type).map(p => this.shaclHelper.getPropertyShape(definition, type, p));
+    const getOrder = (x: ShPropertyShape | ShPropertyGroup | undefined) => {
+      if (!x) return Number.NEGATIVE_INFINITY;
+      const order = x['sh:order'];
+      if (!order) return Number.POSITIVE_INFINITY;
+      if (typeof order === 'string') return parseInt(order);
+      return order;
+    };
     this.groups = Object.values(groupBy(properties, p => p?.['sh:group']?.['@id']))
       .map(properties => ({
-        properties: properties.filter(notNil).sort((a, b) => (a['sh:order'] ?? -1) - (b['sh:order'] ?? -1)),
+        properties: properties
+          .filter(notNil)
+          .filter(p => !p['sh:deactivated'])
+          .sort((a, b) => getOrder(a) - getOrder(b)),
         group: properties[0]?.['sh:group'],
       }))
-      .sort((a, b) => (a.group?.['sh:order'] ?? -1) - (b.group?.['sh:order'] ?? -1));
-
-    const nodeShape = this.shaclHelper.getNodeShape(definition, type);
-    this.shortTemplate = nodeShape['shacz:shortTemplate'];
-    this.type = nodeShape['sh:targetClass'];
-
-    this.node$ = wrapper.getNode(this.nodeUri);
+      .sort((a, b) => getOrder(a.group) - getOrder(b.group));
   }
 
   ngOnDestroy(): void {

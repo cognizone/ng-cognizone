@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { JsonModel } from '@cognizone/json-model';
 import { OnDestroy$ } from '@cognizone/ng-core';
-import { ShaclHelper, ShaclHelperDefinition, ShaczShapesGraph } from '@cognizone/shacl/core';
+import { ShaclHelper } from '@cognizone/shacl/core';
 import { GraphClient } from '@shfp/core';
 
 @Component({
@@ -14,9 +14,6 @@ export class GraphCardComponent extends OnDestroy$ implements OnInit {
   @Input()
   graph!: JsonModel;
 
-  @Input()
-  shapesGraph!: ShaczShapesGraph;
-
   shortTemplate?: string;
   path!: string;
 
@@ -25,14 +22,9 @@ export class GraphCardComponent extends OnDestroy$ implements OnInit {
   }
 
   ngOnInit(): void {
-    const definition: ShaclHelperDefinition = {
-      shapesGraph: this.shapesGraph,
-      modelContext: this.graph['@context'] ?? {},
-    };
-    const nodeShape = this.shaclHelper.getNodeShape(definition, this.graph['@type']);
-    this.shortTemplate = nodeShape['shacz:shortTemplate'];
-    this.subSink = this.graphClient.config$.subscribe(config => {
-      this.path = this.graph['@id'].replace(config.graphRootUriBase, '');
+    this.subSink = this.graphClient.getShaclHelperDefinition(this.graph).subscribe(definition => {
+      const nodeShape = this.shaclHelper.getNodeShape(definition, this.graph['@type']);
+      this.shortTemplate = nodeShape['shacz:shortTemplate'];
       this.cdr.markForCheck();
     });
   }

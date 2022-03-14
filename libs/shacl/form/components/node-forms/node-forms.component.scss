@@ -1,0 +1,24 @@
+.my-accordion .mat-expansion-panel-header-title,
+.my-accordion .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.my-accordion .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+// :host {
+//   max-height: 48 * 10px;
+//   overflow-y: auto;
+//   border: 1px solid #eeeeee;
+// }
+
+cz-node-title {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}

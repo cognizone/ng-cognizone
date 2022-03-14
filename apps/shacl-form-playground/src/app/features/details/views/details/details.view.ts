@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JsonModel } from '@cognizone/json-model';
 import { GraphService } from '@cognizone/json-model-graph';
@@ -6,9 +6,8 @@ import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
 import { ShaclHelperDefinition } from '@cognizone/shacl/core';
 import { GraphFormComponent } from '@cognizone/shacl/form';
 import { GraphClient } from '@shfp/core';
-import { Observable } from 'rxjs';
 
-import { DetailsData } from '../../resolvers';
+import { DetailsData } from '../../models';
 
 @Component({
   selector: 'cz-details',
@@ -20,7 +19,7 @@ import { DetailsData } from '../../resolvers';
 export class DetailsView extends OnDestroy$ implements OnInit {
   graph!: JsonModel;
   definition!: ShaclHelperDefinition;
-  loading$!: Observable<boolean>;
+  loading: boolean = false;
 
   @ViewChild(GraphFormComponent)
   graphForm!: GraphFormComponent;
@@ -30,7 +29,8 @@ export class DetailsView extends OnDestroy$ implements OnInit {
     private graphClient: GraphClient,
     private graphService: GraphService,
     private loadingService: LoadingService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) {
     super();
   }
@@ -40,7 +40,10 @@ export class DetailsView extends OnDestroy$ implements OnInit {
     this.graph = data.graph;
     this.definition = data.definition;
 
-    this.loading$ = this.loadingService.loading$;
+    this.subSink = this.loadingService.loading$.subscribe(loading => {
+      this.loading = loading;
+      this.cdr.markForCheck();
+    });
   }
 
   save(): void {
@@ -56,5 +59,15 @@ export class DetailsView extends OnDestroy$ implements OnInit {
       // TODO prompt error message
       this.graphForm.formGroup.markAllAsTouched();
     }
+  }
+
+  delete(): void {
+    this.subSink = this.graphClient
+      .delete(this.graph['@id'])
+      .pipe(this.loadingService.asOperator())
+      .subscribe(() => {
+        this.router.navigate(['/']);
+        // TODO prompt success
+      });
   }
 }

@@ -1,39 +1,72 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { JsonModel, ResourceGraphService } from '@cognizone/json-model';
-import { Many, manyToArray, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
+import { APP_INITIALIZER, Injectable, Provider } from '@angular/core';
+import { isOfType, JsonModel, PrefixCcService, ResourceGraphService } from '@cognizone/json-model';
+import { Many, manyToArray, TypedResource, TypedResourceContext, TypedResourceGraph } from '@cognizone/model-utils';
 import { ShaclHelperDefinition, ShaczShapesGraph } from '@cognizone/shacl/core';
 import produce from 'immer';
-import { Observable, throwError, timer } from 'rxjs';
-import { delay, map, shareReplay, tap } from 'rxjs/operators';
+import { combineLatest, Observable, of, throwError, timer } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 
-import { ShaclConfig } from '../models';
+import { ConfigService } from './config.service';
 
-// TODO mix of client layer and state, should be separate
-// TODO better initialization of config and shapesGraph
 @Injectable({ providedIn: 'root' })
 export class GraphClient {
-  shapesGraph$: Observable<ShaczShapesGraph> = this.getShapesGraph().pipe(shareReplay(1));
-  config$: Observable<ShaclConfig> = this.getConfig().pipe(
-    tap(config => (this.config = config)),
-    shareReplay(1)
-  );
-
-  config!: ShaclConfig;
   private readonly localStorageKey: string = 'shaclGraphs';
 
-  constructor(private http: HttpClient, private resourceGraphService: ResourceGraphService) {}
+  constructor(
+    private http: HttpClient,
+    private resourceGraphService: ResourceGraphService,
+    private configService: ConfigService,
+    private prefixCc: PrefixCcService
+  ) {}
 
-  getGraphByUri(uri: string, definition: Pick<ShaclHelperDefinition, 'shapesGraph'>): Observable<JsonModel> {
+  async init(): Promise<void> {
+    if (this.state.graphs.length) return;
+    const graphs = await this.getDefaultGraphs().toPromise();
+    this.state = { graphs };
+  }
+
+  getGraphByUri(uri: string): Observable<JsonModel> {
     const graph = this.state.graphs.find(g => g.data.uri === uri);
+    if (uri === this.configService.mainShapesGraph['@id']) return of(this.configService.mainShapesGraph);
     if (!graph) return throwError(new Error(`Could not find graph with given uri '${uri}'`));
-    const fullDefinition: ShaclHelperDefinition = { ...definition, modelContext: graph.context ?? {} };
-    return timer(500).pipe(map(() => this.resourceGraphService.resourceGraphRawToJsonModel(graph, fullDefinition)));
+    return timer(500).pipe(switchMap(() => this.mapToJsonModel(graph)));
+  }
+
+  getShapesGraphForType(type: Many<string>, context: TypedResourceContext): Observable<ShaczShapesGraph> {
+    const types = manyToArray(type);
+    return this.getAllShapesGraphs().pipe(
+      map(allShapesGraph => {
+        const target = allShapesGraph.find(shapeGraph => {
+          return shapeGraph['shacz:shapes']?.some(nodeShape => {
+            if (!nodeShape['sh:targetClass']) return false;
+            const targetClass = this.prefixCc.convertUri(nodeShape['sh:targetClass'], shapeGraph['@context']!, context);
+            return nodeShape['shacz:isRoot'] && types.includes(targetClass);
+          });
+        });
+        if (!target) {
+          throw new Error('Could not find ShapesGraph for given type ' + type);
+        }
+        return target;
+      })
+    );
+  }
+
+  getShaclHelperDefinition(model: JsonModel): Observable<ShaclHelperDefinition> {
+    return this.getShapesGraphForType(model['@type'], model['@context']!).pipe(
+      map(shapesGraph => {
+        return {
+          shapesGraph: shapesGraph,
+          modelContext: model['@context'] ?? this.configService.config.appContext,
+        };
+      })
+    );
   }
 
   save(graph: JsonModel, definition: ShaclHelperDefinition): Observable<JsonModel> {
     let typedResourceGraph = this.resourceGraphService.jsonModelToResourceGraphRaw(graph, definition) as TypedResourceGraph;
     typedResourceGraph = this.processBeforeSave(typedResourceGraph);
+    console.log(JSON.stringify(typedResourceGraph, null, 2));
     this.state = produce(this.state, draft => {
       draft.graphs = draft.graphs.filter(item => item.data.uri !== typedResourceGraph.data.uri);
       draft.graphs.push(typedResourceGraph);
@@ -42,26 +75,60 @@ export class GraphClient {
     return timer(500).pipe(map(() => this.resourceGraphService.resourceGraphRawToJsonModel(typedResourceGraph, definition)));
   }
 
-  search(query: string | undefined): Observable<JsonModel[]> {
-    return this.shapesGraph$.pipe(
-      delay(500),
-      map(shapesGraph => {
-        return this.state.graphs.map(graph => {
-          const definition: ShaclHelperDefinition = { modelContext: graph.context ?? {}, shapesGraph };
-          return this.resourceGraphService.resourceGraphRawToJsonModel(graph, definition);
-        });
+  search(query?: string, type?: string): Observable<JsonModel[]> {
+    return timer(500).pipe(
+      switchMap(async () => {
+        const models: JsonModel[] = [this.configService.mainShapesGraph];
+        for (const graph of this.state.graphs) {
+          const model = await this.mapToJsonModel(graph).toPromise();
+          models.push(model);
+        }
+
+        return models;
+      }),
+      map(graphs => {
+        if (!type) return graphs;
+        return graphs.filter(graph => isOfType(graph, type));
       })
     );
   }
 
-  private getShapesGraph(): Observable<ShaczShapesGraph> {
-    return this.http
-      .get<TypedResourceGraph>('assets/shacl/person.shacl.json')
-      .pipe(map(graph => this.resourceGraphService.resourceGraphRawToJsonModel(graph) as ShaczShapesGraph));
+  getAllRootTypes(): Observable<string[]> {
+    return this.getAllShapesGraphs().pipe(
+      map(shapesGraph => {
+        const rootTypes: string[] = [];
+        shapesGraph.forEach(shapesGraph =>
+          shapesGraph['shacz:shapes']?.forEach(nodeShape => {
+            if (nodeShape['shacz:isRoot'] && nodeShape['sh:targetClass']) {
+              const expandedType = this.prefixCc.convertUri(
+                nodeShape['sh:targetClass'],
+                shapesGraph['@context']!,
+                this.configService.config.appContext
+              );
+              rootTypes.push(expandedType);
+            }
+          })
+        );
+        return rootTypes;
+      })
+    );
   }
 
-  private getConfig(): Observable<ShaclConfig> {
-    return this.http.get<ShaclConfig>('assets/shacl/config.json');
+  delete(uri: string): Observable<unknown> {
+    this.state = produce(this.state, draft => {
+      draft.graphs = draft.graphs.filter(item => item.data.uri !== uri);
+    });
+
+    return timer(500);
+  }
+
+  private mapToJsonModel(graph: TypedResourceGraph): Observable<JsonModel> {
+    return this.getShapesGraphForType(graph.data.type, graph.context!).pipe(
+      map(shapesGraph => {
+        const definition: ShaclHelperDefinition = { modelContext: graph.context ?? this.configService.config.appContext, shapesGraph };
+        return this.resourceGraphService.resourceGraphRawToJsonModel(graph, definition);
+      })
+    );
   }
 
   private processBeforeSave(graph: TypedResourceGraph): TypedResourceGraph {
@@ -100,10 +167,46 @@ export class GraphClient {
   }
 
   private changeUri(uri: string): string {
-    return uri.replace('http://resource/', 'http://cogni.zone/data-model#');
+    return uri.replace(this.configService.config.newModelUriPrefix, 'http://cogni.zone/data-model#');
+  }
+
+  private getAllShapesGraphs(): Observable<ShaczShapesGraph[]> {
+    const allShapesGraph = [this.configService.mainShapesGraph];
+    this.state.graphs
+      .filter(graph => {
+        return isOfType(graph.data.type, 'shacz:ShapesGraph');
+      })
+      .forEach(graph => {
+        const definition: ShaclHelperDefinition = { modelContext: graph.context ?? {}, shapesGraph: this.configService.mainShapesGraph };
+        const shapesGraph = this.resourceGraphService.resourceGraphRawToJsonModel(graph, definition);
+
+        allShapesGraph.push(shapesGraph);
+      });
+    return of(allShapesGraph);
+  }
+
+  private getDefaultGraphs(): Observable<TypedResourceGraph[]> {
+    const person$ = this.http.get<TypedResourceGraph>('assets/shacl/person.shacl.json');
+    const skos$ = this.http.get<TypedResourceGraph>('assets/shacl/skos.shacl.json');
+    const legalInstitution$ = this.http.get<TypedResourceGraph>('assets/shacl/legal-institution.json');
+    const consolidationAbstractShacl$ = this.http.get<TypedResourceGraph>('assets/shacl/consolidation-abstract.shacl.json');
+    const consolidationAbstract1$ = this.http.get<TypedResourceGraph>('assets/shacl/consolidation-abstract-1.json');
+
+    return combineLatest([person$, skos$, legalInstitution$, consolidationAbstractShacl$, consolidationAbstract1$]);
   }
 }
 
 interface State {
   graphs: TypedResourceGraph[];
 }
+
+export function graphClientInit(graphClient: GraphClient): () => Promise<unknown> {
+  return () => graphClient.init();
+}
+
+export const graphClientInitProvider: Provider = {
+  provide: APP_INITIALIZER,
+  useFactory: graphClientInit,
+  deps: [GraphClient],
+  multi: true,
+};

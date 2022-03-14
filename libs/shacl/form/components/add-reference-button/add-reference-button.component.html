@@ -1,0 +1,35 @@
+<button
+  *ngIf="linkingStrategies.length <= 1"
+  type="button"
+  mat-icon-button
+  color="primary"
+  [matTooltip]="'add_name' | addI18nPrefix | czTranslate: { name: property['sh:name'] }"
+  (click)="addReference(linkingStrategies[0])"
+>
+  <mat-icon>add_circle</mat-icon>
+</button>
+<button *ngIf="linkingStrategies.length > 1" type="button" mat-icon-button color="primary" matRipple [matMenuTriggerFor]="linkingChoices">
+  <mat-icon>add_circle</mat-icon>
+</button>
+
+<mat-menu #linkingChoices>
+  <ng-template matMenuContent>
+    <button *ngFor="let linkingStrategy of linkingStrategies" mat-menu-item (click)="addReference(linkingStrategy)">
+      <mat-icon *ngIf="icons[linkingStrategy] as icon" [svgIcon]="icon"></mat-icon>
+      {{ 'linking_strategy.' + linkingStrategy | addI18nPrefix | czTranslate }}
+    </button>
+  </ng-template>
+</mat-menu>
+
+<ng-template #allowReferenceDialog>
+  <h2 mat-dialog-title>{{ 'linking_strategy.allow_reference' | addI18nPrefix | czTranslate }}</h2>
+  <mat-dialog-content class="mat-typography">
+    <cz-autocomplete [formControl]="referenceControl" [optionsProvider]="referencesProvider" label="" placeholder=""></cz-autocomplete>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>{{ 'cancel' | addI18nPrefix | czTranslate }}</button>
+    <button mat-button [mat-dialog-close]="referenceControl.value" [disabled]="!referenceControl.value">
+      {{ 'add_reference' | addI18nPrefix | czTranslate }}
+    </button>
+  </mat-dialog-actions>
+</ng-template>

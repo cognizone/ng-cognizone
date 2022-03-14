@@ -1,10 +1,24 @@
-<main *ngIf="shapesGraph" class="container">
-  <div class="row">
-    <cz-graph-card
-      *ngFor="let graph of graphs$ | async"
-      class="col-3 col-lg-4 mt-3"
-      [graph]="graph"
-      [shapesGraph]="shapesGraph"
-    ></cz-graph-card>
-  </div>
-</main>
+<ng-container *transloco="let t; read: 'root'">
+  <main class="container my-container">
+    <div class="row">
+      <div *ngIf="loading" class="col-12 mt-3 my-spinner-container">
+        <mat-spinner></mat-spinner>
+      </div>
+      <cz-graph-card *ngFor="let graph of graphs$ | async" class="col-12 mt-3" [class.d-none]="loading" [graph]="graph"></cz-graph-card>
+    </div>
+  </main>
+  <button mat-fab class="my-add-button" color="primary" [matMenuTriggerFor]="createMenu"><mat-icon svgIcon="add"></mat-icon></button>
+  <mat-menu #createMenu>
+    <a *ngFor="let rootType of rootTypes$ | async" mat-menu-item [routerLink]="['/details/create', rootType | encodeUri]"
+      >{{ t('create') }} {{ rootType }}</a
+    >
+  </mat-menu>
+
+  <cz-select
+    class="my-select"
+    [formControl]="typeControl"
+    [label]="t('graph_type_selection')"
+    [options]="typeOptions$ | async"
+    [canBeDiscarded]="true"
+  ></cz-select>
+</ng-container>

@@ -1,0 +1,29 @@
+<button
+  type="button"
+  mat-icon-button
+  color="accent"
+  cdkOverlayOrigin
+  #trigger="cdkOverlayOrigin"
+  [matTooltip]="'see_references' | addI18nPrefix | czTranslate"
+  (click)="show = !show"
+>
+  <mat-icon>visibility</mat-icon>
+</button>
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="show"
+  (overlayOutsideClick)="show = false"
+>
+  <div class="my-references mat-elevation-z1">
+    <p>
+      {{ 'referenced_in' | addI18nPrefix | czTranslate }}
+    </p>
+    <ul>
+      <li *ngFor="let reference of references$ | async">
+        <cz-node-title [nodeUri]="reference.uri"></cz-node-title>
+        ({{ reference.type }} -> {{ reference.propertyKey }})
+      </li>
+    </ul>
+  </div>
+</ng-template>

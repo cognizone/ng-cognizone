@@ -1,0 +1,3 @@
+<cz-shacl-template *ngIf="node$ | async as node" [model]="node" [template]="shortTemplate">
+  {{ isNew ? ('new_node' | addI18nPrefix | czTranslate : {type} ) : type}}
+</cz-shacl-template>

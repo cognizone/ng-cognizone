@@ -1,7 +1,23 @@
 {
-  "defaultContext": {
-    "base": "http://example.org/person#"
+  "appContext": {
+    "base": "http://example.org/person#",
+    "prefix": {
+      "app": "http://cogni.zone/data-model#",
+      "new": "http://resource/",
+      "jolux": "http://data.legilux.public.lu/resource/ontology/jolux#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "sh": "http://www.w3.org/ns/shacl#",
+      "shacz": "https://data.cogni.zone/model/ui/shacl-extension/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
   },
-  "graphRootUriBase": "http://cogni.zone/data-model#",
-  "graphRootType": "Person"
+  "newModelUriPrefix": "http://resource/",
+  "datatypeFieldTypeMapping": {
+    "xsd:integer": "number",
+    "xsd:date": "date",
+    "xsd:boolean": "bool",
+    "xsd:string": ["text", "textarea"]
+  }
 }

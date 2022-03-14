@@ -1,6 +1,18 @@
 <form *transloco="let t; read: 'details'" (ngSubmit)="save()">
   <mat-toolbar class="d-flex justify-content-end">
-    <button mat-flat-button color="primary" type="submit" [czLoadingButton]="loading$ | async">{{t('save')}}</button>
+    <button
+      *ngIf="!(graph['@id'] | isNew)"
+      class="mr-3"
+      mat-flat-button
+      color="warn"
+      type="button"
+      [czLoadingButton]="loading"
+      [disabled]="loading"
+      (click)="delete()"
+    >
+      {{t('delete')}}
+    </button>
+    <button mat-flat-button color="primary" type="submit" [czLoadingButton]="loading" [disabled]="loading">{{t('save')}}</button>
   </mat-toolbar>
   <div class="container">
     <cz-graph-form #graphForm class="d-block my-4" [graph]="graph" [definition]="definition"></cz-graph-form>

@@ -1,0 +1,1202 @@
+{
+  "context": {
+    "base": "http://example.org/person#",
+    "prefix": {
+      "jolux": "http://data.legilux.public.lu/resource/ontology/jolux#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "sh": "http://www.w3.org/ns/shacl#",
+      "shacz": "https://data.cogni.zone/model/ui/shacl-extension/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  },
+  "data": {
+    "attributes": {
+      "sh:name": {
+        "xsd:string": "ConsolidationAbstract Shapes"
+      }
+    },
+    "references": {
+      "shacz:shapes": [
+        "http://cogni.zone/data-model#/sh%3ANodeShape/1-1651061170622",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/10-1651062010658",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/14-1651062503452",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/16-1651062797699",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/18-1651063043666",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/8-1651065580953"
+      ]
+    },
+    "type": "shacz:ShapesGraph",
+    "uri": "http://cogni.zone/data-model#/shacz%3AShapesGraph/0-1651061038952"
+  },
+  "included": [
+    {
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "jolux:ConsolidationAbstract"
+        },
+        "shacz:isRoot": {
+          "xsd:boolean": true
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{label item.[jolux:isRealizedBy].[1].[jolux:title]}}"
+        }
+      },
+      "references": {
+        "sh:property": [
+          "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651061300473",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/3-1651061399471",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/4-1651061528321",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/5-1651061690138",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/6-1651061751005",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/7-1651061800390",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/8-1651061846822",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/9-1651061917209",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/11-1651062017689",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/12-1651062171110",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/13-1651062365675",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/15-1651062511967"
+        ]
+      },
+      "type": "sh:NodeShape",
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/1-1651061170622"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Uri"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:basicAct"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1651480937594"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651061300473"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Base Act"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        }
+      },
+      "type": "sh:PropertyGroup",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1651480937594"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdf:langString"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Label"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:basicActLabel"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1651480937594"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/3-1651061399471"
+    },
+    {
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": ""
+        },
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Classified by Taxonomy"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:classifiedByTaxonomyEntry"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/4-1651061528321"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Misc"
+        }
+      },
+      "type": "sh:PropertyGroup",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Date Document"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:dateDocument"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651481055997"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/5-1651061690138"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Dates"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      },
+      "type": "sh:PropertyGroup",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651481055997"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Date End Applicability"
+        },
+        "sh:order": {
+          "xsd:integer": 4
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:dateEndApplicability"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651481055997"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/6-1651061751005"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Date Entry in Force"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:dateEntryInForce"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651481055997"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/7-1651061800390"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Date no longer in force"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:dateNoLongerInForce"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651481055997"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/8-1651061846822"
+    },
+    {
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "jolux:Expression"
+        },
+        "sh:name": {
+          "xsd:string": "Realized by"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:isRealizedBy"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/1-1651481019613"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/9-1651061917209"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Expressions"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        }
+      },
+      "type": "sh:PropertyGroup",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/1-1651481019613"
+    },
+    {
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": ""
+        },
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Publication Completeness"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:legalResourcePublicationCompleteness"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/11-1651062017689"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdf:langString"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Title"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:title"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/12-1651062171110"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Document Type"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:typeDocument"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/13-1651062365675"
+    },
+    {
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "jolux:Work"
+        },
+        "sh:datatype": {
+          "rdfs:Resource": ""
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:name": {
+          "xsd:string": "Annexes"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:workHasAnnex"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/15-1651062511967"
+    },
+    {
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "jolux:LegalTaxonomy"
+        }
+      },
+      "type": "sh:NodeShape",
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/10-1651062010658"
+    },
+    {
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "jolux:Work"
+        }
+      },
+      "type": "sh:NodeShape",
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/14-1651062503452"
+    },
+    {
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "jolux:Expression"
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{item.[jolux:title]}}"
+        }
+      },
+      "references": {
+        "sh:property": [
+          "http://cogni.zone/data-model#/sh%3APropertyShape/17-1651062996198",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/19-1651063089765",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/20-1651063152651",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/21-1651063207655",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/23-1651063715100",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/25-1651063771619",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/26-1651063858886",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/27-1651063899417",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/28-1651064031084",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/29-1651064063802",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/30-1651064122200",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/32-1651064186682"
+        ]
+      },
+      "type": "sh:NodeShape",
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/16-1651062797699"
+    },
+    {
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "jolux:Manifestation"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:name": {
+          "xsd:string": "Embodied by"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:isEmbodiedBy"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/1-1651482790604"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/17-1651062996198"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Manifestations"
+        }
+      },
+      "type": "sh:PropertyGroup",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/1-1651482790604"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Incorporated by"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:isIncorporatedBy"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/19-1651063089765"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Part of"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:isPartOf"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/20-1651063152651"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Language"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:language"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "shacz:option": [
+          "http://cogni.zone/data-model#/shacz%3APropertyOption/0-1651484873319",
+          "http://cogni.zone/data-model#/shacz%3APropertyOption/1-1651484949617",
+          "http://cogni.zone/data-model#/shacz%3APropertyOption/2-1651484986653",
+          "http://cogni.zone/data-model#/shacz%3APropertyOption/0-1651486010750",
+          "http://cogni.zone/data-model#/shacz%3APropertyOption/1-1651486195687"
+        ]
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/21-1651063207655"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Allemand"
+        },
+        "shacz:value": {
+          "xsd:string": "http://publications.europa.eu/resource/authority/language/DEU"
+        }
+      },
+      "type": "shacz:PropertyOption",
+      "uri": "http://cogni.zone/data-model#/shacz%3APropertyOption/0-1651484873319"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Français"
+        },
+        "shacz:value": {
+          "xsd:string": "http://publications.europa.eu/resource/authority/language/FRA"
+        }
+      },
+      "type": "shacz:PropertyOption",
+      "uri": "http://cogni.zone/data-model#/shacz%3APropertyOption/1-1651484949617"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Italien"
+        },
+        "shacz:value": {
+          "xsd:string": "http://publications.europa.eu/resource/authority/language/ITA"
+        }
+      },
+      "type": "shacz:PropertyOption",
+      "uri": "http://cogni.zone/data-model#/shacz%3APropertyOption/2-1651484986653"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Anglais"
+        },
+        "shacz:value": {
+          "xsd:string": "http://publications.europa.eu/resource/authority/language/ENG"
+        }
+      },
+      "type": "shacz:PropertyOption",
+      "uri": "http://cogni.zone/data-model#/shacz%3APropertyOption/0-1651486010750"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Romanche"
+        },
+        "shacz:value": {
+          "xsd:string": "http://publications.europa.eu/resource/authority/language/ROH"
+        }
+      },
+      "type": "shacz:PropertyOption",
+      "uri": "http://cogni.zone/data-model#/shacz%3APropertyOption/1-1651486195687"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Name"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:memorialName"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651482868913"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/23-1651063715100"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Memorial"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        }
+      },
+      "type": "sh:PropertyGroup",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651482868913"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:int"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Page"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:memorialPage"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651482868913"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/25-1651063771619"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:int"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Page to"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:memorialPageTo"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651482868913"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/26-1651063858886"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:int"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Year"
+        },
+        "sh:order": {
+          "xsd:integer": 4
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:memorialYear"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/2-1651482868913"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/27-1651063899417"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:deactivated": {
+          "xsd:boolean": true
+        },
+        "sh:name": {
+          "xsd:string": "Notes"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:note"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/3-1651481124201"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/28-1651064031084"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Title"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:title"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1651482698098"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/29-1651064063802"
+    },
+    {
+      "attributes": {
+        "sh:label": {
+          "xsd:string": "Title"
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      },
+      "type": "sh:PropertyGroup",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1651482698098"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Alternative Title"
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:titleAlternative"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1651482698098"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/30-1651064122200"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Short Title"
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:titleShort"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "references": {
+        "sh:group": "http://cogni.zone/data-model#/sh%3APropertyGroup/0-1651482698098"
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/32-1651064186682"
+    },
+    {
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "jolux:Manifestation"
+        }
+      },
+      "references": {
+        "sh:property": [
+          "http://cogni.zone/data-model#/sh%3APropertyShape/0-1651064840688",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/1-1651064958887",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651065046972",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/3-1651065120085",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/4-1651065207335",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/5-1651065310436",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/6-1651065392951",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/7-1651065439767",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/9-1651065611314",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/10-1651065671151",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/12-1651065746014",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/13-1651065834480"
+        ]
+      },
+      "type": "sh:NodeShape",
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/18-1651063043666"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Format"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:format"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/0-1651064840688"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Exemplified by"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:isExemplifiedBy"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/1-1651064958887"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Exemplified by (private)"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:isExemplifiedByPrivate"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/2-1651065046972"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:boolean"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Default Manifestation?"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:manifestationByDefault"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/3-1651065120085"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:boolean"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Not to be printed"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:manifestationNotToBePrinted"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/4-1651065207335"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:int"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Number of Pages"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:numberOfPages"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/5-1651065310436"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:date"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Publication Date"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:publicationDate"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/6-1651065392951"
+    },
+    {
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "jolux:LegalInstitution"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Publisher"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:publisher"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/7-1651065439767"
+    },
+    {
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "jolux:LegalInstitution"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Rights Holder"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:rightsHolder"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/9-1651065611314"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "User Format"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:userFormat"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/10-1651065671151"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:name": {
+          "xsd:string": "Exemplified by (archive)"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:wasExemplifiedBy"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/12-1651065746014"
+    },
+    {
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "rdfs:Resource"
+        },
+        "sh:name": {
+          "xsd:string": "Exemplified by (private archives)"
+        },
+        "sh:path": {
+          "rdfs:Resource": "jolux:wasExemplifiedByPrivate"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      },
+      "type": "sh:PropertyShape",
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/13-1651065834480"
+    },
+    {
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "jolux:LegalInstitution"
+        }
+      },
+      "type": "sh:NodeShape",
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/8-1651065580953"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "data": {
+    "uri": "http://cogni.zone/data-model#/shacz%3AShapesGraph/5-1649841283590",
+    "type": "shacz:ShapesGraph",
+    "references": {
+      "shacz:shapes": [
+        "http://cogni.zone/data-model#/sh%3ANodeShape/6-1649841284955",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/7-1649841305640",
+        "http://cogni.zone/data-model#/sh%3ANodeShape/11-1649841536607"
+      ]
+    },
+    "attributes": {
+      "sh:name": {
+        "xsd:string": "Skos Shapes"
+      }
+    }
+  },
+  "included": [
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/6-1649841284955",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": [
+          "http://cogni.zone/data-model#/sh%3APropertyShape/9-1649841364312",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/2-1649845458581",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/0-1649885084214"
+        ]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "skos:ConceptScheme"
+        },
+        "shacz:isRoot": {
+          "xsd:boolean": true
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{item.[skos:prefLabel]}}"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/9-1649841364312",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "skos:Concept"
+        },
+        "sh:name": {
+          "xsd:string": "Top Concepts"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:hasTopConcept"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/2-1649845458581",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Pref Label"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:prefLabel"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/0-1649885084214",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "skos:Collection"
+        },
+        "sh:name": {
+          "xsd:string": "Collections"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:hasMicroThesaurus"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        },
+        "sh:order": {
+          "xsd:integer": 3
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/7-1649841305640",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": [
+          "http://cogni.zone/data-model#/sh%3APropertyShape/8-1649841320942",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/4-1649885766681",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/5-1649885903166"
+        ]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "skos:Concept"
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{item.[skos:prefLabel]}}"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/8-1649841320942",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Pref Label"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:prefLabel"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/4-1649885766681",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "skos:Concept"
+        },
+        "sh:name": {
+          "xsd:string": "Narrower"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:narrower"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/5-1649885903166",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Alt Label"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:altLabel"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        },
+        "sh:order": {
+          "xsd:integer": 2
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3ANodeShape/11-1649841536607",
+      "type": "sh:NodeShape",
+      "references": {
+        "sh:property": [
+          "http://cogni.zone/data-model#/sh%3APropertyShape/2-1649885477055",
+          "http://cogni.zone/data-model#/sh%3APropertyShape/3-1649885556666"
+        ]
+      },
+      "attributes": {
+        "sh:targetClass": {
+          "rdfs:Resource": "skos:Collection"
+        },
+        "shacz:shortTemplate": {
+          "xsd:string": "{{item.[skos:prefLabel]}}"
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/2-1649885477055",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:datatype": {
+          "rdfs:Resource": "xsd:string"
+        },
+        "sh:maxCount": {
+          "xsd:integer": 1
+        },
+        "sh:minCount": {
+          "xsd:integer": 1
+        },
+        "sh:name": {
+          "xsd:string": "Pref Label"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:prefLabel"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": []
+        },
+        "sh:order": {
+          "xsd:integer": 1
+        }
+      }
+    },
+    {
+      "uri": "http://cogni.zone/data-model#/sh%3APropertyShape/3-1649885556666",
+      "type": "sh:PropertyShape",
+      "attributes": {
+        "sh:class": {
+          "rdfs:Resource": "skos:Concept"
+        },
+        "sh:name": {
+          "xsd:string": "Members"
+        },
+        "sh:path": {
+          "rdfs:Resource": "skos:member"
+        },
+        "shacz:linkingStrategy": {
+          "xsd:string": ["allow_reference"]
+        }
+      }
+    }
+  ],
+  "context": {
+    "base": "http://example.org/person#",
+    "prefix": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "sh": "http://www.w3.org/ns/shacl#",
+      "shacz": "https://data.cogni.zone/model/ui/shacl-extension/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  }
+}

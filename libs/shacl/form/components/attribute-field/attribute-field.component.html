@@ -1,24 +1,39 @@
-<ng-container [ngSwitch]="type">
+<div [ngSwitch]="type" [matTooltip]="tooltip" [matTooltipDisabled]="!tooltip">
   <cz-date-picker
     *ngSwitchCase="'date'"
     [class.compact-form-field]="!showLabel"
     [label]="showLabel ? label : undefined"
-    [formControl]="control"
+    [formControl]="formControl"
   ></cz-date-picker>
   <cz-input
     *ngSwitchCase="'number'"
     type="number"
     [class.compact-form-field]="!showLabel"
     [label]="showLabel ? label : undefined"
-    [formControl]="control"
+    [formControl]="formControl"
   ></cz-input>
-  <mat-checkbox *ngSwitchCase="'bool'" class="ml-2" [formControl]="control">
+  <cz-textarea
+    *ngSwitchCase="'textarea'"
+    type="number"
+    [class.compact-form-field]="!showLabel"
+    [label]="showLabel ? label : undefined"
+    [formControl]="formControl"
+  ></cz-textarea>
+  <mat-checkbox *ngSwitchCase="'bool'" class="ml-2" [formControl]="formControl">
     {{ showLabel ? label : '' }}
   </mat-checkbox>
+  <ng-container *ngSwitchCase="'langString'" [formGroup]="formGroup">
+    <ng-container *ngFor="let lang of langs; let index = index" [formArrayName]="lang">
+      <cz-textarea class="col-12" [label]="label + (langs.length > 1 ? ' ' + lang : '')" formControlName="0"></cz-textarea>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngSwitchCase="'select'">
+    <cz-select [formControl]="formControl" [options]="options" [label]="showLabel ? label : undefined"></cz-select>
+  </ng-container>
   <cz-input
     *ngSwitchDefault
     [class.compact-form-field]="!showLabel"
     [label]="showLabel ? label : undefined"
-    [formControl]="control"
+    [formControl]="formControl"
   ></cz-input>
-</ng-container>
+</div>
