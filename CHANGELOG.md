@@ -1,3 +1,10 @@
+## [2.7.1](https://github.com/cognizone/ng-cognizone/compare/v2.7.0...v2.7.1) (2022-03-14)
+
+
+### Bug Fixes
+
+* **legi-cv:** smarter default concept matcher ([fb6a4c6](https://github.com/cognizone/ng-cognizone/commit/fb6a4c6738587a7e61dcf4bbc653fc915bfc4057))
+
 # [2.7.0](https://github.com/cognizone/ng-cognizone/compare/v2.6.5...v2.7.0) (2022-02-14)
 
 
