@@ -83,7 +83,8 @@
     "prismjs": "^1.24.1",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "ajv": "^8.10.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "12.2.3",

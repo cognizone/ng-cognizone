@@ -32,5 +32,8 @@
   "private": false,
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "ajv": "^8.11.0"
   }
 }
