@@ -7,6 +7,11 @@ table {
   max-width: 100%;
   overflow-x: auto;
 }
+.my-table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 :host {
   display: block;

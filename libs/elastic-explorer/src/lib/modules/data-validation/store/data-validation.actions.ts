@@ -17,3 +17,9 @@ export class SetElasticQuery {
 
   constructor(public elasticQuery: {}) {}
 }
+
+export class SetJsonSchema {
+  static readonly type: string = '[DataValidation] set json schema';
+
+  constructor(public jsonSchema: {}) {}
+}

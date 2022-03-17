@@ -19,7 +19,8 @@
     "immer": "^9.0.5",
     "lodash-es": "^4.17.21",
     "ngx-json-viewer": "^3.0.2",
-    "ngx-monaco-editor": "^9.0.0"
+    "ngx-monaco-editor": "^9.0.0",
+    "ajv": "^8.10.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
@@ -44,5 +45,8 @@
   "private": false,
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "ajv": "^8.11.0"
   }
 }
