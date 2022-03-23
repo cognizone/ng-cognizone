@@ -202,8 +202,16 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
       .subscribe(options => {
         const groups = groupSelectOptions(options);
         this.options = getAllSelectOptions(options);
-
         this.optionsGroups = groups;
+        if(this.removeDisabledOptions) {
+          this.optionsGroups = this.optionsGroups.map(group => {
+            return {
+              ...group,
+              options: group.options.filter(o => !o.disabled)
+            };
+          })
+        }
+
         this.cdr.markForCheck();
       });
   }
