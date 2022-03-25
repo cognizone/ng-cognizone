@@ -1,3 +1,10 @@
+## [2.7.2](https://github.com/cognizone/ng-cognizone/compare/v2.7.1...v2.7.2) (2022-03-25)
+
+
+### Bug Fixes
+
+* **legi-shared:** adding check for removing disabled options for checkbox group ([d309e30](https://github.com/cognizone/ng-cognizone/commit/d309e30fadba5b07045934397c78cef93d4fdc19))
+
 ## [2.7.1](https://github.com/cognizone/ng-cognizone/compare/v2.7.0...v2.7.1) (2022-03-14)
 
 
