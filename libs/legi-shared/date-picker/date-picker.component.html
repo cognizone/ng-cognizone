@@ -2,8 +2,11 @@
   <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
   <mat-form-field appearance="outline" [class.cz-classic-appearance]="classicMode" class="my-date-picker">
     <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
-    <mat-datepicker-toggle matPrefix [for]="picker" *ngIf="classicMode; else urbanTemplate">
+    <mat-datepicker-toggle matPrefix [for]="picker" *ngIf="classicMode">
       <mat-icon matDatepickerToggleIcon>event</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker-toggle *ngIf="!classicMode" matSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon svgIcon="calendar_today"></mat-icon>
     </mat-datepicker-toggle>
 
     <input
@@ -29,8 +32,3 @@
   (yearSelected)="chosenYearHandler($event)"
   (monthSelected)="chosenMonthHandler($event, picker)"
 ></mat-datepicker>
-<ng-template #urbanTemplate>
-  <mat-datepicker-toggle matSuffix [for]="picker">
-    <mat-icon matDatepickerToggleIcon svgIcon="calendar_today"></mat-icon>
-  </mat-datepicker-toggle>
-</ng-template>
