@@ -1,3 +1,10 @@
+## [2.7.3](https://github.com/cognizone/ng-cognizone/compare/v2.7.2...v2.7.3) (2022-03-29)
+
+
+### Bug Fixes
+
+* **legi-shared:** date-picker icon not showing for angular 12+ ([ff57285](https://github.com/cognizone/ng-cognizone/commit/ff57285d88ba92e63c4359ddbd8d6e554093f9f5))
+
 ## [2.7.2](https://github.com/cognizone/ng-cognizone/compare/v2.7.1...v2.7.2) (2022-03-25)
 
 
