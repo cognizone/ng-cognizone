@@ -1,3 +1,10 @@
+## [2.7.4](https://github.com/cognizone/ng-cognizone/compare/v2.7.3...v2.7.4) (2022-04-06)
+
+
+### Bug Fixes
+
+* **json-model-graph:** state can now handle circular graphs ([1a003ce](https://github.com/cognizone/ng-cognizone/commit/1a003cee361548680d312187e0b99fe34c175d13))
+
 ## [2.7.3](https://github.com/cognizone/ng-cognizone/compare/v2.7.2...v2.7.3) (2022-03-29)
 
 
