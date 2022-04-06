@@ -44,14 +44,15 @@ export class GraphState {
 
   @Action(SetGraph)
   setGraph(ctx: StateContext<GraphStateModel>, { graph, apName }: SetGraph): void {
-    ctx.setState(
-      produce(ctx.getState(), draft => {
-        draft.apName[graph.rootUri] = apName;
-        draft.graphs[graph.rootUri] = { graph, status: 'pristine' };
-        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[graph.rootUri].graph, apName);
-        draft.linkedGraphs[graph.rootUri] = linkedGraph;
-      })
-    );
+    let newState = produce(ctx.getState(), draft => {
+      draft.apName[graph.rootUri] = apName;
+      draft.graphs[graph.rootUri] = { graph, status: 'pristine' };
+    });
+    // Done outside of immer because linked graphs can be circular, which immer doesn't like
+    const linkedGraph = this.jsonModelService.fromFlatGraph(newState.graphs[graph.rootUri].graph, apName);
+    newState = { ...newState, linkedGraphs: { ...newState.linkedGraphs, [graph.rootUri]: linkedGraph } };
+
+    ctx.setState(newState);
   }
 
   @Action(RemoveGraph)
@@ -68,18 +69,19 @@ export class GraphState {
   @Action(UpdateNode)
   updateNode(ctx: StateContext<GraphStateModel>, { rootUri, nodes }: UpdateNode): void {
     const allNodes = manyToArray(nodes);
+    let newState = produce(ctx.getState(), draft => {
+      allNodes.forEach(node => {
+        draft.graphs[rootUri].graph.models[node['@id']] = node;
+      });
 
-    ctx.setState(
-      produce(ctx.getState(), draft => {
-        allNodes.forEach(node => {
-          draft.graphs[rootUri].graph.models[node['@id']] = node;
-        });
+      draft.graphs[rootUri].status = 'touched';
+    });
 
-        draft.graphs[rootUri].status = 'touched';
-        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[rootUri].graph, draft.apName[rootUri]);
-        draft.linkedGraphs[rootUri] = linkedGraph;
-      })
-    );
+    // Done outside of immer because linked graphs can be circular, which immer doesn't like
+    const linkedGraph = this.jsonModelService.fromFlatGraph(newState.graphs[rootUri].graph, newState.apName[rootUri]);
+    newState = { ...newState, linkedGraphs: { ...newState.linkedGraphs, [rootUri]: linkedGraph } };
+
+    ctx.setState(newState);
   }
 
   @Action(Reset)
