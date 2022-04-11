@@ -127,4 +127,4 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 - JsonModel and related types, services and utilities have been moved to @cognizone/json-model, so this library need to be added and imports need to be adapted
 - `JsonModel::@context` is now typed as `TypedResourceContext`, which is completely different from the previous typing. If ever you were using `rootUri` or `isNew`, you will need to find another way to get that info.
 - `RootUriDirective::apName` has been removed and doesn't need to be set anymore. This is because GraphService::setGraph was already taking apName/definition as argument, and so it was redundant to duplicate this information in this directive.
-- `RootUriDirective::getWrapper` has been deprecated. Instead, it's advised to inject `GraphFormContextService` instead which has the same method and functionalities.
+- `RootUriDirective::getWrapper` has been deprecated. Instead, it's advised to inject `UrisStoreService` instead which has the same method and functionalities.

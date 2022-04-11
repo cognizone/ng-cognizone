@@ -21,7 +21,7 @@ export class RootUriDirective {
   constructor(private graphWrapperFactory: GraphWrapperFactory, private urisStoreService: UrisStoreService) {}
 
   /**
-   * @deprecated use `GraphFormContextService::getWrapper` instead to the same effect
+   * @deprecated use `UrisStoreService::getWrapper` instead to the same effect
    */
   getWrapper(): GraphWrapper {
     return this.graphWrapperFactory.getWrapper(this.rootUri);
