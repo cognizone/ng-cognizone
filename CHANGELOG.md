@@ -1,3 +1,17 @@
+# [3.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.3...v3.0.0-beta.4) (2022-04-11)
+
+
+### Bug Fixes
+
+* **legi-cv:** make CvService not fail if no providers were given ([f63517b](https://github.com/cognizone/ng-cognizone/commit/f63517b682a73056e8960fbe489e6609e460a32c))
+
+
+### Features
+
+* **json-model:** more adaptations for shacl library ([35e9e51](https://github.com/cognizone/ng-cognizone/commit/35e9e5134815b09138a422d647005cf4108bf0bc))
+* **json-model-graph:** introducing GraphFormContextService ([d35dbd4](https://github.com/cognizone/ng-cognizone/commit/d35dbd4f7d8ebd1802ffb2aae73dd9ecacef17d5))
+* **legi-shared:** made cz-input and cz-date-picker better suited for validation ([e343f11](https://github.com/cognizone/ng-cognizone/commit/e343f11b8bea06a334980510e3b6417dba5f896d))
+
 # [3.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.2...v3.0.0-beta.3) (2022-02-14)
 
 
