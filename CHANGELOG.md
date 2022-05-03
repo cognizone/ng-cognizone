@@ -1,3 +1,17 @@
+# [3.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.4...v3.0.0-beta.5) (2022-05-03)
+
+
+### Bug Fixes
+
+* **i18n:** translate pipe returns string ([c8b8394](https://github.com/cognizone/ng-cognizone/commit/c8b8394a67427a226b7e558ac38eff3a6ef2dad1))
+* **legi-shared:** handle number type in cz-input ([d091b7a](https://github.com/cognizone/ng-cognizone/commit/d091b7a4b0ef12a9947a4328d47ba120289bcec3))
+
+
+### Features
+
+* **json-model:** smarter default IdGenerator ([dfbfb60](https://github.com/cognizone/ng-cognizone/commit/dfbfb60b34b4ce7f75b7dfca9f934867743b186c))
+* **json-model-graph:** accept undefined referenceUri in setReference ([4b6bba2](https://github.com/cognizone/ng-cognizone/commit/4b6bba2984718a756aabfe6bb8b68e6739c68b9f))
+
 # [3.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.3...v3.0.0-beta.4) (2022-04-11)
 
 
