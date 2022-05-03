@@ -111,8 +111,10 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
   onBlur(event: FocusEvent): void {
     this.onModelTouched?.();
     if (!this.model || !this.autoTrim) return;
-    const newVal = this.model.trim();
-    if (newVal !== this.model) this.embeddedControl.setValue(newVal);
+    if (typeof this.model === 'string') {
+      const newVal = this.model.trim();
+      if (newVal !== this.model) this.embeddedControl.setValue(newVal);
+    }
     this.inputBlur.emit(event);
   }
 
