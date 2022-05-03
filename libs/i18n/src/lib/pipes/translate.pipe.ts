@@ -8,7 +8,7 @@ import { I18nService } from '../services/i18n.service';
 export class TranslatePipe implements PipeTransform {
   constructor(private i18nService: I18nService) {}
 
-  transform(value: CzLabel, params?: {}, lang?: string): unknown {
+  transform(value: CzLabel, params?: {}, lang?: string): string {
     return this.i18nService.translate(value, params, lang);
   }
 }
