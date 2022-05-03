@@ -1,3 +1,10 @@
+# [3.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.5...v3.0.0-beta.6) (2022-05-03)
+
+
+### Bug Fixes
+
+* **model-utils:** accept rxjs 7 ([bb677a8](https://github.com/cognizone/ng-cognizone/commit/bb677a8f0787227c5886fd4737a332e695f9af8f))
+
 # [3.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.4...v3.0.0-beta.5) (2022-05-03)
 
 
