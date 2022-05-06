@@ -67,6 +67,7 @@
     <mat-chip-list #chipList>
       <mat-chip
         *ngFor="let value of modelAsOptions | selectOptionsSort: 'label'"
+        [class.cz-option-disabled]="value.disabled"
         [disabled]="disabled"
         [selectable]="false"
         [removable]="!disabled"
