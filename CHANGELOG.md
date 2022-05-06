@@ -1,3 +1,10 @@
+## [2.7.5](https://github.com/cognizone/ng-cognizone/compare/v2.7.4...v2.7.5) (2022-05-06)
+
+
+### Bug Fixes
+
+* **legi-shared:** adding class for autocomplete-multi disabled values ([89b3b4a](https://github.com/cognizone/ng-cognizone/commit/89b3b4a554d8ef71a87b28328ce51eca4fe02f65))
+
 ## [2.7.4](https://github.com/cognizone/ng-cognizone/compare/v2.7.3...v2.7.4) (2022-04-06)
 
 
