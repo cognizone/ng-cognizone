@@ -2,9 +2,9 @@ import { Inject, Injectable } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, JsonModel, JsonModelService } from '@cognizone/json-model';
 import { CvService } from '@cognizone/legi-cv';
-import { Many, manyToArray } from '@cognizone/model-utils';
+import { Many, manyToArray, notNil } from '@cognizone/model-utils';
 import produce from 'immer';
-import { isEqual } from 'lodash-es';
+import { isEqual, get, set } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
 import { filter, finalize, map, switchMap, tap } from 'rxjs/operators';
 
@@ -34,25 +34,38 @@ export class GraphAndControlLinkingService {
     definition,
     cvName,
     classId,
+    innerPath,
     emitEventFromNodeToForm,
   }: LinkControlToNodeAttributeOptions<T>): Observable<unknown> {
-    const current = this.graphService.getNodeSnapshot<T>(rootUri, nodeUri);
-    const val = current[attributeKey];
-    this.patchValue(val, control, true);
+    const currentNode = this.graphService.getNodeSnapshot<T>(rootUri, nodeUri);
+    const val = this.getValue<T>(currentNode as T, { attributeKey, innerPath });
+    this.patchControlValue(val, control, true);
 
     const formToNode$ = control.valueChanges.pipe(
       switchMap(async value => {
         const allUpdatedNodes = [];
         const node = this.graphService.getNodeSnapshot<T>(rootUri, nodeUri);
         if (!node) return;
-        if (isEqual(node[attributeKey], value)) return;
+        if (isEqual(this.getValue<T>(node as T, { attributeKey, innerPath }), value)) return;
         allUpdatedNodes.push(
           produce(node, (draft: T) => {
-            draft[attributeKey] = value ?? undefined;
+            this.setValue(draft, { attributeKey, innerPath }, value);
           })
         );
-        if (this.isReference({ definition, attributeKey: attributeKey as keyof JsonModel, nodeUri, rootUri })) {
-          const references = await this.addReferencesInGraph(value, { definition, cvName, classId, rootUri });
+        if (
+          this.isReference({
+            definition,
+            attributeKey: attributeKey as keyof JsonModel,
+            nodeUri,
+            rootUri,
+          })
+        ) {
+          const references = await this.addReferencesInGraph(value, {
+            definition,
+            cvName,
+            classId,
+            rootUri,
+          });
           allUpdatedNodes.push(...references);
         }
 
@@ -61,7 +74,9 @@ export class GraphAndControlLinkingService {
     );
     const nodeToForm$ = this.graphService.getNode<T>(rootUri, nodeUri).pipe(
       filter(node => node != null),
-      tap(node => this.patchValue(node[attributeKey], control, emitEventFromNodeToForm ?? false))
+      tap(node =>
+        this.patchControlValue(this.getValue<T>(node as T, { attributeKey, innerPath }), control, emitEventFromNodeToForm ?? false)
+      )
     );
 
     return merge(formToNode$, nodeToForm$).pipe(finalize(() => control.reset(undefined, { emitEvent: false })));
@@ -129,13 +144,13 @@ export class GraphAndControlLinkingService {
       const provider = this.cvService.getProvider(cvName);
       const hasOption = await provider.hasConcept(uri).toPromise();
       if (!hasOption) continue;
-      return (await provider.getConceptByUri(uri).toPromise())['@type'];
+      return (await provider.getConceptByUri(uri).toPromise())?.['@type'] ?? [];
     }
 
     throw new Error(`Could not find classId for option '${uri}'`);
   }
 
-  private patchValue(value: unknown, control: AbstractControl, emitEvent: boolean): void {
+  private patchControlValue(value: unknown, control: AbstractControl, emitEvent: boolean): void {
     if (value === control.value) return;
     else if (control instanceof FormArray) {
       control.patchValue((value as unknown[]) ?? [], { emitEvent });
@@ -144,6 +159,23 @@ export class GraphAndControlLinkingService {
     } else {
       control.patchValue(value, { emitEvent });
     }
+  }
+
+  private getValue<T extends JsonModel>(
+    node: JsonModel,
+    options: Pick<LinkControlToNodeAttributeOptions<T>, 'attributeKey' | 'innerPath'>
+  ): unknown {
+    const fullPath = [options.attributeKey, options.innerPath].filter(notNil);
+    return get(node, fullPath);
+  }
+
+  private setValue<T extends JsonModel>(
+    node: JsonModel,
+    options: Pick<LinkControlToNodeAttributeOptions<T>, 'attributeKey' | 'innerPath'>,
+    value: unknown
+  ): void {
+    const fullPath = [options.attributeKey, options.innerPath].filter(notNil);
+    set(node, fullPath, value);
   }
 }
 
@@ -154,7 +186,7 @@ export interface LinkReferenceOptions {
   classId?: string;
 }
 
-export interface LinkControlToNodeAttributeOptions<T> {
+export interface LinkControlToNodeAttributeOptions<T = JsonModel> {
   rootUri: string;
   nodeUri: string;
   attributeKey: keyof T;
@@ -162,5 +194,8 @@ export interface LinkControlToNodeAttributeOptions<T> {
   definition: unknown;
   cvName?: Many<string>;
   classId?: string;
+  // TODO handle this
+  datatype?: string;
+  innerPath?: string | number;
   emitEventFromNodeToForm?: boolean;
 }
