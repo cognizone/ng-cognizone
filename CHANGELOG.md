@@ -1,3 +1,10 @@
+# [3.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2022-06-20)
+
+
+### Features
+
+* **json-model-graph:** added innerPath option for linking model to control ([52e6641](https://github.com/cognizone/ng-cognizone/commit/52e6641bed6001fa5adfc63570e4657d2b3b4b9d))
+
 # [3.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.5...v3.0.0-beta.6) (2022-05-03)
 
 
