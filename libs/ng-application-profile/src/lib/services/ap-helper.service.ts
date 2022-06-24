@@ -28,7 +28,8 @@ export class ApHelper implements DataModelDefinitionHelper<ApplicationProfileOrA
 
   constructor(private logger: Logger, private apService: ApService) {
     this.logger = logger.extend('ApHelper');
-    this.getConcreteType = memoize(this.getConcreteType.bind(this), (ap: ApplicationProfile, classIds: Many<string>) => {
+    this.getConcreteType = memoize(this.getConcreteType.bind(this), (ap: ApplicationProfileOrApName, classIds: Many<string>) => {
+      ap = this.getAp(ap);
       if (!this.apMap.has(ap)) {
         this.apMap.set(ap, ++this.weakMapCount);
       }
@@ -148,7 +149,8 @@ export class ApHelper implements DataModelDefinitionHelper<ApplicationProfileOrA
     return Object.keys(typeProfile.attributes);
   }
 
-  getConcreteType(ap: ApplicationProfile, classIds: Many<string>): string {
+  getConcreteType(ap: ApplicationProfileOrApName, classIds: Many<string>): string {
+    ap = this.getAp(ap);
     return getConcreteType(ap, classIds);
   }
 
