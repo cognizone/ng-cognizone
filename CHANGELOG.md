@@ -1,3 +1,10 @@
+# [3.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2022-06-24)
+
+
+### Bug Fixes
+
+* **ng-application-profile:** handle apName in getConcreteType ([6adf6a3](https://github.com/cognizone/ng-cognizone/commit/6adf6a3a04b924e8d326281a3d038a825e2a6b86))
+
 # [3.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2022-06-20)
 
 
