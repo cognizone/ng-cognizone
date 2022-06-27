@@ -9,6 +9,7 @@ import {
   isMaxCardinalityRule,
   isMinCardinalityRule,
   isOrClassIdRule,
+  isOrDataTypeRule,
   isRangeRule,
   RangeRule,
   Rule,
@@ -137,6 +138,8 @@ export class ApHelper implements DataModelDefinitionHelper<ApplicationProfileOrA
     if (isDataTypeRule(rangeRule.value) || isClassIdRule(rangeRule.value)) {
       return [rangeRule.value.value];
     } else if (isOrClassIdRule(rangeRule.value)) {
+      return rangeRule.value.value.map(r => r.value);
+    } else if (isOrDataTypeRule(rangeRule.value)) {
       return rangeRule.value.value.map(r => r.value);
     }
 
