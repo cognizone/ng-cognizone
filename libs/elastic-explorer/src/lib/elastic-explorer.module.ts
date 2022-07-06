@@ -4,7 +4,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { LoadingService } from '@cognizone/ng-core';
 
 import { ElasticExplorerRoutingModule } from './elastic-explorer-routing.module';
 import { DataValidationModule } from './modules/data-validation';

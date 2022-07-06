@@ -1,24 +1,34 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TypedResourceGraph } from '@cognizone/model-utils';
+import { TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
 import { downloadBlob, extractSourcesFromElasticResponse, manyToArray, selectProp, SubSink } from '@cognizone/model-utils';
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { catchError, finalize, map, tap } from 'rxjs/operators';
+import { uniqBy } from 'lodash-es';
+import Ajv from 'ajv';
+import { AnyValidateFunction } from 'ajv/dist/core';
 
 import { ElasticClient } from '../../core';
 import { ElasticInstanceHandlerService } from '../../elastic-instance';
 import { DataError } from '../models/data-error';
-import { AddErrors, SetElasticQuery, SetErrors } from '../store/data-validation.actions';
+import { AddErrors, SetElasticQuery, SetErrors, SetJsonSchema } from '../store/data-validation.actions';
 import { DataValidationStateModel, DATA_VALIDATION_STATE_TOKEN } from '../store/data-validation.state';
 
 @Injectable()
 export class DataValidationViewService {
   errors$: Observable<DataError[]> = this.state$.pipe(selectProp('errors'));
   elasticQuery$: Observable<{}> = this.state$.pipe(selectProp('elasticQuery'));
+  jsonSchema$: Observable<{}> = this.state$.pipe(selectProp('jsonSchema'));
+  validDocsCount$: BehaviorSubject<number> = new BehaviorSubject(0);
+  invalidDocsCount$: BehaviorSubject<number> = new BehaviorSubject(0);
+  docCount: number = 0;
   private subSink: SubSink = new SubSink();
+  isGenerateReportDisabled$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
+  ajv = new Ajv();
+  latestSchemaReference!: string;
 
   constructor(
     private elastic: ElasticClient,
@@ -33,6 +43,7 @@ export class DataValidationViewService {
   }
 
   onPageLoad(route: ActivatedRoute): void {
+    this.initAjv();
     this.linkRouteToState(route);
     this.linkStateToRoute(route);
   }
@@ -41,7 +52,7 @@ export class DataValidationViewService {
     this.subSink.empty();
   }
 
-  generateReport(): void {
+  generateReport(): Observable<unknown> {
     this.store.dispatch(new SetErrors([]));
     const { control$, response$ } = this.elastic.searchAfterCrawl({
       baseUrl: this.elasticInstanceHandler.getUrl() as string,
@@ -50,30 +61,39 @@ export class DataValidationViewService {
     });
 
     this.loadingService.addLoading();
-    let docCount = 0;
-    let errorCount = 0;
-    this.subSink.add = response$.pipe(map(extractSourcesFromElasticResponse)).subscribe({
-      next: response => {
+    this.validDocsCount$.next(0);
+    this.invalidDocsCount$.next(0);
+
+    this.docCount = 0;
+
+    const allErrors: DataError[] = [];
+
+    return response$.pipe(map(extractSourcesFromElasticResponse)).pipe(
+      tap(response => {
+        this.docCount += response.length;
         response.forEach(item => {
-          ++docCount;
           const newErrors = this.computeErrors(item as TypedResourceGraph);
-          errorCount += newErrors.length;
+          allErrors.push(...newErrors);
+
           if (newErrors.length) {
             this.store.dispatch(new AddErrors(newErrors));
           }
         });
+        const numberOfDocsWithErrors = uniqBy(allErrors, 'graphUri').length;
+        this.invalidDocsCount$.next(numberOfDocsWithErrors);
+        this.validDocsCount$.next(this.docCount - numberOfDocsWithErrors);
         control$.next();
-      },
-      error: err => {
+        this.matSnackBar.open(`Done processing ${this.docCount} documents, found ${allErrors.length} errors.`, 'Dismiss', {
+          duration: 2000,
+        });
+      }),
+      catchError(err => {
         this.logger.error('Failed to crawl elastic index', err);
-        this.loadingService.removeLoading();
-        this.matSnackBar.open(`Failed to crawl given elastic index`, 'Dismiss');
-      },
-      complete: () => {
-        this.loadingService.removeLoading();
-        this.matSnackBar.open(`Done processing ${docCount} documents, found ${errorCount} errors.`, 'Dismiss');
-      },
-    });
+        this.matSnackBar.open(`Failed to crawl given elastic index`, 'Dismiss', { duration: 2000 });
+        throw err;
+      }),
+      finalize(() => this.loadingService.removeLoading())
+    );
   }
 
   downloadReport(): void {
@@ -95,20 +115,67 @@ export class DataValidationViewService {
     this.store.dispatch(new SetElasticQuery(elasticQuery));
   }
 
+  setJsonSchema(schema: {}): void {
+    this.store.dispatch(new SetJsonSchema(schema));
+  }
+
+  private initAjv(): void {
+    this.jsonSchema$.subscribe(jsonSchema => {
+      this.latestSchemaReference = `typedResource-${Date.now().toString()}`;
+      this.ajv.addSchema(jsonSchema, this.latestSchemaReference);
+      this.ajv.addFormat('uri', 'uri');
+    });
+  }
+
   private computeErrors(graph: TypedResourceGraph): DataError[] {
     const errors: DataError[] = [];
+    const graphValidate = this.ajv.getSchema<unknown>(this.latestSchemaReference) as AnyValidateFunction<unknown>;
+    if (!graphValidate(graph)) {
+      graphValidate.errors?.forEach(error => {
+        errors.push({
+          graphUri: (graph as TypedResourceGraph).data?.uri,
+          errorMessage: error.message ?? '',
+        });
+      });
+    }
+
     const allNodes = [graph.data, ...(graph.included ?? [])];
     allNodes.forEach(node => {
-      Object.entries(node.references ?? {}).forEach(([key, uris]) =>
-        manyToArray(uris).forEach(uri => {
-          if (allNodes.find(n => n.uri === uri)) return;
+      const nodeValidate = this.ajv.getSchema<unknown>(this.latestSchemaReference) as AnyValidateFunction<unknown>;
+      if (!nodeValidate(node)) {
+        nodeValidate.errors?.forEach(error => {
           errors.push({
             graphUri: graph.data.uri,
-            nodeUri: node.uri,
-            propertyKey: key,
-            value: uri,
-            errorMessage: `value cannot be found in either data or included`,
+            nodeUri: (node as TypedResource).uri,
+            value: (node as TypedResource).uri,
+            errorMessage: error.message ?? '',
           });
+        });
+      }
+      Object.entries(node.references ?? {}).forEach(([key, uris]) =>
+        manyToArray(uris).forEach(uri => {
+          const referenceNode = allNodes.find(n => n.uri === uri);
+          if (!referenceNode) {
+            errors.push({
+              graphUri: graph.data.uri,
+              nodeUri: node.uri,
+              propertyKey: key,
+              value: uri,
+              errorMessage: `value cannot be found in either data or included`,
+            });
+            return;
+          }
+          if (!nodeValidate(referenceNode)) {
+            nodeValidate.errors?.forEach(error => {
+              errors.push({
+                graphUri: graph.data.uri,
+                nodeUri: (node as TypedResource).uri,
+                value: (node as TypedResource).uri,
+                errorMessage: error.message ?? '',
+              });
+            });
+          }
+          return;
         })
       );
     });
@@ -122,6 +189,9 @@ export class DataValidationViewService {
       .subscribe(elasticInfo => {
         if (elasticInfo) {
           this.elasticInstanceHandler.setElasticInfo(elasticInfo);
+          this.isGenerateReportDisabled$.next(!elasticInfo.index);
+        } else {
+          this.isGenerateReportDisabled$.next(true);
         }
       });
   }
