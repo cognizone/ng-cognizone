@@ -1,3 +1,10 @@
+# [3.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.9...v3.0.0-beta.10) (2022-07-06)
+
+
+### Bug Fixes
+
+* **legi-shared:** mark component for check on setDisabledState ([f6ba330](https://github.com/cognizone/ng-cognizone/commit/f6ba330e63b359eade80e78d399b66deda7eafc1))
+
 # [3.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.8...v3.0.0-beta.9) (2022-06-27)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/elastic-explorer",
-  "version": "3.0.0-beta.9",
+  "version": "3.0.0-beta.10",
   "peerDependencies": {
     "@angular/cdk": ">=11.0.0",
     "@angular/common": ">=11.0.0",
