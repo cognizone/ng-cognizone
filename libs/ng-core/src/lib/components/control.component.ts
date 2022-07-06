@@ -111,6 +111,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
       if (isDisabled) this.embeddedControl.disable();
       else this.embeddedControl.enable();
     }
+    this.cdr.markForCheck();
   }
 
   setModelAndEmit(value: MODEL): void {
