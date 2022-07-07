@@ -2,17 +2,10 @@
   "name": "@cognizone/user-action",
   "version": "3.0.0-beta.13",
   "peerDependencies": {
-    "@angular/common": ">=11.0.0",
-    "@angular/core": ">=11.0.0",
-    "@angular/forms": ">=11.0.0",
-    "@angular/material": ">=11.0.0",
     "@cognizone/elastic": ">=3.0.0-beta",
     "@cognizone/legi-shared": ">=3.0.0-beta",
     "@cognizone/model-utils": ">=3.0.0-beta",
-    "@cognizone/ng-core": ">=3.0.0-beta",
-    "@ngneat/transloco": "^2.22.0",
-    "@ngneat/transloco-locale": "^1.4.0",
-    "rxjs": ">6.6.3 || ^7.0.0"
+    "@cognizone/ng-core": ">=3.0.0-beta"
   },
   "dependencies": {
     "tslib": "^2.0.0"

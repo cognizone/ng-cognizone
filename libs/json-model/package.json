@@ -2,11 +2,8 @@
   "name": "@cognizone/json-model",
   "version": "3.0.0-beta.13",
   "peerDependencies": {
-    "@angular/core": ">=11.0.0",
     "@cognizone/model-utils": ">=3.0.0-beta",
-    "@cognizone/ng-core": ">=3.0.0-beta",
-    "lodash-es": "^4.17.15",
-    "rxjs": ">6.6.3 || ^7.0.0"
+    "@cognizone/ng-core": ">=3.0.0-beta"
   },
   "dependencies": {
     "tslib": "^2.2.0"
