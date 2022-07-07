@@ -1,3 +1,10 @@
+# [3.0.0-beta.12](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.11...v3.0.0-beta.12) (2022-07-07)
+
+
+### Bug Fixes
+
+* adding rxjs everywhere in peer deps because nx add it automatically ([a8c5d1e](https://github.com/cognizone/ng-cognizone/commit/a8c5d1e523024c7ab7f7afe0e9a04423cc460713))
+
 # [3.0.0-beta.11](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.10...v3.0.0-beta.11) (2022-07-07)
 
 
