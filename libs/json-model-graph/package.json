@@ -11,7 +11,8 @@
     "@cognizone/ng-core": ">=3.0.0-beta",
     "@ngxs/store": "^3.7.2",
     "immer": "^9.0.5",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "rxjs": ">6.6.3 || ^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

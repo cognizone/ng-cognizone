@@ -2,7 +2,8 @@
   "name": "@cognizone/prettier-config",
   "version": "3.0.0-beta.11",
   "peerDependencies": {
-    "prettier": "^2.0.0"
+    "prettier": "^2.0.0",
+    "rxjs": ">6.6.3 || ^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

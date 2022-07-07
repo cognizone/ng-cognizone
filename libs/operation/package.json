@@ -10,7 +10,8 @@
     "@cognizone/model-utils": ">=3.0.0-beta",
     "@cognizone/ng-core": ">=3.0.0-beta",
     "@ngxs/store": "^3.6.2",
-    "ngx-json-viewer": "^3.0.2"
+    "ngx-json-viewer": "^3.0.2",
+    "rxjs": ">6.6.3 || ^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

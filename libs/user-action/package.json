@@ -11,7 +11,8 @@
     "@cognizone/model-utils": ">=3.0.0-beta",
     "@cognizone/ng-core": ">=3.0.0-beta",
     "@ngneat/transloco": "^2.22.0",
-    "@ngneat/transloco-locale": "^1.4.0"
+    "@ngneat/transloco-locale": "^1.4.0",
+    "rxjs": ">6.6.3 || ^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
