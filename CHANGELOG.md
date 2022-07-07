@@ -1,3 +1,15 @@
+# [3.0.0-beta.14](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.13...v3.0.0-beta.14) (2022-07-07)
+
+
+### Bug Fixes
+
+* peer deps, part 4 ([2dab208](https://github.com/cognizone/ng-cognizone/commit/2dab2087df25e0745c90bdfa3b3e248ca12be881))
+
+
+### Reverts
+
+* Revert "fix: peer deps, part 3" ([cb7a0c5](https://github.com/cognizone/ng-cognizone/commit/cb7a0c5518aa0b579a6d759d3c9134161d5224f3))
+
 # [3.0.0-beta.13](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.12...v3.0.0-beta.13) (2022-07-07)
 
 
