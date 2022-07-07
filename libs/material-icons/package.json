@@ -2,7 +2,13 @@
   "name": "@cognizone/material-icons",
   "version": "3.0.0-beta.13",
   "peerDependencies": {
-    "@material-icons/svg": "^1.0.4"
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/material": ">=11.0.0",
+    "@angular/platform-browser": ">=11.0.0",
+    "@cognizone/ng-core": ">=3.0.0-beta",
+    "@material-icons/svg": "^1.0.4",
+    "rxjs": ">6.6.3 || ^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

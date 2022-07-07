@@ -4,7 +4,12 @@
   "dependencies": {
     "tslib": "^2.0.0"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/forms": ">=11.0.0",
+    "rxjs": ">6.6.3 || ^7.0.0"
+  },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
   "repository": {

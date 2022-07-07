@@ -47,22 +47,23 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "cz": "cz",
+    "prepare": "husky install",
     "build-tools": "tsc tools/executors/build-assets/impl.ts"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": ">=12.2.3",
-    "@angular/cdk": ">=12.2.3",
-    "@angular/common": ">=12.2.3",
-    "@angular/compiler": ">=12.2.3",
-    "@angular/core": ">=12.2.3",
+    "@angular/animations": "12.2.3",
+    "@angular/cdk": "12.2.3",
+    "@angular/common": "12.2.3",
+    "@angular/compiler": "12.2.3",
+    "@angular/core": "12.2.3",
     "@angular/flex-layout": "^12.0.0-beta.34",
-    "@angular/forms": ">=12.2.3",
-    "@angular/material": ">=12.2.3",
-    "@angular/material-moment-adapter": ">=12.2.3",
-    "@angular/platform-browser": ">=12.2.3",
-    "@angular/platform-browser-dynamic": ">=12.2.3",
-    "@angular/router": ">=12.2.3",
+    "@angular/forms": "12.2.3",
+    "@angular/material": "12.2.3",
+    "@angular/material-moment-adapter": "12.2.3",
+    "@angular/platform-browser": "12.2.3",
+    "@angular/platform-browser-dynamic": "12.2.3",
+    "@angular/router": "12.2.3",
     "@ngneat/transloco": "^2.22.0",
     "@ngneat/transloco-locale": "^1.4.0",
     "@ngxs/devtools-plugin": "^3.7.2",
@@ -80,18 +81,18 @@
     "ngx-monaco-editor": "^9.0.0",
     "npm-run-all": "^4.1.5",
     "prismjs": "^1.24.1",
-    "rxjs": "^6.6.3 || ^7.0.0",
+    "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": ">=12.2.3",
+    "@angular-devkit/build-angular": "12.2.3",
     "@angular-eslint/eslint-plugin": "12.3.1",
     "@angular-eslint/eslint-plugin-template": "12.3.1",
     "@angular-eslint/template-parser": "12.3.1",
-    "@angular/cli": ">=12.2.3",
-    "@angular/compiler-cli": ">=12.2.3",
-    "@angular/language-service": ">=12.2.3",
+    "@angular/cli": "12.2.3",
+    "@angular/compiler-cli": "12.2.3",
+    "@angular/language-service": "12.2.3",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@jscutlery/semver": "^2.4.0",
@@ -146,9 +147,5 @@
       "@commitlint/config-conventional"
     ]
   },
-  "prettier": "./libs/prettier-config/index.json",
-  "volta": {
-    "node": "16.15.1",
-    "npm": "6.14.17"
-  }
+  "prettier": "./libs/prettier-config/index.json"
 }

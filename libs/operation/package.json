@@ -1,7 +1,18 @@
 {
   "name": "@cognizone/operation",
   "version": "3.0.0-beta.13",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/material": ">=11.0.0",
+    "@angular/router": ">=11.0.0",
+    "@cognizone/devtools": ">=3.0.0-beta",
+    "@cognizone/model-utils": ">=3.0.0-beta",
+    "@cognizone/ng-core": ">=3.0.0-beta",
+    "@ngxs/store": "^3.6.2",
+    "ngx-json-viewer": "^3.0.2",
+    "rxjs": ">6.6.3 || ^7.0.0"
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   },

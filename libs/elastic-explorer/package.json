@@ -1,7 +1,27 @@
 {
   "name": "@cognizone/elastic-explorer",
   "version": "3.0.0-beta.13",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@angular/cdk": ">=11.0.0",
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/forms": ">=11.0.0",
+    "@angular/material": ">=11.0.0",
+    "@angular/router": ">=11.0.0",
+    "@cognizone/application-profile": ">=3.0.0-beta",
+    "@cognizone/json-model": ">=3.0.0-beta",
+    "@cognizone/i18n": ">=3.0.0-beta",
+    "@cognizone/legi-shared": ">=3.0.0-beta",
+    "@cognizone/model-utils": ">=3.0.0-beta",
+    "@cognizone/ng-core": ">=3.0.0-beta",
+    "@ngneat/transloco-locale": "^1.4.0",
+    "@ngxs/store": "^3.7.2",
+    "immer": "^9.0.5",
+    "lodash-es": "^4.17.21",
+    "ngx-json-viewer": "^3.0.2",
+    "ngx-monaco-editor": "^9.0.0",
+    "rxjs": ">6.6.3 || ^7.0.0"
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   },

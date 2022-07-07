@@ -1,7 +1,15 @@
 {
   "name": "@cognizone/elastic",
   "version": "3.0.0-beta.13",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@cognizone/json-model": ">=3.0.0-beta",
+    "@cognizone/model-utils": ">=3.0.0-beta",
+    "@cognizone/ng-application-profile": ">=3.0.0-beta",
+    "@cognizone/ng-core": ">=3.0.0-beta",
+    "rxjs": ">6.6.3 || ^7.0.0"
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   },
