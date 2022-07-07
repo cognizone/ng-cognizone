@@ -1,3 +1,10 @@
+# [3.0.0-beta.11](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.10...v3.0.0-beta.11) (2022-07-07)
+
+
+### Bug Fixes
+
+* adapt peer dependencies ([56672b7](https://github.com/cognizone/ng-cognizone/commit/56672b74a1b8bad403770e80c86b7c75433719dc))
+
 # [3.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.9...v3.0.0-beta.10) (2022-07-06)
 
 
