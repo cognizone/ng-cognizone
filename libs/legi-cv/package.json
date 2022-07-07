@@ -4,10 +4,10 @@
   "peerDependencies": {
     "@angular/common": ">=11.0.0",
     "@angular/core": ">=11.0.0",
-    "@cognizone/i18n": ">=2.0.0",
-    "@cognizone/json-model": ">=2.0.0",
-    "@cognizone/model-utils": ">=2.0.0",
-    "@cognizone/ng-core": ">=2.0.0",
+    "@cognizone/i18n": ">=3.0.0-beta",
+    "@cognizone/json-model": ">=3.0.0-beta",
+    "@cognizone/model-utils": ">=3.0.0-beta",
+    "@cognizone/ng-core": ">=3.0.0-beta",
     "@ngxs/store": "^3.7.2",
     "lodash-es": "^4.17.21"
   },

@@ -3,8 +3,8 @@
   "version": "3.0.0-beta.10",
   "peerDependencies": {
     "@angular/core": ">=11.0.0",
-    "@cognizone/i18n": ">=2.0.0",
-    "@cognizone/model-utils": ">=2.0.0",
+    "@cognizone/i18n": ">=3.0.0-beta",
+    "@cognizone/model-utils": ">=3.0.0-beta",
     "@ngneat/transloco": "^2.22.0",
     "@ngneat/transloco-locale": "^1.4.0"
   },
