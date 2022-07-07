@@ -4,8 +4,7 @@
   "peerDependencies": {
     "@angular/material": ">=11.0.0",
     "bootstrap": "^4.0.0",
-    "material-design-icons": "^3.0.0",
-    "rxjs": ">6.6.3 || ^7.0.0"
+    "material-design-icons": "^3.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
