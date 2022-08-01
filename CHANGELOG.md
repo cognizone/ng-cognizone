@@ -1,3 +1,10 @@
+# [3.0.0-beta.15](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.14...v3.0.0-beta.15) (2022-08-01)
+
+
+### Bug Fixes
+
+* **json-model:** throw on properties that are neither attribute or reference ([9a70d55](https://github.com/cognizone/ng-cognizone/commit/9a70d55cd02c5d904e2aa2f00c4ad0867cae1780))
+
 # [3.0.0-beta.14](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.13...v3.0.0-beta.14) (2022-07-07)
 
 
