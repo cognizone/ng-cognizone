@@ -107,7 +107,7 @@ export class ResourceGraphService {
         if (this.dataModelDefinitionHelper.isAttribute(definition, data.type, key)) {
           const targetType = this.dataModelDefinitionHelper.getTargetType(definition, data.type, key)[0];
           data.attributes[key] = { dataType: this.shortenUri(targetType), value };
-        } else {
+        } else if (this.dataModelDefinitionHelper.isReference(definition, data.type, key)) {
           const workingValue = value as Many<JsonModel | string>;
           if (Array.isArray(workingValue)) {
             const references: string[] = [];
@@ -143,6 +143,8 @@ export class ResourceGraphService {
           if (Array.isArray(data.references[key]) && data.references[key].length === 0) {
             delete data.references[key];
           }
+        } else {
+          throw new Error(`Property ${data.type}/${key} is neither an attribute or a reference`);
         }
       });
     return { data, included, context: json['@context'], facets: json['@facets'] };
