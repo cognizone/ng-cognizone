@@ -1,3 +1,10 @@
+# [3.0.0-beta.16](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.15...v3.0.0-beta.16) (2022-08-10)
+
+
+### Bug Fixes
+
+* **json-model:** export mappers from lib ([c72b673](https://github.com/cognizone/ng-cognizone/commit/c72b673123740e12c9b815b0610dd125d01f8cfb))
+
 # [3.0.0-beta.15](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.14...v3.0.0-beta.15) (2022-08-01)
 
 
