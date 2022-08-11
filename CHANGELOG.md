@@ -1,3 +1,10 @@
+# [3.0.0-beta.17](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.16...v3.0.0-beta.17) (2022-08-11)
+
+
+### Bug Fixes
+
+* **json-model-graph:** set context on new node creation ([7e8757b](https://github.com/cognizone/ng-cognizone/commit/7e8757b6c2080d430593e954a89bad1ab329c4f6))
+
 # [3.0.0-beta.16](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.15...v3.0.0-beta.16) (2022-08-10)
 
 
