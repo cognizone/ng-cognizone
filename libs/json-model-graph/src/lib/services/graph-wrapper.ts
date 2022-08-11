@@ -29,7 +29,8 @@ export class GraphWrapper {
   }
 
   createNewJsonModel<T extends JsonModel>(types: Many<string>): JsonModelFlat<T> {
-    return this.jsonModelService.createNewJsonModel(types, this.getDefinition()) as JsonModelFlat<T>;
+    const context = this.getGraphSnapshot().context;
+    return this.jsonModelService.createNewJsonModel(types, this.getDefinition(), context) as JsonModelFlat<T>;
   }
 
   update(...nodes: JsonModel[]): void {
