@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
+import { JsonModelFlatGraph } from '@cognizone/json-model';
 import { manyToArray } from '@cognizone/model-utils';
-import { JsonModel, JsonModelFlatGraph, JsonModelService } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
 import produce from 'immer';
 
 import { GraphStatus } from '../models/graph-status';
-
 import { RemoveGraph, Reset, SetGraph, UpdateNode } from './graph.actions';
 
 interface GraphContainer {
@@ -17,9 +16,6 @@ interface GraphContainer {
 export interface GraphStateModel {
   graphs: {
     [uri: string]: GraphContainer;
-  };
-  linkedGraphs: {
-    [uri: string]: JsonModel;
   };
   definitions: {
     [uri: string]: unknown;
@@ -32,13 +28,12 @@ export const GRAPH_STATE_TOKEN = new StateToken<GraphStateModel>('cz_graph');
   name: GRAPH_STATE_TOKEN,
   defaults: {
     graphs: {},
-    linkedGraphs: {},
     definitions: {},
   },
 })
 @Injectable()
 export class GraphState {
-  constructor(private jsonModelService: JsonModelService, private logger: Logger) {
+  constructor(private logger: Logger) {
     this.logger = this.logger.extend('GraphState');
   }
 
@@ -48,8 +43,6 @@ export class GraphState {
       produce(ctx.getState(), draft => {
         draft.definitions[graph.rootUri] = definition;
         draft.graphs[graph.rootUri] = { graph, status: 'pristine' };
-        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[graph.rootUri].graph, definition);
-        draft.linkedGraphs[graph.rootUri] = linkedGraph;
       })
     );
   }
@@ -59,7 +52,6 @@ export class GraphState {
     ctx.setState(
       produce(ctx.getState(), draft => {
         delete draft.graphs[rootUri];
-        delete draft.linkedGraphs[rootUri];
         delete draft.definitions[rootUri];
       })
     );
@@ -76,14 +68,12 @@ export class GraphState {
         });
 
         draft.graphs[rootUri].status = 'touched';
-        const linkedGraph = this.jsonModelService.fromFlatGraph(draft.graphs[rootUri].graph, draft.definitions[rootUri]);
-        draft.linkedGraphs[rootUri] = linkedGraph;
       })
     );
   }
 
   @Action(Reset)
   reset({ setState }: StateContext<GraphStateModel>): void {
-    setState({ graphs: {}, linkedGraphs: {}, definitions: {} });
+    setState({ graphs: {}, definitions: {} });
   }
 }

@@ -5,7 +5,7 @@ import { Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import produce from 'immer';
 import { Observable } from 'rxjs';
-import { distinctUntilChanged, filter, map } from 'rxjs/operators';
+import { distinctUntilChanged, filter, map, shareReplay } from 'rxjs/operators';
 
 import { NodeRecipe } from '../models/node-recipe';
 import { RemoveGraph, Reset, SetGraph, UpdateNode } from '../store/graph.actions';
@@ -18,6 +18,7 @@ export class GraphService {
   state$: Observable<GraphStateModel> = this.store.select(GRAPH_STATE_TOKEN);
 
   private copyCount = 0;
+  private linkedGraphsCache: { [rootUri: string]: Observable<JsonModel> } = {};
 
   get state(): GraphStateModel {
     return this.store.selectSnapshot(GRAPH_STATE_TOKEN);
@@ -56,14 +57,19 @@ export class GraphService {
   }
 
   getLinkedGraph<T extends JsonModel>(rootUri: string): Observable<T> {
-    return this.state$.pipe(
-      map(state => state.linkedGraphs[rootUri] as T),
-      distinctUntilChanged()
-    );
+    const cache$ = this.linkedGraphsCache[rootUri];
+    if (cache$) return cache$ as Observable<T>;
+
+    return (this.linkedGraphsCache[rootUri] = this.state$.pipe(
+      map(state => state.graphs[rootUri].graph),
+      distinctUntilChanged(),
+      map(() => this.getLinkedGraphSnapshot<T>(rootUri)),
+      shareReplay(1)
+    ));
   }
 
   getLinkedGraphSnapshot<T extends JsonModel>(rootUri: string): T {
-    return this.state.linkedGraphs[rootUri] as T;
+    return this.jsonModelService.fromFlatGraph(this.state.graphs[rootUri].graph, this.state.definitions[rootUri]);
   }
 
   update(rootUri: string, ...models: JsonModelFlat[]): void {
@@ -76,6 +82,7 @@ export class GraphService {
   }
 
   reset(): Observable<void> {
+    this.linkedGraphsCache = {};
     return this.store.dispatch(new Reset());
   }
 
@@ -99,6 +106,7 @@ export class GraphService {
   }
 
   removeGraph(rootUri: string): void {
+    delete this.linkedGraphsCache[rootUri];
     this.store.dispatch(new RemoveGraph(rootUri));
   }
 
