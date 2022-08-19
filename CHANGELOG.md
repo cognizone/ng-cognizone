@@ -1,3 +1,10 @@
+# [3.0.0-beta.18](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.17...v3.0.0-beta.18) (2022-08-19)
+
+
+### Features
+
+* **json-model-graph:** lazy evaluation of linked  graphs ([e69f532](https://github.com/cognizone/ng-cognizone/commit/e69f532800612bcf8872f7eb0ef07b223e62a824))
+
 # [3.0.0-beta.17](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.16...v3.0.0-beta.17) (2022-08-11)
 
 
