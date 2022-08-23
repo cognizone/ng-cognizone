@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@angular/core';
 import { Many, manyToArray, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
-import { set } from 'lodash-es';
 
 import { Resource, ResourceGraph } from '../models';
 import { JsonModel } from '../models/json-model';
@@ -72,7 +71,7 @@ export class ResourceGraphService {
           if (!transformed[referenceUri]) transformed[referenceUri] = { '@id': referenceUri } as any;
           return transformed[referenceUri];
         });
-        set(transformed[resource.uri], refKey, isSingle ? refs[0] : refs);
+        (transformed[resource.uri] as any)[refKey] = isSingle ? refs[0] : refs;
       });
     });
     const root = transformed[rawSource.data.uri];
@@ -163,7 +162,7 @@ export class ResourceGraphService {
       if (definition) {
         newValue = Array.isArray(value) && this.dataModelDefinitionHelper.isSingle(definition, data.type, key) ? value[0] : value;
       }
-      set(json, key, newValue);
+      json[key as keyof T] = newValue;
     });
 
     return { json, references: data.references };
