@@ -1,3 +1,10 @@
+# [3.0.0-beta.19](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.18...v3.0.0-beta.19) (2022-08-23)
+
+
+### Bug Fixes
+
+* remove lodash-es/set from resource-graph.service ([557af15](https://github.com/cognizone/ng-cognizone/commit/557af15e720b5295647cb2f6292868e139b11f34))
+
 # [3.0.0-beta.18](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.17...v3.0.0-beta.18) (2022-08-19)
 
 

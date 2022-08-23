@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/ng-yasgui",
-  "version": "3.0.0-beta.18",
+  "version": "3.0.0-beta.19",
   "peerDependencies": {},
   "dependencies": {
     "tslib": "^2.0.0"
