@@ -37,8 +37,8 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
       - run: npm i
       #- run: npm run affected:lint -- --base=origin/main
-      - run: npm run nx -- run-many --all --target=build --prod
-      - run: npm run nx -- run-many --all --target=test
+      - run: npm run nx -- run-many --target=build --configuration=production
+      - run: npm run nx -- run-many --target=test
       # TODO check to bring it back
       # - name: 'Build cli'
       #   run: |
