@@ -4,7 +4,8 @@
     "outDir": "../../dist/out-tsc",
     "target": "es2020",
     "declaration": true,
-    "declarationMap": true,
+    // prod config ignored for some reason
+    "declarationMap": false,
     "inlineSources": true,
     "types": [],
     "lib": ["dom", "es2018"]
@@ -12,7 +13,8 @@
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
-    "enableResourceInlining": true
+    "enableResourceInlining": true,
+    "compilationMode": "partial"
   },
   "exclude": ["src/test-setup.ts", "**/*.spec.ts", "**/*.test.ts", "jest.config.ts"],
   "include": ["**/*.ts"]

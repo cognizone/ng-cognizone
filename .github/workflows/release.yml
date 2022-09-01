@@ -39,35 +39,7 @@ jobs:
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
       # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
-      # should be simpler, but model-utils, ng-core and ng-yasgui seem to ignor prod tsconfig in that case
-      # npm run nx -- run-many --target=build --configuration=production
-      - run: |
-          npm run nx -- run devtools:build:production --skip-nx-cache
-          npm run nx -- run model-utils:build:production --skip-nx-cache
-          npm run nx -- run ng-core:build:production --skip-nx-cache
-          npm run nx -- run ng-yasgui:build:production --skip-nx-cache
-          npm run nx -- run application-profile:build:production --skip-nx-cache
-          npm run nx -- run i18n:build:production --skip-nx-cache
-          npm run nx -- run transloco-langstring:build:production --skip-nx-cache
-          npm run nx -- run json-model:build:production --skip-nx-cache
-          npm run nx -- run material-icons:build:production --skip-nx-cache
-          npm run nx -- run operation:build:production --skip-nx-cache
-          npm run nx -- run permissions:build:production --skip-nx-cache
-          npm run nx -- run i18n-transloco:build:production --skip-nx-cache
-          npm run nx -- run legi-cv:build:production --skip-nx-cache
-          npm run nx -- run ng-application-profile:build:production --skip-nx-cache
-          npm run nx -- run elastic:build:production --skip-nx-cache
-          npm run nx -- run json-model-graph:build:production --skip-nx-cache
-          npm run nx -- run legi-shared:build:production --skip-nx-cache
-          npm run nx -- run elastic-explorer:build:production --skip-nx-cache
-          npm run nx -- run user-action:build:production --skip-nx-cache
-          npm run nx -- run elastic-explorer-chrome-extension:build:production --skip-nx-cache
-          npm run nx -- run docs-app:build:production --skip-nx-cache
-          npm run nx -- run workspace:build --skip-nx-cache
-          npm run nx -- run prettier-config:build --skip-nx-cache
-          npm run nx -- run tslint-config:build --skip-nx-cache
-          npm run nx -- run eslint-config:build  --skip-nx-cache
-          npm run nx -- run legi-styles:build  --skip-nx-cache
+      - run: npm run nx -- run-many --target=build --configuration=production
       - run: npm run nx -- run-many --target=test
       # TODO check to bring it back
       # - name: 'Build cli'
