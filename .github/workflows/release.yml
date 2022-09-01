@@ -39,8 +39,34 @@ jobs:
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
       # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
-      - run: npm run nx -- run-many --all --target=build --prod
-      - run: npm run nx -- run-many --all --target=test
+      - run: |
+          npm run nx -- run devtools:build:production
+          npm run nx -- run eslint-config:build 
+          npm run nx -- run legi-styles:build 
+          npm run nx -- run model-utils:build:production
+          npm run nx -- run ng-core:build:production
+          npm run nx -- run ng-yasgui:build:production
+          npm run nx -- run prettier-config:build
+          npm run nx -- run tslint-config:build
+          npm run nx -- run application-profile:build:production
+          npm run nx -- run i18n:build:production
+          npm run nx -- run transloco-langstring:build:production
+          npm run nx -- run json-model:build:production
+          npm run nx -- run material-icons:build:production
+          npm run nx -- run operation:build:production
+          npm run nx -- run permissions:build:production
+          npm run nx -- run docs-app:build:production
+          npm run nx -- run workspace:build
+          npm run nx -- run i18n-transloco:build:production
+          npm run nx -- run legi-cv:build:production
+          npm run nx -- run ng-application-profile:build:production
+          npm run nx -- run elastic:build:production
+          npm run nx -- run json-model-graph:build:production
+          npm run nx -- run legi-shared:build:production
+          npm run nx -- run elastic-explorer:build:production
+          npm run nx -- run user-action:build:production
+          npm run nx -- run elastic-explorer-chrome-extension:build:production
+      - run: npm run nx -- run-many --target=test
       # TODO check to bring it back
       # - name: 'Build cli'
       #   run: |
