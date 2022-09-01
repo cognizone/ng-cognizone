@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/devtools",
-  "version": "3.0.0-beta.21",
+  "version": "3.0.0-beta.22",
   "peerDependencies": {},
   "dependencies": {
     "tslib": "^2.0.0"

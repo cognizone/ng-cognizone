@@ -1,3 +1,10 @@
+# [3.0.0-beta.22](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.21...v3.0.0-beta.22) (2022-09-01)
+
+
+### Bug Fixes
+
+* come on Nx! ([0fcdf4d](https://github.com/cognizone/ng-cognizone/commit/0fcdf4d2d1ff14139878b11f44c8e20cd68e8dc6))
+
 # [3.0.0-beta.21](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.20...v3.0.0-beta.21) (2022-09-01)
 
 
