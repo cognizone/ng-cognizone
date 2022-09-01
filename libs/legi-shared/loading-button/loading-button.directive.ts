@@ -11,7 +11,7 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
-import { MatSpinner } from '@angular/material/progress-spinner';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 
 /**
@@ -27,7 +27,7 @@ export class LoadingButtonDirective implements OnInit, OnChanges, OnDestroy {
 
   private spinnerDiv?: HTMLElement;
   private loadingOnce: boolean = false;
-  private spinner?: ComponentRef<MatSpinner>;
+  private spinner?: ComponentRef<MatProgressSpinner>;
 
   constructor(
     private elRef: ElementRef<HTMLElement>,
@@ -89,7 +89,7 @@ export class LoadingButtonDirective implements OnInit, OnChanges, OnDestroy {
    */
   private getSpinnerDiv(): HTMLElement {
     if (this.spinnerDiv) return this.spinnerDiv;
-    const factory = this.componentFactoryResolver.resolveComponentFactory(MatSpinner);
+    const factory = this.componentFactoryResolver.resolveComponentFactory(MatProgressSpinner);
     this.spinner = factory.create(this.injector);
     this.spinner.instance.diameter = 20;
     this.spinner.hostView.detectChanges();

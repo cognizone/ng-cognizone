@@ -16,109 +16,47 @@
   "npmScope": "cz",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "parallel": 1
       }
     }
   },
-  "projects": {
-    "application-profile": {
-      "tags": []
-    },
-    "cli": {
-      "tags": []
-    },
-    "devtools": {
-      "tags": []
-    },
-    "docs-app": {
-      "tags": []
-    },
-    "docs-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["docs-app"]
-    },
-    "elastic": {
-      "tags": []
-    },
-    "elastic-explorer": {
-      "tags": []
-    },
-    "elastic-explorer-chrome-extension": {
-      "tags": []
-    },
-    "elastic-explorer-chrome-extension-e2e": {
-      "tags": [],
-      "implicitDependencies": ["elastic-explorer-chrome-extension"]
-    },
-    "eslint-config": {
-      "tags": []
-    },
-    "i18n": {
-      "tags": []
-    },
-    "i18n-transloco": {
-      "tags": []
-    },
-    "json-model": {
-      "tags": []
-    },
-    "json-model-graph": {
-      "tags": []
-    },
-    "legi-cv": {
-      "tags": []
-    },
-    "legi-shared": {
-      "tags": []
-    },
-    "legi-styles": {
-      "tags": []
-    },
-    "material-icons": {
-      "tags": []
-    },
-    "model-utils": {
-      "tags": []
-    },
-    "ng-application-profile": {
-      "tags": []
-    },
-    "ng-core": {
-      "tags": []
-    },
-    "ng-yasgui": {
-      "tags": []
-    },
-    "operation": {
-      "tags": []
-    },
-    "permissions": {
-      "tags": []
-    },
-    "prettier-config": {
-      "tags": []
-    },
-    "transloco-langstring": {
-      "tags": []
-    },
-    "tslint-config": {
-      "tags": []
-    },
-    "user-action": {
-      "tags": []
-    },
-    "workspace": {
-      "tags": []
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultProject": "docs-app",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
       }
-    ]
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
   }
 }

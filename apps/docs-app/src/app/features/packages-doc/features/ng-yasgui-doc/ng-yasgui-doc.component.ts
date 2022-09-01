@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { YasguiOptions } from '@cognizone/ng-yasgui';
 
 import { ApiDescription } from '@app/shared';
@@ -12,7 +12,7 @@ import { ApiDescription } from '@app/shared';
 export class NgYasguiDocComponent implements OnInit {
   displayYasgui = false;
 
-  form!: FormGroup;
+  form!: UntypedFormGroup;
 
   apis: ApiDescription[] = [
     {
@@ -46,7 +46,7 @@ export class NgYasguiDocComponent implements OnInit {
     },
   ];
 
-  constructor(private readonly fb: FormBuilder) {}
+  constructor(private readonly fb: UntypedFormBuilder) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({

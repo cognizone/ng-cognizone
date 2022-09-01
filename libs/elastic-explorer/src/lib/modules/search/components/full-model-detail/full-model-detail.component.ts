@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Inject, Injector, Input, OnChanges, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { debounceTime } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnCh
   @Input()
   model!: FullModel;
 
-  queryControl: FormControl = new FormControl('');
+  queryControl: UntypedFormControl = new UntypedFormControl('');
 
   providers: DetailViewProvider[] = [];
 

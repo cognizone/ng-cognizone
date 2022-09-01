@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, Input, OnInit, Optional, Self } from '@angular/core';
-import { ControlContainer, FormControl, NgControl } from '@angular/forms';
+import { ControlContainer, UntypedFormControl, NgControl } from '@angular/forms';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
@@ -44,7 +44,7 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
   @Input()
   hint?: string;
 
-  embeddedControl!: FormControl;
+  embeddedControl!: UntypedFormControl;
 
   get classicMode(): boolean {
     return this.config.appearance === 'classic';
@@ -71,7 +71,7 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
    */
   ngOnInit(): void {
     this.controlChanged.complete();
-    this.embeddedControl = new FormControl(null, { updateOn: this.updateOnBlur ? 'blur' : 'change' });
+    this.embeddedControl = new UntypedFormControl(null, { updateOn: this.updateOnBlur ? 'blur' : 'change' });
     super.ngOnInit();
     if (this.ngControl) {
       const control = extractControlFromNgControl(this.ngControl);

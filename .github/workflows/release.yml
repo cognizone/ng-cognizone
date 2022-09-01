@@ -41,11 +41,12 @@ jobs:
       # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
       - run: npm run nx -- run-many --all --target=build --prod
       - run: npm run nx -- run-many --all --target=test
-      - name: 'Build cli'
-        run: |
-          cd ./libs/cli
-          npm i
-          npm run build
+      # TODO check to bring it back
+      # - name: 'Build cli'
+      #   run: |
+      #     cd ./other-libs/cli
+      #     npm i
+      #     npm run build
       - run: node ./tools/sync-package-metadata.js
       - run: npx semantic-release
         # - run: node ./tools/npm-publish.js

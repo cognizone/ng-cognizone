@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { ElasticAggregation, notNil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { identity, Observable } from 'rxjs';
@@ -13,13 +13,13 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
   styleUrls: ['./filters-form.component.scss'],
 })
 export class FiltersFormComponent extends OnDestroy$ implements OnInit {
-  form!: FormGroup;
+  form!: UntypedFormGroup;
 
   typeOptionsProvider!: SelectOptionsProvider<string>;
 
-  manualMode: FormControl = new FormControl(false);
+  manualMode: UntypedFormControl = new UntypedFormControl(false);
 
-  constructor(private fb: FormBuilder, private elasticExplorerService: ElasticExplorerService) {
+  constructor(private fb: UntypedFormBuilder, private elasticExplorerService: ElasticExplorerService) {
     super();
   }
 

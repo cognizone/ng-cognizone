@@ -1,36 +1,5 @@
 {
   "version": 1,
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "defaultProject": "docs-app",
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
-  },
   "projects": {
     "application-profile": {
       "projectType": "library",
@@ -57,24 +26,27 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/application-profile/src/**/*.ts", "libs/application-profile/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/application-profile"],
           "options": {
-            "jestConfig": "libs/application-profile/jest.config.js",
+            "jestConfig": "libs/application-profile/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "cli": {
       "projectType": "library",
       "root": "libs/cli",
       "sourceRoot": "libs/cli/src",
       "prefix": "cz",
-      "architect": {}
+      "architect": {},
+      "tags": []
     },
     "devtools": {
       "projectType": "library",
@@ -101,17 +73,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/devtools/src/**/*.ts", "libs/devtools/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/devtools"],
           "options": {
-            "jestConfig": "libs/devtools/jest.config.js",
+            "jestConfig": "libs/devtools/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "docs-app": {
       "projectType": "application",
@@ -220,17 +194,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/docs-app/src/**/*.ts", "apps/docs-app/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/docs-app"],
           "options": {
-            "jestConfig": "apps/docs-app/jest.config.js",
+            "jestConfig": "apps/docs-app/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "docs-app-e2e": {
       "root": "apps/docs-app-e2e",
@@ -254,9 +230,12 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/docs-app-e2e/**/*.{js,ts}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["docs-app"]
     },
     "elastic": {
       "projectType": "library",
@@ -280,17 +259,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/elastic/src/**/*.ts", "libs/elastic/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/elastic"],
           "options": {
-            "jestConfig": "libs/elastic/jest.config.js",
+            "jestConfig": "libs/elastic/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "elastic-explorer": {
       "projectType": "library",
@@ -314,17 +295,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/elastic-explorer/src/**/*.ts", "libs/elastic-explorer/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/elastic-explorer"],
           "options": {
-            "jestConfig": "libs/elastic-explorer/jest.config.js",
+            "jestConfig": "libs/elastic-explorer/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "elastic-explorer-chrome-extension": {
       "projectType": "application",
@@ -429,17 +412,19 @@
               "apps/elastic-explorer-chrome-extension/src/**/*.ts",
               "apps/elastic-explorer-chrome-extension/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/elastic-explorer-chrome-extension"],
           "options": {
-            "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.js",
+            "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "elastic-explorer-chrome-extension-e2e": {
       "root": "apps/elastic-explorer-chrome-extension-e2e",
@@ -463,9 +448,12 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/elastic-explorer-chrome-extension-e2e/**/*.{js,ts}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["elastic-explorer-chrome-extension"]
     },
     "eslint-config": {
       "projectType": "library",
@@ -480,7 +468,8 @@
             "dist": "dist/libs/eslint-config"
           }
         }
-      }
+      },
+      "tags": []
     },
     "i18n": {
       "projectType": "library",
@@ -507,17 +496,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/i18n/src/**/*.ts", "libs/i18n/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/i18n"],
           "options": {
-            "jestConfig": "libs/i18n/jest.config.js",
+            "jestConfig": "libs/i18n/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "i18n-transloco": {
       "projectType": "library",
@@ -544,17 +535,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/i18n-transloco/src/**/*.ts", "libs/i18n-transloco/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/i18n-transloco"],
           "options": {
-            "jestConfig": "libs/i18n-transloco/jest.config.js",
+            "jestConfig": "libs/i18n-transloco/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "json-model": {
       "projectType": "library",
@@ -582,7 +575,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/json-model"],
           "options": {
-            "jestConfig": "libs/json-model/jest.config.js",
+            "jestConfig": "libs/json-model/jest.config.ts",
             "passWithNoTests": true
           }
         },
@@ -590,9 +583,11 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/json-model/src/**/*.ts", "libs/json-model/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "json-model-graph": {
       "projectType": "library",
@@ -619,17 +614,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/json-model-graph/src/**/*.ts", "libs/json-model-graph/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/json-model-graph"],
           "options": {
-            "jestConfig": "libs/json-model-graph/jest.config.js",
+            "jestConfig": "libs/json-model-graph/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "legi-cv": {
       "projectType": "library",
@@ -656,17 +653,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/legi-cv/src/**/*.ts", "libs/legi-cv/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/legi-cv"],
           "options": {
-            "jestConfig": "libs/legi-cv/jest.config.js",
+            "jestConfig": "libs/legi-cv/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "legi-shared": {
       "projectType": "library",
@@ -693,17 +692,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/legi-shared/src/**/*.ts", "libs/legi-shared/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/legi-shared"],
           "options": {
-            "jestConfig": "libs/legi-shared/jest.config.js",
+            "jestConfig": "libs/legi-shared/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "legi-styles": {
       "projectType": "library",
@@ -718,7 +719,8 @@
             "dist": "dist/libs/legi-styles"
           }
         }
-      }
+      },
+      "tags": []
     },
     "material-icons": {
       "projectType": "library",
@@ -742,17 +744,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/material-icons/src/**/*.ts", "libs/material-icons/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/material-icons"],
           "options": {
-            "jestConfig": "libs/material-icons/jest.config.js",
+            "jestConfig": "libs/material-icons/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "model-utils": {
       "projectType": "library",
@@ -779,17 +783,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/model-utils/src/**/*.ts", "libs/model-utils/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/model-utils"],
           "options": {
-            "jestConfig": "libs/model-utils/jest.config.js",
+            "jestConfig": "libs/model-utils/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "ng-application-profile": {
       "projectType": "library",
@@ -816,17 +822,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/ng-application-profile/src/**/*.ts", "libs/ng-application-profile/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/ng-application-profile"],
           "options": {
-            "jestConfig": "libs/ng-application-profile/jest.config.js",
+            "jestConfig": "libs/ng-application-profile/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "ng-core": {
       "projectType": "library",
@@ -853,17 +861,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/ng-core/src/**/*.ts", "libs/ng-core/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/ng-core"],
           "options": {
-            "jestConfig": "libs/ng-core/jest.config.js",
+            "jestConfig": "libs/ng-core/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "ng-yasgui": {
       "projectType": "library",
@@ -890,17 +900,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/ng-yasgui/src/**/*.ts", "libs/ng-yasgui/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/ng-yasgui"],
           "options": {
-            "jestConfig": "libs/ng-yasgui/jest.config.js",
+            "jestConfig": "libs/ng-yasgui/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "operation": {
       "projectType": "library",
@@ -927,17 +939,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/operation/src/**/*.ts", "libs/operation/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/operation"],
           "options": {
-            "jestConfig": "libs/operation/jest.config.js",
+            "jestConfig": "libs/operation/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "permissions": {
       "projectType": "library",
@@ -964,17 +978,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/permissions/src/**/*.ts", "libs/permissions/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/permissions"],
           "options": {
-            "jestConfig": "libs/permissions/jest.config.js",
+            "jestConfig": "libs/permissions/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "prettier-config": {
       "projectType": "library",
@@ -989,7 +1005,8 @@
             "dist": "dist/libs/prettier-config"
           }
         }
-      }
+      },
+      "tags": []
     },
     "transloco-langstring": {
       "projectType": "library",
@@ -1016,17 +1033,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/transloco-langstring/src/**/*.ts", "libs/transloco-langstring/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/transloco-langstring"],
           "options": {
-            "jestConfig": "libs/transloco-langstring/jest.config.js",
+            "jestConfig": "libs/transloco-langstring/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "tslint-config": {
       "projectType": "library",
@@ -1041,7 +1060,8 @@
             "dist": "dist/libs/tslint-config"
           }
         }
-      }
+      },
+      "tags": []
     },
     "user-action": {
       "projectType": "library",
@@ -1068,17 +1088,19 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/user-action/src/**/*.ts", "libs/user-action/src/**/*.html"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/user-action"],
           "options": {
-            "jestConfig": "libs/user-action/jest.config.js",
+            "jestConfig": "libs/user-action/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "workspace": {
       "architect": {
@@ -1089,7 +1111,8 @@
           }
         }
       },
-      "root": "."
+      "root": ".",
+      "tags": []
     }
   }
 }

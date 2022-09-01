@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { AbstractControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, UntypedFormArray, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, JsonModel, JsonModelService } from '@cognizone/json-model';
 import { CvService } from '@cognizone/legi-cv';
 import { Many, manyToArray, notNil } from '@cognizone/model-utils';
@@ -16,7 +16,7 @@ export class GraphAndControlLinkingService {
     private graphService: GraphService,
     private cvService: CvService,
     private jsonModelService: JsonModelService,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
     private dataModelDefinitionHelper: DataModelDefinitionHelper
   ) {}
@@ -84,7 +84,7 @@ export class GraphAndControlLinkingService {
 
   updateFormArray<T>(
     values$: Observable<T[]>,
-    formArray: FormArray,
+    formArray: UntypedFormArray,
     controlBuilder: (value: T) => AbstractControl = value => this.fb.control(value)
   ): Observable<void> {
     return values$.pipe(
@@ -152,9 +152,9 @@ export class GraphAndControlLinkingService {
 
   private patchControlValue(value: unknown, control: AbstractControl, emitEvent: boolean): void {
     if (value === control.value) return;
-    else if (control instanceof FormArray) {
+    else if (control instanceof UntypedFormArray) {
       control.patchValue((value as unknown[]) ?? [], { emitEvent });
-    } else if (control instanceof FormGroup) {
+    } else if (control instanceof UntypedFormGroup) {
       control.patchValue((value as {}) ?? {}, { emitEvent });
     } else {
       control.patchValue(value, { emitEvent });

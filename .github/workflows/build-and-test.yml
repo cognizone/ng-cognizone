@@ -39,9 +39,10 @@ jobs:
       #- run: npm run affected:lint -- --base=origin/main
       - run: npm run nx -- run-many --all --target=build --prod
       - run: npm run nx -- run-many --all --target=test
-      - name: 'Build cli'
-        run: |
-          cd ./libs/cli
-          npm i
-          npm run build
+      # TODO check to bring it back
+      # - name: 'Build cli'
+      #   run: |
+      #     cd ./other-libs/cli
+      #     npm i
+      #     npm run build
       #- run: npm run affected:e2e -- --headless --base=origin/main

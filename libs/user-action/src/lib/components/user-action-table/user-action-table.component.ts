@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { PageEvent } from '@angular/material/paginator';
 import { downloadBlob, SelectOptionsProvider } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
@@ -34,7 +34,7 @@ export class UserActionTableComponent extends OnDestroy$ implements OnInit {
 
   columns: string[] = ['action', 'date', 'hour', 'user', 'userId', 'status'];
 
-  form: FormGroup = this.fb.group({
+  form: UntypedFormGroup = this.fb.group({
     username: [],
     dateFrom: [],
     dateTo: [],
@@ -44,7 +44,7 @@ export class UserActionTableComponent extends OnDestroy$ implements OnInit {
 
   constructor(
     private readonly userActionService: UserActionService,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private cdr: ChangeDetectorRef,
     private optionsService: UserActionOptionsService
   ) {

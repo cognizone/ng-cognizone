@@ -10,6 +10,6 @@ export class ProtocolService {
 
   init(): void {
     const url = `${location.origin}${environment.production ? '/index.html' : ''}#/%s`;
-    navigator.registerProtocolHandler(this.protocol, url, 'cz-data-explorer');
+    (navigator as any).registerProtocolHandler(this.protocol, url, 'cz-data-explorer');
   }
 }

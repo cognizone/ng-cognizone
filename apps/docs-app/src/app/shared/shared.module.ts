@@ -68,20 +68,19 @@ const pipes = [EscapeHtmlPipe, ReadingTimePipe];
 const directives = [MatTabRoutedDirective, AnchorDirective, ImgTooltipDirective, ComponentTooltipDirective];
 
 @NgModule({
-  declarations: [components, pipes, directives],
-  imports: [CommonModule, material, ReactiveFormsModule, FlexLayoutModule, RouterModule],
-  exports: [material, components, pipes, directives, CommonModule, ReactiveFormsModule, FlexLayoutModule],
-  entryComponents: [ImgTooltipComponent, CodeBlockComponent],
-  providers: [
-    {
-      provide: TOOLTIP_COMPONENT,
-      multi: true,
-      useValue: {
-        class: CodeBlockComponent,
-        type: 'code',
-      } as TooltipComponent,
-    },
-  ],
+    declarations: [components, pipes, directives],
+    imports: [CommonModule, material, ReactiveFormsModule, FlexLayoutModule, RouterModule],
+    exports: [material, components, pipes, directives, CommonModule, ReactiveFormsModule, FlexLayoutModule],
+    providers: [
+        {
+            provide: TOOLTIP_COMPONENT,
+            multi: true,
+            useValue: {
+                class: CodeBlockComponent,
+                type: 'code',
+            } as TooltipComponent,
+        },
+    ]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModuleRoot> {

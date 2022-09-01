@@ -9,7 +9,7 @@ import {
   Optional,
   TemplateRef,
 } from '@angular/core';
-import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 
@@ -45,7 +45,7 @@ export class TextareaComponent extends ControlComponent<string> {
   @ContentChild('czSuffix', { static: false, read: TemplateRef })
   suffixTpl?: TemplateRef<unknown>;
 
-  embeddedControl: FormControl = new FormControl();
+  embeddedControl: UntypedFormControl = new UntypedFormControl();
 
   get classicMode(): boolean {
     return this.config.appearance === 'classic';

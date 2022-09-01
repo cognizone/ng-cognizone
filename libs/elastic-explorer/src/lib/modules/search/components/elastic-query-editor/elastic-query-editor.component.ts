@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
@@ -12,7 +12,7 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
 export class ElasticQueryEditorComponent extends OnDestroy$ implements OnInit {
   editorOptions: {} = { theme: 'vs-light', language: 'json' };
 
-  code: FormControl = new FormControl(undefined, {
+  code: UntypedFormControl = new UntypedFormControl(undefined, {
     updateOn: 'blur',
   });
 

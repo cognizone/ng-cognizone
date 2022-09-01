@@ -2,7 +2,7 @@
 /* eslint-disable @angular-eslint/directive-class-suffix */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeDetectorRef, Directive, Input, OnInit, Optional } from '@angular/core';
-import { AbstractControl, ControlContainer, ControlValueAccessor, FormControl, FormGroupDirective, FormGroupName } from '@angular/forms';
+import { AbstractControl, ControlContainer, ControlValueAccessor, UntypedFormControl, FormGroupDirective, FormGroupName } from '@angular/forms';
 import { merge, noop, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 
@@ -158,7 +158,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
       control = this.formControl;
     }
     if (!control || !control.validator) return;
-    const errors = control.validator(new FormControl());
+    const errors = control.validator(new UntypedFormControl());
     if (errors?.required) this.required = true;
   }
 
