@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/permissions",
-  "version": "3.0.0-beta.20",
+  "version": "3.0.0-beta.21",
   "peerDependencies": {
     "@cognizone/model-utils": ">=3.0.0-beta",
     "@cognizone/ng-core": ">=3.0.0-beta"

@@ -1,3 +1,10 @@
+# [3.0.0-beta.21](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.20...v3.0.0-beta.21) (2022-09-01)
+
+
+### Bug Fixes
+
+* issue with ivy builds being enabled for model-utils, ng-core and ng-yasgui ([aded6c5](https://github.com/cognizone/ng-cognizone/commit/aded6c595b6a165fd1532ac821cc42a5b3c7672c))
+
 # [3.0.0-beta.20](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.19...v3.0.0-beta.20) (2022-09-01)
 
 
