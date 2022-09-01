@@ -1,3 +1,10 @@
+# [3.0.0-beta.20](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.19...v3.0.0-beta.20) (2022-09-01)
+
+
+### Features
+
+* upgrade angular and nx to 14 ([8cd63f8](https://github.com/cognizone/ng-cognizone/commit/8cd63f87d596dbfe5a12fe39b59e9aa402dce796))
+
 # [3.0.0-beta.19](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.18...v3.0.0-beta.19) (2022-08-23)
 
 
