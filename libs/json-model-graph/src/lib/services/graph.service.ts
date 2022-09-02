@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { notNil } from '@cognizone/model-utils';
 import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
@@ -19,13 +19,17 @@ export class GraphService {
 
   private copyCount = 0;
   private linkedGraphsCache: { [rootUri: string]: Observable<JsonModel> } = {};
+  private _state!: GraphStateModel;
 
   get state(): GraphStateModel {
-    return this.store.selectSnapshot(GRAPH_STATE_TOKEN);
+    return this._state;
   }
 
-  constructor(private store: Store, private logger: Logger, private jsonModelService: JsonModelService) {
+  constructor(private store: Store, private logger: Logger, private jsonModelService: JsonModelService, private ngZone: NgZone) {
     this.logger = this.logger.extend('GraphService');
+    this.ngZone.runOutsideAngular(() => {
+      this.state$.subscribe(state => (this._state = state));
+    });
   }
 
   hasGraph(rootUri: string): boolean {
