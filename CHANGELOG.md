@@ -1,3 +1,10 @@
+# [3.0.0-beta.25](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.24...v3.0.0-beta.25) (2022-09-02)
+
+
+### Performance Improvements
+
+* **json-model-graph:** more efficient way to get state snapshot ([e0f6248](https://github.com/cognizone/ng-cognizone/commit/e0f624860175b0794bdf593e1d70261fd224974f))
+
 # [3.0.0-beta.24](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.23...v3.0.0-beta.24) (2022-09-01)
 
 
