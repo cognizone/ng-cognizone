@@ -165,7 +165,7 @@ export class GraphAndControlLinkingService {
     node: JsonModel,
     options: Pick<LinkControlToNodeAttributeOptions<T>, 'attributeKey' | 'innerPath'>
   ): unknown {
-    const fullPath = [options.attributeKey, options.innerPath].filter(notNil);
+    const fullPath = [options.attributeKey, ...manyToArray(options.innerPath)].filter(notNil);
     return get(node, fullPath);
   }
 
@@ -174,7 +174,7 @@ export class GraphAndControlLinkingService {
     options: Pick<LinkControlToNodeAttributeOptions<T>, 'attributeKey' | 'innerPath'>,
     value: unknown
   ): void {
-    const fullPath = [options.attributeKey, options.innerPath].filter(notNil);
+    const fullPath = [options.attributeKey, ...manyToArray(options.innerPath)].filter(notNil);
     set(node, fullPath, value);
   }
 }
@@ -196,6 +196,6 @@ export interface LinkControlToNodeAttributeOptions<T = JsonModel> {
   classId?: string;
   // TODO handle this
   datatype?: string;
-  innerPath?: string | number;
+  innerPath?: Many<string | number>;
   emitEventFromNodeToForm?: boolean;
 }

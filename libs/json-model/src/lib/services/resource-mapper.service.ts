@@ -1,5 +1,5 @@
 import { Inject, Injectable, Optional } from '@angular/core';
-import { TypedResource } from '@cognizone/model-utils';
+import { Datatype, DatatypeLong, manyToArray, manyToOne, TypedResource } from '@cognizone/model-utils';
 
 import { Resource } from '../models';
 import { keys, stringKeys } from '../utils/keys';
@@ -22,31 +22,54 @@ export class ResourceMapper {
 
   deserialize<T extends object>(raw: TypedResource): Resource<T> {
     const rawAttributes = raw.attributes ?? {};
-    const attributes = keys(rawAttributes).reduce<Resource<T>['attributes']>((acc, attributeKey) => {
+    const attributes = {} as Resource<T>['attributes'];
+    keys(rawAttributes).forEach(attributeKey => {
       const attribute = rawAttributes[attributeKey];
+      const dataTypes = stringKeys(attribute);
+      if (!dataTypes.length) return;
+      for (const dataType of dataTypes) {
+        const value = attribute[dataType as keyof typeof attribute];
+
+        const newValue = this.deserializeAttribute(dataType, value);
+        if (dataTypes.length === 1) {
+          (attributes as any)[attributeKey] = { value: newValue, dataType };
+        } else {
+          (attributes as any)[attributeKey] = (attributes as any)[attributeKey] ?? [];
+          (attributes as any)[attributeKey].push({ value: newValue, dataType });
+        }
+      }
       const dataType = stringKeys(attribute).pop();
-      if (!dataType) return acc;
-      const value = attribute[dataType as keyof typeof attribute];
-
-      const newValue = this.deserializeAttribute(dataType, value);
-
-      return { ...acc, [attributeKey]: { value: newValue, dataType } };
-    }, {} as Resource<T>['attributes']);
+      if (!dataType) return;
+    });
     return { references: {}, ...raw, attributes };
   }
 
   serialize(model: Resource): TypedResource {
     const attributes: TypedResource['attributes'] = {};
     keys(model.attributes).forEach(attributeKey => {
-      const { value, dataType } = model.attributes[attributeKey];
+      const values = manyToArray(model.attributes[attributeKey]);
+      for (const { value, dataType } of values) {
+        const rawValue = dataType ? this.serializeAttribute(dataType, value) : undefined;
 
-      const rawValue = dataType ? this.serializeAttribute(dataType, value) : undefined;
-
-      if (rawValue != null) {
-        attributes[attributeKey] = { [dataType]: rawValue };
+        if (rawValue != null) {
+          if (values.length <= 1) {
+            attributes[attributeKey] = { [dataType]: rawValue };
+          } else {
+            attributes[attributeKey] = attributes[attributeKey] ?? {};
+            attributes[attributeKey][dataType] = attributes[attributeKey][dataType] ?? [];
+            (attributes[attributeKey][dataType] as unknown[]).push(...manyToArray(rawValue));
+            if (this.isLangString(dataType)) {
+              attributes[attributeKey][dataType] = manyToOne(attributes[attributeKey][dataType]);
+            }
+          }
+        }
       }
-    }, {});
+    });
     return { ...model, attributes };
+  }
+
+  private isLangString(dataType: string): boolean {
+    return dataType === Datatype.RDF_LANG_STRING || dataType === DatatypeLong.RDF_LANG_STRING;
   }
 
   private deserializeAttribute<T, U>(dataType: string, value: T): U {

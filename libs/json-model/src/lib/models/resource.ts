@@ -19,7 +19,7 @@ export interface Resource<T extends object = {}> {
   uri: string;
   type: Many<string>;
   references: { [referenceKey: string]: Many<string> }; // value is one or multiple uris
-  attributes: { [P in keyof T]: ResourceAttribute<T[P]> };
+  attributes: { [P in keyof T]: Many<ResourceAttribute<T[P]>> };
 }
 
 /**

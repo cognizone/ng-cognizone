@@ -43,3 +43,12 @@ export interface JsonModelFlatGraph<T extends JsonModelFlat = JsonModelFlat> {
     [uri: string]: T;
   };
 }
+
+export interface JsonModelValue<T> {
+  '@value': T;
+  '@type': string;
+}
+
+export function isJsonModelValue<T = unknown>(o: unknown): o is JsonModelValue<T> {
+  return typeof o === 'object' && o != null && '@type' in o && '@value' in o;
+}

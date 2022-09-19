@@ -22,6 +22,7 @@ export class GraphService {
   private _state!: GraphStateModel;
 
   get state(): GraphStateModel {
+    // performance of this.store.selectSnapshot are pretty bad in comparison
     return this._state;
   }
 
