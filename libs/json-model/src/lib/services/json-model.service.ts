@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@angular/core';
-import { DatatypeLong, Many, manyToArray, manyToOne, TypedResourceContext } from '@cognizone/model-utils';
+import { Datatype, DatatypeLong, Many, manyToArray, manyToOne, TypedResourceContext } from '@cognizone/model-utils';
 
 import { isJsonModel, JsonModel, JsonModelFlatGraph, JsonModels } from '../models/json-model';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
@@ -38,6 +38,18 @@ export class JsonModelService {
     return jsonModel;
   }
 
+  createNewBareboneJsonModel(types: Many<string>, context?: TypedResourceContext): JsonModel {
+    const compactTypes = manyToArray(types);
+    const uri = this.idGenerator.generateId(compactTypes);
+    const jsonModel: JsonModel = {
+      '@id': uri,
+      '@type': types,
+      '@context': context,
+    };
+
+    return jsonModel;
+  }
+
   createNewJsonModel(types: Many<string>, dataModelDefinition: unknown, context?: TypedResourceContext): JsonModel {
     const compactTypes = manyToArray(types);
     const uri = this.idGenerator.generateId(compactTypes);
@@ -50,7 +62,7 @@ export class JsonModelService {
     this.dataModelDefinitionHelper.getProperties(dataModelDefinition, types).forEach(propertyUri => {
       const range = this.dataModelDefinitionHelper.getTargetType(dataModelDefinition, types, propertyUri);
       let value: unknown;
-      if (range.length === 1 && manyToOne(range) === DatatypeLong.RDF_LANG_STRING) {
+      if (range.length === 1 && (manyToOne(range) === DatatypeLong.RDF_LANG_STRING || manyToOne(range) === Datatype.RDF_LANG_STRING)) {
         value = {};
       } else {
         value = this.dataModelDefinitionHelper.isSingle(dataModelDefinition, types, propertyUri) ? undefined : [];

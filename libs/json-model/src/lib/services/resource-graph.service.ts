@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@angular/core';
-import { Many, manyToArray, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
+import { Datatype, DatatypeLong, Many, manyToArray, manyToOne, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
 
 import { Resource, ResourceGraph } from '../models';
 import { JsonModel } from '../models/json-model';
@@ -104,8 +104,31 @@ export class ResourceGraphService {
       })
       .forEach(([key, value]) => {
         if (this.dataModelDefinitionHelper.isAttribute(definition, data.type, key)) {
-          const targetType = this.dataModelDefinitionHelper.getTargetType(definition, data.type, key)[0];
-          data.attributes[key] = { dataType: this.shortenUri(targetType), value };
+          const hasMultipleTypes = this.dataModelDefinitionHelper.getTargetType(definition, data.type, key).length > 1;
+          if (hasMultipleTypes) {
+            const attrTypeMap = {} as any;
+            const isSingle = this.dataModelDefinitionHelper.isSingle(definition, data.type, key);
+            for (const jsonModelValue of manyToArray(value)) {
+              const datatype = this.shortenUri(jsonModelValue['@type']);
+              const actualValue = jsonModelValue['@value'];
+              data.attributes[key] = data.attributes[key] ?? [];
+              if (attrTypeMap[datatype]) {
+                attrTypeMap[datatype].value.push(actualValue);
+              } else {
+                attrTypeMap[datatype] = {
+                  dataType: this.shortenUri(datatype),
+                  value: isSingle || this.isLangString(datatype) ? manyToOne(actualValue) : manyToArray(actualValue),
+                };
+                (data.attributes[key] as unknown[]).push(attrTypeMap[datatype]);
+              }
+            }
+            if (isSingle && (data.attributes[key] as unknown[]).length <= 1) {
+              data.attributes[key] = manyToOne(data.attributes[key]);
+            }
+          } else {
+            const dataType = this.dataModelDefinitionHelper.getTargetType(definition, data.type, key)[0];
+            data.attributes[key] = { dataType: this.shortenUri(dataType), value };
+          }
         } else if (this.dataModelDefinitionHelper.isReference(definition, data.type, key)) {
           const workingValue = value as Many<JsonModel | string>;
           if (Array.isArray(workingValue)) {
@@ -149,6 +172,10 @@ export class ResourceGraphService {
     return { data, included, context: json['@context'], facets: json['@facets'] };
   }
 
+  private isLangString(dataType: string): boolean {
+    return [dataType, this.shortenUri(dataType)].some(type => type === Datatype.RDF_LANG_STRING || type === DatatypeLong.RDF_LANG_STRING);
+  }
+
   private shortenUri(uri: string): string {
     return this.prefixCc.compactUri(uri);
   }
@@ -156,13 +183,33 @@ export class ResourceGraphService {
   private _resourceToJsonModel<T extends JsonModel>(data: Resource, definition?: unknown): { json: T; references: Resource['references'] } {
     const json = { '@id': data.uri, '@type': data.type } as T;
 
-    Object.entries(data.attributes || {}).forEach(([key, attribute]) => {
-      const { value } = attribute as any;
-      let newValue = value;
+    Object.entries(data.attributes ?? {}).forEach(([key, attr]) => {
+      const attributes = manyToArray(attr);
+      let isSingle: boolean;
+      let hasMultipleTypes: boolean;
       if (definition) {
-        newValue = Array.isArray(value) && this.dataModelDefinitionHelper.isSingle(definition, data.type, key) ? value[0] : value;
+        isSingle = this.dataModelDefinitionHelper.isSingle(definition, data.type, key);
+        hasMultipleTypes = this.dataModelDefinitionHelper.getTargetType(definition, data.type, key).length > 1;
+      } else {
+        isSingle = false;
+        hasMultipleTypes = attributes.length > 1;
       }
-      json[key as keyof T] = newValue;
+
+      for (const attribute of attributes) {
+        const { value, dataType } = attribute as any;
+        if (hasMultipleTypes) {
+          for (const v of manyToArray(value)) {
+            const jsonModelValue = { '@value': v, '@type': dataType };
+            json[key as keyof T] = json[key as keyof T] ?? ([] as any);
+            (json[key as keyof T] as unknown as unknown[]).push(jsonModelValue);
+          }
+          if (isSingle) {
+            json[key as keyof T] = manyToOne(json[key as keyof T]);
+          }
+        } else {
+          json[key as keyof T] = Array.isArray(value) && isSingle ? value[0] : value;
+        }
+      }
     });
 
     return { json, references: data.references };
