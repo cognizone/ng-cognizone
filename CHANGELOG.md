@@ -1,3 +1,10 @@
+# [3.0.0-beta.26](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.25...v3.0.0-beta.26) (2022-09-21)
+
+
+### Features
+
+* **json-model:** handle range of multiple datatypes ([5a327a1](https://github.com/cognizone/ng-cognizone/commit/5a327a1c6269818303c085729195c47f584cd899))
+
 # [3.0.0-beta.25](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.24...v3.0.0-beta.25) (2022-09-02)
 
 
