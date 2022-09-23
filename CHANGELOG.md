@@ -1,3 +1,10 @@
+# [3.0.0-beta.27](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.26...v3.0.0-beta.27) (2022-09-23)
+
+
+### Bug Fixes
+
+* **ng-application-profile:** added missing export ([7f10b8e](https://github.com/cognizone/ng-cognizone/commit/7f10b8e20240cc0b4d73bfadce2560be2673577b))
+
 # [3.0.0-beta.26](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.25...v3.0.0-beta.26) (2022-09-21)
 
 
