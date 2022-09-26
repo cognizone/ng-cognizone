@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.2.0
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.15.x
+          node-version: '18'
       - name: Git checkout
         uses: actions/checkout@v2
         with:
@@ -35,10 +35,12 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm i
+      - run: npm -v
+      - run: npm i --legacy-peer-deps
       #- run: npm run affected:lint -- --base=origin/main
       - run: npm run nx -- run-many --target=build --configuration=production
       - run: npm run nx -- run-many --target=test
+      - run: npm -v
       # TODO check to bring it back
       # - name: 'Build cli'
       #   run: |

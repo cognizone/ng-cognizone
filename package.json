@@ -57,7 +57,7 @@
     "@angular/common": "14.2.0",
     "@angular/compiler": "14.2.0",
     "@angular/core": "14.2.0",
-    "@angular/flex-layout": "^12.0.0-beta.34",
+    "@angular/flex-layout": "14.0.0-beta.40",
     "@angular/forms": "14.2.0",
     "@angular/material": "14.2.0",
     "@angular/material-moment-adapter": "14.2.0",
@@ -66,8 +66,8 @@
     "@angular/router": "14.2.0",
     "@ngneat/transloco": "^2.22.0",
     "@ngneat/transloco-locale": "^1.4.0",
-    "@ngxs/devtools-plugin": "^3.7.2",
-    "@ngxs/store": "^3.7.2",
+    "@ngxs/devtools-plugin": "^3.7.5",
+    "@ngxs/store": "^3.7.5",
     "@nrwl/angular": "14.6.2",
     "@types/lodash-es": "^4.17.4",
     "bootstrap": "^4.6.0",
@@ -154,7 +154,7 @@
   },
   "prettier": "./libs/prettier-config/index.json",
   "volta": {
-    "node": "16.17.0",
-    "npm": "6.14.17"
+    "node": "18.9.1",
+    "npm": "8.19.2"
   }
 }
