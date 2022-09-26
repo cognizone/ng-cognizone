@@ -50,6 +50,13 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     return this.config.appearance === 'classic';
   }
 
+  get iconPosition(): 'prefix' | 'suffix' {
+    if (this.config.datePicker?.iconPosition) {
+      return this.config.datePicker.iconPosition;
+    }
+    return this.config.appearance === 'urban' ? 'suffix' : 'prefix';
+  }
+
   /**
    * @ignore
    */
