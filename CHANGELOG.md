@@ -1,3 +1,10 @@
+# [3.0.0-beta.28](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.27...v3.0.0-beta.28) (2022-09-27)
+
+
+### Bug Fixes
+
+* **ng-application-profile:** handle or on datatype ([7310d8e](https://github.com/cognizone/ng-cognizone/commit/7310d8ed079038fa1f2474bb8e55df638dfbc5a7))
+
 # [3.0.0-beta.27](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.26...v3.0.0-beta.27) (2022-09-23)
 
 
