@@ -73,7 +73,7 @@ export class ApHelper implements DataModelDefinitionHelper<ApplicationProfileOrA
   isAttribute(definition: ApplicationProfileOrApName, type: Many<string>, key: string): boolean {
     if (!this.hasProperty(definition, type, key)) return false;
     const rangeRule = this.getRangeRule(definition, type, key);
-    return isDataTypeRule(rangeRule.value);
+    return isDataTypeRule(rangeRule.value) || isOrDataTypeRule(rangeRule.value);
   }
 
   isReference(definition: ApplicationProfileOrApName, type: Many<string>, key: string): boolean {
