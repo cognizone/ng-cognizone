@@ -11,11 +11,16 @@ import { JsonModelModule } from '../json-model.module';
 
 const directiveAp: ApplicationProfile = require('../../test/directive-ap.json');
 const treatyAp: ApplicationProfile = require('../../test/treaty-ap.json');
+const draftAp: ApplicationProfile = require('../../test/lux-legipro-ap.json');
 const treatyProcess1: JsonModel = require('../../test/data/treaty-json-model-1.json');
 const rawResourceGraph1: TypedResourceGraph = require('../../test/data/casemates-concept-1.json');
 const rawResourceGraph2: TypedResourceGraph = require('../../test/data/directives-eudossier-2.json');
 const rawResourceGraph3: TypedResourceGraph = require('../../test/data/directives-eudossier-1.json');
 const rawResourceGraph4: TypedResourceGraph = require('../../test/data/legiswiss-act-1.json');
+const rawDraft1: TypedResourceGraph = require('../../test/data/draft-1.json');
+const rawDraft2: TypedResourceGraph = require('../../test/data/draft-2.json');
+const rawDraft3: TypedResourceGraph = require('../../test/data/draft-3.json');
+const rawDraft4: TypedResourceGraph = require('../../test/data/draft-4.json');
 
 describe('ResourceGraphService', () => {
   const createService = createServiceFactory({
@@ -146,6 +151,32 @@ describe('ResourceGraphService', () => {
     expect(raw).toMatchSnapshot();
     expect(console.warn).toHaveBeenCalled();
   });
+
+  describe.only('or range rule on datatype', () => {
+    it('should deserialize then serialize draft 1 (or on rapporteurChambreDeputesLabel, xsd:string)', () => {
+      const json = spectator.service.resourceGraphRawToJsonModel(rawDraft1, draftAp);
+      const newRaw = spectator.service.jsonModelToResourceGraphRaw(json, draftAp)!;
+      checkRawEquality(newRaw, rawDraft1, ['internalId']);
+    });
+
+    it('should deserialize then serialize draft 2 (or on rapporteurChambreDeputesLabel, xsd:string)', () => {
+      const json = spectator.service.resourceGraphRawToJsonModel(rawDraft2, draftAp);
+      const newRaw = spectator.service.jsonModelToResourceGraphRaw(json, draftAp)!;
+      checkRawEquality(newRaw, rawDraft2, ['internalId']);
+    });
+
+    it('should deserialize then serialize draft 3 (or on rapporteurChambreDeputesLabel, rdfs:Resource)', () => {
+      const json = spectator.service.resourceGraphRawToJsonModel(rawDraft3, draftAp);
+      const newRaw = spectator.service.jsonModelToResourceGraphRaw(json, draftAp)!;
+      checkRawEquality(newRaw, rawDraft3, ['internalId']);
+    });
+
+    it('should deserialize then serialize draft 4 (or on rapporteurChambreDeputesLabel, rdfs:Resource)', () => {
+      const json = spectator.service.resourceGraphRawToJsonModel(rawDraft3, draftAp);
+      const newRaw = spectator.service.jsonModelToResourceGraphRaw(json, draftAp)!;
+      checkRawEquality(newRaw, rawDraft3, ['internalId']);
+    });
+  });
 });
 
 // circular graph
@@ -202,3 +233,22 @@ const ap5: ApplicationProfile = {
     },
   },
 };
+
+function checkRawEquality(x: TypedResourceGraph, y: TypedResourceGraph, ignoredAttributes: string[] = []): void {
+  const getSortedNodes = (a: TypedResourceGraph) =>
+    [a.data, ...(a.included ?? [])]
+      .sort((b, c) => b.uri.localeCompare(c.uri))
+      .map(node => {
+        const newNode = { ...node, rootType: undefined } as any;
+        if (newNode.attributes) {
+          ignoredAttributes.forEach(field => delete newNode.attributes[field]);
+        }
+        return newNode;
+      });
+
+  const allX = getSortedNodes(x);
+  const allY = getSortedNodes(y);
+
+  expect(allX.length).toEqual(allY.length);
+  expect(allX).toEqual(allY);
+}

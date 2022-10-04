@@ -1,0 +1,1854 @@
+{
+  "uri": "http://data.legilux.public.lu/resource/ontology/jolux#",
+  "types": {
+    "OpinionProfessionalOrganisation": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#OpinionProfessionalOrganisation",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Opinion",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "opinionDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionDate",
+          "attributeId": "opinionDate"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "hasResultingOpinionDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingOpinionDocument",
+          "attributeId": "hasResultingOpinionDocument"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        },
+        "opinionReference": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionReference",
+          "attributeId": "opinionReference"
+        },
+        "answerToOpinionRequest": {
+          "rules": [
+            { "value": { "value": "OpinionRequest", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#answerToOpinionRequest",
+          "attributeId": "answerToOpinionRequest"
+        }
+      },
+      "classIds": ["OpinionProfessionalOrganisation"]
+    },
+    "Opinion": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Opinion",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "opinionDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionDate",
+          "attributeId": "opinionDate"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "hasResultingOpinionDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingOpinionDocument",
+          "attributeId": "hasResultingOpinionDocument"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        },
+        "opinionReference": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionReference",
+          "attributeId": "opinionReference"
+        },
+        "answerToOpinionRequest": {
+          "rules": [
+            { "value": { "value": "OpinionRequest", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#answerToOpinionRequest",
+          "attributeId": "answerToOpinionRequest"
+        }
+      },
+      "classIds": ["Opinion"]
+    },
+    "TaskAtMinistry": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskAtMinistry",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "responsiblePerson": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#responsiblePerson",
+          "attributeId": "responsiblePerson"
+        },
+        "otherConcernedMinistry": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#otherConcernedMinistry",
+          "attributeId": "otherConcernedMinistry"
+        },
+        "dateMinistryLetter": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateMinistryLetter",
+          "attributeId": "dateMinistryLetter"
+        },
+        "responsiblePersonLabel": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#responsiblePersonLabel",
+          "attributeId": "responsiblePersonLabel"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "referenceMinistryLetter": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#referenceMinistryLetter",
+          "attributeId": "referenceMinistryLetter"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        },
+        "hasResultingDraftRelatedDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftRelatedDocument",
+          "attributeId": "hasResultingDraftRelatedDocument"
+        }
+      },
+      "classIds": ["TaskAtMinistry"]
+    },
+    "Manifestation": {
+      "rules": [{ "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Manifestation"], "name": "rdfTypes" }],
+      "attributes": {
+        "uploadBy": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#uploadBy",
+          "attributeId": "uploadBy"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "userFormat": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#userFormat",
+          "attributeId": "userFormat"
+        },
+        "uploadDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#dateTime", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#uploadDate",
+          "attributeId": "uploadDate"
+        },
+        "format": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#format",
+          "attributeId": "format"
+        },
+        "isExemplifiedBy": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isExemplifiedBy",
+          "attributeId": "isExemplifiedBy"
+        },
+        "casematesIsExemplifiedBy": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/casematesIsExemplifiedBy",
+          "attributeId": "casematesIsExemplifiedBy"
+        }
+      },
+      "classIds": ["Manifestation"]
+    },
+    "TransmissionMarechalat": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TransmissionMarechalat",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "signatureDateDeposit": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#signatureDateDeposit",
+          "attributeId": "signatureDateDeposit"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        }
+      },
+      "classIds": ["TransmissionMarechalat"]
+    },
+    "DraftDocumentAbstract": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#DraftDocument",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work",
+            "http://data.legilux.public.lu/resource/ontology/jolux#DraftDocumentAbstract"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "foreseesRepealOf": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesRepealOf",
+          "attributeId": "foreseesRepealOf"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "foreseesCitationOf": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesCitationOf",
+          "attributeId": "foreseesCitationOf"
+        },
+        "foreseesConsolidationBy": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesConsolidationBy",
+          "attributeId": "foreseesConsolidationBy"
+        },
+        "foreseesModificationOf": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesModificationOf",
+          "attributeId": "foreseesModificationOf"
+        },
+        "foreseesRectificationOf": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesRectificationOf",
+          "attributeId": "foreseesRectificationOf"
+        },
+        "isRealizedBy": {
+          "rules": [{ "value": { "value": "Expression", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        },
+        "title": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#title",
+          "attributeId": "title"
+        },
+        "foreseesBasedOn": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesBasedOn",
+          "attributeId": "foreseesBasedOn"
+        },
+        "foreseesTranspositionOf": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesTranspositionOf",
+          "attributeId": "foreseesTranspositionOf"
+        }
+      },
+      "classIds": ["DraftDocumentAbstract"]
+    },
+    "TaskAtCommitteeConseilEtat": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskAtCommitteeConseilEtat",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "internalRestrictedByPermission": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://cogni.zone/internal/properties/restrictedByPermission",
+          "attributeId": "internalRestrictedByPermission"
+        },
+        "committeeInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#committeeInChargeOfTheTask",
+          "attributeId": "committeeInChargeOfTheTask"
+        },
+        "dateCommittee": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateCommittee",
+          "attributeId": "dateCommittee"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        }
+      },
+      "classIds": ["TaskAtCommitteeConseilEtat"]
+    },
+    "TransmissionTaskAtSCL": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TransmissionTaskAtSCL",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        }
+      },
+      "classIds": ["TransmissionTaskAtSCL"]
+    },
+    "Remark": {
+      "rules": [{ "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Remark"], "name": "rdfTypes" }],
+      "attributes": {
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "creator": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#creator",
+          "attributeId": "creator"
+        },
+        "created": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#dateTime", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#created",
+          "attributeId": "created"
+        },
+        "remarkText": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#remarkText",
+          "attributeId": "remarkText"
+        },
+        "remarkIsRelatedTo": {
+          "rules": [{ "value": { "value": "Event", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#remarkIsRelatedTo",
+          "attributeId": "remarkIsRelatedTo"
+        }
+      },
+      "classIds": ["Remark"]
+    },
+    "TaskAtCommitteeChambreDepute": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskAtCommitteeChambreDepute",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "committeeInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#committeeInChargeOfTheTask",
+          "attributeId": "committeeInChargeOfTheTask"
+        },
+        "dateCommittee": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateCommittee",
+          "attributeId": "dateCommittee"
+        },
+        "committeeRapporteur": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#committeeRapporteur",
+          "attributeId": "committeeRapporteur"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        }
+      },
+      "classIds": ["TaskAtCommitteeChambreDepute"]
+    },
+    "DraftDocument": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#DraftDocument",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "isRealizedBy": {
+          "rules": [{ "value": { "value": "Expression", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        },
+        "title": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#title",
+          "attributeId": "title"
+        }
+      },
+      "classIds": ["DraftDocument"]
+    },
+    "Amendment": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Amendment",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Draft",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "draftHasTask": {
+          "rules": [{ "value": { "value": "LegislativeTask", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftHasTask",
+          "attributeId": "draftHasTask"
+        },
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "dateIncomingChambreDeputes": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateIncomingChambreDeputes",
+          "attributeId": "dateIncomingChambreDeputes"
+        },
+        "draftId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftId",
+          "attributeId": "draftId"
+        },
+        "titleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#titleDraft",
+          "attributeId": "titleDraft"
+        },
+        "dateAmendment": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateAmendment",
+          "attributeId": "dateAmendment"
+        },
+        "dateAdoptionByParliamentaryCommission": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateAdoptionByParliamentaryCommission",
+          "attributeId": "dateAdoptionByParliamentaryCommission"
+        },
+        "dateOutgoingConseilEtat": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateOutgoingConseilEtat",
+          "attributeId": "dateOutgoingConseilEtat"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "initialTitleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#initialTitleDraft",
+          "attributeId": "initialTitleDraft"
+        },
+        "dateIncomingConseilEtat": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateIncomingConseilEtat",
+          "attributeId": "dateIncomingConseilEtat"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "withdrawalDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#withdrawalDate",
+          "attributeId": "withdrawalDate"
+        },
+        "hasOpinion": {
+          "rules": [{ "value": { "value": "Opinion", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasOpinion",
+          "attributeId": "hasOpinion"
+        },
+        "hasResultingDraftDocument": {
+          "rules": [{ "value": { "value": "DraftDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftDocument",
+          "attributeId": "hasResultingDraftDocument"
+        },
+        "withdrawalReason": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#withdrawalReason",
+          "attributeId": "withdrawalReason"
+        },
+        "institutionInChargeOfTheDraft": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheDraft",
+          "attributeId": "institutionInChargeOfTheDraft"
+        },
+        "dateOutgoingChambreDeputes": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateOutgoingChambreDeputes",
+          "attributeId": "dateOutgoingChambreDeputes"
+        },
+        "hasResultingDraftRelatedDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftRelatedDocument",
+          "attributeId": "hasResultingDraftRelatedDocument"
+        }
+      },
+      "classIds": ["Amendment"]
+    },
+    "Draft": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Draft",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "draftHasTask": {
+          "rules": [{ "value": { "value": "LegislativeTask", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftHasTask",
+          "attributeId": "draftHasTask"
+        },
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "draftId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftId",
+          "attributeId": "draftId"
+        },
+        "titleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#titleDraft",
+          "attributeId": "titleDraft"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "initialTitleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#initialTitleDraft",
+          "attributeId": "initialTitleDraft"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "withdrawalDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#withdrawalDate",
+          "attributeId": "withdrawalDate"
+        },
+        "hasOpinion": {
+          "rules": [{ "value": { "value": "Opinion", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasOpinion",
+          "attributeId": "hasOpinion"
+        },
+        "hasResultingDraftDocument": {
+          "rules": [{ "value": { "value": "DraftDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftDocument",
+          "attributeId": "hasResultingDraftDocument"
+        },
+        "withdrawalReason": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#withdrawalReason",
+          "attributeId": "withdrawalReason"
+        },
+        "institutionInChargeOfTheDraft": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheDraft",
+          "attributeId": "institutionInChargeOfTheDraft"
+        },
+        "hasResultingDraftRelatedDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftRelatedDocument",
+          "attributeId": "hasResultingDraftRelatedDocument"
+        }
+      },
+      "classIds": ["Draft"]
+    },
+    "OpinionConseilEtat": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#OpinionConseilEtat",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Opinion",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "dateExemption2ndVote": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateExemption2ndVote",
+          "attributeId": "dateExemption2ndVote"
+        },
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalOpinionReference": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" }],
+          "uri": "http://cogni.zone/internal/properties/opinionReference",
+          "attributeId": "internalOpinionReference"
+        },
+        "isOpinionOf": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isOpinionOf",
+          "attributeId": "isOpinionOf"
+        },
+        "rapporteur": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#rapporteur",
+          "attributeId": "rapporteur"
+        },
+        "dueDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dueDate",
+          "attributeId": "dueDate"
+        },
+        "exemption2ndVoteDecisionDueDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#exemption2ndVoteDecisionDueDate",
+          "attributeId": "exemption2ndVoteDecisionDueDate"
+        },
+        "dateRefusalExemption2ndVote": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#dateRefusalExemption2ndVote",
+          "attributeId": "dateRefusalExemption2ndVote"
+        },
+        "rapporteurLabel": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#rapporteurLabel",
+          "attributeId": "rapporteurLabel"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "hasResultingOpinionDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingOpinionDocument",
+          "attributeId": "hasResultingOpinionDocument"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        },
+        "opinionReference": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionReference",
+          "attributeId": "opinionReference"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "opinionDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionDate",
+          "attributeId": "opinionDate"
+        },
+        "priorityLevel": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#priorityLevel",
+          "attributeId": "priorityLevel"
+        },
+        "referenceArticleConstitutionLabel": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#referenceArticleConstitutionLabel",
+          "attributeId": "referenceArticleConstitutionLabel"
+        },
+        "draftStatusConseilEtat": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftStatusConseilEtat",
+          "attributeId": "draftStatusConseilEtat"
+        },
+        "opinionIsAboutText": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionIsAboutText",
+          "attributeId": "opinionIsAboutText"
+        },
+        "answerToOpinionRequest": {
+          "rules": [
+            { "value": { "value": "OpinionRequest", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#answerToOpinionRequest",
+          "attributeId": "answerToOpinionRequest"
+        }
+      },
+      "classIds": ["OpinionConseilEtat"]
+    },
+    "DraftRelatedDocument": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#DraftRelatedDocument",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Work"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "isRealizedBy": {
+          "rules": [{ "value": { "value": "Expression", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        },
+        "title": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#title",
+          "attributeId": "title"
+        }
+      },
+      "classIds": ["DraftRelatedDocument"]
+    },
+    "Expression": {
+      "rules": [{ "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Expression"], "name": "rdfTypes" }],
+      "attributes": {
+        "isEmbodiedBy": {
+          "rules": [{ "value": { "value": "Manifestation", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isEmbodiedBy",
+          "attributeId": "isEmbodiedBy"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "language": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#language",
+          "attributeId": "language"
+        },
+        "title": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#title",
+          "attributeId": "title"
+        }
+      },
+      "classIds": ["Expression"]
+    },
+    "OpinionRequest": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#OpinionRequest",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Opinion",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "opinionRequestReceivedResponse": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#boolean", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionRequestReceivedResponse",
+          "attributeId": "opinionRequestReceivedResponse"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "hasResultingOpinionDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingOpinionDocument",
+          "attributeId": "hasResultingOpinionDocument"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        },
+        "opinionReference": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionReference",
+          "attributeId": "opinionReference"
+        },
+        "opinionRequestTo": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionRequestTo",
+          "attributeId": "opinionRequestTo"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "opinionDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#opinionDate",
+          "attributeId": "opinionDate"
+        },
+        "referralDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#referralDate",
+          "attributeId": "referralDate"
+        },
+        "referralLetterReference": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#referralLetterReference",
+          "attributeId": "referralLetterReference"
+        },
+        "answerToOpinionRequest": {
+          "rules": [
+            { "value": { "value": "OpinionRequest", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#answerToOpinionRequest",
+          "attributeId": "answerToOpinionRequest"
+        },
+        "hasResultingDraftRelatedDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftRelatedDocument",
+          "attributeId": "hasResultingDraftRelatedDocument"
+        }
+      },
+      "classIds": ["OpinionRequest"]
+    },
+    "TaskAtSCL": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskAtSCL",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "outgoingCorrespondanceDepartureDate": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#outgoingCorrespondanceDepartureDate",
+          "attributeId": "outgoingCorrespondanceDepartureDate"
+        },
+        "referenceSCL": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#referenceSCL",
+          "attributeId": "referenceSCL"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        },
+        "priorityLevelSCL": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#priorityLevelSCL",
+          "attributeId": "priorityLevelSCL"
+        }
+      },
+      "classIds": ["TaskAtSCL"]
+    },
+    "InitialDraft": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Draft",
+            "http://data.legilux.public.lu/resource/ontology/jolux#InitialDraft",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "draftHasTask": {
+          "rules": [{ "value": { "value": "LegislativeTask", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftHasTask",
+          "attributeId": "draftHasTask"
+        },
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "draftInitiator": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftInitiator",
+          "attributeId": "draftInitiator"
+        },
+        "hasSubEvent": {
+          "rules": [{ "value": { "value": "Event", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasSubEvent",
+          "attributeId": "hasSubEvent"
+        },
+        "transpositionProcess": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#transpositionProcess",
+          "attributeId": "transpositionProcess"
+        },
+        "withdrawalRequestDateToConseilEtat": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#withdrawalRequestDateToConseilEtat",
+          "attributeId": "withdrawalRequestDateToConseilEtat"
+        },
+        "initialTitleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#initialTitleDraft",
+          "attributeId": "initialTitleDraft"
+        },
+        "foreseesTranspositionOf": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#foreseesTranspositionOf",
+          "attributeId": "foreseesTranspositionOf"
+        },
+        "publicationDeadlineType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#publicationDeadlineType",
+          "attributeId": "publicationDeadlineType"
+        },
+        "provisionalFirstDateEntryinForce": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#provisionalFirstDateEntryinForce",
+          "attributeId": "provisionalFirstDateEntryinForce"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "parliamentDraftId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#parliamentDraftId",
+          "attributeId": "parliamentDraftId"
+        },
+        "draftSequenceNumber": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" }],
+          "uri": "http://cogni.zone/internal/properties/draftSequenceNumber",
+          "attributeId": "draftSequenceNumber"
+        },
+        "withdrawalDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#withdrawalDate",
+          "attributeId": "withdrawalDate"
+        },
+        "hasOpinion": {
+          "rules": [{ "value": { "value": "Opinion", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasOpinion",
+          "attributeId": "hasOpinion"
+        },
+        "hasResultingDraftDocument": {
+          "rules": [{ "value": { "value": "DraftDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftDocument",
+          "attributeId": "hasResultingDraftDocument"
+        },
+        "modified": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#dateTime", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://purl.org/dc/terms/modified",
+          "attributeId": "modified"
+        },
+        "originalIndex": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://cogni.zone/internal/properties/originalIndex",
+          "attributeId": "originalIndex"
+        },
+        "withdrawalReason": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#withdrawalReason",
+          "attributeId": "withdrawalReason"
+        },
+        "hasAmendment": {
+          "rules": [{ "value": { "value": "Amendment", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasAmendment",
+          "attributeId": "hasAmendment"
+        },
+        "institutionInChargeOfTheDraft": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheDraft",
+          "attributeId": "institutionInChargeOfTheDraft"
+        },
+        "shortTitleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#shortTitleDraft",
+          "attributeId": "shortTitleDraft"
+        },
+        "basedOn": {
+          "rules": [
+            { "value": { "value": "DraftDocumentAbstract", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#basedOn",
+          "attributeId": "basedOn"
+        },
+        "publicationDeadlineFromAuthor": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#publicationDeadlineFromAuthor",
+          "attributeId": "publicationDeadlineFromAuthor"
+        },
+        "taskStatusChambreDeputes": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#taskStatusChambreDeputes",
+          "attributeId": "taskStatusChambreDeputes"
+        },
+        "creator": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://purl.org/dc/elements/1.1/creator",
+          "attributeId": "creator"
+        },
+        "draftId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#draftId",
+          "attributeId": "draftId"
+        },
+        "created": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#dateTime", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#created",
+          "attributeId": "created"
+        },
+        "titleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#titleDraft",
+          "attributeId": "titleDraft"
+        },
+        "parliamentHistoricalDraftId": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#parliamentHistoricalDraftId",
+          "attributeId": "parliamentHistoricalDraftId"
+        },
+        "lastSynchronizationDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#dateTime", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/lastSynchronizationDate",
+          "attributeId": "lastSynchronizationDate"
+        },
+        "allCasematesIsExemplifiedBy": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://cogni.zone/internal/properties/allCasematesIsExemplifiedBy",
+          "attributeId": "allCasematesIsExemplifiedBy"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "statusDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#statusDraft",
+          "attributeId": "statusDraft"
+        },
+        "altShortTitleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#altShortTitleDraft",
+          "attributeId": "altShortTitleDraft"
+        },
+        "hasResultingLegalResource": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingLegalResource",
+          "attributeId": "hasResultingLegalResource"
+        },
+        "conseilEtatTitleDraft": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#conseilEtatTitleDraft",
+          "attributeId": "conseilEtatTitleDraft"
+        },
+        "isSubEventOf": {
+          "rules": [{ "value": { "value": "Event", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isSubEventOf",
+          "attributeId": "isSubEventOf"
+        },
+        "acceptanceCGDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#acceptanceCGDate",
+          "attributeId": "acceptanceCGDate"
+        },
+        "parliamentDraftUrl": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#anyURI", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#parliamentDraftUrl",
+          "attributeId": "parliamentDraftUrl"
+        },
+        "hasResultingDraftRelatedDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftRelatedDocument",
+          "attributeId": "hasResultingDraftRelatedDocument"
+        },
+        "publicationDeadline": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#publicationDeadline",
+          "attributeId": "publicationDeadline"
+        }
+      },
+      "classIds": ["InitialDraft"]
+    },
+    "Work": {
+      "rules": [{ "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Work"], "name": "rdfTypes" }],
+      "attributes": {
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "isRealizedBy": {
+          "rules": [{ "value": { "value": "Expression", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#isRealizedBy",
+          "attributeId": "isRealizedBy"
+        },
+        "typeDocument": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
+          "attributeId": "typeDocument"
+        },
+        "title": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#title",
+          "attributeId": "title"
+        }
+      },
+      "classIds": ["Work"]
+    },
+    "Event": {
+      "rules": [{ "value": ["http://data.legilux.public.lu/resource/ontology/jolux#Event"], "name": "rdfTypes" }],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        }
+      },
+      "classIds": ["Event"]
+    },
+    "TaskAtChambreDeputes": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#TaskAtChambreDeputes",
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "rapporteurChambreDeputes": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#rapporteurChambreDeputes",
+          "attributeId": "rapporteurChambreDeputes"
+        },
+        "rapporteurChambreDeputesLabel": {
+          "rules": [
+            {
+              "value": {
+                "value": [
+                  { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" },
+                  { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }
+                ],
+                "name": "or"
+              },
+              "name": "range"
+            },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#rapporteurChambreDeputesLabel",
+          "attributeId": "rapporteurChambreDeputesLabel"
+        },
+        "arreteGDRetrieval": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#arreteGDRetrieval",
+          "attributeId": "arreteGDRetrieval"
+        },
+        "requestSecondVoteExemption": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#requestSecondVoteExemption",
+          "attributeId": "requestSecondVoteExemption"
+        },
+        "voteLegalBase": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#voteLegalBase",
+          "attributeId": "voteLegalBase"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "finalVoteDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#finalVoteDate",
+          "attributeId": "finalVoteDate"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        },
+        "finalVoteInAccordanceWithArt114": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#boolean", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#finalVoteInAccordanceWithArt114",
+          "attributeId": "finalVoteInAccordanceWithArt114"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "depositDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#depositDate",
+          "attributeId": "depositDate"
+        },
+        "arreteGDDeposit": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#string", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#arreteGDDeposit",
+          "attributeId": "arreteGDDeposit"
+        },
+        "firstLectureVoteDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#firstLectureVoteDate",
+          "attributeId": "firstLectureVoteDate"
+        },
+        "hasResultingDraftDocument": {
+          "rules": [{ "value": { "value": "DraftDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftDocument",
+          "attributeId": "hasResultingDraftDocument"
+        },
+        "secondVoteConstitutionalDate": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#date", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#secondVoteConstitutionalDate",
+          "attributeId": "secondVoteConstitutionalDate"
+        },
+        "hasResultingDraftRelatedDocument": {
+          "rules": [{ "value": { "value": "DraftRelatedDocument", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasResultingDraftRelatedDocument",
+          "attributeId": "hasResultingDraftRelatedDocument"
+        }
+      },
+      "classIds": ["TaskAtChambreDeputes"]
+    },
+    "LegislativeTask": {
+      "rules": [
+        {
+          "value": [
+            "http://data.legilux.public.lu/resource/ontology/jolux#Event",
+            "http://data.legilux.public.lu/resource/ontology/jolux#LegislativeTask"
+          ],
+          "name": "rdfTypes"
+        }
+      ],
+      "attributes": {
+        "hasRemark": {
+          "rules": [{ "value": { "value": "Remark", "name": "classId" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#hasRemark",
+          "attributeId": "hasRemark"
+        },
+        "internalId": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2001/XMLSchema#int", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://cogni.zone/internal/properties/id",
+          "attributeId": "internalId"
+        },
+        "eventType": {
+          "rules": [
+            { "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#eventType",
+          "attributeId": "eventType"
+        },
+        "institutionInChargeOfTheTask": {
+          "rules": [{ "value": { "value": "http://www.w3.org/2000/01/rdf-schema#Resource", "name": "datatype" }, "name": "range" }],
+          "uri": "http://data.legilux.public.lu/resource/ontology/jolux#institutionInChargeOfTheTask",
+          "attributeId": "institutionInChargeOfTheTask"
+        }
+      },
+      "classIds": ["LegislativeTask"]
+    }
+  }
+}
