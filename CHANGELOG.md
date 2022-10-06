@@ -1,3 +1,10 @@
+## [2.7.6](https://github.com/cognizone/ng-cognizone/compare/v2.7.5...v2.7.6) (2022-10-06)
+
+
+### Bug Fixes
+
+* **legi-shared:** changing class for mat progress spinner and adding mode type ([37d01d0](https://github.com/cognizone/ng-cognizone/commit/37d01d0ec644beff238ff13893aa5d3666401717))
+
 ## [2.7.5](https://github.com/cognizone/ng-cognizone/compare/v2.7.4...v2.7.5) (2022-05-06)
 
 
