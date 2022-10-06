@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/legi-shared",
-  "version": "3.0.0-beta.28",
+  "version": "3.0.0-beta.29",
   "peerDependencies": {
     "@cognizone/elastic": ">=3.0.0-beta",
     "@cognizone/i18n": ">=3.0.0-beta",

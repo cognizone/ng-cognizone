@@ -1,3 +1,10 @@
+# [3.0.0-beta.29](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.28...v3.0.0-beta.29) (2022-10-06)
+
+
+### Bug Fixes
+
+* **json-model:** added nullish checks for or cases ([c50ad99](https://github.com/cognizone/ng-cognizone/commit/c50ad9943f51599739794d58261d532835f2fc77))
+
 # [3.0.0-beta.28](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.27...v3.0.0-beta.28) (2022-09-27)
 
 
