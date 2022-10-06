@@ -1,3 +1,10 @@
+# [3.0.0-beta.30](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.29...v3.0.0-beta.30) (2022-10-06)
+
+
+### Bug Fixes
+
+* **legi-shared:** add option to legishared to determine the date-picker icon position ([e8a9f47](https://github.com/cognizone/ng-cognizone/commit/e8a9f47e69162cad04a65fdfc6e0b105dddca313))
+
 # [3.0.0-beta.29](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.28...v3.0.0-beta.29) (2022-10-06)
 
 
