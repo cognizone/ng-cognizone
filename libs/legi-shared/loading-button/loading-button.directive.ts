@@ -92,6 +92,7 @@ export class LoadingButtonDirective implements OnInit, OnChanges, OnDestroy {
     const factory = this.componentFactoryResolver.resolveComponentFactory(MatProgressSpinner);
     this.spinner = factory.create(this.injector);
     this.spinner.instance.diameter = 20;
+    this.spinner.instance.mode = 'indeterminate';
     this.spinner.hostView.detectChanges();
 
     const div = document.createElement('div');
