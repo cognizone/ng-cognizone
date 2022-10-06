@@ -122,7 +122,7 @@ export class ResourceGraphService {
                 (data.attributes[key] as unknown[]).push(attrTypeMap[datatype]);
               }
             }
-            if (isSingle && (data.attributes[key] as unknown[]).length <= 1) {
+            if (isSingle && Array.isArray(data.attributes[key]) && (data.attributes[key] as unknown[]).length <= 1) {
               data.attributes[key] = manyToOne(data.attributes[key]);
             }
           } else {
