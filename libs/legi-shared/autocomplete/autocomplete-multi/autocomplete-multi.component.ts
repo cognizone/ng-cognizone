@@ -9,11 +9,12 @@ import {
   Input,
   OnInit,
   Optional,
+  Self,
   TemplateRef,
   TrackByFunction,
   ViewChild,
 } from '@angular/core';
-import { ControlContainer, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, NgControl, UntypedFormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
@@ -24,6 +25,7 @@ import { getAllSelectOptions, manyToArray, Nil, SelectOption, SelectOptionsProvi
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import { Subject } from 'rxjs';
 import { distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/operators';
+import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 
 /**
  * `AutocompleteMultiComponent` allows user to pass a set of options and select multiple ones
@@ -37,10 +39,7 @@ import { distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/op
   selector: 'cz-autocomplete-multi',
   templateUrl: './autocomplete-multi.component.html',
   styleUrls: ['./autocomplete-multi.component.scss'],
-  providers: [
-    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => AutocompleteMultiComponent), multi: true },
-    provideHasOptionsProvider(forwardRef(() => AutocompleteMultiComponent)),
-  ],
+  providers: [provideHasOptionsProvider(forwardRef(() => AutocompleteMultiComponent))],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> implements HasOptionsProvider<T>, OnInit {
@@ -125,6 +124,8 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
   private _options: SelectOption<T>[] = [];
   private storedValueOptions: SelectOption<T>[] = [];
   private _optionsProvider!: SelectOptionsProvider<T>;
+  //custom error control. Added to explicitly show formControl error
+  errorControl = new UntypedFormControl([null]);
 
   /**
    * @ignore
@@ -134,17 +135,36 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     private i18n: I18nService,
     logger: Logger,
     cdr: ChangeDetectorRef,
-    @Optional() controlContainer: ControlContainer
+    @Optional() controlContainer: ControlContainer,
+    @Optional() @Self() private ngControl?: NgControl
   ) {
     super(logger, cdr, controlContainer);
+    if (this.ngControl) {
+      this.ngControl.valueAccessor = this;
+    }
   }
 
   /**
    * @ignore
    */
   ngOnInit(): void {
+    this.controlChanged.complete();
+
     super.ngOnInit();
     this.initModelChange();
+    if (this.ngControl) {
+      const control = extractControlFromNgControl(this.ngControl);
+
+      this.subSink = control.statusChanges.subscribe(a => {
+        if (a === 'VALID' && this.errorControl?.errors) {
+          this.errorControl.setErrors(null);
+        } else if (a === 'INVALID' && this.errorControl?.errors !== control.errors) {
+          this.errorControl?.setErrors(control.errors);
+          this.errorControl?.markAsTouched();
+          this.cdr.markForCheck();
+        }
+      });
+    }
   }
 
   /**

@@ -3,7 +3,7 @@
   <div class="d-flex flex-column">
     <mat-form-field [class.mat-form-field-disabled]="disabled" class="cz-classic-appearance">
       <mat-icon matPrefix>search</mat-icon>
-      <mat-chip-list #chipList>
+      <mat-chip-list #chipList [formControl]="errorControl">
         <mat-chip
           *ngFor="let value of modelAsOptions | selectOptionsSort: 'label'"
           class="cz-classic-appearance"
@@ -25,10 +25,13 @@
           [name]="name"
           [matAutocomplete]="auto"
           [matChipInputFor]="chipList"
-          type="text"
           (input)="queryChanges.next(multiInput.value)"
         />
       </mat-chip-list>
+      <mat-hint *ngIf="hint" class="czls-caption">{{ hint }}</mat-hint>
+      <mat-error>
+        <cz-error></cz-error>
+      </mat-error>
     </mat-form-field>
   </div>
 </ng-container>
@@ -56,7 +59,12 @@
         [name]="name"
         [matAutocomplete]="auto"
         (input)="queryChanges.next(multiInput.value)"
+        [formControl]="errorControl"
       />
+      <mat-hint *ngIf="hint" class="czls-caption">{{ hint }}</mat-hint>
+      <mat-error>
+        <cz-error></cz-error>
+      </mat-error>
     </mat-form-field>
     <button class="mx-1" mat-button color="primary" [disabled]="!newModel" (click)="addSelectedValue()">
       <mat-icon svgIcon="add" color="primary"></mat-icon>
@@ -78,7 +86,6 @@
       </mat-chip>
     </mat-chip-list>
   </div>
-  <mat-hint *ngIf="hint" class="czls-caption"> {{ hint }}</mat-hint>
 </ng-template>
 <ng-template #chipDefaultTemplate let-value>
   {{ value.label | czLabel }}
