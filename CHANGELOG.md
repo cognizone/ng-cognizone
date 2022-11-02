@@ -1,3 +1,10 @@
+# [3.0.0-beta.32](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.31...v3.0.0-beta.32) (2022-11-02)
+
+
+### Bug Fixes
+
+* **json-model:** make sure to use longest uris when compacting ([eadae3e](https://github.com/cognizone/ng-cognizone/commit/eadae3e523a336026be845266cc034e5e9a3723b))
+
 # [3.0.0-beta.31](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.30...v3.0.0-beta.31) (2022-10-06)
 
 
