@@ -15,7 +15,7 @@ export class PrefixCcService {
 
   compactUri(uri: string, context: TypedResourceContext = this.globalContext): string {
     if (isCurie(uri)) return uri;
-    for (const [prefix, value] of Object.entries(context.prefix ?? {})) {
+    for (const [prefix, value] of Object.entries(context.prefix ?? {}).sort(([, v1], [, v2]) => v2.length - v1.length)) {
       const fullPrefix = this.getFullPrefix(prefix);
       if (uri.startsWith(value)) return uri.replace(value, fullPrefix);
     }
