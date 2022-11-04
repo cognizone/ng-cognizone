@@ -1,3 +1,10 @@
+# [3.0.0-beta.33](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.32...v3.0.0-beta.33) (2022-11-04)
+
+
+### Bug Fixes
+
+* **legi-shared:** add hint and error to cz-autocomplete-multi ([2a2d1ff](https://github.com/cognizone/ng-cognizone/commit/2a2d1ff8465118689b23e6c74ab9411e80af33f1))
+
 # [3.0.0-beta.32](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.31...v3.0.0-beta.32) (2022-11-02)
 
 
