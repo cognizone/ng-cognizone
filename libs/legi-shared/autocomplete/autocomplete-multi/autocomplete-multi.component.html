@@ -12,7 +12,7 @@
           [removable]="!disabled"
           (removed)="removeValue(value)"
         >
-          {{ value.label | czLabel }}
+          <span [innerHTML]="value.label | czLabel"></span>
           <mat-icon *ngIf="!disabled" matChipRemove>cancel</mat-icon>
         </mat-chip>
         <input
@@ -40,9 +40,10 @@
   <mat-option
     *ngFor="let option of options | selectOptionsSort: sortType; trackBy: trackByFn"
     [value]="option.value"
-    [matTooltip]="option.label | czLabel: lang"
-    >{{ option.label | czLabel: lang }}</mat-option
+    [matTooltip]="option.data && option.data.tooltip ? (option.data.tooltip | czLabel: lang) : (option.label | czLabel: lang)"
   >
+    <span [innerHTML]="option.label | czLabel: lang"></span
+  ></mat-option>
 </mat-autocomplete>
 
 <ng-template #urbanTemplate>
