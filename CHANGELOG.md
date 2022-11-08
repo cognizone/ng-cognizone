@@ -1,3 +1,10 @@
+# [3.0.0-beta.34](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.33...v3.0.0-beta.34) (2022-11-08)
+
+
+### Bug Fixes
+
+* **legi-shared:** show options content of autocomplete multi as innerHTML ([1cec0b0](https://github.com/cognizone/ng-cognizone/commit/1cec0b00b25d37cf0064bc3b7b39b81444ecadc8))
+
 # [3.0.0-beta.33](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.32...v3.0.0-beta.33) (2022-11-04)
 
 
