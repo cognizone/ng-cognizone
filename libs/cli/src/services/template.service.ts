@@ -1,6 +1,6 @@
-import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 import * as handlebars from 'handlebars';
-import { isAbsolute, join } from 'path';
+import { isAbsolute, join, dirname } from 'path';
 
 export class TemplateService {
   static async process(templatePath: string, targetPath: string, options: { context?: {}; force?: boolean } = {}): Promise<void> {
@@ -9,6 +9,8 @@ export class TemplateService {
     const templateContent = readFileSync(templatePath, { encoding: 'utf8' });
     const template = handlebars.compile(templateContent);
     const content = template(options.context);
+    const dirPath = dirname(targetPath);
+    mkdirSync(dirPath, { recursive: true });
     writeFileSync(targetPath, content, 'utf8');
   }
 }

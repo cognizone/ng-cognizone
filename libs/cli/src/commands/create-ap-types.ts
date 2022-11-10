@@ -1,6 +1,5 @@
 import { ApplicationProfile } from '@cognizone/application-profile';
-import { Command, flags as oFlags } from '@oclif/command';
-import * as Parser from '@oclif/parser';
+import { Command, Flags } from '@oclif/core';
 import * as chalk from 'chalk';
 import { cosmiconfigSync } from 'cosmiconfig';
 import produce from 'immer';
@@ -20,19 +19,19 @@ export default class CreateApTypes extends Command {
 
   static examples: string[] = [`$ cz-cli create-ap-types`];
 
-  static flags: oFlags.Input<FlagsModel> = {
-    help: oFlags.help({ char: 'h' }),
-    init: oFlags.boolean({}),
-    verbose: oFlags.boolean({}),
-    apName: oFlags.string({ multiple: true }),
+  static flags = {
+    help: Flags.help({ char: 'h' }),
+    init: Flags.boolean({}),
+    verbose: Flags.boolean({}),
+    apName: Flags.string({ multiple: true }),
   };
 
-  static args: Parser.args.IArg[] = [];
+  static args = [];
 
   private readonly moduleName: string = 'ap-generation';
 
   async run(): Promise<void> {
-    const { flags } = this.parse(CreateApTypes);
+    const { flags } = await this.parse(CreateApTypes);
     if (flags.init) {
       this.initConfig();
       return;
@@ -95,7 +94,7 @@ export default class CreateApTypes extends Command {
       this.error(`Failed to generate interfaces for ${config.name}`, { exit: false });
       // TODO log error like these when in verbose mode
       // console.error(err);
-      this.error(err, { exit: false });
+      this.error(err as Error, { exit: false });
     }
   }
 

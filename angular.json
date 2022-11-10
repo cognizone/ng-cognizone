@@ -45,7 +45,15 @@
       "root": "libs/cli",
       "sourceRoot": "libs/cli/src",
       "prefix": "cz",
-      "architect": {},
+      "architect": {
+        "build": {
+          "builder": "./tools/executors/build-cli:build-cli",
+          "options": {
+            "root": "libs/cli",
+            "dist": "libs/cli/dist"
+          }
+        }
+      },
       "tags": []
     },
     "devtools": {
