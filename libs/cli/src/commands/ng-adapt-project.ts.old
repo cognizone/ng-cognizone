@@ -1,0 +1,222 @@
+// import { Command, flags as oFlags } from '@oclif/command';
+// import * as Parser from '@oclif/parser';
+// import * as execa from 'execa';
+// import { existsSync } from 'fs';
+// import * as Listr from 'listr';
+// import { join } from 'path';
+// import * as prompts from 'prompts';
+// import { mkdir, touch } from 'shelljs';
+
+// import { AngularJson, PackageJson, ProjectType } from '../models';
+// import { JsonService } from '../services';
+// import { TemplateService } from '../services/template.service';
+
+// export default class NgAdaptProject extends Command {
+//   static description: string = 'create an angular library';
+
+//   static examples: string[] = [`$ cz-cli ng-adapt-application`];
+
+//   static flags: oFlags.Input<FlagsModel> = {
+//     help: oFlags.help({ char: 'h' }),
+//     interactive: oFlags.boolean({ char: 'i', default: true }),
+//     project: oFlags.string({ char: 'p' }),
+//     backendPort: oFlags.integer(),
+//     backendRootApi: oFlags.string(),
+//   };
+
+//   static args: Parser.args.IArg[] = [];
+
+//   private angularJson!: AngularJson;
+//   private initialAngularJsonString!: string;
+
+//   async run(): Promise<void> {
+//     this.angularJson = JsonService.readJsonSync('angular.json', { strict: true });
+//     this.initialAngularJsonString = JSON.stringify(this.angularJson);
+//     const { flags } = this.parse(NgAdaptProject);
+
+//     const options = await this.interact(flags);
+
+//     const tasks = this.angularJson.projects[options.project].projectType === 'application' ? this.adaptApplication(options) : new Listr();
+
+//     await tasks.run();
+//   }
+
+//   private adaptApplication(options: ApplicationOptions): Listr {
+//     const { sourceRoot } = this.angularJson.projects[options.project];
+//     const coreFolderPath = join(process.cwd(), sourceRoot, 'app/core');
+//     const sharedFolderPath = join(process.cwd(), sourceRoot, 'app/shared');
+//     return new Listr([
+//       {
+//         title: 'CoreModule',
+//         task: () =>
+//           new Listr([
+//             {
+//               title: 'generation using ng cli',
+//               task: () => execa.command(`npx ng generate module core --project=${options.project}`),
+//               skip: () => (existsSync(coreFolderPath) ? `app/core folder is already present in ${options.project}` : false),
+//             },
+//             this.createEmptyFolderTask('guards folder', join(coreFolderPath, 'guards')),
+//             this.createEmptyFolderTask('interceptors folder', join(coreFolderPath, 'interceptors')),
+//             this.createEmptyFolderTask('models folder', join(coreFolderPath, 'models')),
+//             this.createEmptyFolderTask('services folder', join(coreFolderPath, 'services')),
+//             this.createEmptyFolderTask('store folder', join(coreFolderPath, 'store')),
+//             {
+//               title: 'index.ts',
+//               task: () =>
+//                 TemplateService.process('index.ts.hbs', join(coreFolderPath, 'index.ts'), { context: { files: ['./core.module'] } }),
+//               skip: () => existsSync(join(coreFolderPath, 'index.ts')),
+//             },
+//           ]),
+//       },
+//       {
+//         title: 'SharedModule',
+//         task: () =>
+//           new Listr([
+//             {
+//               title: 'generation using ng cli',
+//               task: () => execa.command(`npx ng generate module shared --project=${options.project}`),
+//               skip: () => (existsSync(sharedFolderPath) ? `app/shared folder is already present in ${options.project}` : false),
+//             },
+//             this.createEmptyFolderTask('components folder', join(sharedFolderPath, 'components')),
+//             this.createEmptyFolderTask('directives folder', join(sharedFolderPath, 'directives')),
+//             this.createEmptyFolderTask('models folder', join(sharedFolderPath, 'models')),
+//             this.createEmptyFolderTask('pipes folder', join(sharedFolderPath, 'pipes')),
+//             this.createEmptyFolderTask('services folder', join(sharedFolderPath, 'services')),
+//             {
+//               title: 'index.ts',
+//               task: () =>
+//                 TemplateService.process('index.ts.hbs', join(sharedFolderPath, 'index.ts'), { context: { files: ['./shared.module'] } }),
+//               skip: () => existsSync(join(sharedFolderPath, 'index.ts')),
+//             },
+//           ]),
+//       },
+//       this.createEmptyFolderTask('features folder', join(sourceRoot, 'app/features')),
+//       {
+//         title: 'Styles',
+//         task: () => {
+//           const stylesRoot = join(process.cwd(), sourceRoot, 'styles');
+//           mkdir('-p', stylesRoot);
+
+//           mkdir('-p', join(stylesRoot, 'abstracts'));
+//           touch(join(stylesRoot, 'abstracts/_mixins.scss'));
+//           touch(join(stylesRoot, 'abstracts/_variables.scss'));
+
+//           mkdir('-p', join(stylesRoot, 'base'));
+//           touch(join(stylesRoot, 'base/_base.scss'));
+//           touch(join(stylesRoot, 'base/_typography.scss'));
+
+//           mkdir('-p', join(stylesRoot, 'layout'));
+//           touch(join(stylesRoot, 'layout/.gitkeep'));
+
+//           mkdir('-p', join(stylesRoot, 'themes'));
+//           touch(join(stylesRoot, 'themes/.gitkeep'));
+
+//           mkdir('-p', join(stylesRoot, 'vendors'));
+//           touch(join(stylesRoot, 'vendors/.gitkeep'));
+
+//           TemplateService.process('main.scss.hbs', join(stylesRoot, 'main.scss'));
+
+//           this.angularJson.projects[options.project].architect.build.options.stylePreprocessorOptions = {
+//             includePaths: [`${sourceRoot}/styles`],
+//           };
+
+//           this.angularJson.projects[options.project].architect.build.options.styles = [`${sourceRoot}/styles/main.scss`];
+//         },
+//       },
+//       {
+//         title: 'Proxy setup',
+//         skip: () => options.backendPort == null,
+//         task: () => {
+//           const proxyFilePath = join(this.angularJson.projects[options.project].root, 'proxy.conf.js');
+//           TemplateService.process('proxy.conf.js.hbs', proxyFilePath, {
+//             context: { context: options.backendRootApi || '', backendPort: options.backendPort },
+//           });
+//           const packageJson = JsonService.readJsonSync<PackageJson>('package.json', { strict: true });
+//           if (options.project === this.angularJson.defaultProject) {
+//             packageJson.scripts[`start`] = `ng serve --proxy-config=${proxyFilePath}`;
+//           } else {
+//             packageJson.scripts[`start:${options.project}`] = `ng serve --project=${options.project} --proxy-config=${proxyFilePath}`;
+//           }
+//           JsonService.writeJsonSync('package.json', packageJson);
+//         },
+//       },
+//       {
+//         title: 'Save changes to angular.json',
+//         skip: () => (JSON.stringify(this.angularJson) === this.initialAngularJsonString ? 'no modifications' : false),
+//         task: () => JsonService.writeJsonSync('angular.json', this.angularJson),
+//       },
+//     ]);
+//   }
+
+//   private createEmptyFolderTask(title: string, path: string): Listr.ListrTask {
+//     return {
+//       title,
+//       task: () => {
+//         mkdir('-p', path);
+//         touch(join(path, '.gitkeep'));
+//       },
+//       skip: () => (existsSync(path) ? `${path} already exists` : false),
+//     };
+//   }
+
+//   private async interact(options: FlagsModel): Promise<ApplicationOptions> {
+//     const projects = this.getProjects();
+//     const defaultProject = projects.find(p => p.isDefault)?.name as string;
+//     if (!options.interactive) return { ...options, project: options.project ?? defaultProject };
+//     let responses = await prompts(
+//       [
+//         {
+//           type: () => (projects.length > 1 ? 'select' : undefined),
+//           name: 'project',
+//           message: 'Select the project you want to adapt',
+//           choices: projects.map(p => ({
+//             title: `${p.name} (${p.type})`,
+//             value: p.name,
+//           })),
+//         },
+//         {
+//           type: 'confirm',
+//           name: 'addProxyToBackend',
+//           message: 'Should we add a proxy to target the backend?',
+//         },
+//         {
+//           type: addProxyToBackend => (addProxyToBackend ? 'number' : undefined),
+//           name: 'backendPort',
+//           message: "(Proxy) What is the backend's port",
+//           initial: 8080,
+//         },
+//         {
+//           type: (_, answers) => (answers.addProxyToBackend ? 'text' : undefined),
+//           name: 'backendApiRoot',
+//           message: "(Proxy) What is the backend's api root? Ideally it should be behind something like '/api'",
+//         },
+//       ],
+//       { onCancel: () => this.exit() }
+//     );
+
+//     if (!responses.project) responses = { ...responses, project: defaultProject };
+
+//     return { ...options, ...responses };
+//   }
+
+//   private getProjects(): { name: string; type: ProjectType; isDefault?: boolean }[] {
+//     const angularJson = JsonService.readJsonSync<AngularJson>('angular.json', { strict: true });
+//     return Object.entries(angularJson.projects).map(([name, project]) => ({
+//       name,
+//       type: project.projectType,
+//       isDefault: name === angularJson.defaultProject,
+//     }));
+//   }
+// }
+
+// type FlagsModel = {
+//   help: void;
+//   interactive: boolean;
+//   project?: string;
+// } & Partial<ApplicationOptions>;
+
+// interface ApplicationOptions {
+//   project: string;
+//   backendPort?: number;
+//   backendRootApi?: string;
+// }

@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "build-cli": {
+      "implementation": "./impl",
+      "schema": "./schema.json",
+      "description": "Build the cli"
+    }
+  }
+}

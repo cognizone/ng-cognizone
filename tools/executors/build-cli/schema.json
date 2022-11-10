@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "cli": "nx",
+  "properties": {
+    "root": {
+      "type": "string",
+      "description": "Path to the root of this lib"
+    },
+    "dist": {
+      "type": "string",
+      "description": "Path to the dist for this build"
+    }
+  }
+}

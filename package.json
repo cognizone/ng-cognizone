@@ -48,7 +48,7 @@
     "help": "nx help",
     "cz": "cz",
     "prepare": "husky install",
-    "build-tools": "tsc tools/executors/build-assets/impl.ts"
+    "build-tools": "tsc tools/executors/build-assets/impl.ts && tsc tools/executors/build-cli/impl.ts"
   },
   "private": true,
   "dependencies": {

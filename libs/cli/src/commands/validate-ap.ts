@@ -1,8 +1,8 @@
 import { ApplicationProfileRaw } from '@cognizone/application-profile';
 import { manyToArray } from '@cognizone/model-utils';
-import { Command, flags as oFlags } from '@oclif/command';
-import * as Parser from '@oclif/parser';
+import { Command, Flags, Interfaces } from '@oclif/core';
 import * as chalk from 'chalk';
+
 import { JsonService } from '../services';
 
 export default class ValidateAp extends Command {
@@ -10,11 +10,11 @@ export default class ValidateAp extends Command {
 
   static examples: string[] = [`$ cz-cli validate-ap path/to/ap.json`];
 
-  static flags: oFlags.Input<{ help: void }> = {
-    help: oFlags.help({ char: 'h' }),
+  static flags = {
+    help: Flags.help({ char: 'h' }),
   };
 
-  static args: Parser.args.IArg[] = [
+  static args: Interfaces.ArgInput = [
     {
       name: 'path',
       description: 'path to the raw application profile json file',
@@ -23,7 +23,7 @@ export default class ValidateAp extends Command {
   ];
 
   async run(): Promise<void> {
-    const { args } = this.parse(ValidateAp);
+    const { args } = await this.parse(ValidateAp);
     const { path } = args;
     const ap = JsonService.readJsonSync(path) as ApplicationProfileRaw;
     const fails: ValidationFail[] = [];
