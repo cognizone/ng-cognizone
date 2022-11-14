@@ -2,32 +2,26 @@
   "version": 1,
   "projects": {
     "application-profile": {
-      "projectType": "library",
       "root": "libs/application-profile",
       "sourceRoot": "libs/application-profile/src",
-      "prefix": "cz",
+      "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:package",
+          "builder": "@nrwl/js:tsc",
+          "outputs": ["{options.outputPath}"],
           "options": {
+            "outputPath": "dist/libs/application-profile",
+            "main": "libs/application-profile/src/index.ts",
             "tsConfig": "libs/application-profile/tsconfig.lib.json",
-            "project": "libs/application-profile/ng-package.json"
-          },
-          "configurations": {
-            "ivy": {
-              "tsConfig": "libs/application-profile/tsconfig.lib.ivy.json"
-            },
-            "production": {
-              "tsConfig": "libs/application-profile/tsconfig.lib.prod.json"
-            }
+            "assets": ["libs/application-profile/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/application-profile/src/**/*.ts", "libs/application-profile/src/**/*.html"]
-          },
-          "outputs": ["{options.outputFile}"]
+            "lintFilePatterns": ["libs/application-profile/**/*.ts"]
+          }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -767,32 +761,26 @@
       "tags": []
     },
     "model-utils": {
-      "projectType": "library",
       "root": "libs/model-utils",
       "sourceRoot": "libs/model-utils/src",
-      "prefix": "cz",
+      "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:package",
+          "builder": "@nrwl/js:tsc",
+          "outputs": ["{options.outputPath}"],
           "options": {
+            "outputPath": "dist/libs/model-utils",
+            "main": "libs/model-utils/src/index.ts",
             "tsConfig": "libs/model-utils/tsconfig.lib.json",
-            "project": "libs/model-utils/ng-package.json"
-          },
-          "configurations": {
-            "ivy": {
-              "tsConfig": "libs/model-utils/tsconfig.lib.ivy.json"
-            },
-            "production": {
-              "tsConfig": "libs/model-utils/tsconfig.lib.prod.json"
-            }
+            "assets": ["libs/model-utils/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/model-utils/src/**/*.ts", "libs/model-utils/src/**/*.html"]
-          },
-          "outputs": ["{options.outputFile}"]
+            "lintFilePatterns": ["libs/model-utils/**/*.ts"]
+          }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
