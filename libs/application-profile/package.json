@@ -24,6 +24,7 @@
       "email": "farah.agha111@gmail.com"
     }
   ],
+  "type": "commonjs",
   "private": false,
   "publishConfig": {
     "access": "public"
