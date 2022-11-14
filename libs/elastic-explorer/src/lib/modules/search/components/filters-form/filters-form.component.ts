@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { ElasticAggregation, notNil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
@@ -6,6 +6,7 @@ import { identity, Observable } from 'rxjs';
 import { filter, first, map, switchMap, toArray } from 'rxjs/operators';
 
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
+import { ElasticQueryEditorComponent } from "../elastic-query-editor/elastic-query-editor.component";
 
 @Component({
   selector: 'cz-filters-form',
@@ -13,11 +14,14 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
   styleUrls: ['./filters-form.component.scss'],
 })
 export class FiltersFormComponent extends OnDestroy$ implements OnInit {
+  @ViewChild(ElasticQueryEditorComponent, { static: false })
+  elasticQueryEditor?: ElasticQueryEditorComponent
   form!: UntypedFormGroup;
 
   typeOptionsProvider!: SelectOptionsProvider<string>;
 
   manualMode: UntypedFormControl = new UntypedFormControl(false);
+  showFullScreen: boolean = false;
 
   constructor(private fb: UntypedFormBuilder, private elasticExplorerService: ElasticExplorerService) {
     super();
@@ -34,6 +38,17 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
 
   resetFilters(): void {
     this.form.reset();
+  }
+
+  onFullscreenToggle(): void {
+    const editor = this.elasticQueryEditor?.editor;
+    if (!editor) return;
+    this.showFullScreen = !this.showFullScreen;
+    if (this.showFullScreen) {
+      editor.layout({ width: screen.width, height: 500 })
+    } else {
+      editor.layout({ width: 336, height: 500 })
+    }
   }
 
   private initForm(): void {
