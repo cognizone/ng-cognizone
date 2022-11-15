@@ -15,7 +15,7 @@ export default async function executor(options: ExecutorOptions, context: Execut
   try {
     shell.rm('-rf', distPath);
     shell.mkdir('-p', distPath);
-    shell.cp('-Rf', rootPath, distPath);
+    shell.cp('-Rf', rootPath, join(distPath, '..'));
   } catch (err) {
     console.error('Failed to copyfiles', err);
     return { success: false };
