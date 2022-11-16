@@ -1,4 +1,5 @@
 {
+  "name": "elastic-explorer-chrome-extension",
   "projectType": "application",
   "sourceRoot": "apps/elastic-explorer-chrome-extension/src",
   "prefix": "cz",
@@ -102,7 +103,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/elastic-explorer-chrome-extension"],
+      "outputs": ["{workspaceRoot}/coverage/apps/elastic-explorer-chrome-extension"],
       "options": {
         "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.ts",
         "passWithNoTests": true

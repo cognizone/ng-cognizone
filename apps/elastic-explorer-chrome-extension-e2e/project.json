@@ -1,4 +1,5 @@
 {
+  "name": "elastic-explorer-chrome-extension-e2e",
   "sourceRoot": "apps/elastic-explorer-chrome-extension-e2e/src",
   "projectType": "application",
   "targets": {

@@ -1,4 +1,5 @@
 {
+  "name": "docs-app-e2e",
   "sourceRoot": "apps/docs-app-e2e/src",
   "projectType": "application",
   "targets": {

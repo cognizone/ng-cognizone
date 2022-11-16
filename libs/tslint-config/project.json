@@ -1,4 +1,5 @@
 {
+  "name": "tslint-config",
   "projectType": "library",
   "sourceRoot": "libs/tslint-config/src",
   "prefix": "cz",

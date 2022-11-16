@@ -1,4 +1,5 @@
 {
+  "name": "legi-cv",
   "projectType": "library",
   "sourceRoot": "libs/legi-cv/src",
   "prefix": "cz",
@@ -27,7 +28,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/legi-cv"],
+      "outputs": ["{workspaceRoot}/coverage/libs/legi-cv"],
       "options": {
         "jestConfig": "libs/legi-cv/jest.config.ts",
         "passWithNoTests": true

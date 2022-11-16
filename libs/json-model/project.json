@@ -1,11 +1,12 @@
 {
+  "name": "json-model",
   "projectType": "library",
   "sourceRoot": "libs/json-model/src",
   "prefix": "cz",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": ["dist/libs/json-model"],
+      "outputs": ["{workspaceRoot}/dist/libs/json-model"],
       "options": {
         "project": "libs/json-model/ng-package.json"
       },
@@ -21,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/json-model"],
+      "outputs": ["{workspaceRoot}/coverage/libs/json-model"],
       "options": {
         "jestConfig": "libs/json-model/jest.config.ts",
         "passWithNoTests": true

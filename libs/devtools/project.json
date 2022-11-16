@@ -1,4 +1,5 @@
 {
+  "name": "devtools",
   "projectType": "library",
   "sourceRoot": "libs/devtools/src",
   "prefix": "cz",
@@ -27,7 +28,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/devtools"],
+      "outputs": ["{workspaceRoot}/coverage/libs/devtools"],
       "options": {
         "jestConfig": "libs/devtools/jest.config.ts",
         "passWithNoTests": true

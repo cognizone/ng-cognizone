@@ -1,4 +1,5 @@
 {
+  "name": "cli",
   "projectType": "library",
   "sourceRoot": "libs/cli/src",
   "prefix": "cz",
