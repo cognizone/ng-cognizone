@@ -2,8 +2,10 @@
   "name": "@cognizone/i18n-transloco",
   "version": "3.0.0-beta.38",
   "peerDependencies": {
-    "@cognizone/i18n": ">=3.0.0-beta",
-    "@cognizone/model-utils": ">=3.0.0-beta"
+    "@cognizone/i18n": ">=3.0.0-beta.0",
+    "@cognizone/model-utils": ">=3.0.0-beta.0",
+    "@ngneat/transloco": "^2.22.0",
+    "@ngneat/transloco-locale": "^1.4.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

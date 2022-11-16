@@ -5,7 +5,7 @@
     "tslint-config-prettier": "^1.18.0"
   },
   "peerDependencies": {
-    "tslint": "^5.15.0"
+    "tslint": "^5.15.0 || ^6.0.0"
   },
   "optionalDependencies": {
     "codelyzer": "^5.0.0"
