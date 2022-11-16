@@ -1,4 +1,5 @@
 {
+  "name": "eslint-config",
   "projectType": "library",
   "sourceRoot": "libs/eslint-config/src",
   "prefix": "cz",

@@ -1,4 +1,5 @@
 {
+  "name": "legi-styles",
   "projectType": "library",
   "sourceRoot": "libs/legi-styles/src",
   "prefix": "cz",

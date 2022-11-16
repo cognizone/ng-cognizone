@@ -1,4 +1,5 @@
 {
+  "name": "material-icons",
   "projectType": "library",
   "sourceRoot": "libs/material-icons/src",
   "prefix": "cz",
@@ -24,7 +25,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/material-icons"],
+      "outputs": ["{workspaceRoot}/coverage/libs/material-icons"],
       "options": {
         "jestConfig": "libs/material-icons/jest.config.ts",
         "passWithNoTests": true

@@ -1,4 +1,5 @@
 {
+  "name": "prettier-config",
   "projectType": "library",
   "sourceRoot": "libs/prettier-config/src",
   "prefix": "cz",

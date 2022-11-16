@@ -1,4 +1,5 @@
 {
+  "name": "user-action",
   "projectType": "library",
   "sourceRoot": "libs/user-action/src",
   "prefix": "cz",
@@ -27,7 +28,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/user-action"],
+      "outputs": ["{workspaceRoot}/coverage/libs/user-action"],
       "options": {
         "jestConfig": "libs/user-action/jest.config.ts",
         "passWithNoTests": true
