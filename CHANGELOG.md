@@ -1,3 +1,10 @@
+# [3.0.0-beta.35](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.34...v3.0.0-beta.35) (2022-11-17)
+
+
+### Features
+
+* **elastic-explorer:** full screen mode feature ([52c69fd](https://github.com/cognizone/ng-cognizone/commit/52c69fd85b0e031fca5748a5d20dd6c926ae5c15)), closes [#T14867](https://github.com/cognizone/ng-cognizone/issues/T14867)
+
 # [3.0.0-beta.34](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.33...v3.0.0-beta.34) (2022-11-08)
 
 
