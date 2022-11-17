@@ -27,7 +27,7 @@ import { ListPaginatorModule } from '@cognizone/legi-shared/list-paginator';
 import { SelectModule } from '@cognizone/legi-shared/select';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
-import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 
 import { ElasticInstanceModule } from '../elastic-instance';
 import { ApDetailsComponent, apDetailsViewProvider } from './components/ap-details/ap-details.component';
@@ -51,6 +51,8 @@ import { JsonModelLabelPipe } from './pipes/json-model-label.pipe';
 import { RemoveCircularFromJsonModelPipe } from './pipes/remove-circular-from-json-model.pipe';
 import { UriCropPipe } from './pipes/uri-crop.pipe';
 import { SearchView } from './views/search/search.view';
+import { ElasticExplorerState } from "./store/elastic-explorer.state";
+import { NgxsModule } from "@ngxs/store";
 
 @NgModule({
   declarations: [
@@ -106,12 +108,9 @@ import { SearchView } from './views/search/search.view';
     TranslocoLocaleModule,
     I18nModule,
     ClipboardModule,
-    // TODO add back when migrating to angular 12
-    // NgxsModule.forFeature([ElasticExplorerState]),
+    NgxsModule.forFeature([ElasticExplorerState]),
     NgxJsonViewerModule,
-    // TODO add back when migrating to angular 12
-    // MonacoEditorModule.forRoot(),
-    MonacoEditorModule,
+    MonacoEditorModule.forRoot(),
     FormsModule,
   ],
   providers: [apDetailsViewProvider, rawDetailsViewProvider, jsonModelFlatGraphDetailsViewProvider, jsonModelDetailsViewProvider],

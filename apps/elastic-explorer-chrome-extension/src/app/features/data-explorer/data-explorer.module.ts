@@ -7,7 +7,7 @@ import {
   routes,
 } from '@cognizone/elastic-explorer';
 import { NgxsModule } from '@ngxs/store';
-import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 
 @NgModule({
   declarations: [],
