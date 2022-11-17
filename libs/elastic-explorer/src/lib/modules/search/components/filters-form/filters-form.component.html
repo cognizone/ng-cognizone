@@ -1,5 +1,5 @@
 <div class="my-side-menu p-4" [formGroup]="form" [class.my-full-screen]="showFullScreen">
-  <div class="d-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center justify-content-between my-side-menu-content">
     <h4 class="mb-2">Filters</h4>
     <mat-slide-toggle *ngIf="!showFullScreen" [formControl]="manualMode">Manual mode</mat-slide-toggle>
     <div>
