@@ -1,3 +1,10 @@
+# [3.0.0-beta.36](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.35...v3.0.0-beta.36) (2022-11-17)
+
+
+### Bug Fixes
+
+* **cli:** make it build again ([e1b9dd7](https://github.com/cognizone/ng-cognizone/commit/e1b9dd72bee87ce6a2698731985d3263004b756b))
+
 # [3.0.0-beta.35](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.34...v3.0.0-beta.35) (2022-11-17)
 
 
