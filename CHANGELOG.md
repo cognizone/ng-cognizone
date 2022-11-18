@@ -1,3 +1,10 @@
+# [3.0.0-beta.37](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.36...v3.0.0-beta.37) (2022-11-18)
+
+
+### Features
+
+* **json-model-graph:** added option to use czRootUri as a structural directive ([c1009f3](https://github.com/cognizone/ng-cognizone/commit/c1009f3e3c73427ddca18400d91ca0b2a821fa4c))
+
 # [3.0.0-beta.36](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.35...v3.0.0-beta.36) (2022-11-17)
 
 
