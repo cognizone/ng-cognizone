@@ -1,15 +1,18 @@
-import { flatten } from 'lodash-es';
 import { Inject, Injectable, Optional } from '@angular/core';
 import { getAllSelectOptions, Many, manyToArray, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
+import { flatten } from 'lodash-es';
 import { identity, Observable, of } from 'rxjs';
 import { map, mergeMap, switchMap, toArray } from 'rxjs/operators';
 
 import { CV_PROVIDER_TOKEN, CvProvider } from './cv-provider';
-import { CvSelectOptionsProvider } from './cv-select-options-provider';
+import { CvSelectOptionsProviderFactory } from './cv-select-options-provider';
 
 @Injectable({ providedIn: 'any' })
 export class CvService {
-  constructor(@Optional() @Inject(CV_PROVIDER_TOKEN) private providers: CvProvider[]) {
+  constructor(
+    @Optional() @Inject(CV_PROVIDER_TOKEN) private providers: CvProvider[],
+    private cvSelectOptionsProviderFactory: CvSelectOptionsProviderFactory
+  ) {
     this.providers = this.providers ?? [];
   }
 
@@ -23,7 +26,7 @@ export class CvService {
 
   getProviderAsSelectOptionProvider(cvName: string): SelectOptionsProvider<string> {
     const provider = this.getProvider(cvName);
-    return new CvSelectOptionsProvider(provider);
+    return this.cvSelectOptionsProviderFactory.create(provider);
   }
 
   getAllOptions(cvName: Many<string>): Observable<SelectOption[]> {
