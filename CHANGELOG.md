@@ -1,3 +1,10 @@
+# [3.0.0-beta.38](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.37...v3.0.0-beta.38) (2022-11-21)
+
+
+### Features
+
+* **legi-cv:** make it easier to override Concept to SelectOption mapping ([9a33b92](https://github.com/cognizone/ng-cognizone/commit/9a33b925b293027bced114c828d7e2c1fefa4711))
+
 # [3.0.0-beta.37](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.36...v3.0.0-beta.37) (2022-11-18)
 
 
