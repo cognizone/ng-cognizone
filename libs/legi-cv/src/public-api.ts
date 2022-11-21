@@ -12,17 +12,7 @@ export * from './lib/models/get-cv-params';
 export * from './lib/models/legi-cv-options';
 export * from './lib/models/match-type';
 
-export * from './lib/services/atomic-cv-client.service';
-export * from './lib/services/atomic-cv-provider';
-export * from './lib/services/collection-cv-provider';
-export * from './lib/services/concept-matcher.service';
-export * from './lib/services/concept-scheme-cv-provider';
-export * from './lib/services/cv-provider';
-export * from './lib/services/cv-select-options-provider';
-export * from './lib/services/cv-state.service';
-export * from './lib/services/cv.service';
-export * from './lib/services/elastic-atomic-cv-client.service';
-export * from './lib/services/legi-cv-options.service';
+export * from './lib/services';
 
 export * from './lib/store/cv.actions';
 export * from './lib/store/cv.state';
