@@ -33,6 +33,19 @@ Once the user has access to the application, there is an elastic cluster selecti
   ]
   ```
   
+- On usage of `https` links in elastic explorer
+    - Ask for a certificate file from `sysadmins` in the dedicated slack file.
+    - Once you receive a certificate file, On your browser -> `Go to settings -> Privacy and security -> Security -> Manage device certificates -> Trusted root certification authorities -> Import -> Browse to file` (make sure you click on trust this certificate if prompted, careful to add it to the trusted and not to any personal store)
+    - In your elastic explorer add a https link for example -
+  
+      ```json 
+      [
+        {
+          "url":"https://${url}:9200",
+          "label":"dev" 
+        }
+      ]
+  
 - Edit or delete any existing Elastic cluster definition.
 
   [![jsonfileupload](/elastic-explorer/img/jsonUpload.png)](/elastic-explorer/img/jsonUpload.png)
