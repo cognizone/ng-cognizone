@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $matToolbarHeight: 64px;
 
 .header {
@@ -34,7 +36,7 @@ mat-sidenav-container {
   left: 0;
   z-index: 1000000000;
   $time: 5s;
-  animation: moveX $time linear 0s infinite alternate, moveY (3.4 * $time / 3.05) linear 0s infinite alternate;
+  animation: moveX $time linear 0s infinite alternate, moveY math.div(3.4 * $time, 3.05) linear 0s infinite alternate;
 }
 
 @keyframes moveX {

@@ -1,5 +1,7 @@
 // Form part, to handle height of outline input without label
 
+@use "sass:math";
+
 .compact-form-field {
   .mat-form-field-infix {
     border-top: none;
@@ -26,7 +28,7 @@ mat-form-field.mat-form-field {
 
     mat-error {
       // margin-top value for .mat-form-field-subscript-wrapper
-      margin-top: -(2em/3);
+      margin-top: -(math.div(2em, 3));
     }
   }
 }
