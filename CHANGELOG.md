@@ -1,3 +1,10 @@
+# [3.0.0-beta.40](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.39...v3.0.0-beta.40) (2022-11-28)
+
+
+### Features
+
+* **elastic-explorer:** update ngx-monaco-editor and applying styles for full screen width ([c3a93e7](https://github.com/cognizone/ng-cognizone/commit/c3a93e7b198be4ade09ca030edd13ba7b808bbb8)), closes [#T14867](https://github.com/cognizone/ng-cognizone/issues/T14867)
+
 # [3.0.0-beta.39](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.38...v3.0.0-beta.39) (2022-11-28)
 
 

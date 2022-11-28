@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/transloco-langstring",
-  "version": "3.0.0-beta.39",
+  "version": "3.0.0-beta.40",
   "peerDependencies": {
     "@angular/core": ">=14.0.0",
     "@angular/platform-browser-dynamic": ">=14.0.0",

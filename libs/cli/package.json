@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/cli",
-  "version": "3.0.0-beta.39",
+  "version": "3.0.0-beta.40",
   "bin": {
     "cz-cli": "./bin/run"
   },
