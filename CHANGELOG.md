@@ -1,3 +1,10 @@
+# [3.0.0-beta.39](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.38...v3.0.0-beta.39) (2022-11-28)
+
+
+### Bug Fixes
+
+* adapt peer dependencies to work with npm 7+ ([75ac274](https://github.com/cognizone/ng-cognizone/commit/75ac274ee173bf4d3e78908af747652580b44465))
+
 # [3.0.0-beta.38](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.37...v3.0.0-beta.38) (2022-11-21)
 
 
