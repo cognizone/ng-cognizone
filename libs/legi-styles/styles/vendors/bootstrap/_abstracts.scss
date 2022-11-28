@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/_mixins'; // should be "mixins" but fails with buidling of legi-shared
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/_mixins'; // should be "mixins" but fails with buidling of legi-shared
 
 // https://getbootstrap.com/docs/4.4/layout/grid/#sass-mixins
 // https://projects.invisionapp.com/d/main#/console/15839093/395705685/preview
@@ -10,41 +10,41 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px
+  xl: 1200px,
 );
 
 $spacers: (
   0: 0,
   1: (
-    $spacer * 0.25 // 4px
+    $spacer * 0.25 // 4px,
   ),
   2: (
-    $spacer * 0.5 // 8px
+    $spacer * 0.5 // 8px,
   ),
   3: (
-    $spacer * 1 // 16px
+    $spacer * 1 // 16px,
   ),
   4: (
-    $spacer * 1.5 // 24px
+    $spacer * 1.5 // 24px,
   ),
   5: (
-    $spacer * 2 // 32px
+    $spacer * 2 // 32px,
   ),
   6: (
-    $spacer * 2.5 // 40px
+    $spacer * 2.5 // 40px,
   ),
   7: (
-    $spacer * 3 // 48px
+    $spacer * 3 // 48px,
   ),
   8: (
-    $spacer * 4 // 64px
+    $spacer * 4 // 64px,
   ),
   9: (
-    $spacer * 6 // 96px
+    $spacer * 6 // 96px,
   ),
   10: (
-    $spacer * 7.5 // 120px
-  )
+    $spacer * 7.5 // 120px,
+  ),
 );
 
 $font-family-base: $czls-font-family;
