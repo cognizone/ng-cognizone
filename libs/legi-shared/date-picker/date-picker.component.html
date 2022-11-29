@@ -28,7 +28,7 @@
 </label>
 <mat-datepicker
   #picker
-  startView="multi-year"
+  [startView]="startView"
   (yearSelected)="chosenYearHandler($event)"
   (monthSelected)="chosenMonthHandler($event, picker)"
 ></mat-datepicker>

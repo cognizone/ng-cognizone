@@ -43,6 +43,8 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
   type: DatePickerType = DatePickerType.DATE;
   @Input()
   hint?: string;
+  @Input()
+  startView?: string = 'multi-year';
 
   embeddedControl!: UntypedFormControl;
 
