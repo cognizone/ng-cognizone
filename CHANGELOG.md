@@ -1,3 +1,10 @@
+# [3.0.0-beta.41](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.40...v3.0.0-beta.41) (2022-11-29)
+
+
+### Bug Fixes
+
+* **legi-shared:** add startView input on date picker component ([d68870a](https://github.com/cognizone/ng-cognizone/commit/d68870a2dc940f0046b63fd8549611592c16bc83))
+
 # [3.0.0-beta.40](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.39...v3.0.0-beta.40) (2022-11-28)
 
 
