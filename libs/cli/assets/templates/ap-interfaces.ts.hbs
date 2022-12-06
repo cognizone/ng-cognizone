@@ -11,7 +11,7 @@ import { {{element}} } from '{{from}}';
 export interface {{this.name}} extends {{extendClass}} {
   '@type': JsonModelType<[{{{classIds}}}]>;
   {{#if facets}}
-  '@facets': {{facets}};
+  '@facets'?: {{facets}};
   {{/if}}
   {{#each attributes}}
   {{this.name}}{{#if isOptional}}?{{/if}}: {{this.type}};
