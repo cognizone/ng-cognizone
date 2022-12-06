@@ -1,3 +1,10 @@
+# [3.0.0-beta.42](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.41...v3.0.0-beta.42) (2022-12-06)
+
+
+### Bug Fixes
+
+* **cli:** generate ap interfaces with optional facets ([e157016](https://github.com/cognizone/ng-cognizone/commit/e157016e68da490cce7368744f9ea1a9ba08998e))
+
 # [3.0.0-beta.41](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.40...v3.0.0-beta.41) (2022-11-29)
 
 
