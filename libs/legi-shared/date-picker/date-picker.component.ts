@@ -114,8 +114,9 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
   /**
    * `embeddedValueToValue` maps selected value of a calendar to a value of type Date
    */
-  embeddedValueToValue(value: Moment | Date | null): Date | null {
+  embeddedValueToValue(value: Moment | Date | string | null): Date | null {
     if (!value) return value as null;
+    if (typeof value === 'string') return new Date(value);
     else if (value instanceof Date) return value;
     return value.toDate();
   }
