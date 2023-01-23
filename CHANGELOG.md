@@ -1,3 +1,10 @@
+# [3.0.0-beta.43](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.42...v3.0.0-beta.43) (2023-01-23)
+
+
+### Features
+
+* **legi-shared:** add partial string handling in date-picker ([318723a](https://github.com/cognizone/ng-cognizone/commit/318723af92f0c1b640e28b32bb905dba0b8248f2))
+
 # [3.0.0-beta.42](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.41...v3.0.0-beta.42) (2022-12-06)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-model",
-  "version": "3.0.0-beta.42",
+  "version": "3.0.0-beta.43",
   "peerDependencies": {
     "@cognizone/model-utils": ">=3.0.0-beta.0",
     "@cognizone/ng-core": ">=3.0.0-beta.0"
