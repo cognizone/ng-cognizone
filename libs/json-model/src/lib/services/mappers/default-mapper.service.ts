@@ -16,6 +16,9 @@ export class DefaultMapper implements MicroAttributeMapper<unknown, unknown> {
   }
 
   serialize(dataType: string, value: unknown): unknown {
+    if (typeof value === 'string') {
+      return value.trim() === '' ? null : value;
+    }
     return value;
   }
 }
