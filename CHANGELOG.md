@@ -1,3 +1,10 @@
+# [3.0.0-beta.44](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.43...v3.0.0-beta.44) (2023-02-22)
+
+
+### Bug Fixes
+
+* **ng-application-profile:** prevent saving of empty strings ([7aafacf](https://github.com/cognizone/ng-cognizone/commit/7aafacffa9ef24e084b8225e8d734b6b0629d0e9))
+
 # [3.0.0-beta.43](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.42...v3.0.0-beta.43) (2023-01-23)
 
 
