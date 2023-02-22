@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/ng-application-profile",
-  "version": "2.7.6",
+  "version": "2.7.7",
   "peerDependencies": {
     "@angular/common": ">=11.0.0",
     "@angular/form": ">=11.0.0",

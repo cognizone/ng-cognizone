@@ -1,3 +1,10 @@
+## [2.7.7](https://github.com/cognizone/ng-cognizone/compare/v2.7.6...v2.7.7) (2023-02-22)
+
+
+### Bug Fixes
+
+* **ng-application-profile:** prevent saving of empty strings ([e489e74](https://github.com/cognizone/ng-cognizone/commit/e489e7478551c400b2fbcbf32f9ce97a33fae3f3))
+
 ## [2.7.6](https://github.com/cognizone/ng-cognizone/compare/v2.7.5...v2.7.6) (2022-10-06)
 
 
