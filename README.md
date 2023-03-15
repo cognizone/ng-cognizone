@@ -53,7 +53,7 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
 Libraries are shareable across libraries and applications. They can be imported from `@cognizone/mylib`.
 
-`nx generate library <LIB_NAME> --buildable --publishable --importPath="@cognizone/<LIB_NAME>"`
+`nx generate @nrwl/angular:library <LIB_NAME> --buildable --publishable --importPath="@cognizone/<LIB_NAME>"`
 
 ## Developing in an external app
 
