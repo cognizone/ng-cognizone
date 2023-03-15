@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "application-profile": "libs/application-profile",
+    "cdk": "libs/cdk",
     "cli": "libs/cli",
     "devtools": "libs/devtools",
     "docs-app": "apps/docs-app",

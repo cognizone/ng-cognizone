@@ -18,6 +18,7 @@
     "paths": {
       "@app/*": ["apps/docs-app/src/app/*"],
       "@cognizone/application-profile": ["libs/application-profile/src/index.ts"],
+      "@cognizone/cdk": ["libs/cdk/src/index.ts"],
       "@cognizone/devtools": ["libs/devtools/src/index.ts"],
       "@cognizone/elastic": ["libs/elastic/src/index.ts"],
       "@cognizone/elastic-explorer": ["libs/elastic-explorer/src/index.ts"],
