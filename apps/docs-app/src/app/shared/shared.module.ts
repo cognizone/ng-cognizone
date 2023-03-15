@@ -1,7 +1,6 @@
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -69,8 +68,8 @@ const directives = [MatTabRoutedDirective, AnchorDirective, ImgTooltipDirective,
 
 @NgModule({
     declarations: [components, pipes, directives],
-    imports: [CommonModule, material, ReactiveFormsModule, FlexLayoutModule, RouterModule],
-    exports: [material, components, pipes, directives, CommonModule, ReactiveFormsModule, FlexLayoutModule],
+    imports: [CommonModule, material, ReactiveFormsModule, RouterModule],
+    exports: [material, components, pipes, directives, CommonModule, ReactiveFormsModule],
     providers: [
         {
             provide: TOOLTIP_COMPONENT,
