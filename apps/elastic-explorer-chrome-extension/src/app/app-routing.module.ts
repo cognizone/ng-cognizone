@@ -12,6 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'elastic-explorer',
+    // eslint-disable-next-line @typescript-eslint/promise-function-async
     loadChildren: () => import('./features/data-explorer/data-explorer.module').then(m => m.DataExplorerModule),
   },
   {

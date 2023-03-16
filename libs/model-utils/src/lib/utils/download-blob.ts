@@ -9,7 +9,9 @@ export function downloadBlob(data: Blob, fileName?: string): void {
 
   // IE doesn't allow using a blob object directly as link href
   // instead it is necessary to use msSaveOrOpenBlob
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if ((window.navigator as any)?.msSaveOrOpenBlob) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window.navigator as any).msSaveOrOpenBlob(blob, fileName);
     return;
   }

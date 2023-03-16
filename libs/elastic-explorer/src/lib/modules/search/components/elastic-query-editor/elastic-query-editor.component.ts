@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
-import { ElasticExplorerService } from '../../services/elastic-explorer.service';
 import * as monaco from 'monaco-editor';
+import { ElasticExplorerService } from '../../services/elastic-explorer.service';
 
 @Component({
   selector: 'cz-elastic-query-editor',

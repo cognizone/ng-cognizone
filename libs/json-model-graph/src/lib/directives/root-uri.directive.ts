@@ -46,6 +46,7 @@ export class RootUriDirective {
 
   /**
    * Only works if the directive is used as as structural directive. Renders the given template if `rootUri` is given (much like `*ngIf`), clears the view otherwise.
+   *
    * @param force if `true`, the current view will be cleared before being re-rendered. Usually used to force re-rendering of children components after a full graph reload.
    * @example `<ng-container *czRootUri="rootUri"><ng-container>`
    */

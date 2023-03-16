@@ -21,6 +21,18 @@
             "prefix": "cz",
             "style": "kebab-case"
           }
+        ],
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "allow": ["@czee-ce/*", "@czee-ce/env/*"],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
         ]
       }
     },

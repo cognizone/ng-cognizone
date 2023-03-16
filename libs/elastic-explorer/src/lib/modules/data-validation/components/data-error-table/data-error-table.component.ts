@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Pagination } from '@cognizone/model-utils';
 import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
 import { Observable } from 'rxjs';
+
 import { DataError } from '../../models/data-error';
 import { DataValidationViewService } from '../../services/data-validation-view.service';
 

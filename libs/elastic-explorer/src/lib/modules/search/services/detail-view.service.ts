@@ -16,12 +16,13 @@ export class DetailViewService {
   }
 
   onPageLoad(route: ActivatedRoute): void {
-    this.subSink.add = this.textFilter$.subscribe(textFilter => {
-      this.router.navigate([], {
+    this.subSink.add = this.textFilter$.subscribe(async textFilter => {
+      await this.router.navigate([], {
         relativeTo: route,
         queryParamsHandling: 'merge',
         skipLocationChange: true,
         queryParams: {
+          // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing -- handling empty string
           detailFilter: textFilter || undefined,
         },
       });

@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Many, TypedResourceContext } from '@cognizone/model-utils';
 
 /**
  * @experimental
  */
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export type Uri<T extends JsonModel> = string & { '@@meta_type_placeholder@@'?: T };
 
 export interface JsonModel {

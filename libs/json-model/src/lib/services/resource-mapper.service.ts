@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable, Optional } from '@angular/core';
 import { Datatype, DatatypeLong, manyToArray, manyToOne, TypedResource } from '@cognizone/model-utils';
 
@@ -27,15 +28,15 @@ export class ResourceMapper {
       const attribute = rawAttributes[attributeKey];
       const dataTypes = stringKeys(attribute);
       if (!dataTypes.length) return;
-      for (const dataType of dataTypes) {
-        const value = attribute[dataType as keyof typeof attribute];
+      for (const type of dataTypes) {
+        const value = attribute[type as keyof typeof attribute];
 
-        const newValue = this.deserializeAttribute(dataType, value);
+        const newValue = this.deserializeAttribute(type, value);
         if (dataTypes.length === 1) {
-          (attributes as any)[attributeKey] = { value: newValue, dataType };
+          (attributes as any)[attributeKey] = { value: newValue, dataType: type };
         } else {
           (attributes as any)[attributeKey] = (attributes as any)[attributeKey] ?? [];
-          (attributes as any)[attributeKey].push({ value: newValue, dataType });
+          (attributes as any)[attributeKey].push({ value: newValue, dataType: type });
         }
       }
       const dataType = stringKeys(attribute).pop();

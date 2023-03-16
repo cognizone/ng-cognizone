@@ -16,6 +16,7 @@ import {
   TypeProfile,
 } from '@cognizone/application-profile';
 import { DatatypeLong, Many, manyToArray } from '@cognizone/model-utils';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- TODO fix me
 import { DataModelDefinitionHelper } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
 import { memoize } from 'lodash-es';

@@ -42,7 +42,9 @@ export class DataValidationView extends OnDestroy$ implements OnInit, OnDestroy 
       try {
         const query = JSON.parse(queryString);
         this.dataValidationViewService.setElasticQuery(query);
-      } catch {}
+      } catch {
+        /* empty on purpose */
+      }
     });
   }
 

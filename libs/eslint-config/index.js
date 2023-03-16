@@ -101,6 +101,10 @@ module.exports = {
         format: ['camelCase', 'UPPER_CASE', 'snake_case'],
         leadingUnderscore: 'allow',
         trailingUnderscore: 'allow',
+        filter: {
+          regex: '^@',
+          match: false,
+        },
       },
       {
         selector: 'typeLike',

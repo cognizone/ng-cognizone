@@ -10,6 +10,7 @@ export class ProtocolService {
 
   init(): void {
     const url = `${location.origin}${environment.production ? '/index.html' : ''}#/%s`;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (navigator as any).registerProtocolHandler(this.protocol, url, 'cz-data-explorer');
   }
 }

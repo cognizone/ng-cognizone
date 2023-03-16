@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { ApplicationProfile } from '@cognizone/application-profile';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- TODO fix this
 import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
 import { LoggerModule } from '@cognizone/ng-core';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
@@ -7,7 +10,6 @@ import { JsonModelModule } from '../json-model.module';
 import { JsonModel, JsonModelFlatGraph } from '../models/json-model';
 import { JsonModelService } from './json-model.service';
 
-// tslint:disable: no-require-imports no-var-requires no-any
 const directiveAp: ApplicationProfile = require('../../test/directive-ap.json');
 const treatyAp: ApplicationProfile = require('../../test/treaty-ap.json');
 const treatyGraph1: JsonModelFlatGraph = require('../../test/treaty-process-flat-graph.json');
@@ -51,7 +53,7 @@ describe('JsonModelService', () => {
 });
 
 function getRoot(): JsonModel {
-  const rootUri: string = 'uri1';
+  const rootUri = 'uri1';
   const root = {
     '@id': rootUri,
     '@type': 'root',
@@ -83,7 +85,9 @@ function getRoot(): JsonModel {
     parent: root,
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (root as any).sibling = sibling;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   root.children.push(child as any);
   return root;
 }

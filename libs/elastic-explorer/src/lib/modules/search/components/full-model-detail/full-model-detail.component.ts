@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Inject, Injector, Input, OnChanges, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, Injector, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { OnDestroy$ } from '@cognizone/ng-core';
@@ -15,7 +15,7 @@ import { DetailViewService } from '../../services/detail-view.service';
   providers: [DetailViewService],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnChanges {
+export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnChanges, OnDestroy {
   @Input()
   model!: FullModel;
 
@@ -56,6 +56,7 @@ export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnCh
   }
 
   ngOnDestroy(): void {
+    super.ngOnDestroy();
     this.detailViewService.onPageUnload();
   }
 }

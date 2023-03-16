@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,7 +15,7 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
   styleUrls: ['./search.view.scss'],
   providers: [ElasticInstanceHandlerService, ElasticExplorerService],
 })
-export class SearchView extends OnDestroy$ implements OnInit {
+export class SearchView extends OnDestroy$ implements OnInit, AfterViewInit, OnDestroy {
   loading$: Observable<boolean> = this.loadingService.loading$;
 
   showMenu = true;

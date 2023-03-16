@@ -2,7 +2,7 @@ import { SelectOption } from '../models/select-option';
 import { trackBySelectOption } from './track-by-select-option';
 
 describe('trackBySelectOption', () => {
-  let options: SelectOption<number>[] = [];
+  const options: SelectOption<number>[] = [];
 
   for (let i = 0; i < 10; ++i) {
     options.push({

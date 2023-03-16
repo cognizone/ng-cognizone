@@ -3,7 +3,7 @@ import { Many, manyToArray } from '@cognizone/model-utils';
 
 @Injectable()
 export class IdGenerator {
-  prefix: string = 'http://resource/';
+  prefix = 'http://resource/';
 
   private counter = 0;
 

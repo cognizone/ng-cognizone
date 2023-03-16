@@ -11,7 +11,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class PureFnPipe implements PipeTransform {
-  transform<T extends (...args: any[]) => any>(fn: T, ...args: Parameters<T>): ReturnType<T> {
-    return fn(...args);
+  transform<T extends (...args: unknown[]) => unknown>(fn: T, ...args: Parameters<T>): ReturnType<T> {
+    return fn(...args) as ReturnType<T>;
   }
 }

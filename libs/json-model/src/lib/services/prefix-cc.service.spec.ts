@@ -1,5 +1,5 @@
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
-import { TypedResourceContext } from 'libs/model-utils/src/lib/models';
+import { TypedResourceContext } from '@cognizone/model-utils';
 import { PrefixCcService } from './prefix-cc.service';
 
 describe('PrefixCcService', () => {
