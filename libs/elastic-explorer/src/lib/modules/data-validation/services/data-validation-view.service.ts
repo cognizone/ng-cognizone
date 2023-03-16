@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TypedResourceGraph } from '@cognizone/model-utils';
-import { downloadBlob, extractSourcesFromElasticResponse, manyToArray, selectProp, SubSink } from '@cognizone/model-utils';
+import {
+  downloadBlob,
+  extractSourcesFromElasticResponse,
+  manyToArray,
+  selectProp,
+  SubSink,
+  TypedResourceGraph,
+} from '@cognizone/model-utils';
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
@@ -127,9 +133,9 @@ export class DataValidationViewService {
   }
 
   private linkStateToRoute(route: ActivatedRoute): void {
-    this.elasticInstanceHandler.elasticInfo$.subscribe(elasticInfo => {
+    this.elasticInstanceHandler.elasticInfo$.subscribe(async elasticInfo => {
       const queryParams = this.elasticInstanceHandler.elasticInfoToQueryParams(elasticInfo);
-      this.router.navigate([], {
+      await this.router.navigate([], {
         relativeTo: route,
         queryParams,
       });

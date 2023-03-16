@@ -1,8 +1,15 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/directive-class-suffix */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ChangeDetectorRef, Directive, Input, OnInit, Optional } from '@angular/core';
-import { AbstractControl, ControlContainer, ControlValueAccessor, UntypedFormControl, FormGroupDirective, FormGroupName } from '@angular/forms';
+import { ChangeDetectorRef, Directive, Input, OnDestroy, OnInit, Optional } from '@angular/core';
+import {
+  AbstractControl,
+  ControlContainer,
+  ControlValueAccessor,
+  UntypedFormControl,
+  FormGroupDirective,
+  FormGroupName,
+} from '@angular/forms';
 import { merge, noop, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 
@@ -15,7 +22,7 @@ import { Maybe } from '../types/maybe';
  * @deprecated you should implement ControlValueAccessor yourself, this was not a great idea in the end
  */
 @Directive({})
-export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestroy$ implements OnInit, ControlValueAccessor {
+export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestroy$ implements OnInit, OnDestroy, ControlValueAccessor {
   @Input()
   required?: boolean;
 
@@ -157,7 +164,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
     } else if (this.formControl) {
       control = this.formControl;
     }
-    if (!control || !control.validator) return;
+    if (!control?.validator) return;
     const errors = control.validator(new UntypedFormControl());
     if (errors?.required) this.required = true;
   }

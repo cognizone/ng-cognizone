@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { ElasticSearchResponse } from '../models';
 import { extractSourcesFromElasticResponse } from './extract-sources-from-elastic-response';
 

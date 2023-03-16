@@ -26,6 +26,7 @@ import { InputModule } from '@cognizone/legi-shared/input';
 import { ListPaginatorModule } from '@cognizone/legi-shared/list-paginator';
 import { SelectModule } from '@cognizone/legi-shared/select';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
+import { NgxsModule } from '@ngxs/store';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 
@@ -50,9 +51,8 @@ import { FilterObjectPipe } from './pipes/filter-object.pipe';
 import { JsonModelLabelPipe } from './pipes/json-model-label.pipe';
 import { RemoveCircularFromJsonModelPipe } from './pipes/remove-circular-from-json-model.pipe';
 import { UriCropPipe } from './pipes/uri-crop.pipe';
+import { ElasticExplorerState } from './store/elastic-explorer.state';
 import { SearchView } from './views/search/search.view';
-import { ElasticExplorerState } from "./store/elastic-explorer.state";
-import { NgxsModule } from "@ngxs/store";
 
 @NgModule({
   declarations: [

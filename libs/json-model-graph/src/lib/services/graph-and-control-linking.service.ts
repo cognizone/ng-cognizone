@@ -112,7 +112,7 @@ export class GraphAndControlLinkingService {
     attributeKey,
     nodeUri,
     rootUri,
-  }: Pick<LinkControlToNodeAttributeOptions<JsonModel>, 'definition' | 'attributeKey' | 'nodeUri' | 'rootUri'>): boolean {
+  }: Pick<LinkControlToNodeAttributeOptions, 'attributeKey' | 'definition' | 'nodeUri' | 'rootUri'>): boolean {
     const node = this.graphService.getNodeSnapshot(rootUri, nodeUri);
     return this.dataModelDefinitionHelper.isReference(definition, node['@type'], attributeKey);
   }
@@ -196,6 +196,6 @@ export interface LinkControlToNodeAttributeOptions<T = JsonModel> {
   classId?: string;
   // TODO handle this
   datatype?: string;
-  innerPath?: Many<string | number>;
+  innerPath?: Many<number | string>;
   emitEventFromNodeToForm?: boolean;
 }

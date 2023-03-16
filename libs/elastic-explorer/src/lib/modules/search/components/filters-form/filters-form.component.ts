@@ -21,7 +21,7 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
   typeOptionsProvider!: SelectOptionsProvider<string>;
 
   manualMode: UntypedFormControl = new UntypedFormControl(false);
-  showFullScreen: boolean = false;
+  showFullScreen = false;
 
   constructor(private fb: UntypedFormBuilder, private elasticExplorerService: ElasticExplorerService) {
     super();

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ElasticSearchResponse, extractOneSourceFromElasticResponse } from '@cognizone/model-utils';
-import { TypedResourceGraph } from '@cognizone/model-utils';
+import { ElasticSearchResponse, TypedResourceGraph, extractOneSourceFromElasticResponse } from '@cognizone/model-utils';
 import { Logger } from '@cognizone/ng-core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';

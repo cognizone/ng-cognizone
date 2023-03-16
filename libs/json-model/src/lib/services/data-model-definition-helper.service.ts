@@ -12,4 +12,4 @@ export interface DataModelDefinitionHelper<T = unknown> {
   getConcreteType(definition: T, type: Many<string>): string;
 }
 
-export const DATA_MODEL_DEFINITION_HELPER_TOKEN = new InjectionToken<DataModelDefinitionHelper<unknown>>('DataModelDefinitionHelper');
+export const DATA_MODEL_DEFINITION_HELPER_TOKEN = new InjectionToken<DataModelDefinitionHelper>('DataModelDefinitionHelper');

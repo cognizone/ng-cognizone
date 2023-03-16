@@ -39,6 +39,6 @@ export class PrefixCcService {
   }
 
   private getFullPrefix(prefix: string): string {
-    return prefix.endsWith(':') ? prefix : prefix + ':';
+    return prefix.endsWith(':') ? prefix : `${prefix}:`;
   }
 }

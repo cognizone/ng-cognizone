@@ -1,8 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { downloadBlob } from './download-blob';
 
 describe('downloadBlob', () => {
-  beforeEach(() => {});
-
   it('should download on IE', () => {
     const blob = new Blob();
     (window.navigator as any).msSaveOrOpenBlob = jest.fn();
