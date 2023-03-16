@@ -1,3 +1,11 @@
+# [3.0.0-beta.47](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.46...v3.0.0-beta.47) (2023-03-16)
+
+
+### Bug Fixes
+
+* cli build, part 1 ([eb7c71c](https://github.com/cognizone/ng-cognizone/commit/eb7c71c54e4e1c6bd11883066cb27874f0059c2a))
+* fixing github actions ([a98818b](https://github.com/cognizone/ng-cognizone/commit/a98818b1da647e352419a46d12f643bc911f81fa))
+
 # [3.0.0-beta.46](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.45...v3.0.0-beta.46) (2023-03-16)
 
 
