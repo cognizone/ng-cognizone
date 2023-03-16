@@ -35,7 +35,14 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm i
+      - name: Install root dependencies
+        run: npm i
+      - name: Install cli dependencies
+        run: npm i
+        working-directory: ./libs/cli
+      - name: Install docs dependencies
+        run: npm i
+        working-directory: ./apps/docs
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
       # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
@@ -43,8 +50,5 @@ jobs:
       - run: npm run nx -- run-many --target=test
       - run: node ./tools/sync-package-metadata.js
       - run: npx semantic-release
-        # - run: node ./tools/npm-publish.js
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      # - run: npm run affected:e2e -- --headless --base=origin/main
-      # - run: git push --follow-tags
