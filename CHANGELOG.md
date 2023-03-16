@@ -1,3 +1,10 @@
+# [3.0.0-beta.49](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.48...v3.0.0-beta.49) (2023-03-16)
+
+
+### Bug Fixes
+
+* peer dependencies part 2 ([2834116](https://github.com/cognizone/ng-cognizone/commit/2834116d4117c366f9c049668e504b24abc9225c))
+
 # [3.0.0-beta.48](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.47...v3.0.0-beta.48) (2023-03-16)
 
 
