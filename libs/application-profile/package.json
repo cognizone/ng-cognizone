@@ -2,7 +2,8 @@
   "name": "@cognizone/application-profile",
   "version": "3.0.0-beta.48",
   "peerDependencies": {
-    "@cognizone/model-utils": ">=3.0.0-beta"
+    "@cognizone/model-utils": ">=3.0.0-beta",
+    "rxjs": "^6.6.3 || ^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
