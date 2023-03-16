@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/user-action",
-  "version": "3.0.0-beta.44",
+  "version": "3.0.0-beta.45",
   "peerDependencies": {
     "@cognizone/elastic": ">=3.0.0-beta.0",
     "@cognizone/legi-shared": ">=3.0.0-beta.0",

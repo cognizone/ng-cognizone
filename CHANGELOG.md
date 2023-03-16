@@ -1,3 +1,10 @@
+# [3.0.0-beta.45](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.44...v3.0.0-beta.45) (2023-03-16)
+
+
+### Features
+
+* **cdk:** new library, added pureMethod and pureFn pipes ([dd086ee](https://github.com/cognizone/ng-cognizone/commit/dd086ee55114cf87fd6a4a0f8b864a1d9d929d1c))
+
 # [3.0.0-beta.44](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.43...v3.0.0-beta.44) (2023-02-22)
 
 
