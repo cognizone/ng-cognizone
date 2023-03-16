@@ -21,33 +21,43 @@ jobs:
         run: |
           git config --local user.email "WilliamChelman@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-      - name: Cache node modules global
+      # root deps
+      - name: Cache node modules root
         uses: actions/cache@v2
         env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - name: Cache node modules local
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules-local
+          cache-name: cache-node-modules-root
         with:
           path: ./node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
       - name: Install root dependencies
         run: npm i
+      # cli deps
+      - name: Cache node modules cli
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules-cli
+        with:
+          path: ./libs/cli/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./libs/cli/package-lock.json') }}
       - name: Install cli dependencies
         run: npm i
         working-directory: ./libs/cli
-      - name: Install docs dependencies
-        run: npm i
-        working-directory: ./apps/docs
+      # docs deps
+      # - name: Cache node modules docs
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: cache-node-modules-docs
+      #   with:
+      #     path: ./apps/docs/node_modules
+      #     key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./apps/docs/package-lock.json') }}
+      # - name: Install docs dependencies
+      #   run: npm i
+      #   working-directory: ./apps/docs
       # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
       # - run: npm run affected:lint -- --base=origin/main
       # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
-      - run: npm run nx -- run-many --target=build --configuration=production
-      - run: npm run nx -- run-many --target=test
+      - run: npm run nx -- run-many --target=build --configuration=production --exclude=docs,docs-app
+      - run: npm run nx -- run-many --target=test --exclude=docs,docs-app
       - run: node ./tools/sync-package-metadata.js
       - run: npx semantic-release
         env:
