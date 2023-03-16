@@ -1,3 +1,10 @@
+# [3.0.0-beta.46](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.45...v3.0.0-beta.46) (2023-03-16)
+
+
+### Bug Fixes
+
+* **cdk:** public publish ([a355bc7](https://github.com/cognizone/ng-cognizone/commit/a355bc74cf48c3d07e52c06c85c99ba0626e3cc7))
+
 # [3.0.0-beta.45](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.44...v3.0.0-beta.45) (2023-03-16)
 
 
