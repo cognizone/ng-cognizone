@@ -1,3 +1,10 @@
+# [3.0.0-beta.48](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.47...v3.0.0-beta.48) (2023-03-16)
+
+
+### Bug Fixes
+
+* peer deps to rxjs accept ^7.0.0 ([3497fbf](https://github.com/cognizone/ng-cognizone/commit/3497fbffa8e6cce985c59045598be426559c8036))
+
 # [3.0.0-beta.47](https://github.com/cognizone/ng-cognizone/compare/v3.0.0-beta.46...v3.0.0-beta.47) (2023-03-16)
 
 
