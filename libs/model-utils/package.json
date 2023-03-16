@@ -6,7 +6,7 @@
   },
   "peerDependencies": {
     "typescript": ">=3.7.0 <5",
-    "rxjs": "^6.6.3"
+    "rxjs": "^6.6.3 || ^7.0.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
