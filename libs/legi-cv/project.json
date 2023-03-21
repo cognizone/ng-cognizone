@@ -1,0 +1,39 @@
+{
+  "name": "legi-cv",
+  "projectType": "library",
+  "sourceRoot": "libs/legi-cv/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/legi-cv/tsconfig.lib.json",
+        "project": "libs/legi-cv/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/legi-cv/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/legi-cv/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/legi-cv/src/**/*.ts", "libs/legi-cv/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/legi-cv"],
+      "options": {
+        "jestConfig": "libs/legi-cv/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

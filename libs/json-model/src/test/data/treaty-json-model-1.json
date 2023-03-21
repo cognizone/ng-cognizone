@@ -1,0 +1,95 @@
+{
+  "@id": "http://resource/TreatyProcess/0-1591712631312",
+  "@type": "TreatyProcess",
+  "@context": {
+    "base": "http://example.org/",
+    "prefix": {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+  },
+  "@facets": {
+    "someTitle": "I love titles"
+  },
+  "treatyProcessHasResultingTreatyDocument": [
+    {
+      "@id": "http://resource/TreatyDocument/3-1591712645034",
+      "@type": "TreatyDocument",
+      "isAnnexOfWork": [],
+      "modifies": [],
+      "workHasAnnex": [],
+      "isRealizedBy": [],
+      "modifiedBy": [],
+      "typeDocument": {
+        "@id": "https://fedlex.data.admin.ch/vocabulary/resource-type/31",
+        "@type": "ResourceType"
+      }
+    },
+    {
+      "@id": "http://resource/TreatyDocument/8-1591712649311",
+      "@type": "TreatyDocument",
+      "isAnnexOfWork": [],
+      "modifies": [],
+      "workHasAnnex": [],
+      "isRealizedBy": [
+        {
+          "@id": "http://resource/Expression/7-1591712649311",
+          "@type": "Expression",
+          "isEmbodiedBy": [
+            {
+              "@id": "http://resource/Manifestation/6-1591712649311",
+              "@type": "Manifestation",
+              "fileName": "there-it-is.gif",
+              "userFormat": [],
+              "uploadDate": "2020-06-09T14:24:09.311Z",
+              "isExemplifiedBy": "http://resource/Resource/5-1591712649311",
+              "uploadBy": "John Doe"
+            }
+          ],
+          "language": [],
+          "title": "there-it-is.gif"
+        }
+      ],
+      "modifiedBy": []
+    }
+  ],
+  "hasRemark": [],
+  "confidentialTreaty": false,
+  "treatyProcessHasPartyCondition": [],
+  "treatyCommentAboutValidity": [],
+  "institutionInChargeOfTheTreatyLevel2": [],
+  "treatyComment": [],
+  "treatyNotificationPublishedIn": [],
+  "treatyProcessIdentificationInCms": [],
+  "producedIn": [],
+  "treatySubject": [],
+  "bilateral": true,
+  "treatyHasRatificationRestriction": [],
+  "treatyNotificationPublishedInLabel": [],
+  "treatyProcessHasTask": [
+    {
+      "@id": "http://resource/TreatySignature/1-1591712631407",
+      "@type": "TreatySignature",
+      "languageLabel": [],
+      "eventHasRemark": [],
+      "treatyComment": [],
+      "language": []
+    },
+    {
+      "@id": "http://resource/EntryIntoForce/2-1591712631410",
+      "@type": "EntryIntoForce",
+      "eventHasRemark": []
+    }
+  ],
+  "treatyType": {
+    "@id": "http://resource/my-domain/1",
+    "@type": "TreatyType"
+  },
+  "treatyPartyCountry": [],
+  "titleTreaty": {},
+  "treatyPartyOrganisation": [],
+  "eventHasRemark": [],
+  "treatyAppliesEULegalResource": [],
+  "treatyRelatedLegalResource": []
+}

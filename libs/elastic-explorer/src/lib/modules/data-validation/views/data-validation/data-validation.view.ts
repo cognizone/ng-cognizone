@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
 import { Observable } from 'rxjs';
@@ -19,7 +19,7 @@ export class DataValidationView extends OnDestroy$ implements OnInit, OnDestroy 
 
   editorOptions: {} = { theme: 'vs-light', language: 'json' };
 
-  code: FormControl = new FormControl(undefined, {
+  code: UntypedFormControl = new UntypedFormControl(undefined, {
     updateOn: 'blur',
   });
 
@@ -42,7 +42,9 @@ export class DataValidationView extends OnDestroy$ implements OnInit, OnDestroy 
       try {
         const query = JSON.parse(queryString);
         this.dataValidationViewService.setElasticQuery(query);
-      } catch {}
+      } catch {
+        /* empty on purpose */
+      }
     });
   }
 

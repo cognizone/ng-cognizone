@@ -1,0 +1,32 @@
+{
+  "name": "@cognizone/cdk",
+  "version": "3.0.0-beta.49",
+  "peerDependencies": {
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    },
+    {
+      "name": "Farah El Agha",
+      "email": "farah.agha111@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git",
+    "directory": "libs/cdk"
+  }
+}

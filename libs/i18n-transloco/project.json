@@ -1,0 +1,39 @@
+{
+  "name": "i18n-transloco",
+  "projectType": "library",
+  "sourceRoot": "libs/i18n-transloco/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/i18n-transloco/tsconfig.lib.json",
+        "project": "libs/i18n-transloco/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/i18n-transloco/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/i18n-transloco/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/i18n-transloco/src/**/*.ts", "libs/i18n-transloco/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/i18n-transloco"],
+      "options": {
+        "jestConfig": "libs/i18n-transloco/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

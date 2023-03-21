@@ -1,0 +1,16 @@
+{
+  "name": "tslint-config",
+  "projectType": "library",
+  "sourceRoot": "libs/tslint-config/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "./tools/executors/build-assets:build-assets",
+      "options": {
+        "root": "libs/tslint-config",
+        "dist": "dist/libs/tslint-config"
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { JsonModel } from '@cognizone/ng-application-profile';
+import { JsonModel } from '@cognizone/json-model';
 
 @Component({
   selector: 'cz-json-model-label',

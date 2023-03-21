@@ -1,1 +1,1 @@
-export type ViewType = 'table' | 'raw' | 'structured';
+export type ViewType = 'raw' | 'structured' | 'table';

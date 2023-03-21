@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { SelectOption } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
@@ -17,7 +17,7 @@ import { ElasticInstanceManagementComponent } from '../elastic-instance-manageme
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
-  form!: FormGroup;
+  form!: UntypedFormGroup;
 
   newUrlControl: AbstractControl = this.fb.control(null);
 
@@ -26,7 +26,7 @@ export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
   urlOptions$!: Observable<SelectOption<string | null>[]>;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private elasticHandler: ElasticInstanceHandlerService,
     private elasticInstanceService: ElasticInstanceService,
     private dialog: MatDialog

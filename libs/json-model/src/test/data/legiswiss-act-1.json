@@ -1,0 +1,131 @@
+{
+  "data": {
+    "uri": "http://resource/my-domain/1",
+    "type": [
+      "Act",
+      "Work"
+    ],
+    "references": {
+      "isRealizedBy": [
+        "http://resource/my-domain/2",
+        "http://resource/my-domain/3",
+        "http://resource/my-domain/4"
+      ]
+    },
+    "attributes": {
+      "dateEntryInForce": {
+        "xsd:date": [
+          "2022-02-01"
+        ]
+      },
+      "publicationDate": {
+        "xsd:date": [
+          "2022-02-01"
+        ]
+      },
+      "dateDocument": {
+        "xsd:date": [
+          "2022-02-01"
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "uri": "http://resource/my-domain/2",
+      "type": "Expression",
+      "references": {
+        "isEmbodiedBy": [
+          "http://resource/my-domain/5",
+          "http://resource/my-domain/6"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/3",
+      "type": "Expression",
+      "references": {
+        "isEmbodiedBy": [
+          "http://resource/my-domain/7",
+          "http://resource/my-domain/8"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/4",
+      "type": "Expression",
+      "references": {
+        "isEmbodiedBy": [
+          "http://resource/my-domain/9",
+          "http://resource/my-domain/10"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/5",
+      "type": "Manifestation",
+      "attributes": {
+        "isExemplifiedBy": {
+          "rdfs:Resource": [
+            "http://resource/my-domain/11"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/6",
+      "type": "Manifestation",
+      "attributes": {
+        "isExemplifiedBy": {
+          "rdfs:Resource": [
+            "http://resource/my-domain/12"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/7",
+      "type": "Manifestation",
+      "attributes": {
+        "isExemplifiedBy": {
+          "rdfs:Resource": [
+            "http://resource/my-domain/13"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/8",
+      "type": "Manifestation",
+      "attributes": {
+        "isExemplifiedBy": {
+          "rdfs:Resource": [
+            "http://resource/my-domain/14"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/9",
+      "type": "Manifestation",
+      "attributes": {
+        "isExemplifiedBy": {
+          "rdfs:Resource": [
+            "http://resource/my-domain/15"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/10",
+      "type": "Manifestation",
+      "attributes": {
+        "isExemplifiedBy": {
+          "rdfs:Resource": [
+            "http://resource/my-domain/16"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "devtools",
+  "projectType": "library",
+  "sourceRoot": "libs/devtools/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/devtools/tsconfig.lib.json",
+        "project": "libs/devtools/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/devtools/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/devtools/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/devtools/src/**/*.ts", "libs/devtools/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/devtools"],
+      "options": {
+        "jestConfig": "libs/devtools/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

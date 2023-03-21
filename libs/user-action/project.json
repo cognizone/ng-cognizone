@@ -1,0 +1,39 @@
+{
+  "name": "user-action",
+  "projectType": "library",
+  "sourceRoot": "libs/user-action/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/user-action/tsconfig.lib.json",
+        "project": "libs/user-action/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/user-action/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/user-action/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/user-action/src/**/*.ts", "libs/user-action/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/user-action"],
+      "options": {
+        "jestConfig": "libs/user-action/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

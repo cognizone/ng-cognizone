@@ -1,0 +1,36 @@
+{
+  "name": "elastic",
+  "projectType": "library",
+  "sourceRoot": "libs/elastic/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/elastic/tsconfig.lib.json",
+        "project": "libs/elastic/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/elastic/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/elastic/src/**/*.ts", "libs/elastic/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/elastic"],
+      "options": {
+        "jestConfig": "libs/elastic/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

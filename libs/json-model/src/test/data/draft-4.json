@@ -1,0 +1,143 @@
+{
+  "data": {
+    "uri": "http://resource/0",
+    "type": "ConceptScheme",
+    "attributes": {
+      "prefLabel": {
+        "rdf:langString": {
+          "fr": [
+            "Niveaux de priorités pour le processus législatif"
+          ]
+        }
+      },
+      "description": {
+        "rdf:langString": {
+          "fr": [
+            "Liste des niveaux de priorités pour le processus législatif (Gouvernement et Conseil d'État)"
+          ]
+        }
+      },
+      "title": {
+        "rdf:langString": {
+          "fr": [
+            "Liste des niveaux de priorités pour le processus législatif"
+          ]
+        }
+      }
+    },
+    "references": {
+      "hasTopConcept": [
+        "http://resource/4",
+        "http://resource/5",
+        "http://resource/6"
+      ]
+    }
+  },
+  "included": [
+    {
+      "uri": "http://resource/4",
+      "type": "Concept",
+      "references": {
+        "inScheme": "http://resource/0"
+      },
+      "attributes": {
+        "created": {
+          "xsd:dateTime": [
+            "2022-10-04T10:15:39.005Z"
+          ]
+        },
+        "prefLabel": {
+          "rdf:langString": {
+            "fr": [
+              "politique"
+            ]
+          }
+        },
+        "notation": {
+          "xsd:string": [
+            "string 8"
+          ]
+        },
+        "definition": {
+          "rdf:langString": {
+            "fr": [
+              "priorité politique"
+            ]
+          }
+        },
+        "status": {
+          "rdfs:Resource": "string 10"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/5",
+      "type": "Concept",
+      "references": {
+        "inScheme": "http://resource/0"
+      },
+      "attributes": {
+        "created": {
+          "xsd:dateTime": [
+            "2022-10-04T10:15:39.005Z"
+          ]
+        },
+        "prefLabel": {
+          "rdf:langString": {
+            "fr": [
+              "normale"
+            ]
+          }
+        },
+        "definition": {
+          "rdf:langString": {
+            "fr": [
+              "priorité normale"
+            ]
+          }
+        },
+        "status": {
+          "rdfs:Resource": "string 13"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/6",
+      "type": "Concept",
+      "references": {
+        "inScheme": "http://resource/0"
+      },
+      "attributes": {
+        "created": {
+          "xsd:dateTime": [
+            "2022-10-04T10:15:39.006Z"
+          ]
+        },
+        "prefLabel": {
+          "rdf:langString": {
+            "fr": [
+              "délai de transposition directive dépassé"
+            ]
+          }
+        },
+        "notation": {
+          "xsd:string": [
+            "string 15"
+          ]
+        },
+        "definition": {
+          "rdf:langString": {
+            "fr": [
+              "priorité délai de transposition directive UE dépassé"
+            ]
+          }
+        },
+        "status": {
+          "rdfs:Resource": "string 17"
+        }
+      }
+    }
+  ],
+  "graph": "http://data.legilux.public.lu/resource/authority/priority-level-for-government/graph",
+  "timestampms": 1656946701376
+}

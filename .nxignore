@@ -1,0 +1,5 @@
+# Since those tests are depending on ng-application-profile, nx detects it as circular dep, which is not entirely true, and so fails to build the libraries
+
+libs/json-model/**/*.spec.ts
+libs/ng-application-profile/**/*.spec.ts
+apps/docs/**/*

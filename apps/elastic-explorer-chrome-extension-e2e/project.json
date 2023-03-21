@@ -1,0 +1,29 @@
+{
+  "name": "elastic-explorer-chrome-extension-e2e",
+  "sourceRoot": "apps/elastic-explorer-chrome-extension-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/elastic-explorer-chrome-extension-e2e/cypress.json",
+        "tsConfig": "apps/elastic-explorer-chrome-extension-e2e/tsconfig.e2e.json",
+        "devServerTarget": "elastic-explorer-chrome-extension:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "elastic-explorer-chrome-extension:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/elastic-explorer-chrome-extension-e2e/**/*.{js,ts}"]
+      },
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["elastic-explorer-chrome-extension"]
+}

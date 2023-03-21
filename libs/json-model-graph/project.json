@@ -1,0 +1,39 @@
+{
+  "name": "json-model-graph",
+  "projectType": "library",
+  "sourceRoot": "libs/json-model-graph/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/json-model-graph/tsconfig.lib.json",
+        "project": "libs/json-model-graph/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/json-model-graph/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/json-model-graph/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/json-model-graph/src/**/*.ts", "libs/json-model-graph/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/json-model-graph"],
+      "options": {
+        "jestConfig": "libs/json-model-graph/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

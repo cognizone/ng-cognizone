@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JsonModelService should create a new JsonModel based on directive ap 1`] = `
+Object {
+  "@context": undefined,
+  "@id": "http://resource/EUDossier-Event/0-0",
+  "@type": Array [
+    "EUDossier",
+    "Event",
+  ],
+  "contentsEvent": Array [],
+  "euDossierProducesResourceLegal": Array [],
+  "euDossierResponsibilityOfAgent": Array [],
+  "eventRiskLevel": undefined,
+  "hasDocument": Array [],
+  "hasEventRemark": Array [],
+  "identifier": Array [],
+  "initiatedByActPreparatory": Array [],
+  "initiatesTransposition": undefined,
+  "isAboutConceptTypeDossier": Array [],
+  "relatedToToDo": Array [],
+  "title": Object {},
+}
+`;
+
+exports[`JsonModelService should transform to a JsonModelFlatGraph 1`] = `
+Object {
+  "context": Object {
+    "base": "http://example.org/",
+    "prefix": Object {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+    },
+  },
+  "models": Object {
+    "uri1": Object {
+      "@id": "uri1",
+      "@type": "root",
+      "a": 4,
+      "aNullStuff": null,
+      "children": Array [
+        "just a uri, the is no JsonModel",
+        "uri3",
+      ],
+      "sibling": "uri2",
+    },
+    "uri2": Object {
+      "@id": "uri2",
+      "@type": "root",
+      "b": Array [
+        4,
+        5,
+        6,
+      ],
+      "sibling": "uri1",
+    },
+    "uri3": Object {
+      "@id": "uri3",
+      "@type": "root",
+      "a": true,
+      "parent": "uri1",
+    },
+  },
+  "rootUri": "uri1",
+}
+`;
+
+exports[`JsonModelService should transform treaty flat graph to JsonModel 1`] = `
+Object {
+  "@context": Object {
+    "base": "http://example.org/",
+    "prefix": Object {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+    },
+  },
+  "@facets": Object {
+    "someTitle": "I love titles",
+  },
+  "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
+  "@type": "TreatyProcess",
+  "bilateral": false,
+  "confidentialTreaty": false,
+  "producedIn": Array [
+    Object {
+      "@id": "new-model-uri-initiation-1-1583078160543",
+      "@type": "Initiation",
+      "eventHasRemark": Array [],
+      "factor": Object {
+        "@id": "new-model-uri-internationalactor-0-1583078160540",
+        "@type": "InternationalActor",
+        "partyOrganisationOfTreaty": Array [
+          Object {
+            "@id": "new-model-uri-treatyprocess-2-1583078162434",
+            "@type": "TreatyProcess",
+            "committeeCreationBasedOn": Array [],
+            "hasRemark": Array [],
+            "institutionInChargeOfTheTreatyLevel2": Array [],
+            "producedIn": Array [],
+            "titleTreaty": Object {
+              "de": Array [
+                "",
+              ],
+              "fr": Array [
+                "a",
+              ],
+              "it": Array [
+                "",
+              ],
+            },
+            "treatyAppliesEULegalResource": Array [],
+            "treatyBasedOnTreaty": [Circular],
+            "treatyComment": Array [],
+            "treatyCommentAboutValidity": Array [],
+            "treatyDescription": Array [],
+            "treatyHasEntryIntoForceScope": Array [],
+            "treatyHasRatificationRestriction": Array [],
+            "treatyLegalResourceForOtherParty": Object {
+              "@id": "new-model-uri-eulegalresource-4-1583078162435",
+              "@type": "EULegalResource",
+            },
+            "treatyLimitDateForSignature": Array [],
+            "treatyLimitDateForSignatureComment": Array [],
+            "treatyNotificationPublishedIn": Array [],
+            "treatyNotificationPublishedInLabel": Array [],
+            "treatyPartyCountry": Array [],
+            "treatyPartyOrganisation": [Circular],
+            "treatyProcessHasResultingTreatyDocument": Array [],
+            "treatyProcessHasTask": Array [],
+            "treatyRelatedLegalResource": Array [],
+            "treatySubject": Array [],
+            "treatyType": Object {
+              "@id": "https://fedlex.data.admin.ch/vocabulary/treaty-type/2",
+              "@type": "TreatyType",
+            },
+          },
+        ],
+      },
+    },
+  ],
+  "titleTreaty": Object {
+    "de": Array [
+      "Protokoll",
+    ],
+    "en": Array [
+      "Protocol",
+    ],
+    "fr": Array [
+      "Protocole",
+    ],
+    "it": Array [
+      "Protocollo",
+    ],
+  },
+  "treatyAppliesEULegalResource": Array [
+    Object {
+      "@id": "http://publications.europa.eu/resource/cellar/d67cf7eb-de13-4bcb-9959-0dc0107e102e",
+      "@type": "EULegalResource",
+    },
+    Object {
+      "@id": "http://publications.europa.eu/resource/cellar/87245951-547e-11ea-aece-01aa75ed71a1",
+      "@type": "EULegalResource",
+    },
+  ],
+  "treatyComment": Array [
+    "This is a comment",
+  ],
+  "treatyProcessHasResultingTreatyDocument": Array [
+    Object {
+      "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/1",
+      "@type": "TreatyDocument",
+    },
+    Object {
+      "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/2",
+      "@type": "TreatyDocument",
+    },
+  ],
+  "treatySignatureDate": "2017-11-22T00:00:00.000Z",
+  "treatySignaturePlace": "Strasbourg",
+}
+`;

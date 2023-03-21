@@ -13,7 +13,7 @@ import {
   TrackByFunction,
   ViewChild,
 } from '@angular/core';
-import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
@@ -85,7 +85,7 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
   @ViewChild('singleInput')
   singleInput!: ElementRef<HTMLInputElement>;
 
-  singleInputControl: FormControl = new FormControl();
+  singleInputControl: UntypedFormControl = new UntypedFormControl();
 
   queryChanges: Subject<string> = new Subject();
 

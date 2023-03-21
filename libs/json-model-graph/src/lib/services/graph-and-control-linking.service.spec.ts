@@ -1,4 +1,5 @@
 import { ReactiveFormsModule } from '@angular/forms';
+import { JsonModelModule } from '@cognizone/json-model';
 import { CvService } from '@cognizone/legi-cv';
 import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
 import { createServiceFactory, mockProvider, SpectatorService } from '@ngneat/spectator/jest';
@@ -13,7 +14,7 @@ describe('GraphAndControlLinkingService', () => {
   const createService = createServiceFactory({
     service: GraphAndControlLinkingService,
     providers: [mockProvider(CvService)],
-    imports: [ReactiveFormsModule, NgApplicationProfileModule.forRoot(), NgxsModule.forRoot([GraphState])],
+    imports: [ReactiveFormsModule, NgApplicationProfileModule.forRoot(), NgxsModule.forRoot([GraphState]), JsonModelModule.forRoot()],
   });
 
   beforeEach(() => (spectator = createService()));

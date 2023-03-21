@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
+import * as monaco from 'monaco-editor';
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
 
 @Component({
@@ -10,9 +11,10 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
   styleUrls: ['./elastic-query-editor.component.scss'],
 })
 export class ElasticQueryEditorComponent extends OnDestroy$ implements OnInit {
-  editorOptions: {} = { theme: 'vs-light', language: 'json' };
+  editor?: monaco.editor.IStandaloneCodeEditor;
+  editorOptions: {} = { theme: 'vs-light', language: 'json', automaticLayout: true };
 
-  code: FormControl = new FormControl(undefined, {
+  code: UntypedFormControl = new UntypedFormControl(undefined, {
     updateOn: 'blur',
   });
 
@@ -32,5 +34,9 @@ export class ElasticQueryEditorComponent extends OnDestroy$ implements OnInit {
 
   runQuery(): void {
     this.elasticExplorerService.setElasticQuery(JSON.parse(this.code.value));
+  }
+
+  onInitEditor(editor: monaco.editor.IStandaloneCodeEditor): void {
+    this.editor = editor;
   }
 }

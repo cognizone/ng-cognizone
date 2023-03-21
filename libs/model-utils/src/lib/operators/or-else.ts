@@ -9,5 +9,5 @@ import { map } from 'rxjs/operators';
  * ```
  */
 export function orElse<T, R extends Exclude<T, null | undefined>>(value: R): OperatorFunction<T, R> {
-  return pipe(map(x => (x as R) ?? value));
+  return pipe(map(x => (x as unknown as R) ?? value));
 }

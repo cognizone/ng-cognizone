@@ -1,0 +1,39 @@
+{
+  "name": "legi-shared",
+  "projectType": "library",
+  "sourceRoot": "libs/legi-shared/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/legi-shared/tsconfig.lib.json",
+        "project": "libs/legi-shared/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/legi-shared/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/legi-shared/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/legi-shared/src/**/*.ts", "libs/legi-shared/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/legi-shared"],
+      "options": {
+        "jestConfig": "libs/legi-shared/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

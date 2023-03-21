@@ -1,0 +1,16 @@
+{
+  "name": "prettier-config",
+  "projectType": "library",
+  "sourceRoot": "libs/prettier-config/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "./tools/executors/build-assets:build-assets",
+      "options": {
+        "root": "libs/prettier-config",
+        "dist": "dist/libs/prettier-config"
+      }
+    }
+  },
+  "tags": []
+}

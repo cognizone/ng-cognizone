@@ -1,0 +1,39 @@
+{
+  "name": "i18n",
+  "projectType": "library",
+  "sourceRoot": "libs/i18n/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/i18n/tsconfig.lib.json",
+        "project": "libs/i18n/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/i18n/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/i18n/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/i18n/src/**/*.ts", "libs/i18n/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/i18n"],
+      "options": {
+        "jestConfig": "libs/i18n/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

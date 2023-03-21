@@ -1,17 +1,12 @@
 import { Many } from '@cognizone/model-utils';
-import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService, Uri } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService, Uri } from '@cognizone/json-model';
 import produce from 'immer';
 import { Observable } from 'rxjs';
 
 import { GraphService } from './graph.service';
 
 export class GraphWrapper {
-  constructor(
-    private graphService: GraphService,
-    private jsonModelService: JsonModelService,
-    public rootUri: string,
-    private apName: string
-  ) {}
+  constructor(private graphService: GraphService, private jsonModelService: JsonModelService, public rootUri: string) {}
 
   getNode<T extends JsonModel>(nodeUri: Uri<T>): Observable<JsonModelFlat<T>> {
     return this.graphService.getNode<T>(this.rootUri, nodeUri);
@@ -34,7 +29,8 @@ export class GraphWrapper {
   }
 
   createNewJsonModel<T extends JsonModel>(types: Many<string>): JsonModelFlat<T> {
-    return this.jsonModelService.createNewJsonModel(types, this.apName, this.rootUri) as JsonModelFlat<T>;
+    const context = this.getGraphSnapshot().context;
+    return this.jsonModelService.createNewJsonModel(types, this.getDefinition(), context) as JsonModelFlat<T>;
   }
 
   update(...nodes: JsonModel[]): void {
@@ -44,43 +40,49 @@ export class GraphWrapper {
   setReference<T extends JsonModel, U extends JsonModel>(
     node: T,
     referenceKey: keyof T,
-    referenceUri: string,
+    referenceUri: string | undefined,
     referenceType: string
   ): [T, U] {
     const graph = this.getGraphSnapshot();
-    const updatedNode = produce(node, (draft: Record<keyof T, unknown>) => {
-      draft[referenceKey] = referenceUri;
-    });
 
     let reference: U;
-    if (graph.models[referenceUri]) {
+    if (referenceUri && graph.models[referenceUri]) {
       reference = graph.models[referenceUri] as U;
     } else {
       reference = this.createNewJsonModel(referenceType) as U;
-      reference['@id'] = referenceUri;
+      reference['@id'] = referenceUri ?? reference['@id'];
     }
+    const updatedNode = produce(node, (draft: Record<keyof T, unknown>) => {
+      draft[referenceKey] = reference['@id'];
+    });
     return [updatedNode, reference];
   }
 
   addReference<T extends JsonModel, U extends JsonModel>(
     node: T,
     referenceKey: keyof T,
-    referenceUri: string,
+    referenceUri: string | undefined,
     referenceType: string
   ): [T, U] {
     const graph = this.getGraphSnapshot();
-    const updatedNode = produce(node, (draft: Record<keyof T, unknown[]>) => {
-      if (!draft[referenceKey]) draft[referenceKey] = [];
-      draft[referenceKey].push(referenceUri);
-    });
 
     let reference: U;
-    if (graph.models[referenceUri]) {
+    if (referenceUri && graph.models[referenceUri]) {
       reference = graph.models[referenceUri] as U;
     } else {
       reference = this.createNewJsonModel(referenceType) as U;
-      reference['@id'] = referenceUri;
+      reference['@id'] = referenceUri ?? reference['@id'];
     }
+
+    const updatedNode = produce(node, (draft: Record<keyof T, unknown[]>) => {
+      if (!draft[referenceKey]) draft[referenceKey] = [];
+      draft[referenceKey].push(reference['@id']);
+    });
+
     return [updatedNode, reference];
+  }
+
+  getDefinition(): unknown {
+    return this.graphService.getDefinition(this.rootUri);
   }
 }

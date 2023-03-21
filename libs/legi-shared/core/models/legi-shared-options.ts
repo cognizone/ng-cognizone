@@ -16,6 +16,9 @@ export const LEGI_SHARED_OPTIONS_TOKEN = new InjectionToken<LegiSharedOptions>('
 export interface LegiSharedOptions {
   appearance: 'classic' | 'urban';
   useDefaultMomentLocaleAdapter: boolean;
+  datePicker?: {
+    iconPosition?: 'prefix' | 'suffix';
+  };
 }
 
 export const DEFAULT_LEGI_SHARED_OPTIONS: LegiSharedOptions = {

@@ -1,13 +1,15 @@
 {
   "name": "@cognizone/ng-core",
-  "version": "2.7.7",
+  "version": "3.0.0-beta.49",
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=11.0.0",
-    "@angular/core": ">=11.0.0",
-    "@angular/forms": ">=11.0.0"
+    "@angular/core": ">=14.0.0",
+    "@angular/forms": ">=14.0.0",
+    "@angular/common": ">=14.0.0",
+    "@angular/platform-browser-dynamic": ">=14.0.0",
+    "rxjs": "^6.6.3 || ^7.0.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

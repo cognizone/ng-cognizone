@@ -1,0 +1,1068 @@
+{
+  "data": {
+    "uri": "http://resource/0",
+    "type": "InitialDraft",
+    "references": {
+      "draftHasTask": [
+        "http://resource/11",
+        "http://resource/12",
+        "http://resource/13",
+        "http://resource/14",
+        "http://resource/15",
+        "http://resource/16"
+      ],
+      "hasOpinion": [
+        "http://resource/17",
+        "http://resource/18",
+        "http://resource/19",
+        "http://resource/20",
+        "http://resource/21",
+        "http://resource/22",
+        "http://resource/23",
+        "http://resource/24",
+        "http://resource/25",
+        "http://resource/26",
+        "http://resource/27",
+        "http://resource/28",
+        "http://resource/29",
+        "http://resource/30",
+        "http://resource/31",
+        "http://resource/32",
+        "http://resource/33",
+        "http://resource/34",
+        "http://resource/35",
+        "http://resource/36"
+      ],
+      "hasAmendment": [
+        "http://resource/37",
+        "http://resource/38",
+        "http://resource/39",
+        "http://resource/40"
+      ]
+    },
+    "attributes": {
+      "initialTitleDraft": {
+        "xsd:string": "string 1"
+      },
+      "parliamentDraftId": {
+        "xsd:string": "string 2"
+      },
+      "internalId": {
+        "xsd:integer": 38589
+      },
+      "modified": {
+        "xsd:dateTime": "2022-10-04T10:13:43.367Z"
+      },
+      "institutionInChargeOfTheDraft": {
+        "rdfs:Resource": [
+          "string 3"
+        ]
+      },
+      "draftId": {
+        "xsd:string": "string 4"
+      },
+      "titleDraft": {
+        "xsd:string": "string 5"
+      },
+      "created": {
+        "xsd:dateTime": "2022-10-04T10:13:43.367Z"
+      },
+      "lastSynchronizationDate": {
+        "xsd:dateTime": "2022-10-04T10:13:43.367Z"
+      },
+      "eventType": {
+        "rdfs:Resource": "string 6"
+      },
+      "statusDraft": {
+        "rdfs:Resource": "string 7"
+      },
+      "altShortTitleDraft": {
+        "xsd:string": "string 8"
+      },
+      "hasResultingLegalResource": {
+        "rdfs:Resource": [
+          "string 9"
+        ]
+      },
+      "parliamentDraftUrl": {
+        "xsd:anyURI": "string 10"
+      }
+    }
+  },
+  "included": [
+    {
+      "uri": "http://resource/11",
+      "type": "TaskAtCommitteeConseilEtat",
+      "attributes": {
+        "internalRestrictedByPermission": {
+          "xsd:string": [
+            "string 41"
+          ]
+        },
+        "committeeInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 42"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/12",
+      "type": "TaskAtSCL",
+      "attributes": {
+        "internalId": {
+          "xsd:integer": 38562
+        },
+        "outgoingCorrespondanceDepartureDate": {
+          "xsd:date": [
+            "2022-10-04"
+          ]
+        },
+        "referenceSCL": {
+          "xsd:string": [
+            "string 43"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/13",
+      "type": "TaskAtChambreDeputes",
+      "attributes": {
+        "rapporteurChambreDeputes": {
+          "rdfs:Resource": "string 44"
+        },
+        "rapporteurChambreDeputesLabel": {
+          "xsd:string": "string 45"
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 46"
+          ]
+        },
+        "depositDate": {
+          "xsd:date": "2022-10-04"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/14",
+      "type": "TaskAtMinistry",
+      "attributes": {
+        "internalId": {
+          "xsd:integer": 38590
+        },
+        "otherConcernedMinistry": {
+          "rdfs:Resource": [
+            "string 47",
+            "string 48"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 49"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/15",
+      "type": "TaskAtChambreDeputes",
+      "attributes": {
+        "requestSecondVoteExemption": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 50"
+        },
+        "finalVoteDate": {
+          "xsd:date": "2022-10-04"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/16",
+      "type": "TaskAtCommitteeChambreDepute",
+      "attributes": {
+        "committeeInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 51"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/52",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 53"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 54"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/17",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 55"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 56"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 57"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/52"
+      }
+    },
+    {
+      "uri": "http://resource/58",
+      "type": "Remark",
+      "attributes": {
+        "created": {
+          "xsd:dateTime": "2022-10-04T10:13:43.370Z"
+        },
+        "remarkText": {
+          "xsd:string": "string 59"
+        }
+      },
+      "references": {
+        "remarkIsRelatedTo": [
+          "http://resource/18"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/60",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 61"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 62"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/18",
+      "type": "OpinionProfessionalOrganisation",
+      "references": {
+        "hasRemark": [
+          "http://resource/58"
+        ],
+        "answerToOpinionRequest": "http://resource/60"
+      },
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 63"
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 64"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/65",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 66"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 67"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/19",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 68"
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 69"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/65"
+      }
+    },
+    {
+      "uri": "http://resource/20",
+      "type": "OpinionConseilEtat",
+      "attributes": {
+        "dateExemption2ndVote": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 70"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/71",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 72"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 73"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/21",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 74"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 75"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 76"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/71"
+      }
+    },
+    {
+      "uri": "http://resource/77",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 78"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 79"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/22",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 80"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 81"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 82"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/77"
+      }
+    },
+    {
+      "uri": "http://resource/83",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 84"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 85"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/23",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 86"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 87"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 88"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/83"
+      }
+    },
+    {
+      "uri": "http://resource/24",
+      "type": "OpinionConseilEtat",
+      "attributes": {
+        "eventType": {
+          "rdfs:Resource": "string 89"
+        },
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referenceArticleConstitutionLabel": {
+          "xsd:string": [
+            "string 90"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/25",
+      "type": "OpinionConseilEtat",
+      "attributes": {
+        "eventType": {
+          "rdfs:Resource": "string 91"
+        },
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referenceArticleConstitutionLabel": {
+          "xsd:string": [
+            "string 92"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/93",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 94"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 95"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/26",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 96"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 97"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 98"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/93"
+      }
+    },
+    {
+      "uri": "http://resource/99",
+      "type": "Remark",
+      "attributes": {
+        "created": {
+          "xsd:dateTime": "2022-10-04T10:13:43.370Z"
+        },
+        "remarkText": {
+          "xsd:string": "string 100"
+        }
+      },
+      "references": {
+        "remarkIsRelatedTo": [
+          "http://resource/27"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/101",
+      "type": "OpinionRequest",
+      "attributes": {
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 102"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/27",
+      "type": "OpinionProfessionalOrganisation",
+      "references": {
+        "hasRemark": [
+          "http://resource/99"
+        ],
+        "answerToOpinionRequest": "http://resource/101"
+      },
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 103"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 104"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/105",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 106"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 107"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/28",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 108"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 109"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 110"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/105"
+      }
+    },
+    {
+      "uri": "http://resource/111",
+      "type": "Remark",
+      "attributes": {
+        "created": {
+          "xsd:dateTime": "2022-10-04T10:13:43.370Z"
+        },
+        "remarkText": {
+          "xsd:string": "string 112"
+        }
+      },
+      "references": {
+        "remarkIsRelatedTo": [
+          "http://resource/29"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/113",
+      "type": "OpinionRequest",
+      "attributes": {
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 114"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/29",
+      "type": "OpinionProfessionalOrganisation",
+      "references": {
+        "hasRemark": [
+          "http://resource/111"
+        ],
+        "answerToOpinionRequest": "http://resource/113"
+      },
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 115"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 116"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/30",
+      "type": "OpinionConseilEtat",
+      "attributes": {
+        "eventType": {
+          "rdfs:Resource": "string 117"
+        },
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referenceArticleConstitutionLabel": {
+          "xsd:string": [
+            "string 118"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/119",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 120"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 121"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/31",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 122"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 123"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 124"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/119"
+      }
+    },
+    {
+      "uri": "http://resource/125",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 126"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 127"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/32",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 128"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 129"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 130"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/125"
+      }
+    },
+    {
+      "uri": "http://resource/33",
+      "type": "OpinionConseilEtat",
+      "attributes": {
+        "eventType": {
+          "rdfs:Resource": "string 131"
+        },
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referenceArticleConstitutionLabel": {
+          "xsd:string": [
+            "string 132"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/133",
+      "type": "Remark",
+      "attributes": {
+        "created": {
+          "xsd:dateTime": "2022-10-04T10:13:43.370Z"
+        },
+        "remarkText": {
+          "xsd:string": "string 134"
+        }
+      },
+      "references": {
+        "remarkIsRelatedTo": [
+          "http://resource/34"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/135",
+      "type": "OpinionRequest",
+      "attributes": {
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 136"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/34",
+      "type": "OpinionProfessionalOrganisation",
+      "references": {
+        "hasRemark": [
+          "http://resource/133"
+        ],
+        "answerToOpinionRequest": "http://resource/135"
+      },
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 137"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 138"
+          ]
+        }
+      }
+    },
+    {
+      "uri": "http://resource/139",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 140"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "referralLetterReference": {
+          "xsd:string": "string 141"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/35",
+      "type": "OpinionProfessionalOrganisation",
+      "attributes": {
+        "opinionDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 142"
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 143"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/139"
+      }
+    },
+    {
+      "uri": "http://resource/144",
+      "type": "OpinionRequest",
+      "attributes": {
+        "opinionRequestReceivedResponse": {
+          "xsd:boolean": [
+            true
+          ]
+        },
+        "opinionRequestTo": {
+          "rdfs:Resource": [
+            "string 145"
+          ]
+        },
+        "referralDate": {
+          "xsd:date": "2022-10-04"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/36",
+      "type": "OpinionConseilEtat",
+      "attributes": {
+        "isOpinionOf": {
+          "rdfs:Resource": "string 146"
+        },
+        "rapporteur": {
+          "rdfs:Resource": [
+            "string 147"
+          ]
+        },
+        "dueDate": {
+          "xsd:date": "2022-10-04"
+        },
+        "opinionReference": {
+          "xsd:string": [
+            "string 148"
+          ]
+        },
+        "institutionInChargeOfTheTask": {
+          "rdfs:Resource": [
+            "string 149"
+          ]
+        }
+      },
+      "references": {
+        "answerToOpinionRequest": "http://resource/144"
+      }
+    },
+    {
+      "uri": "http://resource/37",
+      "type": "Amendment",
+      "attributes": {
+        "dateIncomingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        },
+        "dateAmendment": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 150"
+        },
+        "dateIncomingConseilEtat": {
+          "xsd:date": "2022-10-04"
+        },
+        "internalId": {
+          "xsd:integer": 38586
+        },
+        "dateOutgoingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/38",
+      "type": "Amendment",
+      "attributes": {
+        "dateIncomingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        },
+        "dateAmendment": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 151"
+        },
+        "dateIncomingConseilEtat": {
+          "xsd:date": "2022-10-04"
+        },
+        "internalId": {
+          "xsd:integer": 38593
+        },
+        "dateOutgoingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/39",
+      "type": "Amendment",
+      "attributes": {
+        "dateIncomingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        },
+        "dateAmendment": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 152"
+        },
+        "dateIncomingConseilEtat": {
+          "xsd:date": "2022-10-04"
+        },
+        "internalId": {
+          "xsd:integer": 38591
+        },
+        "dateOutgoingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        }
+      }
+    },
+    {
+      "uri": "http://resource/40",
+      "type": "Amendment",
+      "attributes": {
+        "dateIncomingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        },
+        "dateAmendment": {
+          "xsd:date": "2022-10-04"
+        },
+        "eventType": {
+          "rdfs:Resource": "string 153"
+        },
+        "dateIncomingConseilEtat": {
+          "xsd:date": "2022-10-04"
+        },
+        "internalId": {
+          "xsd:integer": 38585
+        },
+        "dateOutgoingChambreDeputes": {
+          "xsd:date": "2022-10-04"
+        }
+      }
+    }
+  ],
+  "facets": {
+    "hasTransposition": false,
+    "chd_anyVote": [
+      "2004-05-13"
+    ],
+    "ce_secondVoteDate": "2004-06-08",
+    "ce_opinionDate": [
+      "2004-03-30",
+      "2003-06-03",
+      "2004-05-11",
+      "2004-01-27"
+    ],
+    "ce_dueDates": [
+      "2099-12-31"
+    ],
+    "ce_committeeInCharge": [
+      "http://data.legilux.public.lu/resource/authority/committee/CE-JUR"
+    ],
+    "hasAmendment": true,
+    "ce_secondVoteSuccess": true,
+    "chd_committeeInCharge": [
+      "http://data.legilux.public.lu/resource/authority/committee/CHD-COES"
+    ],
+    "ce_referralDate": "2002-02-14"
+  }
+}

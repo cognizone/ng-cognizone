@@ -1,0 +1,109 @@
+{
+  "name": "elastic-explorer-chrome-extension",
+  "projectType": "application",
+  "sourceRoot": "apps/elastic-explorer-chrome-extension/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/elastic-explorer-chrome-extension",
+        "index": "apps/elastic-explorer-chrome-extension/src/index.html",
+        "main": "apps/elastic-explorer-chrome-extension/src/main.ts",
+        "polyfills": "apps/elastic-explorer-chrome-extension/src/polyfills.ts",
+        "tsConfig": "apps/elastic-explorer-chrome-extension/tsconfig.app.json",
+        "assets": [
+          "apps/elastic-explorer-chrome-extension/src/favicon.ico",
+          "apps/elastic-explorer-chrome-extension/src/assets",
+          "apps/elastic-explorer-chrome-extension/src/manifest.json",
+          "apps/elastic-explorer-chrome-extension/src/background.js",
+          {
+            "glob": "**/*",
+            "input": "node_modules/monaco-editor",
+            "output": "./assets/monaco/"
+          }
+        ],
+        "styles": ["apps/elastic-explorer-chrome-extension/src/styles/main.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["apps/elastic-explorer-chrome-extension/src/styles"]
+        },
+        "scripts": [],
+        "vendorChunk": true,
+        "extractLicenses": false,
+        "buildOptimizer": false,
+        "sourceMap": true,
+        "optimization": false,
+        "namedChunks": true
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/elastic-explorer-chrome-extension/src/environments/environment.ts",
+              "with": "apps/elastic-explorer-chrome-extension/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": {
+            "scripts": true,
+            "styles": {
+              "minify": true,
+              "inlineCritical": false
+            }
+          },
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "6kb",
+              "maximumError": "10kb"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": ""
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "elastic-explorer-chrome-extension:build"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "elastic-explorer-chrome-extension:build:production"
+        }
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "elastic-explorer-chrome-extension:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/elastic-explorer-chrome-extension/src/**/*.ts", "apps/elastic-explorer-chrome-extension/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/elastic-explorer-chrome-extension"],
+      "options": {
+        "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

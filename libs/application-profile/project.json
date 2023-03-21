@@ -1,0 +1,33 @@
+{
+  "name": "application-profile",
+  "sourceRoot": "libs/application-profile/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/application-profile",
+        "main": "libs/application-profile/src/index.ts",
+        "tsConfig": "libs/application-profile/tsconfig.lib.json",
+        "assets": ["libs/application-profile/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/application-profile/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/application-profile"],
+      "options": {
+        "jestConfig": "libs/application-profile/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

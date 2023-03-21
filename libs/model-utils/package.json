@@ -1,12 +1,12 @@
 {
   "name": "@cognizone/model-utils",
-  "version": "2.7.7",
+  "version": "3.0.0-beta.49",
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "rxjs": "^6.5.0",
-    "typescript": ">=3.7.0 <5"
+    "typescript": ">=3.7.0 <5",
+    "rxjs": "^6.6.3 || ^7.0.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
@@ -15,6 +15,7 @@
     "url": "https://github.com/cognizone/ng-cognizone.git",
     "directory": "libs/model-utils"
   },
+  "type": "commonjs",
   "contributors": [
     {
       "name": "William Chelman",

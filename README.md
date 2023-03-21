@@ -53,7 +53,7 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
 Libraries are shareable across libraries and applications. They can be imported from `@cognizone/mylib`.
 
-`nx generate library <LIB_NAME> --buildable --publishable --importPath="@cognizone/<LIB_NAME>"`
+`nx generate @nrwl/angular:library <LIB_NAME> --buildable --publishable --importPath="@cognizone/<LIB_NAME>"`
 
 ## Developing in an external app
 
@@ -121,3 +121,10 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+## Migrating from v2 to v3
+
+- JsonModel and related types, services and utilities have been moved to @cognizone/json-model, so this library need to be added and imports need to be adapted
+- `JsonModel::@context` is now typed as `TypedResourceContext`, which is completely different from the previous typing. If ever you were using `rootUri` or `isNew`, you will need to find another way to get that info.
+- `RootUriDirective::apName` has been removed and doesn't need to be set anymore. This is because GraphService::setGraph was already taking apName/definition as argument, and so it was redundant to duplicate this information in this directive.
+- `RootUriDirective::getWrapper` has been deprecated. Instead, it's advised to inject `UrisStoreService` instead which has the same method and functionalities.

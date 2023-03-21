@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl } from '@angular/forms';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 /**
@@ -24,9 +24,9 @@ export class ListPaginatorComponent extends OnDestroy$ implements OnInit, OnChan
    *  Property determines how many items should be displayed per page
    */
   sizes: number[] = [10, 25, 50, 100];
-  sizeControl: FormControl = this.fb.control(null);
+  sizeControl: UntypedFormControl = this.fb.control(null);
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     super();
   }
 

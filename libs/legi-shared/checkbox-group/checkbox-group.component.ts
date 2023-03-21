@@ -11,7 +11,7 @@ import {
   SimpleChanges,
   TemplateRef,
 } from '@angular/core';
-import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { I18nService } from '@cognizone/i18n';
@@ -91,8 +91,8 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   selectedOption?: SelectOption<T>;
   selectedOptionIndex = -1;
 
-  embeddedControl: FormControl = new FormControl();
-  searchControl: FormControl = new FormControl();
+  embeddedControl: UntypedFormControl = new UntypedFormControl();
+  searchControl: UntypedFormControl = new UntypedFormControl();
   trackBySelectOption: typeof trackBySelectOption = trackBySelectOption;
   optionsGroups: SelectOptionGroup<T>[] = [];
 

@@ -1,0 +1,103 @@
+{
+  "rootUri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
+  "context": {
+    "base": "http://example.org/",
+    "prefix": {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+  },
+  "facets": {
+    "someTitle": "I love titles"
+  },
+  "models": {
+    "https://fedlex.data.admin.ch/treatyProcess/9999/5414": {
+      "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
+      "@type": "TreatyProcess",
+      "confidentialTreaty": false,
+      "bilateral": false,
+      "treatyComment": ["This is a comment"],
+      "treatySignatureDate": "2017-11-22T00:00:00.000Z",
+      "treatySignaturePlace": "Strasbourg",
+      "titleTreaty": {
+        "de": ["Protokoll"],
+        "en": ["Protocol"],
+        "it": ["Protocollo"],
+        "fr": ["Protocole"]
+      },
+      "treatyProcessHasResultingTreatyDocument": [
+        "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/1",
+        "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/2"
+      ],
+      "treatyAppliesEULegalResource": [
+        "http://publications.europa.eu/resource/cellar/d67cf7eb-de13-4bcb-9959-0dc0107e102e",
+        "http://publications.europa.eu/resource/cellar/87245951-547e-11ea-aece-01aa75ed71a1"
+      ],
+      "producedIn": ["new-model-uri-initiation-1-1583078160543"]
+    },
+    "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/1": {
+      "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/1",
+      "@type": "TreatyDocument"
+    },
+    "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/2": {
+      "@id": "https://fedlex.data.admin.ch/treatyProcess/9999/5414/document/2",
+      "@type": "TreatyDocument"
+    },
+    "http://publications.europa.eu/resource/cellar/d67cf7eb-de13-4bcb-9959-0dc0107e102e": {
+      "@id": "http://publications.europa.eu/resource/cellar/d67cf7eb-de13-4bcb-9959-0dc0107e102e",
+      "@type": "EULegalResource"
+    },
+    "http://publications.europa.eu/resource/cellar/87245951-547e-11ea-aece-01aa75ed71a1": {
+      "@id": "http://publications.europa.eu/resource/cellar/87245951-547e-11ea-aece-01aa75ed71a1",
+      "@type": "EULegalResource"
+    },
+    "new-model-uri-internationalactor-0-1583078160540": {
+      "@id": "new-model-uri-internationalactor-0-1583078160540",
+      "@type": "InternationalActor",
+      "partyOrganisationOfTreaty": ["new-model-uri-treatyprocess-2-1583078162434"]
+    },
+    "new-model-uri-initiation-1-1583078160543": {
+      "@id": "new-model-uri-initiation-1-1583078160543",
+      "@type": "Initiation",
+      "eventHasRemark": [],
+      "factor": "new-model-uri-internationalactor-0-1583078160540"
+    },
+    "new-model-uri-treatyprocess-2-1583078162434": {
+      "@id": "new-model-uri-treatyprocess-2-1583078162434",
+      "@type": "TreatyProcess",
+      "treatyProcessHasResultingTreatyDocument": [],
+      "treatyLegalResourceForOtherParty": "new-model-uri-eulegalresource-4-1583078162435",
+      "treatyCommentAboutValidity": [],
+      "treatySubject": [],
+      "treatyLimitDateForSignature": [],
+      "institutionInChargeOfTheTreatyLevel2": [],
+      "treatyComment": [],
+      "treatyHasRatificationRestriction": [],
+      "treatyNotificationPublishedInLabel": [],
+      "treatyProcessHasTask": [],
+      "treatyDescription": [],
+      "treatyHasEntryIntoForceScope": [],
+      "treatyNotificationPublishedIn": [],
+      "committeeCreationBasedOn": [],
+      "treatyBasedOnTreaty": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
+      "treatyLimitDateForSignatureComment": [],
+      "treatyType": "https://fedlex.data.admin.ch/vocabulary/treaty-type/2",
+      "treatyPartyCountry": [],
+      "titleTreaty": { "fr": ["a"], "de": [""], "it": [""] },
+      "treatyPartyOrganisation": "new-model-uri-internationalactor-0-1583078160540",
+      "treatyAppliesEULegalResource": [],
+      "treatyRelatedLegalResource": [],
+      "producedIn": [],
+      "hasRemark": []
+    },
+    "https://fedlex.data.admin.ch/vocabulary/treaty-type/2": {
+      "@id": "https://fedlex.data.admin.ch/vocabulary/treaty-type/2",
+      "@type": "TreatyType"
+    },
+    "new-model-uri-eulegalresource-4-1583078162435": {
+      "@id": "new-model-uri-eulegalresource-4-1583078162435",
+      "@type": "EULegalResource"
+    }
+  }
+}

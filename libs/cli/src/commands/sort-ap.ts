@@ -1,5 +1,5 @@
-import { Command, flags as oFlags } from '@oclif/command';
-import * as Parser from '@oclif/parser';
+import { Command, Flags } from '@oclif/core';
+
 import { JsonService } from '../services';
 
 export default class SortAp extends Command {
@@ -7,11 +7,11 @@ export default class SortAp extends Command {
 
   static examples: string[] = [`$ cz-cli create-ng-library`];
 
-  static flags: oFlags.Input<{ help: void }> = {
-    help: oFlags.help({ char: 'h' }),
+  static flags = {
+    help: Flags.help({ char: 'h' }),
   };
 
-  static args: Parser.args.IArg[] = [
+  static args = [
     {
       name: 'path',
       description: 'path to the raw application profile json file',
@@ -20,7 +20,7 @@ export default class SortAp extends Command {
   ];
 
   async run(): Promise<void> {
-    const { args } = this.parse(SortAp);
+    const { args } = await this.parse(SortAp);
     const { path } = args;
     let ap = JsonService.readJsonSync(path) as any;
     ap = this.getSortedObject(ap, ['uri', 'imports'], 'uri');

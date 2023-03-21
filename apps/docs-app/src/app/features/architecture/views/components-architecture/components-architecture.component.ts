@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-components-architecture',
@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 export class ComponentsArchitectureComponent {
   lastUpdate: Date = new Date('2019-11-25');
 
-  numberControl: FormControl = new FormControl(2);
+  numberControl: UntypedFormControl = new UntypedFormControl(2);
 
   showIntervalComponent = false;
 

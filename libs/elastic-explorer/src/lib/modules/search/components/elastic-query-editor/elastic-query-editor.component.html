@@ -1,4 +1,4 @@
 <div class="editor-container">
-  <ngx-monaco-editor class="code-editor" [options]="editorOptions" [formControl]="code"></ngx-monaco-editor>
+  <ngx-monaco-editor class="code-editor" [options]="editorOptions" [formControl]="code" (onInit)="onInitEditor($event)"></ngx-monaco-editor>
 </div>
 <button mat-flat-button color="primary" class="run-button" (click)="runQuery()">run query</button>

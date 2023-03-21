@@ -1,9 +1,10 @@
 {
   "name": "@cognizone/transloco-langstring",
-  "version": "2.7.7",
+  "version": "3.0.0-beta.49",
   "peerDependencies": {
-    "@angular/core": ">=11.0.0",
-    "@cognizone/model-utils": ">=2.0.0",
+    "@angular/core": ">=14.0.0",
+    "@angular/platform-browser-dynamic": ">=14.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
     "@ngneat/transloco": "^2.22.0"
   },
   "dependencies": {

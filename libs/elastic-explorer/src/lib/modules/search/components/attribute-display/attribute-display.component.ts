@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { isJsonModel } from '@cognizone/ng-application-profile';
+import { isJsonModel } from '@cognizone/json-model';
 
 @Component({
   selector: 'cz-attribute-display',

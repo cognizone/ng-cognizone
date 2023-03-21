@@ -1,0 +1,131 @@
+{
+  "data": {
+    "uri": "http://resource/my-domain/1",
+    "type": [
+      "EUDossier",
+      "Event"
+    ],
+    "attributes": {
+      "identifier": {
+        "xsd:string": [
+          "string-5"
+        ]
+      },
+      "eventRiskLevel": {
+        "rdfs:Resource": [
+          "http://resource/my-domain/6"
+        ]
+      },
+      "title": {
+        "rdf:langString": {
+          "en": [
+            "en label7"
+          ]
+        }
+      }
+    },
+    "references": {
+      "initiatedByActPreparatory": [
+        "http://resource/my-domain/2"
+      ],
+      "initiatesTransposition": "http://resource/my-domain/3",
+      "isAboutConceptTypeDossier": [
+        "http://resource/my-domain/4"
+      ]
+    }
+  },
+  "included": [
+    {
+      "uri": "http://resource/my-domain/2",
+      "type": [
+        "EUPreparatoryAct",
+        "Work"
+      ],
+      "attributes": {
+        "dateDocument": {
+          "xsd:date": [
+            "2022-02-01"
+          ]
+        },
+        "preparatoryActCelexId": {
+          "xsd:string": [
+            "string-9"
+          ]
+        },
+        "preparatoryActReference": {
+          "xsd:string": [
+            "string-10",
+            "string-11",
+            "string-12",
+            "string-13"
+          ]
+        },
+        "title": {
+          "rdf:langString": {
+            "en": [
+              "en label14"
+            ]
+          }
+        }
+      },
+      "references": {
+        "responsibilityOfEUInstitution": [
+          "http://resource/my-domain/8"
+        ]
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/8",
+      "type": [
+        "Concept",
+        "EULegalInstitution"
+      ]
+    },
+    {
+      "uri": "http://resource/my-domain/3",
+      "type": [
+        "Event",
+        "Transposition"
+      ],
+      "references": {
+        "hasTranspositionAction": [
+          "http://resource/my-domain/15"
+        ]
+      },
+      "attributes": {
+        "transpositionRequestedCorrespondenceTable": {
+          "xsd:boolean": false
+        }
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/15",
+      "type": [
+        "Event",
+        "TranspositionAction"
+      ],
+      "attributes": {
+        "created": {
+          "xsd:dateTime": "2022-02-01T16:04:01.159Z"
+        }
+      },
+      "references": {
+        "transpositionActionType": "http://resource/my-domain/16"
+      }
+    },
+    {
+      "uri": "http://resource/my-domain/16",
+      "type": [
+        "Concept",
+        "TranspositionActionType"
+      ]
+    },
+    {
+      "uri": "http://resource/my-domain/4",
+      "type": [
+        "Concept",
+        "EUDossierType"
+      ]
+    }
+  ]
+}

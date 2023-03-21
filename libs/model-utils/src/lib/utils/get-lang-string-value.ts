@@ -1,5 +1,5 @@
-import { manyToOne } from './many-to-one';
 import { Nil, LangString, LangStringSimple } from '../models';
+import { manyToOne } from './many-to-one';
 
 /**
  * Extract from a {@link LangString} the label in a corresponding `lang`. If not

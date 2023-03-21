@@ -1,5 +1,5 @@
 import { LangString } from '@cognizone/model-utils';
-import { JsonModel, JsonModelType } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelType } from '@cognizone/json-model';
 
 import { ConceptScheme } from './concept-scheme';
 

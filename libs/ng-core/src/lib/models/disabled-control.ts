@@ -1,6 +1,6 @@
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
-export class DisabledControl extends FormControl {
+export class DisabledControl extends UntypedFormControl {
   constructor() {
     super();
     this.disable();

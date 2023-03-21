@@ -80,7 +80,7 @@ export class ElasticClient {
 
   searchAfterCrawl<T>({ baseUrl, index, body }: SearchOptions): CrawlResponse<T> {
     body = { ...body, from: undefined, size: 1000, sort: ['_doc'] };
-    let searchAfter: unknown[] | undefined = undefined;
+    let searchAfter: unknown[] | undefined;
 
     const control$ = new Subject<void>();
     const response$ = control$.asObservable().pipe(

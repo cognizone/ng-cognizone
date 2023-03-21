@@ -1,0 +1,16 @@
+{
+  "name": "cli",
+  "projectType": "library",
+  "sourceRoot": "libs/cli/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "./tools/executors/build-cli:build-cli",
+      "options": {
+        "root": "libs/cli",
+        "dist": "libs/cli/dist"
+      }
+    }
+  },
+  "tags": []
+}

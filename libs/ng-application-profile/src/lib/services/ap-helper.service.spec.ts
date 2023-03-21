@@ -1,14 +1,16 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { ApplicationProfile, EMPTY_APPLICATION_PROFILE } from '@cognizone/application-profile';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 
 import { ApHelper } from './ap-helper.service';
+import { ApService } from './ap.service';
 
-// tslint:disable: no-require-imports no-var-requires
 const directiveAp: ApplicationProfile = require('../../test/directive-ap.json');
 
 describe('ApHelper', () => {
   let spectator: SpectatorService<ApHelper>;
-  const createService = createServiceFactory(ApHelper);
+  const createService = createServiceFactory({ service: ApHelper, mocks: [ApService] });
 
   beforeEach(() => (spectator = createService()));
 

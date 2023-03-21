@@ -1,8 +1,15 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/directive-class-suffix */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ChangeDetectorRef, Directive, Input, OnInit, Optional } from '@angular/core';
-import { AbstractControl, ControlContainer, ControlValueAccessor, FormControl, FormGroupDirective, FormGroupName } from '@angular/forms';
+import { ChangeDetectorRef, Directive, Input, OnDestroy, OnInit, Optional } from '@angular/core';
+import {
+  AbstractControl,
+  ControlContainer,
+  ControlValueAccessor,
+  UntypedFormControl,
+  FormGroupDirective,
+  FormGroupName,
+} from '@angular/forms';
 import { merge, noop, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 
@@ -15,7 +22,7 @@ import { Maybe } from '../types/maybe';
  * @deprecated you should implement ControlValueAccessor yourself, this was not a great idea in the end
  */
 @Directive({})
-export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestroy$ implements OnInit, ControlValueAccessor {
+export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestroy$ implements OnInit, OnDestroy, ControlValueAccessor {
   @Input()
   required?: boolean;
 
@@ -71,15 +78,19 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   }
 
   ngOnInit(): void {
-    this.controlChanged.pipe(takeUntil(this.onDestroy$)).subscribe(() => {
+    this.subSink = this.controlChanged.subscribe(() => {
       this.onModelChange = noop;
       this.onModelTouched = noop;
     });
-    this.onDestroy$.subscribe(() => this.controlChanged.complete());
     this.bindEmbeddedControl();
     if (!this.name) this.computeName();
     this.logger = this.name ? this.logger.extend(this.name) : this.logger;
     this.computeRequired();
+  }
+
+  ngOnDestroy(): void {
+    super.ngOnDestroy();
+    this.controlChanged.complete();
   }
 
   writeValue(value: MODEL): void {
@@ -107,6 +118,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
       if (isDisabled) this.embeddedControl.disable();
       else this.embeddedControl.enable();
     }
+    this.cdr.markForCheck();
   }
 
   setModelAndEmit(value: MODEL): void {
@@ -117,11 +129,11 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   }
 
   protected valueToEmbeddedValue(value: MODEL): EMBEDDED {
-    return (value as unknown) as EMBEDDED;
+    return value as unknown as EMBEDDED;
   }
 
   protected embeddedValueToValue(value: EMBEDDED): MODEL {
-    return (value as unknown) as MODEL;
+    return value as unknown as MODEL;
   }
 
   // depending on life-cycle of the component, those methods might not be attached yet
@@ -152,8 +164,8 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
     } else if (this.formControl) {
       control = this.formControl;
     }
-    if (!control || !control.validator) return;
-    const errors = control.validator(new FormControl());
+    if (!control?.validator) return;
+    const errors = control.validator(new UntypedFormControl());
     if (errors?.required) this.required = true;
   }
 

@@ -73,7 +73,7 @@ export function getConcreteTypeFromSubClassOfRules(ap: ApplicationProfile, class
     const typeProfile = ap.types[classId];
     if (!typeProfile) {
       console.warn(`Failed to find class '${classId}' in AP while searching for concrete type in [${classIds.join(', ')}], skipping`);
-      return false;
+      return;
     }
     const subClassOfRule = typeProfile.rules.find(isSubClassOfRule);
     if (!subClassOfRule) return;

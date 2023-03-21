@@ -1,0 +1,39 @@
+{
+  "name": "ng-core",
+  "projectType": "library",
+  "sourceRoot": "libs/ng-core/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/ng-core/tsconfig.lib.json",
+        "project": "libs/ng-core/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/ng-core/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/ng-core/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ng-core/src/**/*.ts", "libs/ng-core/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ng-core"],
+      "options": {
+        "jestConfig": "libs/ng-core/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

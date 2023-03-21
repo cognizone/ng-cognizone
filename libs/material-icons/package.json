@@ -1,13 +1,10 @@
 {
   "name": "@cognizone/material-icons",
-  "version": "2.7.7",
+  "version": "3.0.0-beta.49",
   "peerDependencies": {
-    "@angular/common": ">=11.0.0",
-    "@angular/core": ">=11.0.0",
-    "@angular/material": ">=11.0.0",
-    "@angular/platform-browser": ">=11.0.0",
-    "@cognizone/ng-core": ">=2.0.0",
-    "@material-icons/svg": "^1.0.4"
+    "@cognizone/ng-core": ">=3.0.0",
+    "@angular/material": ">=14.0.0",
+    "@angular/platform-browser": ">=14.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

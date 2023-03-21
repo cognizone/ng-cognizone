@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import {
   awaitForCompletable,
   GetSelectOptionsParams,
@@ -13,6 +14,13 @@ import { Concept } from '../models/concept';
 import { areConcepts, ConceptGroup, groupConcepts } from '../models/cv';
 
 import { CvProvider } from './cv-provider';
+
+@Injectable({ providedIn: 'root' })
+export class CvSelectOptionsProviderFactory {
+  create(cvProvider: CvProvider): SelectOptionsProvider<string> {
+    return new CvSelectOptionsProvider(cvProvider);
+  }
+}
 
 export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
   constructor(private cvProvider: CvProvider) {}
@@ -38,7 +46,7 @@ export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
     return this.cvProvider.hasConcept(value);
   }
 
-  private async toSelectOptionGroups(groups: ConceptGroup[]): Promise<SelectOptionGroup[]> {
+  protected async toSelectOptionGroups(groups: ConceptGroup[]): Promise<SelectOptionGroup[]> {
     const optionGroups: SelectOptionGroup[] = [];
     for (const group of groups) {
       optionGroups.push(await this.toSelectOptionGroup(group));
@@ -47,14 +55,14 @@ export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
     return optionGroups;
   }
 
-  private async toSelectOptionGroup(group: ConceptGroup): Promise<SelectOptionGroup> {
+  protected async toSelectOptionGroup(group: ConceptGroup): Promise<SelectOptionGroup> {
     return {
       label: group.label,
       options: await this.toSelectOptions(group.concepts),
     };
   }
 
-  private async toSelectOptions(concepts: Concept[]): Promise<SelectOption[]> {
+  protected async toSelectOptions(concepts: Concept[]): Promise<SelectOption[]> {
     const options: SelectOption[] = [];
     for (const concept of concepts) {
       options.push(await this.toSelectOption(concept));
@@ -63,7 +71,7 @@ export class CvSelectOptionsProvider implements SelectOptionsProvider<string> {
     return options;
   }
 
-  private async toSelectOption(concept: Concept): Promise<SelectOption> {
+  protected async toSelectOption(concept: Concept): Promise<SelectOption> {
     const value = concept['@id'];
     const label = await awaitForCompletable(this.cvProvider.getLabel(concept));
 

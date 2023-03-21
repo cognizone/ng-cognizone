@@ -1,0 +1,36 @@
+{
+  "name": "material-icons",
+  "projectType": "library",
+  "sourceRoot": "libs/material-icons/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/material-icons/tsconfig.lib.json",
+        "project": "libs/material-icons/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/material-icons/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/material-icons/src/**/*.ts", "libs/material-icons/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/material-icons"],
+      "options": {
+        "jestConfig": "libs/material-icons/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Completable, ElasticSearchResponse, extractOneSourceFromElasticResponse, Nil } from '@cognizone/model-utils';
-import { JsonModel, ResourceGraphRaw, ResourceGraphService } from '@cognizone/ng-application-profile';
+import { JsonModel, ResourceGraphService } from '@cognizone/json-model';
+import { Completable, ElasticSearchResponse, extractOneSourceFromElasticResponse, Nil, TypedResourceGraph } from '@cognizone/model-utils';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Collection } from '../models/collection';
 import { Concept } from '../models/concept';
 import { ConceptScheme } from '../models/concept-scheme';
-
 import { ATOMIC_CV_CLIENT_TOKEN, AtomicCvClient } from './atomic-cv-client.service';
 import { LegiCvOptionsService } from './legi-cv-options.service';
 
@@ -62,7 +61,7 @@ export class ElasticAtomicCvClientService implements AtomicCvClient {
 
   protected searchOneInElastic<T extends JsonModel>(query: {}): Observable<Nil<T>> {
     const options = this.optionsService.options.elasticAtomicCvClientOptions;
-    return this.http.post<ElasticSearchResponse<ResourceGraphRaw>>(this.getSearchUrl(), query).pipe(
+    return this.http.post<ElasticSearchResponse<TypedResourceGraph>>(this.getSearchUrl(), query).pipe(
       map(extractOneSourceFromElasticResponse),
       map(response => {
         if (!response) return null;

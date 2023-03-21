@@ -1,0 +1,536 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResourceGraphService should serialize treaty and remove unknown attribute 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "treatyComment": Object {
+        "xsd:string": Array [],
+      },
+      "treatyCommentAboutValidity": Object {
+        "xsd:string": Array [],
+      },
+      "treatyLimitDateForSignature": Object {
+        "xsd:date": Array [],
+      },
+      "treatyLimitDateForSignatureComment": Object {
+        "xsd:string": Array [],
+      },
+      "treatyNotificationPublishedIn": Object {
+        "rdfs:Resource": Array [],
+      },
+      "treatyNotificationPublishedInLabel": Object {
+        "xsd:string": Array [],
+      },
+    },
+    "references": Object {
+      "treatyAppliesEULegalResource": Array [
+        "http://publications.europa.eu/resource/cellar/d67cf7eb-de13-4bcb-9959-0dc0107e102e",
+      ],
+    },
+    "type": "TreatyProcess",
+    "uri": "https://fedlex.data.admin.ch/treatyProcess/9999/5414",
+  },
+  "included": Array [
+    Object {
+      "type": "EULegalResource",
+      "uri": "http://publications.europa.eu/resource/cellar/d67cf7eb-de13-4bcb-9959-0dc0107e102e",
+    },
+  ],
+}
+`;
+
+exports[`ResourceGraphService should serialize treaty process 1 1`] = `
+Object {
+  "context": Object {
+    "base": "http://example.org/",
+    "prefix": Object {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+    },
+  },
+  "data": Object {
+    "attributes": Object {
+      "bilateral": Object {
+        "xsd:boolean": true,
+      },
+      "confidentialTreaty": Object {
+        "xsd:boolean": false,
+      },
+      "treatyComment": Object {
+        "xsd:string": Array [],
+      },
+      "treatyCommentAboutValidity": Object {
+        "xsd:string": Array [],
+      },
+      "treatyNotificationPublishedIn": Object {
+        "rdfs:Resource": Array [],
+      },
+      "treatyNotificationPublishedInLabel": Object {
+        "xsd:string": Array [],
+      },
+      "treatyProcessIdentificationInCms": Object {
+        "xsd:string": Array [],
+      },
+    },
+    "references": Object {
+      "treatyProcessHasResultingTreatyDocument": Array [
+        "http://resource/TreatyDocument/3-1591712645034",
+        "http://resource/TreatyDocument/8-1591712649311",
+      ],
+      "treatyProcessHasTask": Array [
+        "http://resource/TreatySignature/1-1591712631407",
+        "http://resource/EntryIntoForce/2-1591712631410",
+      ],
+      "treatyType": "http://resource/my-domain/1",
+    },
+    "type": "TreatyProcess",
+    "uri": "http://resource/TreatyProcess/0-1591712631312",
+  },
+  "facets": Object {
+    "someTitle": "I love titles",
+  },
+  "included": Array [
+    Object {
+      "references": Object {
+        "typeDocument": "https://fedlex.data.admin.ch/vocabulary/resource-type/31",
+      },
+      "type": "TreatyDocument",
+      "uri": "http://resource/TreatyDocument/3-1591712645034",
+    },
+    Object {
+      "type": "ResourceType",
+      "uri": "https://fedlex.data.admin.ch/vocabulary/resource-type/31",
+    },
+    Object {
+      "references": Object {
+        "isRealizedBy": Array [
+          "http://resource/Expression/7-1591712649311",
+        ],
+      },
+      "type": "TreatyDocument",
+      "uri": "http://resource/TreatyDocument/8-1591712649311",
+    },
+    Object {
+      "attributes": Object {
+        "title": Object {
+          "xsd:string": "there-it-is.gif",
+        },
+      },
+      "references": Object {
+        "isEmbodiedBy": Array [
+          "http://resource/Manifestation/6-1591712649311",
+        ],
+      },
+      "type": "Expression",
+      "uri": "http://resource/Expression/7-1591712649311",
+    },
+    Object {
+      "attributes": Object {
+        "fileName": Object {
+          "xsd:string": "there-it-is.gif",
+        },
+        "isExemplifiedBy": Object {
+          "rdfs:Resource": "http://resource/Resource/5-1591712649311",
+        },
+        "uploadBy": Object {
+          "xsd:string": "John Doe",
+        },
+      },
+      "references": Object {
+        "uploadDate": "2020-06-09T14:24:09.311Z",
+      },
+      "type": "Manifestation",
+      "uri": "http://resource/Manifestation/6-1591712649311",
+    },
+    Object {
+      "attributes": Object {
+        "languageLabel": Object {
+          "xsd:string": Array [],
+        },
+        "treatyComment": Object {
+          "xsd:string": Array [],
+        },
+      },
+      "type": "TreatySignature",
+      "uri": "http://resource/TreatySignature/1-1591712631407",
+    },
+    Object {
+      "type": "EntryIntoForce",
+      "uri": "http://resource/EntryIntoForce/2-1591712631410",
+    },
+    Object {
+      "type": "TreatyType",
+      "uri": "http://resource/my-domain/1",
+    },
+  ],
+}
+`;
+
+exports[`ResourceGraphService should transform ResourceGraph 1 to JsonModel 1`] = `
+Object {
+  "@facets": Object {
+    "some": "thing",
+  },
+  "@id": "http://resource/my-domain/1",
+  "@type": "Concept",
+  "created": Array [
+    2022-02-01T15:55:23.473Z,
+  ],
+  "definition": Object {
+    "en": Array [
+      "en label5",
+    ],
+  },
+  "inScheme": Array [
+    Object {
+      "@id": "http://resource/my-domain/2",
+      "@type": "ConceptScheme",
+    },
+  ],
+  "prefLabel": Object {
+    "en": Array [
+      "en label4",
+    ],
+  },
+  "status": Array [
+    Object {
+      "@id": "http://resource/my-domain/3",
+      "@type": "Concept",
+      "authorityCode": Array [
+        "string-9",
+      ],
+      "identifier": Array [
+        "string-7",
+      ],
+      "inScheme": Array [
+        Object {
+          "@id": "http://resource/my-domain/6",
+          "@type": "ConceptScheme",
+        },
+      ],
+      "opCode": Array [
+        "string-11",
+      ],
+      "prefLabel": Object {
+        "en": Array [
+          "en label8",
+        ],
+      },
+      "startUse": Array [
+        "string-10",
+      ],
+    },
+  ],
+  "topConceptOf": Array [
+    Object {
+      "@id": "http://resource/my-domain/2",
+      "@type": "ConceptScheme",
+    },
+  ],
+}
+`;
+
+exports[`ResourceGraphService should transform ResourceGraph 2 to JsonModel 1`] = `
+Object {
+  "@id": "http://resource/my-domain/1",
+  "@type": Array [
+    "EUDossier",
+    "Event",
+  ],
+  "eventRiskLevel": Array [
+    "http://resource/my-domain/6",
+  ],
+  "identifier": Array [
+    "string-5",
+  ],
+  "initiatedByActPreparatory": Array [
+    Object {
+      "@id": "http://resource/my-domain/2",
+      "@type": Array [
+        "EUPreparatoryAct",
+        "Work",
+      ],
+      "dateDocument": Array [
+        2022-02-01T00:00:00.000Z,
+      ],
+      "preparatoryActCelexId": Array [
+        "string-9",
+      ],
+      "preparatoryActReference": Array [
+        "string-10",
+        "string-11",
+        "string-12",
+        "string-13",
+      ],
+      "responsibilityOfEUInstitution": Array [
+        Object {
+          "@id": "http://resource/my-domain/8",
+          "@type": Array [
+            "Concept",
+            "EULegalInstitution",
+          ],
+        },
+      ],
+      "title": Object {
+        "en": Array [
+          "en label14",
+        ],
+      },
+    },
+  ],
+  "initiatesTransposition": Object {
+    "@id": "http://resource/my-domain/3",
+    "@type": Array [
+      "Event",
+      "Transposition",
+    ],
+    "hasTranspositionAction": Array [
+      Object {
+        "@id": "http://resource/my-domain/15",
+        "@type": Array [
+          "Event",
+          "TranspositionAction",
+        ],
+        "created": 2022-02-01T16:04:01.159Z,
+        "transpositionActionType": Object {
+          "@id": "http://resource/my-domain/16",
+          "@type": Array [
+            "Concept",
+            "TranspositionActionType",
+          ],
+        },
+      },
+    ],
+    "transpositionRequestedCorrespondenceTable": false,
+  },
+  "isAboutConceptTypeDossier": Array [
+    Object {
+      "@id": "http://resource/my-domain/4",
+      "@type": Array [
+        "Concept",
+        "EUDossierType",
+      ],
+    },
+  ],
+  "title": Object {
+    "en": Array [
+      "en label7",
+    ],
+  },
+}
+`;
+
+exports[`ResourceGraphService should transform ResourceGraph 3 to JsonModel 1`] = `
+Object {
+  "@id": "http://resource/my-domain/1",
+  "@type": Array [
+    "EUDossier",
+    "Event",
+  ],
+  "identifier": Array [
+    "string-5",
+  ],
+  "initiatedByActPreparatory": Array [
+    Object {
+      "@id": "http://resource/my-domain/2",
+      "@type": Array [
+        "EUPreparatoryAct",
+        "Work",
+      ],
+      "dateDocument": Array [
+        2022-02-01T00:00:00.000Z,
+      ],
+      "preparatoryActCelexId": Array [
+        "string-15",
+      ],
+      "preparatoryActReference": Array [
+        "string-16",
+        "string-17",
+        "string-18",
+      ],
+      "preparatoryActSubject": Array [
+        Object {
+          "@id": "http://resource/my-domain/7",
+          "@type": "Concept",
+        },
+        Object {
+          "@id": "http://resource/my-domain/8",
+          "@type": "Concept",
+        },
+        Object {
+          "@id": "http://resource/my-domain/9",
+          "@type": "Concept",
+        },
+        Object {
+          "@id": "http://resource/my-domain/10",
+          "@type": "Concept",
+        },
+        Object {
+          "@id": "http://resource/my-domain/11",
+          "@type": "Concept",
+        },
+        Object {
+          "@id": "http://resource/my-domain/12",
+          "@type": "Concept",
+        },
+        Object {
+          "@id": "http://resource/my-domain/13",
+          "@type": "Concept",
+        },
+      ],
+      "responsibilityOfEUInstitution": Array [
+        Object {
+          "@id": "http://resource/my-domain/14",
+          "@type": Array [
+            "Concept",
+            "EULegalInstitution",
+          ],
+        },
+      ],
+      "title": Object {
+        "en": Array [
+          "en label19",
+        ],
+      },
+    },
+  ],
+  "initiatesTransposition": Object {
+    "@id": "http://resource/my-domain/3",
+    "@type": Array [
+      "Event",
+      "Transposition",
+    ],
+    "hasTranspositionAction": Array [
+      Object {
+        "@id": "http://resource/my-domain/20",
+        "@type": Array [
+          "Event",
+          "TranspositionAction",
+        ],
+        "created": 2022-02-01T15:56:07.288Z,
+        "transpositionActionType": Object {
+          "@id": "http://resource/my-domain/21",
+          "@type": Array [
+            "Concept",
+            "TranspositionActionType",
+          ],
+        },
+      },
+    ],
+    "transpositionRequestedCorrespondenceTable": false,
+  },
+  "isAboutConceptTypeDossier": Array [
+    Object {
+      "@id": "http://resource/my-domain/4",
+      "@type": Array [
+        "Concept",
+        "EUDossierType",
+      ],
+    },
+  ],
+  "title": Object {
+    "en": Array [
+      "en label6",
+    ],
+  },
+}
+`;
+
+exports[`ResourceGraphService should transform ResourceGraph 4 to JsonModel 1`] = `
+Object {
+  "@id": "http://resource/my-domain/1",
+  "@type": Array [
+    "Act",
+    "Work",
+  ],
+  "dateDocument": Array [
+    2022-02-01T00:00:00.000Z,
+  ],
+  "dateEntryInForce": Array [
+    2022-02-01T00:00:00.000Z,
+  ],
+  "isRealizedBy": Array [
+    Object {
+      "@id": "http://resource/my-domain/2",
+      "@type": "Expression",
+      "isEmbodiedBy": Array [
+        Object {
+          "@id": "http://resource/my-domain/5",
+          "@type": "Manifestation",
+          "isExemplifiedBy": Array [
+            "http://resource/my-domain/11",
+          ],
+        },
+        Object {
+          "@id": "http://resource/my-domain/6",
+          "@type": "Manifestation",
+          "isExemplifiedBy": Array [
+            "http://resource/my-domain/12",
+          ],
+        },
+      ],
+    },
+    Object {
+      "@id": "http://resource/my-domain/3",
+      "@type": "Expression",
+      "isEmbodiedBy": Array [
+        Object {
+          "@id": "http://resource/my-domain/7",
+          "@type": "Manifestation",
+          "isExemplifiedBy": Array [
+            "http://resource/my-domain/13",
+          ],
+        },
+        Object {
+          "@id": "http://resource/my-domain/8",
+          "@type": "Manifestation",
+          "isExemplifiedBy": Array [
+            "http://resource/my-domain/14",
+          ],
+        },
+      ],
+    },
+    Object {
+      "@id": "http://resource/my-domain/4",
+      "@type": "Expression",
+      "isEmbodiedBy": Array [
+        Object {
+          "@id": "http://resource/my-domain/9",
+          "@type": "Manifestation",
+          "isExemplifiedBy": Array [
+            "http://resource/my-domain/15",
+          ],
+        },
+        Object {
+          "@id": "http://resource/my-domain/10",
+          "@type": "Manifestation",
+          "isExemplifiedBy": Array [
+            "http://resource/my-domain/16",
+          ],
+        },
+      ],
+    },
+  ],
+  "publicationDate": Array [
+    2022-02-01T00:00:00.000Z,
+  ],
+}
+`;
+
+exports[`ResourceGraphService should transform ResourceGraph 5 to JsonModel (circular graph) 1`] = `
+Object {
+  "@id": "uri1",
+  "@type": "root",
+  "child": Object {
+    "@id": "uri2",
+    "@type": "root",
+    "child": Object {
+      "@id": "uri3",
+      "@type": "grandChild",
+      "grandParent": [Circular],
+    },
+  },
+}
+`;

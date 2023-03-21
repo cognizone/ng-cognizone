@@ -1,0 +1,39 @@
+{
+  "name": "ng-application-profile",
+  "projectType": "library",
+  "sourceRoot": "libs/ng-application-profile/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/ng-application-profile/tsconfig.lib.json",
+        "project": "libs/ng-application-profile/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/ng-application-profile/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/ng-application-profile/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ng-application-profile/src/**/*.ts", "libs/ng-application-profile/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ng-application-profile"],
+      "options": {
+        "jestConfig": "libs/ng-application-profile/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

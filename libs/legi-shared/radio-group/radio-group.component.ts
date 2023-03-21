@@ -9,7 +9,7 @@ import {
   Optional,
   TemplateRef,
 } from '@angular/core';
-import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { I18nService } from '@cognizone/i18n';
 import {
@@ -79,8 +79,8 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   @ContentChild(TemplateRef, { static: false })
   template!: TemplateRef<unknown>;
 
-  embeddedControl: FormControl = new FormControl();
-  searchControl: FormControl = new FormControl();
+  embeddedControl: UntypedFormControl = new UntypedFormControl();
+  searchControl: UntypedFormControl = new UntypedFormControl();
   trackBySelectOption: typeof trackBySelectOption = trackBySelectOption;
 
   private _optionsProvider!: SelectOptionsProvider<T>;

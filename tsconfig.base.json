@@ -18,11 +18,13 @@
     "paths": {
       "@app/*": ["apps/docs-app/src/app/*"],
       "@cognizone/application-profile": ["libs/application-profile/src/index.ts"],
+      "@cognizone/cdk": ["libs/cdk/src/index.ts"],
       "@cognizone/devtools": ["libs/devtools/src/index.ts"],
       "@cognizone/elastic": ["libs/elastic/src/index.ts"],
       "@cognizone/elastic-explorer": ["libs/elastic-explorer/src/index.ts"],
       "@cognizone/i18n": ["libs/i18n/src/index.ts"],
       "@cognizone/i18n-transloco": ["libs/i18n-transloco/src/index.ts"],
+      "@cognizone/json-model": ["libs/json-model/src/index.ts"],
       "@cognizone/json-model-graph": ["libs/json-model-graph/src/index.ts"],
       "@cognizone/legi-cv": ["libs/legi-cv/src/index.ts"],
       "@cognizone/legi-shared": ["libs/legi-shared/src/index.ts"],

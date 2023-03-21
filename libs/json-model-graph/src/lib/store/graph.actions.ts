@@ -1,12 +1,12 @@
 import { Many } from '@cognizone/model-utils';
-import { JsonModelFlat, JsonModelFlatGraph } from '@cognizone/ng-application-profile';
+import { JsonModelFlat, JsonModelFlatGraph } from '@cognizone/json-model';
 
 import { GraphStatus } from '../models/graph-status';
 
 export class SetGraph {
   static readonly type: string = '[Graph] set graph';
 
-  constructor(public graph: JsonModelFlatGraph, public apName: string, public status: GraphStatus = 'pristine') {}
+  constructor(public graph: JsonModelFlatGraph, public definition: unknown, public status: GraphStatus = 'pristine') {}
 }
 
 export class RemoveGraph {

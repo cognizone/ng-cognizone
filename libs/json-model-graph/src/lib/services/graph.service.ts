@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { notNil } from '@cognizone/model-utils';
-import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService } from '@cognizone/ng-application-profile';
+import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import produce from 'immer';
 import { Observable } from 'rxjs';
-import { distinctUntilChanged, filter, map } from 'rxjs/operators';
+import { distinctUntilChanged, filter, map, shareReplay } from 'rxjs/operators';
 
 import { NodeRecipe } from '../models/node-recipe';
 import { RemoveGraph, Reset, SetGraph, UpdateNode } from '../store/graph.actions';
@@ -18,13 +18,19 @@ export class GraphService {
   state$: Observable<GraphStateModel> = this.store.select(GRAPH_STATE_TOKEN);
 
   private copyCount = 0;
+  private linkedGraphsCache: { [rootUri: string]: Observable<JsonModel> } = {};
+  private _state!: GraphStateModel;
 
   get state(): GraphStateModel {
-    return this.store.selectSnapshot(GRAPH_STATE_TOKEN);
+    // performance of this.store.selectSnapshot are pretty bad in comparison
+    return this._state;
   }
 
-  constructor(private store: Store, private logger: Logger, private jsonModelService: JsonModelService) {
+  constructor(private store: Store, private logger: Logger, private jsonModelService: JsonModelService, private ngZone: NgZone) {
     this.logger = this.logger.extend('GraphService');
+    this.ngZone.runOutsideAngular(() => {
+      this.state$.subscribe(state => (this._state = state));
+    });
   }
 
   hasGraph(rootUri: string): boolean {
@@ -56,26 +62,32 @@ export class GraphService {
   }
 
   getLinkedGraph<T extends JsonModel>(rootUri: string): Observable<T> {
-    return this.state$.pipe(
-      map(state => state.linkedGraphs[rootUri] as T),
-      distinctUntilChanged()
-    );
+    const cache$ = this.linkedGraphsCache[rootUri];
+    if (cache$) return cache$ as Observable<T>;
+
+    return (this.linkedGraphsCache[rootUri] = this.state$.pipe(
+      map(state => state.graphs[rootUri].graph),
+      distinctUntilChanged(),
+      map(() => this.getLinkedGraphSnapshot<T>(rootUri)),
+      shareReplay(1)
+    ));
   }
 
   getLinkedGraphSnapshot<T extends JsonModel>(rootUri: string): T {
-    return this.state.linkedGraphs[rootUri] as T;
+    return this.jsonModelService.fromFlatGraph(this.state.graphs[rootUri].graph, this.state.definitions[rootUri]);
   }
 
   update(rootUri: string, ...models: JsonModelFlat[]): void {
     this.store.dispatch(new UpdateNode(rootUri, models));
   }
 
-  setGraph<T extends JsonModel>(model: T, apName: string): Observable<unknown> {
+  setGraph<T extends JsonModel>(model: T, definition: unknown): Observable<unknown> {
     const flat = this.jsonModelService.toFlatGraph(model);
-    return this.store.dispatch(new SetGraph(flat, apName));
+    return this.store.dispatch(new SetGraph(flat, definition));
   }
 
   reset(): Observable<void> {
+    this.linkedGraphsCache = {};
     return this.store.dispatch(new Reset());
   }
 
@@ -91,15 +103,19 @@ export class GraphService {
       draft.models[targetUri] = draft.models[sourceUri];
       delete draft.models[sourceUri];
       draft.models[targetUri]['@id'] = targetUri;
-      Object.values(draft.models).forEach(node => (node['@context'].rootUri = targetUri));
     });
-    const apName = this.state.apName[sourceUri];
-    this.store.dispatch(new SetGraph(copy, apName));
+    const definition = this.state.definitions[sourceUri];
+    this.store.dispatch(new SetGraph(copy, definition));
 
     return targetUri;
   }
 
   removeGraph(rootUri: string): void {
+    delete this.linkedGraphsCache[rootUri];
     this.store.dispatch(new RemoveGraph(rootUri));
+  }
+
+  getDefinition(rootUri: string): unknown {
+    return this.state.definitions[rootUri];
   }
 }

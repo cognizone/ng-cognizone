@@ -1,0 +1,6 @@
+{
+  "lib": {
+    "entryFile": "public-api.ts",
+    "styleIncludePaths": ["../../legi-styles/styles"]
+  }
+}

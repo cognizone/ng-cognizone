@@ -9,47 +9,37 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.2.0
-        with:
-          node-version: 14.15.x
       - name: Git checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          fetch-depth: 0
+          node-version: 18
       - name: Git set user
         run: |
           git config --local user.email "WilliamChelman@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-      - name: Cache node modules global
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+      # Dependencies
+      - name: Cache dependencies
+        uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - name: Cache node modules local
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules-local
-        with:
-          path: ./node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm i
-      # at some point https://github.com/nrwl/last-successful-commit-action to release only affected
-      # - run: npm run affected:lint -- --base=origin/main
-      # - run: npm run nx -- run workspace:version --version=prerelease --preid=alpha
-      - run: npm run nx -- run-many --all --target=build --prod
-      - run: npm run nx -- run-many --all --target=test
-      - name: 'Build cli'
-        run: |
-          cd ./libs/cli
-          npm i
-          npm run build
-      - run: node ./tools/sync-package-metadata.js
-      - run: npx semantic-release
-        # - run: node ./tools/npm-publish.js
+          path: |
+            ./node_modules
+            ./libs/cli/node_modules
+          key: ${{ runner.os }}-cache-${{ hashFiles('./package-lock.json') }}-${{ hashFiles('./libs/cli/package-lock.json') }}
+      - name: Install root dependencies
+        run: npm i
+      - name: Install cli dependencies
+        run: npm i
+        working-directory: ./libs/cli
+      # Build and release
+      - name: Building
+        run: npm run nx -- run-many --target=build --configuration=production --exclude=docs,docs-app
+      - name: Testing
+        run: npm run nx -- run-many --target=test --exclude=docs,docs-app
+      - name: Syncing package.json files metadata
+        run: node ./tools/sync-package-metadata.js
+      - name: Releasing
+        run: npx semantic-release
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      # - run: npm run affected:e2e -- --headless --base=origin/main
-      # - run: git push --follow-tags

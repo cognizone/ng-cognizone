@@ -1,0 +1,39 @@
+{
+  "name": "permissions",
+  "projectType": "library",
+  "sourceRoot": "libs/permissions/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/permissions/tsconfig.lib.json",
+        "project": "libs/permissions/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/permissions/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/permissions/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/permissions/src/**/*.ts", "libs/permissions/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/permissions"],
+      "options": {
+        "jestConfig": "libs/permissions/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

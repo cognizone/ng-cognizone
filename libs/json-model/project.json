@@ -1,0 +1,40 @@
+{
+  "name": "json-model",
+  "projectType": "library",
+  "sourceRoot": "libs/json-model/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{workspaceRoot}/dist/libs/json-model"],
+      "options": {
+        "project": "libs/json-model/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/json-model/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/json-model/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/json-model"],
+      "options": {
+        "jestConfig": "libs/json-model/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/json-model/src/**/*.ts", "libs/json-model/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": []
+}

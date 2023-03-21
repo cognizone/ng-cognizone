@@ -1,0 +1,14 @@
+@import 'components-pack';
+
+.my-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  z-index: 9999;
+
+  .my-side-menu-content {
+    background: $czls-color-white;
+    border: 1px solid $czls-border-color;
+    padding: 0 .5rem;
+  }
+}

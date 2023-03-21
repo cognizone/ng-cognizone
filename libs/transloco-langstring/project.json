@@ -1,0 +1,39 @@
+{
+  "name": "transloco-langstring",
+  "projectType": "library",
+  "sourceRoot": "libs/transloco-langstring/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/transloco-langstring/tsconfig.lib.json",
+        "project": "libs/transloco-langstring/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/transloco-langstring/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/transloco-langstring/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/transloco-langstring/src/**/*.ts", "libs/transloco-langstring/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/transloco-langstring"],
+      "options": {
+        "jestConfig": "libs/transloco-langstring/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

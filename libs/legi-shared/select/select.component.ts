@@ -11,7 +11,7 @@ import {
   Output,
   TemplateRef,
 } from '@angular/core';
-import { ControlContainer, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { I18nService } from '@cognizone/i18n';
@@ -69,7 +69,7 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
   @Output()
   selectionChange: EventEmitter<unknown> = new EventEmitter();
 
-  embeddedControl: FormControl = new FormControl();
+  embeddedControl: UntypedFormControl = new UntypedFormControl();
 
   get classicMode(): boolean {
     return this.config.appearance === 'classic';

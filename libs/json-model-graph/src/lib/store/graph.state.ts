@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
+import { JsonModelFlatGraph } from '@cognizone/json-model';
 import { manyToArray } from '@cognizone/model-utils';
-import { JsonModel, JsonModelFlatGraph, JsonModelService } from '@cognizone/ng-application-profile';
 import { Logger } from '@cognizone/ng-core';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
 import produce from 'immer';
 
 import { GraphStatus } from '../models/graph-status';
-
 import { RemoveGraph, Reset, SetGraph, UpdateNode } from './graph.actions';
 
 interface GraphContainer {
@@ -18,11 +17,8 @@ export interface GraphStateModel {
   graphs: {
     [uri: string]: GraphContainer;
   };
-  linkedGraphs: {
-    [uri: string]: JsonModel;
-  };
-  apName: {
-    [uri: string]: string;
+  definitions: {
+    [uri: string]: unknown;
   };
 }
 
@@ -32,27 +28,23 @@ export const GRAPH_STATE_TOKEN = new StateToken<GraphStateModel>('cz_graph');
   name: GRAPH_STATE_TOKEN,
   defaults: {
     graphs: {},
-    linkedGraphs: {},
-    apName: {},
+    definitions: {},
   },
 })
 @Injectable()
 export class GraphState {
-  constructor(private jsonModelService: JsonModelService, private logger: Logger) {
+  constructor(private logger: Logger) {
     this.logger = this.logger.extend('GraphState');
   }
 
   @Action(SetGraph)
-  setGraph(ctx: StateContext<GraphStateModel>, { graph, apName }: SetGraph): void {
-    let newState = produce(ctx.getState(), draft => {
-      draft.apName[graph.rootUri] = apName;
-      draft.graphs[graph.rootUri] = { graph, status: 'pristine' };
-    });
-    // Done outside of immer because linked graphs can be circular, which immer doesn't like
-    const linkedGraph = this.jsonModelService.fromFlatGraph(newState.graphs[graph.rootUri].graph, apName);
-    newState = { ...newState, linkedGraphs: { ...newState.linkedGraphs, [graph.rootUri]: linkedGraph } };
-
-    ctx.setState(newState);
+  setGraph(ctx: StateContext<GraphStateModel>, { graph, definition }: SetGraph): void {
+    ctx.setState(
+      produce(ctx.getState(), draft => {
+        draft.definitions[graph.rootUri] = definition;
+        draft.graphs[graph.rootUri] = { graph, status: 'pristine' };
+      })
+    );
   }
 
   @Action(RemoveGraph)
@@ -60,8 +52,7 @@ export class GraphState {
     ctx.setState(
       produce(ctx.getState(), draft => {
         delete draft.graphs[rootUri];
-        delete draft.linkedGraphs[rootUri];
-        delete draft.apName[rootUri];
+        delete draft.definitions[rootUri];
       })
     );
   }
@@ -69,23 +60,20 @@ export class GraphState {
   @Action(UpdateNode)
   updateNode(ctx: StateContext<GraphStateModel>, { rootUri, nodes }: UpdateNode): void {
     const allNodes = manyToArray(nodes);
-    let newState = produce(ctx.getState(), draft => {
-      allNodes.forEach(node => {
-        draft.graphs[rootUri].graph.models[node['@id']] = node;
-      });
 
-      draft.graphs[rootUri].status = 'touched';
-    });
+    ctx.setState(
+      produce(ctx.getState(), draft => {
+        allNodes.forEach(node => {
+          draft.graphs[rootUri].graph.models[node['@id']] = node;
+        });
 
-    // Done outside of immer because linked graphs can be circular, which immer doesn't like
-    const linkedGraph = this.jsonModelService.fromFlatGraph(newState.graphs[rootUri].graph, newState.apName[rootUri]);
-    newState = { ...newState, linkedGraphs: { ...newState.linkedGraphs, [rootUri]: linkedGraph } };
-
-    ctx.setState(newState);
+        draft.graphs[rootUri].status = 'touched';
+      })
+    );
   }
 
   @Action(Reset)
   reset({ setState }: StateContext<GraphStateModel>): void {
-    setState({ graphs: {}, linkedGraphs: {}, apName: {} });
+    setState({ graphs: {}, definitions: {} });
   }
 }

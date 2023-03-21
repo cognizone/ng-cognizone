@@ -1,0 +1,39 @@
+{
+  "name": "operation",
+  "projectType": "library",
+  "sourceRoot": "libs/operation/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "tsConfig": "libs/operation/tsconfig.lib.json",
+        "project": "libs/operation/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/operation/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/operation/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/operation/src/**/*.ts", "libs/operation/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/operation"],
+      "options": {
+        "jestConfig": "libs/operation/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

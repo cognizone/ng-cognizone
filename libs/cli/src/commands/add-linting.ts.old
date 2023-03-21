@@ -1,0 +1,98 @@
+// import { Command, flags as oFlags } from '@oclif/command';
+// import * as Parser from '@oclif/parser';
+// import * as execa from 'execa';
+// import { existsSync } from 'fs';
+// import * as Listr from 'listr';
+// import { join } from 'path';
+// import * as prompts from 'prompts';
+
+// import { JsonService } from '../services';
+
+// export default class AddLinting extends Command {
+//   static description: string = 'add linting to a repository using typescript';
+
+//   static examples: string[] = [`$ cz-cli add-linting --interactive`];
+
+//   static flags: oFlags.Input<{ prettify: boolean; interactive: boolean; help: void }> = {
+//     help: oFlags.help({ char: 'h' }),
+//     prettify: oFlags.boolean({ default: false, description: 'format all (compatible) files using prettier' }),
+//     interactive: oFlags.boolean({ char: 'i', description: 'launch the cli in interactive mode' }),
+//   };
+
+//   static args: Parser.args.IArg[] = [];
+
+//   private readonly prettifyable: readonly string[] = ['ts', 'js', 'css', 'scss', 'json', 'md', 'html'];
+
+//   async run(): Promise<void> {
+//     this.validate();
+//     let { flags } = this.parse(AddLinting);
+//     if (flags.interactive) {
+//       const response = await prompts(
+//         {
+//           type: 'confirm',
+//           name: 'prettify',
+//           message: 'Format all (compatible) files using prettier?',
+//           initial: flags.prettify,
+//         },
+//         { onCancel: () => this.exit() }
+//       );
+//       flags = { ...flags, ...response };
+//     }
+//     const tasks = new Listr([
+//       {
+//         title: 'Installing npm dependencies',
+//         task: () => execa.command('npm install -D @cognizone/tslint-config @cognizone/prettier-config prettier tslint'),
+//       },
+//       {
+//         title: 'Setting up linting',
+//         task: () =>
+//           new Listr([
+//             { title: 'Git hooks', task: () => execa.command('npx mrm lint-staged') },
+//             {
+//               title: 'Adapting package.json',
+//               task: () => this.adaptPackageJson(),
+//             },
+//             {
+//               title: 'Adapting tslint.json',
+//               task: () => this.adaptTslintJson(),
+//             },
+//           ]),
+//       },
+//       {
+//         title: `Formatting ${this.prettifyable}`,
+//         enabled: () => flags.prettify,
+//         task: () => execa.command(`npx prettier --write **/*.{${this.prettifyable}}`),
+//       },
+//     ]);
+
+//     await tasks.run();
+//   }
+
+//   private validate(): void {
+//     const cwd = process.cwd();
+//     const packageJsonPath = join(cwd, 'package.json');
+//     if (!existsSync(packageJsonPath)) {
+//       this.error(`Could not find 'package.json' in ${cwd}, exiting`);
+//     }
+//   }
+
+//   private adaptPackageJson(): void {
+//     const pkg = JsonService.readJsonSync<PackageJson>('package.json', { strict: true });
+//     pkg['lint-staged'] = {
+//       [`*.{${this.prettifyable.filter(ext => ext !== 'ts')}}`]: ['prettier --write'],
+//       '*.ts': ['prettier --write', 'tslint -c tslint.json --project tsconfig.json --fix'],
+//     };
+
+//     pkg.prettier = '@cognizone/prettier-config';
+//     JsonService.writeJsonSync('package.json', pkg);
+//   }
+
+//   private adaptTslintJson(): void {
+//     JsonService.writeJsonSync('tslint.json', {
+//       extends: '@cognizone/tslint-config',
+//       rulesDirectory: ['codelyzer'],
+//     });
+//   }
+// }
+
+// type PackageJson = { [key: string]: unknown };

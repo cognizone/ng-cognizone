@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { CoreStateFacade } from '@app/core/store/core.facade';
 import { ApiDescription } from '@app/shared/components/api-table/api-table.component';
 import { Logger } from '@cognizone/ng-core';
@@ -12,7 +12,7 @@ import { NgCorePagesService } from '../../services/ng-core-pages.service';
   styleUrls: ['./logger-doc.component.scss'],
 })
 export class LoggerDocComponent implements OnInit, OnDestroy {
-  form!: FormGroup;
+  form!: UntypedFormGroup;
 
   code1 = `
   // app.module.ts
@@ -88,7 +88,7 @@ export class LoggerDocComponent implements OnInit, OnDestroy {
 
   constructor(
     public readonly logger: Logger,
-    private readonly fb: FormBuilder,
+    private readonly fb: UntypedFormBuilder,
     private coreStateFacade: CoreStateFacade,
     private ngCorePagesService: NgCorePagesService
   ) {

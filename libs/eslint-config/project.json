@@ -1,0 +1,16 @@
+{
+  "name": "eslint-config",
+  "projectType": "library",
+  "sourceRoot": "libs/eslint-config/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "./tools/executors/build-assets:build-assets",
+      "options": {
+        "root": "libs/eslint-config",
+        "dist": "dist/libs/eslint-config"
+      }
+    }
+  },
+  "tags": []
+}

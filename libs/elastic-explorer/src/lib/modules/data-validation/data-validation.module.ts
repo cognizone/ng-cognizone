@@ -1,19 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataValidationView } from './views/data-validation/data-validation.view';
-import { ElasticInstanceModule } from '../elastic-instance';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatButtonModule } from '@angular/material/button';
-import { NgxsModule } from '@ngxs/store';
-import { DataValidationState } from './store/data-validation.state';
-import { DataErrorTableComponent } from './components/data-error-table/data-error-table.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTableModule } from '@angular/material/table';
-import { MatIconModule } from '@angular/material/icon';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListPaginatorModule } from '@cognizone/legi-shared/list-paginator';
+import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
+
+import { ElasticInstanceModule } from '../elastic-instance';
+import { DataErrorTableComponent } from './components/data-error-table/data-error-table.component';
+import { DataValidationView } from './views/data-validation/data-validation.view';
 
 @NgModule({
   declarations: [DataValidationView, DataErrorTableComponent],

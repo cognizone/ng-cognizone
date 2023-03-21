@@ -1,0 +1,16 @@
+{
+  "name": "legi-styles",
+  "projectType": "library",
+  "sourceRoot": "libs/legi-styles/src",
+  "prefix": "cz",
+  "targets": {
+    "build": {
+      "executor": "./tools/executors/build-assets:build-assets",
+      "options": {
+        "root": "libs/legi-styles",
+        "dist": "dist/libs/legi-styles"
+      }
+    }
+  },
+  "tags": []
+}

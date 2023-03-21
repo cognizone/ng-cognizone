@@ -7,10 +7,6 @@ import { Many } from '@cognizone/model-utils';
  */
 export interface ApplicationProfileRaw {
   /**
-   * uri of that particular AP
-   */
-  uri: string;
-  /**
    * For each class existing in the defined ontology, there is an associated
    * {@link TypeProfileRaw} that describes that class and its constraints.
    *
@@ -18,6 +14,11 @@ export interface ApplicationProfileRaw {
    * on this interface.
    */
   [classId: string]: TypeProfileRaw | string;
+
+  /**
+   * uri of that particular AP
+   */
+  uri: string;
 }
 
 /**
@@ -25,24 +26,26 @@ export interface ApplicationProfileRaw {
  */
 export interface TypeProfileRaw {
   /**
-   * Set of rules that entities of this class need to follow to be valid
-   */
-  constraints: Record<string, Many<string>>;
-  /**
    * Map of {@link AttributeProfileRaw} where each attributes of the given class
    * are described
    */
   [attributeKey: string]: AttributeProfileRaw | Record<string, Many<string>>;
+
+  /**
+   * Set of rules that entities of this class need to follow to be valid
+   */
+  constraints: Record<string, Many<string>>;
 }
 
 export interface AttributeProfileRaw {
-  /**
-   * uri of the attribute.
-   */
-  uri: string;
   /**
    * Map of reules and their properties, used to validate if this attribute is
    * valid and to, in general, describe its model.
    */
   [ruleId: string]: Record<string, unknown> | string;
+
+  /**
+   * uri of the attribute.
+   */
+  uri: string;
 }
