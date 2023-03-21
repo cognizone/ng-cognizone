@@ -19,7 +19,7 @@ mat-label {
 }
 
 %readonly-typography {
-  @include typography(to-rem(16px), 24px, $czls-font-color-medium);
+  @include cz-typography(to-rem(16px), 24px, $czls-font-color-medium);
 }
 
 .is-readonly {

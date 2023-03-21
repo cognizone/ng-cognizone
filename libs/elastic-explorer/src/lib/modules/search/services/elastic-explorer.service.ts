@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JsonModelService, ResourceGraphService } from '@cognizone/json-model';
 import { Pagination } from '@cognizone/legi-shared/list-paginator';

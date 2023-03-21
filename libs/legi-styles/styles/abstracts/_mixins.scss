@@ -1,4 +1,4 @@
-@mixin typography($font-size, $line-height, $color: $czls-font-color-high, $font-family: $czls-font-family) {
+@mixin cz-typography($font-size, $line-height, $color: $czls-font-color-high, $font-family: $czls-font-family) {
   font-size: $font-size;
   line-height: $line-height;
   color: $color;

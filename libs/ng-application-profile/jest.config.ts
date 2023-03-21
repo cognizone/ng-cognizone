@@ -3,12 +3,7 @@ export default {
   displayName: 'ng-application-profile',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  globals: {
-    'ts-jest': {
-      stringifyContentPathRegex: '\\.(html|svg)$',
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-    },
-  },
+  globals: {},
   transformIgnorePatterns: ['node_modules/(?!.*.mjs$)'],
   coverageDirectory: '../../coverage/libs/ng-application-profile',
   snapshotSerializers: [
@@ -17,7 +12,13 @@ export default {
     'jest-preset-angular/build/serializers/html-comment',
   ],
   transform: {
-    '^.+.(ts|mjs|js|html)$': 'jest-preset-angular',
+    '^.+.(ts|mjs|js|html)$': [
+      'jest-preset-angular',
+      {
+        stringifyContentPathRegex: '\\.(html|svg)$',
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+      },
+    ],
   },
   moduleNameMapper: {
     '^lodash-es$': 'lodash',
