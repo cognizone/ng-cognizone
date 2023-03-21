@@ -2,7 +2,7 @@
   "name": "@cognizone/i18n",
   "version": "3.0.0-beta.49",
   "peerDependencies": {
-    "@cognizone/model-utils": ">=3.0.0-beta.0",
+    "@cognizone/model-utils": ">=3.0.0",
     "@angular/core": ">=14.0.0",
     "@angular/platform-browser-dynamic": ">=14.0.0"
   },

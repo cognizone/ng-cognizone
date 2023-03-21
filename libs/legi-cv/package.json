@@ -2,10 +2,10 @@
   "name": "@cognizone/legi-cv",
   "version": "3.0.0-beta.49",
   "peerDependencies": {
-    "@cognizone/i18n": ">=3.0.0-beta.0",
-    "@cognizone/json-model": ">=3.0.0-beta.0",
-    "@cognizone/model-utils": ">=3.0.0-beta.0",
-    "@cognizone/ng-core": ">=3.0.0-beta.0",
+    "@cognizone/i18n": ">=3.0.0",
+    "@cognizone/json-model": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
+    "@cognizone/ng-core": ">=3.0.0",
     "@ngxs/store": "^3.7.2",
     "lodash-es": "^4.17.21"
   },

@@ -2,12 +2,12 @@
   "name": "@cognizone/json-model-graph",
   "version": "3.0.0-beta.49",
   "peerDependencies": {
-    "@cognizone/devtools": ">=3.0.0-beta.0",
-    "@cognizone/json-model": ">=3.0.0-beta.0",
-    "@cognizone/legi-cv": ">=3.0.0-beta.0",
-    "@cognizone/model-utils": ">=3.0.0-beta.0",
-    "@cognizone/ng-core": ">=3.0.0-beta.0",
-    "@cognizone/ng-application-profile": ">=3.0.0-beta.0",
+    "@cognizone/devtools": ">=3.0.0",
+    "@cognizone/json-model": ">=3.0.0",
+    "@cognizone/legi-cv": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
+    "@cognizone/ng-core": ">=3.0.0",
+    "@cognizone/ng-application-profile": ">=3.0.0",
     "immer": "^9.0.5"
   },
   "dependencies": {

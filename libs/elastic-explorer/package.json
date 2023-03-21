@@ -2,12 +2,12 @@
   "name": "@cognizone/elastic-explorer",
   "version": "3.0.0-beta.49",
   "peerDependencies": {
-    "@cognizone/application-profile": ">=3.0.0-beta",
-    "@cognizone/json-model": ">=3.0.0-beta",
-    "@cognizone/i18n": ">=3.0.0-beta",
-    "@cognizone/legi-shared": ">=3.0.0-beta",
-    "@cognizone/model-utils": ">=3.0.0-beta",
-    "@cognizone/ng-core": ">=3.0.0-beta"
+    "@cognizone/application-profile": ">=3.0.0",
+    "@cognizone/json-model": ">=3.0.0",
+    "@cognizone/i18n": ">=3.0.0",
+    "@cognizone/legi-shared": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
+    "@cognizone/ng-core": ">=3.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
