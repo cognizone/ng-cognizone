@@ -13,7 +13,7 @@ import {
   TemplateRef,
 } from '@angular/core';
 import { AbstractControl, ControlContainer, UntypedFormControl, NgControl } from '@angular/forms';
-import { MatFormField } from '@angular/material/form-field';
+import { MatLegacyFormField as MatFormField } from '@angular/material/legacy-form-field';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { bindControls, extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';

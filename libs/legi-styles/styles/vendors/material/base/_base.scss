@@ -1,7 +1,41 @@
-@include mat-core($custom-mat-typography);
+@use '@angular/material' as mat;
 
-$czls-primary: mat-palette($czls-primary-palette);
-$czls-accent: mat-palette($czls-accent-palette);
-$czls-theme: mat-light-theme($czls-primary, $czls-accent);
+@include mat.legacy-core();
+$custom-mat-typography: mat.define-typography-config(
+  $font-family: $czls-font-family,
+);
 
-@include angular-material-theme($czls-theme);
+$dark-disabled-text: $czls-font-color-disabled;
+
+$mat-light-theme-foreground: (
+  base: black,
+  divider: $dark-dividers,
+  dividers: $dark-dividers,
+  disabled: $dark-disabled-text,
+  disabled-button: rgba(black, 0.26),
+  disabled-text: $dark-disabled-text,
+  elevation: black,
+  hint-text: $dark-disabled-text,
+  secondary-text: $dark-secondary-text,
+  icon: $czls-font-color-medium,
+  icons: $czls-font-color-medium,
+  text: $czls-font-color-medium,
+  slider-min: $czls-font-color-high,
+  slider-off: rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+$czls-primary: mat.define-palette($czls-primary-palette);
+$czls-accent: mat.define-palette($czls-accent-palette);
+$czls-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $czls-primary,
+      accent: $czls-accent,
+    ),
+    typography: $custom-mat-typography,
+  )
+);
+
+@include mat.legacy-core-theme($czls-theme);
+@include mat.all-legacy-component-themes($czls-theme);
