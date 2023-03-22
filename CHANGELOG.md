@@ -1,3 +1,10 @@
+# [4.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.1...v4.0.0-beta.2) (2023-03-22)
+
+
+### Bug Fixes
+
+* peer dependencies for beta ([d7ae84e](https://github.com/cognizone/ng-cognizone/commit/d7ae84e58356dfdeb79cf768748b9b32f63aca65))
+
 # [4.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v3.0.0...v4.0.0-beta.1) (2023-03-22)
 
 

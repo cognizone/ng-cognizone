@@ -1,8 +1,8 @@
 {
   "name": "@cognizone/material-icons",
-  "version": "4.0.0-beta.1",
+  "version": "4.0.0-beta.2",
   "peerDependencies": {
-    "@cognizone/ng-core": ">=3.0.0",
+    "@cognizone/ng-core": ">=4.0.0-beta.0",
     "@angular/material": ">=14.0.0",
     "@angular/platform-browser": ">=14.0.0"
   },
