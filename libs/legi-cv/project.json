@@ -1,5 +1,6 @@
 {
   "name": "legi-cv",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/legi-cv/src",
   "prefix": "cz",

@@ -1,5 +1,6 @@
 {
   "name": "ng-application-profile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/ng-application-profile/src",
   "prefix": "cz",

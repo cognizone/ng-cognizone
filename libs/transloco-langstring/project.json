@@ -1,5 +1,6 @@
 {
   "name": "transloco-langstring",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/transloco-langstring/src",
   "prefix": "cz",
