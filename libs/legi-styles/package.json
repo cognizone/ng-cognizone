@@ -2,7 +2,7 @@
   "name": "@cognizone/legi-styles",
   "version": "4.0.0-beta.2",
   "peerDependencies": {
-    "@angular/material": ">=11.0.0",
+    "@angular/material": "^15.0.0",
     "bootstrap": "^4.0.0",
     "material-design-icons": "^3.0.0"
   },
