@@ -11,8 +11,9 @@ function readJson(path) {
 function writeJson(path, content) {
   writeFileSync(path, JSON.stringify(content, null, 2));
 }
-const cognizonePeerVersion = '>=3.0.0';
-const rootPackage = readJson(join(__dirname, '../package.json'));
+const cognizonePeerVersion = '>=4.0.0-beta.0';
+const rootPackagePath = join(__dirname, '../package.json');
+const rootPackage = readJson(rootPackagePath);
 
 packageFiles.forEach(packageFile => {
   console.log('Syncing', packageFile);
@@ -32,6 +33,9 @@ packageFiles.forEach(packageFile => {
       package.peerDependencies[key] = cognizonePeerVersion;
     }
   });
+  rootPackage.version = package.version;
 
   writeJson(packageFile, package);
 });
+
+writeJson(rootPackagePath, rootPackage);
