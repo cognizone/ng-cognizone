@@ -1,5 +1,6 @@
 {
   "name": "elastic-explorer-chrome-extension",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/elastic-explorer-chrome-extension/src",
   "prefix": "cz",

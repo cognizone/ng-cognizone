@@ -1,0 +1,117 @@
+@use '@angular/material' as mat;
+@use '@angular/material/theming' as mat-theming;
+@import 'fonts';
+
+@include mat.core();
+
+$czls-font-family: 'Muli' !default;
+$czls-font-color-high: rgba(0, 0, 0, 0.87) !default; // this is the default color
+$czls-font-color-medium: rgba(0, 0, 0, 0.6) !default;
+$czls-font-color-disabled: rgba(0, 0, 0, 0.38) !default;
+$czls-color-primary: #4a90e2 !default;
+
+$czls-primary-palette: (
+  50: #ffffff,
+  100: #b6d9ea,
+  200: #86c0dc,
+  300: #55a6cd,
+  400: #3093c3,
+  500: $czls-color-primary,
+  600: #0a78b1,
+  700: #086da8,
+  800: #0663a0,
+  900: #035091,
+  A100: #bdddff,
+  A200: #8ac3ff,
+  A400: #57a8ff,
+  A700: #3d9bff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+) !default;
+
+$czls-accent-palette: (
+  50: #d1eefc,
+  100: #89d4f7,
+  200: #55c0f4,
+  300: #12a7f0,
+  400: #0e94d5,
+  500: $czls-color-primary,
+  600: #0a6c9b,
+  700: #08587f,
+  800: #064462,
+  900: #053045,
+  A100: #c4ecff,
+  A200: #5ecbff,
+  A400: #00a7f7,
+  A700: #0893d5,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+) !default;
+
+$custom-mat-typography: mat.define-typography-config(
+  $font-family: $czls-font-family,
+);
+
+// TODO needed?
+// mat-theming.$dark-disabled-text: $czls-font-color-disabled;
+
+$mat-light-theme-foreground: (
+  base: black,
+  divider: mat-theming.$dark-dividers,
+  dividers: mat-theming.$dark-dividers,
+  disabled: mat-theming.$dark-disabled-text,
+  disabled-button: rgba(black, 0.26),
+  disabled-text: mat-theming.$dark-disabled-text,
+  elevation: black,
+  hint-text: mat-theming.$dark-disabled-text,
+  secondary-text: mat-theming.$dark-secondary-text,
+  icon: $czls-font-color-medium,
+  icons: $czls-font-color-medium,
+  text: $czls-font-color-medium,
+  slider-min: $czls-font-color-high,
+  slider-off: rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+$czls-primary: mat.define-palette($czls-primary-palette);
+$czls-accent: mat.define-palette($czls-accent-palette);
+$czls-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $czls-primary,
+      accent: $czls-accent,
+    ),
+    typography: $custom-mat-typography,
+  )
+);
+
+@include mat.core-theme($czls-theme);
+@include mat.all-component-themes($czls-theme);

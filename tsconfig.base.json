@@ -29,6 +29,7 @@
       "@cognizone/legi-cv": ["libs/legi-cv/src/index.ts"],
       "@cognizone/legi-shared": ["libs/legi-shared/src/index.ts"],
       "@cognizone/legi-shared/*": ["libs/legi-shared/*"],
+      "@cognizone/material": ["libs/material/src/index.ts"],
       "@cognizone/material-icons": ["libs/material-icons/src/index.ts"],
       "@cognizone/model-utils": ["libs/model-utils/src/index.ts"],
       "@cognizone/ng-application-profile": ["libs/ng-application-profile/src/index.ts"],
