@@ -1,3 +1,15 @@
+# [4.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v3.0.0...v4.0.0-beta.1) (2023-03-22)
+
+
+### Features
+
+* upgrade to Angular 15 ([65deff6](https://github.com/cognizone/ng-cognizone/commit/65deff61b0973ba313c2301d785b75e930d540d0))
+
+
+### BREAKING CHANGES
+
+* upgrade to Angular 15
+
 # [3.0.0](https://github.com/cognizone/ng-cognizone/compare/v2.7.7...v3.0.0) (2023-03-21)
 
 
