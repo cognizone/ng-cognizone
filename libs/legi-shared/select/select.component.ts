@@ -49,6 +49,7 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
   options: SelectOption<T>[] = [];
   @Input()
   set optionsProvider(value: SelectOptionsProvider<T>) {
+    if (!value) return;
     this.useOptionsProvider(value);
   }
   @Input()
