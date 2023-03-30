@@ -12,7 +12,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class PureMethodPipe implements PipeTransform {
-  transform<T extends (...args: unknown[]) => unknown, U extends {}, V extends keyof U>(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- need to keep any for type inference
+  transform<T extends (...args: any[]) => any, U extends {}, V extends keyof U>(
     service: U,
     methodKey: V,
     ...args: U[V] extends T ? Parameters<U[V]> : never
