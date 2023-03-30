@@ -1,3 +1,10 @@
+# [4.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2023-03-30)
+
+
+### Bug Fixes
+
+* **cdk:** fix pure pipe issue needing any instead of unknown ([1836d2b](https://github.com/cognizone/ng-cognizone/commit/1836d2b5dec0f235f5cc77f3f426b729a6930a4f))
+
 # [4.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2023-03-30)
 
 
