@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/cognizone/ng-cognizone/compare/v3.0.1...v3.0.2) (2023-03-30)
+
+
+### Bug Fixes
+
+* **cdk:** fix pure pipe issue needing any instead of unknown ([7240355](https://github.com/cognizone/ng-cognizone/commit/724035544845699bd3a1d1b04e6e9d05b65622ee))
+
 ## [3.0.1](https://github.com/cognizone/ng-cognizone/compare/v3.0.0...v3.0.1) (2023-03-29)
 
 
