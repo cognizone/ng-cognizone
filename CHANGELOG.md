@@ -1,3 +1,10 @@
+# [4.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2023-03-30)
+
+
+### Bug Fixes
+
+* **legi-shared:** handle nullish options provider in select component ([3fefaee](https://github.com/cognizone/ng-cognizone/commit/3fefaee8ae97a04d6671f3c423dd34994a273ef7))
+
 # [4.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.2...v4.0.0-beta.3) (2023-03-22)
 
 
