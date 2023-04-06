@@ -1,52 +1,69 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, MonoTypeOperatorFunction, Observable, pipe } from 'rxjs';
-import { finalize } from 'rxjs/operators';
+import { distinctUntilChanged, finalize, map } from 'rxjs/operators';
 
 import { startWithTap } from '../operators/start-with-tap';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class LoadingService implements OnDestroy {
+  readonly defaultKey = '_root';
+
   loading$: Observable<boolean>;
 
   get loading(): boolean {
-    return this._loading$.value;
+    return this.getLoadingSnapshot();
   }
 
-  private _loading$: BehaviorSubject<boolean>;
-
-  private loadingCount = 0;
+  private _loadings$: BehaviorSubject<Loadings>;
 
   constructor() {
-    this._loading$ = new BehaviorSubject<boolean>(false);
-    this.loading$ = this._loading$.asObservable();
+    this._loadings$ = new BehaviorSubject<Loadings>({});
+    this.loading$ = this.getLoading();
   }
 
-  addLoading(): void {
-    ++this.loadingCount;
-    this.evaluate();
+  addLoading(key: string = this.defaultKey): void {
+    this.addLoadingInternal(key, 1);
   }
 
-  removeLoading(): void {
-    --this.loadingCount;
-    this.evaluate();
+  removeLoading(key: string = this.defaultKey): void {
+    this.addLoadingInternal(key, -1);
   }
 
-  asOperator<T>(): MonoTypeOperatorFunction<T> {
+  asOperator<T>(key: string = this.defaultKey): MonoTypeOperatorFunction<T> {
     return pipe(
-      startWithTap(() => this.addLoading()),
-      finalize(() => this.removeLoading())
+      startWithTap(() => this.addLoading(key)),
+      finalize(() => this.removeLoading(key))
     );
   }
 
-  ngOnDestroy(): void {
-    this._loading$.complete();
+  getLoading(key: string = this.defaultKey): Observable<boolean> {
+    return this._loadings$.asObservable().pipe(
+      map(loadings => this.getLoadingSnapshotInternal(loadings, key)),
+      distinctUntilChanged()
+    );
   }
 
-  private evaluate(): void {
-    const current = this._loading$.value;
-    const newValue = this.loadingCount > 0;
-    if (newValue !== current) {
-      this._loading$.next(newValue);
-    }
+  getLoadingSnapshot(key: string = this.defaultKey): boolean {
+    return this.getLoadingSnapshotInternal(this._loadings$.value, key);
   }
+
+  ngOnDestroy(): void {
+    this._loadings$.complete();
+  }
+
+  private addLoadingInternal(key: string, value: number): void {
+    const newValue = { ...this._loadings$.value, [key]: (this._loadings$.value[key] || 0) + value };
+    if (newValue[key] <= 0) {
+      delete newValue[key];
+    }
+    this._loadings$.next(newValue);
+  }
+
+  private getLoadingSnapshotInternal(loadings: Loadings, key: string): boolean {
+    return !!Object.keys(loadings).find(k => (k.startsWith(key) ? loadings[k] > 0 : false));
+  }
+}
+
+interface Loadings {
+  [key: string]: number;
 }
