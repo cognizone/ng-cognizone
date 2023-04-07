@@ -1,3 +1,11 @@
+# [3.1.0](https://github.com/cognizone/ng-cognizone/compare/v3.0.2...v3.1.0) (2023-04-07)
+
+
+### Features
+
+* **legi-shared:** changed default value of updateOnBlur to true for the datepicker ([c6a0efb](https://github.com/cognizone/ng-cognizone/commit/c6a0efb5c8b256848d00171fd19be55439d64e74))
+* **ng-core:** add loading scopes ([284c567](https://github.com/cognizone/ng-cognizone/commit/284c5674eea4e91f2aab6eae805f43b7b508e8e7))
+
 ## [3.0.2](https://github.com/cognizone/ng-cognizone/compare/v3.0.1...v3.0.2) (2023-03-30)
 
 
