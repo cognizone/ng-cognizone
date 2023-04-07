@@ -4,7 +4,6 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import * as _moment from 'moment';
-// tslint:disable-next-line:no-duplicate-imports
 import { Moment } from 'moment';
 import { bindControls, extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 
@@ -38,7 +37,7 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
   @Input()
   readonly = false;
   @Input()
-  updateOnBlur = false;
+  updateOnBlur = true;
   @Input()
   type: DatePickerType = DatePickerType.DATE;
   @Input()
@@ -114,7 +113,7 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
   /**
    * `embeddedValueToValue` maps selected value of a calendar to a value of type Date
    */
-  embeddedValueToValue(value: Moment | Date | string | null): Date | null {
+  embeddedValueToValue(value: Date | Moment | string | null): Date | null {
     if (!value) return value as null;
     if (typeof value === 'string') return new Date(value);
     else if (value instanceof Date) return value;
