@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 
 import { LangString, LangStringSimple } from './lang-string';
 import { Nil } from './nil';
+import { Pagination } from './pagination';
 
 /**
  * Kind of an augmented KeyValue type to be used whenever we have case where a
@@ -63,6 +64,7 @@ export interface SelectOptionsProvider<T> {
 export interface GetSelectOptionsParams {
   counts?: Nil<SelectOptionCounts>;
   lang?: Nil<string>;
+  pagination?: Pagination;
 }
 
 /**
