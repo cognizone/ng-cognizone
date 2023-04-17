@@ -1,3 +1,12 @@
+# [4.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.5...v4.0.0-beta.6) (2023-04-17)
+
+
+### Features
+
+* **legi-shared:** changed default value of updateOnBlur to true for the datepicker ([e65ec49](https://github.com/cognizone/ng-cognizone/commit/e65ec49507e463a1225d0b31320d0af039c2d183))
+* **model-utils:** add pagination to select options provider ([b5fd022](https://github.com/cognizone/ng-cognizone/commit/b5fd0228e9881799a438dc14ceb5a76d5644653c))
+* **ng-core:** add loading scopes ([bf3cac5](https://github.com/cognizone/ng-cognizone/commit/bf3cac5377169c437c2707b0b2580f50f0492712))
+
 # [4.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2023-03-30)
 
 
