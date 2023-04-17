@@ -58,7 +58,12 @@ export abstract class AtomicCvProvider<T extends Concept = Concept> implements C
       toArray(),
       map(concepts => {
         const sorter = this.getConceptSorter(params);
-        return [...concepts].sort(sorter).map(c => c.concept);
+        let options = [...concepts].sort(sorter).map(c => c.concept);
+        if (params.pagination) {
+          const { from, size } = params.pagination;
+          options = options.slice(from, from + size);
+        }
+        return options;
       })
     );
   }
