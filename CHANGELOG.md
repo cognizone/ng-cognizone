@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/cognizone/ng-cognizone/compare/v3.1.0...v3.2.0) (2023-04-17)
+
+
+### Features
+
+* **model-utils:** add pagination to select options provider ([474bf1c](https://github.com/cognizone/ng-cognizone/commit/474bf1cd0448a2fb39f348d6c7a46ec7a3e5d857))
+
 # [3.1.0](https://github.com/cognizone/ng-cognizone/compare/v3.0.2...v3.1.0) (2023-04-07)
 
 
