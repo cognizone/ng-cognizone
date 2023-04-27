@@ -1,134 +1,128 @@
-# [4.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.5...v4.0.0-beta.6) (2023-04-17)
-
+# [4.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.6...v4.0.0-beta.7) (2023-04-27)
 
 ### Features
 
-* **legi-shared:** changed default value of updateOnBlur to true for the datepicker ([e65ec49](https://github.com/cognizone/ng-cognizone/commit/e65ec49507e463a1225d0b31320d0af039c2d183))
-* **model-utils:** add pagination to select options provider ([b5fd022](https://github.com/cognizone/ng-cognizone/commit/b5fd0228e9881799a438dc14ceb5a76d5644653c))
-* **ng-core:** add loading scopes ([bf3cac5](https://github.com/cognizone/ng-cognizone/commit/bf3cac5377169c437c2707b0b2580f50f0492712))
+- **ng-core:** added LoadingServiceFactory to ease reuse with defined options ([a4beb7a](https://github.com/cognizone/ng-cognizone/commit/a4beb7a97e2229b2fe40cee9b33db007f76da849))
+
+# [4.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.5...v4.0.0-beta.6) (2023-04-17)
+
+### Features
+
+- **legi-shared:** changed default value of updateOnBlur to true for the datepicker ([e65ec49](https://github.com/cognizone/ng-cognizone/commit/e65ec49507e463a1225d0b31320d0af039c2d183))
+- **model-utils:** add pagination to select options provider ([b5fd022](https://github.com/cognizone/ng-cognizone/commit/b5fd0228e9881799a438dc14ceb5a76d5644653c))
+- **ng-core:** add loading scopes ([bf3cac5](https://github.com/cognizone/ng-cognizone/commit/bf3cac5377169c437c2707b0b2580f50f0492712))
 
 # [4.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2023-03-30)
 
-
 ### Bug Fixes
 
-* **cdk:** fix pure pipe issue needing any instead of unknown ([1836d2b](https://github.com/cognizone/ng-cognizone/commit/1836d2b5dec0f235f5cc77f3f426b729a6930a4f))
+- **cdk:** fix pure pipe issue needing any instead of unknown ([1836d2b](https://github.com/cognizone/ng-cognizone/commit/1836d2b5dec0f235f5cc77f3f426b729a6930a4f))
 
 # [4.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2023-03-30)
 
-
 ### Bug Fixes
 
-* **legi-shared:** handle nullish options provider in select component ([3fefaee](https://github.com/cognizone/ng-cognizone/commit/3fefaee8ae97a04d6671f3c423dd34994a273ef7))
+- **legi-shared:** handle nullish options provider in select component ([3fefaee](https://github.com/cognizone/ng-cognizone/commit/3fefaee8ae97a04d6671f3c423dd34994a273ef7))
 
 # [4.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.2...v4.0.0-beta.3) (2023-03-22)
 
-
 ### Bug Fixes
 
-* peer dependencies to angular ^15 ([12e633d](https://github.com/cognizone/ng-cognizone/commit/12e633d683da9eca316dbaa79ebcca8be94fefe6))
+- peer dependencies to angular ^15 ([12e633d](https://github.com/cognizone/ng-cognizone/commit/12e633d683da9eca316dbaa79ebcca8be94fefe6))
 
 # [4.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.1...v4.0.0-beta.2) (2023-03-22)
 
-
 ### Bug Fixes
 
-* peer dependencies for beta ([d7ae84e](https://github.com/cognizone/ng-cognizone/commit/d7ae84e58356dfdeb79cf768748b9b32f63aca65))
+- peer dependencies for beta ([d7ae84e](https://github.com/cognizone/ng-cognizone/commit/d7ae84e58356dfdeb79cf768748b9b32f63aca65))
 
 # [4.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v3.0.0...v4.0.0-beta.1) (2023-03-22)
 
-
 ### Features
 
-* upgrade to Angular 15 ([65deff6](https://github.com/cognizone/ng-cognizone/commit/65deff61b0973ba313c2301d785b75e930d540d0))
-
+- upgrade to Angular 15 ([65deff6](https://github.com/cognizone/ng-cognizone/commit/65deff61b0973ba313c2301d785b75e930d540d0))
 
 ### BREAKING CHANGES
 
-* upgrade to Angular 15
+- upgrade to Angular 15
 
 # [3.0.0](https://github.com/cognizone/ng-cognizone/compare/v2.7.7...v3.0.0) (2023-03-21)
 
-
 ### Bug Fixes
 
-* cli build, part 1 ([eb7c71c](https://github.com/cognizone/ng-cognizone/commit/eb7c71c54e4e1c6bd11883066cb27874f0059c2a))
-* fixing github actions ([a98818b](https://github.com/cognizone/ng-cognizone/commit/a98818b1da647e352419a46d12f643bc911f81fa))
-* peer dependencies part 2 ([2834116](https://github.com/cognizone/ng-cognizone/commit/2834116d4117c366f9c049668e504b24abc9225c))
-* peer deps to rxjs accept ^7.0.0 ([3497fbf](https://github.com/cognizone/ng-cognizone/commit/3497fbffa8e6cce985c59045598be426559c8036))
-* **cdk:** public publish ([a355bc7](https://github.com/cognizone/ng-cognizone/commit/a355bc74cf48c3d07e52c06c85c99ba0626e3cc7))
-* **cli:** generate ap interfaces with optional facets ([e157016](https://github.com/cognizone/ng-cognizone/commit/e157016e68da490cce7368744f9ea1a9ba08998e))
-* **cli:** make it build again ([e1b9dd7](https://github.com/cognizone/ng-cognizone/commit/e1b9dd72bee87ce6a2698731985d3263004b756b))
-* **i18n:** translate pipe returns string ([c8b8394](https://github.com/cognizone/ng-cognizone/commit/c8b8394a67427a226b7e558ac38eff3a6ef2dad1))
-* **json-model:** added nullish checks for or cases ([c50ad99](https://github.com/cognizone/ng-cognizone/commit/c50ad9943f51599739794d58261d532835f2fc77))
-* **json-model:** export mappers from lib ([c72b673](https://github.com/cognizone/ng-cognizone/commit/c72b673123740e12c9b815b0610dd125d01f8cfb))
-* **json-model:** make sure to use longest uris when compacting ([eadae3e](https://github.com/cognizone/ng-cognizone/commit/eadae3e523a336026be845266cc034e5e9a3723b))
-* **json-model:** throw on properties that are neither attribute or reference ([9a70d55](https://github.com/cognizone/ng-cognizone/commit/9a70d55cd02c5d904e2aa2f00c4ad0867cae1780))
-* **json-model-graph:** set context on new node creation ([7e8757b](https://github.com/cognizone/ng-cognizone/commit/7e8757b6c2080d430593e954a89bad1ab329c4f6))
-* **legi-cv:** make CvService not fail if no providers were given ([f63517b](https://github.com/cognizone/ng-cognizone/commit/f63517b682a73056e8960fbe489e6609e460a32c))
-* **legi-shared:** add hint and error to cz-autocomplete-multi ([2a2d1ff](https://github.com/cognizone/ng-cognizone/commit/2a2d1ff8465118689b23e6c74ab9411e80af33f1))
-* **legi-shared:** add option to legishared to determine the date-picker icon position ([e8a9f47](https://github.com/cognizone/ng-cognizone/commit/e8a9f47e69162cad04a65fdfc6e0b105dddca313))
-* **legi-shared:** add startView input on date picker component ([d68870a](https://github.com/cognizone/ng-cognizone/commit/d68870a2dc940f0046b63fd8549611592c16bc83))
-* **legi-shared:** changing class for mat progress spinner and adding mode type ([2872c97](https://github.com/cognizone/ng-cognizone/commit/2872c97347cbc62f226f7c12d976bf09e2f53bfc))
-* **legi-shared:** handle number type in cz-input ([d091b7a](https://github.com/cognizone/ng-cognizone/commit/d091b7a4b0ef12a9947a4328d47ba120289bcec3))
-* **legi-shared:** show options content of autocomplete multi as innerHTML ([1cec0b0](https://github.com/cognizone/ng-cognizone/commit/1cec0b00b25d37cf0064bc3b7b39b81444ecadc8))
-* **ng-application-profile:** added missing export ([7f10b8e](https://github.com/cognizone/ng-cognizone/commit/7f10b8e20240cc0b4d73bfadce2560be2673577b))
-* **ng-application-profile:** handle or on datatype ([7310d8e](https://github.com/cognizone/ng-cognizone/commit/7310d8ed079038fa1f2474bb8e55df638dfbc5a7))
-* **ng-application-profile:** prevent saving of empty strings ([7aafacf](https://github.com/cognizone/ng-cognizone/commit/7aafacffa9ef24e084b8225e8d734b6b0629d0e9))
-* adapt peer dependencies ([56672b7](https://github.com/cognizone/ng-cognizone/commit/56672b74a1b8bad403770e80c86b7c75433719dc))
-* adapt peer dependencies to work with npm 7+ ([75ac274](https://github.com/cognizone/ng-cognizone/commit/75ac274ee173bf4d3e78908af747652580b44465))
-* adding rxjs everywhere in peer deps because nx add it automatically ([a8c5d1e](https://github.com/cognizone/ng-cognizone/commit/a8c5d1e523024c7ab7f7afe0e9a04423cc460713))
-* come on Nx! ([0fcdf4d](https://github.com/cognizone/ng-cognizone/commit/0fcdf4d2d1ff14139878b11f44c8e20cd68e8dc6))
-* come on Nx! part 2 ([c29773d](https://github.com/cognizone/ng-cognizone/commit/c29773dc7badea3abc7022fa54d1418d679fd7b1))
-* come on Nx! part 3 ([af22ae6](https://github.com/cognizone/ng-cognizone/commit/af22ae6fc858c69c4dabf798c04bd34faa9f35c3))
-* issue with ivy builds being enabled for model-utils, ng-core and ng-yasgui ([aded6c5](https://github.com/cognizone/ng-cognizone/commit/aded6c595b6a165fd1532ac821cc42a5b3c7672c))
-* peer deps, part 4 ([2dab208](https://github.com/cognizone/ng-cognizone/commit/2dab2087df25e0745c90bdfa3b3e248ca12be881))
-* remove lodash-es/set from resource-graph.service ([557af15](https://github.com/cognizone/ng-cognizone/commit/557af15e720b5295647cb2f6292868e139b11f34))
-* **legi-shared:** mark component for check on setDisabledState ([f6ba330](https://github.com/cognizone/ng-cognizone/commit/f6ba330e63b359eade80e78d399b66deda7eafc1))
-* **model-utils:** accept rxjs 7 ([bb677a8](https://github.com/cognizone/ng-cognizone/commit/bb677a8f0787227c5886fd4737a332e695f9af8f))
-* **ng-application-profile:** handle apName in getConcreteType ([6adf6a3](https://github.com/cognizone/ng-cognizone/commit/6adf6a3a04b924e8d326281a3d038a825e2a6b86))
-* **ng-application-profile:** handle or with datatype ([1c5311d](https://github.com/cognizone/ng-cognizone/commit/1c5311d0a085b9b00a44e32c2b925b5aae4b0b21))
-* trigger release again ([3b094b4](https://github.com/cognizone/ng-cognizone/commit/3b094b467cfe5c41c7b232891bcb537839153141))
-
+- cli build, part 1 ([eb7c71c](https://github.com/cognizone/ng-cognizone/commit/eb7c71c54e4e1c6bd11883066cb27874f0059c2a))
+- fixing github actions ([a98818b](https://github.com/cognizone/ng-cognizone/commit/a98818b1da647e352419a46d12f643bc911f81fa))
+- peer dependencies part 2 ([2834116](https://github.com/cognizone/ng-cognizone/commit/2834116d4117c366f9c049668e504b24abc9225c))
+- peer deps to rxjs accept ^7.0.0 ([3497fbf](https://github.com/cognizone/ng-cognizone/commit/3497fbffa8e6cce985c59045598be426559c8036))
+- **cdk:** public publish ([a355bc7](https://github.com/cognizone/ng-cognizone/commit/a355bc74cf48c3d07e52c06c85c99ba0626e3cc7))
+- **cli:** generate ap interfaces with optional facets ([e157016](https://github.com/cognizone/ng-cognizone/commit/e157016e68da490cce7368744f9ea1a9ba08998e))
+- **cli:** make it build again ([e1b9dd7](https://github.com/cognizone/ng-cognizone/commit/e1b9dd72bee87ce6a2698731985d3263004b756b))
+- **i18n:** translate pipe returns string ([c8b8394](https://github.com/cognizone/ng-cognizone/commit/c8b8394a67427a226b7e558ac38eff3a6ef2dad1))
+- **json-model:** added nullish checks for or cases ([c50ad99](https://github.com/cognizone/ng-cognizone/commit/c50ad9943f51599739794d58261d532835f2fc77))
+- **json-model:** export mappers from lib ([c72b673](https://github.com/cognizone/ng-cognizone/commit/c72b673123740e12c9b815b0610dd125d01f8cfb))
+- **json-model:** make sure to use longest uris when compacting ([eadae3e](https://github.com/cognizone/ng-cognizone/commit/eadae3e523a336026be845266cc034e5e9a3723b))
+- **json-model:** throw on properties that are neither attribute or reference ([9a70d55](https://github.com/cognizone/ng-cognizone/commit/9a70d55cd02c5d904e2aa2f00c4ad0867cae1780))
+- **json-model-graph:** set context on new node creation ([7e8757b](https://github.com/cognizone/ng-cognizone/commit/7e8757b6c2080d430593e954a89bad1ab329c4f6))
+- **legi-cv:** make CvService not fail if no providers were given ([f63517b](https://github.com/cognizone/ng-cognizone/commit/f63517b682a73056e8960fbe489e6609e460a32c))
+- **legi-shared:** add hint and error to cz-autocomplete-multi ([2a2d1ff](https://github.com/cognizone/ng-cognizone/commit/2a2d1ff8465118689b23e6c74ab9411e80af33f1))
+- **legi-shared:** add option to legishared to determine the date-picker icon position ([e8a9f47](https://github.com/cognizone/ng-cognizone/commit/e8a9f47e69162cad04a65fdfc6e0b105dddca313))
+- **legi-shared:** add startView input on date picker component ([d68870a](https://github.com/cognizone/ng-cognizone/commit/d68870a2dc940f0046b63fd8549611592c16bc83))
+- **legi-shared:** changing class for mat progress spinner and adding mode type ([2872c97](https://github.com/cognizone/ng-cognizone/commit/2872c97347cbc62f226f7c12d976bf09e2f53bfc))
+- **legi-shared:** handle number type in cz-input ([d091b7a](https://github.com/cognizone/ng-cognizone/commit/d091b7a4b0ef12a9947a4328d47ba120289bcec3))
+- **legi-shared:** show options content of autocomplete multi as innerHTML ([1cec0b0](https://github.com/cognizone/ng-cognizone/commit/1cec0b00b25d37cf0064bc3b7b39b81444ecadc8))
+- **ng-application-profile:** added missing export ([7f10b8e](https://github.com/cognizone/ng-cognizone/commit/7f10b8e20240cc0b4d73bfadce2560be2673577b))
+- **ng-application-profile:** handle or on datatype ([7310d8e](https://github.com/cognizone/ng-cognizone/commit/7310d8ed079038fa1f2474bb8e55df638dfbc5a7))
+- **ng-application-profile:** prevent saving of empty strings ([7aafacf](https://github.com/cognizone/ng-cognizone/commit/7aafacffa9ef24e084b8225e8d734b6b0629d0e9))
+- adapt peer dependencies ([56672b7](https://github.com/cognizone/ng-cognizone/commit/56672b74a1b8bad403770e80c86b7c75433719dc))
+- adapt peer dependencies to work with npm 7+ ([75ac274](https://github.com/cognizone/ng-cognizone/commit/75ac274ee173bf4d3e78908af747652580b44465))
+- adding rxjs everywhere in peer deps because nx add it automatically ([a8c5d1e](https://github.com/cognizone/ng-cognizone/commit/a8c5d1e523024c7ab7f7afe0e9a04423cc460713))
+- come on Nx! ([0fcdf4d](https://github.com/cognizone/ng-cognizone/commit/0fcdf4d2d1ff14139878b11f44c8e20cd68e8dc6))
+- come on Nx! part 2 ([c29773d](https://github.com/cognizone/ng-cognizone/commit/c29773dc7badea3abc7022fa54d1418d679fd7b1))
+- come on Nx! part 3 ([af22ae6](https://github.com/cognizone/ng-cognizone/commit/af22ae6fc858c69c4dabf798c04bd34faa9f35c3))
+- issue with ivy builds being enabled for model-utils, ng-core and ng-yasgui ([aded6c5](https://github.com/cognizone/ng-cognizone/commit/aded6c595b6a165fd1532ac821cc42a5b3c7672c))
+- peer deps, part 4 ([2dab208](https://github.com/cognizone/ng-cognizone/commit/2dab2087df25e0745c90bdfa3b3e248ca12be881))
+- remove lodash-es/set from resource-graph.service ([557af15](https://github.com/cognizone/ng-cognizone/commit/557af15e720b5295647cb2f6292868e139b11f34))
+- **legi-shared:** mark component for check on setDisabledState ([f6ba330](https://github.com/cognizone/ng-cognizone/commit/f6ba330e63b359eade80e78d399b66deda7eafc1))
+- **model-utils:** accept rxjs 7 ([bb677a8](https://github.com/cognizone/ng-cognizone/commit/bb677a8f0787227c5886fd4737a332e695f9af8f))
+- **ng-application-profile:** handle apName in getConcreteType ([6adf6a3](https://github.com/cognizone/ng-cognizone/commit/6adf6a3a04b924e8d326281a3d038a825e2a6b86))
+- **ng-application-profile:** handle or with datatype ([1c5311d](https://github.com/cognizone/ng-cognizone/commit/1c5311d0a085b9b00a44e32c2b925b5aae4b0b21))
+- trigger release again ([3b094b4](https://github.com/cognizone/ng-cognizone/commit/3b094b467cfe5c41c7b232891bcb537839153141))
 
 ### chore
 
-* **json-model-graph:** make the lib independent from Ap ([1640de3](https://github.com/cognizone/ng-cognizone/commit/1640de36b7857c26f96e3dd522620fb3b10fa684))
-
+- **json-model-graph:** make the lib independent from Ap ([1640de3](https://github.com/cognizone/ng-cognizone/commit/1640de36b7857c26f96e3dd522620fb3b10fa684))
 
 ### Features
 
-* **cdk:** new library, added pureMethod and pureFn pipes ([dd086ee](https://github.com/cognizone/ng-cognizone/commit/dd086ee55114cf87fd6a4a0f8b864a1d9d929d1c))
-* **elastic-explorer:** full screen mode feature ([52c69fd](https://github.com/cognizone/ng-cognizone/commit/52c69fd85b0e031fca5748a5d20dd6c926ae5c15)), closes [#T14867](https://github.com/cognizone/ng-cognizone/issues/T14867)
-* **elastic-explorer:** update ngx-monaco-editor and applying styles for full screen width ([c3a93e7](https://github.com/cognizone/ng-cognizone/commit/c3a93e7b198be4ade09ca030edd13ba7b808bbb8)), closes [#T14867](https://github.com/cognizone/ng-cognizone/issues/T14867)
-* **json-model:** added more capabilities to PrefixCcService ([66cb86e](https://github.com/cognizone/ng-cognizone/commit/66cb86e450b96ef54cc9125f6e21a318ce3d1fe5))
-* **json-model:** created dedicated json-model library ([7e07384](https://github.com/cognizone/ng-cognizone/commit/7e073848fe1d4755086102d24178564b2d9f0605))
-* **json-model:** handle range of multiple datatypes ([5a327a1](https://github.com/cognizone/ng-cognizone/commit/5a327a1c6269818303c085729195c47f584cd899))
-* **json-model:** more adaptations for shacl library ([35e9e51](https://github.com/cognizone/ng-cognizone/commit/35e9e5134815b09138a422d647005cf4108bf0bc))
-* **json-model:** smarter default IdGenerator ([dfbfb60](https://github.com/cognizone/ng-cognizone/commit/dfbfb60b34b4ce7f75b7dfca9f934867743b186c))
-* **json-model:** use new [@context](https://github.com/context) typed as TypedResourceContext ([a87f8c4](https://github.com/cognizone/ng-cognizone/commit/a87f8c4945e4e8a4a640e8bdf1a36d079e25385d))
-* **json-model-graph:** accept undefined referenceUri in setReference ([4b6bba2](https://github.com/cognizone/ng-cognizone/commit/4b6bba2984718a756aabfe6bb8b68e6739c68b9f))
-* **json-model-graph:** added innerPath option for linking model to control ([52e6641](https://github.com/cognizone/ng-cognizone/commit/52e6641bed6001fa5adfc63570e4657d2b3b4b9d))
-* **json-model-graph:** added option to use czRootUri as a structural directive ([c1009f3](https://github.com/cognizone/ng-cognizone/commit/c1009f3e3c73427ddca18400d91ca0b2a821fa4c))
-* **json-model-graph:** introducing GraphFormContextService ([d35dbd4](https://github.com/cognizone/ng-cognizone/commit/d35dbd4f7d8ebd1802ffb2aae73dd9ecacef17d5))
-* **json-model-graph:** lazy evaluation of linked  graphs ([e69f532](https://github.com/cognizone/ng-cognizone/commit/e69f532800612bcf8872f7eb0ef07b223e62a824))
-* **legi-cv:** make it easier to override Concept to SelectOption mapping ([9a33b92](https://github.com/cognizone/ng-cognizone/commit/9a33b925b293027bced114c828d7e2c1fefa4711))
-* **legi-shared:** add partial string handling in date-picker ([318723a](https://github.com/cognizone/ng-cognizone/commit/318723af92f0c1b640e28b32bb905dba0b8248f2))
-* upgrade angular and nx to 14 ([8cd63f8](https://github.com/cognizone/ng-cognizone/commit/8cd63f87d596dbfe5a12fe39b59e9aa402dce796))
-* **legi-shared:** made cz-input and cz-date-picker better suited for validation ([e343f11](https://github.com/cognizone/ng-cognizone/commit/e343f11b8bea06a334980510e3b6417dba5f896d))
-
+- **cdk:** new library, added pureMethod and pureFn pipes ([dd086ee](https://github.com/cognizone/ng-cognizone/commit/dd086ee55114cf87fd6a4a0f8b864a1d9d929d1c))
+- **elastic-explorer:** full screen mode feature ([52c69fd](https://github.com/cognizone/ng-cognizone/commit/52c69fd85b0e031fca5748a5d20dd6c926ae5c15)), closes [#T14867](https://github.com/cognizone/ng-cognizone/issues/T14867)
+- **elastic-explorer:** update ngx-monaco-editor and applying styles for full screen width ([c3a93e7](https://github.com/cognizone/ng-cognizone/commit/c3a93e7b198be4ade09ca030edd13ba7b808bbb8)), closes [#T14867](https://github.com/cognizone/ng-cognizone/issues/T14867)
+- **json-model:** added more capabilities to PrefixCcService ([66cb86e](https://github.com/cognizone/ng-cognizone/commit/66cb86e450b96ef54cc9125f6e21a318ce3d1fe5))
+- **json-model:** created dedicated json-model library ([7e07384](https://github.com/cognizone/ng-cognizone/commit/7e073848fe1d4755086102d24178564b2d9f0605))
+- **json-model:** handle range of multiple datatypes ([5a327a1](https://github.com/cognizone/ng-cognizone/commit/5a327a1c6269818303c085729195c47f584cd899))
+- **json-model:** more adaptations for shacl library ([35e9e51](https://github.com/cognizone/ng-cognizone/commit/35e9e5134815b09138a422d647005cf4108bf0bc))
+- **json-model:** smarter default IdGenerator ([dfbfb60](https://github.com/cognizone/ng-cognizone/commit/dfbfb60b34b4ce7f75b7dfca9f934867743b186c))
+- **json-model:** use new [@context](https://github.com/context) typed as TypedResourceContext ([a87f8c4](https://github.com/cognizone/ng-cognizone/commit/a87f8c4945e4e8a4a640e8bdf1a36d079e25385d))
+- **json-model-graph:** accept undefined referenceUri in setReference ([4b6bba2](https://github.com/cognizone/ng-cognizone/commit/4b6bba2984718a756aabfe6bb8b68e6739c68b9f))
+- **json-model-graph:** added innerPath option for linking model to control ([52e6641](https://github.com/cognizone/ng-cognizone/commit/52e6641bed6001fa5adfc63570e4657d2b3b4b9d))
+- **json-model-graph:** added option to use czRootUri as a structural directive ([c1009f3](https://github.com/cognizone/ng-cognizone/commit/c1009f3e3c73427ddca18400d91ca0b2a821fa4c))
+- **json-model-graph:** introducing GraphFormContextService ([d35dbd4](https://github.com/cognizone/ng-cognizone/commit/d35dbd4f7d8ebd1802ffb2aae73dd9ecacef17d5))
+- **json-model-graph:** lazy evaluation of linked graphs ([e69f532](https://github.com/cognizone/ng-cognizone/commit/e69f532800612bcf8872f7eb0ef07b223e62a824))
+- **legi-cv:** make it easier to override Concept to SelectOption mapping ([9a33b92](https://github.com/cognizone/ng-cognizone/commit/9a33b925b293027bced114c828d7e2c1fefa4711))
+- **legi-shared:** add partial string handling in date-picker ([318723a](https://github.com/cognizone/ng-cognizone/commit/318723af92f0c1b640e28b32bb905dba0b8248f2))
+- upgrade angular and nx to 14 ([8cd63f8](https://github.com/cognizone/ng-cognizone/commit/8cd63f87d596dbfe5a12fe39b59e9aa402dce796))
+- **legi-shared:** made cz-input and cz-date-picker better suited for validation ([e343f11](https://github.com/cognizone/ng-cognizone/commit/e343f11b8bea06a334980510e3b6417dba5f896d))
 
 ### Performance Improvements
 
-* **json-model-graph:** more efficient way to get state snapshot ([e0f6248](https://github.com/cognizone/ng-cognizone/commit/e0f624860175b0794bdf593e1d70261fd224974f))
-
+- **json-model-graph:** more efficient way to get state snapshot ([e0f6248](https://github.com/cognizone/ng-cognizone/commit/e0f624860175b0794bdf593e1d70261fd224974f))
 
 ### BREAKING CHANGES
 
-* **json-model-graph:** removed RootUriDirective:apName, since it was already available from the graph state
-* **json-model:** @context is now set as TypedResourceContext, which is more feature-ful than the old type.
-It is expected that the old @context was not used by consumers, it was there for legacy and debugging purposes. This is getting use
-closer to the json-ld spec (but still not there).
+- **json-model-graph:** removed RootUriDirective:apName, since it was already available from the graph state
+- **json-model:** @context is now set as TypedResourceContext, which is more feature-ful than the old type.
+  It is expected that the old @context was not used by consumers, it was there for legacy and debugging purposes. This is getting use
+  closer to the json-ld spec (but still not there).
 
 ## [2.7.7](https://github.com/cognizone/ng-cognizone/compare/v2.7.6...v2.7.7) (2023-02-22)
 
