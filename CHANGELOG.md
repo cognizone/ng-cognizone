@@ -1,3 +1,9 @@
+# [3.4.0](https://github.com/cognizone/ng-cognizone/compare/v3.3.0...v3.4.0) (2023-05-24)
+
+### Features
+
+- **legi-shared:** add custom label handling for most inputs ([a5cb8f5](https://github.com/cognizone/ng-cognizone/commit/a5cb8f57aea5e301e20ce38f6b29ca0807594c3c))
+
 # [3.3.0](https://github.com/cognizone/ng-cognizone/compare/v3.2.0...v3.3.0) (2023-04-27)
 
 ### Features
