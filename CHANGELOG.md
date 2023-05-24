@@ -1,3 +1,9 @@
+# [4.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.7...v4.0.0-beta.8) (2023-05-24)
+
+### Features
+
+- **legi-shared:** add custom label handling for most inputs ([3ccc508](https://github.com/cognizone/ng-cognizone/commit/3ccc508be387602830cad460f5957d6da4debc4b))
+
 # [4.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.6...v4.0.0-beta.7) (2023-04-27)
 
 ### Features
