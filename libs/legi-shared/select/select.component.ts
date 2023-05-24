@@ -14,6 +14,7 @@ import {
 import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { LabelComponent } from '@cognizone/legi-shared/label';
 import { I18nService } from '@cognizone/i18n';
 
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
@@ -61,8 +62,10 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
   removeDisabledOptions = true;
   @Input()
   isCompact = false;
-  @ContentChild(TemplateRef, { static: false })
-  template!: TemplateRef<unknown>;
+  @ContentChild('optionTpl', { static: false, read: TemplateRef })
+  template?: TemplateRef<unknown>;
+  @ContentChild(LabelComponent, { static: false, read: LabelComponent })
+  labelComponent?: LabelComponent;
 
   @Input()
   hint?: string;
