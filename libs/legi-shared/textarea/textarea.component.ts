@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { LabelComponent } from '@cognizone/legi-shared/label';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 
 /**
@@ -34,16 +35,18 @@ export class TextareaComponent extends ControlComponent<string> {
   @Input()
   label?: string;
   @Input()
-  autoTrim: boolean = true;
+  autoTrim = true;
   @Input()
   hint?: string;
   @Input()
-  autosize: boolean = true;
+  autosize = true;
 
   @ContentChild('czPrefix', { static: false, read: TemplateRef })
   prefixTpl?: TemplateRef<unknown>;
   @ContentChild('czSuffix', { static: false, read: TemplateRef })
   suffixTpl?: TemplateRef<unknown>;
+  @ContentChild(LabelComponent, { static: false, read: LabelComponent })
+  labelComponent?: LabelComponent;
 
   embeddedControl: UntypedFormControl = new UntypedFormControl();
 

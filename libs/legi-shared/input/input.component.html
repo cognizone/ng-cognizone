@@ -1,6 +1,6 @@
-<div *ngIf="label && classicMode" class="czls-title">{{ label }}</div>
+<div *ngIf="(label || labelComponent) && classicMode" class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></div>
 <mat-form-field #outlineFieldRef appearance="outline" [ngClass]="{ 'is-readonly': readonly, 'cz-classic-appearance': classicMode }">
-  <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
+  <mat-label *ngIf="(label || labelComponent) && !classicMode">{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
   <input
     matInput
     [autocomplete]="inputAutocomplete"

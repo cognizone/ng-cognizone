@@ -17,6 +17,7 @@ import { MatLegacyFormField as MatFormField } from '@angular/material/legacy-for
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { bindControls, extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
+import { LabelComponent } from '@cognizone/legi-shared/label';
 
 /**
  * `InputComponent` uses a standard mat-input, with customized parameters and properties,
@@ -47,15 +48,15 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
   @Input()
   ariaLabel?: string;
   @Input()
-  autoTrim: boolean = true;
+  autoTrim = true;
   @Input()
   hint?: string;
   @Input()
-  readonly: boolean = false;
+  readonly = false;
   @Input()
-  type: string = 'text';
+  type = 'text';
   @Input()
-  inputAutocomplete: string = 'off';
+  inputAutocomplete = 'off';
 
   @Output()
   inputFocus: EventEmitter<FocusEvent> = new EventEmitter();
@@ -66,6 +67,8 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
   prefixTpl?: TemplateRef<unknown>;
   @ContentChild('czSuffix', { static: false, read: TemplateRef })
   suffixTpl?: TemplateRef<unknown>;
+  @ContentChild(LabelComponent, { static: false, read: LabelComponent })
+  labelComponent?: LabelComponent;
 
   embeddedControl: AbstractControl = new UntypedFormControl();
 

@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, Input, OnInit, Optional, Self } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ContentChild, Inject, Input, OnInit, Optional, Self } from '@angular/core';
 import { ControlContainer, UntypedFormControl, NgControl } from '@angular/forms';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { LabelComponent } from '@cognizone/legi-shared/label';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
 import * as _moment from 'moment';
 import { Moment } from 'moment';
@@ -57,6 +58,9 @@ export class DatePickerComponent extends ControlComponent<Date | null> implement
     }
     return this.config.appearance === 'urban' ? 'suffix' : 'prefix';
   }
+
+  @ContentChild(LabelComponent, { static: false, read: LabelComponent })
+  labelComponent?: LabelComponent;
 
   /**
    * @ignore

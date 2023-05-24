@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  ContentChild,
   ElementRef,
   forwardRef,
   Inject,
@@ -17,6 +18,7 @@ import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angula
 import { MatLegacyAutocompleteSelectedEvent as MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
+import { LabelComponent } from '@cognizone/legi-shared/label';
 import { I18nService } from '@cognizone/i18n';
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import { getAllSelectOptions, manyToArray, Nil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
@@ -84,6 +86,8 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
   multiInput!: ElementRef<HTMLInputElement>;
   @ViewChild('singleInput')
   singleInput!: ElementRef<HTMLInputElement>;
+  @ContentChild(LabelComponent, { static: false, read: LabelComponent })
+  labelComponent?: LabelComponent;
 
   singleInputControl: UntypedFormControl = new UntypedFormControl();
 
@@ -143,7 +147,7 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
     const option = allOptions.find(o => o.value === value);
     if (option) return this.i18n.translate(option.label, undefined, this.lang);
     this.storeValueOption(value);
-    return (value as unknown) as string;
+    return value as unknown as string;
   };
 
   trackByFn: TrackByFunction<SelectOption<T>> = (index, option) => option.value;
@@ -185,7 +189,7 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
 
   onSingleBlur(): void {
     if (!this.singleInput.nativeElement.value.trim() && this.model) {
-      this.setModelAndEmit((undefined as unknown) as T);
+      this.setModelAndEmit(undefined as unknown as T);
     }
     if (!this.model) {
       this.singleInput.nativeElement.value = '';
@@ -243,11 +247,11 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
       .pipe(
         distinctUntilChanged(),
         filter(query => typeof query === 'string'),
-        switchMap(query => combineLatest([this._optionsProvider.hasOptionFor((query as unknown) as T), of(query)]))
+        switchMap(query => combineLatest([this._optionsProvider.hasOptionFor(query as unknown as T), of(query)]))
       )
       .subscribe(([hasOption, value]) => {
         if (hasOption) {
-          this.setModelAndEmit((value as unknown) as T);
+          this.setModelAndEmit(value as unknown as T);
         }
       });
   }
@@ -272,7 +276,7 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
               (await this.getSelectOption(value)) ??
               ({
                 value,
-                label: (value as unknown) as string,
+                label: value as unknown as string,
               } as SelectOption<T>);
             options.push(option);
           }
