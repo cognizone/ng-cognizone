@@ -1,7 +1,7 @@
 <div class="d-flex flex-column">
-  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
+  <span *ngIf="(label || labelComponent) && classicMode" class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
   <mat-form-field *ngIf="multi; else singleTemplate" [class.mat-form-field-disabled]="disabled" [class.cz-classic-appearance]="classicMode">
-    <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
+    <mat-label *ngIf="(label || labelComponent) && !classicMode">{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
     <mat-icon matPrefix>search</mat-icon>
     <mat-chip-list #chipList>
       <mat-chip
@@ -33,7 +33,7 @@
 
   <ng-template #singleTemplate>
     <mat-form-field class="my-single-field" [class.cz-classic-appearance]="classicMode">
-      <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
+      <mat-label *ngIf="(label || labelComponent) && !classicMode">{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
       <mat-icon matPrefix>search</mat-icon>
       <textarea
         #singleInput

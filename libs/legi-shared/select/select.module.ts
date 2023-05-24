@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { I18nModule } from '@cognizone/i18n';
 import { SelectOptionSortModule } from '@cognizone/legi-shared/select-option-sort';
+import { LabelModule } from '@cognizone/legi-shared/label';
 
 import { SelectComponent } from './select.component';
 
@@ -23,6 +24,7 @@ import { SelectComponent } from './select.component';
     // Cognizone
     SelectOptionSortModule,
     I18nModule,
+    LabelModule,
   ],
   declarations: [SelectComponent],
   exports: [SelectComponent],

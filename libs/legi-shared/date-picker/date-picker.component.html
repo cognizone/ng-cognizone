@@ -1,7 +1,7 @@
 <label class="d-flex flex-column" [class.is-readonly]="readonly">
-  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
+  <span *ngIf="(label || labelComponent) && classicMode" class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
   <mat-form-field appearance="outline" [class.cz-classic-appearance]="classicMode" class="my-date-picker">
-    <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
+    <mat-label *ngIf="(label || labelComponent) && !classicMode">{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
     <mat-datepicker-toggle matPrefix [for]="picker" *ngIf="iconPosition === 'prefix'">
       <mat-icon matDatepickerToggleIcon>event</mat-icon>
     </mat-datepicker-toggle>

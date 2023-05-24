@@ -122,6 +122,10 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v3.3 to v3.4
+
+- cz-select: to pass a dedicated ngTemplate to display options, need to give it the #optionTpl identifier to not overlap with cz-label transclusion when used.
+
 ## Migrating from v2 to v3
 
 - JsonModel and related types, services and utilities have been moved to @cognizone/json-model, so this library need to be added and imports need to be adapted
