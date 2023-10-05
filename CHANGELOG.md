@@ -1,3 +1,9 @@
+## [3.4.1](https://github.com/cognizone/ng-cognizone/compare/v3.4.0...v3.4.1) (2023-10-05)
+
+### Bug Fixes
+
+- **eslint-config:** correct peer dependencies ([3d9fa30](https://github.com/cognizone/ng-cognizone/commit/3d9fa304215520751a9428dc480b3bbe89294e60))
+
 # [3.4.0](https://github.com/cognizone/ng-cognizone/compare/v3.3.0...v3.4.0) (2023-05-24)
 
 ### Features
