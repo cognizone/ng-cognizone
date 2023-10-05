@@ -1,3 +1,9 @@
+# [4.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.8...v4.0.0-beta.9) (2023-10-05)
+
+### Bug Fixes
+
+- **eslint-config:** correct peer dependencies ([9ff310b](https://github.com/cognizone/ng-cognizone/commit/9ff310b991c5e44ec790fa40306402931ba9c190))
+
 # [4.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.7...v4.0.0-beta.8) (2023-05-24)
 
 ### Features
