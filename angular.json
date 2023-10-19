@@ -28,6 +28,7 @@
     "operation": "libs/operation",
     "permissions": "libs/permissions",
     "prettier-config": "libs/prettier-config",
+    "seo": "libs/seo",
     "transloco-langstring": "libs/transloco-langstring",
     "tslint-config": "libs/tslint-config",
     "user-action": "libs/user-action"
