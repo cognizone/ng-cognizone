@@ -1,3 +1,10 @@
+## [2.7.8](https://github.com/cognizone/ng-cognizone/compare/v2.7.7...v2.7.8) (2023-10-25)
+
+
+### Bug Fixes
+
+* **legi-shared:** correctly disable options in autocomplete ([c024b6a](https://github.com/cognizone/ng-cognizone/commit/c024b6ad916fcc58e0574d93777805f34d3cde0b))
+
 ## [2.7.7](https://github.com/cognizone/ng-cognizone/compare/v2.7.6...v2.7.7) (2023-02-22)
 
 
