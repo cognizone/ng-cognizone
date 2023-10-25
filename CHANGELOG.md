@@ -1,3 +1,9 @@
+# [4.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.9...v4.0.0-beta.10) (2023-10-25)
+
+### Bug Fixes
+
+- **legi-shared:** correctly disable option in autocomplete ([a25f0b4](https://github.com/cognizone/ng-cognizone/commit/a25f0b48e737b1cfd4668d8db4d08801cb34a77b))
+
 # [4.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.8...v4.0.0-beta.9) (2023-10-05)
 
 ### Bug Fixes
