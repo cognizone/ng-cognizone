@@ -40,6 +40,7 @@
   <mat-option
     *ngFor="let option of options | selectOptionsSort: sortType; trackBy: trackByFn"
     [value]="option.value"
+    [disabled]="option.disabled"
     [matTooltip]="option.data && option.data.tooltip ? (option.data.tooltip | czLabel: lang) : (option.label | czLabel: lang)"
   >
     <span [innerHTML]="option.label | czLabel: lang"></span
