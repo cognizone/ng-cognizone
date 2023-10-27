@@ -1,5 +1,4 @@
-import { isObservable } from 'rxjs';
-import { first } from 'rxjs/operators';
+import { firstValueFrom, isObservable } from 'rxjs';
 
 import { Completable } from '../models';
 
@@ -17,7 +16,7 @@ export const awaitForCompletable = completableToPromise;
  */
 export async function completableToPromise<T>(resource: Completable<T>): Promise<T> {
   if (isObservable(resource)) {
-    return resource.pipe(first()).toPromise();
+    return firstValueFrom(resource);
   }
 
   return resource;

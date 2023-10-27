@@ -1,10 +1,8 @@
 import { Inject, Injectable } from '@angular/core';
 import { ApplicationProfile } from '@cognizone/application-profile';
-import { isObservable } from 'rxjs';
-import { first } from 'rxjs/operators';
+import { firstValueFrom, isObservable } from 'rxjs';
 
 import { ApStore } from '../store/ap.store';
-
 import { AP_LOADER_TOKEN, ApLoader } from './ap-loader';
 
 @Injectable({ providedIn: 'root' })
@@ -32,7 +30,7 @@ export class ApService {
     const resp = loader.load();
 
     if (isObservable(resp)) {
-      return resp.pipe(first()).toPromise();
+      return firstValueFrom(resp);
     }
     return resp;
   }

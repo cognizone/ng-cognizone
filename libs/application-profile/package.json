@@ -3,7 +3,7 @@
   "version": "3.4.2",
   "peerDependencies": {
     "@cognizone/model-utils": ">=3.0.0",
-    "rxjs": "^6.6.3 || ^7.0.0"
+    "rxjs": "^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

@@ -16,16 +16,15 @@ import {
 } from '@angular/core';
 import { ControlContainer, NgControl, UntypedFormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
-import { I18nService } from '@cognizone/i18n';
-
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
+import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { getAllSelectOptions, manyToArray, Nil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
-import { Subject } from 'rxjs';
+import { firstValueFrom, Subject } from 'rxjs';
 import { distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/operators';
-import { extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 
 /**
  * `AutocompleteMultiComponent` allows user to pass a set of options and select multiple ones
@@ -267,9 +266,9 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
    */
   private async storeValueOption(value: T): Promise<SelectOption<T> | undefined> {
     if (!this._optionsProvider || !value) return undefined;
-    const hasOption = await this.optionsProvider.hasOptionFor(value).toPromise();
+    const hasOption = await firstValueFrom(this.optionsProvider.hasOptionFor(value));
     if (!hasOption) return undefined;
-    const option = await this._optionsProvider.getValueOption(value).toPromise();
+    const option = await firstValueFrom(this._optionsProvider.getValueOption(value));
     this.storedValueOptions.push(option);
     return option;
   }

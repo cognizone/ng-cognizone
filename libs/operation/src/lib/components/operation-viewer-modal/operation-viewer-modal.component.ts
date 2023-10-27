@@ -26,7 +26,7 @@ export class OperationViewerModalComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.allOperations = await this.operationsService.groups$.pipe(first()).toPromise();
     if (!this.data.operation) {
-      this.group = this.operationUtils.getGroup(this.allOperations, this.data.operationGroupDescriptions);
+      this.group = this.operationUtils.getGroup(this.allOperations ?? [], this.data.operationGroupDescriptions);
     }
   }
 }
