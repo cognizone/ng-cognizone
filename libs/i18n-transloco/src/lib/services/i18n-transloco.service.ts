@@ -55,7 +55,7 @@ export class I18nTranslocoService extends I18nService {
   }
 
   selectTranslate<T = unknown>(key: CzLabel, params?: {}, lang?: string): Observable<T> {
-    if (lang) return of(this.translate(key, params, lang));
+    if (lang) return of(this.translate(key, params, lang) ?? ('' as unknown as T));
 
     return this.selectActiveLang().pipe(map(activeLang => this.translate(key, params, activeLang)));
   }

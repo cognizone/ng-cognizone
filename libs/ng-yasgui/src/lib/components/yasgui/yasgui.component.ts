@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { first } from 'rxjs/operators';
+import { firstValueFrom } from 'rxjs';
 
 import { Yasgui, YasguiOptions } from '../../models/yasgui';
 import { YasguiService } from '../../services/yasgui.service';
@@ -61,7 +61,7 @@ export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   private async createYasgui(): Promise<Yasgui> {
-    const YASGUI = await this.yasguiService.loadYasgui().pipe(first()).toPromise();
+    const YASGUI = await firstValueFrom(this.yasguiService.loadYasgui());
 
     YASGUI.YASQE.defaults.sparql.showQueryButton = true;
     return YASGUI(this.yasguiRef.nativeElement, this.options);

@@ -14,16 +14,16 @@ import {
   TrackByFunction,
   ViewChild,
 } from '@angular/core';
-import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { LabelComponent } from '@cognizone/legi-shared/label';
-import { I18nService } from '@cognizone/i18n';
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import { getAllSelectOptions, manyToArray, Nil, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
-import { combineLatest, of, Subject } from 'rxjs';
+import { combineLatest, firstValueFrom, of, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/operators';
 
 let deprecatedWarned = false;
@@ -232,9 +232,9 @@ export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implemen
 
   private async storeValueOption(value: T): Promise<SelectOption<T> | undefined> {
     if (!this._optionsProvider || !value) return undefined;
-    const hasOption = await this.optionsProvider.hasOptionFor(value).toPromise();
+    const hasOption = await firstValueFrom(this.optionsProvider.hasOptionFor(value));
     if (!hasOption) return undefined;
-    const option = await this._optionsProvider.getValueOption(value).toPromise();
+    const option = await firstValueFrom(this._optionsProvider.getValueOption(value));
     this.storedValueOptions.push(option);
     this.refreshInput$.next();
     return option;
