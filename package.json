@@ -161,7 +161,7 @@
     "npm": "9.6.1"
   },
   "lint-staged": {
-    "*.{ts,js,scss,html,md}": [
+    "*.{ts,js,scss,html}": [
       "prettier --write",
       "eslint --cache --fix"
     ],

@@ -19,6 +19,7 @@
     "legi-cv": "libs/legi-cv",
     "legi-shared": "libs/legi-shared",
     "legi-styles": "libs/legi-styles",
+    "lod": "libs/lod",
     "material-icons": "libs/material-icons",
     "model-utils": "libs/model-utils",
     "ng-application-profile": "libs/ng-application-profile",

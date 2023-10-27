@@ -1,32 +1,29 @@
 import { Injectable } from '@angular/core';
-import { KNOWN_PREFIXES, TypedResourceContext } from '@cognizone/model-utils';
 
+import { LodContext } from '../models';
 import { isCurie } from '../utils';
 
-/**
- * @deprecated Use {@link PrefixService} from @cognizone/lod instead
- */
 @Injectable({ providedIn: 'root' })
-export class PrefixCcService {
-  globalContext: TypedResourceContext = {
-    prefix: KNOWN_PREFIXES,
+export class PrefixService {
+  private context: LodContext = {
+    prefix: {},
   };
 
-  setGlobalContext(context: TypedResourceContext): void {
-    this.globalContext = context;
+  setContext(context: LodContext): void {
+    this.context = context;
   }
 
-  compactUri(uri: string, context: TypedResourceContext = this.globalContext): string {
+  compactUri(uri: string, context: LodContext = this.context): string {
     if (isCurie(uri)) return uri;
+    if (context.base && uri.startsWith(context.base)) return uri.replace(context.base, '');
     for (const [prefix, value] of Object.entries(context.prefix ?? {}).sort(([, v1], [, v2]) => v2.length - v1.length)) {
       const fullPrefix = this.getFullPrefix(prefix);
       if (uri.startsWith(value)) return uri.replace(value, fullPrefix);
     }
-    if (context.base && uri.startsWith(context.base)) return uri.replace(context.base, '');
     return uri;
   }
 
-  expandUri(uri: string, context: TypedResourceContext = this.globalContext): string {
+  expandUri(uri: string, context: LodContext = this.context): string {
     if (!isCurie(uri)) return uri;
     for (const [prefix, value] of Object.entries(context.prefix ?? {})) {
       const fullPrefix = this.getFullPrefix(prefix);
@@ -36,7 +33,7 @@ export class PrefixCcService {
     return uri;
   }
 
-  convertUri(uri: string, srcContext: TypedResourceContext, distContext: TypedResourceContext): string {
+  convertUri(uri: string, srcContext: LodContext, distContext: LodContext): string {
     const expandedUri = this.expandUri(uri, srcContext);
     return this.compactUri(expandedUri, distContext);
   }
