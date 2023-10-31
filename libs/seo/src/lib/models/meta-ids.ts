@@ -1,0 +1,23 @@
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export const MetaIds = {
+  ARTICLE_MODIFIED_TIME: 'article:modified_time',
+  ARTICLE_PUBLISHED_TIME: 'article:published_time',
+  CANONICAL_URL_LINK: Symbol('canonical url link'),
+  TITLE_TAG: Symbol('title tag'),
+  DESCRIPTION: 'description',
+  KEYWORDS: 'keywords',
+  OG_DESCRIPTION: 'og:description',
+  OG_IMAGE: 'og:image',
+  OG_LOCALE: 'og:locale',
+  OG_SITE_NAME: 'og:site_name',
+  OG_TITLE: 'og:title',
+  OG_TYPE: 'og:type',
+  OG_URL: 'og:url',
+  HTML_PREFIX: Symbol('html prefix'),
+  ROBOTS: 'robots',
+  TWITTER_CARD: 'twitter:card',
+  TWITTER_DESCRIPTION: 'twitter:description',
+  TWITTER_IMAGE: 'twitter:image',
+  TWITTER_SITE: 'twitter:site',
+  TWITTER_TITLE: 'twitter:title',
+} as const;

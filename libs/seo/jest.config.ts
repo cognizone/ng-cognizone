@@ -1,10 +1,10 @@
 /* eslint-disable */
 export default {
-  displayName: 'lod',
+  displayName: 'seo',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {},
-  coverageDirectory: '../../coverage/libs/lod',
+  coverageDirectory: '../../coverage/libs/seo',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
