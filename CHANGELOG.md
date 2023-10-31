@@ -1,3 +1,9 @@
+# [3.6.0](https://github.com/cognizone/ng-cognizone/compare/v3.5.0...v3.6.0) (2023-10-31)
+
+### Features
+
+- **seo:** add seo library ([17f024e](https://github.com/cognizone/ng-cognizone/commit/17f024e6302d0676c50b00ed1f8e168682c286bc))
+
 # [3.5.0](https://github.com/cognizone/ng-cognizone/compare/v3.4.2...v3.5.0) (2023-10-31)
 
 ### Features
