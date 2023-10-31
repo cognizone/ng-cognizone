@@ -42,6 +42,7 @@
       "@cognizone/seo": ["libs/seo/src/index.ts"],
       "@cognizone/shacl": ["libs/shacl/src/index.ts"],
       "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"],
+      "@cognizone/ui-kit": ["libs/ui-kit/src/index.ts"],
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
       "@czee-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
       "@czee-ce/env/*": ["apps/elastic-explorer-chrome-extension/src/environments/*"],
