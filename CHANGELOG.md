@@ -1,3 +1,9 @@
+# [3.5.0](https://github.com/cognizone/ng-cognizone/compare/v3.4.2...v3.5.0) (2023-10-31)
+
+### Features
+
+- **lod:** add lod library ([05d3293](https://github.com/cognizone/ng-cognizone/commit/05d329338e5435136a27095b38f1ba9c72649825))
+
 ## [3.4.2](https://github.com/cognizone/ng-cognizone/compare/v3.4.1...v3.4.2) (2023-10-25)
 
 ### Bug Fixes
