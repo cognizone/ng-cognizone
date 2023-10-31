@@ -1,3 +1,9 @@
+# [4.0.0-beta.12](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.11...v4.0.0-beta.12) (2023-10-31)
+
+### Features
+
+- **seo:** add seo library ([60bf516](https://github.com/cognizone/ng-cognizone/commit/60bf516fcebef802c92b5aec065687c077062ab4))
+
 # [4.0.0-beta.11](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.10...v4.0.0-beta.11) (2023-10-31)
 
 ### Bug Fixes
