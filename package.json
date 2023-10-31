@@ -48,7 +48,7 @@
     "help": "nx help",
     "cz": "cz",
     "prepare": "husky install",
-    "build-tools": "tsc tools/executors/build-assets/impl.ts && tsc tools/executors/build-cli/impl.ts"
+    "build-tools": "tsc --project \"tools/tsconfig.tools.json\""
   },
   "private": true,
   "dependencies": {
@@ -104,10 +104,16 @@
     "@nrwl/eslint-plugin-nx": "15.1.0",
     "@nrwl/jest": "15.1.0",
     "@nrwl/linter": "15.1.0",
+    "@nrwl/storybook": "15.1.0",
     "@nrwl/workspace": "15.1.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@storybook/addon-essentials": "~6.5.9",
+    "@storybook/angular": "~6.5.9",
+    "@storybook/builder-webpack5": "~6.5.9",
+    "@storybook/core-server": "~6.5.9",
+    "@storybook/manager-webpack5": "~6.5.9",
     "@types/jest": "28.1.1",
     "@types/jsonld": "^1.5.11",
     "@types/node": "16.11.7",
@@ -142,9 +148,14 @@
     "shelljs": "^0.8.5",
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "webpack": "^5.64.0"
   },
+  "//comment": "babel-loader for storybook, should be fixed with nx 16+, see https://github.com/nrwl/nx/issues/14331",
   "overrides": {
+    "@nrwl/webpack": {
+      "babel-loader": "^9.0.0"
+    },
     "monaco-editor": "^0.34.1"
   },
   "config": {
@@ -159,14 +170,14 @@
   },
   "prettier": "./libs/prettier-config/index.json",
   "volta": {
-    "node": "18.15.0",
+    "node": "18.17.1",
     "npm": "9.6.1"
   },
   "lint-staged": {
-    "*.{ts,js,scss,html}": [
+    "*.{ts,js,html}": [
       "prettier --write",
       "eslint --cache --fix"
     ],
-    "*.{md}": "prettier --write"
+    "*.{md, scss}": "prettier --write"
   }
 }
