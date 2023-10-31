@@ -1,5 +1,6 @@
 {
   "name": "permissions",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/permissions/src",
   "prefix": "cz",

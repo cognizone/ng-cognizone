@@ -38,6 +38,7 @@
       "@cognizone/operation": ["libs/operation/src/index.ts"],
       "@cognizone/permissions": ["libs/permissions/src/index.ts"],
       "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"],
+      "@cognizone/ui-kit": ["libs/ui-kit/src/index.ts"],
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
       "@czee-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
       "@czee-ce/env/*": ["apps/elastic-explorer-chrome-extension/src/environments/*"],

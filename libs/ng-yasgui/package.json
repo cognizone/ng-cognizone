@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/core": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
-    "rxjs": "^6.6.3 || ^7.0.0"
+    "rxjs": "^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

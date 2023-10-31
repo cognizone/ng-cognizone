@@ -1,5 +1,6 @@
 {
   "name": "legi-styles",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/legi-styles/src",
   "prefix": "cz",

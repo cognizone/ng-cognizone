@@ -9,7 +9,7 @@
     "@angular/forms": "^15.0.0",
     "@angular/common": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
-    "rxjs": "^6.6.3 || ^7.0.0"
+    "rxjs": "^7.0.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

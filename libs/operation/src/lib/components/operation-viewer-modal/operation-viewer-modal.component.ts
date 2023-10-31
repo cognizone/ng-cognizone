@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
 import { Nil } from '@cognizone/model-utils';
-import { first } from 'rxjs/operators';
+import { firstValueFrom } from 'rxjs';
 
 import { Operation, OperationGroup, OperationGroupDescription } from '../../models/operation';
 import { OperationUtils } from '../../services/operation-utils.service';
@@ -24,9 +24,9 @@ export class OperationViewerModalComponent implements OnInit {
   ) {}
 
   async ngOnInit(): Promise<void> {
-    this.allOperations = await this.operationsService.groups$.pipe(first()).toPromise();
+    this.allOperations = await firstValueFrom(this.operationsService.groups$);
     if (!this.data.operation) {
-      this.group = this.operationUtils.getGroup(this.allOperations, this.data.operationGroupDescriptions);
+      this.group = this.operationUtils.getGroup(this.allOperations ?? [], this.data.operationGroupDescriptions);
     }
   }
 }
