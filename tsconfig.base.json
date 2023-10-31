@@ -37,6 +37,7 @@
       "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"],
       "@cognizone/operation": ["libs/operation/src/index.ts"],
       "@cognizone/permissions": ["libs/permissions/src/index.ts"],
+      "@cognizone/seo": ["libs/seo/src/index.ts"],
       "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"],
       "@cognizone/ui-kit": ["libs/ui-kit/src/index.ts"],
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
