@@ -33,6 +33,8 @@
     "shacl": "libs/shacl",
     "transloco-langstring": "libs/transloco-langstring",
     "tslint-config": "libs/tslint-config",
+    "ui-kit": "libs/ui-kit",
+    "ui-kit-e2e": "apps/ui-kit-e2e",
     "user-action": "libs/user-action"
   }
 }
