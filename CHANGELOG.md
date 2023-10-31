@@ -1,3 +1,13 @@
+# [4.0.0-beta.11](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.10...v4.0.0-beta.11) (2023-10-31)
+
+### Bug Fixes
+
+- upgrade rxjs version ([3426a65](https://github.com/cognizone/ng-cognizone/commit/3426a6588383df31a7e51979149c876060fe5c3f))
+
+### Features
+
+- **lod:** add lod library ([afd2627](https://github.com/cognizone/ng-cognizone/commit/afd2627cc5f4f72e20bc9f82ed3ef5b3f5883cbe))
+
 # [4.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.9...v4.0.0-beta.10) (2023-10-25)
 
 ### Bug Fixes
