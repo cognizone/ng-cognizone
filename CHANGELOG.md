@@ -1,3 +1,9 @@
+# [4.0.0-beta.13](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.12...v4.0.0-beta.13) (2023-11-02)
+
+### Bug Fixes
+
+- **seo:** added singular meta reset ([f888aa5](https://github.com/cognizone/ng-cognizone/commit/f888aa5d714fbfe0803e7b55434f27bf279e260d))
+
 # [4.0.0-beta.12](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.11...v4.0.0-beta.12) (2023-10-31)
 
 ### Features
