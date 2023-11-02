@@ -1,3 +1,9 @@
+## [3.6.1](https://github.com/cognizone/ng-cognizone/compare/v3.6.0...v3.6.1) (2023-11-02)
+
+### Bug Fixes
+
+- **seo:** added singular meta reset ([95cf972](https://github.com/cognizone/ng-cognizone/commit/95cf97278be58b5760958e5f7c012644d086b2d9))
+
 # [3.6.0](https://github.com/cognizone/ng-cognizone/compare/v3.5.0...v3.6.0) (2023-10-31)
 
 ### Features
