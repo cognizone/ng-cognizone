@@ -2,6 +2,7 @@ import { Many } from '@cognizone/model-utils';
 
 import { Processor } from './processor';
 import { MetaId } from './meta-id';
+import { MetaPropertyDirectiveProps } from './meta-property-directive-props';
 
 export type MetaDescriptor = {
   id: MetaId;
@@ -11,4 +12,5 @@ export type MetaDescriptor = {
   multi?: boolean;
   separator?: string; // only for multi true, incompatible with multiTags
   multiTags?: boolean; // only for multi true, incompatible with separator
+  metaPropertyDirectiveProps?: MetaPropertyDirectiveProps;
 };

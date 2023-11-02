@@ -8,16 +8,14 @@ import { MetaDescriptor } from './meta-descriptor';
 import { MetaId } from './meta-id';
 import { MetaIds } from './meta-ids';
 import { Processors } from './processor';
+import { MetaPropertyDirectiveProps } from './meta-property-directive-props';
 
 export interface SeoOptions {
   metaDescriptors?: {
     [id: MetaId]: MetaDescriptor;
   };
   linkedKeys?: { [name: string]: MetaId[] };
-  metaPropertyDirective?: {
-    watchForChanges?: boolean;
-    subValuesSeparator?: string;
-  };
+  globalMetaPropertyDirectiveProps?: MetaPropertyDirectiveProps;
 }
 
 export const SEO_OPTIONS = new InjectionToken<SeoOptions>('SEO_OPTIONS', { factory: () => DEFAULT_SEO_OPTIONS });
@@ -119,8 +117,11 @@ export function createOpinionatedOptions({ titleSuffix }: OpinionatedOptionsConf
     draft.linkedKeys ??= {};
     draft.linkedKeys['title'] = [MetaIds.OG_TITLE, MetaIds.TWITTER_TITLE, MetaIds.TITLE_TAG];
     draft.metaDescriptors![MetaIds.TITLE_TAG].postProcessors = Processors.withMaxLength(OPINIONATED_TITLE_LENGTH, titleSuffix);
+    draft.metaDescriptors![MetaIds.TITLE_TAG].metaPropertyDirectiveProps = { onDestroyStrategy: 'reset' };
     draft.metaDescriptors![MetaIds.TWITTER_TITLE].postProcessors = Processors.withMaxLength(OPINIONATED_TITLE_LENGTH);
+    draft.metaDescriptors![MetaIds.TWITTER_TITLE].metaPropertyDirectiveProps = { onDestroyStrategy: 'reset' };
     draft.metaDescriptors![MetaIds.OG_TITLE].postProcessors = Processors.withMaxLength(OPINIONATED_TITLE_LENGTH);
+    draft.metaDescriptors![MetaIds.OG_TITLE].metaPropertyDirectiveProps = { onDestroyStrategy: 'reset' };
 
     draft.linkedKeys['description'] = [MetaIds.DESCRIPTION, MetaIds.OG_DESCRIPTION, MetaIds.TWITTER_DESCRIPTION];
     draft.metaDescriptors![MetaIds.DESCRIPTION].postProcessors = Processors.withMaxLength(OPINIONATED_DESCRIPTION_LENGTH);
