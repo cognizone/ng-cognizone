@@ -35,6 +35,15 @@ export class SeoService {
     this.syncStateWithTags();
   }
 
+  resetMeta(metaId: MetaId): void {
+    const newState = produce(this.getState(), draft => {
+      draft.metaValues ??= {};
+      draft.metaValues[metaId] = this.defaultState.metaValues?.[metaId] ?? [];
+    });
+    this.setState(newState);
+    this.syncTagsWithState(metaId);
+  }
+
   getDescriptor(metaId: MetaId): MetaDescriptor {
     const descriptor = this.options.metaDescriptors?.[metaId];
     if (!descriptor) throw new Error(`No meta descriptor found for id ${String(metaId)}`);
@@ -130,6 +139,10 @@ export class SeoService {
 
   removeMeta(metaId: MetaId, options?: SetMetaValueOptions): MetaValueCmd {
     return this.setMetaValue(metaId, [], options);
+  }
+
+  getMetaValue(metaId: MetaId): MetaValue[] | undefined {
+    return this.getState().metaValues?.[metaId];
   }
 
   private getMetaValueCmd(metaId: MetaId, values: MetaValue[]): MetaValueCmd {
