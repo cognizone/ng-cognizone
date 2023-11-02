@@ -3,17 +3,17 @@ import { DOCUMENT } from '@angular/common';
 import { createDirectiveFactory, SpectatorDirective } from '@ngneat/spectator/jest';
 
 import { MetaIds } from '../models';
-import { MetaPropertyDirective } from './meta-property.directive';
+import { MetaPropertyDirective, MetaPropertyPartDirective } from './meta-property.directive';
 
 describe('MetaPropertyDirective', () => {
   const createDirective = createDirectiveFactory({
     directive: MetaPropertyDirective,
-    imports: [MetaPropertyDirective],
+    imports: [MetaPropertyDirective, MetaPropertyPartDirective],
     declareDirective: false,
   });
 
   it(`should exist`, () => {
-    const spectator = createDirective(`<div czMetaProperty></div>`);
+    const spectator = createDirective(`<div czMetaProperty="${MetaIds.DESCRIPTION}"></div>`);
     expect(spectator.directive).toBeTruthy();
   });
 
@@ -25,12 +25,12 @@ describe('MetaPropertyDirective', () => {
   it(`should build a complex description`, () => {
     const spectator = createDirective(`
       <div czMetaProperty="${MetaIds.DESCRIPTION}" czMetaPropertySubValuesSeparator=": ">
-        <div czMetaProperty>Hello</div>
-        <div czMetaProperty>World</div>
+        <div czMetaPropertyPart>Hello</div>
+        <div czMetaPropertyPart>World</div>
       </div>
       <div czMetaProperty="${MetaIds.DESCRIPTION}" czMetaPropertySubValuesSeparator=" - ">
-        <div czMetaProperty>How are</div>
-        <div czMetaProperty>you?</div>
+        <div czMetaPropertyPart>How are</div>
+        <div czMetaPropertyPart>you?</div>
       </div>
       `);
     checkContentOfUniqueMetaTagWithName(MetaIds.DESCRIPTION, 'Hello: World,How are - you?', spectator);
