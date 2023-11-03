@@ -14,6 +14,7 @@
     "eslint-config": "libs/eslint-config",
     "i18n": "libs/i18n",
     "i18n-transloco": "libs/i18n-transloco",
+    "json-ld": "libs/json-ld",
     "json-model": "libs/json-model",
     "json-model-graph": "libs/json-model-graph",
     "legi-cv": "libs/legi-cv",
