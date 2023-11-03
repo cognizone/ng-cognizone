@@ -25,3 +25,13 @@ export function createNamespace<KEYS extends string, BASE_URI extends string>(
     return acc;
   }, {} as BaseNamespace<KEYS, BASE_URI>);
 }
+
+export function createDynamicNamespace<KEYS extends string, BASE_URI extends string>(baseUri: BASE_URI): Namespace<KEYS, BASE_URI> {
+  const cache: { [key: string | symbol]: string | undefined } = {};
+  return new Proxy(
+    {},
+    {
+      get: (target, prop) => cache[prop] ?? (cache[prop] = typeof prop === 'string' ? `${baseUri}${prop}` : undefined),
+    }
+  ) as BaseNamespace<KEYS, BASE_URI>;
+}

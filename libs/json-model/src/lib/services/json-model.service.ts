@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@angular/core';
+import { UriGenerator } from '@cognizone/lod';
 import { Datatype, DatatypeLong, Many, manyToArray, manyToOne, TypedResourceContext } from '@cognizone/model-utils';
 
 import { isJsonModel, JsonModel, JsonModelFlatGraph, JsonModels } from '../models/json-model';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
-import { IdGenerator } from './id-generator.service';
 
 @Injectable()
 export class JsonModelService {
   constructor(
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
     private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    private idGenerator: IdGenerator
+    private idGenerator: UriGenerator
   ) {}
 
   toFlatGraph(root: JsonModel): JsonModelFlatGraph {
@@ -40,7 +40,7 @@ export class JsonModelService {
 
   createNewBareboneJsonModel(types: Many<string>, context?: TypedResourceContext): JsonModel {
     const compactTypes = manyToArray(types);
-    const uri = this.idGenerator.generateId(compactTypes);
+    const uri = this.idGenerator.create(compactTypes);
     const jsonModel: JsonModel = {
       '@id': uri,
       '@type': types,
@@ -52,7 +52,7 @@ export class JsonModelService {
 
   createNewJsonModel(types: Many<string>, dataModelDefinition: unknown, context?: TypedResourceContext): JsonModel {
     const compactTypes = manyToArray(types);
-    const uri = this.idGenerator.generateId(compactTypes);
+    const uri = this.idGenerator.create(compactTypes);
     const jsonModel: JsonModel = {
       '@id': uri,
       '@type': types,
