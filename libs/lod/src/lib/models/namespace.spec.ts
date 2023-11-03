@@ -1,5 +1,5 @@
 /* eslint-disable id-blacklist */
-import { createNamespace } from './namespace';
+import { createDynamicNamespace, createNamespace } from './namespace';
 
 describe('Namespace', () => {
   it(`should create an xsd namespace`, () => {
@@ -28,5 +28,16 @@ describe('Namespace', () => {
       short: 'http://www.w3.org/2001/XMLSchema#short',
       string: 'http://www.w3.org/2001/XMLSchema#string',
     });
+  });
+
+  it(`should create a dynamic xsd namespace`, () => {
+    const xsd = createDynamicNamespace<
+      'boolean' | 'date' | 'dateTime' | 'decimal' | 'double' | 'float' | 'integer' | 'long' | 'short' | 'string',
+      'http://www.w3.org/2001/XMLSchema#'
+    >('http://www.w3.org/2001/XMLSchema#');
+
+    expect(xsd).toEqual({});
+    expect(xsd.boolean).toEqual('http://www.w3.org/2001/XMLSchema#boolean');
+    expect(xsd).toEqual({});
   });
 });

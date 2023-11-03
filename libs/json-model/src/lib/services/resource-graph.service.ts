@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@angular/core';
+import { PrefixService } from '@cognizone/lod';
 import { Datatype, DatatypeLong, Many, manyToArray, manyToOne, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
 
 import { Resource, ResourceGraph } from '../models';
 import { JsonModel } from '../models/json-model';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
-import { PrefixCcService } from './prefix-cc.service';
 import { ResourceMapper } from './resource-mapper.service';
 
 // TODO rename according to new model name
@@ -16,7 +16,7 @@ export class ResourceGraphService {
     @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
     private dataModelDefinitionHelper: DataModelDefinitionHelper,
     private readonly resourceMapper: ResourceMapper,
-    private readonly prefixCc: PrefixCcService
+    private readonly prefixCc: PrefixService
   ) {}
 
   // TODO rename according to new model name
