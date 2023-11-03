@@ -1,0 +1,40 @@
+{
+  "name": "@cognizone/json-ld",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/core": "^14.0.0",
+    "@cognizone/lod": ">=3.0.0",
+    "@cognizone/i18n": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
+    "@cognizone/ng-core": ">=3.0.0",
+    "@ngxs/store": "^3.7.5",
+    "immer": "^9.0.0",
+    "json-ld": "^8.0.0",
+    "lodash-es": "^4.17.21",
+    "rxjs": "^7.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    },
+    {
+      "name": "Farah El Agha",
+      "email": "farah.agha111@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git",
+    "directory": "libs/json-ld"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

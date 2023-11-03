@@ -1,6 +1,5 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
-import { IdGenerator } from './services/id-generator.service';
 import { JsonModelService } from './services/json-model.service';
 import { ArrayMapper } from './services/mappers/array-mapper.service';
 import { BooleanMapper } from './services/mappers/boolean-mapper.service';
@@ -16,7 +15,6 @@ import { ResourceMapper } from './services/resource-mapper.service';
   providers: [
     ResourceMapper,
     JsonModelService,
-    IdGenerator,
     provideMicroAttributeMapper(ArrayMapper),
     provideMicroAttributeMapper(LangStringMapper),
     provideMicroAttributeMapper(DefaultMapper),

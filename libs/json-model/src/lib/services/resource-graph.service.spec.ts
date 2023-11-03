@@ -155,7 +155,7 @@ describe('ResourceGraphService', () => {
     expect(console.warn).toHaveBeenCalled();
   });
 
-  describe.only('or range rule on datatype', () => {
+  describe('or range rule on datatype', () => {
     it('should deserialize then serialize draft 1 (or on rapporteurChambreDeputesLabel, xsd:string)', () => {
       const json = spectator.service.resourceGraphRawToJsonModel(rawDraft1, draftAp);
       const newRaw = spectator.service.jsonModelToResourceGraphRaw(json, draftAp);
