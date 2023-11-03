@@ -7,6 +7,7 @@ import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 import { ApplicationProfile } from '@cognizone/application-profile';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
+import { PrefixService } from '@cognizone/lod';
 import { JsonModel } from '../models/json-model';
 
 import { JsonModelModule } from '../json-model.module';
@@ -32,7 +33,16 @@ describe('ResourceGraphService', () => {
 
   let spectator: SpectatorService<ResourceGraphService>;
 
-  beforeEach(() => (spectator = createService()));
+  beforeEach(() => {
+    spectator = createService();
+    spectator.inject(PrefixService).setContext({
+      prefix: {
+        rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+        rdfs: 'http://www.w3.org/2000/01/rdf-schema#',
+        xsd: 'http://www.w3.org/2001/XMLSchema#',
+      },
+    });
+  });
 
   it('should be injectable', () => {
     expect(spectator.service).not.toBeUndefined();
@@ -155,7 +165,7 @@ describe('ResourceGraphService', () => {
     expect(console.warn).toHaveBeenCalled();
   });
 
-  describe.only('or range rule on datatype', () => {
+  describe('or range rule on datatype', () => {
     it('should deserialize then serialize draft 1 (or on rapporteurChambreDeputesLabel, xsd:string)', () => {
       const json = spectator.service.resourceGraphRawToJsonModel(rawDraft1, draftAp);
       const newRaw = spectator.service.jsonModelToResourceGraphRaw(json, draftAp);
