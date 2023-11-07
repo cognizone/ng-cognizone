@@ -1,3 +1,9 @@
+## [3.6.2](https://github.com/cognizone/ng-cognizone/compare/v3.6.1...v3.6.2) (2023-11-07)
+
+### Bug Fixes
+
+- **lod:** actually export namespace.ts ([5ae4e66](https://github.com/cognizone/ng-cognizone/commit/5ae4e66fae11f98a329716546db17c8bf7123141))
+
 ## [3.6.1](https://github.com/cognizone/ng-cognizone/compare/v3.6.0...v3.6.1) (2023-11-02)
 
 ### Bug Fixes
