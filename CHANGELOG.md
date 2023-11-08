@@ -1,3 +1,9 @@
+## [3.6.3](https://github.com/cognizone/ng-cognizone/compare/v3.6.2...v3.6.3) (2023-11-08)
+
+### Bug Fixes
+
+- **seo:** adding multi to title options ([b6d7620](https://github.com/cognizone/ng-cognizone/commit/b6d7620e27365c4033a9dc27d3e8e631bfed1cca))
+
 ## [3.6.2](https://github.com/cognizone/ng-cognizone/compare/v3.6.1...v3.6.2) (2023-11-07)
 
 ### Bug Fixes
