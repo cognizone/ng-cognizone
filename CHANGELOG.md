@@ -1,3 +1,9 @@
+## [3.6.4](https://github.com/cognizone/ng-cognizone/compare/v3.6.3...v3.6.4) (2023-11-09)
+
+### Bug Fixes
+
+- **model-utils:** add values-of type ([e3eb1f3](https://github.com/cognizone/ng-cognizone/commit/e3eb1f383d8420447913800b5ce7f9dae5f22b2b))
+
 ## [3.6.3](https://github.com/cognizone/ng-cognizone/compare/v3.6.2...v3.6.3) (2023-11-08)
 
 ### Bug Fixes
