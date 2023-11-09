@@ -15,3 +15,4 @@ export * from './typed-resource';
 export * from './typed-resource-context';
 export * from './typed-resource-graph';
 export * from './unknown-object';
+export * from './values-of';
