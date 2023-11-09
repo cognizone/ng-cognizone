@@ -1,3 +1,11 @@
+# [4.0.0-beta.14](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.13...v4.0.0-beta.14) (2023-11-09)
+
+### Bug Fixes
+
+- **lod:** actually export namespace.ts ([8cc9363](https://github.com/cognizone/ng-cognizone/commit/8cc9363fbe36f76a196ac97348f0b9d57ef770eb))
+- **model-utils:** add values-of type ([58646b2](https://github.com/cognizone/ng-cognizone/commit/58646b2c21822e7dcde88b2e111f68760c0d387d))
+- **seo:** adding multi to title options ([e678090](https://github.com/cognizone/ng-cognizone/commit/e67809020b3f143a2b0349d604551d26e54199f9))
+
 # [4.0.0-beta.13](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-beta.12...v4.0.0-beta.13) (2023-11-02)
 
 ### Bug Fixes
