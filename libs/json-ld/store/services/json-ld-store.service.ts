@@ -13,7 +13,6 @@ import {
   getAllValueDescriptors,
   getAllValues,
   JsonLdNode,
-  JsonLdNodeFlat,
   JsonLdService,
   JsonLdValue,
   RdfListElement,
@@ -63,9 +62,9 @@ export class JsonLdStoreService {
     );
   }
 
-  getNode<T extends JsonLdNode>(rootUri: string, nodeUri: string): Observable<JsonLdNodeFlat<T>> {
+  getNode<T extends JsonLdNode>(rootUri: string, nodeUri: string): Observable<T> {
     return this.getGraph(rootUri).pipe(
-      map(graph => graph?.nodes?.[nodeUri] as JsonLdNodeFlat<T>),
+      map(graph => graph?.nodes?.[nodeUri] as T),
       filter(notNil),
       distinctUntilChanged()
     );
@@ -79,8 +78,8 @@ export class JsonLdStoreService {
     return !!this.state.graphs[rootUri];
   }
 
-  getNodeSnapshot<T extends JsonLdNode>(rootUri: string, nodeUri: string): JsonLdNodeFlat<T> {
-    return this.getGraphSnapshot(rootUri).nodes[nodeUri] as JsonLdNodeFlat<T>;
+  getNodeSnapshot<T extends JsonLdNode>(rootUri: string, nodeUri: string): T {
+    return this.getGraphSnapshot(rootUri).nodes[nodeUri] as T;
   }
 
   getLinkedGraphSnapshot<T extends JsonLdNode>(rootUri: string): T {
@@ -120,13 +119,13 @@ export class JsonLdStoreService {
     return this.state.definitions[rootUri];
   }
 
-  removeAttribute<T extends JsonLdNodeFlat>(node: T, attributeKey: keyof T): T {
+  removeAttribute<T extends JsonLdNode>(node: T, attributeKey: keyof T): T {
     return produce(node, (draft: Record<keyof T, JsonLdValue[]>) => {
       delete draft[attributeKey];
     });
   }
 
-  addReference<T extends JsonLdNodeFlat, U extends JsonLdNodeFlat>(
+  addReference<T extends JsonLdNode, U extends JsonLdNode>(
     rootUri: string,
     node: T,
     referenceKey: keyof T,
@@ -149,7 +148,7 @@ export class JsonLdStoreService {
     return reference['@id'];
   }
 
-  addInverseReference<T extends JsonLdNodeFlat>(
+  addInverseReference<T extends JsonLdNode>(
     rootUri: string,
     nodeUri: string | undefined,
     referenceKey: keyof T,

@@ -22,7 +22,7 @@ export class JsonLdService {
   private uriGenerator = inject(UriGenerator);
 
   async expand<T>(jsonLd: JsonLdGraph | JsonLdGraphCz): Promise<ExpandedJsonLdContainer<T>> {
-    // TODO remove me when @type is fixed in elastic
+    // TODO move this logic after expansion
     if ('data' in jsonLd) {
       let hasIt = false;
       Object.values(jsonLd.data).forEach((node: any) => {
