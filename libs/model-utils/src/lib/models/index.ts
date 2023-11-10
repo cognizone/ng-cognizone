@@ -8,7 +8,6 @@ export * from './lang-string';
 export * from './many';
 export * from './nil';
 export * from './pagination';
-export * from './prefixes';
 export * from './primitive';
 export * from './select-option';
 export * from './sorter';
