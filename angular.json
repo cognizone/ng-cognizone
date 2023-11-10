@@ -30,6 +30,7 @@
     "permissions": "libs/permissions",
     "prettier-config": "libs/prettier-config",
     "seo": "libs/seo",
+    "shacl": "libs/shacl",
     "transloco-langstring": "libs/transloco-langstring",
     "tslint-config": "libs/tslint-config",
     "user-action": "libs/user-action"

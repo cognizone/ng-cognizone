@@ -40,6 +40,7 @@
       "@cognizone/operation": ["libs/operation/src/index.ts"],
       "@cognizone/permissions": ["libs/permissions/src/index.ts"],
       "@cognizone/seo": ["libs/seo/src/index.ts"],
+      "@cognizone/shacl": ["libs/shacl/src/index.ts"],
       "@cognizone/transloco-langstring": ["libs/transloco-langstring/src/index.ts"],
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
       "@czee-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
