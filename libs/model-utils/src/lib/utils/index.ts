@@ -9,6 +9,7 @@ export * from './get-all-properties';
 export * from './get-all-select-options';
 export * from './get-lang-string-value';
 export * from './group-select-options';
+export * from './iri-pattern';
 export * from './is-select-option';
 export * from './many-to-array';
 export * from './many-to-one';
