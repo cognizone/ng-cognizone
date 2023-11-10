@@ -6,7 +6,7 @@ import { get, isEqual, set } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
 import { filter, finalize, map, tap } from 'rxjs/operators';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
-import { JsonLdNode, JsonLdNodeFlat } from '@cognizone/json-ld/core';
+import { JsonLdNode } from '@cognizone/json-ld/core';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
 import { JsonLdStoreService } from '@cognizone/json-ld/store';
 
@@ -32,12 +32,12 @@ export class GraphAndControlLinkingService {
         if (!node) return;
         if (isEqual(this.getNodeValue<T>(node, options), value)) return;
 
-        const updatedNode = produce(node, (draft: JsonLdNodeFlat<T>) => {
+        const updatedNode = produce(node, (draft: T) => {
           this.setValue(draft, options, value);
         });
 
         if (updatedNode !== node) {
-          this.jsonLdStoreService.update(rootUri, updatedNode as JsonLdNode);
+          this.jsonLdStoreService.update(rootUri, updatedNode as unknown as JsonLdNode);
         }
       })
     );
@@ -63,11 +63,11 @@ export class GraphAndControlLinkingService {
     control.patchValue(value, { emitEvent: emitEventFromNodeToForm });
   }
 
-  private getNodeValue<T extends JsonLdNode>(node: JsonLdNodeFlat<T>, options: LinkControlToNodeAttributeOptions): unknown {
+  private getNodeValue<T extends JsonLdNode>(node: T, options: LinkControlToNodeAttributeOptions): unknown {
     return get(node, options.path);
   }
 
-  private setValue<T extends JsonLdNode>(node: JsonLdNodeFlat<T>, options: LinkControlToNodeAttributeOptions, value: unknown): void {
+  private setValue<T extends JsonLdNode>(node: T, options: LinkControlToNodeAttributeOptions, value: unknown): void {
     if (value instanceof Date) {
       value = dateToDateString(value);
     }
