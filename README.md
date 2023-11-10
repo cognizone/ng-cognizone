@@ -125,7 +125,11 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 ## Migrating from v3.6 to v3.7
 
 - json-model: `IdGenerator` as been removed, need to use `UriGenerator` from `@cognizone/lod` instead. Be sure to properly configure the `newUriPrefix` option.
-- json-model: `PrefixCcService` as been removed, need to use `PrefixService` from `@cognizone/lod` instead.
+- json-model: `PrefixCcService` as been removed, need to use `PrefixService` from `@cognizone/lod` instead. If you are using json model, you will most likely want to initialize the context of PrefixService with something like this
+
+```ts
+inject(PrefixService).setContext({ prefix: KNOWN_PREFIXES }); // KNOWN_PREFIXES coming from @cognizone/lod
+```
 
 ## Migrating from v3.3 to v3.4
 
