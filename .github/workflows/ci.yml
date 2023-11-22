@@ -2,7 +2,6 @@ name: CI
 
 on:
   pull_request:
-    branches: [main, alpha, beta]
   workflow_dispatch:
 
 jobs:
