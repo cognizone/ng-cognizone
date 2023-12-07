@@ -19,6 +19,9 @@ export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
   @Input()
   query?: string;
 
+  @Input()
+  isQueryExecuted = false;
+
   @ViewChild('yasgui', { static: true })
   yasguiRef!: ElementRef;
 
@@ -57,6 +60,13 @@ export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
     }
     if (this.yasgui.current().yasqe.getValue() !== this.query) {
       this.yasgui.current().yasqe.setValue(this.query);
+      if (this.isQueryExecuted && this.options?.yasqe) {
+        this.yasgui.current().yasqe.query({
+          url: this.options.yasqe.sparql,
+          reqMethod: 'POST',
+          args: { arg1: this.query },
+        });
+      }
     }
   }
 
