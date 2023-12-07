@@ -8,7 +8,11 @@ export class DateMapper implements MicroAttributeMapper<string, Date> {
   }
 
   deserialize(dataType: string, value: string): Date {
-    return new Date(value);
+    const offsetInMinutes = new Date().getTimezoneOffset();
+    // 14 and 10 just to have some security offset, so we are sure we never overflow on the next/previous day, although 11 and 13 should be enough
+    const hour = offsetInMinutes < 0 ? 14 : 10;
+    const fullDateString = `${value}T${hour}:00:00.000Z`;
+    return new Date(fullDateString);
   }
 
   supportSerialize(dataType: string, value: Date): boolean {

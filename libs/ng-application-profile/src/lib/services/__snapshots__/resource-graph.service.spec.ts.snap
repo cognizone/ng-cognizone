@@ -332,7 +332,7 @@ Object {
         "Work",
       ],
       "dateDocument": Array [
-        1983-12-20T00:00:00.000Z,
+        1983-12-20T14:00:00.000Z,
       ],
       "preparatoryActCelexId": Array [
         "51983PC0786",
@@ -440,7 +440,7 @@ Object {
         "Work",
       ],
       "dateDocument": Array [
-        1990-11-20T00:00:00.000Z,
+        1990-11-20T14:00:00.000Z,
       ],
       "preparatoryActCelexId": Array [
         "51990PC0525",
@@ -585,10 +585,10 @@ Object {
     "Work",
   ],
   "dateDocument": Array [
-    2014-12-23T00:00:00.000Z,
+    2014-12-23T14:00:00.000Z,
   ],
   "dateEntryInForce": Array [
-    2015-01-01T00:00:00.000Z,
+    2015-01-01T14:00:00.000Z,
   ],
   "isRealizedBy": Array [
     Object {
@@ -680,7 +680,7 @@ Object {
     },
   ],
   "publicationDate": Array [
-    2014-12-23T00:00:00.000Z,
+    2014-12-23T14:00:00.000Z,
   ],
 }
 `;
