@@ -15,6 +15,7 @@ export interface Yasqe {
   getValue(): string;
   on(event: string | 'change', handler: (e: any) => void): void;
   setOption(option: any): void;
+  query: Function;
 }
 
 // http://doc.yasgui.org/doc/#clientConfig
