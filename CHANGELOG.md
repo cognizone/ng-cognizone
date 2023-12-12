@@ -1,3 +1,15 @@
+# [2.8.0](https://github.com/cognizone/ng-cognizone/compare/v2.7.9...v2.8.0) (2023-12-12)
+
+
+### Bug Fixes
+
+* **ng-yasgui:** renamed isQueryExecuted to runQueryOnChange ([60873e7](https://github.com/cognizone/ng-cognizone/commit/60873e72cbb0e84f10684146d730ecf6d26d7ece))
+
+
+### Features
+
+* **ng-yasgui:** adding condition to execute the query on click via parent ([6233deb](https://github.com/cognizone/ng-cognizone/commit/6233debe96d36a54de8e5e5ca99bb2eac618f96b))
+
 ## [2.7.9](https://github.com/cognizone/ng-cognizone/compare/v2.7.8...v2.7.9) (2023-12-12)
 
 

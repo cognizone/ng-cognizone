@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/eslint-config",
-  "version": "2.7.9",
+  "version": "2.8.0",
   "peerDependencies": {
     "@angular-eslint/eslint-plugin": "^1.0.0",
     "@angular-eslint/eslint-plugin-template": "^1.0.0",
