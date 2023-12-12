@@ -1,3 +1,10 @@
+## [2.7.9](https://github.com/cognizone/ng-cognizone/compare/v2.7.8...v2.7.9) (2023-12-12)
+
+
+### Bug Fixes
+
+* **ng-application-profile:** fix date timezone issue ([5776d0e](https://github.com/cognizone/ng-cognizone/commit/5776d0e1f243505fb2684daeb0064413c79170b9))
+
 ## [2.7.8](https://github.com/cognizone/ng-cognizone/compare/v2.7.7...v2.7.8) (2023-10-25)
 
 
