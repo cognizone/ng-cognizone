@@ -20,7 +20,10 @@ describe('ResourceGraphService', () => {
 
   let spectator: SpectatorService<ResourceGraphService>;
 
-  beforeEach(() => (spectator = createService()));
+  beforeEach(() => {
+    spectator = createService();
+    global.Date.prototype.getTimezoneOffset = jest.fn(() => -60);
+  });
 
   test('should be injectable', () => {
     expect(spectator.service).not.toBeUndefined();
