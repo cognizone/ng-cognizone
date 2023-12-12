@@ -1,3 +1,9 @@
+## [3.7.1](https://github.com/cognizone/ng-cognizone/compare/v3.7.0...v3.7.1) (2023-12-12)
+
+### Bug Fixes
+
+- **ng-yasgui:** renamed isQueryExecuted to runQueryOnChange ([75a2ea9](https://github.com/cognizone/ng-cognizone/commit/75a2ea9477d2e95b78f7b8559cdae45c59f40fb3))
+
 # [3.7.0](https://github.com/cognizone/ng-cognizone/compare/v3.6.4...v3.7.0) (2023-12-12)
 
 ### Features
