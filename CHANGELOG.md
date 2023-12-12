@@ -1,3 +1,9 @@
+# [3.7.0](https://github.com/cognizone/ng-cognizone/compare/v3.6.4...v3.7.0) (2023-12-12)
+
+### Features
+
+- **ng-yasgui:** adding condition to execute the query on click via parent ([78d218a](https://github.com/cognizone/ng-cognizone/commit/78d218aa8a0d3aaaab3a37c4b6d3851a6806b5ee))
+
 ## [3.6.4](https://github.com/cognizone/ng-cognizone/compare/v3.6.3...v3.6.4) (2023-11-09)
 
 ### Bug Fixes
