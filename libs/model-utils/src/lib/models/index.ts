@@ -11,6 +11,7 @@ export * from './pagination';
 export * from './primitive';
 export * from './select-option';
 export * from './sorter';
+export * from './thunk';
 export * from './typed-resource';
 export * from './typed-resource-context';
 export * from './typed-resource-graph';

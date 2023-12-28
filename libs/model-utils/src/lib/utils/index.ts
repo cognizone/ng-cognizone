@@ -5,6 +5,7 @@ export * from './date-to-date-string';
 export * from './download-blob';
 export * from './extract-one-source-from-elastic-response';
 export * from './extract-sources-from-elastic-response';
+export * from './extract-thunk-value';
 export * from './get-all-properties';
 export * from './get-all-select-options';
 export * from './get-lang-string-value';
