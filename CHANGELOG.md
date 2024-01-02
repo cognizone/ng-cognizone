@@ -1,3 +1,13 @@
+# [3.8.0](https://github.com/cognizone/ng-cognizone/compare/v3.7.1...v3.8.0) (2024-01-02)
+
+### Features
+
+- **cdk:** add feature flag service and directive ([00338ea](https://github.com/cognizone/ng-cognizone/commit/00338eac25a49a3a1fde3673612e7662ae156e76))
+- **cdk:** added AutoResizeHelperDirective and FOCUSABLE_ELEMENTS_SELECTOR ([bb12716](https://github.com/cognizone/ng-cognizone/commit/bb1271688913b4c2c5f1f24b80d69b9406a0031e))
+- **json-ld:** add json-ld lib imported from Hanami ([32df0b4](https://github.com/cognizone/ng-cognizone/commit/32df0b4b1879d9e5b8ba44f043359fc3be0ea2bc))
+- **shacl:** added shacl lib ([c162e6e](https://github.com/cognizone/ng-cognizone/commit/c162e6e82070c6130dcc66dbb702bf4c31fa0bdf))
+- **ui-kit:** created library ([bebe73f](https://github.com/cognizone/ng-cognizone/commit/bebe73f2732731ca5ad7c35c637b2fc8190c190d))
+
 ## [3.7.1](https://github.com/cognizone/ng-cognizone/compare/v3.7.0...v3.7.1) (2023-12-12)
 
 ### Bug Fixes

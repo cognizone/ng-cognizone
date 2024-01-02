@@ -1,11 +1,32 @@
 {
   "name": "@cognizone/ui-kit",
-  "version": "0.0.1",
+  "version": "3.8.0",
   "peerDependencies": {
     "@angular/common": ">=14.0.0",
     "@angular/core": ">=14.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    },
+    {
+      "name": "Farah El Agha",
+      "email": "farah.agha111@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git",
+    "directory": "libs/ui-kit"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
