@@ -1,3 +1,9 @@
+## [3.8.1](https://github.com/cognizone/ng-cognizone/compare/v3.8.0...v3.8.1) (2024-01-02)
+
+### Bug Fixes
+
+- dummy change to trigger new release ([f4d490d](https://github.com/cognizone/ng-cognizone/commit/f4d490d511dc8a63a7c287c4ec0b0df808e925f4))
+
 # [3.8.0](https://github.com/cognizone/ng-cognizone/compare/v3.7.1...v3.8.0) (2024-01-02)
 
 ### Features
