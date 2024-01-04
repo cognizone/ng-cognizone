@@ -1,3 +1,10 @@
+## [3.8.2](https://github.com/cognizone/ng-cognizone/compare/v3.8.1...v3.8.2) (2024-01-04)
+
+### Bug Fixes
+
+- **cdk:** added defaultsTo pipe ([a0c695b](https://github.com/cognizone/ng-cognizone/commit/a0c695b6e199a8ad90096432020602d579f09c73))
+- **model-utils:** added isEmpty utility function ([6e4aa67](https://github.com/cognizone/ng-cognizone/commit/6e4aa677aa75c186343a76e3cc2186b6ca9ef70f))
+
 ## [3.8.1](https://github.com/cognizone/ng-cognizone/compare/v3.8.0...v3.8.1) (2024-01-02)
 
 ### Bug Fixes
