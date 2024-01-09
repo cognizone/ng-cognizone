@@ -26,7 +26,8 @@ export const DEFAULT_SEO_OPTIONS: SeoOptions = {
   metaDescriptors: {
     [MetaIds.TITLE_TAG]: {
       id: MetaIds.TITLE_TAG,
-      multi: true
+      multi: true,
+      separator: ' ',
     },
     [MetaIds.CANONICAL_URL_LINK]: {
       id: MetaIds.CANONICAL_URL_LINK,
@@ -73,7 +74,7 @@ export const DEFAULT_SEO_OPTIONS: SeoOptions = {
     [MetaIds.OG_TITLE]: {
       id: MetaIds.OG_TITLE,
       keyAttribute: 'property',
-      multi: true
+      multi: true,
     },
     [MetaIds.OG_TYPE]: {
       id: MetaIds.OG_TYPE,
