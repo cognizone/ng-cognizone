@@ -69,6 +69,10 @@ export class MetaPropertyDirective implements AfterContentChecked, OnDestroy, Me
       return;
     }
 
+    if (this.onDestroyStrategy === 'reset' && this.metaId) {
+      this.resetMeta();
+    }
+
     const { multi } = this.seoService.getDescriptor(this.metaId);
     this.cmd = multi ? this.seoService.appendMetaValue(this.metaId, content) : this.seoService.setMetaValue(this.metaId, content);
   }
@@ -77,7 +81,7 @@ export class MetaPropertyDirective implements AfterContentChecked, OnDestroy, Me
     if (this.onDestroyStrategy === 'remove') {
       this.cmd?.remove();
     } else if (this.onDestroyStrategy === 'reset' && this.metaId) {
-      this.seoService.resetMeta(this.metaId);
+      this.resetMeta();
     }
   }
 
@@ -97,6 +101,10 @@ export class MetaPropertyDirective implements AfterContentChecked, OnDestroy, Me
       return this.children.map(subValue => subValue.getContent()).join(this.subValuesSeparator ?? '');
     }
     return this.elRef.nativeElement.textContent?.trim() ?? '';
+  }
+
+  private resetMeta(): void {
+    this.seoService.resetMeta(this.metaId);
   }
 }
 
