@@ -1,3 +1,5 @@
-:host ::ng-deep .cz-yasgui.single ul.nav {
-  display: none;
+:host ::ng-deep {
+  .cz-yasgui.single ul.nav, .yasr_header > button:last-child {
+    display: none;
+  }
 }
