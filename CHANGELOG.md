@@ -1,3 +1,10 @@
+## [2.8.2](https://github.com/cognizone/ng-cognizone/compare/v2.8.1...v2.8.2) (2024-01-23)
+
+
+### Bug Fixes
+
+* **ng-yasgui:** check for yasgui cache clean ([9e5cb3a](https://github.com/cognizone/ng-cognizone/commit/9e5cb3ad05a767077ee596e6d15d13018ff25053))
+
 ## [2.8.1](https://github.com/cognizone/ng-cognizone/compare/v2.8.0...v2.8.1) (2024-01-23)
 
 
