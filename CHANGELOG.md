@@ -1,3 +1,10 @@
+## [2.8.1](https://github.com/cognizone/ng-cognizone/compare/v2.8.0...v2.8.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* **ng-yasgui:** updating yasgui to prevent xss ([00c7575](https://github.com/cognizone/ng-cognizone/commit/00c7575757c8b87e055827f59b2870152822bee3))
+
 # [2.8.0](https://github.com/cognizone/ng-cognizone/compare/v2.7.9...v2.8.0) (2023-12-12)
 
 
