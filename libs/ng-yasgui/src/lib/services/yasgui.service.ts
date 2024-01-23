@@ -49,7 +49,7 @@ export class YasguiService {
       const key = localStorage.key(i) as string;
       // Note -> used as a backup(d438d94f6a63bec652b615cd4a3c2f51)
       // (the newer version of Yasgui is adding this key -> d438d94f6a63bec652b615cd4a3c2f51)
-      if (key.startsWith('yasgui') || key.startsWith('yasr') || JSON.parse(localStorage.getItem(key) as string).hasOwnProperty('val') || key.startsWith('d438d94f6a63bec652b615cd4a3c2f51')) {
+      if (key.startsWith('yasgui') || key.startsWith('yasr') || localStorage.getItem(key)?.includes('val') || key.startsWith('d438d94f6a63bec652b615cd4a3c2f51')) {
         localStorage.removeItem(key);
       }
     }
