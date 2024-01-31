@@ -1,3 +1,9 @@
+## [3.8.4](https://github.com/cognizone/ng-cognizone/compare/v3.8.3...v3.8.4) (2024-01-31)
+
+### Bug Fixes
+
+- **tslint-config:** remove ordering for class properties to use inject more easily ([2f2767b](https://github.com/cognizone/ng-cognizone/commit/2f2767b7a75b4f38d1a4ee8f1f8a34823df1c10b))
+
 ## [3.8.3](https://github.com/cognizone/ng-cognizone/compare/v3.8.2...v3.8.3) (2024-01-23)
 
 ### Bug Fixes
