@@ -1,5 +1,5 @@
 import { Primitive } from '@cognizone/model-utils';
-import { RDF, RDFS, XSD } from '@cognizone/lod';
+import { RDF, RDFS, XSD } from '@cognizone/lod/core';
 import { isJsonLdValueLang, isJsonLdValueReference, JsonLdValueLiteral } from '../models';
 
 const maxInteger = 10 ** 21;

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import produce from 'immer';
+import { produce } from 'immer';
 
 @Pipe({
   name: 'filterObject',

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit, Provider } from '@angular/core';
 import { ApplicationProfile } from '@cognizone/application-profile';
 import { OnDestroy$ } from '@cognizone/ng-core';
-import produce from 'immer';
+import { produce } from 'immer';
 
 import {
   DETAIL_VIEW_CONTEXT_TOKEN,

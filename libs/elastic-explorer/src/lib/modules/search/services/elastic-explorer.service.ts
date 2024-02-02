@@ -15,7 +15,7 @@ import {
 } from '@cognizone/model-utils';
 import { LoadingService, Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
-import produce from 'immer';
+import { produce } from 'immer';
 import { combineLatest, EMPTY, Observable } from 'rxjs';
 import { catchError, debounceTime, distinctUntilChanged, filter, map, shareReplay, switchMap } from 'rxjs/operators';
 

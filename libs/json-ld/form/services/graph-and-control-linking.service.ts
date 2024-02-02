@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AbstractControl, UntypedFormArray, UntypedFormGroup } from '@angular/forms';
 import { dateToDateString } from '@cognizone/model-utils';
-import produce from 'immer';
+import { produce } from 'immer';
 import { get, isEqual, set } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
 import { filter, finalize, map, tap } from 'rxjs/operators';

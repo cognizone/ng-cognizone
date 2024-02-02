@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { DOCUMENT } from '@angular/common';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
-import produce from 'immer';
+import { produce } from 'immer';
 
 import { createOpinionatedOptions, MetaIds, Processors } from '../models';
 import { SeoService } from './seo.service';

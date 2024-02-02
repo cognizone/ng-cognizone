@@ -2,7 +2,7 @@ import { ApplicationProfile } from '@cognizone/application-profile';
 import { Command, Flags } from '@oclif/core';
 import * as chalk from 'chalk';
 import { cosmiconfigSync } from 'cosmiconfig';
-import produce from 'immer';
+import { produce } from 'immer';
 
 import { JsonService } from '../services';
 import { ApFetchService, ApiGetOptions, ElasticFetchOptions } from '../services/ap-fetch.service';

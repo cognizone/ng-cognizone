@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/dot-notation */
 import { InjectionToken } from '@angular/core';
 
-import produce from 'immer';
+import { produce } from 'immer';
 import { MetaDescriptor } from './meta-descriptor';
 import { MetaId } from './meta-id';
 import { MetaIds } from './meta-ids';
@@ -26,7 +26,7 @@ export const DEFAULT_SEO_OPTIONS: SeoOptions = {
   metaDescriptors: {
     [MetaIds.TITLE_TAG]: {
       id: MetaIds.TITLE_TAG,
-      multi: true
+      multi: true,
     },
     [MetaIds.CANONICAL_URL_LINK]: {
       id: MetaIds.CANONICAL_URL_LINK,
@@ -73,7 +73,7 @@ export const DEFAULT_SEO_OPTIONS: SeoOptions = {
     [MetaIds.OG_TITLE]: {
       id: MetaIds.OG_TITLE,
       keyAttribute: 'property',
-      multi: true
+      multi: true,
     },
     [MetaIds.OG_TYPE]: {
       id: MetaIds.OG_TYPE,

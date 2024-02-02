@@ -1,5 +1,5 @@
 import { Primitive } from '@cognizone/model-utils';
-import { RDF } from '@cognizone/lod';
+import { RDF } from '@cognizone/lod/core';
 import {
   ExpandedJsonLdContainer,
   isJsonLdList,

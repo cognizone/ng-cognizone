@@ -3,7 +3,7 @@ import { notNil } from '@cognizone/model-utils';
 import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService } from '@cognizone/json-model';
 import { Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
-import produce from 'immer';
+import { produce } from 'immer';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, filter, map, shareReplay } from 'rxjs/operators';
 

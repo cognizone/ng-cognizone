@@ -8,10 +8,11 @@ import {
   getOneNode,
   getOneValue,
   isOfType,
-  JsonLdService,
   JsonLdValue,
 } from '@cognizone/json-ld/core';
-import { HANAMI, RDFS, SH } from '@cognizone/lod';
+import { JsonLdService } from '@cognizone/json-ld/ng-core';
+
+import { HANAMI, RDFS, SH } from '@cognizone/lod/core';
 import { Many, manyToArray, notNil } from '@cognizone/model-utils';
 import { TtlCache, TtlCacheFactory } from '@cognizone/ng-core';
 

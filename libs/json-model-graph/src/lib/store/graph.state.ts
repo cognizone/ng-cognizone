@@ -3,7 +3,7 @@ import { JsonModelFlatGraph } from '@cognizone/json-model';
 import { manyToArray } from '@cognizone/model-utils';
 import { Logger } from '@cognizone/ng-core';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
-import produce from 'immer';
+import { produce } from 'immer';
 
 import { GraphStatus } from '../models/graph-status';
 import { RemoveGraph, Reset, SetGraph, UpdateNode } from './graph.actions';
