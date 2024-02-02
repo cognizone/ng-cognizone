@@ -1,10 +1,6 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { inject, Injectable } from '@angular/core';
-import { Many, manyToArray } from '@cognizone/model-utils';
-import produce from 'immer';
-import * as jsonldLib from 'jsonld';
-
-import { RDF, UriGenerator, XSD } from '@cognizone/lod';
 import {
   ExpandedJsonLdContainer,
   isJsonLdValueLiteral,
@@ -13,7 +9,12 @@ import {
   JsonLdGraphCz,
   JsonLdNode,
   JsonLdValue,
-} from '../models';
+} from '@cognizone/json-ld/core';
+import { UriGenerator } from '@cognizone/lod';
+import { RDF, XSD } from '@cognizone/lod/core';
+import { Many, manyToArray } from '@cognizone/model-utils';
+import { produce } from 'immer';
+import * as jsonldLib from 'jsonld';
 
 @Injectable({
   providedIn: 'root',

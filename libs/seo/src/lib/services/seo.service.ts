@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Many, manyToArray, Nil } from '@cognizone/model-utils';
-import produce from 'immer';
+import { produce } from 'immer';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 import { composeProcessors, MetaDescriptor, MetaId, MetaIds, MetaValue, MetaValueLike, SEO_OPTIONS, SeoOptions, SeoState } from '../models';

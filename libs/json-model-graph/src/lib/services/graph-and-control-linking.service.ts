@@ -3,7 +3,7 @@ import { AbstractControl, UntypedFormArray, UntypedFormBuilder, UntypedFormGroup
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, JsonModel, JsonModelService } from '@cognizone/json-model';
 import { CvService } from '@cognizone/legi-cv';
 import { Many, manyToArray, notNil } from '@cognizone/model-utils';
-import produce from 'immer';
+import { produce } from 'immer';
 import { isEqual, get, set } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
 import { filter, finalize, map, switchMap, tap } from 'rxjs/operators';

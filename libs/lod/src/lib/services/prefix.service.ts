@@ -1,7 +1,8 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
+
 import { Injectable } from '@angular/core';
 
-import { LodContext } from '../models';
-import { isCurie } from '../utils';
+import { isCurie, LodContext } from '@cognizone/lod/core';
 
 @Injectable({ providedIn: 'root' })
 export class PrefixService {

@@ -1,17 +1,19 @@
 {
   "name": "@cognizone/json-ld",
   "version": "3.8.4",
-  "peerDependencies": {
+  "optionalDependencies": {
     "@angular/core": "^14.0.0",
-    "@cognizone/lod": ">=3.0.0",
-    "@cognizone/i18n": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
     "@ngxs/store": "^3.7.5",
-    "immer": "^9.0.0",
-    "json-ld": "^8.0.0",
-    "lodash-es": "^4.17.21",
+    "@cognizone/i18n": ">=3.0.0",
+    "@cognizone/ng-core": ">=3.0.0",
     "rxjs": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@cognizone/lod": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
+    "immer": "^9.0.0 || ^10.0.0",
+    "jsonld": "^8.0.0",
+    "lodash-es": "^4.17.21"
   },
   "dependencies": {
     "tslib": "^2.3.0"

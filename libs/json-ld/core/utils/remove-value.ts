@@ -1,4 +1,4 @@
-import produce from 'immer';
+import { produce } from 'immer';
 import { get } from 'lodash-es';
 import { ExpandedJsonLdContainer, JsonLdNode, ValueDescriptor } from '../models';
 

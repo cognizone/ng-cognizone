@@ -1,6 +1,6 @@
 import { Many } from '@cognizone/model-utils';
 import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService, Uri } from '@cognizone/json-model';
-import produce from 'immer';
+import { produce } from 'immer';
 import { Observable } from 'rxjs';
 
 import { GraphService } from './graph.service';

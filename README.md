@@ -85,6 +85,10 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v3.8 to v3.9
+
+- json-ld, lod and shacl libs have new core and/or ng-core sub entry points. This was made it so that \*/core one don't depend on Angular artifacts, so that they can be used in NodeJs environments. When migrating, it will just require to change a few imports
+
 ## Migrating from v3.6 to v3.7
 
 - json-model: `IdGenerator` as been removed, need to use `UriGenerator` from `@cognizone/lod` instead. Be sure to properly configure the `newUriPrefix` option.

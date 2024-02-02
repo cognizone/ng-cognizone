@@ -1,22 +1,22 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { Injectable, NgZone } from '@angular/core';
 import { Many, notNil } from '@cognizone/model-utils';
 import { Logger } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
-import produce from 'immer';
+import { produce } from 'immer';
 import { get, set } from 'lodash-es';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, filter, map } from 'rxjs/operators';
-import { RDF } from '@cognizone/lod';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
+import { RDF } from '@cognizone/lod/core';
 import {
   ExpandedJsonLdContainer,
   getAllValueDescriptors,
   getAllValues,
   JsonLdNode,
-  JsonLdService,
   JsonLdValue,
   RdfListElement,
 } from '@cognizone/json-ld/core';
+import { JsonLdService } from '@cognizone/json-ld/ng-core';
 
 import { GraphStatus } from '../models';
 import { RemoveGraph, Reset, SetGraph, UpdateNode } from '../store/graph.actions';
