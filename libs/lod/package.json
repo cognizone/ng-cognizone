@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/lod",
-  "version": "3.9.0",
+  "version": "3.9.1",
   "peerDependencies": {
     "@angular/core": ">=14.0.0",
     "@cognizone/model-utils": ">=3.0.0"
