@@ -2,7 +2,8 @@
   "name": "@cognizone/lod",
   "version": "3.9.0",
   "peerDependencies": {
-    "@angular/core": ">=14.0.0"
+    "@angular/core": ">=14.0.0",
+    "@cognizone/model-utils": ">=3.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
