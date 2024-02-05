@@ -1,3 +1,9 @@
+# [3.9.0](https://github.com/cognizone/ng-cognizone/compare/v3.8.4...v3.9.0) (2024-02-05)
+
+### Features
+
+- create a few core or ng-core sub entry points to make \*/core ones usable in nodejs scripts ([f589a1c](https://github.com/cognizone/ng-cognizone/commit/f589a1c1fb01a56134bbcdede68f78960d1ddf28))
+
 ## [3.8.4](https://github.com/cognizone/ng-cognizone/compare/v3.8.3...v3.8.4) (2024-01-31)
 
 ### Bug Fixes
