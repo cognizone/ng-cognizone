@@ -1,3 +1,9 @@
+## [3.9.2](https://github.com/cognizone/ng-cognizone/compare/v3.9.1...v3.9.2) (2024-02-05)
+
+### Bug Fixes
+
+- peer dependencies (pretty please) ([278feb7](https://github.com/cognizone/ng-cognizone/commit/278feb7c50ddbeb707add0a82466e6ff42a6cef3))
+
 ## [3.9.1](https://github.com/cognizone/ng-cognizone/compare/v3.9.0...v3.9.1) (2024-02-05)
 
 ### Bug Fixes
