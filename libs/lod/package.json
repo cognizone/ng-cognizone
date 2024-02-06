@@ -2,11 +2,13 @@
   "name": "@cognizone/lod",
   "version": "3.9.2",
   "peerDependencies": {
-    "@angular/core": ">=14.0.0",
     "@cognizone/model-utils": ">=3.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "@angular/core": ">=14.0.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

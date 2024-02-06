@@ -9,6 +9,7 @@
       "executor": "@nrwl/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
+        "updateBuildableProjectDepsInPackageJson": false,
         "project": "libs/lod/ng-package.json"
       },
       "configurations": {
