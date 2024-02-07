@@ -12,16 +12,7 @@ export function getConcreteNodeKindsOfPropertyShape(
   const nodeKind = getOneValue<ShNodeKindValue>(propertyShape[SH.nodeKind]);
 
   if (nodeKind) {
-    switch (nodeKind) {
-      case SH.BlankNodeOrIRI:
-        return [SH.BlankNode, SH.IRI];
-      case SH.BlankNodeOrLiteral:
-        return [SH.BlankNode, SH.Literal];
-      case SH.IRIOrLiteral:
-        return [SH.IRI, SH.Literal];
-      default:
-        return [nodeKind];
-    }
+    return getConcreteNodeKinds(nodeKind);
   }
 
   const computed = new Set<ShNodeKindConcreteValue>();
@@ -47,4 +38,17 @@ export function getConcreteNodeKindsOfPropertyShape(
   }
 
   return Array.from(computed);
+}
+
+export function getConcreteNodeKinds(nodeKind: ShNodeKindValue): ShNodeKindConcreteValue[] {
+  switch (nodeKind) {
+    case SH.BlankNodeOrIRI:
+      return [SH.BlankNode, SH.IRI];
+    case SH.BlankNodeOrLiteral:
+      return [SH.BlankNode, SH.Literal];
+    case SH.IRIOrLiteral:
+      return [SH.IRI, SH.Literal];
+    default:
+      return [nodeKind];
+  }
 }
