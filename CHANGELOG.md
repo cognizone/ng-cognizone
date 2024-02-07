@@ -1,3 +1,9 @@
+## [3.9.4](https://github.com/cognizone/ng-cognizone/compare/v3.9.3...v3.9.4) (2024-02-07)
+
+### Bug Fixes
+
+- **shacl:** added getConcreteNodeKinds ([d1b2b94](https://github.com/cognizone/ng-cognizone/commit/d1b2b944c73bcfdfa0978c92b63ff25ad586dc01))
+
 ## [3.9.3](https://github.com/cognizone/ng-cognizone/compare/v3.9.2...v3.9.3) (2024-02-06)
 
 ### Bug Fixes
