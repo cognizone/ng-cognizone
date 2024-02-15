@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/ng-application-profile",
-  "version": "3.9.4",
+  "version": "3.10.0",
   "peerDependencies": {
     "@cognizone/application-profile": ">=3.0.0",
     "@cognizone/json-model": ">=3.0.0",

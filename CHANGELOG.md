@@ -1,3 +1,11 @@
+# [3.10.0](https://github.com/cognizone/ng-cognizone/compare/v3.9.4...v3.10.0) (2024-02-15)
+
+### Features
+
+- **cdk:** add loading directives ([92c9901](https://github.com/cognizone/ng-cognizone/commit/92c9901bb3ebc476fab189af5698aded47b231e0))
+- **cdk:** added file-drop-zone directive and service ([062b984](https://github.com/cognizone/ng-cognizone/commit/062b984870720dfbf0781aee1d10263fde5b8687))
+- **cdk:** introduce scrolling helper directive ([311ae55](https://github.com/cognizone/ng-cognizone/commit/311ae55e1ea4f7ec5cc4d63528da79c1d85dd22a))
+
 ## [3.9.4](https://github.com/cognizone/ng-cognizone/compare/v3.9.3...v3.9.4) (2024-02-07)
 
 ### Bug Fixes
