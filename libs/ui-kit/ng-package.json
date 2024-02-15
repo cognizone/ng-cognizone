@@ -3,5 +3,6 @@
   "dest": "../../dist/libs/ui-kit",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "assets": ["styles/**/*.scss"]
 }
