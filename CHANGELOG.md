@@ -1,3 +1,9 @@
+# [3.11.0](https://github.com/cognizone/ng-cognizone/compare/v3.10.0...v3.11.0) (2024-02-16)
+
+### Features
+
+- **ui-kit:** ported toggletip module from Hanami ([3439a76](https://github.com/cognizone/ng-cognizone/commit/3439a76901222ef3e943df9a3df2ca5bd81d9bc0))
+
 # [3.10.0](https://github.com/cognizone/ng-cognizone/compare/v3.9.4...v3.10.0) (2024-02-15)
 
 ### Features
