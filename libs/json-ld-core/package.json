@@ -9,8 +9,7 @@
     "@cognizone/lod-core": ">=3.0.0",
     "@cognizone/model-utils": ">=3.0.0",
     "immer": "^9.0.0 || ^10.0.0",
-    "jsonld": "^8.0.0",
-    "lodash-es": "^4.17.21"
+    "jsonld": "^8.0.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

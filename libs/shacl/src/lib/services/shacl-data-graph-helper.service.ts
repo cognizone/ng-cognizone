@@ -11,9 +11,16 @@ import {
 import { JsonLdService } from '@cognizone/json-ld/ng-core';
 import { HANAMI, SH } from '@cognizone/lod-core';
 import { Many } from '@cognizone/model-utils';
+import {
+  DEFAULT_LINKING_STRATEGY,
+  getConcreteNodeKindsOfPropertyShape,
+  HanamiNodeEditor,
+  HanamiPurpose,
+  LinkingStrategy,
+  ShNodeShape,
+  ShPropertyShape,
+} from '@cognizone/shacl-core';
 
-import { DEFAULT_LINKING_STRATEGY, HanamiNodeEditor, HanamiPurpose, LinkingStrategy, ShNodeShape, ShPropertyShape } from '../models';
-import { getConcreteNodeKindsOfPropertyShape } from '../utils';
 import { ShaclShapesGraphHelper, ShaclShapesGraphHelperFactory } from './shacl-shapes-graph-helper.service';
 
 @Injectable({ providedIn: 'root' })
