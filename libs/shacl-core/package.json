@@ -4,6 +4,7 @@
   "peerDependencies": {
     "@cognizone/json-ld-core": ">=3.0.0",
     "@cognizone/lod-core": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
     "immer": "^9.0.0 || ^10.0.0",
     "jsonld": "^8.0.0"
   },
