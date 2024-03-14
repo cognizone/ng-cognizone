@@ -1,3 +1,9 @@
+## [3.12.2](https://github.com/cognizone/ng-cognizone/compare/v3.12.1...v3.12.2) (2024-03-14)
+
+### Bug Fixes
+
+- **shacl-core:** peer deps, part 2 ([bd5822f](https://github.com/cognizone/ng-cognizone/commit/bd5822f0a971525df12b6399c455768f3c639cdc))
+
 ## [3.12.1](https://github.com/cognizone/ng-cognizone/compare/v3.12.0...v3.12.1) (2024-03-14)
 
 ### Bug Fixes

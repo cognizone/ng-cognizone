@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/lod-core",
-  "version": "3.12.1",
+  "version": "3.12.2",
   "dependencies": {
     "tslib": "^2.0.0"
   },
