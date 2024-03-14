@@ -85,6 +85,12 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v3.11 to v3.12
+
+- `@cognizone/json-ld/core`, `@cognizone/lod/core` and `@cognizone/shacl/core` respectively moved to dedicated packages `@cognizone/json-ld-core`, `@cognizone/lod-core` and `@cognizone/shacl-core`.
+- A few duplicate entities from `@cognizone/shacl` have been removed in favour of their `@cognizone/shacl-core` equivalent
+- Removed `Memoizer` from `@cognizone/shacl-core`, now it is only available through `@cognizone/shacl`
+
 ## Migrating from v3.8 to v3.9
 
 - json-ld, lod and shacl libs have new core and/or ng-core sub entry points. This was made it so that \*/core one don't depend on Angular artifacts, so that they can be used in NodeJs environments. When migrating, it will just require to change a few imports

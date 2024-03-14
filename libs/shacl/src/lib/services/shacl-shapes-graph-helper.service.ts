@@ -11,23 +11,22 @@ import {
   JsonLdValue,
 } from '@cognizone/json-ld-core';
 import { JsonLdService } from '@cognizone/json-ld/ng-core';
-
 import { HANAMI, RDFS, SH } from '@cognizone/lod-core';
 import { Many, manyToArray, notNil } from '@cognizone/model-utils';
 import { TtlCache, TtlCacheFactory } from '@cognizone/ng-core';
-
 import {
+  getConcreteNodeKindsOfPropertyShape,
+  getPathDescriptor,
   HanamiNodeEditor,
   HanamiPurpose,
   LinkingStrategy,
-  Memoizer,
   pathsPointingToPropertyShapes,
   RdfsClass,
   ShNodeShape,
   ShPropertyShape,
   ShShape,
-} from '../models';
-import { getConcreteNodeKindsOfPropertyShape, getPathDescriptor } from '../utils';
+} from '@cognizone/shacl-core';
+import { Memoizer } from '../models';
 
 @Injectable({ providedIn: 'root' })
 export class ShaclShapesGraphHelperFactory {
