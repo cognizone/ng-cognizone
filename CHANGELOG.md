@@ -1,3 +1,9 @@
+## [3.12.4](https://github.com/cognizone/ng-cognizone/compare/v3.12.3...v3.12.4) (2024-03-14)
+
+### Bug Fixes
+
+- **shacl-core:** remove lodash-es deps + cleanup shacl ([83d290c](https://github.com/cognizone/ng-cognizone/commit/83d290c25bad7efc61e0e4f64354019e5a49af68))
+
 ## [3.12.3](https://github.com/cognizone/ng-cognizone/compare/v3.12.2...v3.12.3) (2024-03-14)
 
 ### Bug Fixes
