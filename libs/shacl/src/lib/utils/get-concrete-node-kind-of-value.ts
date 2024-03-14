@@ -1,5 +1,5 @@
-import { isBlankNode, isJsonLdValueLiteral, isJsonLdValueReference, JsonLdValue } from '@cognizone/json-ld/core';
-import { SH } from '@cognizone/lod/core';
+import { isBlankNode, isJsonLdValueLiteral, isJsonLdValueReference, JsonLdValue } from '@cognizone/json-ld-core';
+import { SH } from '@cognizone/lod-core';
 
 import { ShNodeKindConcreteValue } from '../models';
 

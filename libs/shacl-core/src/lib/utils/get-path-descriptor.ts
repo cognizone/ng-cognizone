@@ -1,5 +1,5 @@
-import { ExpandedJsonLdContainer, getOneValue, isBlankNodeUri } from '@cognizone/json-ld/core';
-import { SH } from '@cognizone/lod/core';
+import { ExpandedJsonLdContainer, getOneValue, isBlankNodeUri } from '@cognizone/json-ld-core';
+import { SH } from '@cognizone/lod-core';
 
 import { PathMode, ShInversePathNode, ShPropertyShape } from '../models';
 

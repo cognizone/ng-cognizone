@@ -1,16 +1,14 @@
 {
-  "name": "@cognizone/lod",
-  "version": "3.11.0",
-  "peerDependencies": {
-    "@cognizone/lod-core": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0"
-  },
+  "name": "@cognizone/lod-core",
+  "version": "3.0.1",
   "dependencies": {
     "tslib": "^2.0.0"
   },
-  "optionalDependencies": {
-    "@angular/core": ">=14.0.0"
+  "peerDependencies": {
+    "typescript": ">=3.7.0 <6",
+    "rxjs": "^7.0.0"
   },
+  "type": "commonjs",
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
   "contributors": [
@@ -26,7 +24,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cognizone/ng-cognizone.git",
-    "directory": "libs/lod"
+    "directory": "libs/lod-core"
   },
   "private": false,
   "publishConfig": {

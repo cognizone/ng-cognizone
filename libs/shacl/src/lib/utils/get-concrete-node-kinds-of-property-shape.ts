@@ -1,5 +1,5 @@
-import { ExpandedJsonLdContainer, getAllNodes, getOneValue } from '@cognizone/json-ld/core';
-import { HANAMI, SH } from '@cognizone/lod/core';
+import { ExpandedJsonLdContainer, getAllNodes, getOneValue } from '@cognizone/json-ld-core';
+import { HANAMI, SH } from '@cognizone/lod-core';
 import { Nil } from '@cognizone/model-utils';
 
 import { ShNodeKindConcreteValue, ShNodeKindValue, ShPropertyShape } from '../models';

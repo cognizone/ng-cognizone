@@ -7,9 +7,9 @@ import {
   getOneNode,
   isBlankNodeUri,
   isOfType,
-} from '@cognizone/json-ld/core';
+} from '@cognizone/json-ld-core';
 import { JsonLdService } from '@cognizone/json-ld/ng-core';
-import { HANAMI, SH } from '@cognizone/lod/core';
+import { HANAMI, SH } from '@cognizone/lod-core';
 import { Many } from '@cognizone/model-utils';
 
 import { DEFAULT_LINKING_STRATEGY, HanamiNodeEditor, HanamiPurpose, LinkingStrategy, ShNodeShape, ShPropertyShape } from '../models';

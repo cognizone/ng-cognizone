@@ -2,7 +2,7 @@
 
 import { Injectable } from '@angular/core';
 
-import { isCurie, LodContext } from '@cognizone/lod/core';
+import { isCurie, LodContext } from '@cognizone/lod-core';
 
 @Injectable({ providedIn: 'root' })
 export class PrefixService {

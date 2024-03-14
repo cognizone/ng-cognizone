@@ -9,9 +9,9 @@ import {
   JsonLdGraphCz,
   JsonLdNode,
   JsonLdValue,
-} from '@cognizone/json-ld/core';
+} from '@cognizone/json-ld-core';
 import { UriGenerator } from '@cognizone/lod';
-import { RDF, XSD } from '@cognizone/lod/core';
+import { RDF, XSD } from '@cognizone/lod-core';
 import { Many, manyToArray } from '@cognizone/model-utils';
 import { produce } from 'immer';
 import * as jsonldLib from 'jsonld';

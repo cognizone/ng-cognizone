@@ -1,5 +1,5 @@
-import { JsonLdBlankNode, JsonLdNode, JsonLdValue } from '@cognizone/json-ld/core';
-import { DCT, HANAMI, RDFS, SH } from '@cognizone/lod/core';
+import { JsonLdBlankNode, JsonLdNode, JsonLdValue } from '@cognizone/json-ld-core';
+import { DCT, HANAMI, RDFS, SH } from '@cognizone/lod-core';
 
 export interface HanamiWorkspace extends JsonLdNode {
   [DCT.title]?: JsonLdValue[];
