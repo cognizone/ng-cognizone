@@ -6,7 +6,7 @@ import { get, isEqual, set } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
 import { filter, finalize, map, tap } from 'rxjs/operators';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
-import { JsonLdNode } from '@cognizone/json-ld/core';
+import { JsonLdNode } from '@cognizone/json-ld-core';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
 import { JsonLdStoreService } from '@cognizone/json-ld/store';
 

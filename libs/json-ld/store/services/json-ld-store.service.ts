@@ -7,7 +7,7 @@ import { produce } from 'immer';
 import { get, set } from 'lodash-es';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, filter, map } from 'rxjs/operators';
-import { RDF } from '@cognizone/lod/core';
+import { RDF } from '@cognizone/lod-core';
 import {
   ExpandedJsonLdContainer,
   getAllValueDescriptors,
@@ -15,7 +15,7 @@ import {
   JsonLdNode,
   JsonLdValue,
   RdfListElement,
-} from '@cognizone/json-ld/core';
+} from '@cognizone/json-ld-core';
 import { JsonLdService } from '@cognizone/json-ld/ng-core';
 
 import { GraphStatus } from '../models';

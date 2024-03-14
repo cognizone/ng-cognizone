@@ -1,4 +1,4 @@
-import { RDF } from '@cognizone/lod/core';
+import { RDF } from '@cognizone/lod-core';
 import { IRI_PATTERN, Primitive } from '@cognizone/model-utils';
 
 export type JsonLd = JsonLdGraph | JsonLdNode[];
