@@ -1,3 +1,9 @@
+# [3.12.0](https://github.com/cognizone/ng-cognizone/compare/v3.11.0...v3.12.0) (2024-03-14)
+
+### Features
+
+- extracted /core subpaths from shacl, json-ld and lod ([bea58c7](https://github.com/cognizone/ng-cognizone/commit/bea58c74b0a980d73073d5d00cae3128fcd971b6))
+
 # [3.11.0](https://github.com/cognizone/ng-cognizone/compare/v3.10.0...v3.11.0) (2024-02-16)
 
 ### Features
