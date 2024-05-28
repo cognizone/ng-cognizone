@@ -27,6 +27,9 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
   @Input()
   classId?: string;
 
+  @Input()
+  disableLinking?: boolean;
+
   get rootUri(): string {
     return this.urisStoreService.rootUri;
   }
@@ -52,6 +55,8 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
   }
 
   ngOnChanges(): void {
+    this.emptySink();
+    if (this.disableLinking) return;
     // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
     this.attributeKey = (this.attributeKey || this.controlName || this.ngControl?.name || this.controlContainer?.name || '').toString();
 
