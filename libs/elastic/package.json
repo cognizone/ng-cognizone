@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/elastic",
-  "version": "3.12.4",
+  "version": "3.13.0",
   "peerDependencies": {
     "@cognizone/json-model": ">=3.0.0",
     "@cognizone/model-utils": ">=3.0.0",

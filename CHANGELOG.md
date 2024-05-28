@@ -1,3 +1,9 @@
+# [3.13.0](https://github.com/cognizone/ng-cognizone/compare/v3.12.4...v3.13.0) (2024-05-28)
+
+### Features
+
+- **json-model-graph:** czNodeAttributeLinked can be disabled programmatically ([b225f9f](https://github.com/cognizone/ng-cognizone/commit/b225f9fd5a6b32c546fafaf3f1872087ec8d74f1))
+
 ## [3.12.4](https://github.com/cognizone/ng-cognizone/compare/v3.12.3...v3.12.4) (2024-03-14)
 
 ### Bug Fixes
