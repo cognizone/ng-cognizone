@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-export type Namespace<KEYS extends string, BASE_URI extends string> = Readonly<BaseNamespace<KEYS, BASE_URI>>;
+export const NamespaceUri = Symbol('NamespaceUri');
 
-type BaseNamespace<KEYS extends string, BASE_URI extends string> = {
-  [key in KEYS]: `${BASE_URI}${key}`;
+export type Namespace<KEYS extends string, URI extends string> = Readonly<BaseNamespace<KEYS, URI>>;
+
+type BaseNamespace<KEYS extends string, URI extends string> = {
+  [key in KEYS | typeof NamespaceUri]: key extends KEYS ? `${URI}${key}` : URI;
 };
+
 /**
  * Creates a type safe namespace. Can also be used to create a type safe const enum for concept schemes for example.
  *
@@ -16,22 +19,34 @@ type BaseNamespace<KEYS extends string, BASE_URI extends string> = {
  * console.log(xsd.number) // typescript error: Argument of type '"number"' is not assignable to parameter of type '"boolean" | "dateTime" | "string"'.
  * ```
  */
-export function createNamespace<KEYS extends string, BASE_URI extends string>(
-  baseUri: BASE_URI,
-  members: KEYS[]
-): Namespace<KEYS, BASE_URI> {
-  return members.reduce((acc, member) => {
-    acc[member] = `${baseUri}${member}`;
-    return acc;
-  }, {} as BaseNamespace<KEYS, BASE_URI>);
+export function createNamespace<KEYS extends string, URI extends string>(uri: URI, members: KEYS[]): Namespace<KEYS, URI> {
+  return members.reduce(
+    (acc, member) => {
+      acc[member] = `${uri}${member}` as typeof member extends KEYS ? `${URI}${typeof member}` : URI;
+      return acc;
+    },
+    { [NamespaceUri]: uri } as BaseNamespace<KEYS, URI>
+  );
 }
 
-export function createDynamicNamespace<KEYS extends string, BASE_URI extends string>(baseUri: BASE_URI): Namespace<KEYS, BASE_URI> {
+export function createDynamicNamespace<KEYS extends string, URI extends string>(uri: URI): Namespace<KEYS, URI> {
   const cache: { [key: string | symbol]: string | undefined } = {};
   return new Proxy(
     {},
     {
-      get: (target, prop) => cache[prop] ?? (cache[prop] = typeof prop === 'string' ? `${baseUri}${prop}` : undefined),
+      get: (target, prop) => {
+        if (prop === NamespaceUri) return uri;
+        return cache[prop] ?? (cache[prop] = typeof prop === 'string' ? `${uri}${prop}` : undefined);
+      },
     }
-  ) as BaseNamespace<KEYS, BASE_URI>;
+  ) as BaseNamespace<KEYS, URI>;
+}
+
+export function extendNamespace<NEW_KEYS extends string, KEYS extends string, URI extends string>(
+  src: Namespace<KEYS, URI>,
+  newMembers: NEW_KEYS[]
+): Namespace<KEYS | NEW_KEYS, URI> {
+  const uri = src[NamespaceUri];
+  const members = Object.keys(src) as KEYS[];
+  return createNamespace(uri, [...members, ...newMembers]);
 }
