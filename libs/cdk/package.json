@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/cdk",
-  "version": "3.13.0",
+  "version": "3.13.1",
   "peerDependencies": {
     "@angular/common": ">=14.0.0",
     "@angular/core": ">=14.0.0"
