@@ -2,7 +2,8 @@
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { AfterViewInit, Directive, ElementRef, inject, InjectionToken, Input, NgZone } from '@angular/core';
 import { OnDestroy$ } from '@cognizone/ng-core';
-import { debounceTime, distinctUntilChanged, map, Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged, map, tap } from 'rxjs/operators';
 
 export interface AutoResizeHelperDirectiveProps {
   debounceTime?: number;
