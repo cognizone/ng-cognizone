@@ -1,6 +1,7 @@
 import { Injectable, NgZone, inject } from '@angular/core';
 import { SubSink, notNil } from '@cognizone/model-utils';
-import { fromEvent, merge, filter } from 'rxjs';
+import { fromEvent, merge } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',

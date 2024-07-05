@@ -12,7 +12,8 @@ import {
   Output,
 } from '@angular/core';
 import { OnDestroy$ } from '@cognizone/ng-core';
-import { BehaviorSubject, debounceTime, distinctUntilChanged, EMPTY, fromEvent, identity, map, merge, switchMap } from 'rxjs';
+import { BehaviorSubject, EMPTY, fromEvent, identity, merge } from 'rxjs';
+import { debounceTime, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 
 import { FileDropZoneService } from './file-drop-zone.service';
 

@@ -13,7 +13,8 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { OnDestroy$ } from '@cognizone/ng-core';
-import { filter, first, fromEvent } from 'rxjs';
+import { fromEvent } from 'rxjs';
+import { filter, first } from 'rxjs/operators';
 
 import { ToggletipComponent } from './toggletip.component';
 

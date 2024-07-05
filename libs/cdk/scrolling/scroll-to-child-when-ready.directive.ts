@@ -1,7 +1,8 @@
 import { AfterViewInit, Directive, ElementRef, inject, InjectionToken, Input, NgZone, OnChanges } from '@angular/core';
 import { Nil, notNil } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
-import { debounceTime, filter, first, identity, map, Observable, startWith } from 'rxjs';
+import { identity, Observable } from 'rxjs';
+import { debounceTime, filter, first, map, startWith } from 'rxjs/operators';
 
 interface ScrollToChildWhenReadyOptions {
   debounceTime?: number;

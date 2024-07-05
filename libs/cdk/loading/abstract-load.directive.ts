@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Directive, inject, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
-import { distinctUntilChanged, map } from 'rxjs';
+import { distinctUntilChanged, map } from 'rxjs/operators';
 
 @Directive({
   standalone: true,
