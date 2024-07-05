@@ -1,3 +1,9 @@
+## [3.13.2](https://github.com/cognizone/ng-cognizone/compare/v3.13.1...v3.13.2) (2024-07-05)
+
+### Bug Fixes
+
+- more rxjs operators import fixes ([c38072d](https://github.com/cognizone/ng-cognizone/commit/c38072dab16b4df556bc241e9609a2a5cea186b2))
+
 ## [3.13.1](https://github.com/cognizone/ng-cognizone/compare/v3.13.0...v3.13.1) (2024-07-02)
 
 ### Bug Fixes
