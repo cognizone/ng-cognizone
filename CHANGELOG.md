@@ -1,3 +1,9 @@
+## [3.13.3](https://github.com/cognizone/ng-cognizone/compare/v3.13.2...v3.13.3) (2024-07-17)
+
+### Bug Fixes
+
+- **prettier-config:** peed deps to prettier accept v3 ([b4c315d](https://github.com/cognizone/ng-cognizone/commit/b4c315df744c9851938fcdb12a3ff70826404d0b))
+
 ## [3.13.2](https://github.com/cognizone/ng-cognizone/compare/v3.13.1...v3.13.2) (2024-07-05)
 
 ### Bug Fixes
