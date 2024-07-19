@@ -26,7 +26,7 @@ const specialCaseClosingTags = new Map([
 
 const specialCaseOpeningTagRegex = /<((strong)|(b)|(i)|(dfn)|(em)|(big)|(small)|(u)|(sub)|(sup)|(strike)|(s))[\>\s]+/gi;
 
-class HtmlDiff {
+export class HtmlDiff {
   private content: string[] = [];
   private specialTagDiffStack: string[] = [];
   private newWords: string[] = [];
