@@ -1,3 +1,9 @@
+## [3.14.1](https://github.com/cognizone/ng-cognizone/compare/v3.14.0...v3.14.1) (2024-07-19)
+
+### Bug Fixes
+
+- **html-diff:** add missing export ([5f863bd](https://github.com/cognizone/ng-cognizone/commit/5f863bd5de148bab69f96fcf024acb1e7bb67c81))
+
 # [3.14.0](https://github.com/cognizone/ng-cognizone/compare/v3.13.3...v3.14.0) (2024-07-19)
 
 ### Features
