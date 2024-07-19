@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-ld-core",
-  "version": "3.13.3",
+  "version": "3.14.0",
   "type": "commonjs",
   "dependencies": {
     "tslib": "^2.3.0"

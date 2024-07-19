@@ -1,3 +1,9 @@
+# [3.14.0](https://github.com/cognizone/ng-cognizone/compare/v3.13.3...v3.14.0) (2024-07-19)
+
+### Features
+
+- **html-diff:** port htmldiff-js to our monorepo ([41940bc](https://github.com/cognizone/ng-cognizone/commit/41940bcfc1137a52e9e2e2703cf5660c7f1c1440))
+
 ## [3.13.3](https://github.com/cognizone/ng-cognizone/compare/v3.13.2...v3.13.3) (2024-07-17)
 
 ### Bug Fixes

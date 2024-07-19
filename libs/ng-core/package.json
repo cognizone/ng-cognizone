@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/ng-core",
-  "version": "3.13.3",
+  "version": "3.14.0",
   "dependencies": {
     "tslib": "^2.0.0"
   },
