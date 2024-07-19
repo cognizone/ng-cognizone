@@ -1,0 +1,26 @@
+{
+  "name": "@cognizone/html-diff",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/cognizone/ng-cognizone",
+  "contributors": [
+    {
+      "name": "William Chelman",
+      "email": "william.chelman@cogni.zone"
+    },
+    {
+      "name": "Farah El Agha",
+      "email": "farah.agha111@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cognizone/ng-cognizone.git",
+    "directory": "libs/html-diff"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
