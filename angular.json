@@ -12,6 +12,7 @@
     "elastic-explorer-chrome-extension": "apps/elastic-explorer-chrome-extension",
     "elastic-explorer-chrome-extension-e2e": "apps/elastic-explorer-chrome-extension-e2e",
     "eslint-config": "libs/eslint-config",
+    "html-diff": "libs/html-diff",
     "i18n": "libs/i18n",
     "i18n-transloco": "libs/i18n-transloco",
     "json-ld": "libs/json-ld",

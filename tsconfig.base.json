@@ -22,6 +22,7 @@
       "@cognizone/devtools": ["libs/devtools/src/index.ts"],
       "@cognizone/elastic": ["libs/elastic/src/index.ts"],
       "@cognizone/elastic-explorer": ["libs/elastic-explorer/src/index.ts"],
+      "@cognizone/html-diff": ["libs/html-diff/src/index.ts"],
       "@cognizone/i18n": ["libs/i18n/src/index.ts"],
       "@cognizone/i18n-transloco": ["libs/i18n-transloco/src/index.ts"],
       "@cognizone/json-ld": ["libs/json-ld/src/index.ts"],
