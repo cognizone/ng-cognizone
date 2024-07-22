@@ -3,7 +3,7 @@ import { manyToArray } from '@cognizone/model-utils';
 import { Logger } from '@cognizone/ng-core';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
 import { produce } from 'immer';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
+// eslint-disable-next-line @nx/enforce-module-boundaries -- needed for sub entries in lib
 import { ExpandedJsonLdContainer } from '@cognizone/json-ld-core';
 
 import { GraphStatus } from '../models/graph-status';

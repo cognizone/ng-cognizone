@@ -1,11 +1,12 @@
 {
   "name": "elastic",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/elastic/src",
   "prefix": "cz",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/elastic/tsconfig.lib.json",
         "project": "libs/elastic/ng-package.json"
@@ -17,14 +18,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/elastic/src/**/*.ts", "libs/elastic/src/**/*.html"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/elastic"],
       "options": {
         "jestConfig": "libs/elastic/jest.config.ts",

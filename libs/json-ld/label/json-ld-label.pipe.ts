@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { I18nService } from '@cognizone/i18n';
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
+// eslint-disable-next-line @nx/enforce-module-boundaries -- needed for sub entries in lib
 import { getOneValue, JsonLdNode, JsonLdValue, JsonLdValueLang } from '@cognizone/json-ld-core';
 
 @Pipe({

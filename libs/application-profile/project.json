@@ -1,5 +1,6 @@
 {
   "name": "application-profile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/application-profile/src",
   "projectType": "library",
   "targets": {
@@ -14,14 +15,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/application-profile/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/application-profile"],
       "options": {
         "jestConfig": "libs/application-profile/jest.config.ts",

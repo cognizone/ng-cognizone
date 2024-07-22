@@ -1,11 +1,12 @@
 {
   "name": "ng-application-profile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/ng-application-profile/src",
   "prefix": "cz",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/ng-application-profile/tsconfig.lib.json",
         "project": "libs/ng-application-profile/ng-package.json"
@@ -20,14 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/ng-application-profile/src/**/*.ts", "libs/ng-application-profile/src/**/*.html"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ng-application-profile"],
       "options": {
         "jestConfig": "libs/ng-application-profile/jest.config.ts",

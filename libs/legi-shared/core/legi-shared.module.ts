@@ -1,7 +1,7 @@
 import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { DateAdapter } from '@angular/material/core';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MAT_LEGACY_FORM_FIELD_DEFAULT_OPTIONS as MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/legacy-form-field';
 import { I18nService } from '@cognizone/i18n';
 
 import { DEFAULT_LEGI_SHARED_OPTIONS, LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from './models/legi-shared-options';

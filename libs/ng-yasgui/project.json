@@ -1,11 +1,12 @@
 {
   "name": "ng-yasgui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/ng-yasgui/src",
   "prefix": "cz",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/ng-yasgui/tsconfig.lib.json",
         "project": "libs/ng-yasgui/ng-package.json"
@@ -20,14 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/ng-yasgui/src/**/*.ts", "libs/ng-yasgui/src/**/*.html"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ng-yasgui"],
       "options": {
         "jestConfig": "libs/ng-yasgui/jest.config.ts",

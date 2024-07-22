@@ -1,11 +1,12 @@
 {
   "name": "permissions",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/permissions/src",
   "prefix": "cz",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/permissions/tsconfig.lib.json",
         "project": "libs/permissions/ng-package.json"
@@ -20,14 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/permissions/src/**/*.ts", "libs/permissions/src/**/*.html"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/permissions"],
       "options": {
         "jestConfig": "libs/permissions/jest.config.ts",

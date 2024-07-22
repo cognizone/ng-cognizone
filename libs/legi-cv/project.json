@@ -1,11 +1,12 @@
 {
   "name": "legi-cv",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/legi-cv/src",
   "prefix": "cz",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/legi-cv/tsconfig.lib.json",
         "project": "libs/legi-cv/ng-package.json"
@@ -20,14 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/legi-cv/src/**/*.ts", "libs/legi-cv/src/**/*.html"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/legi-cv"],
       "options": {
         "jestConfig": "libs/legi-cv/jest.config.ts",

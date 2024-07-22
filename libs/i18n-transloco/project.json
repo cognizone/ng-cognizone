@@ -1,11 +1,12 @@
 {
   "name": "i18n-transloco",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/i18n-transloco/src",
   "prefix": "cz",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/i18n-transloco/tsconfig.lib.json",
         "project": "libs/i18n-transloco/ng-package.json"
@@ -20,14 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/i18n-transloco/src/**/*.ts", "libs/i18n-transloco/src/**/*.html"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/i18n-transloco"],
       "options": {
         "jestConfig": "libs/i18n-transloco/jest.config.ts",
