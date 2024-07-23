@@ -1,3 +1,13 @@
+# [4.0.0-rc.1](https://github.com/cognizone/ng-cognizone/compare/v3.14.1...v4.0.0-rc.1) (2024-07-23)
+
+### Features
+
+- upgrade to angular 15 ([77fa6a5](https://github.com/cognizone/ng-cognizone/commit/77fa6a59da1cfb17bdd5a2e886ef239cfa4ba115))
+
+### BREAKING CHANGES
+
+- upgrade to angular 15
+
 ## [3.14.1](https://github.com/cognizone/ng-cognizone/compare/v3.14.0...v3.14.1) (2024-07-19)
 
 ### Bug Fixes
