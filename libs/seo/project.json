@@ -9,7 +9,9 @@
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/seo/ng-package.json"
+        "tsConfig": "libs/seo/tsconfig.lib.json",
+        "project": "libs/seo/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {

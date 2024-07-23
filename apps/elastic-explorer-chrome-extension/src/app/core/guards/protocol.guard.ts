@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, UrlTree } from '@angular/router';
 
 import { ProtocolService } from '../services/protocol.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProtocolGuard implements CanActivate {
+export class ProtocolGuard  {
   constructor(private router: Router, private protocolService: ProtocolService) {}
 
   canActivate(next: ActivatedRouteSnapshot): UrlTree | boolean {

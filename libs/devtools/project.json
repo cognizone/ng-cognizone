@@ -9,12 +9,10 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/devtools/tsconfig.lib.json",
-        "project": "libs/devtools/ng-package.json"
+        "project": "libs/devtools/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
-        "ivy": {
-          "tsConfig": "libs/devtools/tsconfig.lib.ivy.json"
-        },
         "production": {
           "tsConfig": "libs/devtools/tsconfig.lib.prod.json"
         }

@@ -9,7 +9,8 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/material-icons/tsconfig.lib.json",
-        "project": "libs/material-icons/ng-package.json"
+        "project": "libs/material-icons/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {

@@ -9,8 +9,7 @@
       "options": {
         "cypressConfig": "apps/ui-kit-e2e/cypress.json",
         "devServerTarget": "ui-kit:storybook",
-        "testingType": "e2e",
-        "tsConfig": "apps/ui-kit-e2e/tsconfig.json"
+        "testingType": "e2e"
       },
       "configurations": {
         "ci": {

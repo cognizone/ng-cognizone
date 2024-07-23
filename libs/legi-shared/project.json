@@ -9,7 +9,8 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/legi-shared/tsconfig.lib.json",
-        "project": "libs/legi-shared/ng-package.json"
+        "project": "libs/legi-shared/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "ivy": {

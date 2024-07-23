@@ -9,7 +9,9 @@
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/shacl/ng-package.json"
+        "tsConfig": "libs/shacl/tsconfig.lib.json",
+        "project": "libs/shacl/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {

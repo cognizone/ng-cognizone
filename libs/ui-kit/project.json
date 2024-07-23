@@ -9,7 +9,9 @@
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/ui-kit/ng-package.json"
+        "tsConfig": "libs/ui-kit/tsconfig.lib.json",
+        "project": "libs/ui-kit/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {

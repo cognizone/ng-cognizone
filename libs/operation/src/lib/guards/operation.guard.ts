@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 
 import { OperationGroupDescription } from '../models/operation';
 import { OperationUtils } from '../services/operation-utils.service';
@@ -8,7 +8,7 @@ import { OperationsService } from '../services/operations.service';
 @Injectable({
   providedIn: 'root',
 })
-export class OperationGuard implements CanActivate {
+export class OperationGuard  {
   constructor(private operationsService: OperationsService, private operationUtils: OperationUtils) {}
 
   canActivate(route: ActivatedRouteSnapshot): boolean {

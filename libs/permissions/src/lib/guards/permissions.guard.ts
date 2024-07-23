@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 import { Many, Nil } from '@cognizone/model-utils';
 import { Observable } from 'rxjs';
 import { first } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import { PermissionsService } from '../services/permissions.service';
 @Injectable({
   providedIn: 'root',
 })
-export class PermissionsGuard implements CanActivate {
+export class PermissionsGuard  {
   constructor(private permissionsService: PermissionsService) {}
 
   canActivate(next: ActivatedRouteSnapshot): Observable<boolean> {

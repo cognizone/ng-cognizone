@@ -1,5 +1,6 @@
 {
   "name": "eslint-config",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/eslint-config/src",
   "prefix": "cz",
