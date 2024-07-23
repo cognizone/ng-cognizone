@@ -1,11 +1,11 @@
 {
   "name": "@cognizone/elastic",
-  "version": "4.0.0-rc.1",
+  "version": "4.0.0-rc.2",
   "peerDependencies": {
-    "@cognizone/json-model": ">=4.0.0",
-    "@cognizone/model-utils": ">=4.0.0",
-    "@cognizone/ng-application-profile": ">=4.0.0",
-    "@cognizone/ng-core": ">=4.0.0"
+    "@cognizone/json-model": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
+    "@cognizone/ng-application-profile": ">=3.0.0",
+    "@cognizone/ng-core": ">=3.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
