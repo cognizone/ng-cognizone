@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/lod",
-  "version": "4.0.0-rc.2",
+  "version": "4.0.0-rc.3",
   "peerDependencies": {
     "@cognizone/lod-core": ">=3.0.0",
     "@cognizone/model-utils": ">=3.0.0"

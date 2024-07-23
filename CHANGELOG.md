@@ -1,3 +1,10 @@
+# [4.0.0-rc.3](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2024-07-23)
+
+
+### Features
+
+* **i18n:** add setActiveLang method ([bda3d02](https://github.com/cognizone/ng-cognizone/commit/bda3d02649d982ef9ea0fbbd756f2ef9187084dc))
+
 # [4.0.0-rc.2](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2024-07-23)
 
 
