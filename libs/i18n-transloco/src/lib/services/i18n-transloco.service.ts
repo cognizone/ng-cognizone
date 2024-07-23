@@ -1,4 +1,4 @@
-import { Injectable, Provider } from '@angular/core';
+import { EnvironmentProviders, Injectable, makeEnvironmentProviders } from '@angular/core';
 import { I18nService } from '@cognizone/i18n';
 import { CzLabel, czLabelToString } from '@cognizone/model-utils';
 import { TranslocoService } from '@jsverse/transloco';
@@ -33,6 +33,10 @@ export class I18nTranslocoService extends I18nService {
       startWith(this.getActiveLang()),
       map(() => this.getActiveLang())
     );
+  }
+
+  setActiveLang(lang: string): void {
+    this.transloco.setActiveLang(lang);
   }
 
   getActiveLang(): string {
@@ -75,7 +79,11 @@ export class I18nTranslocoService extends I18nService {
   }
 }
 
-export const i18nTranslocoServiceProvider: Provider = {
-  provide: I18nService,
-  useClass: I18nTranslocoService,
-};
+export function provideI18nTransloco(): EnvironmentProviders {
+  return makeEnvironmentProviders([
+    {
+      provide: I18nService,
+      useClass: I18nTranslocoService,
+    },
+  ]);
+}

@@ -27,6 +27,11 @@ export abstract class I18nService {
   abstract getActiveLang(): string;
 
   /**
+   * Sets the active lang in the app
+   */
+  abstract setActiveLang(lang: string): void;
+
+  /**
    * @returns the currently active locale in the app
    */
   abstract selectActiveLocale(): Observable<string>;

@@ -89,6 +89,7 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 
 - Minimal Angular version is now 16
 - Transloco has been moved from @ngneat/transloco to @jsverse/transloco. A simple find -and-relace + upgrade to v7 of those libs should be enough. Also the wai the module is setup needs to change, see official docs for the [main module](https://jsverse.github.io/transloco/docs/getting-started/installation?app-type=ng-module) and the [locale one](https://jsverse.github.io/transloco/docs/plugins/locale?app-type=ng-module).
+- The `NgModule` of `@cognizone/i18n-transloco` has been removed in favour of the `provideI18nTransloco` function that can be imported in a similar way. See that lib's [readme](./libs/i18n-transloco/README.md) for how to import it.
 
 ## Migrating from v3.11 to v3.12
 
