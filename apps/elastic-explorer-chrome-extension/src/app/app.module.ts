@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideTransloco } from '@jsverse/transloco';
 import { provideTranslocoLocale } from '@jsverse/transloco-locale';
 
+import { provideI18nTransloco } from '@cognizone/i18n-transloco';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule, TranslocoHttpLoader } from './core';
@@ -24,6 +25,7 @@ import { SharedModule } from './shared';
       loader: TranslocoHttpLoader,
     }),
     provideTranslocoLocale(),
+    provideI18nTransloco(),
   ],
   bootstrap: [AppComponent],
 })
