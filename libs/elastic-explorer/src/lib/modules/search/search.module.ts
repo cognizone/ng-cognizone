@@ -25,7 +25,7 @@ import { CheckboxGroupModule } from '@cognizone/legi-shared/checkbox-group';
 import { InputModule } from '@cognizone/legi-shared/input';
 import { ListPaginatorModule } from '@cognizone/legi-shared/list-paginator';
 import { SelectModule } from '@cognizone/legi-shared/select';
-import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
+import { TranslocoLocaleModule } from '@jsverse/transloco-locale';
 import { NgxsModule } from '@ngxs/store';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';

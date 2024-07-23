@@ -85,6 +85,11 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v3 to v4
+
+- Minimal Angular version is now 16
+- Transloco has been moved from @ngneat/transloco to @jsverse/transloco. A simple find -and-relace + upgrade to v7 of those libs should be enough. Also the wai the module is setup needs to change, see official docs for the [main module](https://jsverse.github.io/transloco/docs/getting-started/installation?app-type=ng-module) and the [locale one](https://jsverse.github.io/transloco/docs/plugins/locale?app-type=ng-module).
+
 ## Migrating from v3.11 to v3.12
 
 - `@cognizone/json-ld/core`, `@cognizone/lod/core` and `@cognizone/shacl/core` respectively moved to dedicated packages `@cognizone/json-ld-core`, `@cognizone/lod-core` and `@cognizone/shacl-core`.

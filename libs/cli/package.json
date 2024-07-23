@@ -34,7 +34,7 @@
     "listr": "^0.14.3",
     "lodash": "^4.17.21",
     "prompts": "^2.3.0",
-    "rxjs": "^7.0.0",
+    "rxjs": "^7.8.0",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
@@ -58,8 +58,8 @@
     "typescript": "^4.8.4"
   },
   "optionalDependencies": {
-    "@cognizone/application-profile": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0"
+    "@cognizone/application-profile": ">=4.0.0",
+    "@cognizone/model-utils": ">=4.0.0"
   },
   "oclif": {
     "bin": "cz-cli",

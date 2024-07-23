@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { getLangStringValue, LangString, LangStringSimple, Nil } from '@cognizone/model-utils';
-import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoService } from '@jsverse/transloco';
 
 @Pipe({
   name: 'czLangString',

@@ -2,13 +2,13 @@
   "name": "@cognizone/transloco-langstring",
   "version": "4.0.0-rc.1",
   "peerDependencies": {
-    "@angular/core": ">=14.0.0",
-    "@angular/platform-browser-dynamic": ">=14.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@ngneat/transloco": "^2.22.0"
+    "@angular/core": ">=16.0.0",
+    "@angular/platform-browser-dynamic": ">=16.0.0",
+    "@cognizone/model-utils": ">=4.0.0",
+    "@jsverse/transloco": "^7.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

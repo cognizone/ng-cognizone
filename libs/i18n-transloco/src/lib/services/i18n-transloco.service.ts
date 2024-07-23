@@ -1,8 +1,8 @@
 import { Injectable, Provider } from '@angular/core';
 import { I18nService } from '@cognizone/i18n';
 import { CzLabel, czLabelToString } from '@cognizone/model-utils';
-import { TranslocoService } from '@ngneat/transloco';
-import { TranslocoLocaleService } from '@ngneat/transloco-locale';
+import { TranslocoService } from '@jsverse/transloco';
+import { TranslocoLocaleService } from '@jsverse/transloco-locale';
 import { Observable, of } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 

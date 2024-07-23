@@ -32,6 +32,8 @@ jobs:
       - name: Install cli dependencies
         run: npm i
         working-directory: ./libs/cli
+      - name: Build tooling scripts
+        run: npm run build-tools
       # Build and release
       - name: Building
         run: npm run nx -- run-many --target=build --configuration=production --exclude=docs,docs-app

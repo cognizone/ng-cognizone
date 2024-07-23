@@ -9,8 +9,8 @@ import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy
 import { AutocompleteModule } from '@cognizone/legi-shared/autocomplete';
 import { DatePickerModule } from '@cognizone/legi-shared/date-picker';
 import { InputModule } from '@cognizone/legi-shared/input';
-import { TranslocoModule } from '@ngneat/transloco';
-import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
+import { TranslocoModule } from '@jsverse/transloco';
+import { TranslocoLocaleModule } from '@jsverse/transloco-locale';
 
 import { UserActionTableComponent } from './components/user-action-table/user-action-table.component';
 import { PaginatorOutlineDirective } from './directives/paginator-outline.directive';

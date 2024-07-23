@@ -2,12 +2,12 @@
   "name": "@cognizone/json-model",
   "version": "4.0.0-rc.1",
   "peerDependencies": {
-    "@cognizone/lod": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0"
+    "@cognizone/lod": ">=4.0.0",
+    "@cognizone/model-utils": ">=4.0.0",
+    "@cognizone/ng-core": ">=4.0.0"
   },
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
