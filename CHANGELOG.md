@@ -1,3 +1,10 @@
+# [4.0.0-rc.4](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.3...v4.0.0-rc.4) (2024-07-26)
+
+
+### Bug Fixes
+
+* **18n:** add token injection for other libraries ([403c5b5](https://github.com/cognizone/ng-cognizone/commit/403c5b519aa2112dbc972d3674142faf1b12db3d))
+
 # [4.0.0-rc.3](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2024-07-23)
 
 
