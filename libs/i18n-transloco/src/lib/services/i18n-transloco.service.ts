@@ -1,5 +1,5 @@
 import { EnvironmentProviders, Injectable, inject, makeEnvironmentProviders } from '@angular/core';
-import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
+import { I18nService } from '@cognizone/i18n';
 import { CzLabel, czLabelToString } from '@cognizone/model-utils';
 import { TranslocoService } from '@jsverse/transloco';
 import { TranslocoLocaleService } from '@jsverse/transloco-locale';
@@ -82,10 +82,6 @@ export function provideI18nTransloco(): EnvironmentProviders {
   return makeEnvironmentProviders([
     {
       provide: I18nService,
-      useExisting: I18nTranslocoService,
-    },
-    {
-      provide: I18N_SERVICE,
       useExisting: I18nTranslocoService,
     },
   ]);

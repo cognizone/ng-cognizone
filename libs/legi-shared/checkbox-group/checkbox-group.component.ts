@@ -4,7 +4,6 @@ import {
   Component,
   ContentChild,
   forwardRef,
-  Inject,
   Input,
   OnChanges,
   OnInit,
@@ -12,11 +11,10 @@ import {
   SimpleChanges,
   TemplateRef,
 } from '@angular/core';
-import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
 import { MatLegacyCheckboxChange as MatCheckboxChange } from '@angular/material/legacy-checkbox';
+import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
-
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import {
   getAllSelectOptions,
@@ -101,12 +99,7 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   private _counts: Nil<SelectOptionCounts>;
   private allOptions: SelectOption<T>[] = [];
 
-  constructor(
-    @Inject(I18N_SERVICE) private i18n: I18nService,
-    logger: Logger,
-    cdr: ChangeDetectorRef,
-    @Optional() controlContainer: ControlContainer
-  ) {
+  constructor(private i18n: I18nService, logger: Logger, cdr: ChangeDetectorRef, @Optional() controlContainer: ControlContainer) {
     super(logger, cdr, controlContainer);
   }
 

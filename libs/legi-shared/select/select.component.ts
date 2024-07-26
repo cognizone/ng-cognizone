@@ -11,12 +11,11 @@ import {
   Output,
   TemplateRef,
 } from '@angular/core';
-import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
+import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { LabelComponent } from '@cognizone/legi-shared/label';
-import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
-
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import { getAllSelectOptions, LangString, LangStringSimple, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
@@ -86,7 +85,7 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
    */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
-    @Inject(I18N_SERVICE) private i18nService: I18nService,
+    private i18nService: I18nService,
     logger: Logger,
     cdr: ChangeDetectorRef,
     @Optional() controlContainer: ControlContainer

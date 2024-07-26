@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
+import { I18nService } from '@cognizone/i18n';
 import { getLangStringValue, LangString, LangStringSimple, Nil } from '@cognizone/model-utils';
 
 import { Concept } from '../models/concept';
@@ -8,7 +8,7 @@ import { MatchType } from '../models/match-type';
 
 @Injectable()
 export class ConceptMatcherService {
-  private i18nService: I18nService = inject(I18N_SERVICE);
+  private i18nService: I18nService = inject(I18nService);
 
   match(concept: Concept, keys: ConceptFilterableKeys, query: Nil<string>, matchType: MatchType = 'includes'): number {
     if (!query) return 1;

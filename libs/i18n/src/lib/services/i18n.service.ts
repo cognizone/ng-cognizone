@@ -74,7 +74,3 @@ export abstract class I18nService {
    */
   abstract getAvailableSimpleLangs(): string[];
 }
-
-// added to inject in other libraries, as injecting using an abstract class seems to break in angular 18 for now
-// apps using I18nService should still use the I18nService class as injection token though
-export const I18N_SERVICE = new InjectionToken<I18nService>('I18nService');

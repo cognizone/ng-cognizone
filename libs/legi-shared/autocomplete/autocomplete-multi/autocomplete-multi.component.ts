@@ -16,7 +16,7 @@ import {
 } from '@angular/core';
 import { ControlContainer, NgControl, UntypedFormControl } from '@angular/forms';
 import { MatLegacyAutocompleteSelectedEvent as MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
-import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
+import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
@@ -131,7 +131,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
    */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
-    @Inject(I18N_SERVICE) private i18n: I18nService,
+    private i18n: I18nService,
     logger: Logger,
     cdr: ChangeDetectorRef,
     @Optional() controlContainer: ControlContainer,
