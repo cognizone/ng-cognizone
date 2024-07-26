@@ -1,3 +1,10 @@
+# [4.0.0-rc.7](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.6...v4.0.0-rc.7) (2024-07-26)
+
+
+### Bug Fixes
+
+* **json-ld:** directly use transloco for now ([60139dc](https://github.com/cognizone/ng-cognizone/commit/60139dcccad48415aa2c8b32bf988a9c597b689c))
+
 # [4.0.0-rc.6](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.5...v4.0.0-rc.6) (2024-07-26)
 
 
