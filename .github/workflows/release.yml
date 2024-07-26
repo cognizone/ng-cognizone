@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - name: Git set user
         run: |
           git config --local user.email "WilliamChelman@users.noreply.github.com"
@@ -27,6 +27,8 @@ jobs:
             ./node_modules
             ./libs/cli/node_modules
           key: ${{ runner.os }}-cache-${{ hashFiles('./package-lock.json') }}-${{ hashFiles('./libs/cli/package-lock.json') }}
+      - name: Check npm version
+        run: npm -v
       - name: Install root dependencies
         run: npm i
       - name: Install cli dependencies
