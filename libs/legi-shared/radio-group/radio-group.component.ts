@@ -4,6 +4,7 @@ import {
   Component,
   ContentChild,
   forwardRef,
+  Inject,
   Input,
   OnInit,
   Optional,
@@ -11,7 +12,7 @@ import {
 } from '@angular/core';
 import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18nService } from '@cognizone/i18n';
+import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
 import {
   getAllSelectOptions,
   LangString,
@@ -89,7 +90,12 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   /**
    * @ignore
    */
-  constructor(private i18nService: I18nService, logger: Logger, cdr: ChangeDetectorRef, @Optional() controlContainer: ControlContainer) {
+  constructor(
+    @Inject(I18N_SERVICE) private i18nService: I18nService,
+    logger: Logger,
+    cdr: ChangeDetectorRef,
+    @Optional() controlContainer: ControlContainer
+  ) {
     super(logger, cdr, controlContainer);
   }
 

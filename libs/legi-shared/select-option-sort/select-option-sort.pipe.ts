@@ -1,12 +1,12 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { I18nService } from '@cognizone/i18n';
+import { Pipe, PipeTransform, inject } from '@angular/core';
+import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
 import { getLangStringValue, Nil, SelectOption } from '@cognizone/model-utils';
 
 @Pipe({
   name: 'selectOptionsSort',
 })
 export class SelectOptionSortPipe implements PipeTransform {
-  constructor(private i18nService: I18nService) {}
+  private i18nService: I18nService = inject(I18N_SERVICE);
 
   /**
    * `transform` sorts the list of options based on provided sortOrder: `'asc' | 'desc'` and sortType `'label' | 'value'`

@@ -4,6 +4,7 @@ import {
   Component,
   ContentChild,
   forwardRef,
+  Inject,
   Input,
   OnChanges,
   OnInit,
@@ -14,7 +15,7 @@ import {
 import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatLegacyCheckboxChange as MatCheckboxChange } from '@angular/material/legacy-checkbox';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
-import { I18nService } from '@cognizone/i18n';
+import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
 
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import {
@@ -75,7 +76,7 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   @Input()
   canBeFiltered = false;
   @Input()
-  direction: 'row' | 'column' = 'column';
+  direction: 'column' | 'row' = 'column';
   @Input()
   sortType?: SelectOptionSortType;
   @Input()
@@ -100,7 +101,12 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   private _counts: Nil<SelectOptionCounts>;
   private allOptions: SelectOption<T>[] = [];
 
-  constructor(private i18n: I18nService, logger: Logger, cdr: ChangeDetectorRef, @Optional() controlContainer: ControlContainer) {
+  constructor(
+    @Inject(I18N_SERVICE) private i18n: I18nService,
+    logger: Logger,
+    cdr: ChangeDetectorRef,
+    @Optional() controlContainer: ControlContainer
+  ) {
     super(logger, cdr, controlContainer);
   }
 
@@ -123,7 +129,7 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   /**
    * @ignore
    */
-  isString(label: string | LangString | LangStringSimple): label is string {
+  isString(label: LangString | LangStringSimple | string): label is string {
     return typeof label === 'string';
   }
 
@@ -140,8 +146,7 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
    */
   onChange(event: MatCheckboxChange, option: SelectOption<T>): void {
     let model = this.model ?? [];
-    if (event.checked) model = [...model, option.value];
-    else model = model.filter(m => m !== option.value);
+    model = event.checked ? [...model, option.value] : model.filter(m => m !== option.value);
     this.embeddedControl.setValue(model);
   }
 
@@ -203,13 +208,11 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
         const groups = groupSelectOptions(options);
         this.options = getAllSelectOptions(options);
         this.optionsGroups = groups;
-        if(this.removeDisabledOptions) {
-          this.optionsGroups = this.optionsGroups.map(group => {
-            return {
-              ...group,
-              options: group.options.filter(o => !o.disabled)
-            };
-          })
+        if (this.removeDisabledOptions) {
+          this.optionsGroups = this.optionsGroups.map(group => ({
+            ...group,
+            options: group.options.filter(o => !o.disabled),
+          }));
         }
 
         this.cdr.markForCheck();

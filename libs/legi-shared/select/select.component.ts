@@ -15,7 +15,7 @@ import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angula
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { LabelComponent } from '@cognizone/legi-shared/label';
-import { I18nService } from '@cognizone/i18n';
+import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
 
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
 import { getAllSelectOptions, LangString, LangStringSimple, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
@@ -86,7 +86,7 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
    */
   constructor(
     @Inject(LEGI_SHARED_OPTIONS_TOKEN) private config: LegiSharedOptions,
-    private i18nService: I18nService,
+    @Inject(I18N_SERVICE) private i18nService: I18nService,
     logger: Logger,
     cdr: ChangeDetectorRef,
     @Optional() controlContainer: ControlContainer

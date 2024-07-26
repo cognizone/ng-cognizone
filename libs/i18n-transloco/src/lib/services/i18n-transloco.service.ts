@@ -1,16 +1,15 @@
-import { EnvironmentProviders, Injectable, makeEnvironmentProviders } from '@angular/core';
-import { I18nService } from '@cognizone/i18n';
+import { EnvironmentProviders, Injectable, inject, makeEnvironmentProviders } from '@angular/core';
+import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
 import { CzLabel, czLabelToString } from '@cognizone/model-utils';
 import { TranslocoService } from '@jsverse/transloco';
 import { TranslocoLocaleService } from '@jsverse/transloco-locale';
 import { Observable, of } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
-@Injectable()
-export class I18nTranslocoService extends I18nService {
-  constructor(private transloco: TranslocoService, private translocoLocaleService: TranslocoLocaleService) {
-    super();
-  }
+@Injectable({ providedIn: 'root' })
+export class I18nTranslocoService implements I18nService {
+  private transloco: TranslocoService = inject(TranslocoService);
+  private translocoLocaleService: TranslocoLocaleService = inject(TranslocoLocaleService);
 
   selectActiveLocale(): Observable<string> {
     return this.translocoLocaleService.localeChanges$.pipe(startWith(this.translocoLocaleService.getLocale()));
@@ -83,7 +82,11 @@ export function provideI18nTransloco(): EnvironmentProviders {
   return makeEnvironmentProviders([
     {
       provide: I18nService,
-      useClass: I18nTranslocoService,
+      useExisting: I18nTranslocoService,
+    },
+    {
+      provide: I18N_SERVICE,
+      useExisting: I18nTranslocoService,
     },
   ]);
 }

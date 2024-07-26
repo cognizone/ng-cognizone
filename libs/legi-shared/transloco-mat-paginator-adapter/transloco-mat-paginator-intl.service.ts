@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { MatLegacyPaginatorIntl as MatPaginatorIntl } from '@angular/material/legacy-paginator';
-import { I18nService } from '@cognizone/i18n';
+import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
 
 /**
  * `TranslocoMatPaginatorIntl` is a helper class, that's only purpose is to provide
@@ -8,7 +8,7 @@ import { I18nService } from '@cognizone/i18n';
  */
 @Injectable()
 export class TranslocoMatPaginatorIntl extends MatPaginatorIntl {
-  constructor(private i18nService: I18nService) {
+  constructor(@Inject(I18N_SERVICE) private i18nService: I18nService) {
     super();
     this.i18nService.selectActiveLang().subscribe(() => {
       this.adaptLabels();

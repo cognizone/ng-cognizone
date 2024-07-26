@@ -1,6 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { I18nService } from '@cognizone/i18n';
-
+import { inject, Pipe, PipeTransform } from '@angular/core';
+import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
 // eslint-disable-next-line @nx/enforce-module-boundaries -- needed for sub entries in lib
 import { getOneValue, JsonLdNode, JsonLdValue, JsonLdValueLang } from '@cognizone/json-ld-core';
 
@@ -9,7 +8,7 @@ import { getOneValue, JsonLdNode, JsonLdValue, JsonLdValueLang } from '@cognizon
   standalone: true,
 })
 export class JsonLdLabelPipe implements PipeTransform {
-  constructor(private i18nService: I18nService) {}
+  private i18nService: I18nService = inject(I18N_SERVICE);
 
   transform(node: JsonLdNode, propertyKey: string): string {
     const values = node[propertyKey as keyof JsonLdNode] as unknown as JsonLdValue[];
@@ -19,9 +18,7 @@ export class JsonLdLabelPipe implements PipeTransform {
       if ('@language' in b) return -1;
       return 0;
     });
-    const value = (sorted as JsonLdValueLang[]).find(
-      v => v['@language'] === this.i18nService.getActiveLang() || v['@language'] === this.i18nService.getActiveSimpleLang()
-    )?.['@value'];
+    const value = (sorted as JsonLdValueLang[]).find(v => v['@language'] === this.i18nService.getActiveLang())?.['@value'];
 
     return value ?? getOneValue(sorted) ?? '';
   }
