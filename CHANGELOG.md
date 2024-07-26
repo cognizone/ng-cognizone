@@ -1,3 +1,10 @@
+# [4.0.0-rc.5](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.4...v4.0.0-rc.5) (2024-07-26)
+
+
+### Features
+
+* **json-ld:** add JsonLdLabelDirective ([8a2bd42](https://github.com/cognizone/ng-cognizone/commit/8a2bd42a40fec897e04476aef889eed2c56c9dfa))
+
 # [4.0.0-rc.4](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.3...v4.0.0-rc.4) (2024-07-26)
 
 
