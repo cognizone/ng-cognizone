@@ -1,15 +1,16 @@
 import { inject, Injectable } from '@angular/core';
-import { I18N_SERVICE, I18nService } from '@cognizone/i18n';
+import { TranslocoService } from '@jsverse/transloco';
+import { map, Observable, startWith } from 'rxjs';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries -- needed for sub entries in lib
 import { getOneValue, JsonLdNode, JsonLdValue, JsonLdValueLang } from '@cognizone/json-ld-core';
-import { map, Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root',
 })
 export class JsonLdLabelService {
-  private i18nService: I18nService = inject(I18N_SERVICE);
+  private i18nService: TranslocoService = inject(TranslocoService);
+  // TODO find out why injecting this fails while in angular 18 app
+  // private i18nService: I18nService = inject(I18N_SERVICE);
 
   getLabel(node: JsonLdNode, propertyKey: string, lang: string = this.i18nService.getActiveLang()): string {
     const values = node[propertyKey as keyof JsonLdNode] as unknown as JsonLdValue[];
@@ -27,6 +28,9 @@ export class JsonLdLabelService {
   }
 
   selectLabel(node: JsonLdNode, propertyKey: string): Observable<string> {
-    return this.i18nService.selectActiveLang().pipe(map(lang => this.getLabel(node, propertyKey, lang)));
+    return this.i18nService.langChanges$.pipe(
+      startWith(this.i18nService.getActiveLang()),
+      map(lang => this.getLabel(node, propertyKey, lang))
+    );
   }
 }
