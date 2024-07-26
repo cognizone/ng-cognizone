@@ -1,3 +1,10 @@
+# [4.0.0-rc.6](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.5...v4.0.0-rc.6) (2024-07-26)
+
+
+### Bug Fixes
+
+* upgrade node and npm ([87e6267](https://github.com/cognizone/ng-cognizone/commit/87e626766e20123387efe58667a3e83836f080a0))
+
 # [4.0.0-rc.5](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.4...v4.0.0-rc.5) (2024-07-26)
 
 
