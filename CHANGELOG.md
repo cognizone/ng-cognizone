@@ -1,3 +1,11 @@
+# [4.0.0-rc.8](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.7...v4.0.0-rc.8) (2024-07-26)
+
+
+### Bug Fixes
+
+* **i18n:** remove I18N_SERVICE token ([a9d7079](https://github.com/cognizone/ng-cognizone/commit/a9d70791c578d3a238fadba02e7811cdc01253d2))
+* too much imports ([c1eba12](https://github.com/cognizone/ng-cognizone/commit/c1eba12bea4181d0081329babe15c3d79b6d6a73))
+
 # [4.0.0-rc.7](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.6...v4.0.0-rc.7) (2024-07-26)
 
 
