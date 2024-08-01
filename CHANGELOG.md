@@ -1,3 +1,10 @@
+# [4.0.0-rc.9](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.8...v4.0.0-rc.9) (2024-08-01)
+
+
+### Features
+
+* **ng-core:** use Unsubscribable instead of Subscription for OnDestroy$ ([accf4f7](https://github.com/cognizone/ng-cognizone/commit/accf4f756ca3004bda09d9097321bb49f3ab266e))
+
 # [4.0.0-rc.8](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.7...v4.0.0-rc.8) (2024-07-26)
 
 
