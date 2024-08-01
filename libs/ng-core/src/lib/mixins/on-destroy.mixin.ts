@@ -2,12 +2,12 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { OnDestroy, Type } from '@angular/core';
-import { MonoTypeOperatorFunction, Observable, pipe, Subject, Subscription } from 'rxjs';
+import { MonoTypeOperatorFunction, Observable, pipe, Subject, Unsubscribable } from 'rxjs';
 import { first, takeUntil } from 'rxjs/operators';
 
 export interface OnDestroyMixin extends OnDestroy {
   onDestroy$: Observable<void>;
-  subSink: Subscription;
+  subSink: Unsubscribable;
   untilDestroyed<T>(): MonoTypeOperatorFunction<T>;
   firstUntilDestroyed<T>(): MonoTypeOperatorFunction<T>;
   emptySink(): void;
@@ -36,7 +36,7 @@ export function OnDestroyMixin<T extends Type<any>>(base: T): T & Type<OnDestroy
 
     private _onDestroy$: Subject<void>;
 
-    private subscriptions: Subscription[] = [];
+    private subscriptions: Unsubscribable[] = [];
 
     constructor(...args: any[]) {
       super(...args);
@@ -44,7 +44,7 @@ export function OnDestroyMixin<T extends Type<any>>(base: T): T & Type<OnDestroy
       this.onDestroy$ = this._onDestroy$.asObservable();
     }
 
-    set subSink(value: Subscription) {
+    set subSink(value: Unsubscribable) {
       this.subscriptions.push(value);
     }
 
