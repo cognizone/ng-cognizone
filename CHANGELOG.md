@@ -1,3 +1,9 @@
+## [3.14.2](https://github.com/cognizone/ng-cognizone/compare/v3.14.1...v3.14.2) (2024-08-08)
+
+### Bug Fixes
+
+- **html-diff:** add missing <sup> as possible specialClosingTag ([2011cdb](https://github.com/cognizone/ng-cognizone/commit/2011cdb57e823584a00903ed615e3b8ada1f47c2))
+
 ## [3.14.1](https://github.com/cognizone/ng-cognizone/compare/v3.14.0...v3.14.1) (2024-07-19)
 
 ### Bug Fixes
