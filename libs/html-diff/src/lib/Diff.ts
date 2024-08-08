@@ -18,6 +18,7 @@ const specialCaseClosingTags = new Map([
   ['</big>', 0],
   ['</small>', 0],
   ['</u>', 0],
+  ['</sup>', 0],
   ['</sub>', 0],
   ['</strike>', 0],
   ['</s>', 0],
