@@ -1,6 +1,5 @@
-import { Observable } from 'rxjs';
 import { CzLabel } from '@cognizone/model-utils';
-import { InjectionToken } from '@angular/core';
+import { Observable } from 'rxjs';
 
 export abstract class I18nService {
   /**

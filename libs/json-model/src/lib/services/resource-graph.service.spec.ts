@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @nx/enforce-module-boundaries */
 import { TypedResourceGraph } from '@cognizone/model-utils';
 import { LoggerModule } from '@cognizone/ng-core';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 
 import { ApplicationProfile } from '@cognizone/application-profile';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
 import { PrefixService } from '@cognizone/lod';
 import { JsonModel } from '../models/json-model';
