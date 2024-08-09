@@ -1,3 +1,31 @@
+# [4.0.0](https://github.com/cognizone/ng-cognizone/compare/v3.14.2...v4.0.0) (2024-08-09)
+
+
+### Bug Fixes
+
+* **18n:** add token injection for other libraries ([403c5b5](https://github.com/cognizone/ng-cognizone/commit/403c5b519aa2112dbc972d3674142faf1b12db3d))
+* **eslint-config:** remove member ordering ([a125b0a](https://github.com/cognizone/ng-cognizone/commit/a125b0a7a28f2da31d46ca3f1219ccd0e1db3682))
+* **html-diff:** add missing <sup> as possible specialClosingTag ([61267ed](https://github.com/cognizone/ng-cognizone/commit/61267edf928d9f772a7d49603b3d21049e57e565))
+* **i18n:** remove I18N_SERVICE token ([a9d7079](https://github.com/cognizone/ng-cognizone/commit/a9d70791c578d3a238fadba02e7811cdc01253d2))
+* **json-ld:** directly use transloco for now ([60139dc](https://github.com/cognizone/ng-cognizone/commit/60139dcccad48415aa2c8b32bf988a9c597b689c))
+* too much imports ([c1eba12](https://github.com/cognizone/ng-cognizone/commit/c1eba12bea4181d0081329babe15c3d79b6d6a73))
+* upgrade node and npm ([87e6267](https://github.com/cognizone/ng-cognizone/commit/87e626766e20123387efe58667a3e83836f080a0))
+
+
+### Features
+
+* **i18n:** add setActiveLang method ([bda3d02](https://github.com/cognizone/ng-cognizone/commit/bda3d02649d982ef9ea0fbbd756f2ef9187084dc))
+* **json-ld:** add JsonLdLabelDirective ([8a2bd42](https://github.com/cognizone/ng-cognizone/commit/8a2bd42a40fec897e04476aef889eed2c56c9dfa))
+* **ng-core:** use Unsubscribable instead of Subscription for OnDestroy$ ([accf4f7](https://github.com/cognizone/ng-cognizone/commit/accf4f756ca3004bda09d9097321bb49f3ab266e))
+* upgrade to angular 15 ([77fa6a5](https://github.com/cognizone/ng-cognizone/commit/77fa6a59da1cfb17bdd5a2e886ef239cfa4ba115))
+* upgrade to Angular 16 ([43ed66b](https://github.com/cognizone/ng-cognizone/commit/43ed66b995fdbb8d324406b96325ab0e0fa261cb))
+
+
+### BREAKING CHANGES
+
+* upgrade to Angular 16
+* upgrade to angular 15
+
 # [4.0.0-rc.9](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.8...v4.0.0-rc.9) (2024-08-01)
 
 ### Features
