@@ -10,7 +10,6 @@
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "tsConfig": "libs/lod/tsconfig.lib.json",
-        "updateBuildableProjectDepsInPackageJson": false,
         "project": "libs/lod/ng-package.json"
       },
       "configurations": {

@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { fakeAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OnDestroyMixin } from './on-destroy.mixin';
 
@@ -22,7 +22,7 @@ class TestComponent extends OnDestroyMixin(Parent) {
 
 describe('Mixin: OnDestroyMixin', () => {
   let fixture: ComponentFixture<TestComponent>;
-  beforeEach(async(async () => {
+  beforeEach(fakeAsync(async () => {
     await TestBed.configureTestingModule({
       declarations: [TestComponent],
     }).compileComponents();

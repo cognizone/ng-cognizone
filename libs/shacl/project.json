@@ -10,8 +10,7 @@
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "tsConfig": "libs/shacl/tsconfig.lib.json",
-        "project": "libs/shacl/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/shacl/ng-package.json"
       },
       "configurations": {
         "production": {

@@ -10,8 +10,7 @@
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "tsConfig": "libs/ui-kit/tsconfig.lib.json",
-        "project": "libs/ui-kit/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/ui-kit/ng-package.json"
       },
       "configurations": {
         "production": {

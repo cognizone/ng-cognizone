@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/transloco-langstring/tsconfig.lib.json",
-        "project": "libs/transloco-langstring/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/transloco-langstring/ng-package.json"
       },
       "configurations": {
         "ivy": {

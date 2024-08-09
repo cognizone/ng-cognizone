@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/permissions/tsconfig.lib.json",
-        "project": "libs/permissions/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/permissions/ng-package.json"
       },
       "configurations": {
         "ivy": {

@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/legi-cv/tsconfig.lib.json",
-        "project": "libs/legi-cv/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/legi-cv/ng-package.json"
       },
       "configurations": {
         "ivy": {

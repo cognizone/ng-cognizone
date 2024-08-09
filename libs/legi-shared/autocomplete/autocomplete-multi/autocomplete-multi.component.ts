@@ -15,7 +15,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ControlContainer, NgControl, UntypedFormControl } from '@angular/forms';
-import { MatLegacyAutocompleteSelectedEvent as MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';

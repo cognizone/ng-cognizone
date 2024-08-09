@@ -10,8 +10,7 @@
       "outputs": ["{workspaceRoot}/dist/libs/json-model"],
       "options": {
         "tsConfig": "libs/json-model/tsconfig.lib.json",
-        "project": "libs/json-model/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/json-model/ng-package.json"
       },
       "configurations": {
         "production": {
