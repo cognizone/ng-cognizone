@@ -5,10 +5,10 @@
     "@cognizone/devtools": ">=3.0.0",
     "@cognizone/model-utils": ">=3.0.0",
     "@cognizone/ng-core": ">=3.0.0",
-    "@angular/material": ">=16.0.0",
-    "@angular/router": ">=16.0.0",
+    "@angular/material": ">=18.0.0",
+    "@angular/router": ">=18.0.0",
     "ngx-json-viewer": "^3.2.1",
-    "@ngxs/store": "^3.8.0"
+    "@ngxs/store": "^18.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

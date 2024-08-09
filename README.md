@@ -85,6 +85,10 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v4 to v5
+
+- Minimal Angular version is now 18
+
 ## Migrating from v3 to v4
 
 - Minimal Angular version is now 16
