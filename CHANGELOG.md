@@ -1,64 +1,55 @@
 # [4.0.0-rc.9](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.8...v4.0.0-rc.9) (2024-08-01)
 
-
 ### Features
 
-* **ng-core:** use Unsubscribable instead of Subscription for OnDestroy$ ([accf4f7](https://github.com/cognizone/ng-cognizone/commit/accf4f756ca3004bda09d9097321bb49f3ab266e))
+- **ng-core:** use Unsubscribable instead of Subscription for OnDestroy$ ([accf4f7](https://github.com/cognizone/ng-cognizone/commit/accf4f756ca3004bda09d9097321bb49f3ab266e))
 
 # [4.0.0-rc.8](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.7...v4.0.0-rc.8) (2024-07-26)
 
-
 ### Bug Fixes
 
-* **i18n:** remove I18N_SERVICE token ([a9d7079](https://github.com/cognizone/ng-cognizone/commit/a9d70791c578d3a238fadba02e7811cdc01253d2))
-* too much imports ([c1eba12](https://github.com/cognizone/ng-cognizone/commit/c1eba12bea4181d0081329babe15c3d79b6d6a73))
+- **i18n:** remove I18N_SERVICE token ([a9d7079](https://github.com/cognizone/ng-cognizone/commit/a9d70791c578d3a238fadba02e7811cdc01253d2))
+- too much imports ([c1eba12](https://github.com/cognizone/ng-cognizone/commit/c1eba12bea4181d0081329babe15c3d79b6d6a73))
 
 # [4.0.0-rc.7](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.6...v4.0.0-rc.7) (2024-07-26)
 
-
 ### Bug Fixes
 
-* **json-ld:** directly use transloco for now ([60139dc](https://github.com/cognizone/ng-cognizone/commit/60139dcccad48415aa2c8b32bf988a9c597b689c))
+- **json-ld:** directly use transloco for now ([60139dc](https://github.com/cognizone/ng-cognizone/commit/60139dcccad48415aa2c8b32bf988a9c597b689c))
 
 # [4.0.0-rc.6](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.5...v4.0.0-rc.6) (2024-07-26)
 
-
 ### Bug Fixes
 
-* upgrade node and npm ([87e6267](https://github.com/cognizone/ng-cognizone/commit/87e626766e20123387efe58667a3e83836f080a0))
+- upgrade node and npm ([87e6267](https://github.com/cognizone/ng-cognizone/commit/87e626766e20123387efe58667a3e83836f080a0))
 
 # [4.0.0-rc.5](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.4...v4.0.0-rc.5) (2024-07-26)
 
-
 ### Features
 
-* **json-ld:** add JsonLdLabelDirective ([8a2bd42](https://github.com/cognizone/ng-cognizone/commit/8a2bd42a40fec897e04476aef889eed2c56c9dfa))
+- **json-ld:** add JsonLdLabelDirective ([8a2bd42](https://github.com/cognizone/ng-cognizone/commit/8a2bd42a40fec897e04476aef889eed2c56c9dfa))
 
 # [4.0.0-rc.4](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.3...v4.0.0-rc.4) (2024-07-26)
 
-
 ### Bug Fixes
 
-* **18n:** add token injection for other libraries ([403c5b5](https://github.com/cognizone/ng-cognizone/commit/403c5b519aa2112dbc972d3674142faf1b12db3d))
+- **18n:** add token injection for other libraries ([403c5b5](https://github.com/cognizone/ng-cognizone/commit/403c5b519aa2112dbc972d3674142faf1b12db3d))
 
 # [4.0.0-rc.3](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2024-07-23)
 
-
 ### Features
 
-* **i18n:** add setActiveLang method ([bda3d02](https://github.com/cognizone/ng-cognizone/commit/bda3d02649d982ef9ea0fbbd756f2ef9187084dc))
+- **i18n:** add setActiveLang method ([bda3d02](https://github.com/cognizone/ng-cognizone/commit/bda3d02649d982ef9ea0fbbd756f2ef9187084dc))
 
 # [4.0.0-rc.2](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2024-07-23)
 
-
 ### Features
 
-* upgrade to Angular 16 ([43ed66b](https://github.com/cognizone/ng-cognizone/commit/43ed66b995fdbb8d324406b96325ab0e0fa261cb))
-
+- upgrade to Angular 16 ([43ed66b](https://github.com/cognizone/ng-cognizone/commit/43ed66b995fdbb8d324406b96325ab0e0fa261cb))
 
 ### BREAKING CHANGES
 
-* upgrade to Angular 16
+- upgrade to Angular 16
 
 # [4.0.0-rc.1](https://github.com/cognizone/ng-cognizone/compare/v3.14.1...v4.0.0-rc.1) (2024-07-23)
 
@@ -69,6 +60,12 @@
 ### BREAKING CHANGES
 
 - upgrade to angular 15
+
+## [3.14.2](https://github.com/cognizone/ng-cognizone/compare/v3.14.1...v3.14.2) (2024-08-08)
+
+### Bug Fixes
+
+- **html-diff:** add missing <sup> as possible specialClosingTag ([2011cdb](https://github.com/cognizone/ng-cognizone/commit/2011cdb57e823584a00903ed615e3b8ada1f47c2))
 
 ## [3.14.1](https://github.com/cognizone/ng-cognizone/compare/v3.14.0...v3.14.1) (2024-07-19)
 
