@@ -114,7 +114,6 @@ module.exports = {
     '@typescript-eslint/no-confusing-non-null-assertion': 'off',
     '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/no-dupe-class-members': 'error',
-    '@typescript-eslint/no-duplicate-imports': 'error',
     '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/no-empty-function': 'error',
     '@typescript-eslint/no-empty-interface': 'off',
@@ -131,7 +130,6 @@ module.exports = {
     ],
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-for-in-array': 'error',
-    '@typescript-eslint/no-implicit-any-catch': 'warn',
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-inferrable-types': [
       'error',
@@ -214,7 +212,6 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/return-await': 'off',
     '@typescript-eslint/semi': 'off',
-    '@typescript-eslint/sort-type-union-intersection-members': 'error',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/space-infix-ops': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
