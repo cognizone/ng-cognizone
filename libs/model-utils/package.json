@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/model-utils",
-  "version": "4.1.0-beta.1",
+  "version": "5.0.0-beta.1",
   "dependencies": {
     "tslib": "^2.3.0"
   },

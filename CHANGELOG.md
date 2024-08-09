@@ -1,3 +1,15 @@
+# [5.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v4.1.0-beta.1...v5.0.0-beta.1) (2024-08-09)
+
+
+### Features
+
+* correct breaking change to trigger 5.0.0 beta ([042309b](https://github.com/cognizone/ng-cognizone/commit/042309b4685447ad5f4d13d9a4f1a66ef5aebeb3))
+
+
+### BREAKING CHANGES
+
+* upgrade to angular 18
+
 # [4.1.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v4.0.0...v4.1.0-beta.1) (2024-08-09)
 
 
