@@ -1,16 +1,16 @@
 {
   "name": "@cognizone/user-action",
-  "version": "3.14.2",
+  "version": "4.0.0-rc.9",
   "peerDependencies": {
     "@cognizone/elastic": ">=3.0.0",
     "@cognizone/legi-shared": ">=3.0.0",
     "@cognizone/model-utils": ">=3.0.0",
     "@cognizone/ng-core": ">=3.0.0",
-    "@ngneat/transloco": "^2.22.0",
-    "@ngneat/transloco-locale": "^1.4.0"
+    "@jsverse/transloco": "^7.0.0",
+    "@jsverse/transloco-locale": "^7.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

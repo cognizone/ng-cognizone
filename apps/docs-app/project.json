@@ -1,5 +1,6 @@
 {
   "name": "docs-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/docs-app/src",
   "prefix": "cz",
@@ -102,14 +103,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/docs-app/src/**/*.ts", "apps/docs-app/src/**/*.html"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/docs-app"],
       "options": {
         "jestConfig": "apps/docs-app/jest.config.ts",

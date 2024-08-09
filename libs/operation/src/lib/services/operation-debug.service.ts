@@ -1,5 +1,5 @@
 import { Injectable, OnDestroy, Renderer2 } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { Nil } from '@cognizone/model-utils';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable } from 'rxjs';

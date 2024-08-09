@@ -2,7 +2,7 @@
 
 ## Generate an application
 
-Run `ng g @nrwl/angular:app my-app` to generate an application.
+Run `ng g @nx/angular:app my-app` to generate an application.
 
 > You can use any of the plugins above to generate applications as well.
 
@@ -10,13 +10,13 @@ When using Nx, you can create multiple applications and libraries in the same wo
 
 ## Generate a library
 
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
+Run `ng g @nx/angular:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
 Libraries are shareable across libraries and applications. They can be imported from `@cognizone/mylib`.
 
-`nx generate @nrwl/angular:library <LIB_NAME> --buildable --publishable --importPath="@cognizone/<LIB_NAME>"`
+`nx generate @nx/angular:library <LIB_NAME> --buildable --publishable --importPath="@cognizone/<LIB_NAME>"`
 
 ## Developing in an external app
 
@@ -84,6 +84,12 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+## Migrating from v3 to v4
+
+- Minimal Angular version is now 16
+- Transloco has been moved from @ngneat/transloco to @jsverse/transloco. A simple find -and-relace + upgrade to v7 of those libs should be enough. Also the wai the module is setup needs to change, see official docs for the [main module](https://jsverse.github.io/transloco/docs/getting-started/installation?app-type=ng-module) and the [locale one](https://jsverse.github.io/transloco/docs/plugins/locale?app-type=ng-module).
+- The `NgModule` of `@cognizone/i18n-transloco` has been removed in favour of the `provideI18nTransloco` function that can be imported in a similar way. See that lib's [readme](./libs/i18n-transloco/README.md) for how to import it.
 
 ## Migrating from v3.11 to v3.12
 

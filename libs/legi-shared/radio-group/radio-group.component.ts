@@ -9,9 +9,9 @@ import {
   Optional,
   TemplateRef,
 } from '@angular/core';
-import { ControlContainer, UntypedFormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
+import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
 import { I18nService } from '@cognizone/i18n';
+import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import {
   getAllSelectOptions,
   LangString,

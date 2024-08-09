@@ -1,7 +1,7 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-require-imports */
 import { ApplicationProfile } from '@cognizone/application-profile';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- TODO fix this
 import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
 import { LoggerModule } from '@cognizone/ng-core';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';

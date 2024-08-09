@@ -1,16 +1,16 @@
 {
   "name": "@cognizone/legi-cv",
-  "version": "3.14.2",
+  "version": "4.0.0-rc.9",
   "peerDependencies": {
     "@cognizone/i18n": ">=3.0.0",
     "@cognizone/json-model": ">=3.0.0",
     "@cognizone/model-utils": ">=3.0.0",
     "@cognizone/ng-core": ">=3.0.0",
-    "@ngxs/store": "^3.7.2",
+    "@ngxs/store": "^3.8.0",
     "lodash-es": "^4.17.21"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

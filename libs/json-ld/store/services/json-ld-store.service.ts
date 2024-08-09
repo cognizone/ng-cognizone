@@ -1,4 +1,4 @@
-/* eslint-disable @nrwl/nx/enforce-module-boundaries */
+/* eslint-disable @nx/enforce-module-boundaries */
 import { Injectable, NgZone } from '@angular/core';
 import { Many, notNil } from '@cognizone/model-utils';
 import { Logger } from '@cognizone/ng-core';

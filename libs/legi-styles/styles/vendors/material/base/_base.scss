@@ -1,7 +1,27 @@
-@include mat-core($custom-mat-typography);
+@use '@angular/material' as mat;
+@use 'sass:map';
+@import '@angular/material/theming';
 
-$czls-primary: mat-palette($czls-primary-palette);
-$czls-accent: mat-palette($czls-accent-palette);
-$czls-theme: mat-light-theme($czls-primary, $czls-accent);
+$custom-typography: mat.define-legacy-typography-config(
+  $font-family: $czls-font-family,
+);
+@include mat.all-legacy-component-typographies($custom-typography);
+@include mat.legacy-typography-hierarchy($custom-typography);
 
+@include mat.legacy-core();
+
+$czls-primary: mat.define-palette($czls-primary-palette);
+$czls-accent: mat.define-palette($czls-accent-palette);
+$czls-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $czls-primary,
+      accent: $czls-accent,
+    ),
+  )
+);
+
+$czls-theme: map.set($czls-theme, color, foreground, $mat-light-theme-foreground);
+
+@include mat.all-legacy-component-themes($czls-theme);
 @include angular-material-theme($czls-theme);

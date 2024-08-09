@@ -1,11 +1,11 @@
 {
   "name": "@cognizone/prettier-config",
-  "version": "3.14.2",
+  "version": "4.0.0-rc.9",
   "peerDependencies": {
     "prettier": "^2.0.0 || ^3.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   },
   "main": "index.json",
   "license": "Apache-2.0",

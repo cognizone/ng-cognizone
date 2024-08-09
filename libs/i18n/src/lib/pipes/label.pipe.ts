@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { inject, Pipe, PipeTransform } from '@angular/core';
 import { CzLabel, Nil } from '@cognizone/model-utils';
 
 import { I18nService } from '../services/i18n.service';
@@ -7,7 +7,7 @@ import { I18nService } from '../services/i18n.service';
   name: 'czLabel',
 })
 export class LabelPipe implements PipeTransform {
-  constructor(private i18n: I18nService) {}
+  private i18n: I18nService = inject(I18nService);
 
   transform(value: Nil<CzLabel>, lang?: string): string | null {
     if (value == null) return null;

@@ -1,5 +1,5 @@
 import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
 
 import { ApFormBuilder, createMicroValidatorProvider } from './services/ap-form-builder.service';

@@ -1,5 +1,5 @@
 import { AfterViewInit, Directive } from '@angular/core';
-import { MatTabGroup } from '@angular/material/tabs';
+import { MatLegacyTabGroup as MatTabGroup } from '@angular/material/legacy-tabs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { map } from 'rxjs/operators';

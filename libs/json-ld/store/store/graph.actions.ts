@@ -1,5 +1,5 @@
 import { Many } from '@cognizone/model-utils';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries -- needed for sub entries in lib
+// eslint-disable-next-line @nx/enforce-module-boundaries -- needed for sub entries in lib
 import { ExpandedJsonLdContainer, JsonLdNode } from '@cognizone/json-ld-core';
 
 import { GraphStatus } from '../models/graph-status';

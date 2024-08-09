@@ -1,5 +1,7 @@
 # tslint-config
 
+TODO deprecate the package
+
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests

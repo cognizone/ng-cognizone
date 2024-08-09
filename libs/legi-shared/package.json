@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/legi-shared",
-  "version": "3.14.2",
+  "version": "4.0.0-rc.9",
   "peerDependencies": {
     "@cognizone/elastic": ">=3.0.0",
     "@cognizone/i18n": ">=3.0.0",
@@ -8,14 +8,14 @@
     "@cognizone/model-utils": ">=3.0.0",
     "@cognizone/ng-application-profile": ">=3.0.0",
     "@cognizone/ng-core": ">=3.0.0",
-    "@angular/core": ">=14.0.0",
-    "@angular/forms": ">=14.0.0",
-    "@angular/material": ">=14.0.0",
-    "@angular/material-moment-adapter": ">=14.0.0",
-    "@angular/platform-browser": ">=14.0.0"
+    "@angular/core": ">=16.0.0",
+    "@angular/forms": ">=16.0.0",
+    "@angular/material": ">=16.0.0",
+    "@angular/material-moment-adapter": ">=16.0.0",
+    "@angular/platform-browser": ">=16.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

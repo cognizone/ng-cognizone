@@ -92,7 +92,7 @@ module.exports = {
         },
       },
     ],
-    '@typescript-eslint/member-ordering': 'error',
+    '@typescript-eslint/member-ordering': 'off',
     '@typescript-eslint/method-signature-style': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
@@ -264,7 +264,7 @@ module.exports = {
     'import/no-unassigned-import': [
       'error',
       {
-        allow: ['jest-preset-angular', '@nrwl/cypress/*', 'zone.js/**/*'],
+        allow: ['jest-preset-angular', '@nx/cypress/*', 'zone.js/**/*'],
       },
     ],
     'import/order': 'error',
