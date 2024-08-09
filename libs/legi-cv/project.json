@@ -22,18 +22,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/legi-cv/src/**/*.ts", "libs/legi-cv/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/legi-cv"],
       "options": {
-        "jestConfig": "libs/legi-cv/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/legi-cv/jest.config.ts"
       }
     }
   },

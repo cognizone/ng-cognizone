@@ -27,15 +27,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/json-model"],
       "options": {
-        "jestConfig": "libs/json-model/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/json-model/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/json-model/src/**/*.ts", "libs/json-model/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     }
   },

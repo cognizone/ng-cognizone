@@ -22,18 +22,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/user-action/src/**/*.ts", "libs/user-action/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/user-action"],
       "options": {
-        "jestConfig": "libs/user-action/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/user-action/jest.config.ts"
       }
     }
   },

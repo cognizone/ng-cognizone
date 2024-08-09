@@ -22,18 +22,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/ng-application-profile/src/**/*.ts", "libs/ng-application-profile/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ng-application-profile"],
       "options": {
-        "jestConfig": "libs/ng-application-profile/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ng-application-profile/jest.config.ts"
       }
     }
   },

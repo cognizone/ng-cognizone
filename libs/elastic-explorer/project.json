@@ -19,18 +19,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/elastic-explorer/src/**/*.ts", "libs/elastic-explorer/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/elastic-explorer"],
       "options": {
-        "jestConfig": "libs/elastic-explorer/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/elastic-explorer/jest.config.ts"
       }
     }
   },

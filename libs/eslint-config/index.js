@@ -73,12 +73,6 @@ module.exports = {
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/init-declarations': 'off',
     '@typescript-eslint/keyword-spacing': 'off',
-    '@typescript-eslint/lines-between-class-members': [
-      'warn',
-      {
-        exceptAfterSingleLine: true,
-      },
-    ],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {

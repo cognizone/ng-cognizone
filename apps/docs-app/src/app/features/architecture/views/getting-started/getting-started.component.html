@@ -18,8 +18,8 @@
       strict attributes here below. <app-inline-code>"strict": true</app-inline-code> enable all
       <a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html" target="_blank">strict flags</a> for the typescript
       compiler. The <app-inline-code>paths</app-inline-code> entries' main purpose is to have cleaner imports like
-      <app-inline-code>import {{ '{' }} MyService } from '@app/core'</app-inline-code> and
-      <app-inline-code>import {{ '{' }} environment } from '@env/environment'</app-inline-code>
+      <app-inline-code>import {{ '{' }} MyService &#125; from '&#64;app/core'</app-inline-code> and
+      <app-inline-code>import {{ '{' }} environment &#125; from '&#64;env/environment'</app-inline-code>
     </p>
     <app-code-block language="json" [code]="tsconfig1"></app-code-block>
   </section>
@@ -37,7 +37,7 @@
       <li>With lint-staged set up, every time files are committed, they are passed trough prettier and tslint, which mean</li>
       <ul>
         <li>
-          They are formatted by prettier, following rules coming from @cognizone/prettier, so no more white space, tabs, comma, ...
+          They are formatted by prettier, following rules coming from &#64;cognizone/prettier, so no more white space, tabs, comma, ...
           discussions and issues with merge conflict
         </li>
         <li>

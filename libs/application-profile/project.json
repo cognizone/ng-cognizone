@@ -15,18 +15,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/application-profile/**/*.ts"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/application-profile"],
       "options": {
-        "jestConfig": "libs/application-profile/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/application-profile/jest.config.ts"
       }
     }
   },

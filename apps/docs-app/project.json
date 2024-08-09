@@ -88,33 +88,29 @@
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
-        "browserTarget": "docs-app:build"
+        "buildTarget": "docs-app:build"
       },
       "configurations": {
         "production": {
-          "browserTarget": "docs-app:build:production"
+          "buildTarget": "docs-app:build:production"
         }
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "docs-app:build"
+        "buildTarget": "docs-app:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/docs-app/src/**/*.ts", "apps/docs-app/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/docs-app"],
       "options": {
-        "jestConfig": "apps/docs-app/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/docs-app/jest.config.ts"
       }
     }
   },
