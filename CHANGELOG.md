@@ -1,3 +1,11 @@
+# [4.1.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v4.0.0...v4.1.0-beta.1) (2024-08-09)
+
+
+### Features
+
+* upgrade to angular 17 ([8156507](https://github.com/cognizone/ng-cognizone/commit/8156507ad5644fa6d750abfaa60de4bfb8a6325c))
+* upgrade to angular 18 / nx 19 ([fdb0299](https://github.com/cognizone/ng-cognizone/commit/fdb0299247f0929c5c6ee13a4f7f4c084cd47139))
+
 # [4.0.0](https://github.com/cognizone/ng-cognizone/compare/v3.14.2...v4.0.0) (2024-08-09)
 
 
