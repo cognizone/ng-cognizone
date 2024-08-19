@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/seo",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "peerDependencies": {
     "@angular/common": ">=16.0.0",
     "@angular/core": ">=16.0.0",
