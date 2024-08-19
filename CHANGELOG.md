@@ -1,3 +1,9 @@
+## [3.15.1](https://github.com/cognizone/ng-cognizone/compare/v3.15.0...v3.15.1) (2024-08-19)
+
+### Bug Fixes
+
+- dummy commit to trigger release ([5489191](https://github.com/cognizone/ng-cognizone/commit/5489191a8b98812da3c1df081eaa2e1ac15c9ba4))
+
 # [3.15.0](https://github.com/cognizone/ng-cognizone/compare/v3.14.2...v3.15.0) (2024-08-19)
 
 ### Features
