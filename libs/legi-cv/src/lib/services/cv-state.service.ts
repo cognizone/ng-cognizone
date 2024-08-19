@@ -21,4 +21,8 @@ export class CvStateService {
       distinctUntilChanged()
     );
   }
+
+  getCvSnapshot(cvName: string): CvDictionary | undefined {
+    return this.store.selectSnapshot(LEGI_CV_STATE_TOKEN)[cvName]?.values;
+  }
 }
