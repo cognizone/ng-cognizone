@@ -1,3 +1,10 @@
+# [5.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2024-08-19)
+
+
+### Features
+
+* **legi-cv:** add snapshot method to CvStateService ([c7ee1c6](https://github.com/cognizone/ng-cognizone/commit/c7ee1c6e4506d21a50d6b35c4ee3fd00e26a9f24))
+
 # [5.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v4.1.0-beta.1...v5.0.0-beta.1) (2024-08-09)
 
 
