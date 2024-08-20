@@ -1,16 +1,4 @@
-import {
-  ChangeDetectorRef,
-  Directive,
-  inject,
-  Input,
-  OnChanges,
-  OnInit,
-  Signal,
-  signal,
-  TemplateRef,
-  ViewContainerRef,
-  WritableSignal,
-} from '@angular/core';
+import { Directive, inject, Input, OnChanges, OnInit, Signal, signal, TemplateRef, ViewContainerRef, WritableSignal } from '@angular/core';
 import { JsonLdNode } from '@cognizone/json-ld-core';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
@@ -30,7 +18,6 @@ export class JsonLdLabelDirective extends OnDestroy$ implements OnInit, OnChange
   private jsonLdLabelService: JsonLdLabelService = inject(JsonLdLabelService);
   private templateRef: TemplateRef<{ $implicit: Signal<string> }> = inject(TemplateRef);
   private viewContainer: ViewContainerRef = inject(ViewContainerRef);
-  private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
   private labelSignal: WritableSignal<string> = signal('');
 
   ngOnInit(): void {
@@ -41,8 +28,6 @@ export class JsonLdLabelDirective extends OnDestroy$ implements OnInit, OnChange
 
   ngOnChanges(): void {
     this.emptySink();
-    this.viewContainer.clear();
-    this.cdr.markForCheck();
 
     this.subSink = this.jsonLdLabelService.selectLabel(this.node, this.key).subscribe(label => {
       this.labelSignal.set(label);
