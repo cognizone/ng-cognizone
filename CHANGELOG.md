@@ -1,3 +1,10 @@
+# [5.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.2...v5.0.0-beta.3) (2024-08-20)
+
+
+### Bug Fixes
+
+* **json-ld:** issue with change to node in JsonLdLabelDirective ([45c1a47](https://github.com/cognizone/ng-cognizone/commit/45c1a476646056f60bac7dcdf0b3d010219092e5))
+
 # [5.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2024-08-19)
 
 
