@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/cognizone/ng-cognizone/compare/v4.1.0...v4.1.1) (2024-08-20)
+
+
+### Bug Fixes
+
+* **json-ld:** issue with change to node in JsonLdLabelDirective ([bce8733](https://github.com/cognizone/ng-cognizone/commit/bce87333ea27bb3c71c38660fc833faae3501e2a))
+
 # [4.1.0](https://github.com/cognizone/ng-cognizone/compare/v4.0.0...v4.1.0) (2024-08-19)
 
 
