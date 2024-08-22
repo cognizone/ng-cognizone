@@ -2,10 +2,10 @@
   "name": "@cognizone/elastic",
   "version": "5.0.0-beta.3",
   "peerDependencies": {
-    "@cognizone/json-model": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-application-profile": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0"
+    "@cognizone/json-model": ">=5.0.0-beta",
+    "@cognizone/model-utils": ">=5.0.0-beta",
+    "@cognizone/ng-application-profile": ">=5.0.0-beta",
+    "@cognizone/ng-core": ">=5.0.0-beta"
   },
   "dependencies": {
     "tslib": "^2.3.0"

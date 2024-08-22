@@ -2,8 +2,8 @@
   "name": "@cognizone/permissions",
   "version": "5.0.0-beta.3",
   "peerDependencies": {
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
+    "@cognizone/model-utils": ">=5.0.0-beta",
+    "@cognizone/ng-core": ">=5.0.0-beta",
     "@angular/router": ">=18.0.0"
   },
   "dependencies": {

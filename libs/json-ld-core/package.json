@@ -6,8 +6,8 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@cognizone/lod-core": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
+    "@cognizone/lod-core": ">=5.0.0-beta",
+    "@cognizone/model-utils": ">=5.0.0-beta",
     "immer": "^9.0.0 || ^10.0.0",
     "jsonld": "^8.0.0"
   },
