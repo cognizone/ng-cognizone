@@ -1,3 +1,10 @@
+# [5.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.3...v5.0.0-beta.4) (2024-08-22)
+
+
+### Bug Fixes
+
+* peer deps to beta ([bbef86a](https://github.com/cognizone/ng-cognizone/commit/bbef86afcc5ca5e04e72b635f11ed8c6e7674ea9))
+
 # [5.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.2...v5.0.0-beta.3) (2024-08-20)
 
 
