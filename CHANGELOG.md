@@ -1,3 +1,10 @@
+# [5.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.4...v5.0.0-beta.5) (2024-08-27)
+
+
+### Features
+
+* **model-utils:** add Result type and utilities ([6e45259](https://github.com/cognizone/ng-cognizone/commit/6e4525998c20e6f881e511c1e72056549a99ac18))
+
 # [5.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.3...v5.0.0-beta.4) (2024-08-22)
 
 
