@@ -9,6 +9,7 @@ export * from './many';
 export * from './nil';
 export * from './pagination';
 export * from './primitive';
+export * from './result';
 export * from './select-option';
 export * from './sorter';
 export * from './thunk';
