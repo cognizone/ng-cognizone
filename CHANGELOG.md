@@ -1,3 +1,10 @@
+# [5.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.5...v5.0.0-beta.6) (2024-09-04)
+
+
+### Features
+
+* make pure .ts libs export as both cjs and esm ([e5f5849](https://github.com/cognizone/ng-cognizone/commit/e5f58499f6fa47fb6e0e66ec55831d7dc316e6ce))
+
 # [5.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.4...v5.0.0-beta.5) (2024-08-27)
 
 
