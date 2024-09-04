@@ -3,15 +3,26 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/lod-core/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/lod-core",
         "main": "libs/lod-core/src/index.ts",
+        "outputPath": "dist/libs/lod-core",
         "tsConfig": "libs/lod-core/tsconfig.lib.json",
-        "assets": ["libs/lod-core/*.md"]
+        "compiler": "babel",
+        "project": "libs/lod-core/package.json",
+        "format": ["esm", "cjs"],
+        "generateExportsField": true,
+        "assets": [
+          {
+            "glob": "libs/lod-core/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
     },
     "publish": {
@@ -32,6 +43,5 @@
         "jestConfig": "libs/lod-core/jest.config.ts"
       }
     }
-  },
-  "tags": []
+  }
 }

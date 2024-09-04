@@ -3,15 +3,26 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/model-utils/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/model-utils",
         "main": "libs/model-utils/src/index.ts",
+        "outputPath": "dist/libs/model-utils",
         "tsConfig": "libs/model-utils/tsconfig.lib.json",
-        "assets": ["libs/model-utils/*.md"]
+        "compiler": "babel",
+        "project": "libs/model-utils/package.json",
+        "format": ["esm", "cjs"],
+        "generateExportsField": true,
+        "assets": [
+          {
+            "glob": "libs/model-utils/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
     },
     "lint": {
@@ -25,6 +36,5 @@
         "jestConfig": "libs/model-utils/jest.config.ts"
       }
     }
-  },
-  "tags": []
+  }
 }

@@ -8,7 +8,6 @@
     "typescript": ">=3.7.0 <6",
     "rxjs": "^7.8.0"
   },
-  "type": "commonjs",
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
   "contributors": [

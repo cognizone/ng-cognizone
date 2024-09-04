@@ -15,7 +15,6 @@
     "url": "https://github.com/cognizone/ng-cognizone.git",
     "directory": "libs/model-utils"
   },
-  "type": "commonjs",
   "contributors": [
     {
       "name": "William Chelman",
