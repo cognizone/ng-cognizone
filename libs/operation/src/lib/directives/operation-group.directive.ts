@@ -1,16 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  EventEmitter,
-  Inject,
-  Input,
-  OnChanges,
-  OnDestroy,
-  OnInit,
-  Optional,
-  Output,
-  SkipSelf,
-} from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Inject, Input, OnChanges, OnInit, Optional, Output, SkipSelf } from '@angular/core';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable, of, ReplaySubject, Subject } from 'rxjs';
@@ -23,7 +11,7 @@ import { OperationGroupDebug } from '../services/operation-group-debug.service';
   selector: '[czOperationGroup]',
   providers: [OperationGroupDebug],
 })
-export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnChanges, OnDestroy {
+export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnChanges {
   @Input('czOperationGroup')
   groupId!: string;
 

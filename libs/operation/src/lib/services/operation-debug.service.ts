@@ -32,7 +32,6 @@ export class OperationDebug extends OnDestroy$ implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    super.ngOnDestroy();
     this.removeDebug();
   }
 

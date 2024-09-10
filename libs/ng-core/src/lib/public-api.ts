@@ -6,7 +6,7 @@
 export * from './components/control.component';
 
 // Mixins
-export * from './mixins/on-destroy.mixin';
+export * from './helpers/on-destroy';
 
 // Operators
 export * from './operators/is-instance-of';

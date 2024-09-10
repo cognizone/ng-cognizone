@@ -59,7 +59,6 @@ export class SearchView extends OnDestroy$ implements OnInit, AfterViewInit, OnD
   }
 
   ngOnDestroy(): void {
-    super.ngOnDestroy();
     this.elasticExplorerService.onPageUnload();
   }
 

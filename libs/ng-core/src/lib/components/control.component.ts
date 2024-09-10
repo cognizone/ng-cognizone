@@ -13,7 +13,7 @@ import {
 import { merge, noop, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 
-import { OnDestroy$ } from '../mixins/on-destroy.mixin';
+import { OnDestroy$ } from '../helpers/on-destroy';
 import { Logger } from '../modules/logger/logger.service';
 import { Maybe } from '../types/maybe';
 
@@ -89,7 +89,6 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
   }
 
   ngOnDestroy(): void {
-    super.ngOnDestroy();
     this.controlChanged.complete();
   }
 
