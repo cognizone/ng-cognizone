@@ -1,3 +1,16 @@
+# [5.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.6...v5.0.0-beta.7) (2024-09-10)
+
+
+### Features
+
+* **ng-core:** make use of DestroyRef for the OnDestroy$ utility class ([63c817a](https://github.com/cognizone/ng-cognizone/commit/63c817a14615c12535bbf4382d5cc37175e25da4))
+
+
+### BREAKING CHANGES
+
+* **ng-core:** onDestroyMixin has been removed
+* **ng-core:** OnDestroy$ does not use ngOnDestroy anymore, so extending it and calling super.ngOnDestroy() will throw an error now.
+
 # [5.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.5...v5.0.0-beta.6) (2024-09-04)
 
 
