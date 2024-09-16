@@ -1,3 +1,10 @@
+# [5.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.7...v5.0.0-beta.8) (2024-09-16)
+
+
+### Features
+
+* **json-ld:** JsonLdService expand method got a flatten option now ([bbbad2e](https://github.com/cognizone/ng-cognizone/commit/bbbad2e44e611a9f3d67f37c7443df064e393f07))
+
 # [5.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.6...v5.0.0-beta.7) (2024-09-10)
 
 
