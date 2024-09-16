@@ -22,7 +22,7 @@ import * as jsonldLib from 'jsonld';
 export class JsonLdService {
   private uriGenerator = inject(UriGenerator);
 
-  async expand<T>(jsonLd: JsonLdGraph | JsonLdGraphCz): Promise<ExpandedJsonLdContainer<T>> {
+  async expand<T>(jsonLd: JsonLdGraph | JsonLdGraphCz, options?: ExpandOptions): Promise<ExpandedJsonLdContainer<T>> {
     // TODO move this logic after expansion
     if ('data' in jsonLd) {
       let hasIt = false;
@@ -38,7 +38,10 @@ export class JsonLdService {
         console.warn('Found some nodes with rdf:type instead of @type, this is not supported');
       }
     }
-    const nodesList = (await jsonldLib.expand(jsonLd as any)) as JsonLdNode[];
+    let nodesList = (await jsonldLib.expand(jsonLd as any)) as JsonLdNode[];
+    if (options?.flatten) {
+      nodesList = (await jsonldLib.flatten(nodesList as any)) as unknown as JsonLdNode[];
+    }
 
     const container: ExpandedJsonLdContainer<T> = {
       nodes: nodesList.reduce((acc, node) => {
@@ -141,4 +144,8 @@ export class JsonLdService {
       });
     });
   }
+}
+
+export interface ExpandOptions {
+  flatten?: boolean;
 }
