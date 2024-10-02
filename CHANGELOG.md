@@ -1,3 +1,10 @@
+# [5.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.9...v5.0.0-beta.10) (2024-10-02)
+
+
+### Features
+
+* add utilities for Result and signals ([11d6503](https://github.com/cognizone/ng-cognizone/commit/11d650300b13d1f844cd076d2a3d65a8baf10c0c))
+
 # [5.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.8...v5.0.0-beta.9) (2024-10-02)
 
 
