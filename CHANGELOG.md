@@ -1,3 +1,10 @@
+# [5.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.8...v5.0.0-beta.9) (2024-10-02)
+
+
+### Features
+
+* **json-ld:** add FetchStore ([1c557fb](https://github.com/cognizone/ng-cognizone/commit/1c557fb1c166bdf2e496898da80225bb6fe6445e))
+
 # [5.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.7...v5.0.0-beta.8) (2024-09-16)
 
 
