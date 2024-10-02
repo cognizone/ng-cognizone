@@ -88,6 +88,8 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 ## Migrating from v4 to v5
 
 - Minimal Angular version is now 18
+- `onDestroy$` now uses `DestroyRef` instead od hacking into the `ngOnDestroy` lifecycle method. This means that all classes that extends `OnDestroy$` need to remove their call to `super.ngOnDestroy()`,
+- `OnDestroyMixin` has been removed as it was never used as-is in the end, only through the `OnDestroy$` class.
 
 ## Migrating from v3 to v4
 

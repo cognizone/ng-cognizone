@@ -1,21 +1,8 @@
 /**
  * @description Represents a remote data and its related state
  */
-export type AsyncResult<T = unknown, E = unknown> = ResultSuccess<T> | ResultError<E> | ResultLoading | ResultNotAsked;
+export type AsyncResult<T = unknown, E = unknown> = ResultSuccess<T> | ResultError<E> | ResultLoading;
 export type Result<T = unknown, E = unknown> = ResultSuccess<T> | ResultError<E>;
-
-/**
- * @description the resource has not been requested yet
- */
-export type ResultNotAsked = {
-  type: 'notAsked';
-};
-
-// always the same, no need to re-create it every time
-const _notAsked = { type: 'notAsked' as const };
-export function notAsked(): ResultNotAsked {
-  return _notAsked;
-}
 
 /**
  * @description the resource has been successfully retrieved and is stored in `content`
