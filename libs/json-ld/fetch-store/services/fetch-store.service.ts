@@ -89,5 +89,5 @@ export function provideFetchStore(options: JsonLdStoreProvisionOptions): Environ
 export interface JsonLdStoreProvisionOptions {
   fetcher?: Type<Fetcher<unknown>>;
   cache?: Type<CacheService>;
-  serializer: Type<Serializer<unknown>>;
+  serializer?: Type<Serializer<unknown>>;
 }
