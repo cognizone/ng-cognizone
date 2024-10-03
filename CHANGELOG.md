@@ -1,3 +1,10 @@
+# [5.0.0-beta.12](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.11...v5.0.0-beta.12) (2024-10-03)
+
+
+### Bug Fixes
+
+* **json-ld:** better typing ([189d554](https://github.com/cognizone/ng-cognizone/commit/189d554dffa44c4e0768516cc131789a4527beed))
+
 # [5.0.0-beta.11](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.10...v5.0.0-beta.11) (2024-10-02)
 
 
