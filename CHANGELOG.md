@@ -1,3 +1,10 @@
+# [5.0.0-beta.13](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.12...v5.0.0-beta.13) (2024-10-03)
+
+
+### Features
+
+* **json-ld:** getAllValues pipe ([43f6175](https://github.com/cognizone/ng-cognizone/commit/43f6175e749a74851063c3c8c8b883f63c14d81d))
+
 # [5.0.0-beta.12](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.11...v5.0.0-beta.12) (2024-10-03)
 
 
