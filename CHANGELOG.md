@@ -1,3 +1,10 @@
+# [5.0.0-beta.14](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.13...v5.0.0-beta.14) (2024-10-03)
+
+
+### Bug Fixes
+
+* **cdk/result:** better typing for pipes ([15c8ec4](https://github.com/cognizone/ng-cognizone/commit/15c8ec457fa430c86639af08d9228ccab71d0211))
+
 # [5.0.0-beta.13](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.12...v5.0.0-beta.13) (2024-10-03)
 
 
