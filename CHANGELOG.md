@@ -1,3 +1,10 @@
+# [5.0.0-beta.15](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.14...v5.0.0-beta.15) (2024-10-04)
+
+
+### Features
+
+* **json-ld/get-value:** added getNode pipe ([0ba7350](https://github.com/cognizone/ng-cognizone/commit/0ba7350bbd3ee2a74415e609fb3fa95dedc2fb65))
+
 # [5.0.0-beta.14](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.13...v5.0.0-beta.14) (2024-10-03)
 
 
