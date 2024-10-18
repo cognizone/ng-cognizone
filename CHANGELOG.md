@@ -1,3 +1,10 @@
+# [5.0.0-beta.16](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.15...v5.0.0-beta.16) (2024-10-18)
+
+
+### Features
+
+* **json-ld/ng-core:** JsonLdService expand method got a isGraphExpanding option ([c7c6953](https://github.com/cognizone/ng-cognizone/commit/c7c695323c51ad4dbf9b32158e7f6228e9835bb3))
+
 # [5.0.0-beta.15](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.14...v5.0.0-beta.15) (2024-10-04)
 
 
