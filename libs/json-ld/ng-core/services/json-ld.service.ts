@@ -39,6 +39,13 @@ export class JsonLdService {
       }
     }
     let nodesList = (await jsonldLib.expand(jsonLd as any)) as JsonLdNode[];
+
+    // Handle @graph if present //
+    // TODO - check with William when facet is added why the expand functionality ends up adding @graph and facet in the expanded version
+    if (options?.isGraphExpanding && nodesList.length === 1 && '@graph' in nodesList[0]) {
+      nodesList = (nodesList as any)[0]['@graph'] as JsonLdNode[];
+    }
+
     if (options?.flatten) {
       nodesList = (await jsonldLib.flatten(nodesList as any)) as unknown as JsonLdNode[];
     }
@@ -148,4 +155,5 @@ export class JsonLdService {
 
 export interface ExpandOptions {
   flatten?: boolean;
+  isGraphExpanding?: boolean;
 }
