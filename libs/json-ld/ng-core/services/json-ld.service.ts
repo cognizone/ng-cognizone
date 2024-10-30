@@ -38,13 +38,15 @@ export class JsonLdService {
         console.warn('Found some nodes with rdf:type instead of @type, this is not supported');
       }
     }
-    let nodesList = (await jsonldLib.expand(jsonLd as any)) as JsonLdNode[];
 
-    // Handle @graph if present //
-    // TODO - check with William when facet is added why the expand functionality ends up adding @graph and facet in the expanded version
-    if (options?.isGraphExpanding && nodesList.length === 1 && '@graph' in nodesList[0]) {
-      nodesList = (nodesList as any)[0]['@graph'] as JsonLdNode[];
+    let facets;
+    if ('facets' in jsonLd) {
+      facets = jsonLd.facets;
+      jsonLd = { ...jsonLd };
+      delete jsonLd.facets;
     }
+
+    let nodesList = (await jsonldLib.expand(jsonLd as any)) as JsonLdNode[];
 
     if (options?.flatten) {
       nodesList = (await jsonldLib.flatten(nodesList as any)) as unknown as JsonLdNode[];
@@ -56,8 +58,8 @@ export class JsonLdService {
         return acc;
       }, {} as ExpandedJsonLdContainer['nodes']),
     };
-    if ('facets' in jsonLd) {
-      container.facets = jsonLd.facets as T;
+    if (facets) {
+      container.facets = facets as T;
     }
     return container;
   }
@@ -155,5 +157,4 @@ export class JsonLdService {
 
 export interface ExpandOptions {
   flatten?: boolean;
-  isGraphExpanding?: boolean;
 }
