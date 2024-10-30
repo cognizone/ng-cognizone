@@ -35,4 +35,4 @@ jobs:
         run: npm run build-tools
       # Running scripts
       - name: Running ${{ matrix.target }}
-        run: npm run nx -- run-many --target=${{ matrix.target }} --configuration=production --exclude=docs,docs-app
+        run: npm run nx -- run-many --target=${{ matrix.target }} --configuration=production --exclude=docs,docs-app,elastic-explorer-chrome-extension
