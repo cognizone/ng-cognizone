@@ -174,6 +174,7 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
     const allOptions = [...this.storedValueOptions, ...this.options];
     const option = allOptions.find(o => o.value === value);
     if (option) return this.i18n.translate(option.label, undefined, this.lang);
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     this.storeValueOption(value);
     return value as unknown as string;
   };

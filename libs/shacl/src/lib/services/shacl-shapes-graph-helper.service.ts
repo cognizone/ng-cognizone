@@ -181,7 +181,7 @@ export class ShaclShapesGraphHelper {
 
   isUntypedIri(property: ShPropertyShape): boolean {
     if (getOneValue(property?.[SH.datatype]) === RDFS.Resource) return true;
-    if (getOneValue(property?.[SH.datatype]) || getOneValue(property?.[SH.class])) return false;
+    if (getOneValue(property?.[SH.datatype]) ?? getOneValue(property?.[SH.class])) return false;
     const nodeKind = getOneValue(property[SH.nodeKind]);
     if (!nodeKind) return false;
     return nodeKind === SH.IRI;

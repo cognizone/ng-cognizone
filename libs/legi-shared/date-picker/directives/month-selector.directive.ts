@@ -6,6 +6,8 @@ import { DatePickerComponent } from '../date-picker.component';
 import { DatePickerType } from '../models/date-picker-type';
 
 @Directive({
+  // cz- is there, not sure why eslint is screaming
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: 'cz-date-picker[monthSelector]',
   providers: [{ provide: MAT_DATE_FORMATS, useFactory: getFormat, deps: [I18nService] }],
 })

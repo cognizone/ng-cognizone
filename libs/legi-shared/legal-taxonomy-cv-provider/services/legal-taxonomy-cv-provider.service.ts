@@ -1,10 +1,10 @@
 import { Injectable, Provider } from '@angular/core';
 import { ConceptWrapper, CV_PROVIDER_TOKEN, CvProvider } from '@cognizone/legi-cv';
-import { ElasticQuery, extractSourcesFromElasticResponse, Nil, notNil } from '@cognizone/model-utils';
+import { ElasticQuery, extractSourcesFromElasticResponse, notNil } from '@cognizone/model-utils';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { LegalTaxonomy } from '../models/legal-taxonomy';
 
+import { LegalTaxonomy } from '../models/legal-taxonomy';
 import { LegalTaxonomyClientService } from './legal-taxonomy-client.service';
 import { LegalTaxonomyCvProviderOptionsService } from './legal-taxonomy-cv-provider-options.service';
 
@@ -44,7 +44,7 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
   /**
    * @ignore
    */
-  toConceptWrapper(concept: LegalTaxonomy, query: Nil<string>): ConceptWrapper<LegalTaxonomy> {
+  toConceptWrapper(concept: LegalTaxonomy): ConceptWrapper<LegalTaxonomy> {
     return {
       concept,
       label: this.getLabel(concept),

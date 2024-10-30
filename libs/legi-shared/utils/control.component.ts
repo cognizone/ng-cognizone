@@ -1,13 +1,5 @@
 import { ChangeDetectorRef, Injectable, OnInit, Optional, Self } from '@angular/core';
-import {
-  AbstractControl,
-  ControlContainer,
-  ControlValueAccessor,
-  FormControl,
-  FormControlDirective,
-  FormControlName,
-  NgControl,
-} from '@angular/forms';
+import { AbstractControl, ControlContainer, ControlValueAccessor, NgControl } from '@angular/forms';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 
 import { extractControlFromNgControl } from './extract-control-from-ng-control';
@@ -65,6 +57,7 @@ export class ControlComponent extends OnDestroy$ implements OnInit, ControlValue
   /**
    * @ignore
    */
+  // eslint-disable-next-line @angular-eslint/contextual-lifecycle
   ngOnInit(): void {
     if (this.control || !this.ngControl) return;
     extractControlFromNgControl(this.ngControl);
