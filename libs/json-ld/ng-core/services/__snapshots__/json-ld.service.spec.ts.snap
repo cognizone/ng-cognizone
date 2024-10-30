@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JsonLdService should expand json with facet 1`] = `
+Object {
+  "facets": Object {
+    "config": "dataset",
+    "rootUri": "https://example.org/dataset/cmdb-data",
+    "types": Array [
+      "http://www.w3.org/ns/dcat#Dataset",
+      "http://www.w3.org/ns/dcat#Dataset",
+    ],
+  },
+  "nodes": Object {
+    "https://example.org/app/cmdb": Object {
+      "@id": "https://example.org/app/cmdb",
+      "@type": Array [
+        "http://www.w3.org/ns/prov#SoftwareAgent",
+      ],
+      "http://purl.org/dc/terms/description": Array [
+        Object {
+          "@language": "en",
+          "@value": "??",
+        },
+      ],
+      "http://purl.org/dc/terms/title": Array [
+        Object {
+          "@language": "en",
+          "@value": "Configuration Management Database (CMDB)",
+        },
+      ],
+      "http://www.w3.org/ns/adms#status": Array [
+        Object {
+          "@id": "https://example.org/def/asset-status/inProduction",
+        },
+      ],
+      "http://www.w3.org/ns/dcat#contactPoint": Array [
+        Object {
+          "@id": "https://example.org/contact-point/document-management-unit",
+        },
+      ],
+      "http://www.w3.org/ns/dcat#qualifiedRelation": Array [
+        Object {
+          "@id": "https://example.org/relation/cmdb-gets-data-from-codict",
+        },
+      ],
+      "http://www.w3.org/ns/prov#qualifiedAttribution": Array [
+        Object {
+          "@id": "https://example.org/attribution/cmdb-application-owner",
+        },
+      ],
+      "https://example.org/def/asset-relation/getsDataFrom": Array [
+        Object {
+          "@id": "https://example.org/app/codict",
+        },
+      ],
+    },
+    "https://example.org/attribution/cmdb-data-data-owner": Object {
+      "@id": "https://example.org/attribution/cmdb-data-data-owner",
+      "@type": Array [
+        "http://www.w3.org/ns/prov#Attribution",
+      ],
+      "http://www.w3.org/ns/dcat#hadRole": Array [
+        Object {
+          "@id": "https://example.org/def/agent-role/dataOwner",
+        },
+      ],
+      "http://www.w3.org/ns/prov#agent": Array [
+        Object {
+          "@id": "https://example.org/org/itec-support",
+        },
+      ],
+    },
+    "https://example.org/contact-point/servicenow-support": Object {
+      "@id": "https://example.org/contact-point/servicenow-support",
+      "@type": Array [
+        "http://www.w3.org/2006/vcard/ns#Kind",
+      ],
+      "http://www.w3.org/2006/vcard/ns#fn": Array [
+        Object {
+          "@language": "en",
+          "@value": "ServiceNow Support",
+        },
+      ],
+      "http://www.w3.org/2006/vcard/ns#hasEmail": Array [
+        Object {
+          "@id": "mailto:servicenow-support@example.org",
+        },
+      ],
+    },
+    "https://example.org/dataset/cmdb-data": Object {
+      "@id": "https://example.org/dataset/cmdb-data",
+      "@type": Array [
+        "http://www.w3.org/ns/dcat#Dataset",
+      ],
+      "http://purl.org/dc/terms/accrualPeriodicity": Array [
+        Object {
+          "@id": "https://example.org/def/frequency/continuous",
+        },
+      ],
+      "http://purl.org/dc/terms/created": Array [
+        Object {
+          "@type": "http://www.w3.org/2001/XMLSchema#date",
+          "@value": "2023-08-01",
+        },
+      ],
+      "http://purl.org/dc/terms/description": Array [
+        Object {
+          "@language": "en",
+          "@value": "CMDB stays for Configuration Management Database.",
+        },
+      ],
+      "http://purl.org/dc/terms/issued": Array [
+        Object {
+          "@type": "http://www.w3.org/2001/XMLSchema#date",
+          "@value": "2023-08-01",
+        },
+      ],
+      "http://purl.org/dc/terms/modified": Array [
+        Object {
+          "@type": "http://www.w3.org/2001/XMLSchema#date",
+          "@value": "2024-10-28",
+        },
+      ],
+      "http://purl.org/dc/terms/title": Array [
+        Object {
+          "@language": "en",
+          "@value": "Data from CMDB (Ticketing tool handling requests for IT equipment)",
+        },
+      ],
+      "http://purl.org/dc/terms/type": Array [
+        Object {
+          "@id": "https://example.org/def/dataset-type/master-data",
+        },
+      ],
+      "http://www.w3.org/ns/adms#status": Array [
+        Object {
+          "@id": "https://example.org/def/asset-status/inProduction",
+        },
+      ],
+      "http://www.w3.org/ns/dcat#contactPoint": Array [
+        Object {
+          "@id": "https://example.org/contact-point/servicenow-support",
+        },
+      ],
+      "http://www.w3.org/ns/dcat#qualifiedRelation": Array [
+        Object {
+          "@id": "https://example.org/relation/cmdb-data-stored-by-cmdb",
+        },
+      ],
+      "http://www.w3.org/ns/dcat#theme": Array [
+        Object {
+          "@id": "https://example.org/def/business-area/informationTechnology",
+        },
+      ],
+      "http://www.w3.org/ns/prov#qualifiedAttribution": Array [
+        Object {
+          "@id": "https://example.org/attribution/cmdb-data-data-owner",
+        },
+      ],
+      "https://example.org/def/asset-relation/storedBy": Array [
+        Object {
+          "@id": "https://example.org/app/cmdb",
+        },
+      ],
+      "https://example.org/def/epdp#confidentialityLevel": Array [
+        Object {
+          "@id": "https://example.org/def/confidentiality-level/snc",
+        },
+      ],
+    },
+    "https://example.org/def/agent-role/dataOwner": Object {
+      "@id": "https://example.org/def/agent-role/dataOwner",
+      "@type": Array [
+        "http://www.w3.org/ns/dcat#Role",
+        "http://www.w3.org/2004/02/skos/core#Concept",
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": Array [
+        Object {
+          "@language": "en",
+          "@value": "data owner",
+        },
+      ],
+      "http://www.w3.org/2004/02/skos/core#inScheme": Array [
+        Object {
+          "@id": "https://example.org/def/agent-role",
+        },
+      ],
+      "http://www.w3.org/2004/02/skos/core#preflabel": Array [
+        Object {
+          "@language": "en",
+          "@value": "data owner",
+        },
+      ],
+    },
+    "https://example.org/def/asset-status/inProduction": Object {
+      "@id": "https://example.org/def/asset-status/inProduction",
+      "@type": Array [
+        "http://www.w3.org/2004/02/skos/core#Concept",
+      ],
+      "http://www.w3.org/2004/02/skos/core#inScheme": Array [
+        Object {
+          "@id": "https://example.org/def/asset-status",
+        },
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": Array [
+        Object {
+          "@language": "en",
+          "@value": "In production",
+        },
+      ],
+    },
+    "https://example.org/def/business-area/informationTechnology": Object {
+      "@id": "https://example.org/def/business-area/informationTechnology",
+      "@type": Array [
+        "http://www.w3.org/2004/02/skos/core#Concept",
+      ],
+      "http://www.w3.org/2004/02/skos/core#inScheme": Array [
+        Object {
+          "@id": "https://example.org/def/business-area",
+        },
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": Array [
+        Object {
+          "@language": "en",
+          "@value": "Information Technology",
+        },
+      ],
+    },
+    "https://example.org/def/confidentiality-level/snc": Object {
+      "@id": "https://example.org/def/confidentiality-level/snc",
+      "@type": Array [
+        "http://www.w3.org/2004/02/skos/core#Concept",
+      ],
+      "http://www.w3.org/2004/02/skos/core#inScheme": Array [
+        Object {
+          "@id": "https://example.org/def/confidentiality-level",
+        },
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": Array [
+        Object {
+          "@language": "en",
+          "@value": "Sensitive non-confidential",
+        },
+      ],
+    },
+    "https://example.org/def/dataset-type/master-data": Object {
+      "@id": "https://example.org/def/dataset-type/master-data",
+      "@type": Array [
+        "http://www.w3.org/2004/02/skos/core#Concept",
+      ],
+      "http://www.w3.org/2004/02/skos/core#inScheme": Array [
+        Object {
+          "@id": "https://example.org/def/dataset-type",
+        },
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": Array [
+        Object {
+          "@language": "en",
+          "@value": "Master Data",
+        },
+      ],
+    },
+    "https://example.org/def/frequency/continuous": Object {
+      "@id": "https://example.org/def/frequency/continuous",
+      "@type": Array [
+        "http://www.w3.org/2004/02/skos/core#Concept",
+      ],
+      "http://www.w3.org/2004/02/skos/core#inScheme": Array [
+        Object {
+          "@id": "https://example.org/def/frequency",
+        },
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": Array [
+        Object {
+          "@language": "en",
+          "@value": "continuous",
+        },
+      ],
+    },
+    "https://example.org/org/itec-support": Object {
+      "@id": "https://example.org/org/itec-support",
+      "@type": Array [
+        "http://www.w3.org/ns/org#Organization",
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": Array [
+        Object {
+          "@language": "en",
+          "@value": "ITEC - SUPPORT",
+        },
+      ],
+    },
+    "https://example.org/relation/cmdb-data-stored-by-cmdb": Object {
+      "@id": "https://example.org/relation/cmdb-data-stored-by-cmdb",
+      "@type": Array [
+        "http://www.w3.org/ns/dcat#Relationship",
+      ],
+      "http://purl.org/dc/terms/relation": Array [
+        Object {
+          "@id": "https://example.org/app/cmdb",
+        },
+      ],
+      "http://purl.org/dc/terms/type": Array [
+        Object {
+          "@id": "https://example.org/def/asset-relation/storedBy",
+        },
+      ],
+    },
+  },
+}
+`;
