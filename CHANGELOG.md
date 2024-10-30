@@ -1,3 +1,10 @@
+# [5.0.0-beta.17](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.16...v5.0.0-beta.17) (2024-10-30)
+
+
+### Bug Fixes
+
+* **json-ld:** better handling of facets in jsonld expansion ([4aecfe1](https://github.com/cognizone/ng-cognizone/commit/4aecfe14a46e31dece88f448068e77fa926c1565))
+
 # [5.0.0-beta.16](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.15...v5.0.0-beta.16) (2024-10-18)
 
 
