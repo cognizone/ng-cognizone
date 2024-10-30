@@ -17,7 +17,7 @@ export class ConceptMatcherService {
 
     return allLabels.some(label => {
       label = this.transformForComparison(label);
-      return matchType === 'includes' ? label.includes(query as string) : label.startsWith(query as string);
+      return matchType === 'includes' ? label.includes(query) : label.startsWith(query);
     })
       ? 1
       : 0;

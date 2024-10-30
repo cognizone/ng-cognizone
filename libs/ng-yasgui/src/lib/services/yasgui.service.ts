@@ -30,7 +30,7 @@ export class YasguiService {
     return (this.yasgui$ = fromEvent(this.script, 'load').pipe(
       map(() => {
         this.clearYasguiCache();
-        return ((window as unknown) as { YASGUI: YASGUI }).YASGUI;
+        return (window as unknown as { YASGUI: YASGUI }).YASGUI;
       }),
       shareReplay(1)
     ));
@@ -49,7 +49,13 @@ export class YasguiService {
       const key = localStorage.key(i) as string;
       // Note -> used as a backup(d438d94f6a63bec652b615cd4a3c2f51)
       // (the newer version of Yasgui is adding this key -> d438d94f6a63bec652b615cd4a3c2f51)
-      if (key.startsWith('yasgui') || key.startsWith('yasr') || localStorage.getItem(key)?.includes('val') || key.startsWith('d438d94f6a63bec652b615cd4a3c2f51')) {
+      if (
+        key.startsWith('yasgui') ||
+        key.startsWith('yasr') ||
+        // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+        localStorage.getItem(key)?.includes('val') ||
+        key.startsWith('d438d94f6a63bec652b615cd4a3c2f51')
+      ) {
         localStorage.removeItem(key);
       }
     }

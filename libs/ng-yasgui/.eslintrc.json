@@ -1,6 +1,6 @@
 {
   "extends": ["../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
+  "ignorePatterns": ["!**/*", "src/assets/yasgui.min.js"],
   "overrides": [
     {
       "files": ["*.ts"],
