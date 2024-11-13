@@ -1,3 +1,10 @@
+# [5.0.0-beta.18](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.17...v5.0.0-beta.18) (2024-11-13)
+
+
+### Features
+
+* **cdk:** add caching utilities in /fetch-cache ([2dcf137](https://github.com/cognizone/ng-cognizone/commit/2dcf1374bd497a9a798479556d103e61b2765d8e))
+
 # [5.0.0-beta.17](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.16...v5.0.0-beta.17) (2024-10-30)
 
 

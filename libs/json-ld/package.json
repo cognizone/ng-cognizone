@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-ld",
-  "version": "5.0.0-beta.17",
+  "version": "5.0.0-beta.18",
   "optionalDependencies": {
     "@angular/core": ">=18.0.0",
     "@ngxs/store": "^18.0.0",
