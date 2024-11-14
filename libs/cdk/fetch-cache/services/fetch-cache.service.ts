@@ -10,10 +10,11 @@ export class FetchCache {
   private cache: CacheService = inject(CacheService);
   private currentFetchMap: { [key: string]: Observable<AsyncResult> } = {};
 
-  get<T>(key: string, fetch: () => Observable<AsyncResult<T>>): Observable<AsyncResult<T>> {
+  get<T>(key: string, fetch: () => Observable<AsyncResult<T>>, options?: FetchCacheOptions): Observable<AsyncResult<T>> {
     if (this.currentFetchMap[key]) return this.currentFetchMap[key] as Observable<AsyncResult<T>>;
+    const cache = (options?.cache ?? this.cache) as CacheService<T>;
 
-    return this.getFromCache<T>(key).pipe(
+    return this.getFromCache<T>(key, cache).pipe(
       switchMap(cached => {
         if (cached) {
           return of(success(cached));
@@ -22,7 +23,7 @@ export class FetchCache {
         return (this.currentFetchMap[key] = fetch().pipe(
           switchMap(async result => {
             if (result.type === 'success') {
-              await this.cache.set(key, result.content);
+              await cache.set(key, result.content);
             }
             delete this.currentFetchMap[key];
             return result;
@@ -34,8 +35,7 @@ export class FetchCache {
     );
   }
 
-  private getFromCache<T>(key: string): Observable<T | undefined> {
-    const cache = this.cache as CacheService<T>;
+  private getFromCache<T>(key: string, cache: CacheService<T>): Observable<T | undefined> {
     return completableToObservable(cache.has(key)).pipe(
       switchMap(hasInCache => {
         if (hasInCache) {
@@ -46,4 +46,8 @@ export class FetchCache {
       })
     );
   }
+}
+
+export interface FetchCacheOptions {
+  cache?: CacheService;
 }
