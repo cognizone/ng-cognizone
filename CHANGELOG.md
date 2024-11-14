@@ -1,3 +1,10 @@
+# [5.0.0-beta.19](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.18...v5.0.0-beta.19) (2024-11-14)
+
+
+### Features
+
+* **cdk/fetch-cache:** add option to override cache used on get call ([56cb74c](https://github.com/cognizone/ng-cognizone/commit/56cb74c45ff41f9be3a3fcdedfe827e343604aa5))
+
 # [5.0.0-beta.18](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.17...v5.0.0-beta.18) (2024-11-13)
 
 
