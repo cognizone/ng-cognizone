@@ -97,6 +97,8 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
   canBeDiscarded = false;
   @Input()
   hint?: string;
+  @Input()
+  labelHandling: "translate" | 'raw' = "translate";
   @Output()
   optionSelection: EventEmitter<string | undefined> = new EventEmitter();
 
@@ -171,9 +173,11 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
    */
   displayFn: (value?: T) => Nil<string> = value => {
     if (value == null) return undefined;
-    const allOptions = [...this.storedValueOptions, ...this.options];
-    const option = allOptions.find(o => o.value === value);
-    if (option) return this.i18n.translate(option.label, undefined, this.lang);
+    if (this.labelHandling === 'translate') {
+      const allOptions = [...this.storedValueOptions, ...this.options];
+      const option = allOptions.find(o => o.value === value);
+      if (option) return this.i18n.translate(option.label, undefined, this.lang);
+    }
     this.storeValueOption(value);
     return value as unknown as string;
   };
