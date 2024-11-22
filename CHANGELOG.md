@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/cognizone/ng-cognizone/compare/v2.8.3...v2.9.0) (2024-11-22)
+
+
+### Features
+
+* **legi-shared:** add labelType as an option to prevent translate for new values ([86cbab8](https://github.com/cognizone/ng-cognizone/commit/86cbab819721c26cb144bfe212046d7ed6fbbed0))
+
 ## [2.8.3](https://github.com/cognizone/ng-cognizone/compare/v2.8.2...v2.8.3) (2024-01-31)
 
 
