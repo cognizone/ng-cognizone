@@ -6,6 +6,7 @@ import { PermissionsService } from '../services/permissions.service';
 
 @Directive({
   selector: '[czGetHasPermission]',
+  standalone: true,
 })
 export class GetHasPermissionDirective extends OnDestroy$ implements OnInit {
   @Input('czGetHasPermission')
