@@ -1,3 +1,10 @@
+# [5.0.0-beta.20](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.19...v5.0.0-beta.20) (2024-11-27)
+
+
+### Features
+
+* **permissions:** switch to standalone for the directives ([6c7684c](https://github.com/cognizone/ng-cognizone/commit/6c7684c2b0da6cba44c0e31e1da918dac3917114))
+
 # [5.0.0-beta.19](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.18...v5.0.0-beta.19) (2024-11-14)
 
 
