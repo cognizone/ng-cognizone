@@ -2,7 +2,7 @@
   <span *ngIf="(label || labelComponent) && classicMode" class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
   <mat-form-field [class.cz-classic-appearance]="classicMode">
     <mat-label *ngIf="(label || labelComponent) && !classicMode">{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
-    <mat-select [formControl]="embeddedControl" [placeholder]="placeholder" (selectionChange)="selectionChange.emit($event)">
+    <mat-select [formControl]="embeddedControl" [placeholder]="placeholder" [multiple]="multiple" (selectionChange)="selectionChange.emit($event)">
       <mat-option *ngIf="canBeDiscarded">{{ 'global.none' | czTranslate }}</mat-option>
       <mat-option
         *ngFor="let option of options | selectOptionsSort: sortType"
