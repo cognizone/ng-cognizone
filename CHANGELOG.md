@@ -1,3 +1,10 @@
+# [2.10.0](https://github.com/cognizone/ng-cognizone/compare/v2.9.0...v2.10.0) (2024-11-29)
+
+
+### Features
+
+* **legi-shared:** adding multiple attribute to select ([80765b6](https://github.com/cognizone/ng-cognizone/commit/80765b6270dcbaff1636c58f8ac22a9a02e0dea5))
+
 # [2.9.0](https://github.com/cognizone/ng-cognizone/compare/v2.8.3...v2.9.0) (2024-11-22)
 
 
