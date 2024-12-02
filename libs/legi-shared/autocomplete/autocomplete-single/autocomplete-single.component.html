@@ -2,7 +2,7 @@
   <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
   <mat-form-field [class.cz-classic-appearance]="classicMode">
     <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
-    <mat-icon matPrefix>search</mat-icon>
+    <mat-icon *ngIf="profile === 'search'" matPrefix>search</mat-icon>
     <textarea
       #singleInput
       matInput
@@ -13,10 +13,12 @@
       [matAutocomplete]="auto"
       [formControl]="singleInputControl"
       [cdkTextareaAutosize]="true"
-      type="text"
       (input)="queryChanges.next(singleInput.value)"
       (blur)="onSingleBlur()"
     ></textarea>
+    <button *ngIf="profile === 'select'" matSuffix mat-icon-button (click)="queryChanges.next('')">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
     <button matSuffix mat-icon-button *ngIf="canBeDiscarded && model" (click)="discard()">
       <mat-icon>close</mat-icon>
     </button>

@@ -2,7 +2,7 @@
   <span *ngIf="label" class="czls-title">{{ label }}</span>
   <div class="d-flex flex-column">
     <mat-form-field [class.mat-form-field-disabled]="disabled" class="cz-classic-appearance">
-      <mat-icon matPrefix>search</mat-icon>
+      <mat-icon *ngIf="profile === 'search'" matPrefix>search</mat-icon>
       <mat-chip-list #chipList [formControl]="errorControl">
         <mat-chip
           *ngFor="let value of modelAsOptions | selectOptionsSort: 'label'"
@@ -17,6 +17,7 @@
         </mat-chip>
         <input
           #multiInput
+          #trigger="matAutocompleteTrigger"
           matInput
           autocomplete="off"
           type="text"
@@ -32,6 +33,14 @@
       <mat-error>
         <cz-error></cz-error>
       </mat-error>
+      <button
+        *ngIf="profile === 'select'"
+        matSuffix
+        mat-icon-button
+        (click)="queryChanges.next(''); trigger.writeValue(''); trigger.openPanel()"
+      >
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
     </mat-form-field>
   </div>
 </ng-container>
