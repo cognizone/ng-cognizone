@@ -1,3 +1,10 @@
+# [5.0.0-beta.21](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.20...v5.0.0-beta.21) (2024-12-02)
+
+
+### Features
+
+* **json-ld:** can directly set status from store service ([3fc9649](https://github.com/cognizone/ng-cognizone/commit/3fc964986d14e821c2b6b34cb38a863100bfc717))
+
 # [5.0.0-beta.20](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.19...v5.0.0-beta.20) (2024-11-27)
 
 
