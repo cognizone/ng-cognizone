@@ -86,6 +86,10 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
   hint?: string;
   @Input()
   removeDisabledOptions = true;
+  @Input()
+  profile: 'search' | 'select' = 'search';
+  @Input()
+  cachedOptions: boolean = true;
 
   @ViewChild('multiInput')
   multiInput!: ElementRef<HTMLInputElement>;
@@ -270,7 +274,7 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
     const hasOption = await firstValueFrom(this.optionsProvider.hasOptionFor(value));
     if (!hasOption) return undefined;
     const option = await firstValueFrom(this._optionsProvider.getValueOption(value));
-    this.storedValueOptions.push(option);
+    if (this.cachedOptions) this.storedValueOptions.push(option);
     return option;
   }
 
@@ -280,8 +284,11 @@ export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> impleme
    */
   private async getSelectOption(value: T): Promise<SelectOption<T> | undefined> {
     if (value == null) return undefined;
-    const allOptions = [...this.storedValueOptions, ...this.options];
-    const option = allOptions.find(o => o.value === value);
+    let option: SelectOption<T> | undefined;
+    if (this.cachedOptions) {
+      const allOptions = [...this.storedValueOptions, ...this.options];
+      option = allOptions.find(o => o.value === value);
+    }
     return option ?? this.storeValueOption(value);
   }
 
