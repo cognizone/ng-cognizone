@@ -99,6 +99,8 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
   hint?: string;
   @Input()
   labelHandling: "translate" | 'raw' = "translate";
+  @Input()
+  profile: 'search' | 'select' = 'search';
   @Output()
   optionSelection: EventEmitter<string | undefined> = new EventEmitter();
 
