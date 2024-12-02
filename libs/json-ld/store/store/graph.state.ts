@@ -7,7 +7,7 @@ import { produce } from 'immer';
 import { ExpandedJsonLdContainer } from '@cognizone/json-ld-core';
 
 import { GraphStatus } from '../models/graph-status';
-import { RemoveGraph, Reset, SetGraph, UpdateNode } from './graph.actions';
+import { RemoveGraph, Reset, SetGraph, UpdateNode, UpdateStatus } from './graph.actions';
 
 interface GraphContainer {
   graph: ExpandedJsonLdContainer;
@@ -43,6 +43,16 @@ export class GraphState {
     ctx.setState(
       produce(ctx.getState(), draft => {
         draft.graphs[graphUri] = { graph, status: 'pristine' };
+      })
+    );
+  }
+
+  @Action(UpdateStatus)
+  updateStatus(ctx: StateContext<GraphStateModel>, { status, graphUri }: UpdateStatus): void {
+    ctx.setState(
+      produce(ctx.getState(), draft => {
+        if (!draft.graphs[graphUri]) return;
+        draft.graphs[graphUri].status = status;
       })
     );
   }
