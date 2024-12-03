@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/cognizone/ng-cognizone/compare/v2.10.0...v2.11.0) (2024-12-03)
+
+
+### Features
+
+* **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([76b8247](https://github.com/cognizone/ng-cognizone/commit/76b82477f34db3acf1295c5a64fa0e15745824fa))
+
 # [2.10.0](https://github.com/cognizone/ng-cognizone/compare/v2.9.0...v2.10.0) (2024-11-29)
 
 
