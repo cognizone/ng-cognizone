@@ -1,9 +1,10 @@
 import { ElasticQuery } from './elastic-query';
 
-export interface ElasticDslQuery {
+export interface ElasticDslQuery<T extends ElasticQuery = ElasticQuery> {
   from?: number;
   size?: number;
-  query?: ElasticQuery;
+  query?: T;
   aggs?: unknown;
   highlight?: unknown;
+  sort?: unknown[];
 }

@@ -1,4 +1,5 @@
-import { Many, manyToArray } from '@cognizone/model-utils';
+import { Many } from '../../models';
+import { manyToArray } from '../../utils';
 import { ElasticQuery } from './elastic-query';
 import { MinimumShouldMatch } from './minimum-should-match';
 

@@ -1,6 +1,7 @@
-import { Many, manyToArray } from '@cognizone/model-utils';
-import { ElasticQuery } from './elastic-query';
+import { Many } from '../../models';
+import { manyToArray } from '../../utils';
 import { BoolQuery, BoolQueryInner } from './bool-query';
+import { ElasticQuery } from './elastic-query';
 import { MinimumShouldMatch } from './minimum-should-match';
 
 export class BoolQueryBuilder {

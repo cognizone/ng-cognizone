@@ -2,6 +2,7 @@
  * Public API Surface of model-utils
  */
 
+export * from './lib/elastic';
 export * from './lib/models';
 
 export * from './lib/operators/debounce-sync';

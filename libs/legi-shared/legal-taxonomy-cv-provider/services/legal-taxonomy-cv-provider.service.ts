@@ -1,6 +1,6 @@
 import { Injectable, Provider } from '@angular/core';
 import { ConceptWrapper, CV_PROVIDER_TOKEN, CvProvider } from '@cognizone/legi-cv';
-import { ElasticQuery, extractSourcesFromElasticResponse, notNil } from '@cognizone/model-utils';
+import { ElasticDslQuery, ElasticQuery, extractSourcesFromElasticResponse, notNil } from '@cognizone/model-utils';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -107,7 +107,7 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
   /**
    * `buildElasticQuery` to search for a legal taxonomy
    */
-  protected buildElasticQuery(query?: string): ElasticQuery {
+  protected buildElasticQuery(query?: string): ElasticDslQuery {
     return {
       query: {
         bool: {
@@ -124,7 +124,7 @@ export class LegalTaxonomyCvProvider implements CvProvider<LegalTaxonomy> {
             },
           ],
         },
-      },
+      } as ElasticQuery,
       size: 10,
     };
   }
