@@ -1,3 +1,10 @@
+# [5.0.0-beta.25](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.24...v5.0.0-beta.25) (2024-12-05)
+
+
+### Bug Fixes
+
+* **model-utils:** move elastic modules around to make them available outside the package ([7c15191](https://github.com/cognizone/ng-cognizone/commit/7c151917c8eca867c233eb3775f50cab55f38d52))
+
 # [5.0.0-beta.24](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.23...v5.0.0-beta.24) (2024-12-05)
 
 
