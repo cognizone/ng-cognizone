@@ -1,3 +1,10 @@
+# [5.0.0-beta.23](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.22...v5.0.0-beta.23) (2024-12-05)
+
+
+### Features
+
+* **model-utils:** add elastic utilities ([ab9226a](https://github.com/cognizone/ng-cognizone/commit/ab9226a96c29d54c227fb27393a11323aecc8167))
+
 # [5.0.0-beta.22](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.21...v5.0.0-beta.22) (2024-12-05)
 
 
