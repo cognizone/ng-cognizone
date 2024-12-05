@@ -1,3 +1,10 @@
+# [5.0.0-beta.22](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.21...v5.0.0-beta.22) (2024-12-05)
+
+
+### Features
+
+* dropping AsyncResult and related"loading" concept ([d4e60c4](https://github.com/cognizone/ng-cognizone/commit/d4e60c478bec34868200d2e62f6f5390e3117c2d))
+
 # [5.0.0-beta.21](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.20...v5.0.0-beta.21) (2024-12-02)
 
 

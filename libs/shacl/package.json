@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/shacl",
-  "version": "5.0.0-beta.21",
+  "version": "5.0.0-beta.22",
   "optionalDependencies": {
     "@angular/common": ">=18.0.0",
     "@angular/core": ">=18.0.0",
