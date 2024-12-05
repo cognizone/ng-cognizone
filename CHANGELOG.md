@@ -1,3 +1,10 @@
+# [5.0.0-beta.24](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.23...v5.0.0-beta.24) (2024-12-05)
+
+
+### Bug Fixes
+
+* **cdk:** handle nil values in unwrap pipe ([6bed027](https://github.com/cognizone/ng-cognizone/commit/6bed0277066e17c3cc099b8b0445ad0498e2acd6))
+
 # [5.0.0-beta.23](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.22...v5.0.0-beta.23) (2024-12-05)
 
 
