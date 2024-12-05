@@ -1,19 +1,19 @@
 /**
- * @description Represents a remote data and its related state
+ * @description Wraps a value in an ok if the related operations went well, otherwise wrap the result in an error.
+ * The idea is to force consumers for `Result` to handle error cases, and not be dependant on try/catch behaviors
  */
-export type AsyncResult<T = unknown, E = unknown> = ResultSuccess<T> | ResultError<E> | ResultLoading;
-export type Result<T = unknown, E = unknown> = ResultSuccess<T> | ResultError<E>;
+export type Result<T = unknown, E = unknown> = ResultOk<T> | ResultError<E>;
 
 /**
  * @description the resource has been successfully retrieved and is stored in `content`
  */
-export type ResultSuccess<T> = {
-  type: 'success';
+export type ResultOk<T> = {
+  type: 'ok';
   content: T;
 };
 
-export function success<T>(content: T): ResultSuccess<T> {
-  return { type: 'success', content };
+export function ok<T>(content: T): ResultOk<T> {
+  return { type: 'ok', content };
 }
 
 /**
@@ -26,17 +26,4 @@ export type ResultError<E> = {
 
 export function error<T>(err: T): ResultError<T> {
   return { type: 'error', error: err };
-}
-
-/**
- * @description the query to fetch the resource has been started but the response did not arrive yet
- */
-export type ResultLoading = {
-  type: 'loading';
-};
-
-// always the same, no need to re-create it every time
-const _loading = { type: 'loading' as const };
-export function loading(): ResultLoading {
-  return _loading;
 }

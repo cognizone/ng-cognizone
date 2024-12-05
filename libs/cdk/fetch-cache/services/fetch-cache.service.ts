@@ -1,34 +1,33 @@
 import { inject, Injectable } from '@angular/core';
-import { AsyncResult, completableToObservable, loading, success } from '@cognizone/model-utils';
+import { completableToObservable, Result, ok } from '@cognizone/model-utils';
 import { shareReplaySafe } from '@cognizone/ng-core';
-import { Observable, of, startWith, switchMap } from 'rxjs';
+import { Observable, of, switchMap } from 'rxjs';
 
 import { CacheService } from './cache.service';
 
 @Injectable({ providedIn: 'root' })
 export class FetchCache {
   private cache: CacheService = inject(CacheService);
-  private currentFetchMap: { [key: string]: Observable<AsyncResult> } = {};
+  private currentFetchMap: { [key: string]: Observable<Result> } = {};
 
-  get<T>(key: string, fetch: () => Observable<AsyncResult<T>>, options?: FetchCacheOptions): Observable<AsyncResult<T>> {
-    if (this.currentFetchMap[key]) return this.currentFetchMap[key] as Observable<AsyncResult<T>>;
+  get<T>(key: string, fetch: () => Observable<Result<T>>, options?: FetchCacheOptions): Observable<Result<T>> {
+    if (this.currentFetchMap[key]) return this.currentFetchMap[key] as Observable<Result<T>>;
     const cache = (options?.cache ?? this.cache) as CacheService<T>;
 
     return this.getFromCache<T>(key, cache).pipe(
       switchMap(cached => {
         if (cached) {
-          return of(success(cached));
+          return of(ok(cached));
         }
 
         return (this.currentFetchMap[key] = fetch().pipe(
           switchMap(async result => {
-            if (result.type === 'success') {
+            if (result.type === 'ok') {
               await cache.set(key, result.content);
             }
             delete this.currentFetchMap[key];
             return result;
           }),
-          startWith(loading()),
           shareReplaySafe(1)
         ));
       })
