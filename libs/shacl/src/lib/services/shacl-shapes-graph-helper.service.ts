@@ -10,7 +10,6 @@ import {
   isOfType,
   JsonLdValue,
 } from '@cognizone/json-ld-core';
-import { JsonLdService } from '@cognizone/json-ld/ng-core';
 import { HANAMI, RDFS, SH } from '@cognizone/lod-core';
 import { Many, manyToArray, notNil } from '@cognizone/model-utils';
 import { TtlCache, TtlCacheFactory } from '@cognizone/ng-core';
@@ -30,7 +29,6 @@ import { Memoizer } from '../models';
 
 @Injectable({ providedIn: 'root' })
 export class ShaclShapesGraphHelperFactory {
-  private jsonLdService = inject(JsonLdService);
   private helperCache: TtlCache<ExpandedJsonLdContainer, ShaclShapesGraphHelper> = inject(TtlCacheFactory).create({
     ttl: 5000,
   });
@@ -38,7 +36,7 @@ export class ShaclShapesGraphHelperFactory {
   create(shapesGraph: ExpandedJsonLdContainer, purpose: Many<HanamiPurpose>): ShaclShapesGraphHelper {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     if (this.helperCache.has(shapesGraph)) return this.helperCache.get(shapesGraph)!;
-    const helper = new ShaclShapesGraphHelper(this.jsonLdService, shapesGraph, purpose);
+    const helper = new ShaclShapesGraphHelper(shapesGraph, purpose);
     this.helperCache.set(shapesGraph, helper);
     return helper;
   }
@@ -58,11 +56,7 @@ export class ShaclShapesGraphHelper {
   classUrisAndAncestors: Record<string, string[]> = {};
   private memoizer = new Memoizer();
 
-  constructor(
-    private readonly jsonLdService: JsonLdService,
-    public readonly shapesGraph: ExpandedJsonLdContainer,
-    public readonly purpose: Many<HanamiPurpose>
-  ) {
+  constructor(public readonly shapesGraph: ExpandedJsonLdContainer, public readonly purpose: Many<HanamiPurpose>) {
     this.initMemoized();
     this.buildCache();
   }
@@ -192,7 +186,7 @@ export class ShaclShapesGraphHelper {
     if (this.isPropertyAttribute(propertyShape)) return false;
 
     const editor = getOneNode(propertyShape[HANAMI.editor], this.shapesGraph);
-    if (editor && this.jsonLdService.isOfTypeGuard<HanamiNodeEditor>(editor, HANAMI.NodeEditor)) {
+    if (editor && isOfType<HanamiNodeEditor>(editor, HANAMI.NodeEditor)) {
       const linkingStrategy = getOneValue<LinkingStrategy>(editor[HANAMI.linkingStrategy]);
       if (linkingStrategy === HANAMI.ExternalReferenceLinkingStrategy) {
         return false;

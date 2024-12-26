@@ -12,7 +12,7 @@ export interface TermQueryInner {
   case_insensitive?: boolean;
 }
 
-export function termQuery(field: string, value: string, options?: Exclude<TermQueryInner, 'value'> & { _name?: string }): TermQuery {
+export function termQuery(field: string, value: string, options?: Omit<TermQueryInner, 'value'> & { _name?: string }): TermQuery {
   const { _name, ...otherOptions } = options ?? {};
   return {
     _name,
