@@ -16,6 +16,7 @@
         "project": "libs/model-utils/package.json",
         "format": ["esm", "cjs"],
         "generateExportsField": true,
+        "additionalEntryPoints": ["libs/model-utils/src/result/result.ts", "libs/model-utils/src/pipe/pipe.ts"],
         "assets": [
           {
             "glob": "libs/model-utils/README.md",
