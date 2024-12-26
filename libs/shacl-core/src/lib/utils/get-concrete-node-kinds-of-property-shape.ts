@@ -3,6 +3,7 @@ import { HANAMI, SH } from '@cognizone/lod-core';
 import { Nil } from '@cognizone/model-utils';
 
 import { ShNodeKindConcreteValue, ShNodeKindValue, ShPropertyShape } from '../models';
+import { getConcreteNodeKinds } from './get-concrete-node-kinds';
 
 export function getConcreteNodeKindsOfPropertyShape(
   propertyShape: Nil<ShPropertyShape>,
@@ -38,17 +39,4 @@ export function getConcreteNodeKindsOfPropertyShape(
   }
 
   return Array.from(computed);
-}
-
-export function getConcreteNodeKinds(nodeKind: ShNodeKindValue): ShNodeKindConcreteValue[] {
-  switch (nodeKind) {
-    case SH.BlankNodeOrIRI:
-      return [SH.BlankNode, SH.IRI];
-    case SH.BlankNodeOrLiteral:
-      return [SH.BlankNode, SH.Literal];
-    case SH.IRIOrLiteral:
-      return [SH.IRI, SH.Literal];
-    default:
-      return [nodeKind];
-  }
 }

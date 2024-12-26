@@ -51,7 +51,7 @@ export function simpleQueryStringQuery(
     simple_query_string: {
       query,
       fields,
-      flags: manyToArray(flags).join('|'),
+      flags: manyToArray(flags).join('|') || undefined,
       ...otherOptions,
     },
   };
