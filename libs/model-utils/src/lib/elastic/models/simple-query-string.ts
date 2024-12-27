@@ -1,5 +1,5 @@
 import { Many } from '../../models';
-import { manyToArray } from '../../utils';
+import { manyToArray } from '../../utils/many-to-array';
 import { ElasticQuery } from './elastic-query';
 import { MinimumShouldMatch } from './minimum-should-match';
 
