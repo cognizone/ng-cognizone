@@ -1,3 +1,11 @@
+# [5.0.0-beta.26](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.25...v5.0.0-beta.26) (2024-12-27)
+
+
+### Features
+
+* **model-utils:** add elastic query utilities and tests ([a123d08](https://github.com/cognizone/ng-cognizone/commit/a123d084f5478d5299568663d1856fd3f92efbfe))
+* **model-utils:** added pipe and result sub entries ([10dde17](https://github.com/cognizone/ng-cognizone/commit/10dde1725f80475dc13e2edad2ec01d695296eb6))
+
 # [5.0.0-beta.25](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.24...v5.0.0-beta.25) (2024-12-05)
 
 
