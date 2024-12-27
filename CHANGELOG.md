@@ -1,3 +1,11 @@
+# [3.16.0](https://github.com/cognizone/ng-cognizone/compare/v3.15.1...v3.16.0) (2024-12-27)
+
+### Features
+
+- **legi-shared:** add labelType as an option to prevent translate for new values ([fa4852c](https://github.com/cognizone/ng-cognizone/commit/fa4852c4d76e56e4f3eb4f6658bb2b3576246172))
+- **legi-shared:** adding multiple attribute to select ([7f4301d](https://github.com/cognizone/ng-cognizone/commit/7f4301d52ce0b0f5292f0fd76b1b88eed42f9126))
+- **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([0eb1728](https://github.com/cognizone/ng-cognizone/commit/0eb1728b55de62acd1ec43b03b7978889dd0f304))
+
 ## [3.15.1](https://github.com/cognizone/ng-cognizone/compare/v3.15.0...v3.15.1) (2024-08-19)
 
 ### Bug Fixes
