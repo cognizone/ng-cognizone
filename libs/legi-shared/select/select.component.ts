@@ -69,6 +69,8 @@ export class SelectComponent<T> extends ControlComponent<T> implements HasOption
 
   @Input()
   hint?: string;
+  @Input()
+  multiple: boolean = false;
 
   @Output()
   selectionChange: EventEmitter<unknown> = new EventEmitter();
