@@ -6,6 +6,7 @@ export interface Yasgui {
 
 export interface CurrentYasgui {
   yasqe: Yasqe;
+  yasr: Yasr;
 }
 
 export interface Yasqe {
@@ -16,6 +17,10 @@ export interface Yasqe {
   on(event: string | 'change', handler: (e: any) => void): void;
   setOption(option: any): void;
   query: Function;
+}
+
+export interface Yasr {
+  on(event: string | 'change', handler: (e: any) => void): void;
 }
 
 // http://doc.yasgui.org/doc/#clientConfig
