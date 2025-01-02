@@ -23,6 +23,9 @@ export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
   @Input()
   runQueryOnChange = false;
 
+  @Input()
+  hideResultsOnQueryChange: boolean = false;
+
   @ViewChild('yasgui', { static: true })
   yasguiRef!: ElementRef;
 
@@ -37,10 +40,23 @@ export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
     this.yasguiService.loadYasgui().subscribe();
     this.yasgui = await this.createYasgui();
     const yasqe = this.yasgui.current().yasqe;
+    const yasr = this.yasgui.current().yasr;
+    const yasrResultElement = (this.yasguiRef.nativeElement.querySelector('.yasr_results') as HTMLElement);
     yasqe.on('change', () => {
       this.query = yasqe.getValue();
       this.queryChange.emit(this.query);
+      // Note - when a user clicks on multiple queries one by one, the results are still shown and cannot be emptied,
+      // hopefully it is already taken care in the newer versions
+      if (this.hideResultsOnQueryChange) {
+        yasrResultElement.style.display = 'none';
+      }
     });
+    // Note - this event is called after the user clicks on the play query button and the results are calculated.
+    if (this.hideResultsOnQueryChange) {
+      yasr.on('draw', () => {
+        yasrResultElement.style.display = 'block';
+      });
+    }
     this.loadQuery();
   }
 
