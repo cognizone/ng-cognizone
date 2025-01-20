@@ -1,3 +1,10 @@
+# [5.0.0-beta.28](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.27...v5.0.0-beta.28) (2025-01-20)
+
+
+### Bug Fixes
+
+* **seo:** better change detection for czMetaProperty directive ([31972c5](https://github.com/cognizone/ng-cognizone/commit/31972c5e3e6c54417c3d8444be69ce9b4eb096d9))
+
 # [5.0.0-beta.27](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.26...v5.0.0-beta.27) (2024-12-27)
 
 
