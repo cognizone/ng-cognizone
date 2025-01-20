@@ -165,7 +165,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
     }
     if (!control?.validator) return;
     const errors = control.validator(new UntypedFormControl());
-    if (errors?.required) this.required = true;
+    if (errors?.['required']) this.required = true;
   }
 
   private computeName(): void {

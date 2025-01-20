@@ -1,5 +1,9 @@
-import { AfterContentChecked, Directive, ElementRef, inject, Input, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, inject, Input, OnDestroy, OnInit } from '@angular/core';
 
+import { notNil } from '@cognizone/model-utils';
+import { OnDestroy$ } from '@cognizone/ng-core';
+import { identity, Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, map } from 'rxjs/operators';
 import { MetaId, MetaPropertyDirectiveProps, SEO_OPTIONS } from '../models';
 import { MetaValueCmd, SeoService } from '../services';
 
@@ -7,7 +11,7 @@ import { MetaValueCmd, SeoService } from '../services';
   selector: '[czMetaProperty]',
   standalone: true,
 })
-export class MetaPropertyDirective implements AfterContentChecked, OnDestroy, MetaPropertyDirectiveProps, ContentProvider {
+export class MetaPropertyDirective extends OnDestroy$ implements AfterViewInit, OnDestroy, MetaPropertyDirectiveProps, ContentProvider {
   @Input('czMetaProperty')
   metaId!: MetaId;
 
@@ -36,10 +40,13 @@ export class MetaPropertyDirective implements AfterContentChecked, OnDestroy, Me
     this._onDestroyStrategy = value;
   }
 
+  @Input('czMetaPropertyDebounceTime')
+  debounceTime?: number = 200;
+  @Input('czMetaPropertyObserverOptions')
+  observerOptions?: MutationObserverInit = { childList: true, subtree: true };
+
   children: ContentProvider[] = [];
 
-  private firstChange = true;
-  private lastContent = '';
   private cmd?: MetaValueCmd;
   private _subValuesSeparator?: string;
   private _watchForChanges?: boolean | undefined;
@@ -59,18 +66,14 @@ export class MetaPropertyDirective implements AfterContentChecked, OnDestroy, Me
     );
   }
 
-  ngAfterContentChecked(): void {
-    if ((!this.watchForChanges && !this.firstChange) || !this.metaId) return;
+  ngAfterViewInit(): void {
+    if (!this.metaId) return;
     const content = this.getContent();
-    if (content === this.lastContent) return;
-    this.firstChange = false;
-    if (this.cmd) {
-      this.cmd.update(content);
-      return;
-    }
+    this.setValue(content);
 
-    const { multi } = this.seoService.getDescriptor(this.metaId);
-    this.cmd = multi ? this.seoService.appendMetaValue(this.metaId, content) : this.seoService.setMetaValue(this.metaId, content);
+    if (this.watchForChanges) {
+      this.observeContentChange();
+    }
   }
 
   ngOnDestroy(): void {
@@ -97,6 +100,33 @@ export class MetaPropertyDirective implements AfterContentChecked, OnDestroy, Me
       return this.children.map(subValue => subValue.getContent()).join(this.subValuesSeparator ?? '');
     }
     return this.elRef.nativeElement.textContent?.trim() ?? '';
+  }
+
+  private setValue(content: string): void {
+    if (this.cmd) {
+      this.cmd.update(content);
+      return;
+    }
+
+    const { multi } = this.seoService.getDescriptor(this.metaId);
+    this.cmd = multi ? this.seoService.appendMetaValue(this.metaId, content) : this.seoService.setMetaValue(this.metaId, content);
+  }
+
+  private observeContentChange(): void {
+    this.subSink = new Observable<MutationRecord[]>(observer => {
+      const obs = new MutationObserver(mutations => observer.next(mutations));
+      obs.observe(this.elRef.nativeElement, this.observerOptions);
+      return () => obs.disconnect();
+    })
+      .pipe(
+        this.debounceTime ? debounceTime(this.debounceTime) : identity,
+        map(() => this.getContent()),
+        filter(notNil),
+        distinctUntilChanged()
+      )
+      .subscribe(content => {
+        this.setValue(content);
+      });
   }
 }
 

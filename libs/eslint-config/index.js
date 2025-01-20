@@ -49,7 +49,7 @@ module.exports = {
     '@typescript-eslint/comma-spacing': 'off',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/default-param-last': 'error',
-    '@typescript-eslint/dot-notation': 'error',
+    '@typescript-eslint/dot-notation': 'off', // error for non-indexed properties
     '@typescript-eslint/explicit-function-return-type': [
       'off',
       {
