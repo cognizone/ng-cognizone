@@ -1,3 +1,10 @@
+# [5.0.0-beta.29](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.28...v5.0.0-beta.29) (2025-02-21)
+
+
+### Bug Fixes
+
+* **shacl-core:** add getTargetClasses for consumers ([d9ecdcd](https://github.com/cognizone/ng-cognizone/commit/d9ecdcd7133b0ba45ab9c098b99266cb53d5a450))
+
 # [5.0.0-beta.28](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.27...v5.0.0-beta.28) (2025-01-20)
 
 
