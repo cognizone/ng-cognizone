@@ -164,9 +164,7 @@ export class ShaclShapesGraphHelper {
     if (nonEmptyShapes.length === 1) return [nonEmptyShapes[0]];
 
     const concreteType = this.getConcreteType(typesWithShapes) ?? this.getConcreteType(allTypes);
-    if (!concreteType) return [];
-
-    return matchingShapes.filter(s => matcher(concreteType)(s['@id']));
+    return concreteType ? matchingShapes.filter(s => matcher(concreteType)(s['@id'])) : matchingShapes;
   }
 
   getNodeShapesForTargetNode(nodeUri: string): ShNodeShape[] {
