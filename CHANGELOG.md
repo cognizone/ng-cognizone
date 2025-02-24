@@ -1,3 +1,10 @@
+## [4.1.3](https://github.com/cognizone/ng-cognizone/compare/v4.1.2...v4.1.3) (2025-02-24)
+
+
+### Bug Fixes
+
+* **shacl:** correctly compute node shapes for a given class ([6ad516a](https://github.com/cognizone/ng-cognizone/commit/6ad516a95f85dfb88751bdd0ee433e3897ab5318))
+
 ## [4.1.2](https://github.com/cognizone/ng-cognizone/compare/v4.1.1...v4.1.2) (2025-02-21)
 
 
