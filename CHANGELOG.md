@@ -1,3 +1,11 @@
+# [5.0.0-beta.31](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.30...v5.0.0-beta.31) (2025-03-11)
+
+
+### Bug Fixes
+
+* **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([2811de6](https://github.com/cognizone/ng-cognizone/commit/2811de69ddd922230357f3591e1034c38e862e74))
+* **lod-core:** add skipTypeTriple to Hanami namespaces ([edd260a](https://github.com/cognizone/ng-cognizone/commit/edd260a3c83c66be4d63420fe44e137fd14eaf18))
+
 # [5.0.0-beta.30](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.29...v5.0.0-beta.30) (2025-02-24)
 
 
