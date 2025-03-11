@@ -54,6 +54,7 @@ export interface ShPropertyShape extends ShShape {
   [HANAMI.timeZoneEncoding]?: JsonLdValue[];
   [HANAMI.listOf]?: JsonLdValue[];
   [HANAMI.readonly]?: JsonLdValue[];
+  [HANAMI.skipTypeTriple]?: JsonLdValue[];
 }
 
 export interface ShInversePathNode extends JsonLdBlankNode {
