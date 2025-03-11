@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/shacl-core",
-  "version": "4.1.3",
+  "version": "4.1.4",
   "peerDependencies": {
     "@cognizone/json-ld-core": ">=3.0.0",
     "@cognizone/lod-core": ">=3.0.0",
