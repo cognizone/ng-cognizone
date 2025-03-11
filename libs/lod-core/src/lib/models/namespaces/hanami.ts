@@ -29,6 +29,7 @@ export const HANAMI = createNamespace('https://hanami.app/ontology#', [
   'SelectEditor',
   'selection',
   'shapes',
+  'skipTypeTriple',
   'template',
   'TemplateViewer',
   'TextareaEditor',
