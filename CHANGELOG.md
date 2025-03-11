@@ -1,3 +1,9 @@
+## [3.16.3](https://github.com/cognizone/ng-cognizone/compare/v3.16.2...v3.16.3) (2025-03-11)
+
+### Bug Fixes
+
+- **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([a591e04](https://github.com/cognizone/ng-cognizone/commit/a591e04c6b0928571c8a957ab426a12beb892c79))
+
 ## [3.16.2](https://github.com/cognizone/ng-cognizone/compare/v3.16.1...v3.16.2) (2025-02-24)
 
 ### Bug Fixes
