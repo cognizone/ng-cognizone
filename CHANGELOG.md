@@ -1,3 +1,9 @@
+## [3.16.4](https://github.com/cognizone/ng-cognizone/compare/v3.16.3...v3.16.4) (2025-03-11)
+
+### Bug Fixes
+
+- **lod-core:** add skipTypeTriple to Hanami namespaces ([25bc1ee](https://github.com/cognizone/ng-cognizone/commit/25bc1eeb67f2e0e96b768b13a85cd773f6a486ee))
+
 ## [3.16.3](https://github.com/cognizone/ng-cognizone/compare/v3.16.2...v3.16.3) (2025-03-11)
 
 ### Bug Fixes
