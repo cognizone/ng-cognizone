@@ -30,7 +30,8 @@ export class GraphAndControlLinkingService {
       tap(value => {
         const node = this.jsonLdStoreService.getNodeSnapshot<T>(rootUri, nodeUri);
         if (!node) return;
-        if (isEqual(this.getNodeValue<T>(node, options), value)) return;
+        const isEqualFn = options.isEqualNodeValue ?? isEqual;
+        if (isEqualFn(this.getNodeValue<T>(node, options), value)) return;
 
         const updatedNode = produce(node, (draft: T) => {
           this.setValue(draft, options, value);
@@ -85,4 +86,5 @@ export interface LinkControlToNodeAttributeOptions<T = unknown, U = T> {
   emitEventFromNodeToForm?: boolean;
   nodeValueToFormValue?: (node: T) => U;
   formValueToNodeValue?: (value: U) => T;
+  isEqualNodeValue?: (a: T, b: T) => boolean;
 }
