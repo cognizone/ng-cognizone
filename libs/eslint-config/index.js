@@ -242,7 +242,7 @@ module.exports = {
     'constructor-super': 'error',
     curly: ['error', 'multi-line'],
     'default-case': 'error',
-    'dot-notation': 'error',
+    'dot-notation': 'off',
     'eol-last': 'off',
     eqeqeq: ['error', 'smart'],
     'guard-for-in': 'off',
