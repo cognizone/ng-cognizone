@@ -3,32 +3,39 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/model-utils/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/model-utils",
         "main": "libs/model-utils/src/index.ts",
+        "outputPath": "dist/libs/model-utils",
         "tsConfig": "libs/model-utils/tsconfig.lib.json",
-        "assets": ["libs/model-utils/*.md"]
+        "compiler": "babel",
+        "project": "libs/model-utils/package.json",
+        "format": ["esm", "cjs"],
+        "generateExportsField": true,
+        "additionalEntryPoints": [],
+        "assets": [
+          {
+            "glob": "libs/model-utils/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/model-utils/**/*.ts"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/model-utils"],
       "options": {
-        "jestConfig": "libs/model-utils/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/model-utils/jest.config.ts"
       }
     }
-  },
-  "tags": []
+  }
 }

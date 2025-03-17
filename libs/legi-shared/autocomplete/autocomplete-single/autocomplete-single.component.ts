@@ -16,7 +16,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
-import { MatLegacyAutocompleteSelectedEvent as MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
@@ -97,6 +97,10 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
   canBeDiscarded = false;
   @Input()
   hint?: string;
+  @Input()
+  labelHandling: 'translate' | 'raw' = 'translate';
+  @Input()
+  profile: 'search' | 'select' = 'search';
   @Output()
   optionSelection: EventEmitter<string | undefined> = new EventEmitter();
 
@@ -171,9 +175,12 @@ export class AutocompleteSingleComponent<T> extends ControlComponent<T> implemen
    */
   displayFn: (value?: T) => Nil<string> = value => {
     if (value == null) return undefined;
-    const allOptions = [...this.storedValueOptions, ...this.options];
-    const option = allOptions.find(o => o.value === value);
-    if (option) return this.i18n.translate(option.label, undefined, this.lang);
+    if (this.labelHandling === 'translate') {
+      const allOptions = [...this.storedValueOptions, ...this.options];
+      const option = allOptions.find(o => o.value === value);
+      if (option) return this.i18n.translate(option.label, undefined, this.lang);
+    }
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     this.storeValueOption(value);
     return value as unknown as string;
   };

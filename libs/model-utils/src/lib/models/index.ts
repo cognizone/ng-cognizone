@@ -2,8 +2,6 @@ export * from './completable';
 export * from './cz-label';
 export * from './data-type';
 export * from './dictionary';
-export * from './elastic-query';
-export * from './elastic-search-response';
 export * from './lang-string';
 export * from './many';
 export * from './nil';

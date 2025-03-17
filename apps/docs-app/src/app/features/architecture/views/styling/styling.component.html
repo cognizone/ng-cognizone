@@ -9,9 +9,7 @@
     </p>
   </section>
 
-  <h2 class="mat-h2" appAnchor>
-    Structuring
-  </h2>
+  <h2 class="mat-h2" appAnchor>Structuring</h2>
   <section>
     <p>
       As with the "angular part" of the app, we also want to have structure for our global styling. In a perfect world, your structure would
@@ -29,8 +27,8 @@
       <ul>
         <li>
           <app-inline-code>abstracts</app-inline-code>: here are all the scss files that do not produce any css on their own. That means
-          that you could <app-inline-code>@import '...';</app-inline-code> all the partials from this folder in another file and it will not
-          generate any css rules unless you declaratively use the mixins, placeholders, etc. that are inside those files.
+          that you could <app-inline-code>&#64;import '...';</app-inline-code> all the partials from this folder in another file and it will
+          not generate any css rules unless you declaratively use the mixins, placeholders, etc. that are inside those files.
         </li>
         <li>
           <app-inline-code>base</app-inline-code>:
@@ -169,8 +167,8 @@
       <a href="https://getbootstrap.com/docs/4.3/content/reboot/">Reboot</a> is the css reset of bootstrap and it you should be your choice,
       well, if you use bootstrap in your app. It might be a good choice even if it's the only part of bootstrap you will use (and it is
       based on Normalize.css!). Beware that it comes with a great design idea which is
-      <app-inline-code>*{{ '{' }}box-sizing: border-box;}</app-inline-code> which might be problematic for some situations, like when using
-      <app-inline-code>mat-form-field</app-inline-code> from angular material.
+      <app-inline-code>*{{ '{' }}box-sizing: border-box;&#125;</app-inline-code> which might be problematic for some situations, like when
+      using <app-inline-code>mat-form-field</app-inline-code> from angular material.
     </li>
   </ul>
 
@@ -210,9 +208,9 @@
     But we are in angular, so what do we want? Styled components! And when do we want them? Right now! So the previous example is not good
     enough, we need to split things up a bit:
   </p>
-  <div class="d-flex align-items-start" style="justify-content: space-around;">
+  <div class="d-flex align-items-start" style="justify-content: space-around">
     <img src="assets/architecture/styles-bootstrap.png" />
-    <div class="d-flex flex-wrap align-items-start" style="justify-content: space-around;">
+    <div class="d-flex flex-wrap align-items-start" style="justify-content: space-around">
       <app-code-block
         prefix="// styles/vendors/bootstrap/_abstract.scss"
         url="assets/src/styles/vendors/bootstrap/_abstract.scss"
@@ -228,12 +226,12 @@
   <p>With this in place, you can use bootstrap at both:</p>
   <ul>
     <li>
-      the global level: you just need to add <app-inline-code>@import 'vendors/bootstrap.scss';</app-inline-code> to your
+      the global level: you just need to add <app-inline-code>&#64;import 'vendors/bootstrap.scss';</app-inline-code> to your
       <app-inline-code>main.scss</app-inline-code> file
     </li>
     <li>
       the component level: depending on what you need, you might just want to add
-      <app-inline-code>@import 'vendors/bootstrap/abstract';</app-inline-code> to your file to start using bootstrap stuff in your
+      <app-inline-code>&#64;import 'vendors/bootstrap/abstract';</app-inline-code> to your file to start using bootstrap stuff in your
       component, like here below.
     </li>
   </ul>

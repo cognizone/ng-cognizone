@@ -2,17 +2,17 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import { MAT_LEGACY_FORM_FIELD_DEFAULT_OPTIONS as MAT_FORM_FIELD_DEFAULT_OPTIONS, MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatLegacyProgressSpinnerModule as MatProgressSpinnerModule } from '@angular/material/legacy-progress-spinner';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatLegacySlideToggleModule as MatSlideToggleModule } from '@angular/material/legacy-slide-toggle';
-import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
-import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -67,19 +67,19 @@ const pipes = [EscapeHtmlPipe, ReadingTimePipe];
 const directives = [MatTabRoutedDirective, AnchorDirective, ImgTooltipDirective, ComponentTooltipDirective];
 
 @NgModule({
-    declarations: [components, pipes, directives],
-    imports: [CommonModule, material, ReactiveFormsModule, RouterModule],
-    exports: [material, components, pipes, directives, CommonModule, ReactiveFormsModule],
-    providers: [
-        {
-            provide: TOOLTIP_COMPONENT,
-            multi: true,
-            useValue: {
-                class: CodeBlockComponent,
-                type: 'code',
-            } as TooltipComponent,
-        },
-    ]
+  declarations: [components, pipes, directives],
+  imports: [CommonModule, material, ReactiveFormsModule, RouterModule],
+  exports: [material, components, pipes, directives, CommonModule, ReactiveFormsModule],
+  providers: [
+    {
+      provide: TOOLTIP_COMPONENT,
+      multi: true,
+      useValue: {
+        class: CodeBlockComponent,
+        type: 'code',
+      } as TooltipComponent,
+    },
+  ],
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModuleRoot> {

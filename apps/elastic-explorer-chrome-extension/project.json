@@ -76,33 +76,29 @@
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
-        "browserTarget": "elastic-explorer-chrome-extension:build"
+        "buildTarget": "elastic-explorer-chrome-extension:build"
       },
       "configurations": {
         "production": {
-          "browserTarget": "elastic-explorer-chrome-extension:build:production"
+          "buildTarget": "elastic-explorer-chrome-extension:build:production"
         }
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "elastic-explorer-chrome-extension:build"
+        "buildTarget": "elastic-explorer-chrome-extension:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/elastic-explorer-chrome-extension/src/**/*.ts", "apps/elastic-explorer-chrome-extension/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/elastic-explorer-chrome-extension"],
       "options": {
-        "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.ts"
       }
     }
   },

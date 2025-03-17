@@ -13,7 +13,7 @@ import {
   TemplateRef,
 } from '@angular/core';
 import { AbstractControl, ControlContainer, UntypedFormControl, NgControl } from '@angular/forms';
-import { MatLegacyFormField as MatFormField } from '@angular/material/legacy-form-field';
+import { MatFormField } from '@angular/material/form-field';
 import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-shared/core';
 import { bindControls, extractControlFromNgControl } from '@cognizone/legi-shared/utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
@@ -125,7 +125,8 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
    * @ignore
    */
   onFocus(event: FocusEvent, matFormField: MatFormField): void {
-    matFormField.updateOutlineGap();
+    // TODO was updateOutlineGap before, can't remember what it was fixing
+    matFormField._refreshOutlineNotchWidth();
     this.inputFocus.emit(event);
   }
 }

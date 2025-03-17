@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/ng-yasgui/tsconfig.lib.json",
-        "project": "libs/ng-yasgui/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/ng-yasgui/ng-package.json"
       },
       "configurations": {
         "ivy": {
@@ -22,18 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/ng-yasgui/src/**/*.ts", "libs/ng-yasgui/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ng-yasgui"],
       "options": {
-        "jestConfig": "libs/ng-yasgui/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ng-yasgui/jest.config.ts"
       }
     }
   },

@@ -12,7 +12,7 @@ import {
   TemplateRef,
 } from '@angular/core';
 import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
-import { MatLegacyCheckboxChange as MatCheckboxChange } from '@angular/material/legacy-checkbox';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';

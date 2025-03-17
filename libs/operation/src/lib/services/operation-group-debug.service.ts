@@ -1,5 +1,5 @@
 import { Injectable, OnDestroy, Renderer2 } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Nil } from '@cognizone/model-utils';
 import { Logger, OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable } from 'rxjs';
@@ -38,7 +38,6 @@ export class OperationGroupDebug extends OnDestroy$ implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    super.ngOnDestroy();
     this.removeDebug();
   }
 

@@ -49,7 +49,7 @@ module.exports = {
     '@typescript-eslint/comma-spacing': 'off',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/default-param-last': 'error',
-    '@typescript-eslint/dot-notation': 'error',
+    '@typescript-eslint/dot-notation': 'off', // error for non-indexed properties
     '@typescript-eslint/explicit-function-return-type': [
       'off',
       {
@@ -73,12 +73,6 @@ module.exports = {
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/init-declarations': 'off',
     '@typescript-eslint/keyword-spacing': 'off',
-    '@typescript-eslint/lines-between-class-members': [
-      'warn',
-      {
-        exceptAfterSingleLine: true,
-      },
-    ],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -120,7 +114,6 @@ module.exports = {
     '@typescript-eslint/no-confusing-non-null-assertion': 'off',
     '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/no-dupe-class-members': 'error',
-    '@typescript-eslint/no-duplicate-imports': 'error',
     '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/no-empty-function': 'error',
     '@typescript-eslint/no-empty-interface': 'off',
@@ -137,7 +130,6 @@ module.exports = {
     ],
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-for-in-array': 'error',
-    '@typescript-eslint/no-implicit-any-catch': 'warn',
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-inferrable-types': [
       'error',
@@ -220,7 +212,6 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/return-await': 'off',
     '@typescript-eslint/semi': 'off',
-    '@typescript-eslint/sort-type-union-intersection-members': 'error',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/space-infix-ops': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
@@ -251,7 +242,7 @@ module.exports = {
     'constructor-super': 'error',
     curly: ['error', 'multi-line'],
     'default-case': 'error',
-    'dot-notation': 'error',
+    'dot-notation': 'off',
     'eol-last': 'off',
     eqeqeq: ['error', 'smart'],
     'guard-for-in': 'off',

@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/lod-core",
-  "version": "4.1.4",
+  "version": "5.0.0-beta.32",
   "dependencies": {
     "tslib": "^2.3.0"
   },
@@ -8,7 +8,6 @@
     "typescript": ">=3.7.0 <6",
     "rxjs": "^7.8.0"
   },
-  "type": "commonjs",
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
   "contributors": [

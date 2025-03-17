@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
-import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
+import { PageEvent } from '@angular/material/paginator';
 import { downloadBlob, SelectOptionsProvider } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { of } from 'rxjs';

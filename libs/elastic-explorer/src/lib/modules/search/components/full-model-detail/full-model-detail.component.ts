@@ -56,7 +56,6 @@ export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnCh
   }
 
   ngOnDestroy(): void {
-    super.ngOnDestroy();
     this.detailViewService.onPageUnload();
   }
 }

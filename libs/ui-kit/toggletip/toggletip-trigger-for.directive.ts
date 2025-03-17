@@ -104,8 +104,7 @@ export class ToggletipTriggerForDirective extends OnDestroy$ implements OnDestro
     this.opened = false;
   }
 
-  override ngOnDestroy(): void {
-    super.ngOnDestroy();
+  ngOnDestroy(): void {
     this.close();
   }
 

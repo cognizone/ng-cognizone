@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { ElasticInstance } from '../../models/elastic-instance';

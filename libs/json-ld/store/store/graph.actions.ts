@@ -10,6 +10,12 @@ export class SetGraph {
   constructor(public graph: ExpandedJsonLdContainer, public graphUri: string, public status: GraphStatus = 'pristine') {}
 }
 
+export class UpdateStatus {
+  static readonly type: string = '[JsonLdStore] update status';
+
+  constructor(public graphUri: string, public status: GraphStatus) {}
+}
+
 export class RemoveGraph {
   static readonly type: string = '[JsonLdStore] remove graph';
 

@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/material-icons/tsconfig.lib.json",
-        "project": "libs/material-icons/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/material-icons/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -19,18 +18,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/material-icons/src/**/*.ts", "libs/material-icons/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/material-icons"],
       "options": {
-        "jestConfig": "libs/material-icons/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/material-icons/jest.config.ts"
       }
     }
   },

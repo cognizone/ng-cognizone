@@ -1,9 +1,9 @@
 {
   "name": "@cognizone/devtools",
-  "version": "4.1.4",
+  "version": "5.0.0-beta.32",
   "peerDependencies": {
-    "@angular/core": ">=16.0.0",
-    "@angular/platform-browser-dynamic": ">=16.0.0"
+    "@angular/core": ">=18.0.0",
+    "@angular/platform-browser-dynamic": ">=18.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

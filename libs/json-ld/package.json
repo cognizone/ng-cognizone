@@ -1,11 +1,11 @@
 {
   "name": "@cognizone/json-ld",
-  "version": "4.1.4",
+  "version": "5.0.0-beta.32",
   "optionalDependencies": {
-    "@angular/core": ">=16.0.0",
-    "@ngxs/store": "^3.8.0",
-    "@cognizone/i18n": ">=4.0.0",
-    "@cognizone/ng-core": ">=4.0.0",
+    "@angular/core": ">=18.0.0",
+    "@ngxs/store": "^18.0.0",
+    "@cognizone/i18n": ">=5.0.0-beta",
+    "@cognizone/ng-core": ">=5.0.0-beta",
     "rxjs": "^7.8.0"
   },
   "peerDependencies": {

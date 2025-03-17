@@ -1,8 +1,31 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
-@import '@angular/material/theming';
+// @import '@angular/material/theming';
 
-$custom-typography: mat.define-legacy-typography-config(
+$dark-disabled-text: $czls-font-color-disabled;
+// TODO correct color?
+$dark-dividers: black;
+$dark-secondary-text: black;
+
+$mat-light-theme-foreground: (
+  base: black,
+  divider: $dark-dividers,
+  dividers: $dark-dividers,
+  disabled: $dark-disabled-text,
+  disabled-button: rgba(black, 0.26),
+  disabled-text: $dark-disabled-text,
+  elevation: black,
+  hint-text: $dark-disabled-text,
+  secondary-text: $dark-secondary-text,
+  icon: $czls-font-color-medium,
+  icons: $czls-font-color-medium,
+  text: $czls-font-color-medium,
+  slider-min: $czls-font-color-high,
+  slider-off: rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+$custom-typography: mat.define-typography-config(
   $font-family: $czls-font-family,
 );
 @include mat.all-legacy-component-typographies($custom-typography);

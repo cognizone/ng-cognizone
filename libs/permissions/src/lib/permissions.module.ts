@@ -8,8 +8,7 @@ import { IfHasPermissionDirective } from './directives/if-has-permission.directi
 const directives = [EnabledForPermissionDirective, GetHasPermissionDirective, IfHasPermissionDirective];
 
 @NgModule({
-  declarations: [...directives],
-  imports: [CommonModule],
+  imports: [CommonModule, ...directives],
   exports: [...directives],
 })
 export class PermissionsModule {}

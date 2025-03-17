@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/json-model-graph/tsconfig.lib.json",
-        "project": "libs/json-model-graph/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/json-model-graph/ng-package.json"
       },
       "configurations": {
         "ivy": {
@@ -22,18 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/json-model-graph/src/**/*.ts", "libs/json-model-graph/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/json-model-graph"],
       "options": {
-        "jestConfig": "libs/json-model-graph/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/json-model-graph/jest.config.ts"
       }
     }
   },

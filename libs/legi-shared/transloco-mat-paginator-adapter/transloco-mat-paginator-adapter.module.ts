@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatLegacyPaginatorIntl as MatPaginatorIntl } from '@angular/material/legacy-paginator';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 
 import { TranslocoMatPaginatorIntl } from './transloco-mat-paginator-intl.service';
 

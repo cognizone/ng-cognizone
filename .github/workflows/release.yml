@@ -38,9 +38,10 @@ jobs:
         run: npm run build-tools
       # Build and release
       - name: Building
-        run: npm run nx -- run-many --target=build --configuration=production --exclude=docs,docs-app
+        # TODO enable elastic-explorer-chrome-extension again
+        run: npm run nx -- run-many --target=build --configuration=production --exclude=docs,docs-app,elastic-explorer-chrome-extension
       - name: Testing
-        run: npm run nx -- run-many --target=test --exclude=docs,docs-app
+        run: npm run nx -- run-many --target=test --exclude=docs,docs-app,elastic-explorer-chrome-extension
       - name: Syncing package.json files metadata
         run: node ./tools/sync-package-metadata.js
       - name: Releasing

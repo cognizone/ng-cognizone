@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/shacl-core",
-  "version": "4.1.4",
+  "version": "5.0.0-beta.32",
   "peerDependencies": {
     "@cognizone/json-ld-core": ">=3.0.0",
     "@cognizone/lod-core": ">=3.0.0",
@@ -11,7 +11,6 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "type": "commonjs",
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",
   "contributors": [

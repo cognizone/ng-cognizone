@@ -1,6 +1,6 @@
 import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoadingService, OnDestroy$ } from '@cognizone/ng-core';
 import { Observable, combineLatest } from 'rxjs';
@@ -59,7 +59,6 @@ export class SearchView extends OnDestroy$ implements OnInit, AfterViewInit, OnD
   }
 
   ngOnDestroy(): void {
-    super.ngOnDestroy();
     this.elasticExplorerService.onPageUnload();
   }
 

@@ -4,7 +4,7 @@ import { LabelPipe } from './pipes/label.pipe';
 import { TranslatePipe } from './pipes/translate.pipe';
 
 @NgModule({
-  declarations: [LabelPipe, TranslatePipe],
+  imports: [LabelPipe, TranslatePipe],
   exports: [LabelPipe, TranslatePipe],
 })
 export class I18nModule {}

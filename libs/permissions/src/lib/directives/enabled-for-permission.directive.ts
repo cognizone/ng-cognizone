@@ -6,6 +6,7 @@ import { PermissionsService } from '../services/permissions.service';
 
 @Directive({
   selector: '[czEnabledForPermission]',
+  standalone: true,
 })
 export class EnabledForPermissionDirective extends OnDestroy$ implements OnInit, OnChanges {
   @HostBinding()

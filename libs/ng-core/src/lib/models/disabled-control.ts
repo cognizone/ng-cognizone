@@ -6,7 +6,7 @@ export class DisabledControl extends UntypedFormControl {
     this.disable();
   }
 
-  enable(): void {
+  override enable(): void {
     return;
   }
 }

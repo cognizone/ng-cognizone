@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/ng-core/tsconfig.lib.json",
-        "project": "libs/ng-core/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/ng-core/ng-package.json"
       },
       "configurations": {
         "ivy": {
@@ -22,18 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/ng-core/src/**/*.ts", "libs/ng-core/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ng-core"],
       "options": {
-        "jestConfig": "libs/ng-core/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ng-core/jest.config.ts"
       }
     }
   },

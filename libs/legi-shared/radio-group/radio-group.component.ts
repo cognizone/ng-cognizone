@@ -99,7 +99,7 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   ngOnInit(): void {
     super.ngOnInit();
 
-    this.embeddedControl.valueChanges.pipe(this.untilDestroyed()).subscribe(value => {
+    this.embeddedControl.valueChanges.pipe(this.untilDestroyed()).subscribe(() => {
       this.searchControl.setValue(null);
     });
   }

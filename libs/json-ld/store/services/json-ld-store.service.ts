@@ -19,7 +19,7 @@ import {
 import { JsonLdService } from '@cognizone/json-ld/ng-core';
 
 import { GraphStatus } from '../models';
-import { RemoveGraph, Reset, SetGraph, UpdateNode } from '../store/graph.actions';
+import { RemoveGraph, Reset, SetGraph, UpdateNode, UpdateStatus } from '../store/graph.actions';
 import { GRAPH_STATE_TOKEN, GraphStateModel } from '../store/graph.state';
 
 @Injectable({
@@ -60,6 +60,10 @@ export class JsonLdStoreService {
       map(state => state.graphs[rootUri]?.status),
       distinctUntilChanged()
     );
+  }
+
+  setGraphStatus(rootUri: string, value: GraphStatus): void {
+    this.store.dispatch(new UpdateStatus(rootUri, value));
   }
 
   getNode<T extends JsonLdNode>(rootUri: string, nodeUri: string): Observable<T> {

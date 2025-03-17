@@ -9,8 +9,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "libs/legi-shared/tsconfig.lib.json",
-        "project": "libs/legi-shared/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/legi-shared/ng-package.json"
       },
       "configurations": {
         "ivy": {
@@ -22,18 +21,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/legi-shared/src/**/*.ts", "libs/legi-shared/src/**/*.html"]
-      },
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/legi-shared"],
       "options": {
-        "jestConfig": "libs/legi-shared/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/legi-shared/jest.config.ts"
       }
     }
   },

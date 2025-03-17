@@ -68,8 +68,7 @@ export class FileDropZoneDirective extends OnDestroy$ implements OnDestroy, OnIn
     this.initDropping();
   }
 
-  override ngOnDestroy(): void {
-    super.ngOnDestroy();
+  ngOnDestroy(): void {
     this.fileDropZoneService.unregisterDropZone(this);
   }
 

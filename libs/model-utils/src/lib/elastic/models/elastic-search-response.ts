@@ -33,6 +33,12 @@ export interface ElasticHit<T> {
   _score?: number;
   _source: T;
   sort?: number[]; // not sure if always numbers
+  highlight?: ElasticHighlight;
+}
+
+// this is new
+export interface ElasticHighlight {
+  [field: string]: string[];
 }
 
 /**
