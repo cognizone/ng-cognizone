@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 
 @Directive({
   selector: '[appMatTabRouted]',
+  standalone: false,
 })
 export class MatTabRoutedDirective extends OnDestroy$ implements AfterViewInit {
   private tabRouteParamKey = 'tab';

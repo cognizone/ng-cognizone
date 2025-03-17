@@ -3,6 +3,7 @@ import { calculateReadingTimeMinutes } from '@app/core';
 
 @Pipe({
   name: 'readingTime',
+  standalone: false,
 })
 export class ReadingTimePipe implements PipeTransform {
   transform(value?: string): string {

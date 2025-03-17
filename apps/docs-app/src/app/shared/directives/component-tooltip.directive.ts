@@ -12,6 +12,7 @@ export interface TooltipComponent {
 
 @Directive({
   selector: '[appComponentTooltip]',
+  standalone: false,
 })
 export class ComponentTooltipDirective extends AbstractTooltipDirective<unknown> {
   @Input()

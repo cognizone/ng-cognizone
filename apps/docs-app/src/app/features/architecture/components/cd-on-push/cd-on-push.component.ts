@@ -7,5 +7,6 @@ import { CdDefaultComponent } from '../cd-default/cd-default.component';
   templateUrl: './cd-on-push.component.html',
   styleUrls: ['./cd-on-push.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class CdOnPushComponent extends CdDefaultComponent {}

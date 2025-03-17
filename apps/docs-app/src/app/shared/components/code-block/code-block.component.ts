@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './code-block.component.html',
   styleUrls: ['./code-block.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class CodeBlockComponent extends OnDestroy$ {
   @Input()

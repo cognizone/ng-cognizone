@@ -14,6 +14,7 @@ import { DetailViewService } from '../../services/detail-view.service';
   templateUrl: './raw-details.component.html',
   styleUrls: ['./raw-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class RawDetailsComponent extends OnDestroy$ implements OnInit {
   textFilter?: string;

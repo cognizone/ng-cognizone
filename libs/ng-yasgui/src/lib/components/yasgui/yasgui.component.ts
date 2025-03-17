@@ -8,6 +8,7 @@ import { YasguiService } from '../../services/yasgui.service';
   selector: 'cz-yasgui',
   templateUrl: 'yasgui.component.html',
   styleUrls: ['./yasgui.component.scss'],
+  standalone: false,
 })
 export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
   @Input()

@@ -4,6 +4,7 @@ import { isJsonModel, JsonModel } from '@cognizone/json-model';
 
 @Pipe({
   name: 'jsonModelLabel',
+  standalone: false,
 })
 export class JsonModelLabelPipe implements PipeTransform {
   private lookFor: string[] = ['title', 'prefLabel', 'label', 'description'];

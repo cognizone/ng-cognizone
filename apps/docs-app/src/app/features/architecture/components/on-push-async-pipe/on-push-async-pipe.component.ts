@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './on-push-async-pipe.component.html',
   styleUrls: ['./on-push-async-pipe.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class OnPushAsyncPipeComponent {
   number$: Observable<string> = interval(1000).pipe(map(i => `${i}`));

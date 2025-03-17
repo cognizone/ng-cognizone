@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'cz-empty',
   template: ` <p>empty works!</p> `,
   styles: [],
+  standalone: false,
 })
 export class EmptyComponent {}

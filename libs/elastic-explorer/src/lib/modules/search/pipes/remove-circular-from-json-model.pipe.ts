@@ -6,6 +6,7 @@ import { produce } from 'immer';
 
 @Pipe({
   name: 'removeCircularFromJsonModel',
+  standalone: false,
 })
 export class RemoveCircularFromJsonModelPipe implements PipeTransform {
   transform(value: JsonModel): JsonModel {

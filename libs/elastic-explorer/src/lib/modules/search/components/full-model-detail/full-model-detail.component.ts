@@ -14,6 +14,7 @@ import { DetailViewService } from '../../services/detail-view.service';
   styleUrls: ['./full-model-detail.component.scss'],
   providers: [DetailViewService],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class FullModelDetailComponent extends OnDestroy$ implements OnInit, OnChanges, OnDestroy {
   @Input()

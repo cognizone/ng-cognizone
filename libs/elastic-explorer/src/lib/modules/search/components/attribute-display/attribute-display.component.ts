@@ -8,6 +8,7 @@ import { isJsonModel } from '@cognizone/json-model';
   templateUrl: './attribute-display.component.html',
   styleUrls: ['./attribute-display.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class AttributeDisplayComponent implements OnChanges {
   @Input()

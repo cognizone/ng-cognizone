@@ -14,6 +14,7 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
   templateUrl: './search.view.html',
   styleUrls: ['./search.view.scss'],
   providers: [ElasticInstanceHandlerService, ElasticExplorerService],
+  standalone: false,
 })
 export class SearchView extends OnDestroy$ implements OnInit, AfterViewInit, OnDestroy {
   loading$: Observable<boolean> = this.loadingService.loading$;

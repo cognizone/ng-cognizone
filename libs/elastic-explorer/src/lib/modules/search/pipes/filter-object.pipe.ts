@@ -3,6 +3,7 @@ import { produce } from 'immer';
 
 @Pipe({
   name: 'filterObject',
+  standalone: false,
 })
 export class FilterObjectPipe implements PipeTransform {
   private query!: string;

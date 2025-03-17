@@ -6,6 +6,7 @@ import { UrisStoreService, GraphWrapper, GraphWrapperFactory, NodeWrapper } from
 @Directive({
   selector: '[czRootUri]',
   providers: [UrisStoreService],
+  standalone: false,
 })
 export class RootUriDirective {
   @Input('czRootUri')

@@ -9,6 +9,7 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
   templateUrl: './results-raw.component.html',
   styleUrls: ['./results-raw.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class ResultsRawComponent extends OnDestroy$ implements OnInit {
   response: Nil<ElasticSearchResponse<unknown>>;

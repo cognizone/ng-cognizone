@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { DateAdapter } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -9,12 +9,10 @@ import { DEFAULT_LEGI_SHARED_OPTIONS, LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptio
 @NgModule({
   imports: [MatMomentDateModule],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      deps: [I18nService, DateAdapter, LEGI_SHARED_OPTIONS_TOKEN],
-      useFactory: dateLocaleHandlerFactory,
-      multi: true,
-    },
+    provideAppInitializer(() => {
+      const initializerFn = dateLocaleHandlerFactory(inject(I18nService), inject(DateAdapter), inject(LEGI_SHARED_OPTIONS_TOKEN));
+      return initializerFn();
+    }),
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: {

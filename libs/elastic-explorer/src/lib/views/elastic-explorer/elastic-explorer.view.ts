@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   templateUrl: './elastic-explorer.view.html',
   styleUrls: ['./elastic-explorer.view.scss'],
   providers: [LoadingService],
+  standalone: false,
 })
 export class ElasticExplorerView {
   loading$: Observable<boolean> = this.loadingService.loading$;

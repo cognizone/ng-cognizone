@@ -11,6 +11,7 @@ import { OperationsService } from '../../services/operations.service';
   selector: 'cz-operation-viewer-modal',
   templateUrl: './operation-viewer-modal.component.html',
   styleUrls: ['./operation-viewer-modal.component.scss'],
+  standalone: false,
 })
 export class OperationViewerModalComponent implements OnInit {
   allOperations?: OperationGroup[];

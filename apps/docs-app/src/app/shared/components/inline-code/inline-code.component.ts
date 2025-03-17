@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-inline-code',
   templateUrl: './inline-code.component.html',
   styleUrls: ['./inline-code.component.scss'],
+  standalone: false,
 })
 export class InlineCodeComponent {}

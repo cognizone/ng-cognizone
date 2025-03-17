@@ -28,6 +28,7 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
   styleUrls: ['./textarea.component.scss'],
   providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => TextareaComponent), multi: true }],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class TextareaComponent extends ControlComponent<string> {
   @Input()

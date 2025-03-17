@@ -4,6 +4,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
+  standalone: false,
 })
 export class ArticleComponent implements OnInit {
   textContent?: string;

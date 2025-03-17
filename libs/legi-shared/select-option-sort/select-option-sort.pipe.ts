@@ -4,6 +4,7 @@ import { getLangStringValue, Nil, SelectOption } from '@cognizone/model-utils';
 
 @Pipe({
   name: 'selectOptionsSort',
+  standalone: false,
 })
 export class SelectOptionSortPipe implements PipeTransform {
   private i18nService: I18nService = inject(I18nService);

@@ -7,6 +7,7 @@ import { ArticleComponent } from '../article/article.component';
   templateUrl: './article-title.component.html',
   styleUrls: ['./article-title.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class ArticleTitleComponent implements OnInit {
   @Input()

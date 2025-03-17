@@ -39,6 +39,7 @@ import { ControlComponent, Logger } from '@cognizone/ng-core';
     provideHasOptionsProvider(forwardRef(() => SelectComponent)),
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class SelectComponent<T> extends ControlComponent<T> implements HasOptionsProvider<T> {
   @Input()

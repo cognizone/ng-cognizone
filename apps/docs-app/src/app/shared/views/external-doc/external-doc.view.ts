@@ -7,6 +7,7 @@ import { CoreStateFacade } from '@app/core';
   selector: 'app-external-doc',
   templateUrl: './external-doc.view.html',
   styleUrls: ['./external-doc.view.scss'],
+  standalone: false,
 })
 export class ExternalDocView implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('docFrame')

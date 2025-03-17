@@ -11,6 +11,7 @@ import { DataValidationViewService } from '../../services/data-validation-view.s
   templateUrl: './data-error-table.component.html',
   styleUrls: ['./data-error-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class DataErrorTableComponent extends OnDestroy$ implements OnInit {
   columns: string[] = ['graphUri', 'nodeUri', 'propertyKey', 'value', 'errorMessage'];

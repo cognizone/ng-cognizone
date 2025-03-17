@@ -6,6 +6,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   selector: 'cz-elastic-instance-editor',
   templateUrl: './elastic-instance-editor.component.html',
   styleUrls: ['./elastic-instance-editor.component.scss'],
+  standalone: false,
 })
 export class ElasticInstanceEditorComponent implements OnInit {
   form: UntypedFormGroup = this.fb.group({

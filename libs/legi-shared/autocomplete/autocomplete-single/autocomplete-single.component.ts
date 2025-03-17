@@ -43,6 +43,7 @@ import { debounceTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs
     provideHasOptionsProvider(forwardRef(() => AutocompleteSingleComponent)),
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class AutocompleteSingleComponent<T> extends ControlComponent<T> implements HasOptionsProvider<T>, OnChanges, OnInit {
   @Input()

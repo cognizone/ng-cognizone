@@ -16,6 +16,7 @@ import { OperationGroupDirective } from './operation-group.directive';
   selector: '[czOperation]',
   exportAs: 'czOperation',
   providers: [OperationDebug],
+  standalone: false,
 })
 export class OperationDirective extends OnDestroy$ implements OnInit, OnChanges {
   @Input('czOperation')

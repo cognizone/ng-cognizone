@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-libraries-list',
   templateUrl: './libraries-list.view.html',
   styleUrls: ['./libraries-list.view.scss'],
+  standalone: false,
 })
 export class LibrariesListView {
   descriptions: LibDescription[] = [
