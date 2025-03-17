@@ -1,3 +1,57 @@
+# [5.0.0](https://github.com/cognizone/ng-cognizone/compare/v4.1.4...v5.0.0) (2025-03-17)
+
+
+### Bug Fixes
+
+* **cdk/result:** better typing for pipes ([15c8ec4](https://github.com/cognizone/ng-cognizone/commit/15c8ec457fa430c86639af08d9228ccab71d0211))
+* **cdk/result:** better typing for pipes ([171e345](https://github.com/cognizone/ng-cognizone/commit/171e345ec5c2631da67fd52cafc3bf53dff5591e))
+* **cdk:** handle nil values in unwrap pipe ([6bed027](https://github.com/cognizone/ng-cognizone/commit/6bed0277066e17c3cc099b8b0445ad0498e2acd6))
+* **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([2811de6](https://github.com/cognizone/ng-cognizone/commit/2811de69ddd922230357f3591e1034c38e862e74))
+* **json-ld:** better handling of facets in jsonld expansion ([4aecfe1](https://github.com/cognizone/ng-cognizone/commit/4aecfe14a46e31dece88f448068e77fa926c1565))
+* **json-ld:** better typing ([189d554](https://github.com/cognizone/ng-cognizone/commit/189d554dffa44c4e0768516cc131789a4527beed))
+* **json-ld:** issue with change to node in JsonLdLabelDirective ([45c1a47](https://github.com/cognizone/ng-cognizone/commit/45c1a476646056f60bac7dcdf0b3d010219092e5))
+* **lod-core:** add skipTypeTriple to Hanami namespaces ([edd260a](https://github.com/cognizone/ng-cognizone/commit/edd260a3c83c66be4d63420fe44e137fd14eaf18))
+* **model-utils:** move elastic modules around to make them available outside the package ([7c15191](https://github.com/cognizone/ng-cognizone/commit/7c151917c8eca867c233eb3775f50cab55f38d52))
+* peer deps to beta ([bbef86a](https://github.com/cognizone/ng-cognizone/commit/bbef86afcc5ca5e04e72b635f11ed8c6e7674ea9))
+* **seo:** better change detection for czMetaProperty directive ([31972c5](https://github.com/cognizone/ng-cognizone/commit/31972c5e3e6c54417c3d8444be69ce9b4eb096d9))
+* **shacl-core:** add getTargetClasses for consumers ([d9ecdcd](https://github.com/cognizone/ng-cognizone/commit/d9ecdcd7133b0ba45ab9c098b99266cb53d5a450))
+* **shacl:** correctly compute node shapes for a given class ([68112a5](https://github.com/cognizone/ng-cognizone/commit/68112a59c32e62547558cb14a43af98c6c63a833))
+
+
+### Features
+
+* add utilities for Result and signals ([11d6503](https://github.com/cognizone/ng-cognizone/commit/11d650300b13d1f844cd076d2a3d65a8baf10c0c))
+* **cdk/fetch-cache:** add option to override cache used on get call ([56cb74c](https://github.com/cognizone/ng-cognizone/commit/56cb74c45ff41f9be3a3fcdedfe827e343604aa5))
+* **cdk:** add caching utilities in /fetch-cache ([2dcf137](https://github.com/cognizone/ng-cognizone/commit/2dcf1374bd497a9a798479556d103e61b2765d8e))
+* correct breaking change to trigger 5.0.0 beta ([042309b](https://github.com/cognizone/ng-cognizone/commit/042309b4685447ad5f4d13d9a4f1a66ef5aebeb3))
+* dropping AsyncResult and related"loading" concept ([d4e60c4](https://github.com/cognizone/ng-cognizone/commit/d4e60c478bec34868200d2e62f6f5390e3117c2d))
+* **json-ld/get-value:** added getNode pipe ([0ba7350](https://github.com/cognizone/ng-cognizone/commit/0ba7350bbd3ee2a74415e609fb3fa95dedc2fb65))
+* **json-ld/ng-core:** JsonLdService expand method got a isGraphExpanding option ([c7c6953](https://github.com/cognizone/ng-cognizone/commit/c7c695323c51ad4dbf9b32158e7f6228e9835bb3))
+* **json-ld:** add FetchStore ([1c557fb](https://github.com/cognizone/ng-cognizone/commit/1c557fb1c166bdf2e496898da80225bb6fe6445e))
+* **json-ld:** can directly set status from store service ([3fc9649](https://github.com/cognizone/ng-cognizone/commit/3fc964986d14e821c2b6b34cb38a863100bfc717))
+* **json-ld:** getAllValues pipe ([43f6175](https://github.com/cognizone/ng-cognizone/commit/43f6175e749a74851063c3c8c8b883f63c14d81d))
+* **json-ld:** JsonLdService expand method got a flatten option now ([bbbad2e](https://github.com/cognizone/ng-cognizone/commit/bbbad2e44e611a9f3d67f37c7443df064e393f07))
+* **legi-cv:** add snapshot method to CvStateService ([c7ee1c6](https://github.com/cognizone/ng-cognizone/commit/c7ee1c6e4506d21a50d6b35c4ee3fd00e26a9f24))
+* **legi-shared:** add labelType as an option to prevent translate for new values ([f87f959](https://github.com/cognizone/ng-cognizone/commit/f87f959003c77e9c369a35d5922c5a26f37fa3e0))
+* **legi-shared:** adding multiple attribute to select ([f6ad193](https://github.com/cognizone/ng-cognizone/commit/f6ad193db7143ddba9512a1ef273b24a0ae9a107))
+* **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([4c073c0](https://github.com/cognizone/ng-cognizone/commit/4c073c0aa50b5022b44d08baa31d8786dcd43056))
+* make pure .ts libs export as both cjs and esm ([e5f5849](https://github.com/cognizone/ng-cognizone/commit/e5f58499f6fa47fb6e0e66ec55831d7dc316e6ce))
+* **model-utils:** add elastic query utilities and tests ([a123d08](https://github.com/cognizone/ng-cognizone/commit/a123d084f5478d5299568663d1856fd3f92efbfe))
+* **model-utils:** add elastic utilities ([ab9226a](https://github.com/cognizone/ng-cognizone/commit/ab9226a96c29d54c227fb27393a11323aecc8167))
+* **model-utils:** add Result type and utilities ([6e45259](https://github.com/cognizone/ng-cognizone/commit/6e4525998c20e6f881e511c1e72056549a99ac18))
+* **model-utils:** added pipe and result sub entries ([10dde17](https://github.com/cognizone/ng-cognizone/commit/10dde1725f80475dc13e2edad2ec01d695296eb6))
+* **ng-core:** make use of DestroyRef for the OnDestroy$ utility class ([63c817a](https://github.com/cognizone/ng-cognizone/commit/63c817a14615c12535bbf4382d5cc37175e25da4))
+* **permissions:** switch to standalone for the directives ([6c7684c](https://github.com/cognizone/ng-cognizone/commit/6c7684c2b0da6cba44c0e31e1da918dac3917114))
+* upgrade to angular 17 ([8156507](https://github.com/cognizone/ng-cognizone/commit/8156507ad5644fa6d750abfaa60de4bfb8a6325c))
+* upgrade to angular 18 / nx 19 ([fdb0299](https://github.com/cognizone/ng-cognizone/commit/fdb0299247f0929c5c6ee13a4f7f4c084cd47139))
+
+
+### BREAKING CHANGES
+
+* **ng-core:** onDestroyMixin has been removed
+* **ng-core:** OnDestroy$ does not use ngOnDestroy anymore, so extending it and calling super.ngOnDestroy() will throw an error now.
+* upgrade to angular 18
+
 # [5.0.0-beta.32](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.31...v5.0.0-beta.32) (2025-03-17)
 
 
