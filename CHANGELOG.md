@@ -1,270 +1,264 @@
 # [5.0.0-beta.31](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.30...v5.0.0-beta.31) (2025-03-11)
 
-
 ### Bug Fixes
 
-* **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([2811de6](https://github.com/cognizone/ng-cognizone/commit/2811de69ddd922230357f3591e1034c38e862e74))
-* **lod-core:** add skipTypeTriple to Hanami namespaces ([edd260a](https://github.com/cognizone/ng-cognizone/commit/edd260a3c83c66be4d63420fe44e137fd14eaf18))
+- **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([2811de6](https://github.com/cognizone/ng-cognizone/commit/2811de69ddd922230357f3591e1034c38e862e74))
+- **lod-core:** add skipTypeTriple to Hanami namespaces ([edd260a](https://github.com/cognizone/ng-cognizone/commit/edd260a3c83c66be4d63420fe44e137fd14eaf18))
 
 # [5.0.0-beta.30](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.29...v5.0.0-beta.30) (2025-02-24)
 
-
 ### Bug Fixes
 
-* **shacl:** correctly compute node shapes for a given class ([68112a5](https://github.com/cognizone/ng-cognizone/commit/68112a59c32e62547558cb14a43af98c6c63a833))
+- **shacl:** correctly compute node shapes for a given class ([68112a5](https://github.com/cognizone/ng-cognizone/commit/68112a59c32e62547558cb14a43af98c6c63a833))
 
 # [5.0.0-beta.29](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.28...v5.0.0-beta.29) (2025-02-21)
 
-
 ### Bug Fixes
 
-* **shacl-core:** add getTargetClasses for consumers ([d9ecdcd](https://github.com/cognizone/ng-cognizone/commit/d9ecdcd7133b0ba45ab9c098b99266cb53d5a450))
+- **shacl-core:** add getTargetClasses for consumers ([d9ecdcd](https://github.com/cognizone/ng-cognizone/commit/d9ecdcd7133b0ba45ab9c098b99266cb53d5a450))
 
 # [5.0.0-beta.28](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.27...v5.0.0-beta.28) (2025-01-20)
 
-
 ### Bug Fixes
 
-* **seo:** better change detection for czMetaProperty directive ([31972c5](https://github.com/cognizone/ng-cognizone/commit/31972c5e3e6c54417c3d8444be69ce9b4eb096d9))
+- **seo:** better change detection for czMetaProperty directive ([31972c5](https://github.com/cognizone/ng-cognizone/commit/31972c5e3e6c54417c3d8444be69ce9b4eb096d9))
 
 # [5.0.0-beta.27](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.26...v5.0.0-beta.27) (2024-12-27)
 
-
 ### Features
 
-* **legi-shared:** add labelType as an option to prevent translate for new values ([f87f959](https://github.com/cognizone/ng-cognizone/commit/f87f959003c77e9c369a35d5922c5a26f37fa3e0))
-* **legi-shared:** adding multiple attribute to select ([f6ad193](https://github.com/cognizone/ng-cognizone/commit/f6ad193db7143ddba9512a1ef273b24a0ae9a107))
-* **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([4c073c0](https://github.com/cognizone/ng-cognizone/commit/4c073c0aa50b5022b44d08baa31d8786dcd43056))
+- **legi-shared:** add labelType as an option to prevent translate for new values ([f87f959](https://github.com/cognizone/ng-cognizone/commit/f87f959003c77e9c369a35d5922c5a26f37fa3e0))
+- **legi-shared:** adding multiple attribute to select ([f6ad193](https://github.com/cognizone/ng-cognizone/commit/f6ad193db7143ddba9512a1ef273b24a0ae9a107))
+- **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([4c073c0](https://github.com/cognizone/ng-cognizone/commit/4c073c0aa50b5022b44d08baa31d8786dcd43056))
 
 # [5.0.0-beta.26](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.25...v5.0.0-beta.26) (2024-12-27)
 
-
 ### Features
 
-* **model-utils:** add elastic query utilities and tests ([a123d08](https://github.com/cognizone/ng-cognizone/commit/a123d084f5478d5299568663d1856fd3f92efbfe))
-* **model-utils:** added pipe and result sub entries ([10dde17](https://github.com/cognizone/ng-cognizone/commit/10dde1725f80475dc13e2edad2ec01d695296eb6))
+- **model-utils:** add elastic query utilities and tests ([a123d08](https://github.com/cognizone/ng-cognizone/commit/a123d084f5478d5299568663d1856fd3f92efbfe))
+- **model-utils:** added pipe and result sub entries ([10dde17](https://github.com/cognizone/ng-cognizone/commit/10dde1725f80475dc13e2edad2ec01d695296eb6))
 
 # [5.0.0-beta.25](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.24...v5.0.0-beta.25) (2024-12-05)
 
-
 ### Bug Fixes
 
-* **model-utils:** move elastic modules around to make them available outside the package ([7c15191](https://github.com/cognizone/ng-cognizone/commit/7c151917c8eca867c233eb3775f50cab55f38d52))
+- **model-utils:** move elastic modules around to make them available outside the package ([7c15191](https://github.com/cognizone/ng-cognizone/commit/7c151917c8eca867c233eb3775f50cab55f38d52))
 
 # [5.0.0-beta.24](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.23...v5.0.0-beta.24) (2024-12-05)
 
-
 ### Bug Fixes
 
-* **cdk:** handle nil values in unwrap pipe ([6bed027](https://github.com/cognizone/ng-cognizone/commit/6bed0277066e17c3cc099b8b0445ad0498e2acd6))
+- **cdk:** handle nil values in unwrap pipe ([6bed027](https://github.com/cognizone/ng-cognizone/commit/6bed0277066e17c3cc099b8b0445ad0498e2acd6))
 
 # [5.0.0-beta.23](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.22...v5.0.0-beta.23) (2024-12-05)
 
-
 ### Features
 
-* **model-utils:** add elastic utilities ([ab9226a](https://github.com/cognizone/ng-cognizone/commit/ab9226a96c29d54c227fb27393a11323aecc8167))
+- **model-utils:** add elastic utilities ([ab9226a](https://github.com/cognizone/ng-cognizone/commit/ab9226a96c29d54c227fb27393a11323aecc8167))
 
 # [5.0.0-beta.22](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.21...v5.0.0-beta.22) (2024-12-05)
 
-
 ### Features
 
-* dropping AsyncResult and related"loading" concept ([d4e60c4](https://github.com/cognizone/ng-cognizone/commit/d4e60c478bec34868200d2e62f6f5390e3117c2d))
+- dropping AsyncResult and related"loading" concept ([d4e60c4](https://github.com/cognizone/ng-cognizone/commit/d4e60c478bec34868200d2e62f6f5390e3117c2d))
 
 # [5.0.0-beta.21](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.20...v5.0.0-beta.21) (2024-12-02)
 
-
 ### Features
 
-* **json-ld:** can directly set status from store service ([3fc9649](https://github.com/cognizone/ng-cognizone/commit/3fc964986d14e821c2b6b34cb38a863100bfc717))
+- **json-ld:** can directly set status from store service ([3fc9649](https://github.com/cognizone/ng-cognizone/commit/3fc964986d14e821c2b6b34cb38a863100bfc717))
 
 # [5.0.0-beta.20](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.19...v5.0.0-beta.20) (2024-11-27)
 
-
 ### Features
 
-* **permissions:** switch to standalone for the directives ([6c7684c](https://github.com/cognizone/ng-cognizone/commit/6c7684c2b0da6cba44c0e31e1da918dac3917114))
+- **permissions:** switch to standalone for the directives ([6c7684c](https://github.com/cognizone/ng-cognizone/commit/6c7684c2b0da6cba44c0e31e1da918dac3917114))
 
 # [5.0.0-beta.19](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.18...v5.0.0-beta.19) (2024-11-14)
 
-
 ### Features
 
-* **cdk/fetch-cache:** add option to override cache used on get call ([56cb74c](https://github.com/cognizone/ng-cognizone/commit/56cb74c45ff41f9be3a3fcdedfe827e343604aa5))
+- **cdk/fetch-cache:** add option to override cache used on get call ([56cb74c](https://github.com/cognizone/ng-cognizone/commit/56cb74c45ff41f9be3a3fcdedfe827e343604aa5))
 
 # [5.0.0-beta.18](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.17...v5.0.0-beta.18) (2024-11-13)
 
-
 ### Features
 
-* **cdk:** add caching utilities in /fetch-cache ([2dcf137](https://github.com/cognizone/ng-cognizone/commit/2dcf1374bd497a9a798479556d103e61b2765d8e))
+- **cdk:** add caching utilities in /fetch-cache ([2dcf137](https://github.com/cognizone/ng-cognizone/commit/2dcf1374bd497a9a798479556d103e61b2765d8e))
 
 # [5.0.0-beta.17](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.16...v5.0.0-beta.17) (2024-10-30)
 
-
 ### Bug Fixes
 
-* **json-ld:** better handling of facets in jsonld expansion ([4aecfe1](https://github.com/cognizone/ng-cognizone/commit/4aecfe14a46e31dece88f448068e77fa926c1565))
+- **json-ld:** better handling of facets in jsonld expansion ([4aecfe1](https://github.com/cognizone/ng-cognizone/commit/4aecfe14a46e31dece88f448068e77fa926c1565))
 
 # [5.0.0-beta.16](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.15...v5.0.0-beta.16) (2024-10-18)
 
-
 ### Features
 
-* **json-ld/ng-core:** JsonLdService expand method got a isGraphExpanding option ([c7c6953](https://github.com/cognizone/ng-cognizone/commit/c7c695323c51ad4dbf9b32158e7f6228e9835bb3))
+- **json-ld/ng-core:** JsonLdService expand method got a isGraphExpanding option ([c7c6953](https://github.com/cognizone/ng-cognizone/commit/c7c695323c51ad4dbf9b32158e7f6228e9835bb3))
 
 # [5.0.0-beta.15](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.14...v5.0.0-beta.15) (2024-10-04)
 
-
 ### Features
 
-* **json-ld/get-value:** added getNode pipe ([0ba7350](https://github.com/cognizone/ng-cognizone/commit/0ba7350bbd3ee2a74415e609fb3fa95dedc2fb65))
+- **json-ld/get-value:** added getNode pipe ([0ba7350](https://github.com/cognizone/ng-cognizone/commit/0ba7350bbd3ee2a74415e609fb3fa95dedc2fb65))
 
 # [5.0.0-beta.14](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.13...v5.0.0-beta.14) (2024-10-03)
 
-
 ### Bug Fixes
 
-* **cdk/result:** better typing for pipes ([15c8ec4](https://github.com/cognizone/ng-cognizone/commit/15c8ec457fa430c86639af08d9228ccab71d0211))
+- **cdk/result:** better typing for pipes ([15c8ec4](https://github.com/cognizone/ng-cognizone/commit/15c8ec457fa430c86639af08d9228ccab71d0211))
 
 # [5.0.0-beta.13](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.12...v5.0.0-beta.13) (2024-10-03)
 
-
 ### Features
 
-* **json-ld:** getAllValues pipe ([43f6175](https://github.com/cognizone/ng-cognizone/commit/43f6175e749a74851063c3c8c8b883f63c14d81d))
+- **json-ld:** getAllValues pipe ([43f6175](https://github.com/cognizone/ng-cognizone/commit/43f6175e749a74851063c3c8c8b883f63c14d81d))
 
 # [5.0.0-beta.12](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.11...v5.0.0-beta.12) (2024-10-03)
 
-
 ### Bug Fixes
 
-* **json-ld:** better typing ([189d554](https://github.com/cognizone/ng-cognizone/commit/189d554dffa44c4e0768516cc131789a4527beed))
+- **json-ld:** better typing ([189d554](https://github.com/cognizone/ng-cognizone/commit/189d554dffa44c4e0768516cc131789a4527beed))
 
 # [5.0.0-beta.11](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.10...v5.0.0-beta.11) (2024-10-02)
 
-
 ### Bug Fixes
 
-* **cdk/result:** better typing for pipes ([171e345](https://github.com/cognizone/ng-cognizone/commit/171e345ec5c2631da67fd52cafc3bf53dff5591e))
+- **cdk/result:** better typing for pipes ([171e345](https://github.com/cognizone/ng-cognizone/commit/171e345ec5c2631da67fd52cafc3bf53dff5591e))
 
 # [5.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.9...v5.0.0-beta.10) (2024-10-02)
 
-
 ### Features
 
-* add utilities for Result and signals ([11d6503](https://github.com/cognizone/ng-cognizone/commit/11d650300b13d1f844cd076d2a3d65a8baf10c0c))
+- add utilities for Result and signals ([11d6503](https://github.com/cognizone/ng-cognizone/commit/11d650300b13d1f844cd076d2a3d65a8baf10c0c))
 
 # [5.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.8...v5.0.0-beta.9) (2024-10-02)
 
-
 ### Features
 
-* **json-ld:** add FetchStore ([1c557fb](https://github.com/cognizone/ng-cognizone/commit/1c557fb1c166bdf2e496898da80225bb6fe6445e))
+- **json-ld:** add FetchStore ([1c557fb](https://github.com/cognizone/ng-cognizone/commit/1c557fb1c166bdf2e496898da80225bb6fe6445e))
 
 # [5.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.7...v5.0.0-beta.8) (2024-09-16)
 
-
 ### Features
 
-* **json-ld:** JsonLdService expand method got a flatten option now ([bbbad2e](https://github.com/cognizone/ng-cognizone/commit/bbbad2e44e611a9f3d67f37c7443df064e393f07))
+- **json-ld:** JsonLdService expand method got a flatten option now ([bbbad2e](https://github.com/cognizone/ng-cognizone/commit/bbbad2e44e611a9f3d67f37c7443df064e393f07))
 
 # [5.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.6...v5.0.0-beta.7) (2024-09-10)
 
-
 ### Features
 
-* **ng-core:** make use of DestroyRef for the OnDestroy$ utility class ([63c817a](https://github.com/cognizone/ng-cognizone/commit/63c817a14615c12535bbf4382d5cc37175e25da4))
-
+- **ng-core:** make use of DestroyRef for the OnDestroy$ utility class ([63c817a](https://github.com/cognizone/ng-cognizone/commit/63c817a14615c12535bbf4382d5cc37175e25da4))
 
 ### BREAKING CHANGES
 
-* **ng-core:** onDestroyMixin has been removed
-* **ng-core:** OnDestroy$ does not use ngOnDestroy anymore, so extending it and calling super.ngOnDestroy() will throw an error now.
+- **ng-core:** onDestroyMixin has been removed
+- **ng-core:** OnDestroy$ does not use ngOnDestroy anymore, so extending it and calling super.ngOnDestroy() will throw an error now.
 
 # [5.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.5...v5.0.0-beta.6) (2024-09-04)
 
-
 ### Features
 
-* make pure .ts libs export as both cjs and esm ([e5f5849](https://github.com/cognizone/ng-cognizone/commit/e5f58499f6fa47fb6e0e66ec55831d7dc316e6ce))
+- make pure .ts libs export as both cjs and esm ([e5f5849](https://github.com/cognizone/ng-cognizone/commit/e5f58499f6fa47fb6e0e66ec55831d7dc316e6ce))
 
 # [5.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.4...v5.0.0-beta.5) (2024-08-27)
 
-
 ### Features
 
-* **model-utils:** add Result type and utilities ([6e45259](https://github.com/cognizone/ng-cognizone/commit/6e4525998c20e6f881e511c1e72056549a99ac18))
+- **model-utils:** add Result type and utilities ([6e45259](https://github.com/cognizone/ng-cognizone/commit/6e4525998c20e6f881e511c1e72056549a99ac18))
 
 # [5.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.3...v5.0.0-beta.4) (2024-08-22)
 
-
 ### Bug Fixes
 
-* peer deps to beta ([bbef86a](https://github.com/cognizone/ng-cognizone/commit/bbef86afcc5ca5e04e72b635f11ed8c6e7674ea9))
+- peer deps to beta ([bbef86a](https://github.com/cognizone/ng-cognizone/commit/bbef86afcc5ca5e04e72b635f11ed8c6e7674ea9))
 
 # [5.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.2...v5.0.0-beta.3) (2024-08-20)
 
-
 ### Bug Fixes
 
-* **json-ld:** issue with change to node in JsonLdLabelDirective ([45c1a47](https://github.com/cognizone/ng-cognizone/commit/45c1a476646056f60bac7dcdf0b3d010219092e5))
+- **json-ld:** issue with change to node in JsonLdLabelDirective ([45c1a47](https://github.com/cognizone/ng-cognizone/commit/45c1a476646056f60bac7dcdf0b3d010219092e5))
 
 # [5.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2024-08-19)
 
-
 ### Features
 
-* **legi-cv:** add snapshot method to CvStateService ([c7ee1c6](https://github.com/cognizone/ng-cognizone/commit/c7ee1c6e4506d21a50d6b35c4ee3fd00e26a9f24))
+- **legi-cv:** add snapshot method to CvStateService ([c7ee1c6](https://github.com/cognizone/ng-cognizone/commit/c7ee1c6e4506d21a50d6b35c4ee3fd00e26a9f24))
 
 # [5.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v4.1.0-beta.1...v5.0.0-beta.1) (2024-08-09)
 
-
 ### Features
 
-* correct breaking change to trigger 5.0.0 beta ([042309b](https://github.com/cognizone/ng-cognizone/commit/042309b4685447ad5f4d13d9a4f1a66ef5aebeb3))
-
+- correct breaking change to trigger 5.0.0 beta ([042309b](https://github.com/cognizone/ng-cognizone/commit/042309b4685447ad5f4d13d9a4f1a66ef5aebeb3))
 
 ### BREAKING CHANGES
 
-* upgrade to angular 18
+- upgrade to angular 18
 
 # [4.1.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v4.0.0...v4.1.0-beta.1) (2024-08-09)
 
-
 ### Features
 
-* upgrade to angular 17 ([8156507](https://github.com/cognizone/ng-cognizone/commit/8156507ad5644fa6d750abfaa60de4bfb8a6325c))
-* upgrade to angular 18 / nx 19 ([fdb0299](https://github.com/cognizone/ng-cognizone/commit/fdb0299247f0929c5c6ee13a4f7f4c084cd47139))
+- upgrade to angular 17 ([8156507](https://github.com/cognizone/ng-cognizone/commit/8156507ad5644fa6d750abfaa60de4bfb8a6325c))
+- upgrade to angular 18 / nx 19 ([fdb0299](https://github.com/cognizone/ng-cognizone/commit/fdb0299247f0929c5c6ee13a4f7f4c084cd47139))
 
-# [4.0.0](https://github.com/cognizone/ng-cognizone/compare/v3.14.2...v4.0.0) (2024-08-09)
-
+## [4.1.4](https://github.com/cognizone/ng-cognizone/compare/v4.1.3...v4.1.4) (2025-03-11)
 
 ### Bug Fixes
 
-* **18n:** add token injection for other libraries ([403c5b5](https://github.com/cognizone/ng-cognizone/commit/403c5b519aa2112dbc972d3674142faf1b12db3d))
-* **eslint-config:** remove member ordering ([a125b0a](https://github.com/cognizone/ng-cognizone/commit/a125b0a7a28f2da31d46ca3f1219ccd0e1db3682))
-* **html-diff:** add missing <sup> as possible specialClosingTag ([61267ed](https://github.com/cognizone/ng-cognizone/commit/61267edf928d9f772a7d49603b3d21049e57e565))
-* **i18n:** remove I18N_SERVICE token ([a9d7079](https://github.com/cognizone/ng-cognizone/commit/a9d70791c578d3a238fadba02e7811cdc01253d2))
-* **json-ld:** directly use transloco for now ([60139dc](https://github.com/cognizone/ng-cognizone/commit/60139dcccad48415aa2c8b32bf988a9c597b689c))
-* too much imports ([c1eba12](https://github.com/cognizone/ng-cognizone/commit/c1eba12bea4181d0081329babe15c3d79b6d6a73))
-* upgrade node and npm ([87e6267](https://github.com/cognizone/ng-cognizone/commit/87e626766e20123387efe58667a3e83836f080a0))
+- **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([9945e6b](https://github.com/cognizone/ng-cognizone/commit/9945e6be01b4c14ebd1442259570a28652c14334))
+- **lod-core:** add skipTypeTriple to Hanami namespaces ([905af26](https://github.com/cognizone/ng-cognizone/commit/905af2663aa65fb6c2e2bff614eda5d0718075fb))
 
+## [4.1.3](https://github.com/cognizone/ng-cognizone/compare/v4.1.2...v4.1.3) (2025-02-24)
+
+### Bug Fixes
+
+- **shacl:** correctly compute node shapes for a given class ([6ad516a](https://github.com/cognizone/ng-cognizone/commit/6ad516a95f85dfb88751bdd0ee433e3897ab5318))
+
+## [4.1.2](https://github.com/cognizone/ng-cognizone/compare/v4.1.1...v4.1.2) (2025-02-21)
+
+### Bug Fixes
+
+- **shacl-core:** add getTargetClasses for consumers ([4d8109e](https://github.com/cognizone/ng-cognizone/commit/4d8109e863f994d61e6aa429427ba5cd9ab0fe4d))
+
+## [4.1.1](https://github.com/cognizone/ng-cognizone/compare/v4.1.0...v4.1.1) (2024-08-20)
+
+### Bug Fixes
+
+- **json-ld:** issue with change to node in JsonLdLabelDirective ([bce8733](https://github.com/cognizone/ng-cognizone/commit/bce87333ea27bb3c71c38660fc833faae3501e2a))
+
+# [4.1.0](https://github.com/cognizone/ng-cognizone/compare/v4.0.0...v4.1.0) (2024-08-19)
 
 ### Features
 
-* **i18n:** add setActiveLang method ([bda3d02](https://github.com/cognizone/ng-cognizone/commit/bda3d02649d982ef9ea0fbbd756f2ef9187084dc))
-* **json-ld:** add JsonLdLabelDirective ([8a2bd42](https://github.com/cognizone/ng-cognizone/commit/8a2bd42a40fec897e04476aef889eed2c56c9dfa))
-* **ng-core:** use Unsubscribable instead of Subscription for OnDestroy$ ([accf4f7](https://github.com/cognizone/ng-cognizone/commit/accf4f756ca3004bda09d9097321bb49f3ab266e))
-* upgrade to angular 15 ([77fa6a5](https://github.com/cognizone/ng-cognizone/commit/77fa6a59da1cfb17bdd5a2e886ef239cfa4ba115))
-* upgrade to Angular 16 ([43ed66b](https://github.com/cognizone/ng-cognizone/commit/43ed66b995fdbb8d324406b96325ab0e0fa261cb))
+- **legi-cv:** add snapshot method to CvStateService ([8283411](https://github.com/cognizone/ng-cognizone/commit/8283411fe38d7a048fdf3e681962f95fe15e299b))
 
+# [4.0.0](https://github.com/cognizone/ng-cognizone/compare/v3.14.2...v4.0.0) (2024-08-09)
+
+### Bug Fixes
+
+- **18n:** add token injection for other libraries ([403c5b5](https://github.com/cognizone/ng-cognizone/commit/403c5b519aa2112dbc972d3674142faf1b12db3d))
+- **eslint-config:** remove member ordering ([a125b0a](https://github.com/cognizone/ng-cognizone/commit/a125b0a7a28f2da31d46ca3f1219ccd0e1db3682))
+- **html-diff:** add missing <sup> as possible specialClosingTag ([61267ed](https://github.com/cognizone/ng-cognizone/commit/61267edf928d9f772a7d49603b3d21049e57e565))
+- **i18n:** remove I18N_SERVICE token ([a9d7079](https://github.com/cognizone/ng-cognizone/commit/a9d70791c578d3a238fadba02e7811cdc01253d2))
+- **json-ld:** directly use transloco for now ([60139dc](https://github.com/cognizone/ng-cognizone/commit/60139dcccad48415aa2c8b32bf988a9c597b689c))
+- too much imports ([c1eba12](https://github.com/cognizone/ng-cognizone/commit/c1eba12bea4181d0081329babe15c3d79b6d6a73))
+- upgrade node and npm ([87e6267](https://github.com/cognizone/ng-cognizone/commit/87e626766e20123387efe58667a3e83836f080a0))
+
+### Features
+
+- **i18n:** add setActiveLang method ([bda3d02](https://github.com/cognizone/ng-cognizone/commit/bda3d02649d982ef9ea0fbbd756f2ef9187084dc))
+- **json-ld:** add JsonLdLabelDirective ([8a2bd42](https://github.com/cognizone/ng-cognizone/commit/8a2bd42a40fec897e04476aef889eed2c56c9dfa))
+- **ng-core:** use Unsubscribable instead of Subscription for OnDestroy$ ([accf4f7](https://github.com/cognizone/ng-cognizone/commit/accf4f756ca3004bda09d9097321bb49f3ab266e))
+- upgrade to angular 15 ([77fa6a5](https://github.com/cognizone/ng-cognizone/commit/77fa6a59da1cfb17bdd5a2e886ef239cfa4ba115))
+- upgrade to Angular 16 ([43ed66b](https://github.com/cognizone/ng-cognizone/commit/43ed66b995fdbb8d324406b96325ab0e0fa261cb))
 
 ### BREAKING CHANGES
 
-* upgrade to Angular 16
-* upgrade to angular 15
+- upgrade to Angular 16
+- upgrade to angular 15
 
 # [4.0.0-rc.9](https://github.com/cognizone/ng-cognizone/compare/v4.0.0-rc.8...v4.0.0-rc.9) (2024-08-01)
 
