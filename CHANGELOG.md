@@ -1,3 +1,19 @@
+# [5.0.0-beta.32](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.31...v5.0.0-beta.32) (2025-03-17)
+
+
+### Bug Fixes
+
+* **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([9945e6b](https://github.com/cognizone/ng-cognizone/commit/9945e6be01b4c14ebd1442259570a28652c14334))
+* **json-ld:** issue with change to node in JsonLdLabelDirective ([bce8733](https://github.com/cognizone/ng-cognizone/commit/bce87333ea27bb3c71c38660fc833faae3501e2a))
+* **lod-core:** add skipTypeTriple to Hanami namespaces ([905af26](https://github.com/cognizone/ng-cognizone/commit/905af2663aa65fb6c2e2bff614eda5d0718075fb))
+* **shacl-core:** add getTargetClasses for consumers ([4d8109e](https://github.com/cognizone/ng-cognizone/commit/4d8109e863f994d61e6aa429427ba5cd9ab0fe4d))
+* **shacl:** correctly compute node shapes for a given class ([6ad516a](https://github.com/cognizone/ng-cognizone/commit/6ad516a95f85dfb88751bdd0ee433e3897ab5318))
+
+
+### Features
+
+* **legi-cv:** add snapshot method to CvStateService ([8283411](https://github.com/cognizone/ng-cognizone/commit/8283411fe38d7a048fdf3e681962f95fe15e299b))
+
 # [5.0.0-beta.31](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.30...v5.0.0-beta.31) (2025-03-11)
 
 ### Bug Fixes
