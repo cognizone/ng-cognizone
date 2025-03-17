@@ -44,6 +44,7 @@ import { map, startWith, switchMap } from 'rxjs/operators';
     provideHasOptionsProvider(forwardRef(() => RadioGroupComponent)),
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOptionsProvider<T>, OnInit {
   @Input()

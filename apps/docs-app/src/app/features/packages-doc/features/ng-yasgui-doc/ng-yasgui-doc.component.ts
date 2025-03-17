@@ -8,6 +8,7 @@ import { ApiDescription } from '@app/shared';
   selector: 'app-ng-yasgui-doc',
   templateUrl: './ng-yasgui-doc.component.html',
   styleUrls: ['./ng-yasgui-doc.component.scss'],
+  standalone: false,
 })
 export class NgYasguiDocComponent implements OnInit {
   displayYasgui = false;

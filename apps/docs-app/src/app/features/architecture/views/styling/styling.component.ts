@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-styling',
   templateUrl: './styling.component.html',
   styleUrls: ['./styling.component.scss'],
+  standalone: false,
 })
 export class StylingComponent {
   lastUpdate: Date = new Date('2019-11-20');

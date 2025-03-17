@@ -7,6 +7,7 @@ import { interval } from 'rxjs';
   templateUrl: './on-push-cd-ref.component.html',
   styleUrls: ['./on-push-cd-ref.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class OnPushCdRefComponent extends OnDestroy$ implements OnInit {
   num!: number;

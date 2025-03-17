@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-env-apis-and-flags',
   templateUrl: './env-apis-and-flags.component.html',
   styleUrls: ['./env-apis-and-flags.component.scss'],
+  standalone: false,
 })
 export class EnvApisAndFlagsComponent {
   lastUpdate: Date = new Date('2019-11-09');

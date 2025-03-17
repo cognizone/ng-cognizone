@@ -16,6 +16,7 @@ import { getSortedObject } from '../../utils/get-sorted-object';
   templateUrl: './json-model-flat-graph-details.component.html',
   styleUrls: ['./json-model-flat-graph-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class JsonModelFlatGraphDetailsComponent extends OnDestroy$ implements OnInit {
   jsonModelFlatGraph!: JsonModelFlatGraph;

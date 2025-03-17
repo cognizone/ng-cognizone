@@ -31,8 +31,8 @@ import { LabelComponent } from '@cognizone/legi-shared/label';
   selector: 'cz-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
-
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class InputComponent extends ControlComponent<string> implements OnInit {
   @Input()

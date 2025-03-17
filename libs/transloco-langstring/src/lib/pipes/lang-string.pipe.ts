@@ -4,6 +4,7 @@ import { TranslocoService } from '@jsverse/transloco';
 
 @Pipe({
   name: 'czLangString',
+  standalone: false,
 })
 export class LangStringPipe implements PipeTransform {
   constructor(private transloco: TranslocoService) {}

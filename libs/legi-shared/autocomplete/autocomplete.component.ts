@@ -40,6 +40,7 @@ let deprecatedWarned = false;
     provideHasOptionsProvider(forwardRef(() => AutocompleteComponent)),
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class AutocompleteComponent<T> extends ControlComponent<T | T[]> implements HasOptionsProvider<T>, OnChanges, OnInit {
   @Input()

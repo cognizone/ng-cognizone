@@ -25,6 +25,7 @@ import { ProtocolService } from '@czee-ce/core';
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class CopyLinkButtonComponent {
   constructor(private protocolService: ProtocolService) {}

@@ -12,6 +12,7 @@ import { DataValidationViewService } from '../../services/data-validation-view.s
   templateUrl: './data-validation.view.html',
   styleUrls: ['./data-validation.view.scss'],
   providers: [ElasticInstanceHandlerService, DataValidationViewService],
+  standalone: false,
 })
 export class DataValidationView extends OnDestroy$ implements OnInit, OnDestroy {
   errors$: Observable<DataError[]> = this.dataValidationViewService.errors$;

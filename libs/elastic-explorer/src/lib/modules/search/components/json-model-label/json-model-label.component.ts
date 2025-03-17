@@ -6,6 +6,7 @@ import { JsonModel } from '@cognizone/json-model';
   templateUrl: './json-model-label.component.html',
   styleUrls: ['./json-model-label.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class JsonModelLabelComponent<T extends JsonModel> {
   @Input()

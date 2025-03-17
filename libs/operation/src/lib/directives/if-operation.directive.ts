@@ -25,6 +25,7 @@ import { OperationGroupDirective } from './operation-group.directive';
 @Directive({
   selector: '[czIfOperation]',
   providers: [OperationDebug],
+  standalone: false,
 })
 export class IfOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czIfOperation')

@@ -10,6 +10,7 @@ import { ElasticInstanceEditorComponent } from '../elastic-instance-editor/elast
   selector: 'cz-elastic-instance-management',
   templateUrl: './elastic-instance-management.component.html',
   styleUrls: ['./elastic-instance-management.component.scss'],
+  standalone: false,
 })
 export class ElasticInstanceManagementComponent extends OnDestroy$ implements OnInit {
   values?: ElasticInstance[];

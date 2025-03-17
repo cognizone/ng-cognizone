@@ -49,6 +49,7 @@ import { startWith, switchMap } from 'rxjs/operators';
     provideHasOptionsProvider(forwardRef(() => CheckboxGroupComponent)),
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements HasOptionsProvider<T>, OnInit, OnChanges {
   @Input()

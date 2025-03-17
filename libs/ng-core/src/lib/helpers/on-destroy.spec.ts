@@ -6,7 +6,10 @@ import { OnDestroy$ } from './on-destroy';
 const classSpy = jest.fn();
 const compositionSpy = jest.fn();
 
-@Component({ template: '' })
+@Component({
+  template: '',
+  standalone: false,
+})
 class TestChildComponent extends OnDestroy$ {
   constructor() {
     super();
@@ -14,7 +17,11 @@ class TestChildComponent extends OnDestroy$ {
   }
 }
 
-@Component({ template: '', providers: [OnDestroy$] })
+@Component({
+  template: '',
+  providers: [OnDestroy$],
+  standalone: false,
+})
 class TestCompositionComponent extends OnDestroy$ implements OnInit {
   private onDestroy = inject(OnDestroy$);
 

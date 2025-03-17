@@ -20,6 +20,7 @@ import { LEGI_SHARED_OPTIONS_TOKEN, LegiSharedOptions } from '@cognizone/legi-sh
  */
 @Directive({
   selector: '[czLoadingButton]',
+  standalone: false,
 })
 export class LoadingButtonDirective implements OnInit, OnChanges, OnDestroy {
   @Input('czLoadingButton')

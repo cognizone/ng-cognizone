@@ -9,6 +9,7 @@ import { ProtocolService } from './core';
     <cz-copy-link-button></cz-copy-link-button>
   `,
   styles: [],
+  standalone: false,
 })
 export class AppComponent {
   constructor(protocolService: ProtocolService) {

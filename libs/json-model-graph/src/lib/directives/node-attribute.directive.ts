@@ -7,6 +7,7 @@ import { UrisStoreService } from '../services';
 
 @Directive({
   selector: '[czNodeAttribute]',
+  standalone: false,
 })
 export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
   @Input('czNodeAttributeAttributeKey')

@@ -8,6 +8,7 @@ import { NgCorePagesService } from '../../services/ng-core-pages.service';
   selector: 'app-on-destroy-mixin-doc',
   templateUrl: './on-destroy-mixin-doc.component.html',
   styleUrls: ['./on-destroy-mixin-doc.component.scss'],
+  standalone: false,
 })
 export class OnDestroyMixinDocComponent implements OnInit, OnDestroy {
   code1 = `

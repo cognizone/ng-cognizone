@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-global-architecture',
   templateUrl: './global-architecture.component.html',
   styleUrls: ['./global-architecture.component.scss'],
+  standalone: false,
 })
 export class GlobalArchitectureComponent {
   lastUpdate: Date = new Date('2019-12-06');

@@ -6,16 +6,17 @@ import { identity, Observable } from 'rxjs';
 import { filter, first, map, switchMap, toArray } from 'rxjs/operators';
 
 import { ElasticExplorerService } from '../../services/elastic-explorer.service';
-import { ElasticQueryEditorComponent } from "../elastic-query-editor/elastic-query-editor.component";
+import { ElasticQueryEditorComponent } from '../elastic-query-editor/elastic-query-editor.component';
 
 @Component({
   selector: 'cz-filters-form',
   templateUrl: './filters-form.component.html',
   styleUrls: ['./filters-form.component.scss'],
+  standalone: false,
 })
 export class FiltersFormComponent extends OnDestroy$ implements OnInit {
   @ViewChild(ElasticQueryEditorComponent, { static: false })
-  elasticQueryEditor?: ElasticQueryEditorComponent
+  elasticQueryEditor?: ElasticQueryEditorComponent;
   form!: UntypedFormGroup;
 
   typeOptionsProvider!: SelectOptionsProvider<string>;
@@ -45,9 +46,9 @@ export class FiltersFormComponent extends OnDestroy$ implements OnInit {
     if (!editor) return;
     this.showFullScreen = !this.showFullScreen;
     if (this.showFullScreen) {
-      editor.layout({ width: screen.width, height: 500 })
+      editor.layout({ width: screen.width, height: 500 });
     } else {
-      editor.layout({ width: 336, height: 500 })
+      editor.layout({ width: 336, height: 500 });
     }
   }
 

@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
 
@@ -21,12 +21,10 @@ export class NgApplicationProfileModule {
         createMicroValidatorProvider(CardinalityValidatorService),
         ApHelper,
         ApStore,
-        {
-          provide: APP_INITIALIZER,
-          multi: true,
-          useFactory: apServiceInitializerFactory,
-          deps: [ApService],
-        },
+        provideAppInitializer(async () => {
+          const initializerFn = apServiceInitializerFactory(inject(ApService));
+          return initializerFn();
+        }),
         {
           provide: DATA_MODEL_DEFINITION_HELPER_TOKEN,
           useExisting: ApHelper,

@@ -6,6 +6,7 @@ import { UrisStoreService } from '../services';
 
 @Directive({
   selector: '[czIfAttributeInAp]',
+  standalone: false,
 })
 export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
   @Input('czIfAttributeInAp')

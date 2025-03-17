@@ -17,6 +17,7 @@ import { getSortedObject } from '../../utils/get-sorted-object';
   templateUrl: './ap-details.component.html',
   styleUrls: ['./ap-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class ApDetailsComponent extends OnDestroy$ implements OnInit {
   ap!: ApplicationProfile;

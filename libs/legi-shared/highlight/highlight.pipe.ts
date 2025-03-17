@@ -6,6 +6,7 @@ import { HighlightMatch } from './highlight-match.service';
 
 @Pipe({
   name: 'highlight',
+  standalone: false,
 })
 export class HighlightPipe implements PipeTransform {
   constructor(private highlightMatch: HighlightMatch) {}
