@@ -1,9 +1,9 @@
 {
   "name": "@cognizone/i18n-transloco",
-  "version": "6.0.0-beta.1",
+  "version": "6.0.0-beta.2",
   "peerDependencies": {
-    "@cognizone/i18n": ">=6.0.0-beta.1",
-    "@cognizone/model-utils": ">=6.0.0-beta.1",
+    "@cognizone/i18n": ">=3.0.0",
+    "@cognizone/model-utils": ">=3.0.0",
     "@jsverse/transloco": ">=7.0.0",
     "@jsverse/transloco-locale": ">=7.0.0"
   },
