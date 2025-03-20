@@ -1,3 +1,15 @@
+# [6.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v5.0.0...v6.0.0-beta.1) (2025-03-20)
+
+
+### Features
+
+* upgrade to angular 19 ([65022b5](https://github.com/cognizone/ng-cognizone/commit/65022b5cc9ec8576a659876535eebded97e665da))
+
+
+### BREAKING CHANGES
+
+* upgrade to angular 19
+
 # [5.0.0](https://github.com/cognizone/ng-cognizone/compare/v4.1.4...v5.0.0) (2025-03-17)
 
 
