@@ -2,10 +2,10 @@
   "name": "@cognizone/ng-application-profile",
   "version": "6.0.0-beta.1",
   "peerDependencies": {
-    "@cognizone/application-profile": ">=3.0.0",
-    "@cognizone/json-model": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
+    "@cognizone/application-profile": ">=6.0.0-beta.1",
+    "@cognizone/json-model": ">=6.0.0-beta.1",
+    "@cognizone/model-utils": ">=6.0.0-beta.1",
+    "@cognizone/ng-core": ">=6.0.0-beta.1",
     "lodash-es": "^4.17.21"
   },
   "dependencies": {
