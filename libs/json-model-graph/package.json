@@ -1,13 +1,13 @@
 {
   "name": "@cognizone/json-model-graph",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "peerDependencies": {
-    "@cognizone/devtools": ">=3.0.0",
-    "@cognizone/json-model": ">=3.0.0",
-    "@cognizone/legi-cv": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
-    "@cognizone/ng-application-profile": ">=3.0.0",
+    "@cognizone/devtools": ">=5.0.0 <6",
+    "@cognizone/json-model": ">=5.0.0 <6",
+    "@cognizone/legi-cv": ">=5.0.0 <6",
+    "@cognizone/model-utils": ">=5.0.0 <6",
+    "@cognizone/ng-core": ">=5.0.0 <6",
+    "@cognizone/ng-application-profile": ">=5.0.0 <6",
     "immer": "^9.0.0 || ^10.0.0"
   },
   "dependencies": {

@@ -1,11 +1,11 @@
 {
   "name": "@cognizone/user-action",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "peerDependencies": {
-    "@cognizone/elastic": ">=3.0.0",
-    "@cognizone/legi-shared": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
+    "@cognizone/elastic": ">=5.0.0 <6",
+    "@cognizone/legi-shared": ">=5.0.0 <6",
+    "@cognizone/model-utils": ">=5.0.0 <6",
+    "@cognizone/ng-core": ">=5.0.0 <6",
     "@jsverse/transloco": "^7.0.0",
     "@jsverse/transloco-locale": "^7.0.0"
   },

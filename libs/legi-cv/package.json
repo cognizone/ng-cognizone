@@ -1,11 +1,11 @@
 {
   "name": "@cognizone/legi-cv",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "peerDependencies": {
-    "@cognizone/i18n": ">=3.0.0",
-    "@cognizone/json-model": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
+    "@cognizone/i18n": ">=5.0.0 <6",
+    "@cognizone/json-model": ">=5.0.0 <6",
+    "@cognizone/model-utils": ">=5.0.0 <6",
+    "@cognizone/ng-core": ">=5.0.0 <6",
     "@ngxs/store": "^18.0.0",
     "lodash-es": "^4.17.21"
   },
