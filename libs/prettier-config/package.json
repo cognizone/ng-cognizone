@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/prettier-config",
-  "version": "4.1.4",
+  "version": "4.2.0",
   "peerDependencies": {
     "prettier": "^2.0.0 || ^3.0.0"
   },

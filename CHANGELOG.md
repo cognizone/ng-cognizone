@@ -1,3 +1,13 @@
+# [4.2.0](https://github.com/cognizone/ng-cognizone/compare/v4.1.4...v4.2.0) (2025-03-21)
+
+
+### Features
+
+* **legi-shared:** add labelType as an option to prevent translate for new values ([25d8da3](https://github.com/cognizone/ng-cognizone/commit/25d8da3921ba62f8703997ea2270fef771829de3))
+* **legi-shared:** adding multiple attribute to select ([9d5517c](https://github.com/cognizone/ng-cognizone/commit/9d5517cb4bdd01ea7f6f4175c0fac4f93b7f004d))
+* **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([bfff19f](https://github.com/cognizone/ng-cognizone/commit/bfff19f7344ebf6f3d9c964574f87c92634dd665))
+* **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([bcb2893](https://github.com/cognizone/ng-cognizone/commit/bcb2893779b650e14c33106cf6dff3a54197f7cb))
+
 ## [4.1.4](https://github.com/cognizone/ng-cognizone/compare/v4.1.3...v4.1.4) (2025-03-11)
 
 
