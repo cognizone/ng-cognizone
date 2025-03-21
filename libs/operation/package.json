@@ -1,12 +1,12 @@
 {
   "name": "@cognizone/operation",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "peerDependencies": {
-    "@cognizone/devtools": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
-    "@angular/material": ">=16.0.0",
-    "@angular/router": ">=16.0.0",
+    "@cognizone/devtools": ">=4.0.0 <5",
+    "@cognizone/model-utils": ">=4.0.0 <5",
+    "@cognizone/ng-core": ">=4.0.0 <5",
+    "@angular/material": ">=16.0.0 <18",
+    "@angular/router": ">=16.0.0 <18",
     "ngx-json-viewer": "^3.2.1",
     "@ngxs/store": "^3.8.0"
   },

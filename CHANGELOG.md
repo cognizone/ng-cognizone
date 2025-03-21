@@ -1,3 +1,10 @@
+## [4.2.1](https://github.com/cognizone/ng-cognizone/compare/v4.2.0...v4.2.1) (2025-03-21)
+
+
+### Bug Fixes
+
+* update sync for peer deps ([207fca4](https://github.com/cognizone/ng-cognizone/commit/207fca45b9dee9ca2568d842a0e94c46add57332))
+
 # [4.2.0](https://github.com/cognizone/ng-cognizone/compare/v4.1.4...v4.2.0) (2025-03-21)
 
 
