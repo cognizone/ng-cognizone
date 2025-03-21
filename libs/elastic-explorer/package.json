@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/elastic-explorer",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "peerDependencies": {
     "@cognizone/application-profile": ">=4.0.0 <5",
     "@cognizone/json-model": ">=4.0.0 <5",
