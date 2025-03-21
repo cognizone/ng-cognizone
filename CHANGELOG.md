@@ -1,3 +1,10 @@
+# [6.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.2...v6.0.0-beta.3) (2025-03-21)
+
+
+### Features
+
+* **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([9923e9a](https://github.com/cognizone/ng-cognizone/commit/9923e9a82419203a51e9b500511b0e171f2694b1))
+
 # [6.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.1...v6.0.0-beta.2) (2025-03-20)
 
 
