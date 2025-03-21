@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/ng-yasgui",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "peerDependencies": {
     "@angular/core": ">=18.0.0 <19",
     "@angular/platform-browser-dynamic": ">=18.0.0 <19",

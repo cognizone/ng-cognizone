@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/legi-cv",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "peerDependencies": {
     "@cognizone/i18n": ">=5.0.0 <6",
     "@cognizone/json-model": ">=5.0.0 <6",

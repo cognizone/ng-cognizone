@@ -1,3 +1,10 @@
+## [5.1.2](https://github.com/cognizone/ng-cognizone/compare/v5.1.1...v5.1.2) (2025-03-21)
+
+
+### Bug Fixes
+
+* peer deps part 2 ([87afa36](https://github.com/cognizone/ng-cognizone/commit/87afa36cf204d00301046d8a19da3133d021d9c9))
+
 ## [5.1.1](https://github.com/cognizone/ng-cognizone/compare/v5.1.0...v5.1.1) (2025-03-21)
 
 
