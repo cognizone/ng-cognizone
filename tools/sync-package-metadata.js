@@ -11,7 +11,9 @@ function readJson(path) {
 function writeJson(path, content) {
   writeFileSync(path, JSON.stringify(content, null, 2));
 }
-const cognizonePeerVersion = '>=3.0.0';
+const cognizonePeerVersion = '>=4.0.0 <5';
+const angularVersion = '>=16.0.0 <18';
+
 const rootPackage = readJson(join(__dirname, '../package.json'));
 
 packageFiles.forEach(packageFile => {
@@ -30,6 +32,9 @@ packageFiles.forEach(packageFile => {
   Object.keys(package.peerDependencies ?? {}).forEach(key => {
     if (key.startsWith('@cognizone/')) {
       package.peerDependencies[key] = cognizonePeerVersion;
+    }
+    if (key.startsWith('@angular/')) {
+      package.peerDependencies[key] = angularVersion;
     }
   });
 
