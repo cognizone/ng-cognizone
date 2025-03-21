@@ -1,3 +1,10 @@
+# [6.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.3...v6.0.0-beta.4) (2025-03-21)
+
+
+### Bug Fixes
+
+* peer deps ([7235e98](https://github.com/cognizone/ng-cognizone/commit/7235e982b89881ae21f4794ebcf01e047fa5d4e1))
+
 # [6.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.2...v6.0.0-beta.3) (2025-03-21)
 
 

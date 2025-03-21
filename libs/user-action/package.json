@@ -1,11 +1,11 @@
 {
   "name": "@cognizone/user-action",
-  "version": "6.0.0-beta.3",
+  "version": "6.0.0-beta.4",
   "peerDependencies": {
-    "@cognizone/elastic": ">=3.0.0",
-    "@cognizone/legi-shared": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
-    "@cognizone/ng-core": ">=3.0.0",
+    "@cognizone/elastic": ">=6.0.0-beta.1 <7",
+    "@cognizone/legi-shared": ">=6.0.0-beta.1 <7",
+    "@cognizone/model-utils": ">=6.0.0-beta.1 <7",
+    "@cognizone/ng-core": ">=6.0.0-beta.1 <7",
     "@jsverse/transloco": "^7.0.0",
     "@jsverse/transloco-locale": "^7.0.0"
   },
