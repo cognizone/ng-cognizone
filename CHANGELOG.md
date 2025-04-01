@@ -1,3 +1,10 @@
+## [4.2.3](https://github.com/cognizone/ng-cognizone/compare/v4.2.2...v4.2.3) (2025-04-01)
+
+
+### Bug Fixes
+
+* **shacl:** avoid duplicates in properties paths ([2271ae2](https://github.com/cognizone/ng-cognizone/commit/2271ae2916404367a78467bf8de91fed6f5badbb))
+
 ## [4.2.2](https://github.com/cognizone/ng-cognizone/compare/v4.2.1...v4.2.2) (2025-03-21)
 
 

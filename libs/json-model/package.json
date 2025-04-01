@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-model",
-  "version": "4.2.2",
+  "version": "4.2.3",
   "peerDependencies": {
     "@cognizone/lod": ">=4.0.0 <5",
     "@cognizone/model-utils": ">=4.0.0 <5",
