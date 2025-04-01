@@ -11,7 +11,7 @@ function readJson(path) {
 function writeJson(path, content) {
   writeFileSync(path, JSON.stringify(content, null, 2));
 }
-const cognizonePeerVersion = '>=3.0.0';
+const cognizonePeerVersion = '>=3.0.0 <4.0.0';
 const rootPackage = readJson(join(__dirname, '../package.json'));
 
 packageFiles.forEach(packageFile => {
