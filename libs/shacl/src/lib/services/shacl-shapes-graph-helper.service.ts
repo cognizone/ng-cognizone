@@ -114,7 +114,7 @@ export class ShaclShapesGraphHelper {
   getPropertiesPathsOfNodeShape(nodeShape: ShNodeShape): string[] {
     return this.getAllPropertyShapeInNodeShape(nodeShape).reduce((acc, propertyShapeUri) => {
       const { path } = getPathDescriptor(propertyShapeUri, this.shapesGraph);
-      if (path) acc.push(path);
+      if (path && !acc.includes(path)) acc.push(path);
       return acc;
     }, [] as string[]);
   }
