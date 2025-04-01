@@ -1,3 +1,9 @@
+## [3.17.2](https://github.com/cognizone/ng-cognizone/compare/v3.17.1...v3.17.2) (2025-04-01)
+
+### Bug Fixes
+
+- peer deps ([89642d9](https://github.com/cognizone/ng-cognizone/commit/89642d93415d937a65ff095f59b8c7ba78ddf3b1))
+
 ## [3.17.1](https://github.com/cognizone/ng-cognizone/compare/v3.17.0...v3.17.1) (2025-04-01)
 
 ### Bug Fixes

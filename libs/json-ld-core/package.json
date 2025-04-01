@@ -1,13 +1,13 @@
 {
   "name": "@cognizone/json-ld-core",
-  "version": "3.17.1",
+  "version": "3.17.2",
   "type": "commonjs",
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@cognizone/lod-core": ">=3.0.0",
-    "@cognizone/model-utils": ">=3.0.0",
+    "@cognizone/lod-core": ">=3.0.0 <4.0.0",
+    "@cognizone/model-utils": ">=3.0.0 <4.0.0",
     "immer": "^9.0.0 || ^10.0.0",
     "jsonld": "^8.0.0"
   },
