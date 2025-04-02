@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/devtools",
-  "version": "5.1.2",
+  "version": "5.1.3",
   "peerDependencies": {
     "@angular/core": ">=18.0.0 <19",
     "@angular/platform-browser-dynamic": ">=18.0.0 <19"
