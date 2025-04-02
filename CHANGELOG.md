@@ -1,3 +1,10 @@
+# [6.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.4...v6.0.0-beta.5) (2025-04-02)
+
+
+### Bug Fixes
+
+* **shacl:** avoid duplicates in properties paths ([dcbbcff](https://github.com/cognizone/ng-cognizone/commit/dcbbcff13bfcab8e4b7e61a6fdb3bd4bfa2ecfb9))
+
 # [6.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.3...v6.0.0-beta.4) (2025-03-21)
 
 
