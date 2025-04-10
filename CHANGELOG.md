@@ -1,3 +1,9 @@
+## [3.17.3](https://github.com/cognizone/ng-cognizone/compare/v3.17.2...v3.17.3) (2025-04-10)
+
+### Bug Fixes
+
+- **shacl:** ensure uniqueness of property paths ([31895d2](https://github.com/cognizone/ng-cognizone/commit/31895d27d571dcec9a95fcbf89cfb29778b91516))
+
 ## [3.17.2](https://github.com/cognizone/ng-cognizone/compare/v3.17.1...v3.17.2) (2025-04-01)
 
 ### Bug Fixes
