@@ -89,7 +89,10 @@ export class ShaclDataGraphHelper {
 
   getPropertiesPaths(nodeUri: string): string[] {
     return this.getNodeShapes(nodeUri).reduce((acc, nodeShape) => {
-      acc.push(...this.shaclShapesGraphHelper.getPropertiesPathsOfNodeShape(nodeShape));
+      const paths = this.shaclShapesGraphHelper.getPropertiesPathsOfNodeShape(nodeShape);
+      paths.forEach(path => {
+        if (!acc.includes(path)) acc.push(path);
+      });
       return acc;
     }, [] as string[]);
   }
