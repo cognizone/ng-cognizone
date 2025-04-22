@@ -93,12 +93,21 @@ export class ShaclShapesGraphHelper {
     return (
       !!getAllValues(propertyShape?.[SH.class], this.shapesGraph).length ||
       !!propertyShape?.[HANAMI.selection] ||
+      this.hasNodeEditor(propertyShape) ||
       getConcreteNodeKindsOfPropertyShape(propertyShape, this.shapesGraph).includes(SH.BlankNode) ||
       !!this.getConsolidatedPropertyShapesSortedBySpecificity(propertyShape['@id']).some(subProperty => {
         if (subProperty['@id'] === propertyShape['@id']) return false;
         return this.isPropertyReference(subProperty);
       })
     );
+  }
+
+  private hasNodeEditor(propertyShape: ShPropertyShape): boolean {
+    const editor = getOneNode(propertyShape[HANAMI.editor], this.shapesGraph);
+    if (editor && isOfType<HanamiNodeEditor>(editor, HANAMI.NodeEditor)) {
+      return true;
+    }
+    return false;
   }
 
   isSingle(nodeShapeUri: string, propertyPath: string): boolean {
