@@ -1,3 +1,10 @@
+## [4.2.5](https://github.com/cognizone/ng-cognizone/compare/v4.2.4...v4.2.5) (2025-04-23)
+
+
+### Bug Fixes
+
+* **shacl:** correctly compute if a property is a reference ([9a356fc](https://github.com/cognizone/ng-cognizone/commit/9a356fcdb19b7887886c78c534702b864f10d40c))
+
 ## [4.2.4](https://github.com/cognizone/ng-cognizone/compare/v4.2.3...v4.2.4) (2025-04-10)
 
 
