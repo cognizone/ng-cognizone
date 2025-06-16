@@ -4,6 +4,7 @@ import {
   getAllNodes,
   getAllValues,
   getAllValuesGen,
+  getOneBoolValue,
   getOneIntValue,
   getOneNode,
   getOneValue,
@@ -392,7 +393,7 @@ export class ShaclShapesGraphHelper {
   private isActive(shapeUri: string): boolean {
     const shape = this.shapesGraph.nodes[shapeUri] as ShShape;
     if (!shape) return false;
-    if (getOneValue<boolean>(shape[SH.deactivated])) return false;
+    if (getOneBoolValue(shape[SH.deactivated])) return false;
     let purposes = getAllValues<HanamiPurpose>(shape[HANAMI.purpose], this.shapesGraph);
     if (!purposes.length) {
       purposes = [HANAMI.EditionPurpose, HANAMI.ValidationPurpose];

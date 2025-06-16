@@ -1,5 +1,6 @@
 export * from './get-all-nodes';
 export * from './get-all-values';
+export * from './get-one-bool-value';
 export * from './get-one-int-value';
 export * from './get-one-literal-value';
 export * from './get-one-node';
