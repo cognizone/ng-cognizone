@@ -1,3 +1,10 @@
+# [6.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.7...v6.0.0-beta.8) (2025-06-16)
+
+
+### Bug Fixes
+
+* correctly get deactivated as a boolean ([050b28f](https://github.com/cognizone/ng-cognizone/commit/050b28f188dfa1fb3510c8ad00260a4cf24a1787))
+
 # [6.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.6...v6.0.0-beta.7) (2025-04-23)
 
 
