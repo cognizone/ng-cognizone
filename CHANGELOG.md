@@ -1,3 +1,10 @@
+## [4.2.6](https://github.com/cognizone/ng-cognizone/compare/v4.2.5...v4.2.6) (2025-06-16)
+
+
+### Bug Fixes
+
+* correctly get deactivated as a boolean ([8f5acb0](https://github.com/cognizone/ng-cognizone/commit/8f5acb00c54da27b5ccc6d054a71f996661d933b))
+
 ## [4.2.5](https://github.com/cognizone/ng-cognizone/compare/v4.2.4...v4.2.5) (2025-04-23)
 
 
