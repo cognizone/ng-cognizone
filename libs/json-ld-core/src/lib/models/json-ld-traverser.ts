@@ -1,4 +1,4 @@
-import { Many, manyToArray, Primitive } from '@cognizone/model-utils';
+import { Many, manyToArray, Memoize, Primitive } from '@cognizone/model-utils';
 import { getAllRawValues, getAllValues } from '../utils';
 import { AnyJsonLdNode, isJsonLdValueReference, JsonLdNode, JsonLdValue, JsonLdValueLiteral } from './json-ld';
 import { ExpandedJsonLdContainer } from './json-ld-container';
@@ -14,12 +14,14 @@ export class JsonLdTraverser {
 export class JsonLdNodeTraverser {
   constructor(private readonly options: TraverserOptions, public readonly uri: string) {}
 
+  @Memoize
   getNodes(predicateUri: string): JsonLdNodeTraverser[] {
     const node = (this.options.jsonLd.nodes[this.uri] ?? { '@id': this.uri, '@type': [] }) as AnyJsonLdNode;
     const values = node[predicateUri] ?? [];
     return getAllValues(values, this.options.jsonLd, 'reference').map(uri => new JsonLdNodeTraverser(this.options, uri as string));
   }
 
+  @Memoize
   getNode(predicateUri: Many<string>): JsonLdNodeTraverser | undefined {
     const uris = manyToArray(predicateUri);
     if (!uris.length) return undefined;
@@ -32,6 +34,7 @@ export class JsonLdNodeTraverser {
     return node;
   }
 
+  @Memoize
   getAttributes<T extends Primitive>(predicateUri: Many<string>): T[] {
     return this.getRawAttributes(predicateUri).map(value => {
       if (isJsonLdValueReference(value)) {
@@ -41,10 +44,12 @@ export class JsonLdNodeTraverser {
     });
   }
 
+  @Memoize
   getAttribute<T extends Primitive>(predicateUri: Many<string>): T | undefined {
     return this.getAttributes(predicateUri)[0] as T | undefined;
   }
 
+  @Memoize
   getRawAttributes<T extends JsonLdValue>(predicateUri: Many<string>): T[] {
     const uris = manyToArray(predicateUri);
     if (!uris.length) return [];
@@ -61,6 +66,7 @@ export class JsonLdNodeTraverser {
     return getAllRawValues(values, this.options.jsonLd) as T[];
   }
 
+  @Memoize
   getRawAttribute<T extends JsonLdValue>(predicateUri: Many<string>): T | undefined {
     return this.getRawAttributes(predicateUri)[0] as T | undefined;
   }
