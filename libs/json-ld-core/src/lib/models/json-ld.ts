@@ -78,10 +78,6 @@ export interface RdfListElement extends JsonLdNode {
   [RDF.rest]?: JsonLdValue[];
 }
 
-export interface AnyJsonLdNode {
-  [key: string]: JsonLdValue[] | undefined;
-}
-
 export function isRdfListElement(value: unknown): value is RdfListElement {
   return typeof value === 'object' && value !== null && '@id' in value && RDF.first in value;
 }
@@ -93,3 +89,7 @@ export function isBlankNodeUri(id: string): boolean {
 export function isBlankNode(node: unknown): node is JsonLdValueReference {
   return isJsonLdValueReference(node) && isBlankNodeUri(node['@id']);
 }
+
+export type AnyJsonLdNode<K extends string = string> = JsonLdNode & {
+  [key in K]?: JsonLdValue[];
+};

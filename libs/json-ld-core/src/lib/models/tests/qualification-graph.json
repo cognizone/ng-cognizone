@@ -1,0 +1,483 @@
+{
+  "nodes": {
+    "_:b0": {
+      "@id": "_:b0",
+      "@type": ["http://data.europa.eu/snb/model/elm/Accreditation"],
+      "http://data.europa.eu/snb/model/elm/accreditingAgent": [
+        {
+          "@id": "_:b1"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/expiryDate": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "@value": "2025-12-31T00:00:00Z"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/organisation": [
+        {
+          "@id": "_:b3"
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@language": "en",
+          "@value": "Accreditation Title"
+        }
+      ],
+      "http://purl.org/dc/terms/type": [
+        {
+          "@id": "https://publications.europa.eu/resource/authority/snb/accreditation/003293d2ce"
+        }
+      ],
+      "http://www.w3.org/ns/adms#identifier": [
+        {
+          "@id": "_:b5"
+        }
+      ]
+    },
+    "_:b1": {
+      "@id": "_:b1",
+      "@type": ["http://data.europa.eu/snb/model/elm/Organisation"],
+      "http://data.europa.eu/snb/model/elm/location": [
+        {
+          "@id": "_:b2"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Accrediting Agent 1"
+        }
+      ]
+    },
+    "_:b10": {
+      "@id": "_:b10",
+      "@type": ["http://data.europa.eu/snb/model/elm/Organisation"],
+      "http://data.europa.eu/snb/model/elm/location": [
+        {
+          "@id": "_:b11"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Awarding Body 2"
+        }
+      ]
+    },
+    "_:b11": {
+      "@id": "_:b11",
+      "@type": ["http://purl.org/dc/terms/Location"],
+      "http://data.europa.eu/snb/model/elm/spatialCode": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/country/ZAF"
+        }
+      ]
+    },
+    "_:b12": {
+      "@id": "_:b12",
+      "@type": ["http://data.europa.eu/snb/model/elm/Identifier"],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "AO12345"
+        }
+      ]
+    },
+    "_:b13": {
+      "@id": "_:b13",
+      "@type": ["http://data.europa.eu/snb/model/elm/CreditPoint"],
+      "http://data.europa.eu/snb/model/elm/framework": [
+        {
+          "@id": "https://data.acqf-qcp.africa/model/creditpoint-framework/resource/framework123"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/point": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#double",
+          "@value": "30"
+        }
+      ]
+    },
+    "_:b14": {
+      "@id": "_:b14",
+      "@type": ["http://data.europa.eu/snb/model/elm/LearningEntitlementSpecification"],
+      "http://data.europa.eu/snb/model/elm/limitNationalOccupation": [
+        {
+          "@id": "http://data.europa.eu/esco/occupation/occupation123"
+        }
+      ],
+      "http://www.w3.org/ns/adms#identifier": [
+        {
+          "@id": "_:b15"
+        }
+      ]
+    },
+    "_:b15": {
+      "@id": "_:b15",
+      "@type": ["http://data.europa.eu/snb/model/elm/Identifier"],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "E12345"
+        }
+      ]
+    },
+    "_:b16": {
+      "@id": "_:b16",
+      "@type": ["http://data.europa.eu/snb/model/elm/LearningOutcome"],
+      "http://data.europa.eu/snb/model/elm/additionalNote": [
+        {
+          "@id": "_:b17"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/relatedSkill": [
+        {
+          "@id": "http://data.europa.eu/esco/skill/skill123"
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@language": "en",
+          "@value": "Postgraduate Diploma in Labour Dispute Resolution"
+        }
+      ]
+    },
+    "_:b17": {
+      "@id": "_:b17",
+      "@type": ["http://data.europa.eu/snb/model/elm/Note"],
+      "http://data.europa.eu/snb/model/elm/noteLiteral": [
+        {
+          "@language": "en",
+          "@value": "Learning outcome note."
+        }
+      ]
+    },
+    "_:b18": {
+      "@id": "_:b18",
+      "@type": ["http://data.europa.eu/snb/model/elm/WebResource"],
+      "http://data.europa.eu/snb/model/elm/contentUrl": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "http://someurl.org"
+        }
+      ]
+    },
+    "_:b19": {
+      "@id": "_:b19",
+      "@type": ["http://data.europa.eu/snb/model/elm/WebResource"],
+      "http://data.europa.eu/snb/model/elm/contentUrl": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "http://anotherurl.org"
+        }
+      ]
+    },
+    "_:b2": {
+      "@id": "_:b2",
+      "@type": ["http://purl.org/dc/terms/Location"],
+      "http://data.europa.eu/snb/model/elm/spatialCode": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/country/ZAF"
+        }
+      ]
+    },
+    "_:b20": {
+      "@id": "_:b20",
+      "@type": ["http://data.europa.eu/snb/model/elm/Organisation"],
+      "http://data.europa.eu/snb/model/elm/location": [
+        {
+          "@id": "_:b21"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Some agent 3"
+        }
+      ]
+    },
+    "_:b21": {
+      "@id": "_:b21",
+      "@type": ["http://purl.org/dc/terms/Location"],
+      "http://data.europa.eu/snb/model/elm/spatialCode": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/country/ZAR"
+        }
+      ]
+    },
+    "_:b22": {
+      "@id": "_:b22",
+      "@type": ["http://data.europa.eu/snb/model/elm/Identifier"],
+      "http://data.europa.eu/snb/model/elm/schemeName": [
+        {
+          "@value": "Qualification Scheme"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "Q12345"
+        }
+      ],
+      "http://www.w3.org/ns/adms#schemeAgency": [
+        {
+          "@language": "en",
+          "@value": "Agency XYZ"
+        }
+      ]
+    },
+    "_:b23": {
+      "@id": "_:b23",
+      "@type": ["http://data.europa.eu/snb/model/elm/WebResource"],
+      "http://data.europa.eu/snb/model/elm/contentUrl": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "http://homepageurl.org"
+        }
+      ]
+    },
+    "_:b24": {
+      "@id": "_:b24",
+      "http://data.europa.eu/snb/model/elm/defaultLanguage": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/providedBy": [
+        {
+          "@id": "_:b25"
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@language": "en",
+          "@value": "Some learning opportunity"
+        }
+      ]
+    },
+    "_:b25": {
+      "@id": "_:b25",
+      "http://data.europa.eu/snb/model/elm/location": [
+        {
+          "@id": "_:b26"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Some agent 3"
+        }
+      ]
+    },
+    "_:b26": {
+      "@id": "_:b26",
+      "@type": ["http://purl.org/dc/terms/Location"],
+      "http://data.europa.eu/snb/model/elm/spatialCode": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/country/ZAR"
+        }
+      ]
+    },
+    "_:b3": {
+      "@id": "_:b3",
+      "@type": ["http://data.europa.eu/snb/model/elm/Organisation"],
+      "http://data.europa.eu/snb/model/elm/location": [
+        {
+          "@id": "_:b4"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Accredited Organisation 1"
+        },
+        {
+          "@language": "fr",
+          "@value": "Organisation Accréditée 1"
+        }
+      ]
+    },
+    "_:b4": {
+      "@id": "_:b4",
+      "@type": ["http://purl.org/dc/terms/Location"],
+      "http://data.europa.eu/snb/model/elm/spatialCode": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/country/ZAR"
+        }
+      ]
+    },
+    "_:b5": {
+      "@id": "_:b5",
+      "@type": ["http://data.europa.eu/snb/model/elm/Identifier"],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "ACC12345"
+        }
+      ]
+    },
+    "_:b6": {
+      "@id": "_:b6",
+      "@type": ["http://data.europa.eu/snb/model/elm/AwardingOpportunity"],
+      "http://data.europa.eu/snb/model/elm/additionalNote": [
+        {
+          "@id": "_:b7"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/awardingBody": [
+        {
+          "@id": "_:b8"
+        },
+        {
+          "@id": "_:b10"
+        }
+      ],
+      "http://www.w3.org/ns/adms#identifier": [
+        {
+          "@id": "_:b12"
+        }
+      ]
+    },
+    "_:b7": {
+      "@id": "_:b7",
+      "@type": ["http://data.europa.eu/snb/model/elm/Note"],
+      "http://data.europa.eu/snb/model/elm/noteLiteral": [
+        {
+          "@language": "en",
+          "@value": "Awarding information note."
+        }
+      ]
+    },
+    "_:b8": {
+      "@id": "_:b8",
+      "@type": ["http://data.europa.eu/snb/model/elm/Organisation"],
+      "http://data.europa.eu/snb/model/elm/location": [
+        {
+          "@id": "_:b9"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Awarding Body 1"
+        }
+      ]
+    },
+    "_:b9": {
+      "@id": "_:b9",
+      "@type": ["http://purl.org/dc/terms/Location"],
+      "http://data.europa.eu/snb/model/elm/spatialCode": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/country/ZAR"
+        }
+      ]
+    },
+    "https://data.acqf-qcp.africa/resource/3c9c2982-8457-4aad-91e5-cd095573db1b/version/2025-06-20T11:59:05.7966055": {
+      "@id": "https://data.acqf-qcp.africa/resource/3c9c2982-8457-4aad-91e5-cd095573db1b/version/2025-06-20T11:59:05.7966055",
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "@value": "2025-06-20T12:51:23.3599399"
+        }
+      ],
+      "https://data.acqf-qcp.africa/model/elm-extension/hasPublicationStatus": [
+        {
+          "@id": "https://data.acqf-qcp.africa/model/internal/publication-statuses/resource/obsoleted"
+        }
+      ]
+    },
+    "https://data.acqf-qcp.africa/resource/3c9c2982-8457-4aad-91e5-cd095573db1b/version/2025-06-20T12:51:23.3599399": {
+      "@id": "https://data.acqf-qcp.africa/resource/3c9c2982-8457-4aad-91e5-cd095573db1b/version/2025-06-20T12:51:23.3599399",
+      "@type": ["http://data.europa.eu/snb/model/elm/Qualification"],
+      "http://data.europa.eu/snb/model/elm/accreditation": [
+        {
+          "@id": "_:b0"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/awardingOpportunity": [
+        {
+          "@id": "_:b6"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/creditPoint": [
+        {
+          "@id": "_:b13"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/educationLevel": [
+        {
+          "@id": "https://data.acqf-qcp.africa/model/acqf-levels/resource/level6"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/entitlesTo": [
+        {
+          "@id": "_:b14"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/learningOutcome": [
+        {
+          "@id": "_:b16"
+        }
+      ],
+      "http://data.europa.eu/snb/model/elm/supplementaryDocument": [
+        {
+          "@id": "_:b18"
+        },
+        {
+          "@id": "_:b19"
+        }
+      ],
+      "http://purl.org/dc/terms/isVersionOf": [
+        {
+          "@id": "https://data.acqf-qcp.africa/resource/3c9c2982-8457-4aad-91e5-cd095573db1b"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "@value": "2025-06-20T12:51:23.3599399"
+        }
+      ],
+      "http://purl.org/dc/terms/publisher": [
+        {
+          "@id": "_:b20"
+        }
+      ],
+      "http://purl.org/dc/terms/replaces": [
+        {
+          "@id": "https://data.acqf-qcp.africa/resource/3c9c2982-8457-4aad-91e5-cd095573db1b/version/2025-06-20T11:59:05.7966055"
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@language": "en",
+          "@value": "Postgraduate Diploma in Labour Dispute Resolution"
+        }
+      ],
+      "http://www.w3.org/ns/adms#identifier": [
+        {
+          "@id": "_:b22"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "_:b23"
+        }
+      ],
+      "https://data.acqf-qcp.africa/model/elm-extension/hasCountry": [
+        {
+          "@value": "http://publications.europa.eu/resource/authority/country/GLP"
+        }
+      ],
+      "https://data.acqf-qcp.africa/model/elm-extension/hasPublicationStatus": [
+        {
+          "@id": "https://data.acqf-qcp.africa/model/internal/publication-statuses/resource/released"
+        }
+      ],
+      "https://data.acqf-qcp.africa/model/elm-extension/learningOpportunity": [
+        {
+          "@id": "_:b24"
+        }
+      ]
+    }
+  },
+  "rootUri": "https://data.acqf-qcp.africa/resource/3c9c2982-8457-4aad-91e5-cd095573db1b/version/2025-06-20T12:51:23.3599399"
+}
