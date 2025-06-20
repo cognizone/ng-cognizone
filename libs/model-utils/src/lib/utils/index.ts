@@ -13,6 +13,7 @@ export * from './is-empty';
 export * from './is-select-option';
 export * from './many-to-array';
 export * from './many-to-one';
+export * from './memoize';
 export * from './not-nil';
 export * from './select-option-match-query';
 export * from './select-options-providers-merger';
