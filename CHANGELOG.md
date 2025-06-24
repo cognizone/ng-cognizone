@@ -1,3 +1,10 @@
+# [6.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.8...v6.0.0-beta.9) (2025-06-24)
+
+
+### Features
+
+* **json-ld-core:** add json-ld-traverser ([07a67b6](https://github.com/cognizone/ng-cognizone/commit/07a67b6781a31391fe49d6d399906d61ea6e5691))
+
 # [6.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.7...v6.0.0-beta.8) (2025-06-16)
 
 
