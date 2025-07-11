@@ -2,14 +2,14 @@
   "name": "@cognizone/shacl",
   "version": "6.0.0-beta.10",
   "optionalDependencies": {
-    "@angular/common": ">=19.0.0",
-    "@angular/core": ">=19.0.0",
-    "@cognizone/ng-core": ">=6.0.0-beta.1"
+    "@angular/common": ">=19.0.0 <20",
+    "@angular/core": ">=19.0.0 <20",
+    "@cognizone/ng-core": ">=6.0.0 <7"
   },
   "peerDependencies": {
-    "@cognizone/json-ld": ">=6.0.0-beta.1 <7",
-    "@cognizone/json-ld-core": ">=6.0.0-beta.1 <7",
-    "@cognizone/shacl-core": ">=6.0.0-beta.1 <7"
+    "@cognizone/json-ld": ">=6.0.0 <7",
+    "@cognizone/json-ld-core": ">=6.0.0 <7",
+    "@cognizone/shacl-core": ">=6.0.0 <7"
   },
   "dependencies": {
     "tslib": "^2.3.0"
