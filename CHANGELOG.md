@@ -1,3 +1,20 @@
+# [6.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.9...v6.0.0-beta.10) (2025-07-11)
+
+
+### Bug Fixes
+
+* correctly get deactivated as a boolean ([abe30fd](https://github.com/cognizone/ng-cognizone/commit/abe30fd6ee469daa679ae22405e563edd3872acc))
+* fix peer deps ([c893de7](https://github.com/cognizone/ng-cognizone/commit/c893de7fe349639d4c66bc73dc25099b3c3a44de))
+* peer deps part 2 ([87afa36](https://github.com/cognizone/ng-cognizone/commit/87afa36cf204d00301046d8a19da3133d021d9c9))
+* **shacl:** avoid duplicates in properties paths ([d494391](https://github.com/cognizone/ng-cognizone/commit/d49439183872f7fc0a7fedb0b8a5bb375bb16216))
+* **shacl:** correctly compute if a property is a reference ([cccddd8](https://github.com/cognizone/ng-cognizone/commit/cccddd86f8b60074d3d058a3314ca32a014f5b11))
+* **shacl:** ensure uniqueness of property paths ([e8364a5](https://github.com/cognizone/ng-cognizone/commit/e8364a534bfed3f0e51ac5b8990b7737a9985b80))
+
+
+### Features
+
+* **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([a0601f1](https://github.com/cognizone/ng-cognizone/commit/a0601f1e9c78cf2e4ae1607f54b504d221cd5c96))
+
 # [6.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.8...v6.0.0-beta.9) (2025-06-24)
 
 ### Features
