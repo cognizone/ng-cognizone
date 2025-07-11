@@ -15,6 +15,7 @@ import { ElasticInstanceManagementComponent } from '../elastic-instance-manageme
   templateUrl: './elastic-picker.component.html',
   styleUrls: ['./elastic-picker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class ElasticPickerComponent extends OnDestroy$ implements OnInit {
   form!: UntypedFormGroup;

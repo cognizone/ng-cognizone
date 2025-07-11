@@ -1,13 +1,13 @@
 {
   "name": "@cognizone/elastic-explorer",
-  "version": "5.1.6",
+  "version": "6.0.0-beta.10",
   "peerDependencies": {
-    "@cognizone/application-profile": ">=5.0.0 <6",
-    "@cognizone/json-model": ">=5.0.0 <6",
-    "@cognizone/i18n": ">=5.0.0 <6",
-    "@cognizone/legi-shared": ">=5.0.0 <6",
-    "@cognizone/model-utils": ">=5.0.0 <6",
-    "@cognizone/ng-core": ">=5.0.0 <6"
+    "@cognizone/application-profile": ">=6.0.0 <7",
+    "@cognizone/json-model": ">=6.0.0 <7",
+    "@cognizone/i18n": ">=6.0.0 <7",
+    "@cognizone/legi-shared": ">=6.0.0 <7",
+    "@cognizone/model-utils": ">=6.0.0 <7",
+    "@cognizone/ng-core": ">=6.0.0 <7"
   },
   "dependencies": {
     "tslib": "^2.3.0"

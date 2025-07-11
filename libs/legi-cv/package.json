@@ -1,12 +1,12 @@
 {
   "name": "@cognizone/legi-cv",
-  "version": "5.1.6",
+  "version": "6.0.0-beta.10",
   "peerDependencies": {
-    "@cognizone/i18n": ">=5.0.0 <6",
-    "@cognizone/json-model": ">=5.0.0 <6",
-    "@cognizone/model-utils": ">=5.0.0 <6",
-    "@cognizone/ng-core": ">=5.0.0 <6",
-    "@ngxs/store": "^18.0.0",
+    "@cognizone/i18n": ">=6.0.0 <7",
+    "@cognizone/json-model": ">=6.0.0 <7",
+    "@cognizone/model-utils": ">=6.0.0 <7",
+    "@cognizone/ng-core": ">=6.0.0 <7",
+    "@ngxs/store": ">=19.0.0",
     "lodash-es": "^4.17.21"
   },
   "dependencies": {

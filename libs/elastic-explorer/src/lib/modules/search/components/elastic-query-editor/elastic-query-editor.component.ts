@@ -9,6 +9,7 @@ import { ElasticExplorerService } from '../../services/elastic-explorer.service'
   selector: 'cz-elastic-query-editor',
   templateUrl: './elastic-query-editor.component.html',
   styleUrls: ['./elastic-query-editor.component.scss'],
+  standalone: false,
 })
 export class ElasticQueryEditorComponent extends OnDestroy$ implements OnInit {
   editor?: monaco.editor.IStandaloneCodeEditor;

@@ -10,6 +10,7 @@ import { OperationGroupDebug } from '../services/operation-group-debug.service';
 @Directive({
   selector: '[czOperationGroup]',
   providers: [OperationGroupDebug],
+  standalone: false,
 })
 export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnChanges {
   @Input('czOperationGroup')

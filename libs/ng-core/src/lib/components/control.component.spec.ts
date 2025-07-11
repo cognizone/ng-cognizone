@@ -12,6 +12,7 @@ import { ControlComponent } from './control.component';
   selector: 'cz-dummy-input',
   template: '<input [formControl]="embeddedControl" />',
   providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => DummyInputComponent), multi: true }],
+  standalone: false,
 })
 class DummyInputComponent extends ControlComponent<unknown> {
   embeddedControl: FormControl = new FormControl();
@@ -19,6 +20,7 @@ class DummyInputComponent extends ControlComponent<unknown> {
 
 @Component({
   template: ` <cz-dummy-input #input [formControl]="control"></cz-dummy-input> `,
+  standalone: false,
 })
 class DummyReactiveSimpleFormComponent {
   @ViewChild('input', { static: true })
@@ -39,6 +41,7 @@ class DummyReactiveSimpleFormComponent {
       </div>
     </form>
   `,
+  standalone: false,
 })
 class DummyReactiveComplexFormComponent {
   @ViewChild('input1', { static: true })
@@ -55,6 +58,7 @@ class DummyReactiveComplexFormComponent {
 
 @Component({
   template: ` <cz-dummy-input #input [(ngModel)]="value"></cz-dummy-input> `,
+  standalone: false,
 })
 class DummyTemplateFormComponent {
   @ViewChild('input', { static: true })

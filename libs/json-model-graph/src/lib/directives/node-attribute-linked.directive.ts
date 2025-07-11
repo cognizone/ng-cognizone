@@ -10,6 +10,7 @@ import { GraphWrapper, GraphAndControlLinkingService, GraphService, UrisStoreSer
 @Directive({
   selector: '[czNodeAttributeLinked]',
   exportAs: 'czNodeAttributeLinked',
+  standalone: false,
 })
 export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChanges {
   @Input('czNodeAttributeLinked')

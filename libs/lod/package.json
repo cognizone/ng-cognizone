@@ -1,15 +1,15 @@
 {
   "name": "@cognizone/lod",
-  "version": "5.1.6",
+  "version": "6.0.0-beta.10",
   "peerDependencies": {
-    "@cognizone/lod-core": ">=5.0.0 <6",
-    "@cognizone/model-utils": ">=5.0.0 <6"
+    "@cognizone/lod-core": ">=6.0.0 <7",
+    "@cognizone/model-utils": ">=6.0.0 <7"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "optionalDependencies": {
-    "@angular/core": ">=18.0.0"
+    "@angular/core": ">=19.0.0 <20"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/cognizone/ng-cognizone",

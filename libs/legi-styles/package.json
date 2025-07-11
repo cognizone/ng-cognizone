@@ -1,8 +1,8 @@
 {
   "name": "@cognizone/legi-styles",
-  "version": "5.1.6",
+  "version": "6.0.0-beta.10",
   "peerDependencies": {
-    "@angular/material": ">=18.0.0 <19",
+    "@angular/material": ">=19.0.0 <20",
     "bootstrap": "^4.0.0",
     "material-design-icons": "^3.0.0"
   },

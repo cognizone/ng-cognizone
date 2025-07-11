@@ -21,7 +21,9 @@ import { Maybe } from '../types/maybe';
 /**
  * @deprecated you should implement ControlValueAccessor yourself, this was not a great idea in the end
  */
-@Directive({})
+@Directive({
+  standalone: false,
+})
 export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestroy$ implements OnInit, OnDestroy, ControlValueAccessor {
   @Input()
   required?: boolean;

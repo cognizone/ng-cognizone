@@ -10,6 +10,7 @@ import { DatePickerType } from '../models/date-picker-type';
   // eslint-disable-next-line @angular-eslint/directive-selector
   selector: 'cz-date-picker[monthSelector]',
   providers: [{ provide: MAT_DATE_FORMATS, useFactory: getFormat, deps: [I18nService] }],
+  standalone: false,
 })
 export class MonthSelectorDirective {
   constructor(private datePicker: DatePickerComponent) {

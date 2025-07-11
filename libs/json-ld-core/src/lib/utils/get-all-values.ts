@@ -50,6 +50,40 @@ export function* getAllValuesGen<T extends Primitive = Primitive>(
   }
 }
 
+export function getAllRawValues(
+  values: JsonLdValue[] | undefined,
+  graph: ExpandedJsonLdContainer,
+  type: ValuesOfType = 'any'
+): JsonLdValue[] {
+  return [...getAllRawValuesGen(values, graph, type)];
+}
+
+export function* getAllRawValuesGen(
+  values: JsonLdValue[] | undefined,
+  graph: ExpandedJsonLdContainer,
+  type: ValuesOfType = 'any'
+): Generator<JsonLdValue> {
+  if (!values) return;
+
+  for (let value of values) {
+    if (isJsonLdValueReference(value)) {
+      const node = graph.nodes[value['@id']];
+      if (node) value = node;
+    }
+    if (isRdfListElement(value)) {
+      yield* getAllRawValuesGen(value[RDF.first], graph, type);
+      yield* getAllRawValuesGen(value[RDF.rest], graph, type);
+      continue;
+    }
+    if (isJsonLdList(value)) {
+      yield* getAllRawValuesGen(value['@list'], graph, type);
+      continue;
+    }
+
+    yield value;
+  }
+}
+
 // TODO move to data shacl helper and handle inverse paths?
 export function* getAllValueDescriptors<T extends Primitive = Primitive, U extends JsonLdNode = JsonLdNode>(
   node: U | undefined,

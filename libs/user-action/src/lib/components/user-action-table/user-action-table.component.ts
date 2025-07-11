@@ -14,6 +14,7 @@ import { UserActionOptionsService } from '../../service/user-actions-options.ser
   templateUrl: './user-action-table.component.html',
   styleUrls: ['./user-action-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class UserActionTableComponent extends OnDestroy$ implements OnInit {
   actionNameOptionsProvider!: SelectOptionsProvider<string>;

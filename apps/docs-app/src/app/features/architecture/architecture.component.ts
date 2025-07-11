@@ -6,6 +6,7 @@ import { environment } from '@env/environment';
   selector: 'app-architecture',
   templateUrl: './architecture.component.html',
   styleUrls: ['./architecture.component.scss'],
+  standalone: false,
 })
 export class ArchitectureComponent implements OnInit, OnDestroy {
   constructor(private coreStateFacade: CoreStateFacade) {}

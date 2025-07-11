@@ -1,121 +1,184 @@
-## [5.1.6](https://github.com/cognizone/ng-cognizone/compare/v5.1.5...v5.1.6) (2025-06-16)
+# [6.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.9...v6.0.0-beta.10) (2025-07-11)
 
 
 ### Bug Fixes
 
 * correctly get deactivated as a boolean ([abe30fd](https://github.com/cognizone/ng-cognizone/commit/abe30fd6ee469daa679ae22405e563edd3872acc))
-
-## [5.1.5](https://github.com/cognizone/ng-cognizone/compare/v5.1.4...v5.1.5) (2025-04-23)
-
-
-### Bug Fixes
-
-* **shacl:** correctly compute if a property is a reference ([cccddd8](https://github.com/cognizone/ng-cognizone/commit/cccddd86f8b60074d3d058a3314ca32a014f5b11))
-
-## [5.1.4](https://github.com/cognizone/ng-cognizone/compare/v5.1.3...v5.1.4) (2025-04-10)
-
-
-### Bug Fixes
-
-* **shacl:** ensure uniqueness of property paths ([e8364a5](https://github.com/cognizone/ng-cognizone/commit/e8364a534bfed3f0e51ac5b8990b7737a9985b80))
-
-## [5.1.3](https://github.com/cognizone/ng-cognizone/compare/v5.1.2...v5.1.3) (2025-04-02)
-
-
-### Bug Fixes
-
-* **shacl:** avoid duplicates in properties paths ([d494391](https://github.com/cognizone/ng-cognizone/commit/d49439183872f7fc0a7fedb0b8a5bb375bb16216))
-
-## [5.1.2](https://github.com/cognizone/ng-cognizone/compare/v5.1.1...v5.1.2) (2025-03-21)
-
-
-### Bug Fixes
-
-* peer deps part 2 ([87afa36](https://github.com/cognizone/ng-cognizone/commit/87afa36cf204d00301046d8a19da3133d021d9c9))
-
-## [5.1.1](https://github.com/cognizone/ng-cognizone/compare/v5.1.0...v5.1.1) (2025-03-21)
-
-
-### Bug Fixes
-
 * fix peer deps ([c893de7](https://github.com/cognizone/ng-cognizone/commit/c893de7fe349639d4c66bc73dc25099b3c3a44de))
-
-# [5.1.0](https://github.com/cognizone/ng-cognizone/compare/v5.0.0...v5.1.0) (2025-03-21)
+* peer deps part 2 ([87afa36](https://github.com/cognizone/ng-cognizone/commit/87afa36cf204d00301046d8a19da3133d021d9c9))
+* **shacl:** avoid duplicates in properties paths ([d494391](https://github.com/cognizone/ng-cognizone/commit/d49439183872f7fc0a7fedb0b8a5bb375bb16216))
+* **shacl:** correctly compute if a property is a reference ([cccddd8](https://github.com/cognizone/ng-cognizone/commit/cccddd86f8b60074d3d058a3314ca32a014f5b11))
+* **shacl:** ensure uniqueness of property paths ([e8364a5](https://github.com/cognizone/ng-cognizone/commit/e8364a534bfed3f0e51ac5b8990b7737a9985b80))
 
 
 ### Features
 
 * **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([a0601f1](https://github.com/cognizone/ng-cognizone/commit/a0601f1e9c78cf2e4ae1607f54b504d221cd5c96))
 
-# [5.0.0](https://github.com/cognizone/ng-cognizone/compare/v4.1.4...v5.0.0) (2025-03-17)
-
-
-### Bug Fixes
-
-* **cdk/result:** better typing for pipes ([15c8ec4](https://github.com/cognizone/ng-cognizone/commit/15c8ec457fa430c86639af08d9228ccab71d0211))
-* **cdk/result:** better typing for pipes ([171e345](https://github.com/cognizone/ng-cognizone/commit/171e345ec5c2631da67fd52cafc3bf53dff5591e))
-* **cdk:** handle nil values in unwrap pipe ([6bed027](https://github.com/cognizone/ng-cognizone/commit/6bed0277066e17c3cc099b8b0445ad0498e2acd6))
-* **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([2811de6](https://github.com/cognizone/ng-cognizone/commit/2811de69ddd922230357f3591e1034c38e862e74))
-* **json-ld:** better handling of facets in jsonld expansion ([4aecfe1](https://github.com/cognizone/ng-cognizone/commit/4aecfe14a46e31dece88f448068e77fa926c1565))
-* **json-ld:** better typing ([189d554](https://github.com/cognizone/ng-cognizone/commit/189d554dffa44c4e0768516cc131789a4527beed))
-* **json-ld:** issue with change to node in JsonLdLabelDirective ([45c1a47](https://github.com/cognizone/ng-cognizone/commit/45c1a476646056f60bac7dcdf0b3d010219092e5))
-* **lod-core:** add skipTypeTriple to Hanami namespaces ([edd260a](https://github.com/cognizone/ng-cognizone/commit/edd260a3c83c66be4d63420fe44e137fd14eaf18))
-* **model-utils:** move elastic modules around to make them available outside the package ([7c15191](https://github.com/cognizone/ng-cognizone/commit/7c151917c8eca867c233eb3775f50cab55f38d52))
-* peer deps to beta ([bbef86a](https://github.com/cognizone/ng-cognizone/commit/bbef86afcc5ca5e04e72b635f11ed8c6e7674ea9))
-* **seo:** better change detection for czMetaProperty directive ([31972c5](https://github.com/cognizone/ng-cognizone/commit/31972c5e3e6c54417c3d8444be69ce9b4eb096d9))
-* **shacl-core:** add getTargetClasses for consumers ([d9ecdcd](https://github.com/cognizone/ng-cognizone/commit/d9ecdcd7133b0ba45ab9c098b99266cb53d5a450))
-* **shacl:** correctly compute node shapes for a given class ([68112a5](https://github.com/cognizone/ng-cognizone/commit/68112a59c32e62547558cb14a43af98c6c63a833))
-
+# [6.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.8...v6.0.0-beta.9) (2025-06-24)
 
 ### Features
 
-* add utilities for Result and signals ([11d6503](https://github.com/cognizone/ng-cognizone/commit/11d650300b13d1f844cd076d2a3d65a8baf10c0c))
-* **cdk/fetch-cache:** add option to override cache used on get call ([56cb74c](https://github.com/cognizone/ng-cognizone/commit/56cb74c45ff41f9be3a3fcdedfe827e343604aa5))
-* **cdk:** add caching utilities in /fetch-cache ([2dcf137](https://github.com/cognizone/ng-cognizone/commit/2dcf1374bd497a9a798479556d103e61b2765d8e))
-* correct breaking change to trigger 5.0.0 beta ([042309b](https://github.com/cognizone/ng-cognizone/commit/042309b4685447ad5f4d13d9a4f1a66ef5aebeb3))
-* dropping AsyncResult and related"loading" concept ([d4e60c4](https://github.com/cognizone/ng-cognizone/commit/d4e60c478bec34868200d2e62f6f5390e3117c2d))
-* **json-ld/get-value:** added getNode pipe ([0ba7350](https://github.com/cognizone/ng-cognizone/commit/0ba7350bbd3ee2a74415e609fb3fa95dedc2fb65))
-* **json-ld/ng-core:** JsonLdService expand method got a isGraphExpanding option ([c7c6953](https://github.com/cognizone/ng-cognizone/commit/c7c695323c51ad4dbf9b32158e7f6228e9835bb3))
-* **json-ld:** add FetchStore ([1c557fb](https://github.com/cognizone/ng-cognizone/commit/1c557fb1c166bdf2e496898da80225bb6fe6445e))
-* **json-ld:** can directly set status from store service ([3fc9649](https://github.com/cognizone/ng-cognizone/commit/3fc964986d14e821c2b6b34cb38a863100bfc717))
-* **json-ld:** getAllValues pipe ([43f6175](https://github.com/cognizone/ng-cognizone/commit/43f6175e749a74851063c3c8c8b883f63c14d81d))
-* **json-ld:** JsonLdService expand method got a flatten option now ([bbbad2e](https://github.com/cognizone/ng-cognizone/commit/bbbad2e44e611a9f3d67f37c7443df064e393f07))
-* **legi-cv:** add snapshot method to CvStateService ([c7ee1c6](https://github.com/cognizone/ng-cognizone/commit/c7ee1c6e4506d21a50d6b35c4ee3fd00e26a9f24))
-* **legi-shared:** add labelType as an option to prevent translate for new values ([f87f959](https://github.com/cognizone/ng-cognizone/commit/f87f959003c77e9c369a35d5922c5a26f37fa3e0))
-* **legi-shared:** adding multiple attribute to select ([f6ad193](https://github.com/cognizone/ng-cognizone/commit/f6ad193db7143ddba9512a1ef273b24a0ae9a107))
-* **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([4c073c0](https://github.com/cognizone/ng-cognizone/commit/4c073c0aa50b5022b44d08baa31d8786dcd43056))
-* make pure .ts libs export as both cjs and esm ([e5f5849](https://github.com/cognizone/ng-cognizone/commit/e5f58499f6fa47fb6e0e66ec55831d7dc316e6ce))
-* **model-utils:** add elastic query utilities and tests ([a123d08](https://github.com/cognizone/ng-cognizone/commit/a123d084f5478d5299568663d1856fd3f92efbfe))
-* **model-utils:** add elastic utilities ([ab9226a](https://github.com/cognizone/ng-cognizone/commit/ab9226a96c29d54c227fb27393a11323aecc8167))
-* **model-utils:** add Result type and utilities ([6e45259](https://github.com/cognizone/ng-cognizone/commit/6e4525998c20e6f881e511c1e72056549a99ac18))
-* **model-utils:** added pipe and result sub entries ([10dde17](https://github.com/cognizone/ng-cognizone/commit/10dde1725f80475dc13e2edad2ec01d695296eb6))
-* **ng-core:** make use of DestroyRef for the OnDestroy$ utility class ([63c817a](https://github.com/cognizone/ng-cognizone/commit/63c817a14615c12535bbf4382d5cc37175e25da4))
-* **permissions:** switch to standalone for the directives ([6c7684c](https://github.com/cognizone/ng-cognizone/commit/6c7684c2b0da6cba44c0e31e1da918dac3917114))
-* upgrade to angular 17 ([8156507](https://github.com/cognizone/ng-cognizone/commit/8156507ad5644fa6d750abfaa60de4bfb8a6325c))
-* upgrade to angular 18 / nx 19 ([fdb0299](https://github.com/cognizone/ng-cognizone/commit/fdb0299247f0929c5c6ee13a4f7f4c084cd47139))
+- **json-ld-core:** add json-ld-traverser ([07a67b6](https://github.com/cognizone/ng-cognizone/commit/07a67b6781a31391fe49d6d399906d61ea6e5691))
 
+# [6.0.0-beta.8](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.7...v6.0.0-beta.8) (2025-06-16)
+
+### Bug Fixes
+
+- correctly get deactivated as a boolean ([050b28f](https://github.com/cognizone/ng-cognizone/commit/050b28f188dfa1fb3510c8ad00260a4cf24a1787))
+
+# [6.0.0-beta.7](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.6...v6.0.0-beta.7) (2025-04-23)
+
+### Bug Fixes
+
+- **shacl:** correctly compute if a property is a reference ([f465ac5](https://github.com/cognizone/ng-cognizone/commit/f465ac5e8538fbb323acf1eb36b3945782b7f569))
+
+# [6.0.0-beta.6](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.5...v6.0.0-beta.6) (2025-04-10)
+
+### Bug Fixes
+
+- **shacl:** ensure uniqueness of property paths ([3989aff](https://github.com/cognizone/ng-cognizone/commit/3989affa3116611c4c883859e019acc5872d2025))
+
+# [6.0.0-beta.5](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.4...v6.0.0-beta.5) (2025-04-02)
+
+### Bug Fixes
+
+- **shacl:** avoid duplicates in properties paths ([dcbbcff](https://github.com/cognizone/ng-cognizone/commit/dcbbcff13bfcab8e4b7e61a6fdb3bd4bfa2ecfb9))
+
+# [6.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.3...v6.0.0-beta.4) (2025-03-21)
+
+### Bug Fixes
+
+- peer deps ([7235e98](https://github.com/cognizone/ng-cognizone/commit/7235e982b89881ae21f4794ebcf01e047fa5d4e1))
+
+# [6.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.2...v6.0.0-beta.3) (2025-03-21)
+
+### Features
+
+- **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([9923e9a](https://github.com/cognizone/ng-cognizone/commit/9923e9a82419203a51e9b500511b0e171f2694b1))
+
+# [6.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.1...v6.0.0-beta.2) (2025-03-20)
+
+### Bug Fixes
+
+- peer dependencies ([70b791e](https://github.com/cognizone/ng-cognizone/commit/70b791ef2bca44c67f8c4dc77b8d5801059ed3fc))
+
+# [6.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v5.0.0...v6.0.0-beta.1) (2025-03-20)
+
+### Features
+
+- upgrade to angular 19 ([65022b5](https://github.com/cognizone/ng-cognizone/commit/65022b5cc9ec8576a659876535eebded97e665da))
 
 ### BREAKING CHANGES
 
-* **ng-core:** onDestroyMixin has been removed
-* **ng-core:** OnDestroy$ does not use ngOnDestroy anymore, so extending it and calling super.ngOnDestroy() will throw an error now.
-* upgrade to angular 18
+- upgrade to angular 19
 
-# [5.0.0-beta.32](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.31...v5.0.0-beta.32) (2025-03-17)
-
+## [5.1.6](https://github.com/cognizone/ng-cognizone/compare/v5.1.5...v5.1.6) (2025-06-16)
 
 ### Bug Fixes
 
-* **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([9945e6b](https://github.com/cognizone/ng-cognizone/commit/9945e6be01b4c14ebd1442259570a28652c14334))
-* **json-ld:** issue with change to node in JsonLdLabelDirective ([bce8733](https://github.com/cognizone/ng-cognizone/commit/bce87333ea27bb3c71c38660fc833faae3501e2a))
-* **lod-core:** add skipTypeTriple to Hanami namespaces ([905af26](https://github.com/cognizone/ng-cognizone/commit/905af2663aa65fb6c2e2bff614eda5d0718075fb))
-* **shacl-core:** add getTargetClasses for consumers ([4d8109e](https://github.com/cognizone/ng-cognizone/commit/4d8109e863f994d61e6aa429427ba5cd9ab0fe4d))
-* **shacl:** correctly compute node shapes for a given class ([6ad516a](https://github.com/cognizone/ng-cognizone/commit/6ad516a95f85dfb88751bdd0ee433e3897ab5318))
+- correctly get deactivated as a boolean ([abe30fd](https://github.com/cognizone/ng-cognizone/commit/abe30fd6ee469daa679ae22405e563edd3872acc))
 
+## [5.1.5](https://github.com/cognizone/ng-cognizone/compare/v5.1.4...v5.1.5) (2025-04-23)
+
+### Bug Fixes
+
+- **shacl:** correctly compute if a property is a reference ([cccddd8](https://github.com/cognizone/ng-cognizone/commit/cccddd86f8b60074d3d058a3314ca32a014f5b11))
+
+## [5.1.4](https://github.com/cognizone/ng-cognizone/compare/v5.1.3...v5.1.4) (2025-04-10)
+
+### Bug Fixes
+
+- **shacl:** ensure uniqueness of property paths ([e8364a5](https://github.com/cognizone/ng-cognizone/commit/e8364a534bfed3f0e51ac5b8990b7737a9985b80))
+
+## [5.1.3](https://github.com/cognizone/ng-cognizone/compare/v5.1.2...v5.1.3) (2025-04-02)
+
+### Bug Fixes
+
+- **shacl:** avoid duplicates in properties paths ([d494391](https://github.com/cognizone/ng-cognizone/commit/d49439183872f7fc0a7fedb0b8a5bb375bb16216))
+
+## [5.1.2](https://github.com/cognizone/ng-cognizone/compare/v5.1.1...v5.1.2) (2025-03-21)
+
+### Bug Fixes
+
+- peer deps part 2 ([87afa36](https://github.com/cognizone/ng-cognizone/commit/87afa36cf204d00301046d8a19da3133d021d9c9))
+
+## [5.1.1](https://github.com/cognizone/ng-cognizone/compare/v5.1.0...v5.1.1) (2025-03-21)
+
+### Bug Fixes
+
+- fix peer deps ([c893de7](https://github.com/cognizone/ng-cognizone/commit/c893de7fe349639d4c66bc73dc25099b3c3a44de))
+
+# [5.1.0](https://github.com/cognizone/ng-cognizone/compare/v5.0.0...v5.1.0) (2025-03-21)
 
 ### Features
 
-* **legi-cv:** add snapshot method to CvStateService ([8283411](https://github.com/cognizone/ng-cognizone/commit/8283411fe38d7a048fdf3e681962f95fe15e299b))
+- **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([a0601f1](https://github.com/cognizone/ng-cognizone/commit/a0601f1e9c78cf2e4ae1607f54b504d221cd5c96))
+
+# [5.0.0](https://github.com/cognizone/ng-cognizone/compare/v4.1.4...v5.0.0) (2025-03-17)
+
+### Bug Fixes
+
+- **cdk/result:** better typing for pipes ([15c8ec4](https://github.com/cognizone/ng-cognizone/commit/15c8ec457fa430c86639af08d9228ccab71d0211))
+- **cdk/result:** better typing for pipes ([171e345](https://github.com/cognizone/ng-cognizone/commit/171e345ec5c2631da67fd52cafc3bf53dff5591e))
+- **cdk:** handle nil values in unwrap pipe ([6bed027](https://github.com/cognizone/ng-cognizone/commit/6bed0277066e17c3cc099b8b0445ad0498e2acd6))
+- **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([2811de6](https://github.com/cognizone/ng-cognizone/commit/2811de69ddd922230357f3591e1034c38e862e74))
+- **json-ld:** better handling of facets in jsonld expansion ([4aecfe1](https://github.com/cognizone/ng-cognizone/commit/4aecfe14a46e31dece88f448068e77fa926c1565))
+- **json-ld:** better typing ([189d554](https://github.com/cognizone/ng-cognizone/commit/189d554dffa44c4e0768516cc131789a4527beed))
+- **json-ld:** issue with change to node in JsonLdLabelDirective ([45c1a47](https://github.com/cognizone/ng-cognizone/commit/45c1a476646056f60bac7dcdf0b3d010219092e5))
+- **lod-core:** add skipTypeTriple to Hanami namespaces ([edd260a](https://github.com/cognizone/ng-cognizone/commit/edd260a3c83c66be4d63420fe44e137fd14eaf18))
+- **model-utils:** move elastic modules around to make them available outside the package ([7c15191](https://github.com/cognizone/ng-cognizone/commit/7c151917c8eca867c233eb3775f50cab55f38d52))
+- peer deps to beta ([bbef86a](https://github.com/cognizone/ng-cognizone/commit/bbef86afcc5ca5e04e72b635f11ed8c6e7674ea9))
+- **seo:** better change detection for czMetaProperty directive ([31972c5](https://github.com/cognizone/ng-cognizone/commit/31972c5e3e6c54417c3d8444be69ce9b4eb096d9))
+- **shacl-core:** add getTargetClasses for consumers ([d9ecdcd](https://github.com/cognizone/ng-cognizone/commit/d9ecdcd7133b0ba45ab9c098b99266cb53d5a450))
+- **shacl:** correctly compute node shapes for a given class ([68112a5](https://github.com/cognizone/ng-cognizone/commit/68112a59c32e62547558cb14a43af98c6c63a833))
+
+### Features
+
+- add utilities for Result and signals ([11d6503](https://github.com/cognizone/ng-cognizone/commit/11d650300b13d1f844cd076d2a3d65a8baf10c0c))
+- **cdk/fetch-cache:** add option to override cache used on get call ([56cb74c](https://github.com/cognizone/ng-cognizone/commit/56cb74c45ff41f9be3a3fcdedfe827e343604aa5))
+- **cdk:** add caching utilities in /fetch-cache ([2dcf137](https://github.com/cognizone/ng-cognizone/commit/2dcf1374bd497a9a798479556d103e61b2765d8e))
+- correct breaking change to trigger 5.0.0 beta ([042309b](https://github.com/cognizone/ng-cognizone/commit/042309b4685447ad5f4d13d9a4f1a66ef5aebeb3))
+- dropping AsyncResult and related"loading" concept ([d4e60c4](https://github.com/cognizone/ng-cognizone/commit/d4e60c478bec34868200d2e62f6f5390e3117c2d))
+- **json-ld/get-value:** added getNode pipe ([0ba7350](https://github.com/cognizone/ng-cognizone/commit/0ba7350bbd3ee2a74415e609fb3fa95dedc2fb65))
+- **json-ld/ng-core:** JsonLdService expand method got a isGraphExpanding option ([c7c6953](https://github.com/cognizone/ng-cognizone/commit/c7c695323c51ad4dbf9b32158e7f6228e9835bb3))
+- **json-ld:** add FetchStore ([1c557fb](https://github.com/cognizone/ng-cognizone/commit/1c557fb1c166bdf2e496898da80225bb6fe6445e))
+- **json-ld:** can directly set status from store service ([3fc9649](https://github.com/cognizone/ng-cognizone/commit/3fc964986d14e821c2b6b34cb38a863100bfc717))
+- **json-ld:** getAllValues pipe ([43f6175](https://github.com/cognizone/ng-cognizone/commit/43f6175e749a74851063c3c8c8b883f63c14d81d))
+- **json-ld:** JsonLdService expand method got a flatten option now ([bbbad2e](https://github.com/cognizone/ng-cognizone/commit/bbbad2e44e611a9f3d67f37c7443df064e393f07))
+- **legi-cv:** add snapshot method to CvStateService ([c7ee1c6](https://github.com/cognizone/ng-cognizone/commit/c7ee1c6e4506d21a50d6b35c4ee3fd00e26a9f24))
+- **legi-shared:** add labelType as an option to prevent translate for new values ([f87f959](https://github.com/cognizone/ng-cognizone/commit/f87f959003c77e9c369a35d5922c5a26f37fa3e0))
+- **legi-shared:** adding multiple attribute to select ([f6ad193](https://github.com/cognizone/ng-cognizone/commit/f6ad193db7143ddba9512a1ef273b24a0ae9a107))
+- **legi-shared:** adding option to show select dropdown icon for autocomplete single and multi ([4c073c0](https://github.com/cognizone/ng-cognizone/commit/4c073c0aa50b5022b44d08baa31d8786dcd43056))
+- make pure .ts libs export as both cjs and esm ([e5f5849](https://github.com/cognizone/ng-cognizone/commit/e5f58499f6fa47fb6e0e66ec55831d7dc316e6ce))
+- **model-utils:** add elastic query utilities and tests ([a123d08](https://github.com/cognizone/ng-cognizone/commit/a123d084f5478d5299568663d1856fd3f92efbfe))
+- **model-utils:** add elastic utilities ([ab9226a](https://github.com/cognizone/ng-cognizone/commit/ab9226a96c29d54c227fb27393a11323aecc8167))
+- **model-utils:** add Result type and utilities ([6e45259](https://github.com/cognizone/ng-cognizone/commit/6e4525998c20e6f881e511c1e72056549a99ac18))
+- **model-utils:** added pipe and result sub entries ([10dde17](https://github.com/cognizone/ng-cognizone/commit/10dde1725f80475dc13e2edad2ec01d695296eb6))
+- **ng-core:** make use of DestroyRef for the OnDestroy$ utility class ([63c817a](https://github.com/cognizone/ng-cognizone/commit/63c817a14615c12535bbf4382d5cc37175e25da4))
+- **permissions:** switch to standalone for the directives ([6c7684c](https://github.com/cognizone/ng-cognizone/commit/6c7684c2b0da6cba44c0e31e1da918dac3917114))
+- upgrade to angular 17 ([8156507](https://github.com/cognizone/ng-cognizone/commit/8156507ad5644fa6d750abfaa60de4bfb8a6325c))
+- upgrade to angular 18 / nx 19 ([fdb0299](https://github.com/cognizone/ng-cognizone/commit/fdb0299247f0929c5c6ee13a4f7f4c084cd47139))
+
+### BREAKING CHANGES
+
+- **ng-core:** onDestroyMixin has been removed
+- **ng-core:** OnDestroy$ does not use ngOnDestroy anymore, so extending it and calling super.ngOnDestroy() will throw an error now.
+- upgrade to angular 18
+
+# [5.0.0-beta.32](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.31...v5.0.0-beta.32) (2025-03-17)
+
+### Bug Fixes
+
+- **json-ld:** add isEqualNodeValue option to LinkControlToNodeAttributeOptions ([9945e6b](https://github.com/cognizone/ng-cognizone/commit/9945e6be01b4c14ebd1442259570a28652c14334))
+- **json-ld:** issue with change to node in JsonLdLabelDirective ([bce8733](https://github.com/cognizone/ng-cognizone/commit/bce87333ea27bb3c71c38660fc833faae3501e2a))
+- **lod-core:** add skipTypeTriple to Hanami namespaces ([905af26](https://github.com/cognizone/ng-cognizone/commit/905af2663aa65fb6c2e2bff614eda5d0718075fb))
+- **shacl-core:** add getTargetClasses for consumers ([4d8109e](https://github.com/cognizone/ng-cognizone/commit/4d8109e863f994d61e6aa429427ba5cd9ab0fe4d))
+- **shacl:** correctly compute node shapes for a given class ([6ad516a](https://github.com/cognizone/ng-cognizone/commit/6ad516a95f85dfb88751bdd0ee433e3897ab5318))
+
+### Features
+
+- **legi-cv:** add snapshot method to CvStateService ([8283411](https://github.com/cognizone/ng-cognizone/commit/8283411fe38d7a048fdf3e681962f95fe15e299b))
 
 # [5.0.0-beta.31](https://github.com/cognizone/ng-cognizone/compare/v5.0.0-beta.30...v5.0.0-beta.31) (2025-03-11)
 

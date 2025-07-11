@@ -27,6 +27,7 @@ const moment = _moment;
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class DatePickerComponent extends ControlComponent<Date | null> implements OnInit {
   @Input()

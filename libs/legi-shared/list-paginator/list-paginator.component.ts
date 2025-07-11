@@ -10,6 +10,7 @@ import { OnDestroy$ } from '@cognizone/ng-core';
   templateUrl: './list-paginator.component.html',
   styleUrls: ['./list-paginator.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class ListPaginatorComponent extends OnDestroy$ implements OnInit, OnChanges {
   @Input()

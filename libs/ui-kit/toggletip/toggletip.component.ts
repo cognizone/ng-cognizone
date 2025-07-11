@@ -20,7 +20,6 @@ let instanceId = 0;
   styleUrls: ['./toggletip.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [MatButtonModule, MatIconModule],
 })
 export class ToggletipComponent {

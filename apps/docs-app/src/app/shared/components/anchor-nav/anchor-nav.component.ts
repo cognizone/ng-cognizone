@@ -12,6 +12,7 @@ import { AnchorService } from '../../services/anchor.service';
   templateUrl: './anchor-nav.component.html',
   styleUrls: ['./anchor-nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class AnchorNavComponent extends OnDestroy$ implements OnInit {
   anchors$: Observable<Anchor[]> = this.anchorService.anchors$;

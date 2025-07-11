@@ -8,6 +8,7 @@ import { filter } from 'rxjs/operators';
   templateUrl: './img-tooltip.component.html',
   styleUrls: ['./img-tooltip.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class ImgTooltipComponent extends OnDestroy$ implements OnInit {
   @Input()

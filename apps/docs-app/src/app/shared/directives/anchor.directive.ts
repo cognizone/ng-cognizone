@@ -6,6 +6,7 @@ import { AnchorService } from '../services/anchor.service';
 
 @Directive({
   selector: '[appAnchor]',
+  standalone: false,
 })
 export class AnchorDirective implements OnInit, OnDestroy {
   @HostBinding('id')

@@ -40,6 +40,7 @@ import { distinctUntilChanged, filter, map, startWith, switchMap } from 'rxjs/op
   styleUrls: ['./autocomplete-multi.component.scss'],
   providers: [provideHasOptionsProvider(forwardRef(() => AutocompleteMultiComponent))],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class AutocompleteMultiComponent<T> extends ControlComponent<T[]> implements HasOptionsProvider<T>, OnInit {
   @Input()

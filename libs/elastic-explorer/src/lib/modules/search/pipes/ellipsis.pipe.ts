@@ -3,6 +3,7 @@ import { Nil } from '@cognizone/model-utils';
 
 @Pipe({
   name: 'ellipsis',
+  standalone: false,
 })
 export class EllipsisPipe implements PipeTransform {
   transform(value: Nil<string>, maxLength: number = 50): string {

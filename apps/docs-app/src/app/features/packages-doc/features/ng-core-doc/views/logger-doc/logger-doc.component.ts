@@ -10,6 +10,7 @@ import { NgCorePagesService } from '../../services/ng-core-pages.service';
   selector: 'app-logger-doc',
   templateUrl: './logger-doc.component.html',
   styleUrls: ['./logger-doc.component.scss'],
+  standalone: false,
 })
 export class LoggerDocComponent implements OnInit, OnDestroy {
   form!: UntypedFormGroup;

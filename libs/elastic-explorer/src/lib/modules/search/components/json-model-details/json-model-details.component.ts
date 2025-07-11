@@ -15,6 +15,7 @@ import { DetailViewService } from '../../services/detail-view.service';
   templateUrl: './json-model-details.component.html',
   styleUrls: ['./json-model-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class JsonModelDetailsComponent extends OnDestroy$ implements OnInit {
   jsonModel!: JsonModel;

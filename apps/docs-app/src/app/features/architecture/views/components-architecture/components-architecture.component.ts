@@ -5,6 +5,7 @@ import { UntypedFormControl } from '@angular/forms';
   selector: 'app-components-architecture',
   templateUrl: './components-architecture.component.html',
   styleUrls: ['./components-architecture.component.scss'],
+  standalone: false,
 })
 export class ComponentsArchitectureComponent {
   lastUpdate: Date = new Date('2019-11-25');
