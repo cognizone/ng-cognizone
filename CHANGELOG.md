@@ -1,3 +1,27 @@
+# [6.0.0](https://github.com/cognizone/ng-cognizone/compare/v5.1.6...v6.0.0) (2025-07-11)
+
+
+### Bug Fixes
+
+* correctly get deactivated as a boolean ([050b28f](https://github.com/cognizone/ng-cognizone/commit/050b28f188dfa1fb3510c8ad00260a4cf24a1787))
+* peer dependencies ([70b791e](https://github.com/cognizone/ng-cognizone/commit/70b791ef2bca44c67f8c4dc77b8d5801059ed3fc))
+* peer deps ([7235e98](https://github.com/cognizone/ng-cognizone/commit/7235e982b89881ae21f4794ebcf01e047fa5d4e1))
+* **shacl:** avoid duplicates in properties paths ([dcbbcff](https://github.com/cognizone/ng-cognizone/commit/dcbbcff13bfcab8e4b7e61a6fdb3bd4bfa2ecfb9))
+* **shacl:** correctly compute if a property is a reference ([f465ac5](https://github.com/cognizone/ng-cognizone/commit/f465ac5e8538fbb323acf1eb36b3945782b7f569))
+* **shacl:** ensure uniqueness of property paths ([3989aff](https://github.com/cognizone/ng-cognizone/commit/3989affa3116611c4c883859e019acc5872d2025))
+
+
+### Features
+
+* **json-ld-core:** add json-ld-traverser ([07a67b6](https://github.com/cognizone/ng-cognizone/commit/07a67b6781a31391fe49d6d399906d61ea6e5691))
+* **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([9923e9a](https://github.com/cognizone/ng-cognizone/commit/9923e9a82419203a51e9b500511b0e171f2694b1))
+* upgrade to angular 19 ([65022b5](https://github.com/cognizone/ng-cognizone/commit/65022b5cc9ec8576a659876535eebded97e665da))
+
+
+### BREAKING CHANGES
+
+* upgrade to angular 19
+
 # [6.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.9...v6.0.0-beta.10) (2025-07-11)
 
 
