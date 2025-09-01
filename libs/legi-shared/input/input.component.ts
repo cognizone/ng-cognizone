@@ -57,6 +57,12 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
   type = 'text';
   @Input()
   inputAutocomplete = 'off';
+  @Input()
+  inputId: string = `cz-input-${++InputComponent.count}`;
+  @Input()
+  inputTitle?: string;
+  @Input()
+  showErrors: boolean = true;
 
   @Output()
   inputFocus: EventEmitter<FocusEvent> = new EventEmitter();
@@ -77,7 +83,7 @@ export class InputComponent extends ControlComponent<string> implements OnInit {
   }
 
   private _label?: string;
-
+  static count: number = 0;
   /**
    * @ignore
    */

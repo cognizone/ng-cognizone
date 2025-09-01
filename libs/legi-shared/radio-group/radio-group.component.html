@@ -20,6 +20,7 @@
       class="d-flex flex-column"
       [class.flex-column]="direction === 'column'"
       [class.is-row]="direction === 'row'"
+      [attr.aria-label]="radioGroupAriaLabel"
     >
       <ng-container *ngFor="let option of options; trackBy: trackBySelectOption">
         <div class="d-flex justify-content-between align-items-center radio-container">
