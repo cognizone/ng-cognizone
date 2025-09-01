@@ -77,6 +77,8 @@ export class RadioGroupComponent<T> extends ControlComponent<T> implements HasOp
   inputLabel?: string;
   @Input()
   filterOutZeroCounts = true;
+  @Input()
+  radioGroupAriaLabel?: string;
   @ContentChild(TemplateRef, { static: false })
   template!: TemplateRef<unknown>;
 

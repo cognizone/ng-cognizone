@@ -8,8 +8,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { I18nModule } from '@cognizone/i18n';
 import { InputModule } from '@cognizone/legi-shared/input';
 import { SelectOptionSortModule } from '@cognizone/legi-shared/select-option-sort';
+import { TranslocoModule } from '@jsverse/transloco';
 
 import { CheckboxGroupComponent } from './checkbox-group.component';
+import { SelectOptionGroupsSlicePipe } from './select-option-groups-slice.pipe';
 
 @NgModule({
   imports: [
@@ -21,10 +23,13 @@ import { CheckboxGroupComponent } from './checkbox-group.component';
     MatCheckboxModule,
     MatDividerModule,
     MatIconModule,
+    // Misc
+    TranslocoModule,
     // Internal
     I18nModule,
     InputModule,
     SelectOptionSortModule,
+    SelectOptionGroupsSlicePipe,
   ],
   declarations: [CheckboxGroupComponent],
   exports: [CheckboxGroupComponent],

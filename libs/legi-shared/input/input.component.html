@@ -8,6 +8,8 @@
     [formControl]="embeddedControl"
     [placeholder]="placeholder"
     [name]="name"
+    [attr.id]="inputId"
+    [attr.title]="inputTitle"
     (focus)="onFocus($event, outlineFieldRef)"
     [attr.aria-label]="ariaLabel"
     (blur)="onBlur($event)"
@@ -19,7 +21,7 @@
     <ng-container *ngTemplateOutlet="prefixTpl"></ng-container>
   </span>
   <mat-hint *ngIf="hint" class="czls-caption"> {{ hint }}</mat-hint>
-  <mat-error>
+  <mat-error *ngIf="showErrors">
     <cz-error></cz-error>
   </mat-error>
 </mat-form-field>

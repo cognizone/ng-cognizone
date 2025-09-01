@@ -8,11 +8,13 @@ import {
   OnChanges,
   OnInit,
   Optional,
+  QueryList,
   SimpleChanges,
   TemplateRef,
+  ViewChildren,
 } from '@angular/core';
 import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
-import { MatCheckboxChange } from '@angular/material/checkbox';
+import { MatCheckbox, MatCheckboxChange } from '@angular/material/checkbox';
 import { I18nService } from '@cognizone/i18n';
 import { HasOptionsProvider, provideHasOptionsProvider } from '@cognizone/legi-cv';
 import { SelectOptionSortType } from '@cognizone/legi-shared/select-option-sort';
@@ -22,6 +24,7 @@ import {
   LangString,
   LangStringSimple,
   Nil,
+  notNil,
   SelectOption,
   SelectOptionCounts,
   SelectOptionGroup,
@@ -29,7 +32,7 @@ import {
   trackBySelectOption,
 } from '@cognizone/model-utils';
 import { ControlComponent, Logger } from '@cognizone/ng-core';
-import { startWith, switchMap } from 'rxjs/operators';
+import { first, startWith, switchMap } from 'rxjs/operators';
 
 /**
  * `CheckboxGroupComponent` allows user to pass a list of options and check
@@ -82,6 +85,37 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   removeDisabledOptions = true;
   @Input()
   inputLabel?: string;
+  @Input()
+  set groupAriaLabelledBy(value: string | undefined) {
+    this._groupAriaLabelledBy = value;
+  }
+  get groupAriaLabelledBy(): string | undefined {
+    if (this._groupAriaLabelledBy) return this._groupAriaLabelledBy;
+    if (this.label) return this.labelId;
+  }
+
+  get actualSeeMoreThreshold(): number {
+    return this.seeMore || this.seeMoreThreshold == null ? Number.POSITIVE_INFINITY : this.seeMoreThreshold;
+  }
+
+  get canSeeMore(): boolean {
+    return this.seeMoreThreshold != null ? this.options.length > this.seeMoreThreshold : false;
+  }
+
+  static count: number = 0;
+
+  @Input()
+  inputAriaLabel?: string;
+  @Input()
+  inputClearLabel?: string;
+  @Input()
+  inputClearLabelledby?: string;
+
+  @Input()
+  seeMoreThreshold?: number;
+
+  labelId: string = `cz-checkbox-group-label-id-${++CheckboxGroupComponent.count}`;
+  inputClearBtnId: string = `${this.labelId}-clear-btn`;
 
   @ContentChild(TemplateRef, { static: false })
   template!: TemplateRef<unknown>;
@@ -94,11 +128,14 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   embeddedControl: UntypedFormControl = new UntypedFormControl();
   searchControl: UntypedFormControl = new UntypedFormControl();
   trackBySelectOption: typeof trackBySelectOption = trackBySelectOption;
-  optionsGroups: SelectOptionGroup<T>[] = [];
+  optionsGroups: SelectOptionGroupWithId<T>[] = [];
 
   private _optionsProvider!: SelectOptionsProvider<T>;
   private _counts: Nil<SelectOptionCounts>;
-  private allOptions: SelectOption<T>[] = [];
+  private _groupAriaLabelledBy?: string;
+
+  @ViewChildren(MatCheckbox)
+  checkboxes!: QueryList<MatCheckbox>;
 
   constructor(private i18n: I18nService, logger: Logger, cdr: ChangeDetectorRef, @Optional() controlContainer: ControlContainer) {
     super(logger, cdr, controlContainer);
@@ -149,6 +186,12 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
    */
   toggleSeeMore(): void {
     this.seeMore = !this.seeMore;
+    if (this.seeMore) {
+      const firstNewCheckboxIndex = this.checkboxes.length;
+      this.subSink = this.checkboxes.changes.pipe(first()).subscribe(() => {
+        this.checkboxes.toArray()[firstNewCheckboxIndex]?.focus();
+      });
+    }
     this.cdr.markForCheck();
   }
 
@@ -175,6 +218,14 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
     return { $implicit: option, option };
   }
 
+  getSeeMoreCount(): number {
+    return this.options.length - this.actualSeeMoreThreshold;
+  }
+
+  getClearBtnLabelledBy(): string {
+    return [this.inputClearBtnId, this.inputClearLabelledby].filter(notNil).join(' ');
+  }
+
   /**
    * `setOptions` provides the list of options and optionsGroups
    *
@@ -185,6 +236,7 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
     this.emptySink();
     if (this.options && !this.optionsProvider) {
       this.optionsGroups = groupSelectOptions(this.options);
+      this.optionsGroups = this.addIds(this.optionsGroups);
       return;
     }
     if (!this.optionsProvider) return;
@@ -208,8 +260,17 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
             options: group.options.filter(o => !o.disabled),
           }));
         }
+        this.optionsGroups = this.addIds(this.optionsGroups);
 
         this.cdr.markForCheck();
       });
   }
+
+  private addIds(groups: SelectOptionGroup<T>[]): SelectOptionGroupWithId<T>[] {
+    return groups.map((g, i) => ({ ...g, id: i.toString() }));
+  }
+}
+
+interface SelectOptionGroupWithId<T> extends SelectOptionGroup<T> {
+  id?: string;
 }
