@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/cognizone/ng-cognizone/compare/v6.0.0...v6.1.0) (2025-09-02)
+
+
+### Features
+
+* port a11y fixes from 1.x ([7659c59](https://github.com/cognizone/ng-cognizone/commit/7659c59ff7e5d6f7f3fa07c1ee0bdb03dc6c70ec))
+
 # [6.0.0](https://github.com/cognizone/ng-cognizone/compare/v5.1.6...v6.0.0) (2025-07-11)
 
 
