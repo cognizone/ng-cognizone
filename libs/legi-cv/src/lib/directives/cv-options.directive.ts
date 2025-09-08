@@ -19,7 +19,7 @@ export function provideHasOptionsProvider(type: unknown): Provider {
 
 @Directive({
   selector: '[czCvOptions]',
-  standalone: false,
+  standalone: true,
 })
 export class CvOptionsDirective extends OnDestroy$ implements OnChanges {
   @Input()
