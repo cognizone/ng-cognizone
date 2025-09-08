@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/cognizone/ng-cognizone/compare/v6.1.0...v6.1.1) (2025-09-08)
+
+
+### Bug Fixes
+
+* **legi-shared:** add trackByGroup to checkbox-group component ([967a063](https://github.com/cognizone/ng-cognizone/commit/967a06384d1f165f7f7dc37a0c95ce28580bd6cf))
+
 # [6.1.0](https://github.com/cognizone/ng-cognizone/compare/v6.0.0...v6.1.0) (2025-09-02)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/application-profile",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "peerDependencies": {
     "@cognizone/model-utils": ">=6.0.0 <7",
     "rxjs": "^7.8.0"
