@@ -17,4 +17,4 @@ export * from './lib/services';
 export * from './lib/store/cv.actions';
 export * from './lib/store/cv.state';
 
-export * from './lib/legi-cv.module';
+export * from './lib/provide-legi-cv';

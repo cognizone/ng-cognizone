@@ -7,7 +7,7 @@ import { CvDictionary } from '../models/cv';
 import { SetCv } from '../store/cv.actions';
 import { LEGI_CV_STATE_TOKEN } from '../store/cv.state';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class CvStateService {
   constructor(private store: Store) {}
 

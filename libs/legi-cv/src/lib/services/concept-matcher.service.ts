@@ -6,7 +6,7 @@ import { Concept } from '../models/concept';
 import { ConceptFilterableKeys } from '../models/concept-filterable-keys';
 import { MatchType } from '../models/match-type';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ConceptMatcherService {
   private i18nService: I18nService = inject(I18nService);
 

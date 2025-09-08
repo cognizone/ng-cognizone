@@ -9,7 +9,7 @@ import { CvService } from '../services/cv.service';
 
 @Directive({
   selector: '[czCvValue]',
-  standalone: false,
+  standalone: true,
 })
 export class CvValueDirective extends OnDestroy$ implements OnChanges {
   @Input('czCvValueUri')
