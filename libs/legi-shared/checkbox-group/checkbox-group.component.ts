@@ -11,6 +11,7 @@ import {
   QueryList,
   SimpleChanges,
   TemplateRef,
+  TrackByFunction,
   ViewChildren,
 } from '@angular/core';
 import { ControlContainer, NG_VALUE_ACCESSOR, UntypedFormControl } from '@angular/forms';
@@ -128,6 +129,7 @@ export class CheckboxGroupComponent<T> extends ControlComponent<T[]> implements 
   embeddedControl: UntypedFormControl = new UntypedFormControl();
   searchControl: UntypedFormControl = new UntypedFormControl();
   trackBySelectOption: typeof trackBySelectOption = trackBySelectOption;
+  trackByGroup: TrackByFunction<SelectOptionGroupWithId<T>> = (_, item) => item.id;
   optionsGroups: SelectOptionGroupWithId<T>[] = [];
 
   private _optionsProvider!: SelectOptionsProvider<T>;
