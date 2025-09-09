@@ -1,15 +1,15 @@
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Many, manyToArray, Nil } from '@cognizone/model-utils';
 import { from, isObservable, Observable, of } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-import { PERMISSIONS_PROVIDER_TOKEN, PermissionsProvider } from './permissions-provider';
+import { PERMISSIONS_PROVIDER_TOKEN } from './permissions-provider';
 
 @Injectable({ providedIn: 'root' })
 export class PermissionsService {
   permissions$: Observable<string[]> = this.getPermissions();
 
-  constructor(@Inject(PERMISSIONS_PROVIDER_TOKEN) private permissionsProvider: PermissionsProvider) {}
+  private permissionsProvider = inject(PERMISSIONS_PROVIDER_TOKEN);
 
   hasPermissions(permissions: Nil<Many<string>>): Observable<boolean> {
     if (!permissions) return of(true);

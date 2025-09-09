@@ -1,7 +1,7 @@
-import { ChangeDetectorRef, Directive, Input, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
-import { Many, manyToArray, manyToOne } from '@cognizone/model-utils';
+import { ChangeDetectorRef, Directive, inject, Input, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 import { isJsonModel } from '@cognizone/json-model';
-import { Logger, OnDestroy$ } from '@cognizone/ng-core';
+import { Many, manyToArray, manyToOne } from '@cognizone/model-utils';
+import { LoggerFactory, OnDestroy$ } from '@cognizone/ng-core';
 import { from, identity } from 'rxjs';
 import { filter, first, mergeMap, switchMap } from 'rxjs/operators';
 
@@ -18,16 +18,11 @@ export class CvValueDirective extends OnDestroy$ implements OnChanges {
   @Input('czCvValueCvName')
   cvName!: Many<string>;
 
-  constructor(
-    private readonly templateRef: TemplateRef<unknown>,
-    private readonly viewContainer: ViewContainerRef,
-    private cdr: ChangeDetectorRef,
-    private cvService: CvService,
-    private logger: Logger
-  ) {
-    super();
-    this.logger = logger.extend('CvValueDirective');
-  }
+  private logger = inject(LoggerFactory).create('CvValueDirective');
+  private templateRef = inject(TemplateRef<unknown>);
+  private viewContainer = inject(ViewContainerRef);
+  private cdr = inject(ChangeDetectorRef);
+  private cvService = inject(CvService);
 
   ngOnChanges(): void {
     this.emptySink();

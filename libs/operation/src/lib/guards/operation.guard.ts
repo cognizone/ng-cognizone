@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot } from '@angular/router';
 
 import { OperationGroupDescription } from '../models/operation';
@@ -8,8 +8,9 @@ import { OperationsService } from '../services/operations.service';
 @Injectable({
   providedIn: 'root',
 })
-export class OperationGuard  {
-  constructor(private operationsService: OperationsService, private operationUtils: OperationUtils) {}
+export class OperationGuard {
+  private operationsService = inject(OperationsService);
+  private operationUtils = inject(OperationUtils);
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
     const { path, operationId } = route.data.operationPath as { path: OperationGroupDescription[]; operationId: string };

@@ -1,10 +1,10 @@
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { AbstractControl, UntypedFormArray, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
-import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, JsonModel, JsonModelService } from '@cognizone/json-model';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, JsonModel, JsonModelService } from '@cognizone/json-model';
 import { CvService } from '@cognizone/legi-cv';
 import { Many, manyToArray, notNil } from '@cognizone/model-utils';
 import { produce } from 'immer';
-import { isEqual, get, set } from 'lodash-es';
+import { get, isEqual, set } from 'lodash-es';
 import { merge, Observable } from 'rxjs';
 import { filter, finalize, map, switchMap, tap } from 'rxjs/operators';
 
@@ -12,14 +12,11 @@ import { GraphService } from './graph.service';
 
 @Injectable({ providedIn: 'root' })
 export class GraphAndControlLinkingService {
-  constructor(
-    private graphService: GraphService,
-    private cvService: CvService,
-    private jsonModelService: JsonModelService,
-    private fb: UntypedFormBuilder,
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper
-  ) {}
+  private graphService = inject(GraphService);
+  private cvService = inject(CvService);
+  private jsonModelService = inject(JsonModelService);
+  private fb = inject(UntypedFormBuilder);
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
 
   /**
    *

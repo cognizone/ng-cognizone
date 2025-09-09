@@ -4,7 +4,7 @@ import { DEVTOOLS_ENABLED_TOKEN } from '../models/devtools-enabled.token';
 
 @Directive({
   selector: '[czIfDebug]',
-  standalone: false,
+  standalone: true,
 })
 export class IfDebugDirective implements OnInit {
   constructor(

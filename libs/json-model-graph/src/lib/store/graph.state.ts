@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { JsonModelFlatGraph } from '@cognizone/json-model';
 import { manyToArray } from '@cognizone/model-utils';
-import { Logger } from '@cognizone/ng-core';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
 import { produce } from 'immer';
 
@@ -33,10 +32,6 @@ export const GRAPH_STATE_TOKEN = new StateToken<GraphStateModel>('cz_graph');
 })
 @Injectable()
 export class GraphState {
-  constructor(private logger: Logger) {
-    this.logger = this.logger.extend('GraphState');
-  }
-
   @Action(SetGraph)
   setGraph(ctx: StateContext<GraphStateModel>, { graph, definition }: SetGraph): void {
     ctx.setState(

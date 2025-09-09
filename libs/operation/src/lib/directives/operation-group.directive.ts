@@ -1,4 +1,4 @@
-import { Directive, ElementRef, EventEmitter, Inject, Input, OnChanges, OnInit, Optional, Output, SkipSelf } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, inject, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable, of, ReplaySubject, Subject } from 'rxjs';
@@ -10,7 +10,7 @@ import { OperationGroupDebug } from '../services/operation-group-debug.service';
 @Directive({
   selector: '[czOperationGroup]',
   providers: [OperationGroupDebug],
-  standalone: false,
+  standalone: true,
 })
 export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnChanges {
   @Input('czOperationGroup')
@@ -26,16 +26,10 @@ export class OperationGroupDirective extends OnDestroy$ implements OnInit, OnCha
 
   private description$: Subject<OperationGroupDescription> = new ReplaySubject(1);
 
-  constructor(
-    private elRef: ElementRef<HTMLElement>,
-    @Inject(DEVTOOLS_ENABLED_TOKEN) private devtoolsEnabled: boolean,
-    private operationGroupDebug: OperationGroupDebug,
-    @SkipSelf()
-    @Optional()
-    private parent?: OperationGroupDirective
-  ) {
-    super();
-  }
+  private elRef = inject(ElementRef<HTMLElement>);
+  private devtoolsEnabled = inject(DEVTOOLS_ENABLED_TOKEN);
+  private operationGroupDebug = inject(OperationGroupDebug);
+  private parent = inject(OperationGroupDirective, { optional: true, skipSelf: true });
 
   ngOnInit(): void {
     this.initPath();

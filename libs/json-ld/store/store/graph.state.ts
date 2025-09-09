@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { manyToArray } from '@cognizone/model-utils';
-import { Logger } from '@cognizone/ng-core';
 import { Action, State, StateContext, StateToken } from '@ngxs/store';
 import { produce } from 'immer';
 // eslint-disable-next-line @nx/enforce-module-boundaries -- needed for sub entries in lib
@@ -34,10 +33,6 @@ export const GRAPH_STATE_TOKEN = new StateToken<GraphStateModel>('cz_json_ld');
 })
 @Injectable()
 export class GraphState {
-  constructor(private logger: Logger) {
-    this.logger = this.logger.extend('GraphState');
-  }
-
   @Action(SetGraph)
   setGraph(ctx: StateContext<GraphStateModel>, { graph, graphUri }: SetGraph): void {
     ctx.setState(

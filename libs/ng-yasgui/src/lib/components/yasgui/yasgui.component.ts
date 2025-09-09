@@ -1,4 +1,16 @@
-import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  inject,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  Output,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
 import { Yasgui, YasguiOptions } from '../../models/yasgui';
@@ -8,7 +20,7 @@ import { YasguiService } from '../../services/yasgui.service';
   selector: 'cz-yasgui',
   templateUrl: 'yasgui.component.html',
   styleUrls: ['./yasgui.component.scss'],
-  standalone: false,
+  standalone: true,
 })
 export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
   @Input()
@@ -34,14 +46,14 @@ export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
 
   private yasgui!: Yasgui;
 
-  constructor(private yasguiService: YasguiService) {}
+  private yasguiService = inject(YasguiService);
 
   async ngOnInit(): Promise<void> {
     this.yasguiService.loadYasgui().subscribe();
     this.yasgui = await this.createYasgui();
     const yasqe = this.yasgui.current().yasqe;
     const yasr = this.yasgui.current().yasr;
-    const yasrResultElement = (this.yasguiRef.nativeElement.querySelector('.yasr_results') as HTMLElement);
+    const yasrResultElement = this.yasguiRef.nativeElement.querySelector('.yasr_results') as HTMLElement;
     yasqe.on('change', () => {
       this.query = yasqe.getValue();
       this.queryChange.emit(this.query);

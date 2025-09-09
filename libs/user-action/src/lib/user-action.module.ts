@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -42,18 +42,22 @@ const components = [UserActionTableComponent];
     AutocompleteModule,
   ],
   exports: [...components],
-  providers: [UserActionService, UserActionOptionsService, UserActionClient],
+  providers: [],
 })
-export class UserActionModule {
-  static withOptions(options?: UserActionsModuleOptions): ModuleWithProviders<UserActionModule> {
-    return {
-      ngModule: UserActionModule,
-      providers: [
-        {
-          provide: USER_ACTIONS_MODULE_OPTIONS_TOKEN,
-          useValue: options,
-        },
-      ],
-    };
-  }
+export class UserActionModule {}
+
+export function provideUserActionModule(options?: UserActionsModuleOptions): Provider[] {
+  return [
+    UserActionService,
+    UserActionOptionsService,
+    UserActionClient,
+    ...(options
+      ? [
+          {
+            provide: USER_ACTIONS_MODULE_OPTIONS_TOKEN,
+            useValue: options,
+          },
+        ]
+      : []),
+  ];
 }

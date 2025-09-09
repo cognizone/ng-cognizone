@@ -1,6 +1,6 @@
-import { Directive, Inject, InjectionToken, Input, OnChanges, Provider } from '@angular/core';
+import { Directive, inject, InjectionToken, Input, OnChanges, Provider } from '@angular/core';
 import { Many, manyToArray, SelectOptionsProvider, SelectOptionsProvidersMerger } from '@cognizone/model-utils';
-import { Logger, OnDestroy$ } from '@cognizone/ng-core';
+import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { CvService } from '../services/cv.service';
 
@@ -25,14 +25,8 @@ export class CvOptionsDirective extends OnDestroy$ implements OnChanges {
   @Input()
   cvName!: Many<string>;
 
-  constructor(
-    @Inject(HAS_OPTIONS_PROVIDER_TOKEN) private hasOptions: HasOptionsProvider<string>,
-    private cvService: CvService,
-    private logger: Logger
-  ) {
-    super();
-    this.logger = this.logger.extend('CvSelectDirective');
-  }
+  private hasOptions = inject(HAS_OPTIONS_PROVIDER_TOKEN);
+  private cvService = inject(CvService);
 
   ngOnChanges(): void {
     const cvNames = manyToArray(this.cvName);

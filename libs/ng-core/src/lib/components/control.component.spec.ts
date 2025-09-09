@@ -4,7 +4,7 @@ import { fakeAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, FormControl, FormGroup, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule, Validators } from '@angular/forms';
 import { noop } from 'rxjs';
 
-import { LoggerModule } from '../modules/logger/logger.module';
+import { provideLogger } from '../modules/logger/provide-logger';
 
 import { ControlComponent } from './control.component';
 
@@ -73,8 +73,9 @@ describe('ControlComponentComponent', () => {
     let component: DummyReactiveSimpleFormComponent;
     beforeEach(fakeAsync(async () => {
       TestBed.configureTestingModule({
-        imports: [ReactiveFormsModule, FormsModule, LoggerModule.forRoot('test')],
+        imports: [ReactiveFormsModule, FormsModule],
         declarations: [DummyInputComponent, DummyReactiveSimpleFormComponent],
+        providers: [provideLogger('test')],
       });
 
       await TestBed.compileComponents();
@@ -131,7 +132,8 @@ describe('ControlComponentComponent', () => {
     let component: DummyReactiveComplexFormComponent;
     beforeEach(fakeAsync(async () => {
       TestBed.configureTestingModule({
-        imports: [ReactiveFormsModule, FormsModule, LoggerModule.forRoot('test')],
+        imports: [ReactiveFormsModule, FormsModule],
+        providers: [provideLogger('test')],
         declarations: [DummyInputComponent, DummyReactiveComplexFormComponent],
       });
 
@@ -162,7 +164,8 @@ describe('ControlComponentComponent', () => {
     let component: DummyTemplateFormComponent;
     beforeEach(fakeAsync(async () => {
       TestBed.configureTestingModule({
-        imports: [ReactiveFormsModule, FormsModule, LoggerModule.forRoot('test')],
+        imports: [ReactiveFormsModule, FormsModule],
+        providers: [provideLogger('test')],
         declarations: [DummyInputComponent, DummyTemplateFormComponent],
       });
 

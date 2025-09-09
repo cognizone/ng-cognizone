@@ -12,7 +12,6 @@ import { createPrefix } from '../utils';
   providedIn: 'root',
 })
 export class SeoService {
-  state$: Observable<SeoState>;
   private meta = inject(Meta);
   private title = inject(Title);
   private document = inject(DOCUMENT);
@@ -22,13 +21,9 @@ export class SeoService {
       [MetaIds.HTML_PREFIX]: [{ id: 'og-prefix', value: createPrefix('og', 'https://ogp.me/ns#') }],
     },
   };
-  private _state$: BehaviorSubject<SeoState>;
+  private _state$: BehaviorSubject<SeoState> = new BehaviorSubject<SeoState>(this.defaultState);
+  state$: Observable<SeoState> = this._state$.asObservable();
   private count = 0;
-
-  constructor() {
-    this._state$ = new BehaviorSubject<SeoState>(this.defaultState);
-    this.state$ = this._state$.asObservable();
-  }
 
   reset(): void {
     this.setState(this.defaultState);

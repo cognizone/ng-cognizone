@@ -1,32 +1,31 @@
-import { Attribute, ChangeDetectorRef, Directive, Inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
-import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from '@cognizone/json-model';
-import { Logger, OnDestroy$ } from '@cognizone/ng-core';
+import { Attribute, ChangeDetectorRef, Directive, inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
+import { LoggerFactory, OnDestroy$ } from '@cognizone/ng-core';
 import { snakeCase } from 'lodash-es';
 
 import { UrisStoreService } from '../services';
 
 @Directive({
   selector: '[czNodeAttribute]',
-  standalone: false,
+  standalone: true,
 })
 export class NodeAttributeDirective extends OnDestroy$ implements OnInit {
   @Input('czNodeAttributeAttributeKey')
   attributeKey!: string;
 
+  private logger = inject(LoggerFactory).create('NodeAttributeDirective');
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private urisStoreService = inject(UrisStoreService);
+  private cdr = inject(ChangeDetectorRef);
+  private viewContainer = inject(ViewContainerRef);
+  private templateRef = inject(TemplateRef<unknown>);
+
   constructor(
-    private readonly templateRef: TemplateRef<unknown>,
-    private readonly viewContainer: ViewContainerRef,
-    private readonly logger: Logger,
-    private readonly cdr: ChangeDetectorRef,
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    private readonly urisStoreService: UrisStoreService,
     @Attribute('formGroupName') private readonly formGroupName?: string,
     @Attribute('formControlName') private readonly formControlName?: string,
     @Attribute('formArrayName') private readonly formArrayName?: string
   ) {
     super();
-    this.logger = logger.extend('NodeAttributeDirective');
   }
 
   ngOnInit(): void {

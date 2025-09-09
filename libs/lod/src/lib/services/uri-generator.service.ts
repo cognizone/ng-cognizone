@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Many, manyToArray } from '@cognizone/model-utils';
 
 import { LodOptionsService } from './lod-options.service';
@@ -7,7 +7,7 @@ import { LodOptionsService } from './lod-options.service';
 export class UriGenerator {
   private counter = 0;
 
-  constructor(private lodOptions: LodOptionsService) {}
+  private lodOptions = inject(LodOptionsService);
 
   create(types: Many<string> | undefined, { isBlankNode }: UriCreationOptions = {}): string {
     const defaultTypesLabel = 'Thing';

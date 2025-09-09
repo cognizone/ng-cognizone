@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import {
   ApplicationProfile,
   ApplicationProfileOrApName,
@@ -18,18 +18,20 @@ import {
 import { DatatypeLong, Many, manyToArray } from '@cognizone/model-utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries -- TODO fix me
 import { DataModelDefinitionHelper } from '@cognizone/json-model';
-import { Logger } from '@cognizone/ng-core';
+import { LoggerFactory } from '@cognizone/ng-core';
 import { memoize } from 'lodash-es';
 import { ApService } from './ap.service';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ApHelper implements DataModelDefinitionHelper<ApplicationProfileOrApName> {
   private apMap: WeakMap<ApplicationProfile, number> = new WeakMap();
 
   private weakMapCount = 0;
 
-  constructor(private logger: Logger, private apService: ApService) {
-    this.logger = logger.extend('ApHelper');
+  private logger = inject(LoggerFactory).create('ApHelper');
+  private apService = inject(ApService);
+
+  constructor() {
     this.getConcreteType = memoize(this.getConcreteType.bind(this), (ap: ApplicationProfileOrApName, classIds: Many<string>) => {
       ap = this.getAp(ap);
       if (!this.apMap.has(ap)) {

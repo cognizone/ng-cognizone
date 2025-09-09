@@ -7,7 +7,7 @@ import { GraphService, UrisStoreService } from '../services';
 @Directive({
   selector: '[czNodeUri]',
   providers: [UrisStoreService],
-  standalone: false,
+  standalone: true,
 })
 export class NodeUriDirective extends OnDestroy$ {
   @Input('czNodeUri')

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { selectProp } from '@cognizone/model-utils';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
@@ -23,7 +23,7 @@ export class OperationsService {
     return this.store.selectSnapshot(OPERATIONS_STATE_TOKEN).groups;
   }
 
-  constructor(private store: Store) {}
+  private store = inject(Store);
 
   setOperationGroups(groups: OperationGroup[]): void {
     this.store.dispatch(new SetOperationGroups(groups));

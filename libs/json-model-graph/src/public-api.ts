@@ -1,5 +1,3 @@
-export * from './lib/json-model-graph.module';
-
 export * from './lib/directives/if-attribute-in-ap.directive';
 export * from './lib/directives/node-attribute-linked.directive';
 export * from './lib/directives/node-attribute.directive';
