@@ -10,4 +10,12 @@ import { LangStringPipe } from './pipes/lang-string.pipe';
   imports: [],
   exports: [LangStringPipe],
 })
-export class TranslocoLangStringModule {}
+export class TranslocoLangStringModule {
+  static logged = false;
+  constructor() {
+    if (!TranslocoLangStringModule.logged) {
+      TranslocoLangStringModule.logged = true;
+      console.warn('TranslocoLangStringModule is deprecated, please use @cognizone/i18n instead');
+    }
+  }
+}

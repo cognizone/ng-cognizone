@@ -4,7 +4,7 @@ import { map, shareReplay } from 'rxjs/operators';
 
 import { YASGUI } from '../models/yasgui';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class YasguiService {
   assetsBasePath = 'assets/ng-yasgui';
 

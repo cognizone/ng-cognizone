@@ -1,5 +1,3 @@
-export * from './lib/operations.module';
-
 export * from './lib/components/operation-viewer-modal/operation-viewer-modal.component';
 
 export * from './lib/directives/get-operation.directive';

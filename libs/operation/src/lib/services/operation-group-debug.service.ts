@@ -1,7 +1,7 @@
-import { Injectable, OnDestroy, Renderer2 } from '@angular/core';
+import { inject, Injectable, OnDestroy, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Nil } from '@cognizone/model-utils';
-import { Logger, OnDestroy$ } from '@cognizone/ng-core';
+import { LoggerFactory, OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable } from 'rxjs';
 import { debounceTime, first, map } from 'rxjs/operators';
 
@@ -26,16 +26,11 @@ export class OperationGroupDebug extends OnDestroy$ implements OnDestroy {
 
   private borderStyle: string[] = ['dotted', 'solid', 'dashed', 'double'];
 
-  constructor(
-    private renderer: Renderer2,
-    private dialog: MatDialog,
-    private operationsService: OperationsService,
-    private operationUtils: OperationUtils,
-    private logger: Logger
-  ) {
-    super();
-    this.logger = logger.extend('OperationGroupDebug');
-  }
+  private renderer = inject(Renderer2);
+  private dialog = inject(MatDialog);
+  private operationsService = inject(OperationsService);
+  private operationUtils = inject(OperationUtils);
+  private logger = inject(LoggerFactory).create('OperationGroupDebug');
 
   ngOnDestroy(): void {
     this.removeDebug();

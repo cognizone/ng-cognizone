@@ -1,12 +1,12 @@
 import { ChangeDetectorRef, Directive, EmbeddedViewRef, Input, Optional, TemplateRef, ViewContainerRef } from '@angular/core';
 import { JsonModel, Uri } from '@cognizone/json-model';
 
-import { UrisStoreService, GraphWrapper, GraphWrapperFactory, NodeWrapper } from '../services';
+import { GraphWrapper, GraphWrapperFactory, NodeWrapper, UrisStoreService } from '../services';
 
 @Directive({
   selector: '[czRootUri]',
   providers: [UrisStoreService],
-  standalone: false,
+  standalone: true,
 })
 export class RootUriDirective {
   @Input('czRootUri')

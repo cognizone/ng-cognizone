@@ -1,16 +1,16 @@
-import { Directive, ElementRef, Host, Inject, Input, OnChanges, Optional } from '@angular/core';
+import { Directive, ElementRef, inject, Input, OnChanges } from '@angular/core';
 import { AbstractControl, ControlContainer, NgControl } from '@angular/forms';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
-import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper, isJsonModel, JsonModel } from '@cognizone/json-model';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN, isJsonModel, JsonModel } from '@cognizone/json-model';
 import { Many } from '@cognizone/model-utils';
-import { Logger, OnDestroy$ } from '@cognizone/ng-core';
+import { LoggerFactory, OnDestroy$ } from '@cognizone/ng-core';
 
-import { GraphWrapper, GraphAndControlLinkingService, GraphService, UrisStoreService } from '../services';
+import { GraphAndControlLinkingService, GraphService, GraphWrapper, UrisStoreService } from '../services';
 
 @Directive({
   selector: '[czNodeAttributeLinked]',
   exportAs: 'czNodeAttributeLinked',
-  standalone: false,
+  standalone: true,
 })
 export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChanges {
   @Input('czNodeAttributeLinked')
@@ -39,21 +39,15 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
     return this.urisStoreService.nodeUri;
   }
 
-  constructor(
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    private readonly graphService: GraphService,
-    private readonly graphControlService: GraphAndControlLinkingService,
-    private readonly urisStoreService: UrisStoreService,
-    @Inject(DEVTOOLS_ENABLED_TOKEN) private readonly devtoolsEnabled: boolean,
-    private logger: Logger,
-    @Optional() private elRef?: ElementRef<Comment | HTMLElement | undefined>,
-    @Host() @Optional() private ngControl?: NgControl,
-    @Host() @Optional() private controlContainer?: ControlContainer
-  ) {
-    super();
-    this.logger = logger.extend('NodeAttributeLinkedDirective');
-  }
+  private logger = inject(LoggerFactory).create('NodeAttributeLinkedDirective');
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private graphService = inject(GraphService);
+  private graphControlService = inject(GraphAndControlLinkingService);
+  private urisStoreService = inject(UrisStoreService);
+  private devtoolsEnabled = inject(DEVTOOLS_ENABLED_TOKEN);
+  private elRef = inject(ElementRef<Comment | HTMLElement | undefined>, { optional: true });
+  private ngControl = inject(NgControl, { optional: true, host: true });
+  private controlContainer = inject(ControlContainer, { optional: true, host: true });
 
   ngOnChanges(): void {
     this.emptySink();

@@ -1,4 +1,4 @@
-import { inject, Injectable, InjectionToken, OnDestroy, Injector } from '@angular/core';
+import { inject, Injectable, InjectionToken, Injector, OnDestroy } from '@angular/core';
 import { BehaviorSubject, MonoTypeOperatorFunction, Observable, pipe } from 'rxjs';
 import { distinctUntilChanged, finalize, map } from 'rxjs/operators';
 
@@ -17,17 +17,11 @@ export const LOADING_SERVICE_OPTIONS = new InjectionToken<LoadingServiceOptions>
 export class LoadingService implements OnDestroy {
   private options = inject(LOADING_SERVICE_OPTIONS);
 
-  loading$: Observable<boolean>;
+  private _loadings$: BehaviorSubject<Loadings> = new BehaviorSubject<Loadings>({});
+  loading$: Observable<boolean> = this.getLoading();
 
   get loading(): boolean {
     return this.getLoadingSnapshot();
-  }
-
-  private _loadings$: BehaviorSubject<Loadings>;
-
-  constructor() {
-    this._loadings$ = new BehaviorSubject<Loadings>({});
-    this.loading$ = this.getLoading();
   }
 
   addLoading(key: string = this.options.defaultKey): void {

@@ -1,31 +1,30 @@
-import { Attribute, ChangeDetectorRef, Directive, Inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
-import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from '@cognizone/json-model';
-import { Logger, OnDestroy$ } from '@cognizone/ng-core';
+import { Attribute, ChangeDetectorRef, Directive, inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
+import { LoggerFactory, OnDestroy$ } from '@cognizone/ng-core';
 
 import { UrisStoreService } from '../services';
 
 @Directive({
   selector: '[czIfAttributeInAp]',
-  standalone: false,
+  standalone: true,
 })
 export class IfAttributeInApDirective extends OnDestroy$ implements OnInit {
   @Input('czIfAttributeInAp')
   attributeKey!: string;
 
+  private templateRef = inject(TemplateRef<unknown>);
+  private viewContainer = inject(ViewContainerRef);
+  private cdr = inject(ChangeDetectorRef);
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private urisStoreService = inject(UrisStoreService);
+  private logger = inject(LoggerFactory).create('IfAttributeInApDirective');
+
   constructor(
-    private readonly templateRef: TemplateRef<unknown>,
-    private readonly viewContainer: ViewContainerRef,
-    private readonly logger: Logger,
-    private readonly cdr: ChangeDetectorRef,
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    private readonly urisStoreService: UrisStoreService,
     @Attribute('formGroupName') private readonly formGroupName?: string,
     @Attribute('formControlName') private readonly formControlName?: string,
     @Attribute('formArrayName') private readonly formArrayName?: string
   ) {
     super();
-    this.logger = logger.extend('IfAttributeInApDirective');
   }
 
   ngOnInit(): void {

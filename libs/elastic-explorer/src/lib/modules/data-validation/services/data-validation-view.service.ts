@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
@@ -9,7 +9,7 @@ import {
   SubSink,
   TypedResourceGraph,
 } from '@cognizone/model-utils';
-import { LoadingService, Logger } from '@cognizone/ng-core';
+import { LoadingService, LoggerFactory } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,7 +18,7 @@ import { ElasticClient } from '../../core';
 import { ElasticInstanceHandlerService } from '../../elastic-instance';
 import { DataError } from '../models/data-error';
 import { AddErrors, SetElasticQuery, SetErrors } from '../store/data-validation.actions';
-import { DataValidationStateModel, DATA_VALIDATION_STATE_TOKEN } from '../store/data-validation.state';
+import { DATA_VALIDATION_STATE_TOKEN, DataValidationStateModel } from '../store/data-validation.state';
 
 @Injectable()
 export class DataValidationViewService {
@@ -26,17 +26,13 @@ export class DataValidationViewService {
   elasticQuery$: Observable<{}> = this.state$.pipe(selectProp('elasticQuery'));
   private subSink: SubSink = new SubSink();
 
-  constructor(
-    private elastic: ElasticClient,
-    private elasticInstanceHandler: ElasticInstanceHandlerService,
-    private loadingService: LoadingService,
-    private router: Router,
-    private store: Store,
-    private matSnackBar: MatSnackBar,
-    private logger: Logger
-  ) {
-    this.logger = logger.extend('DataValidationViewService');
-  }
+  private logger = inject(LoggerFactory).create('DataValidationViewService');
+  private matSnackBar = inject(MatSnackBar);
+  private elastic = inject(ElasticClient);
+  private elasticInstanceHandler = inject(ElasticInstanceHandlerService);
+  private loadingService = inject(LoadingService);
+  private router = inject(Router);
+  private store = inject(Store);
 
   onPageLoad(route: ActivatedRoute): void {
     this.linkRouteToState(route);

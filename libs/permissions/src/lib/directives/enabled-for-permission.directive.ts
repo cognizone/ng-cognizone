@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Directive, HostBinding, Input, OnChanges, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Directive, HostBinding, inject, Input, OnChanges, OnInit } from '@angular/core';
 import { Many, Nil } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
@@ -23,9 +23,8 @@ export class EnabledForPermissionDirective extends OnDestroy$ implements OnInit,
 
   private hasPermission = false;
 
-  constructor(private permissionsService: PermissionsService, private cdr: ChangeDetectorRef) {
-    super();
-  }
+  private permissionsService = inject(PermissionsService);
+  private cdr = inject(ChangeDetectorRef);
 
   ngOnInit(): void {
     this.permissionsService

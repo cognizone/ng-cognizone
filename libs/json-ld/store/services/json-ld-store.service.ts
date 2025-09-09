@@ -1,13 +1,5 @@
 /* eslint-disable @nx/enforce-module-boundaries */
-import { Injectable, NgZone } from '@angular/core';
-import { Many, notNil } from '@cognizone/model-utils';
-import { Logger } from '@cognizone/ng-core';
-import { Store } from '@ngxs/store';
-import { produce } from 'immer';
-import { get, set } from 'lodash-es';
-import { Observable } from 'rxjs';
-import { distinctUntilChanged, filter, map } from 'rxjs/operators';
-import { RDF } from '@cognizone/lod-core';
+import { inject, Injectable, NgZone } from '@angular/core';
 import {
   ExpandedJsonLdContainer,
   getAllValueDescriptors,
@@ -17,6 +9,13 @@ import {
   RdfListElement,
 } from '@cognizone/json-ld-core';
 import { JsonLdService } from '@cognizone/json-ld/ng-core';
+import { RDF } from '@cognizone/lod-core';
+import { Many, notNil } from '@cognizone/model-utils';
+import { Store } from '@ngxs/store';
+import { produce } from 'immer';
+import { get, set } from 'lodash-es';
+import { Observable } from 'rxjs';
+import { distinctUntilChanged, filter, map } from 'rxjs/operators';
 
 import { GraphStatus } from '../models';
 import { RemoveGraph, Reset, SetGraph, UpdateNode, UpdateStatus } from '../store/graph.actions';
@@ -26,6 +25,10 @@ import { GRAPH_STATE_TOKEN, GraphStateModel } from '../store/graph.state';
   providedIn: 'root',
 })
 export class JsonLdStoreService {
+  private store = inject(Store);
+  private ngZone = inject(NgZone);
+  private jsonLdService = inject(JsonLdService);
+
   state$: Observable<GraphStateModel> = this.store.select(GRAPH_STATE_TOKEN);
 
   private copyCount = 0;
@@ -36,8 +39,7 @@ export class JsonLdStoreService {
     return this._state;
   }
 
-  constructor(private store: Store, private logger: Logger, private ngZone: NgZone, private jsonLdService: JsonLdService) {
-    this.logger = this.logger.extend('JsonLdStoreService');
+  constructor() {
     this.ngZone.runOutsideAngular(() => {
       this.state$.subscribe(state => (this._state = state));
     });

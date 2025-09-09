@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { ErrorHandler, Inject, Injectable } from '@angular/core';
+import { ErrorHandler, inject, Inject, Injectable } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Logger } from '@cognizone/ng-core';
+import { LoggerFactory } from '@cognizone/ng-core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
@@ -18,16 +18,16 @@ export class CognizoneMatIconRegistry extends MatIconRegistry {
 
   private options: Required<CognizoneMaterialIconsOptions>;
 
+  private logger = inject(LoggerFactory).create('CognizoneMatIconRegistry');
+
   constructor(
     private sanitizer: DomSanitizer,
     http: HttpClient,
     errorHandler: ErrorHandler,
-    @Inject(COGNIZONE_MATERIAL_ICONS_OPTIONS_TOKEN) options: CognizoneMaterialIconsOptions,
-    private logger: Logger
+    @Inject(COGNIZONE_MATERIAL_ICONS_OPTIONS_TOKEN) options: CognizoneMaterialIconsOptions
   ) {
     super(http, sanitizer, document, errorHandler);
     this.options = { ...DEFAULT_COGNIZONE_MATERIAL_ICONS_OPTIONS, ...options };
-    this.logger = logger.extend('SvgMaterialIconsService');
   }
 
   /**
