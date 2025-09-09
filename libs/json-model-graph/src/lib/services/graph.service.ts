@@ -1,7 +1,6 @@
-import { Injectable, NgZone } from '@angular/core';
-import { notNil } from '@cognizone/model-utils';
+import { inject, Injectable, NgZone } from '@angular/core';
 import { JsonModel, JsonModelFlat, JsonModelFlatGraph, JsonModelService } from '@cognizone/json-model';
-import { Logger } from '@cognizone/ng-core';
+import { notNil } from '@cognizone/model-utils';
 import { Store } from '@ngxs/store';
 import { produce } from 'immer';
 import { Observable } from 'rxjs';
@@ -15,6 +14,8 @@ import { GRAPH_STATE_TOKEN, GraphStateModel } from '../store/graph.state';
   providedIn: 'root',
 })
 export class GraphService {
+  private store = inject(Store);
+
   state$: Observable<GraphStateModel> = this.store.select(GRAPH_STATE_TOKEN);
 
   private copyCount = 0;
@@ -26,9 +27,10 @@ export class GraphService {
     return this._state;
   }
 
-  constructor(private store: Store, private logger: Logger, private jsonModelService: JsonModelService, private ngZone: NgZone) {
-    this.logger = this.logger.extend('GraphService');
-    this.ngZone.runOutsideAngular(() => {
+  private jsonModelService = inject(JsonModelService);
+
+  constructor(ngZone: NgZone) {
+    ngZone.runOutsideAngular(() => {
       this.state$.subscribe(state => (this._state = state));
     });
   }

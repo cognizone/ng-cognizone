@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Directive, ElementRef, EventEmitter, Inject, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { ChangeDetectorRef, Directive, ElementRef, EventEmitter, inject, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { Nil } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
@@ -16,7 +16,7 @@ import { OperationGroupDirective } from './operation-group.directive';
   selector: '[czOperation]',
   exportAs: 'czOperation',
   providers: [OperationDebug],
-  standalone: false,
+  standalone: true,
 })
 export class OperationDirective extends OnDestroy$ implements OnInit, OnChanges {
   @Input('czOperation')
@@ -35,17 +35,13 @@ export class OperationDirective extends OnDestroy$ implements OnInit, OnChanges 
 
   private id$: Subject<string> = new ReplaySubject(1);
 
-  constructor(
-    private elRef: ElementRef<HTMLElement>,
-    private operationUtils: OperationUtils,
-    @Inject(DEVTOOLS_ENABLED_TOKEN) private devtoolsEnabled: boolean,
-    private parent: OperationGroupDirective,
-    private cdr: ChangeDetectorRef,
-    private operationsService: OperationsService,
-    private operationDebug: OperationDebug
-  ) {
-    super();
-  }
+  private elRef = inject(ElementRef<HTMLElement>);
+  private operationUtils = inject(OperationUtils);
+  private devtoolsEnabled = inject(DEVTOOLS_ENABLED_TOKEN);
+  private parent = inject(OperationGroupDirective);
+  private cdr = inject(ChangeDetectorRef);
+  private operationsService = inject(OperationsService);
+  private operationDebug = inject(OperationDebug);
 
   ngOnInit(): void {
     this.initOperation();

@@ -1,10 +1,10 @@
-import { Injectable, NgZone } from '@angular/core';
-import { tap } from 'rxjs/operators';
+import { inject, Injectable, NgZone } from '@angular/core';
 import { MonoTypeOperatorFunction, Subscription, timer } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class TtlCacheFactory {
-  constructor(private ngZone: NgZone) {}
+  private ngZone = inject(NgZone);
 
   create<K, V>(options: TtlCacheOptions): TtlCache<K, V> {
     return new TtlCache(options, this.ngZone);

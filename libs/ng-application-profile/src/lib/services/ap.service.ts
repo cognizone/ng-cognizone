@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { ApplicationProfile } from '@cognizone/application-profile';
 import { firstValueFrom, isObservable } from 'rxjs';
 
@@ -7,7 +7,8 @@ import { AP_LOADER_TOKEN, ApLoader } from './ap-loader';
 
 @Injectable({ providedIn: 'root' })
 export class ApService {
-  constructor(private apStore: ApStore, @Inject(AP_LOADER_TOKEN) private loaders: ApLoader[]) {}
+  private apStore = inject(ApStore);
+  private loaders = inject(AP_LOADER_TOKEN);
 
   async init(): Promise<void> {
     for (const loader of this.loaders) {

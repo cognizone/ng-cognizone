@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JsonModelService, ResourceGraphService } from '@cognizone/json-model';
@@ -13,7 +13,7 @@ import {
   SubSink,
   TypedResourceGraph,
 } from '@cognizone/model-utils';
-import { LoadingService, Logger } from '@cognizone/ng-core';
+import { LoadingService, LoggerFactory } from '@cognizone/ng-core';
 import { Store } from '@ngxs/store';
 import { produce } from 'immer';
 import { combineLatest, EMPTY, Observable } from 'rxjs';
@@ -55,19 +55,18 @@ export class ElasticExplorerService {
 
   private subSink: SubSink = new SubSink();
 
-  constructor(
-    private store: Store,
-    private router: Router,
-    private logger: Logger,
-    private elasticInstanceService: ElasticInstanceService,
-    private snack: MatSnackBar,
-    private loadingService: LoadingService,
-    private elasticInstanceHandler: ElasticInstanceHandlerService,
-    private elasticClient: ElasticClient,
-    private resourceGraphService: ResourceGraphService,
-    private jsonModelService: JsonModelService
-  ) {
-    this.logger = logger.extend('DataExplorerService');
+  private logger = inject(LoggerFactory).create('ElasticExplorerService');
+  private elasticInstanceService = inject(ElasticInstanceService);
+  private loadingService = inject(LoadingService);
+  private elasticInstanceHandler = inject(ElasticInstanceHandlerService);
+  private elasticClient = inject(ElasticClient);
+  private resourceGraphService = inject(ResourceGraphService);
+  private jsonModelService = inject(JsonModelService);
+  private store = inject(Store);
+  private router = inject(Router);
+  private snack = inject(MatSnackBar);
+
+  constructor() {
     this.initFacetFields();
   }
 

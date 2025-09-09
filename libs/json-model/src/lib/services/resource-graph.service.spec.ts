@@ -2,15 +2,15 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @nx/enforce-module-boundaries */
 import { TypedResourceGraph } from '@cognizone/model-utils';
-import { LoggerModule } from '@cognizone/ng-core';
+import { provideLogger } from '@cognizone/ng-core';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 
 import { ApplicationProfile } from '@cognizone/application-profile';
-import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
+import { provideNgApplicationProfile } from '@cognizone/ng-application-profile';
 import { PrefixService } from '@cognizone/lod';
 import { JsonModel } from '../models/json-model';
 
-import { JsonModelModule } from '../json-model.module';
+import { provideJsonModel } from '../provide-json-model';
 import { ResourceGraphService } from './resource-graph.service';
 
 const directiveAp: ApplicationProfile = require('../../test/directive-ap.json');
@@ -28,7 +28,8 @@ const rawDraft3: TypedResourceGraph = require('../../test/data/draft-3.json');
 describe('ResourceGraphService', () => {
   const createService = createServiceFactory({
     service: ResourceGraphService,
-    imports: [JsonModelModule.forRoot(), NgApplicationProfileModule.forRoot(), LoggerModule.forRoot('TEST')],
+    imports: [],
+    providers: [provideNgApplicationProfile(), provideLogger('TEST'), provideJsonModel({ useDateMapper: true, useDateTimeMapper: true })],
   });
 
   let spectator: SpectatorService<ResourceGraphService>;

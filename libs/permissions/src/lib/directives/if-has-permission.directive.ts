@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, Directive, inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { Many, Nil } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
@@ -12,14 +12,10 @@ export class IfHasPermissionDirective extends OnDestroy$ implements OnInit {
   @Input('czIfHasPermission')
   permissions: Nil<Many<string>>;
 
-  constructor(
-    private readonly permissionsService: PermissionsService,
-    private readonly templateRef: TemplateRef<unknown>,
-    private readonly viewContainer: ViewContainerRef,
-    private cdr: ChangeDetectorRef
-  ) {
-    super();
-  }
+  private permissionsService = inject(PermissionsService);
+  private templateRef = inject(TemplateRef<unknown>);
+  private viewContainer = inject(ViewContainerRef);
+  private cdr = inject(ChangeDetectorRef);
 
   ngOnInit(): void {
     this.permissionsService

@@ -1,7 +1,7 @@
-import { Injectable, OnDestroy, Renderer2 } from '@angular/core';
+import { inject, Injectable, OnDestroy, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Nil } from '@cognizone/model-utils';
-import { Logger, OnDestroy$ } from '@cognizone/ng-core';
+import { LoggerFactory, OnDestroy$ } from '@cognizone/ng-core';
 import { combineLatest, Observable } from 'rxjs';
 import { debounceTime, first } from 'rxjs/operators';
 
@@ -21,15 +21,10 @@ export class OperationDebug extends OnDestroy$ implements OnDestroy {
 
   private unListen?: Function;
 
-  constructor(
-    private renderer: Renderer2,
-    private dialog: MatDialog,
-    private operationsService: OperationsService,
-    private logger: Logger
-  ) {
-    super();
-    this.logger = logger.extend('OperationDebug');
-  }
+  private renderer = inject(Renderer2);
+  private dialog = inject(MatDialog);
+  private operationsService = inject(OperationsService);
+  private logger = inject(LoggerFactory).create('OperationDebug');
 
   ngOnDestroy(): void {
     this.removeDebug();

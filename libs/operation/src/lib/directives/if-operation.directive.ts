@@ -1,14 +1,4 @@
-import {
-  ChangeDetectorRef,
-  Directive,
-  EmbeddedViewRef,
-  Inject,
-  Input,
-  OnInit,
-  Optional,
-  TemplateRef,
-  ViewContainerRef,
-} from '@angular/core';
+import { ChangeDetectorRef, Directive, EmbeddedViewRef, inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { DEVTOOLS_ENABLED_TOKEN } from '@cognizone/devtools';
 import { Many, manyToArray, Nil } from '@cognizone/model-utils';
 import { OnDestroy$ } from '@cognizone/ng-core';
@@ -25,7 +15,7 @@ import { OperationGroupDirective } from './operation-group.directive';
 @Directive({
   selector: '[czIfOperation]',
   providers: [OperationDebug],
-  standalone: false,
+  standalone: true,
 })
 export class IfOperationDirective extends OnDestroy$ implements OnInit {
   @Input('czIfOperation')
@@ -56,18 +46,14 @@ export class IfOperationDirective extends OnDestroy$ implements OnInit {
 
   private ref?: EmbeddedViewRef<unknown>;
 
-  constructor(
-    private templateRef: TemplateRef<unknown>,
-    private operationUtils: OperationUtils,
-    private cdr: ChangeDetectorRef,
-    private operationsService: OperationsService,
-    private vcr: ViewContainerRef,
-    private operationDebug: OperationDebug,
-    @Inject(DEVTOOLS_ENABLED_TOKEN) private devtoolsEnabled: boolean,
-    @Optional() private parent?: OperationGroupDirective
-  ) {
-    super();
-  }
+  private templateRef = inject(TemplateRef<unknown>);
+  private operationUtils = inject(OperationUtils);
+  private cdr = inject(ChangeDetectorRef);
+  private operationsService = inject(OperationsService);
+  private vcr = inject(ViewContainerRef);
+  private operationDebug = inject(OperationDebug);
+  private devtoolsEnabled = inject(DEVTOOLS_ENABLED_TOKEN);
+  private parent = inject(OperationGroupDirective, { optional: true });
 
   ngOnInit(): void {
     this.initOperation();

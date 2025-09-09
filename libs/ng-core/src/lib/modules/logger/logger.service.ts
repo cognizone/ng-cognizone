@@ -5,6 +5,8 @@ import { LOGGER_NAMESPACE_TOKEN } from './models/logger-namespace.token';
 
 export type LogFunction = (...args: unknown[]) => void;
 
+let warnedDeprecation = false;
+
 @Injectable({ providedIn: 'root' })
 export class Logger {
   // we use the `.bind` method to keep the correct line in the logs
@@ -29,6 +31,11 @@ export class Logger {
   }
 
   extend(namespace: string): Logger {
+    if (!warnedDeprecation) {
+      warnedDeprecation = true;
+      console.warn('Logger.extend is deprecated, please use LoggerFactory.create instead');
+    }
+
     if (this.namespace && namespace) {
       namespace = `${this.namespace}:${namespace}`;
     }

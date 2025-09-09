@@ -1,5 +1,5 @@
-import { Inject, Injectable, Optional, SkipSelf } from '@angular/core';
-import { DataModelDefinitionHelper, DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
+import { inject, Injectable } from '@angular/core';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
 
 import { GraphWrapper } from './graph-wrapper';
 import { GraphWrapperFactory } from './graph-wrapper.factory';
@@ -23,14 +23,9 @@ export class UrisStoreService {
   nodeUri!: string;
   private _rootUri!: string;
 
-  constructor(
-    private graphWrapperFactory: GraphWrapperFactory,
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    @Optional()
-    @SkipSelf()
-    private parent?: UrisStoreService
-  ) {}
+  private graphWrapperFactory = inject(GraphWrapperFactory);
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private parent = inject(UrisStoreService, { optional: true, skipSelf: true });
 
   getWrapper(): GraphWrapper {
     if (!this.rootUri) throw new Error('Cannot generate a wrapper with rootUri being Nil');

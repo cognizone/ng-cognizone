@@ -85,6 +85,26 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v5 to v6
+
+- Minimal Angular version is now 19
+- `@cognizone/devtools`: removed the NgModule, IfDebugDirective is now standalone
+- `@cognizone/json-model`:
+  - need to use the new `provideJsonModel` function instead of the old NgModule way
+  - `DateMapper` and `DateTimeMapper` have been deprecated but can be manually included if need be through options given to `provideJsonModel`. Those mappers will be removed in v7.
+    - The rationale is that the javascript `Date` class is really not great and we tend to lose information with it (or have wrong information, e.g. the date fix we have on legilux).
+- `@cognizone/json-model-graph`: removed the NgModule, all directives are standalone
+- `@cognizone/material-icons`: removed the NgModule in favour of `provideCognizoneMaterialIcons`
+- `@cognizone/ng-application-profile`: removed the NgModule in favour of `provideNgApplicationProfile`
+- `@cognizone/ng-core`:
+  - deprecated `Logger::extends` in favour of using `LoggerFactory::create`.
+  - removed `LoggerModule` in favour of `providerLogger()`
+- `@cognizone/ng-yasgui`: removed the NgModule, YasguiComponent is now standalone
+- `@cognizone/operation`: removed the NgModule, components and directives are now standalone
+- `@cognizone/permission`: removed the NgModule, components and directives are now standalone
+- `@cognizone/transloco-langstring`: deprecated the library, as @cognizone/i18n is more generic and handle the same cases. Should be removed in v7
+- `@cognizone/user-action`: replace UserActionModule.withOptions with a dedicated provider function `provideUserActionModule`
+
 ## Migrating from v4 to v5
 
 - Minimal Angular version is now 18

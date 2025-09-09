@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { JsonModel, JsonModelService } from '@cognizone/json-model';
 
 import { GraphWrapper } from './graph-wrapper';
@@ -7,7 +7,8 @@ import { NodeWrapper } from './node-wrapper';
 
 @Injectable({ providedIn: 'root' })
 export class GraphWrapperFactory {
-  constructor(private graphService: GraphService, private jsonModelService: JsonModelService) {}
+  private graphService = inject(GraphService);
+  private jsonModelService = inject(JsonModelService);
 
   getWrapper(rootUri: string): GraphWrapper {
     return new GraphWrapper(this.graphService, this.jsonModelService, rootUri);
