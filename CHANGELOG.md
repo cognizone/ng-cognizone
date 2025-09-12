@@ -1,3 +1,15 @@
+# [6.2.0](https://github.com/cognizone/ng-cognizone/compare/v6.1.1...v6.2.0) (2025-09-12)
+
+
+### Bug Fixes
+
+* **legi-cv:** provide directives and services using a function following new Angular pattern ([e393d37](https://github.com/cognizone/ng-cognizone/commit/e393d376ea08b451b9c892690e1ccc1cfb5fa117))
+
+
+### Features
+
+* migrate most libraries to v19 way of doing things ([22fc886](https://github.com/cognizone/ng-cognizone/commit/22fc886017151e8e4d34102cdecfe3d5cd94d8b2))
+
 ## [6.1.1](https://github.com/cognizone/ng-cognizone/compare/v6.1.0...v6.1.1) (2025-09-08)
 
 
