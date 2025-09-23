@@ -12,7 +12,7 @@ import {
   JsonLdValue,
 } from '@cognizone/json-ld-core';
 import { HANAMI, RDFS, SH } from '@cognizone/lod-core';
-import { Many, manyToArray, notNil } from '@cognizone/model-utils';
+import { Many, manyToArray } from '@cognizone/model-utils';
 import { TtlCache, TtlCacheFactory } from '@cognizone/ng-core';
 import {
   getConcreteNodeKindsOfPropertyShape,
@@ -155,12 +155,30 @@ export class ShaclShapesGraphHelper {
   }
 
   getNodeShapesForTypes(allTypes: Many<string>): ShNodeShape[] {
-    allTypes = manyToArray(allTypes);
+    const allTypesArr = manyToArray(allTypes);
+    const typesWithParentClasses = Array.from(
+      new Set(
+        allTypesArr.reduce((acc, type) => {
+          const parentClass = this.classUrisAndAncestors[type];
+          if (parentClass) {
+            acc.push(...parentClass);
+          }
+          return acc;
+        }, [] as string[])
+      )
+    );
+
+    typesWithParentClasses.sort((a, b) => {
+      const aScore = allTypesArr.includes(a) ? 0 : 1;
+      const bScore = allTypesArr.includes(b) ? 0 : 1;
+      return bScore - aScore;
+    });
+
     const typesWithShapes: string[] = [];
 
     const matcher = (type: string) => (nodeShapeUri: string) => this.nodeShapeUrisByTargetClass[type]?.includes(nodeShapeUri);
 
-    const matchingShapes = allTypes.reduce((shapes, type) => {
+    return typesWithParentClasses.reduce((shapes, type) => {
       this.nodeShapeUris.filter(matcher(type)).forEach(shapeUri => {
         typesWithShapes.push(type);
         shapes.push(this.shapesGraph.nodes[shapeUri]);
@@ -168,13 +186,15 @@ export class ShaclShapesGraphHelper {
 
       return shapes;
     }, [] as ShNodeShape[]);
-    if (matchingShapes.length <= 1) return [matchingShapes[0]].filter(notNil);
 
-    const nonEmptyShapes = matchingShapes.filter(shape => !!shape[SH.property]?.length);
-    if (nonEmptyShapes.length === 1) return [nonEmptyShapes[0]];
+    // Don't remember why we were doing this, commenting out for now
+    // if (matchingShapes.length <= 1) return [matchingShapes[0]].filter(notNil);
 
-    const concreteType = this.getConcreteType(typesWithShapes) ?? this.getConcreteType(allTypes);
-    return concreteType ? matchingShapes.filter(s => matcher(concreteType)(s['@id'])) : matchingShapes;
+    // const nonEmptyShapes = matchingShapes.filter(shape => !!shape[SH.property]?.length);
+    // return nonEmptyShapes;
+
+    // const concreteType = this.getConcreteType(typesWithShapes) ?? this.getConcreteType(allTypes);
+    // return concreteType ? matchingShapes.filter(s => matcher(concreteType)(s['@id'])) : matchingShapes;
   }
 
   getNodeShapesForTargetNode(nodeUri: string): ShNodeShape[] {
