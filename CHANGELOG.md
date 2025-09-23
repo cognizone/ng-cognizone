@@ -1,3 +1,9 @@
+## [3.17.7](https://github.com/cognizone/ng-cognizone/compare/v3.17.6...v3.17.7) (2025-09-23)
+
+### Bug Fixes
+
+- **shacl:** broaden class check ([c1ffc43](https://github.com/cognizone/ng-cognizone/commit/c1ffc43e126a6f0b8440b8589e3d30699aa8bccf))
+
 ## [3.17.6](https://github.com/cognizone/ng-cognizone/compare/v3.17.5...v3.17.6) (2025-09-23)
 
 ### Bug Fixes
