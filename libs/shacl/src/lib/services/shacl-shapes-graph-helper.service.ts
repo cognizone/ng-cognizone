@@ -384,7 +384,7 @@ export class ShaclShapesGraphHelper {
     };
 
     Object.values(this.shapesGraph.nodes).forEach(node => {
-      const isClass = isOfType(node, RDFS.Class);
+      const isClass = isOfType(node, RDFS.Class) || RDFS.subClassOf in node;
       const isNodeShape = isOfType<ShNodeShape>(node, SH.NodeShape);
       const isPropertyShape = isOfType<ShPropertyShape>(node, SH.PropertyShape);
 
