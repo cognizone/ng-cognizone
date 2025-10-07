@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/ui-kit",
-  "version": "5.1.6",
+  "version": "5.1.7",
   "peerDependencies": {
     "@angular/common": ">=18.0.0 <19",
     "@angular/core": ">=18.0.0 <19"
