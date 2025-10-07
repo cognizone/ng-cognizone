@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/legi-styles",
-  "version": "4.2.6",
+  "version": "4.2.7",
   "peerDependencies": {
     "@angular/material": ">=16.0.0 <18",
     "bootstrap": "^4.0.0",

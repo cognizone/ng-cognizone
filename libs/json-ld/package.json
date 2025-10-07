@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-ld",
-  "version": "4.2.6",
+  "version": "4.2.7",
   "optionalDependencies": {
     "@angular/core": ">=16.0.0",
     "@ngxs/store": "^3.8.0",

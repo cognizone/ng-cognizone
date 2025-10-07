@@ -1,3 +1,12 @@
+## [4.2.7](https://github.com/cognizone/ng-cognizone/compare/v4.2.6...v4.2.7) (2025-10-07)
+
+
+### Bug Fixes
+
+* **lod-core:** add float, decimal, long to xsd namespace + fix anyURI typo ([7e0983c](https://github.com/cognizone/ng-cognizone/commit/7e0983c83a3c269b375502c76374da5f171ded54))
+* **shacl:** broaden class check ([f03516e](https://github.com/cognizone/ng-cognizone/commit/f03516ebb8f6a47defad3393c350953c284f0033))
+* **shacl:** include parent shapes ([27e35d3](https://github.com/cognizone/ng-cognizone/commit/27e35d3f60cc8773d8c4e98d2ce16eac7220faa3))
+
 ## [4.2.6](https://github.com/cognizone/ng-cognizone/compare/v4.2.5...v4.2.6) (2025-06-16)
 
 
