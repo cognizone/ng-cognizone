@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/i18n-transloco",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "peerDependencies": {
     "@cognizone/i18n": ">=6.0.0 <7",
     "@cognizone/model-utils": ">=6.0.0 <7",
