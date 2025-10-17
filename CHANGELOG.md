@@ -1,3 +1,10 @@
+# [7.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.1...v7.0.0-beta.2) (2025-10-17)
+
+
+### Bug Fixes
+
+* set peer and optional dependencies ([255f409](https://github.com/cognizone/ng-cognizone/commit/255f40996c7b00e774a858c99029c484ca91c046))
+
 # [7.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v6.2.1...v7.0.0-beta.1) (2025-10-17)
 
 

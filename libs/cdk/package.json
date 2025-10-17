@@ -1,9 +1,9 @@
 {
   "name": "@cognizone/cdk",
-  "version": "7.0.0-beta.1",
+  "version": "7.0.0-beta.2",
   "peerDependencies": {
-    "@angular/common": ">=20.0.0 <21",
-    "@angular/core": ">=20.0.0 <21"
+    "@angular/common": ">=19.0.0 <20",
+    "@angular/core": ">=19.0.0 <20"
   },
   "dependencies": {
     "tslib": "^2.3.0"
