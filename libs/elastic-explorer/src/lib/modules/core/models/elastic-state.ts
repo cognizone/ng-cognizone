@@ -56,5 +56,5 @@ export function getIndexPropertyType(state: ElasticState, index: string, path: s
     .split('.')
     .map((value, i, arr) => (i < arr.length - 1 ? `${value}.properties` : value))
     .join('.');
-  return get(state, `metadata.indices.${index}.mappings._doc.properties.${subPath}`);
+  return get(state, `metadata.indices.${index}.mappings._doc.properties.${subPath}`) as ElasticPropertyType | undefined;
 }
