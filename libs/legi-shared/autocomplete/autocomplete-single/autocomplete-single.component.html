@@ -1,8 +1,13 @@
 <div class="d-flex flex-column">
-  <span *ngIf="label && classicMode" class="czls-title">{{ label }}</span>
+  @if (label && classicMode) {
+  <span class="czls-title">{{ label }}</span>
+  }
   <mat-form-field [class.cz-classic-appearance]="classicMode">
-    <mat-label *ngIf="label && !classicMode">{{ label }} </mat-label>
-    <mat-icon *ngIf="profile === 'search'" matPrefix>search</mat-icon>
+    @if (label && !classicMode) {
+    <mat-label>{{ label }} </mat-label>
+    } @if (profile === 'search') {
+    <mat-icon matPrefix>search</mat-icon>
+    }
     <textarea
       #singleInput
       matInput
@@ -16,22 +21,24 @@
       (input)="queryChanges.next(singleInput.value)"
       (blur)="onSingleBlur()"
     ></textarea>
-    <button *ngIf="profile === 'select'" matSuffix mat-icon-button (click)="queryChanges.next('')">
+    @if (profile === 'select') {
+    <button matSuffix mat-icon-button (click)="queryChanges.next('')">
       <mat-icon>arrow_drop_down</mat-icon>
     </button>
-    <button matSuffix mat-icon-button *ngIf="canBeDiscarded && model" (click)="discard()">
+    } @if (canBeDiscarded && model) {
+    <button matSuffix mat-icon-button (click)="discard()">
       <mat-icon>close</mat-icon>
     </button>
-    <mat-hint *ngIf="hint" class="czls-caption"> {{ hint }}</mat-hint>
+    } @if (hint) {
+    <mat-hint class="czls-caption"> {{ hint }}</mat-hint>
+    }
   </mat-form-field>
 </div>
 
 <mat-autocomplete #auto [displayWith]="displayFn" [panelWidth]="panelWidth" (optionSelected)="onOptionSelected($event)">
-  <mat-option
-    *ngFor="let option of options | selectOptionsSort: sortType; trackBy: trackByFn"
-    [value]="option.value"
-    [disabled]="option.disabled"
-    [matTooltip]="getTooltip(option) | czLabel: lang"
-    >{{ option.label | czLabel: lang }}</mat-option
-  >
+  @for (option of options | selectOptionsSort: sortType; track trackByFn($index, option)) {
+  <mat-option [value]="option.value" [disabled]="option.disabled" [matTooltip]="getTooltip(option) | czLabel: lang">{{
+    option.label | czLabel: lang
+  }}</mat-option>
+  }
 </mat-autocomplete>

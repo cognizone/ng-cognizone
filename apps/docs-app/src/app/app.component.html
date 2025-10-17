@@ -10,8 +10,8 @@
   <div style="flex-grow: 1"></div>
   <a href="https://bitbucket.org/cognizone/ng-cognizone/" mat-button target="_blank">
     <img style="width: 24px; height: 24px" src="assets/icons/bitbucket.svg" />
-    Bitbucket
-    <ng-container *ngIf="version$ | async as version">v{{ version }}</ng-container>
+    Bitbucket @if (version$ | async; as version) { v{{ version }}
+    }
   </a>
 </mat-toolbar>
 <mat-sidenav-container>
@@ -22,24 +22,35 @@
     <app-anchor-nav></app-anchor-nav>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar *ngIf="title">
+    @if (title) {
+    <mat-toolbar>
       {{ title }}
-      <ng-container *ngIf="subtitle"> - {{ subtitle }}</ng-container>
+      @if (subtitle) { - {{ subtitle }}
+      }
     </mat-toolbar>
+    }
     <div class="main-content">
       <router-outlet></router-outlet>
-      <div *ngIf="pagination$ | async as pagination" fxLayout="row">
-        <a *ngIf="pagination.previous" [routerLink]="[pagination?.previous?.path]" mat-button (click)="scrollToTop()">
+      @if (pagination$ | async; as pagination) {
+      <div fxLayout="row">
+        @if (pagination.previous) {
+        <a [routerLink]="[pagination?.previous?.path]" mat-button (click)="scrollToTop()">
           <mat-icon>keyboard_arrow_left</mat-icon>
           {{ pagination?.previous?.label }}
         </a>
+        }
         <div style="flex-grow: 1"></div>
-        <a *ngIf="pagination.next" [routerLink]="[pagination?.next?.path]" mat-button (click)="scrollToTop()">
+        @if (pagination.next) {
+        <a [routerLink]="[pagination?.next?.path]" mat-button (click)="scrollToTop()">
           {{ pagination?.next?.label }}
           <mat-icon>keyboard_arrow_right</mat-icon>
         </a>
+        }
       </div>
+      }
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<div *ngIf="easter$ | async as html" class="easter" [innerHTML]="html"></div>
+@if (easter$ | async; as html) {
+<div class="easter" [innerHTML]="html"></div>
+}

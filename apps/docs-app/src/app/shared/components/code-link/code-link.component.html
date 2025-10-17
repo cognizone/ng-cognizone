@@ -2,11 +2,12 @@
   <ng-content></ng-content>
 </ng-template>
 
-<a *ngIf="showPreview; else simpleTemplate" [href]="sourceUrl" appComponentTooltip="code" [inputs]="{ url: previewUrl }">
+@if (showPreview) {
+<a [href]="sourceUrl" appComponentTooltip="code" [inputs]="{ url: previewUrl }">
   <ng-container *ngTemplateOutlet="content"></ng-container>
 </a>
-<ng-template #simpleTemplate>
-  <a [href]="sourceUrl">
-    <ng-container *ngTemplateOutlet="content"></ng-container>
-  </a>
-</ng-template>
+} @else {
+<a [href]="sourceUrl">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</a>
+}

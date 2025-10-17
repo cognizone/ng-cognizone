@@ -1,14 +1,20 @@
 <div class="container-fluid">
   <div class="row flex-nowrap">
-    <div *ngIf="showMenu" class="my-side-menu">
+    @if (showMenu) {
+    <div class="my-side-menu">
       <cz-elastic-picker></cz-elastic-picker>
       <mat-divider></mat-divider>
       <cz-filters-form></cz-filters-form>
     </div>
-    <main class="col" [ngSwitch]="viewType">
-      <cz-results-structured *ngSwitchCase="'structured'"></cz-results-structured>
-      <cz-results-raw *ngSwitchCase="'raw'"></cz-results-raw>
-      <cz-results-table *ngSwitchDefault></cz-results-table>
+    }
+    <main class="col">
+      @switch (viewType) { @case ('structured') {
+      <cz-results-structured></cz-results-structured>
+      } @case ('raw') {
+      <cz-results-raw></cz-results-raw>
+      } @default {
+      <cz-results-table></cz-results-table>
+      } }
     </main>
   </div>
 </div>

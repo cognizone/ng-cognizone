@@ -25,7 +25,9 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('action') }}</th>
       <td mat-cell *matCellDef="let action" class="pr-3">
-        <div *ngIf="action['http.actionPath']">{{ action['http.actionPath'] }}</div>
+        @if (action['http.actionPath']) {
+        <div>{{ action['http.actionPath'] }}</div>
+        }
         <div>{{ action.name || action.methodName }}</div>
       </td>
     </ng-container>
@@ -60,12 +62,15 @@
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef class="pr-3">{{ t('status') }}</th>
       <td mat-cell *matCellDef="let action" class="pr-3">
-        <button *ngIf="action.success" mat-icon-button disabled>
+        @if (action.success) {
+        <button mat-icon-button disabled>
           <mat-icon class="my-success-icon" color="primary">check_circle</mat-icon>
         </button>
-        <button *ngIf="!action.success" mat-icon-button (click)="downloadAction(action)">
+        } @if (!action.success) {
+        <button mat-icon-button (click)="downloadAction(action)">
           <mat-icon color="warn">error</mat-icon>
         </button>
+        }
       </td>
     </ng-container>
 

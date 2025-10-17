@@ -2,9 +2,7 @@
   <app-article-title [lastUpdate]="lastUpdate">Components</app-article-title>
   <h2 class="mat-h2" appAnchor>General information</h2>
   <section>
-    <p>
-      Here are a few global rules to follow when creating a component:
-    </p>
+    <p>Here are a few global rules to follow when creating a component:</p>
     <ul>
       <li>
         Methods that are not used in the template and that are not life-cycle methods should be private, so that it's easier to see
@@ -74,13 +72,13 @@
         <app-cd-on-push [number]="numberControl.value"></app-cd-on-push>
         <div>
           <button mat-raised-button (click)="showIntervalComponent = !showIntervalComponent">Toggle Component with interval inside</button>
-          <app-on-push-async-pipe *ngIf="showIntervalComponent"></app-on-push-async-pipe>
+          @if (showIntervalComponent) {
+          <app-on-push-async-pipe></app-on-push-async-pipe>
+          }
         </div>
       </div>
     </mat-card>
-    <p>
-      After playing a bit with the different interactive elements above, you might have seen interesting stuff:
-    </p>
+    <p>After playing a bit with the different interactive elements above, you might have seen interesting stuff:</p>
     <ul>
       <li>
         C1 has its rendering count increasing whenever there is some interaction with the page: a button being click, a tooltip being

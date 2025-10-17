@@ -14,9 +14,11 @@
         Data Validation
       </a>
       <div style="flex-grow: 1"></div>
-      <div *ngIf="loading$ | async" class="my-progress-bar-container">
+      @if (loading$ | async) {
+      <div class="my-progress-bar-container">
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
       </div>
+      }
     </div>
   </mat-toolbar>
 </header>

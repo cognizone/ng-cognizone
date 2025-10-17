@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/user-action/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -28,9 +29,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/user-action"],
       "options": {
-        "jestConfig": "libs/user-action/jest.config.ts"
+        "jestConfig": "libs/user-action/jest.config.ts",
+        "tsConfig": "libs/user-action/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

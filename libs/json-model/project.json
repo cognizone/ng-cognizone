@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/json-model/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -26,13 +27,13 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/json-model"],
       "options": {
-        "jestConfig": "libs/json-model/jest.config.ts"
+        "jestConfig": "libs/json-model/jest.config.ts",
+        "tsConfig": "libs/json-model/tsconfig.spec.json"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     }
-  },
-  "tags": []
+  }
 }

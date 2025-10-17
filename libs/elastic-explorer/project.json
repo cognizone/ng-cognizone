@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/elastic-explorer/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -25,9 +26,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/elastic-explorer"],
       "options": {
-        "jestConfig": "libs/elastic-explorer/jest.config.ts"
+        "jestConfig": "libs/elastic-explorer/jest.config.ts",
+        "tsConfig": "libs/elastic-explorer/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

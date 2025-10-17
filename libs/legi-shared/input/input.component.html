@@ -1,6 +1,10 @@
-<div *ngIf="(label || labelComponent) && classicMode" class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></div>
+@if ((label || labelComponent) && classicMode) {
+<div class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></div>
+}
 <mat-form-field #outlineFieldRef appearance="outline" [ngClass]="{ 'is-readonly': readonly, 'cz-classic-appearance': classicMode }">
-  <mat-label *ngIf="(label || labelComponent) && !classicMode">{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+  @if ((label || labelComponent) && !classicMode) {
+  <mat-label>{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+  }
   <input
     matInput
     [autocomplete]="inputAutocomplete"
@@ -14,14 +18,19 @@
     [attr.aria-label]="ariaLabel"
     (blur)="onBlur($event)"
   />
-  <span *ngIf="suffixTpl" matSuffix>
+  @if (suffixTpl) {
+  <span matSuffix>
     <ng-container *ngTemplateOutlet="suffixTpl"></ng-container>
   </span>
-  <span class="d-block pr-3" *ngIf="prefixTpl" matPrefix>
+  } @if (prefixTpl) {
+  <span class="d-block pr-3" matPrefix>
     <ng-container *ngTemplateOutlet="prefixTpl"></ng-container>
   </span>
-  <mat-hint *ngIf="hint" class="czls-caption"> {{ hint }}</mat-hint>
-  <mat-error *ngIf="showErrors">
+  } @if (hint) {
+  <mat-hint class="czls-caption"> {{ hint }}</mat-hint>
+  } @if (showErrors) {
+  <mat-error>
     <cz-error></cz-error>
   </mat-error>
+  }
 </mat-form-field>

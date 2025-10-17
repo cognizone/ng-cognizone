@@ -4,7 +4,9 @@
       <img #img [src]="src" [ngStyle]="style" />
     </a>
     <div class="app-spinner-container">
-      <mat-spinner *ngIf="loading"></mat-spinner>
+      @if (loading) {
+      <mat-spinner></mat-spinner>
+      }
     </div>
   </div>
 </mat-card>

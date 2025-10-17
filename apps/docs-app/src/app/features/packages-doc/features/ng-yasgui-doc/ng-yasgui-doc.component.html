@@ -1,174 +1,91 @@
 <mat-tab-group appMatTabRouted [dynamicHeight]="true" (animationDone)="refreshYasgui()">
-
-
   <mat-tab label="OVERVIEW">
-
-
     <p>
-
-
       <app-inline-code>&lt;cz-yasgui&gt;</app-inline-code>
-       is an angular wrapper around
+      is an angular wrapper around
       <a href="http://yasgui.org/" target="_blank">yasgui</a>
       . Here is a basic example of it's use without any input:
     </p>
 
-
     <mat-card>
-
-
-      <cz-yasgui *ngIf="displayYasgui"></cz-yasgui>
-
-
+      @if (displayYasgui) {
+      <cz-yasgui></cz-yasgui>
+      }
     </mat-card>
 
-
-    <p> Here are some issues you might want to take into consideration when using this component/module: </p>
-
+    <p>Here are some issues you might want to take into consideration when using this component/module:</p>
 
     <ul>
-
-
       <li>
-         Beware that this component is quite heavy, so it's is recommended to import
+        Beware that this component is quite heavy, so it's is recommended to import
         <app-inline-code>NgYasguiModule</app-inline-code>
-         only in lazy loaded modules to minimize the impact on the UX.
+        only in lazy loaded modules to minimize the impact on the UX.
       </li>
-
 
       <li>
-         At the moment, only one instance of
+        At the moment, only one instance of
         <app-inline-code>&lt;cz-yasgui&gt;</app-inline-code>
-         can be used on a page, the second instance doesn't seem to render properly, might be a limitation of yasgui itself
+        can be used on a page, the second instance doesn't seem to render properly, might be a limitation of yasgui itself
       </li>
-
-
     </ul>
-
-
   </mat-tab>
-
 
   <mat-tab label="API">
-
-
     <h2>API reference for cz-yasgui</h2>
 
-
     <p>
-
-
       <app-inline-code>{{ "import { NgYasguiModule } from '@cognizone/ng-yasgui';" }}</app-inline-code>
-
-
     </p>
 
-
     <mat-card>
-
-
       <app-api-table [apis]="apis"></app-api-table>
-
-
     </mat-card>
-
-
   </mat-tab>
 
-
   <mat-tab label="PLAYGROUND">
-
-
     <h2>Playground</h2>
 
-
     <mat-card>
-
-
       <mat-card-title>Inputs</mat-card-title>
 
-
       <mat-card-content>
-
-
         <form [formGroup]="form">
-
-
           <mat-form-field>
-
-
             <mat-label>options</mat-label>
-
 
             <textarea matInput formControlName="options"></textarea>
 
-
             <mat-hint>need refresh (button below yasgui component)</mat-hint>
-
-
           </mat-form-field>
-
 
           <mat-form-field>
-
-
             <mat-label>query</mat-label>
 
-
             <textarea matInput formControlName="query"></textarea>
-
-
           </mat-form-field>
 
-
           <mat-slide-toggle formControlName="multiple">multiple</mat-slide-toggle>
-
-
         </form>
-
-
       </mat-card-content>
-
-
     </mat-card>
 
-
     <mat-card>
-
-
       <mat-card-title>cz-yasgui</mat-card-title>
 
-
       <mat-card-content>
-
-
+        @if (displayYasgui) {
         <cz-yasgui
-          *ngIf="displayYasgui"
           [options]="options"
           [query]="form.value.query"
           [multiple]="form.value.multiple"
           (queryChange)="form.patchValue({ query: $event })"
         ></cz-yasgui>
-
-
+        }
       </mat-card-content>
 
-
       <mat-card-actions>
-
-
         <button mat-raised-button color="primary" (click)="refreshYasgui()">REFRESH</button>
-
-
       </mat-card-actions>
-
-
     </mat-card>
-
-
   </mat-tab>
-
-
 </mat-tab-group>
-
-

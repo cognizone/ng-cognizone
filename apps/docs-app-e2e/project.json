@@ -3,12 +3,13 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/docs-app-e2e/src",
   "projectType": "application",
+  "tags": [],
+  "implicitDependencies": ["docs-app"],
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "apps/docs-app-e2e/cypress.json",
-        "tsConfig": "apps/docs-app-e2e/tsconfig.e2e.json",
         "devServerTarget": "docs-app:serve"
       },
       "configurations": {
@@ -21,7 +22,5 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     }
-  },
-  "tags": [],
-  "implicitDependencies": ["docs-app"]
+  }
 }

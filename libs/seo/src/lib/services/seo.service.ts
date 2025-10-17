@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, DOCUMENT } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Many, manyToArray, Nil } from '@cognizone/model-utils';
 import { produce } from 'immer';

@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/ng-application-profile/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -28,9 +29,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ng-application-profile"],
       "options": {
-        "jestConfig": "libs/ng-application-profile/jest.config.ts"
+        "jestConfig": "libs/ng-application-profile/jest.config.ts",
+        "tsConfig": "libs/ng-application-profile/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

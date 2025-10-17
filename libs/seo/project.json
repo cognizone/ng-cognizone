@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/seo/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -26,12 +27,12 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/seo/jest.config.ts"
+        "jestConfig": "libs/seo/jest.config.ts",
+        "tsConfig": "libs/seo/tsconfig.spec.json"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint"
     }
-  },
-  "tags": []
+  }
 }

@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/legi-cv/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -28,9 +29,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/legi-cv"],
       "options": {
-        "jestConfig": "libs/legi-cv/jest.config.ts"
+        "jestConfig": "libs/legi-cv/jest.config.ts",
+        "tsConfig": "libs/legi-cv/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

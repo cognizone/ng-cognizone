@@ -1,13 +1,19 @@
 <label class="d-flex flex-column" [class.is-readonly]="readonly">
-  <span *ngIf="(label || labelComponent) && classicMode" class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
+  @if ((label || labelComponent) && classicMode) {
+  <span class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
+  }
   <mat-form-field appearance="outline" [class.cz-classic-appearance]="classicMode" class="my-date-picker">
-    <mat-label *ngIf="(label || labelComponent) && !classicMode">{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
-    <mat-datepicker-toggle matPrefix [for]="picker" *ngIf="iconPosition === 'prefix'">
+    @if ((label || labelComponent) && !classicMode) {
+    <mat-label>{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+    } @if (iconPosition === 'prefix') {
+    <mat-datepicker-toggle matPrefix [for]="picker">
       <mat-icon matDatepickerToggleIcon>event</mat-icon>
     </mat-datepicker-toggle>
-    <mat-datepicker-toggle *ngIf="iconPosition === 'suffix'" matSuffix [for]="picker">
+    } @if (iconPosition === 'suffix') {
+    <mat-datepicker-toggle matSuffix [for]="picker">
       <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
     </mat-datepicker-toggle>
+    }
 
     <input
       matInput
@@ -20,7 +26,9 @@
       [name]="name"
       type="text"
     />
-    <mat-hint *ngIf="hint">{{ hint }}</mat-hint>
+    @if (hint) {
+    <mat-hint>{{ hint }}</mat-hint>
+    }
     <mat-error>
       <cz-error></cz-error>
     </mat-error>

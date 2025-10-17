@@ -1,3 +1,5 @@
 <mat-card>
-  <ngx-json-viewer *ngIf="response" [json]="response" [depth]="3"></ngx-json-viewer>
+  @if (response) {
+  <ngx-json-viewer [json]="response" [depth]="3"></ngx-json-viewer>
+  }
 </mat-card>

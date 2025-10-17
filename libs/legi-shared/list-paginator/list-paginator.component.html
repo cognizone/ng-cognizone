@@ -16,7 +16,9 @@
     <mat-icon>chevron_left</mat-icon>
   </button>
 
-  <a *ngFor="let page of pages" [class.is-active]="page === activePage" (click)="activePage = page">{{ page + 1 }}</a>
+  @for (page of pages; track page) {
+  <a [class.is-active]="page === activePage" (click)="activePage = page">{{ page + 1 }}</a>
+  }
 
   <button
     mat-icon-button
@@ -38,7 +40,9 @@
   <div class="size-select d-flex align-items-center">
     <span>{{ 'global.results_per_page' | czTranslate }}</span>
     <mat-select [formControl]="sizeControl" [attr.aria-label]="'global.select_size' | czTranslate">
-      <mat-option *ngFor="let size of sizes" [value]="size">{{ size }}</mat-option>
+      @for (size of sizes; track size) {
+      <mat-option [value]="size">{{ size }}</mat-option>
+      }
     </mat-select>
   </div>
 </div>
