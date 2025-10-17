@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nrwl/devkit';
+import { ExecutorContext } from '@nx/devkit';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import * as shell from 'shelljs';
