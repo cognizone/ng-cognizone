@@ -1,3 +1,15 @@
+# [7.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v6.2.1...v7.0.0-beta.1) (2025-10-17)
+
+
+### Features
+
+* prepare v7 of the libs ([7936e8e](https://github.com/cognizone/ng-cognizone/commit/7936e8e934789fac602bab96328b401256409ecc))
+
+
+### BREAKING CHANGES
+
+* upgraded to angular v20 and nx v21
+
 ## [6.2.1](https://github.com/cognizone/ng-cognizone/compare/v6.2.0...v6.2.1) (2025-10-07)
 
 
