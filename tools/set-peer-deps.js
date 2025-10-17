@@ -75,7 +75,7 @@ function processLibraries() {
   console.log('Scanning libraries in:', libsDir);
 
   const dirs = readdirSync(libsDir)
-    .filter(dir => !dir.startsWith('.'))
+    .filter(dir => !dir.startsWith('.') && dir !== 'cli')
     .map(dir => join(libsDir, dir));
 
   let totalUpdated = 0;
