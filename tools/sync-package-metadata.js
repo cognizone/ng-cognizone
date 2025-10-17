@@ -1,8 +1,10 @@
-const { readdirSync, readFileSync, writeFileSync } = require('fs');
+const { readdirSync, readFileSync, writeFileSync, statSync } = require('fs');
 const { join, dirname, relative } = require('path');
 
 const libDist = join(__dirname, '../libs');
-const packageFiles = readdirSync(libDist).map(dir => join(libDist, dir, 'package.json'));
+const packageFiles = readdirSync(libDist)
+  .filter(dir => !dir.startsWith('.'))
+  .map(dir => join(libDist, dir, 'package.json'));
 
 function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'));
