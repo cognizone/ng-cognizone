@@ -1,3 +1,10 @@
+# [7.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.2...v7.0.0-beta.3) (2025-10-23)
+
+
+### Features
+
+* **result:** add toError and toOk utils + added bunch of documentation ([f323a84](https://github.com/cognizone/ng-cognizone/commit/f323a842171c902a010b373e4e75df665d03c91e))
+
 # [7.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.1...v7.0.0-beta.2) (2025-10-17)
 
 
