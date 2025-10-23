@@ -1,3 +1,10 @@
+# [6.3.0](https://github.com/cognizone/ng-cognizone/compare/v6.2.1...v6.3.0) (2025-10-23)
+
+
+### Features
+
+* **result:** add toError and toOk utils + added bunch of documentation ([ecf73b0](https://github.com/cognizone/ng-cognizone/commit/ecf73b07118f22190f2df1ff6f48124549366ece))
+
 ## [6.2.1](https://github.com/cognizone/ng-cognizone/compare/v6.2.0...v6.2.1) (2025-10-07)
 
 
