@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, forwardRef, ViewChild } from '@angular/core';
+import { Component, forwardRef, inject, ViewChild } from '@angular/core';
 import { fakeAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, FormControl, FormGroup, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule, Validators } from '@angular/forms';
 import { noop } from 'rxjs';
@@ -44,6 +44,8 @@ class DummyReactiveSimpleFormComponent {
   standalone: false,
 })
 class DummyReactiveComplexFormComponent {
+  private fb: FormBuilder = inject(FormBuilder);
+
   @ViewChild('input1', { static: true })
   input1!: DummyInputComponent;
 
@@ -52,8 +54,6 @@ class DummyReactiveComplexFormComponent {
       arr: this.fb.array([this.fb.group({ input1: [] })]),
     }),
   });
-
-  constructor(private fb: FormBuilder) {}
 }
 
 @Component({

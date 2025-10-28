@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-inject */
 import { Attribute, ChangeDetectorRef, Directive, inject, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
 import { LoggerFactory, OnDestroy$ } from '@cognizone/ng-core';

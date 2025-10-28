@@ -85,6 +85,16 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v6 to v7
+
+- Minimal Angular version is now 20
+- `legi-shared`, `legi-styles` and `user-action` are no longer maintained withing ng-cognizone. If you need them, please:
+  - copy/paste them from their v6 version into your project.
+  - Then it should mostly be a matter of adapting paths in tsconfig to adapt, for example, the path to `@cognizone/legi-shared`.
+  - And adapting some path that import legi-styles too ofc
+- `@cognizone/ng-core`
+  - `LoggerService`: removed the deprecated `extend` method, please use `LoggerFactory` instead
+
 ## Migrating from v5 to v6
 
 - Minimal Angular version is now 19

@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-inject */
 import { HttpClient } from '@angular/common/http';
 import { ErrorHandler, inject, Inject, Injectable } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';

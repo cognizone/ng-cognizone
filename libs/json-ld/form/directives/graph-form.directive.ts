@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Directive, EmbeddedViewRef, Input, Optional, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, Directive, EmbeddedViewRef, inject, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 import { UrisStoreService } from '../services';
 
@@ -21,13 +21,10 @@ export class GraphFormDirective {
 
   private currentView?: EmbeddedViewRef<unknown>;
 
-  constructor(
-    private readonly urisStoreService: UrisStoreService,
-    private readonly viewContainer: ViewContainerRef,
-    private readonly cdr: ChangeDetectorRef,
-    @Optional()
-    private readonly templateRef?: TemplateRef<unknown>
-  ) {}
+  private urisStoreService = inject(UrisStoreService);
+  private viewContainer = inject(ViewContainerRef);
+  private cdr = inject(ChangeDetectorRef);
+  private templateRef = inject(TemplateRef<unknown>, { optional: true });
 
   /**
    * Only works if the directive is used as as structural directive. Renders the given template if `rootUri` is given (much like `*ngIf`), clears the view otherwise.

@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Directive, EmbeddedViewRef, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, Directive, EmbeddedViewRef, inject, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { UrisStoreService } from '../services';
@@ -19,15 +19,12 @@ export class NodeFormDirective extends OnDestroy$ {
     this.onUriChange();
   }
 
+  private urisStoreService = inject(UrisStoreService);
+  private viewContainer = inject(ViewContainerRef);
+  private cdr = inject(ChangeDetectorRef);
+  private templateRef = inject(TemplateRef<unknown>);
+
   private viewRef?: EmbeddedViewRef<unknown>;
-  constructor(
-    private readonly templateRef: TemplateRef<unknown>,
-    private readonly viewContainer: ViewContainerRef,
-    private readonly cdr: ChangeDetectorRef,
-    private readonly urisStoreService: UrisStoreService
-  ) {
-    super();
-  }
 
   onUriChange(): void {
     this.render(this.nodeUri != null);

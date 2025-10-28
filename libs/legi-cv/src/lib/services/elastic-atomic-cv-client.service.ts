@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { JsonModel, ResourceGraphService } from '@cognizone/json-model';
 import { Completable, ElasticSearchResponse, extractOneSourceFromElasticResponse, Nil, TypedResourceGraph } from '@cognizone/model-utils';
 import { Observable } from 'rxjs';
@@ -15,7 +15,9 @@ import { LegiCvOptionsService } from './legi-cv-options.service';
   providedIn: 'root',
 })
 export class ElasticAtomicCvClientService implements AtomicCvClient {
-  constructor(private optionsService: LegiCvOptionsService, private http: HttpClient, private resourceGraphService: ResourceGraphService) {}
+  private optionsService = inject(LegiCvOptionsService);
+  private http = inject(HttpClient);
+  private resourceGraphService = inject(ResourceGraphService);
 
   getConceptScheme<T extends Concept = Concept>(uri: string): Completable<ConceptScheme<T>> {
     const query = {

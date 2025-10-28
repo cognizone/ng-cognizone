@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Directive, EmbeddedViewRef, Input, Optional, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, Directive, EmbeddedViewRef, inject, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { JsonModel, Uri } from '@cognizone/json-model';
 
 import { GraphWrapper, GraphWrapperFactory, NodeWrapper, UrisStoreService } from '../services';
@@ -22,14 +22,11 @@ export class RootUriDirective {
 
   private currentView?: EmbeddedViewRef<unknown>;
 
-  constructor(
-    private readonly graphWrapperFactory: GraphWrapperFactory,
-    private readonly urisStoreService: UrisStoreService,
-    private readonly viewContainer: ViewContainerRef,
-    private readonly cdr: ChangeDetectorRef,
-    @Optional()
-    private readonly templateRef?: TemplateRef<unknown>
-  ) {}
+  private graphWrapperFactory = inject(GraphWrapperFactory);
+  private urisStoreService = inject(UrisStoreService);
+  private viewContainer = inject(ViewContainerRef);
+  private cdr = inject(ChangeDetectorRef);
+  private templateRef = inject(TemplateRef<unknown>, { optional: true });
 
   /**
    * @deprecated use `UrisStoreService::getWrapper` instead to the same effect

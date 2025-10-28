@@ -1,4 +1,4 @@
-import { Inject, Injectable, Optional } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { getAllSelectOptions, Many, manyToArray, SelectOption, SelectOptionsProvider } from '@cognizone/model-utils';
 import { flatten } from 'lodash-es';
 import { identity, Observable, of } from 'rxjs';
@@ -9,12 +9,8 @@ import { CvSelectOptionsProviderFactory } from './cv-select-options-provider';
 
 @Injectable({ providedIn: 'any' })
 export class CvService {
-  constructor(
-    @Optional() @Inject(CV_PROVIDER_TOKEN) private providers: CvProvider[],
-    private cvSelectOptionsProviderFactory: CvSelectOptionsProviderFactory
-  ) {
-    this.providers = this.providers ?? [];
-  }
+  private providers = inject(CV_PROVIDER_TOKEN, { optional: true }) ?? [];
+  private cvSelectOptionsProviderFactory = inject(CvSelectOptionsProviderFactory);
 
   getProvider(cvName: string): CvProvider {
     const provider = this.providers.find(p => p.cvName === cvName);

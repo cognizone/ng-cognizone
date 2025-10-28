@@ -1,23 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { PrefixService } from '@cognizone/lod';
 import { Datatype, DatatypeLong, Many, manyToArray, manyToOne, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
 
 import { Resource, ResourceGraph } from '../models';
 import { JsonModel } from '../models/json-model';
-import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from './data-model-definition-helper.service';
 import { ResourceMapper } from './resource-mapper.service';
 
 // TODO rename according to new model name
 
 @Injectable()
 export class ResourceGraphService {
-  constructor(
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    private readonly resourceMapper: ResourceMapper,
-    private readonly prefixCc: PrefixService
-  ) {}
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private resourceMapper = inject(ResourceMapper);
+  private prefixCc = inject(PrefixService);
 
   // TODO rename according to new model name
   jsonModelToResourceGraphRaw(json: JsonModel | undefined, definition: unknown): TypedResourceGraph | undefined {

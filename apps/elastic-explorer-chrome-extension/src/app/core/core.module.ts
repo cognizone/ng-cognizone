@@ -1,8 +1,8 @@
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { JsonModelModule } from '@cognizone/json-model';
+import { provideJsonModel } from '@cognizone/json-model';
 import { LegiSharedModule } from '@cognizone/legi-shared/core';
-import { NgApplicationProfileModule } from '@cognizone/ng-application-profile';
+import { provideNgApplicationProfile } from '@cognizone/ng-application-profile';
 import { environment } from '@czee-ce/env/environment';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsModule } from '@ngxs/store';
@@ -10,12 +10,10 @@ import { NgxsModule } from '@ngxs/store';
 @NgModule({
   declarations: [],
   imports: [
-    NgApplicationProfileModule.forRoot(),
     LegiSharedModule.forRoot(),
     NgxsModule.forRoot([], { developmentMode: !environment.production }),
     NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production, name: 'CZ-DATA_EXPLORER' }),
-    JsonModelModule.forRoot(),
   ],
-  providers: [provideHttpClient(withInterceptorsFromDi())],
+  providers: [provideHttpClient(withInterceptorsFromDi()), provideJsonModel(), provideNgApplicationProfile()],
 })
 export class CoreModule {}

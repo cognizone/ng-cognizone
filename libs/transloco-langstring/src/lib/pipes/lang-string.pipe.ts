@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { inject, Pipe, PipeTransform } from '@angular/core';
 import { getLangStringValue, LangString, LangStringSimple, Nil } from '@cognizone/model-utils';
 import { TranslocoService } from '@jsverse/transloco';
 
@@ -7,7 +7,7 @@ import { TranslocoService } from '@jsverse/transloco';
   standalone: false,
 })
 export class LangStringPipe implements PipeTransform {
-  constructor(private transloco: TranslocoService) {}
+  private transloco = inject(TranslocoService);
 
   transform(value: Nil<LangString | LangStringSimple | string>, lang: string = this.transloco.getActiveLang()): Nil<string> {
     if (!value || typeof value === 'string') return value as string | undefined;

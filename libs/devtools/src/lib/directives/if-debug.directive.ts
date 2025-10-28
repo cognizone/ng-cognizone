@@ -1,4 +1,4 @@
-import { Directive, Inject, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, inject, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 
 import { DEVTOOLS_ENABLED_TOKEN } from '../models/devtools-enabled.token';
 
@@ -7,11 +7,9 @@ import { DEVTOOLS_ENABLED_TOKEN } from '../models/devtools-enabled.token';
   standalone: true,
 })
 export class IfDebugDirective implements OnInit {
-  constructor(
-    @Inject(DEVTOOLS_ENABLED_TOKEN) private devtoolsEnabled: boolean,
-    private readonly templateRef: TemplateRef<unknown>,
-    private readonly viewContainer: ViewContainerRef
-  ) {}
+  private devtoolsEnabled = inject(DEVTOOLS_ENABLED_TOKEN);
+  private templateRef = inject(TemplateRef<unknown>);
+  private viewContainer = inject(ViewContainerRef);
 
   ngOnInit(): void {
     if (this.devtoolsEnabled) {
