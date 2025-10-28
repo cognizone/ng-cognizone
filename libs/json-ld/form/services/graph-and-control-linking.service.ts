@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { AbstractControl, UntypedFormArray, UntypedFormGroup } from '@angular/forms';
 import { dateToDateString } from '@cognizone/model-utils';
 import { produce } from 'immer';
@@ -12,7 +12,7 @@ import { JsonLdStoreService } from '@cognizone/json-ld/store';
 
 @Injectable({ providedIn: 'root' })
 export class GraphAndControlLinkingService {
-  constructor(private jsonLdStoreService: JsonLdStoreService) {}
+  private jsonLdStoreService = inject(JsonLdStoreService);
 
   /**
    * @description at first, the form is updated without emitEvent: false to ensure that local logic in the component is

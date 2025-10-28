@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import { LEGI_CV_STATE_TOKEN } from '../store/cv.state';
 
 @Injectable({ providedIn: 'root' })
 export class CvStateService {
-  constructor(private store: Store) {}
+  private store = inject(Store);
 
   setCv(options: SetCv['payload']): void {
     this.store.dispatch(new SetCv(options));

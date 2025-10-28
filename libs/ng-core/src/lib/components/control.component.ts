@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-inject */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/directive-class-suffix */
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -16,6 +17,7 @@ import { map, takeUntil } from 'rxjs/operators';
 import { OnDestroy$ } from '../helpers/on-destroy';
 import { Logger } from '../modules/logger/logger.service';
 import { Maybe } from '../types/maybe';
+import { LoggerFactory } from '../public-api';
 
 // put @Directive so that @Input are kept
 /**
@@ -75,7 +77,13 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
 
   private _formControlName?: string;
 
-  constructor(protected logger: Logger, protected cdr: ChangeDetectorRef, @Optional() protected controlContainer?: ControlContainer) {
+  private logger!: Logger;
+
+  constructor(
+    protected loggerFactory: LoggerFactory,
+    protected cdr: ChangeDetectorRef,
+    @Optional() protected controlContainer?: ControlContainer
+  ) {
     super();
   }
 
@@ -86,7 +94,7 @@ export abstract class ControlComponent<MODEL, EMBEDDED = MODEL> extends OnDestro
     });
     this.bindEmbeddedControl();
     if (!this.name) this.computeName();
-    this.logger = this.name ? this.logger.extend(this.name) : this.logger;
+    this.logger = this.name ? this.loggerFactory.create(this.name) : this.logger;
     this.computeRequired();
   }
 

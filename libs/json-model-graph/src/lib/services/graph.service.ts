@@ -29,8 +29,10 @@ export class GraphService {
 
   private jsonModelService = inject(JsonModelService);
 
-  constructor(ngZone: NgZone) {
-    ngZone.runOutsideAngular(() => {
+  private ngZone = inject(NgZone);
+
+  constructor() {
+    this.ngZone.runOutsideAngular(() => {
       this.state$.subscribe(state => (this._state = state));
     });
   }

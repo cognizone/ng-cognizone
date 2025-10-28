@@ -1,4 +1,4 @@
-import { Injectable, Optional, SkipSelf } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 
 @Injectable()
 export class UrisStoreService {
@@ -13,9 +13,5 @@ export class UrisStoreService {
   nodeUri!: string;
   private _graphUri!: string;
 
-  constructor(
-    @Optional()
-    @SkipSelf()
-    private parent?: UrisStoreService
-  ) {}
+  private parent = inject(UrisStoreService, { optional: true, skipSelf: true });
 }

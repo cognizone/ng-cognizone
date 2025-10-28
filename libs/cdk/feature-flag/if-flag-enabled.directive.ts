@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Directive, Input, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, Directive, inject, Input, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { FeatureFlagService } from './feature-flag.service';
@@ -18,14 +18,10 @@ export class IfFlagEnabledDirective extends OnDestroy$ implements OnChanges {
 
   private lastEnabled?: boolean;
 
-  constructor(
-    private templateRef: TemplateRef<unknown>,
-    private cdr: ChangeDetectorRef,
-    private featureFlagService: FeatureFlagService,
-    private vcr: ViewContainerRef
-  ) {
-    super();
-  }
+  private templateRef = inject(TemplateRef<unknown>);
+  private cdr = inject(ChangeDetectorRef);
+  private featureFlagService = inject(FeatureFlagService);
+  private vcr = inject(ViewContainerRef);
 
   ngOnChanges(): void {
     const enabled = this.feature ? this.featureFlagService.isFeatureEnabled(this.feature) : false;
