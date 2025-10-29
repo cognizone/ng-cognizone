@@ -6,6 +6,8 @@ const packagesRoots = readdirSync(libDist).map(dir => join(libDist, dir));
 
 packagesRoots.push(join(__dirname, 'libs/cli'));
 
+console.log('Running release for packages:\n', packagesRoots.map(path => path.split('/').pop()).join('\n'));
+
 const npmPlugins = packagesRoots.map(pkgRoot => [
   '@semantic-release/npm',
   {
