@@ -2,9 +2,9 @@
   "name": "@cognizone/transloco-langstring",
   "version": "7.0.0-beta.3",
   "peerDependencies": {
-    "@angular/core": ">=19.0.0 <20",
-    "@angular/platform-browser-dynamic": ">=19.0.0 <20",
-    "@cognizone/model-utils": ">=6.0.0 <7",
+    "@angular/core": ">=20.0.0",
+    "@angular/platform-browser-dynamic": ">=20.0.0",
+    "@cognizone/model-utils": ">=7.0.0-beta.1",
     "@jsverse/transloco": "^7.0.0"
   },
   "dependencies": {

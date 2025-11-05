@@ -1,4 +1,4 @@
-const { readdirSync, readFileSync, writeFileSync, statSync } = require('fs');
+const { readdirSync, readFileSync, writeFileSync, existsSync } = require('fs');
 const { join, dirname, relative } = require('path');
 
 const libDist = join(__dirname, '../libs');
@@ -13,12 +13,16 @@ function readJson(path) {
 function writeJson(path, content) {
   writeFileSync(path, JSON.stringify(content, null, 2));
 }
-const cognizonePeerVersion = '>=6.0.0 <7';
-const angularVersion = '>=19.0.0 <20';
+const cognizonePeerVersion = '>=7.0.0-beta.1';
+const angularVersion = '>=20.0.0';
 
 const rootPackage = readJson(join(__dirname, '../package.json'));
 
 packageFiles.forEach(packageFile => {
+  if (!existsSync(packageFile)) {
+    console.log('Package file does not exist, skipping', packageFile);
+    return;
+  }
   console.log('Syncing', packageFile);
   const package = readJson(packageFile);
   const directory = relative(join(__dirname, '..'), dirname(packageFile)).replace(/\\/g, '/');
