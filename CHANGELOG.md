@@ -1,3 +1,10 @@
+# [7.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.3...v7.0.0-beta.4) (2025-11-05)
+
+
+### Features
+
+* remove deprecated libs, namely legi-shared, elastic-explorer, user-action and legi-styles ([569d2f0](https://github.com/cognizone/ng-cognizone/commit/569d2f0686b6e3177750f846af837d0c6603e93a))
+
 # [7.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.2...v7.0.0-beta.3) (2025-10-23)
 
 
