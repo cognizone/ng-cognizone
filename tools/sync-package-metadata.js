@@ -3,7 +3,7 @@ const { join, dirname, relative } = require('path');
 
 const libDist = join(__dirname, '../libs');
 const packageFiles = readdirSync(libDist)
-  .filter(dir => !dir.startsWith('.'))
+  .filter(dir => !dir.startsWith('.') && dir !== 'cli')
   .map(dir => join(libDist, dir, 'package.json'));
 
 function readJson(path) {

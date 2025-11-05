@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/cli",
-  "version": "7.0.0-beta.3",
+  "version": "6.3.0",
   "bin": {
     "cz-cli": "./bin/run"
   },
@@ -58,8 +58,8 @@
     "typescript": "^4.8.4"
   },
   "optionalDependencies": {
-    "@cognizone/application-profile": ">=7.0.0-beta.1",
-    "@cognizone/model-utils": ">=7.0.0-beta.1"
+    "@cognizone/application-profile": ">=6.0.0 <7",
+    "@cognizone/model-utils": ">=6.0.0 <7"
   },
   "oclif": {
     "bin": "cz-cli",
