@@ -1,9 +1,13 @@
-import { Injectable, inject } from '@angular/core';
-import { LOD_OPTIONS, LodOptions } from '../models';
+import { Inject, Injectable } from '@angular/core';
+import { LodOptions, LOD_OPTIONS } from '../models';
 
 @Injectable({ providedIn: 'root' })
 export class LodOptionsService {
-  private options = inject(LOD_OPTIONS);
+  constructor(@Inject(LOD_OPTIONS) private options: LodOptions) {
+    // this.options = inject(LOD_OPTIONS);
+  }
+
+  // private options = inject(LOD_OPTIONS);
 
   setOptions(options: LodOptions): void {
     this.options = options;

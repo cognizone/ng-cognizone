@@ -1,6 +1,6 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import {
   ExpandedJsonLdContainer,
   isJsonLdValueLiteral,
@@ -20,7 +20,7 @@ import * as jsonldLib from 'jsonld';
   providedIn: 'root',
 })
 export class JsonLdService {
-  private uriGenerator = inject(UriGenerator);
+  constructor(private uriGenerator: UriGenerator) {}
 
   async expand<T>(jsonLd: JsonLdGraph | JsonLdGraphCz): Promise<ExpandedJsonLdContainer<T>> {
     // TODO move this logic after expansion
