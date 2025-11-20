@@ -1,3 +1,9 @@
+## [3.17.8](https://github.com/cognizone/ng-cognizone/compare/v3.17.7...v3.17.8) (2025-11-20)
+
+### Bug Fixes
+
+- removed inject() usage in lod-options.service as it was buggy for this version of Angular ([5f269e2](https://github.com/cognizone/ng-cognizone/commit/5f269e24777fcccb71825f220d8da10891b2c01e))
+
 ## [3.17.7](https://github.com/cognizone/ng-cognizone/compare/v3.17.6...v3.17.7) (2025-09-23)
 
 ### Bug Fixes
