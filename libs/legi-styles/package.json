@@ -28,7 +28,8 @@
   ],
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "tag": "v6-lts"
   },
   "files": [
     "/fonts",

@@ -174,7 +174,7 @@
   },
   "prettier": "./libs/prettier-config/index.json",
   "volta": {
-    "node": "20.15.1",
+    "node": "22.21.1",
     "npm": "10.8.2"
   },
   "lint-staged": {
