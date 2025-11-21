@@ -47,7 +47,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "cz": "cz",
-    "build-tools": "tsc --project \"tools/tsconfig.tools.json\""
+    "build-tools": "tsc --project \"tools/tsconfig.tools.json\"",
+    "release": "npx --package semantic-release@25 --package @semantic-release/exec@7 --package @semantic-release/commit-analyzer@13 --package @semantic-release/changelog@6 --package @semantic-release/git@10 semantic-release"
   },
   "private": true,
   "dependencies": {
@@ -111,9 +112,6 @@
     "@nx/storybook": "20.6.0",
     "@nx/workspace": "20.6.0",
     "@schematics/angular": "19.2.3",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/exec": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
     "@storybook/addon-essentials": "^8.6.6",
     "@storybook/angular": "^8.6.6",
     "@storybook/core-server": "^8.6.6",
@@ -149,7 +147,6 @@
     "postcss-url": "~10.1.3",
     "prettier": "2.7.1",
     "rimraf": "^3.0.2",
-    "semantic-release": "^21.0.0",
     "shelljs": "^0.8.5",
     "storybook": "^8.6.6",
     "ts-jest": "29.1.5",

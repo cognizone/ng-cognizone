@@ -5,6 +5,10 @@ on:
     branches: [main, beta, 3.x]
   workflow_dispatch:
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -45,6 +49,4 @@ jobs:
       - name: Testing
         run: npm run nx -- run-many --target=test --exclude=docs,docs-app,elastic-explorer-chrome-extension
       - name: Releasing
-        run: npx semantic-release
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npm run release
