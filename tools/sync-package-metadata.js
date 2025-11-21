@@ -13,7 +13,7 @@ function readJson(path) {
 function writeJson(path, content) {
   writeFileSync(path, JSON.stringify(content, null, 2));
 }
-const cognizonePeerVersion = '>=7.0.0-beta.1';
+const cognizonePeerVersion = '>=7.0.0';
 const angularVersion = '>=20.0.0';
 
 const rootPackage = readJson(join(__dirname, '../package.json'));
