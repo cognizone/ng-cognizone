@@ -2,8 +2,8 @@
   "name": "@cognizone/i18n-transloco",
   "version": "7.0.0-beta.4",
   "peerDependencies": {
-    "@cognizone/i18n": ">=7.0.0-beta.1",
-    "@cognizone/model-utils": ">=7.0.0-beta.1",
+    "@cognizone/i18n": ">=7.0.0",
+    "@cognizone/model-utils": ">=7.0.0",
     "@jsverse/transloco": ">=7.0.0",
     "@jsverse/transloco-locale": ">=7.0.0"
   },
