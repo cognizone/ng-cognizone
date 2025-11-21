@@ -1,3 +1,22 @@
+# [7.0.0](https://github.com/cognizone/ng-cognizone/compare/v6.3.0...v7.0.0) (2025-11-21)
+
+
+### Bug Fixes
+
+* set peer and optional dependencies ([255f409](https://github.com/cognizone/ng-cognizone/commit/255f40996c7b00e774a858c99029c484ca91c046))
+
+
+### Features
+
+* prepare v7 of the libs ([7936e8e](https://github.com/cognizone/ng-cognizone/commit/7936e8e934789fac602bab96328b401256409ecc))
+* remove deprecated libs, namely legi-shared, elastic-explorer, user-action and legi-styles ([569d2f0](https://github.com/cognizone/ng-cognizone/commit/569d2f0686b6e3177750f846af837d0c6603e93a))
+* **result:** add toError and toOk utils + added bunch of documentation ([f323a84](https://github.com/cognizone/ng-cognizone/commit/f323a842171c902a010b373e4e75df665d03c91e))
+
+
+### BREAKING CHANGES
+
+* upgraded to angular v20 and nx v21
+
 # [7.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.3...v7.0.0-beta.4) (2025-11-05)
 
 ### Features
