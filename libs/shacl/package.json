@@ -1,15 +1,15 @@
 {
   "name": "@cognizone/shacl",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "optionalDependencies": {
     "@angular/common": ">=20.0.0",
     "@angular/core": ">=20.0.0",
-    "@cognizone/ng-core": ">=7.0.0-beta.1"
+    "@cognizone/ng-core": ">=7.0.0"
   },
   "peerDependencies": {
-    "@cognizone/json-ld": ">=7.0.0-beta.1",
-    "@cognizone/json-ld-core": ">=7.0.0-beta.1",
-    "@cognizone/shacl-core": ">=7.0.0-beta.1"
+    "@cognizone/json-ld": ">=7.0.0",
+    "@cognizone/json-ld-core": ">=7.0.0",
+    "@cognizone/shacl-core": ">=7.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

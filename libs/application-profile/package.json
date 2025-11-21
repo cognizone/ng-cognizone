@@ -1,8 +1,8 @@
 {
   "name": "@cognizone/application-profile",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "peerDependencies": {
-    "@cognizone/model-utils": ">=7.0.0-beta.1",
+    "@cognizone/model-utils": ">=7.0.0",
     "rxjs": "^7.8.0"
   },
   "dependencies": {

@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/cognizone/ng-cognizone/compare/v7.0.0...v7.0.1) (2025-11-21)
+
+
+### Bug Fixes
+
+* try trusted published release ([9764efe](https://github.com/cognizone/ng-cognizone/commit/9764efee689c7320683272fd81e45bdd13ecacc9))
+
 # [7.0.0](https://github.com/cognizone/ng-cognizone/compare/v6.3.0...v7.0.0) (2025-11-21)
 
 
