@@ -1,0 +1,56 @@
+<div *transloco="let t" class="d-flex flex-column pb-2">
+  @if (label) {
+  <span [id]="labelId" class="czls-title">{{ label }} {{ required ? '*' : '' }}</span>
+  } @if (canBeFiltered) {
+  <cz-input
+    [ngClass]="!inputLabel ? 'compact-form-field mb-3' : null"
+    [formControl]="searchControl"
+    [label]="inputLabel"
+    [ariaLabel]="inputAriaLabel"
+  >
+    <ng-template #czSuffix>
+      @if (searchControl.value) {
+      <button
+        [id]="inputClearBtnId"
+        mat-icon-button
+        [attr.aria-labelledby]="getClearBtnLabelledBy()"
+        (click)="searchControl.setValue(null)"
+      >
+        <mat-icon>close</mat-icon>
+        <span class="sr-only">{{ inputClearLabel }}</span>
+      </button>
+      }
+    </ng-template>
+  </cz-input>
+  } @for (group of optionsGroups | selectOptionGroupsSlice: actualSeeMoreThreshold:model; track trackByGroup($index, group); let isLast =
+  $last) { @if (group.options | selectOptionsSort: sortType; as actualOptions) { @if (canBeFiltered) {
+  <span aria-live="polite" aria-atomic="true" class="sr-only">{{ t('global.filter_count', { count: actualOptions.length }) }}</span>
+  }
+  <div class="checkboxes-container" [class.flex-column]="direction === 'column'" role="group" [attr.aria-labelledby]="groupAriaLabelledBy">
+    @for (option of actualOptions; track trackBySelectOption($index, option)) {
+    <div class="d-flex justify-content-between align-items-center checkbox-container">
+      <mat-checkbox [class.mr-4]="direction === 'row'" [checked]="isChecked(option)" (change)="onChange($event, option)">
+        <ng-container [ngTemplateOutlet]="template || defaultTemplate" [ngTemplateOutletContext]="getContext(option)"></ng-container>
+      </mat-checkbox>
+    </div>
+    }
+  </div>
+  <ng-template #defaultTemplate let-option>
+    @if (isString(option.label)) {
+    {{ t(option.label) }}
+    } @else {
+    {{ option.label | czLabel }}
+    } @if (counts) {
+    <span>({{ counts[option.value] || 0 }})</span>
+    }
+  </ng-template>
+  } @if (!isLast) {
+  <mat-divider class="mt-3"></mat-divider>
+  } } @if (canSeeMore) {
+  <button type="button" mat-button (click)="toggleSeeMore()">
+    @if (!seeMore) { +{{ getSeeMoreCount() }}
+    }
+    {{ t(seeMore ? 'global.see_less' : 'global.see_more') }}
+  </button>
+  }
+</div>

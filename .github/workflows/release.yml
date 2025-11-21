@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22
       - name: Git set user
         run: |
           git config --local user.email "WilliamChelman@users.noreply.github.com"

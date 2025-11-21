@@ -1,0 +1,34 @@
+<label class="d-flex flex-column">
+  @if ((label || labelComponent) && classicMode) {
+  <span class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
+  }
+  <mat-form-field [class.cz-classic-appearance]="classicMode">
+    @if ((label || labelComponent) && !classicMode) {
+    <mat-label>{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+    }
+    <textarea
+      matInput
+      autocomplete="off"
+      [formControl]="embeddedControl"
+      [placeholder]="placeholder"
+      [name]="name"
+      [cdkTextareaAutosize]="autosize"
+      type="text"
+      (blur)="onBlur()"
+    ></textarea>
+    @if (suffixTpl) {
+    <span matSuffix>
+      <ng-container *ngTemplateOutlet="suffixTpl"></ng-container>
+    </span>
+    } @if (prefixTpl) {
+    <span matPrefix>
+      <ng-container *ngTemplateOutlet="prefixTpl"></ng-container>
+    </span>
+    } @if (hint) {
+    <mat-hint class="czls-caption">{{ hint }}</mat-hint>
+    }
+    <mat-error>
+      <cz-error></cz-error>
+    </mat-error>
+  </mat-form-field>
+</label>

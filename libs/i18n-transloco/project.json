@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/i18n-transloco/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -28,9 +29,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/i18n-transloco"],
       "options": {
-        "jestConfig": "libs/i18n-transloco/jest.config.ts"
+        "jestConfig": "libs/i18n-transloco/jest.config.ts",
+        "tsConfig": "libs/i18n-transloco/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

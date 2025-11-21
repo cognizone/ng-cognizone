@@ -1,6 +1,6 @@
 import { InjectionToken, Provider, Type } from '@angular/core';
 
-export const MICRO_ATTRIBUTE_MAPPER_TOKEN = new InjectionToken<MicroAttributeMapper<unknown, unknown>>('MICRO_ATTRIBUTE_MAPPER');
+export const MICRO_ATTRIBUTE_MAPPER_TOKEN = new InjectionToken<MicroAttributeMapper<unknown, unknown>[]>('MICRO_ATTRIBUTE_MAPPER');
 
 export interface MicroAttributeMapper<RAW, MODEL> {
   priority?: number;

@@ -1,0 +1,48 @@
+<div class="d-flex flex-column">
+  @if (label) {
+  <span class="czls-title">{{ label }} {{ required ? '*' : '' }}</span>
+  } @if (canBeFiltered) {
+  <cz-input [ngClass]="!inputLabel ? 'compact-form-field mb-3' : null" [formControl]="searchControl" [label]="inputLabel">
+    <ng-template #czSuffix>
+      @if (searchControl.value) {
+      <button mat-icon-button (click)="searchControl.setValue(null)">
+        <mat-icon>close</mat-icon>
+      </button>
+      }
+    </ng-template>
+  </cz-input>
+  }
+
+  <div class="radio-group-container">
+    <mat-radio-group
+      [formControl]="embeddedControl"
+      class="d-flex flex-column"
+      [class.flex-column]="direction === 'column'"
+      [class.is-row]="direction === 'row'"
+      [attr.aria-label]="radioGroupAriaLabel"
+    >
+      @for (option of options; track trackBySelectOption($index, option)) {
+      <div class="d-flex justify-content-between align-items-center radio-container">
+        <mat-radio-button [value]="option.value" [disabled]="option.disabled">
+          <ng-container [ngTemplateOutlet]="template || defaultTemplate" [ngTemplateOutletContext]="getContext(option)"></ng-container>
+        </mat-radio-button>
+        @if (canBeDiscarded && embeddedControl.value === option.value) {
+        <button mat-icon-button (click)="discard()">
+          <mat-icon>close</mat-icon>
+        </button>
+        }
+      </div>
+      }
+    </mat-radio-group>
+  </div>
+
+  <ng-template #defaultTemplate let-option>
+    @if (isString(option.label)) {
+    {{ option.label | czTranslate }}
+    } @else {
+    {{ option.label | czLabel }}
+    } @if (counts) {
+    <span>({{ getCount(option) }})</span>
+    }
+  </ng-template>
+</div>

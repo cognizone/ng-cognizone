@@ -1,9 +1,9 @@
 {
   "name": "@cognizone/ui-kit",
-  "version": "6.3.0",
+  "version": "7.0.0-beta.4",
   "peerDependencies": {
-    "@angular/common": ">=19.0.0 <20",
-    "@angular/core": ">=19.0.0 <20"
+    "@angular/common": ">=20.0.0",
+    "@angular/core": ">=20.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

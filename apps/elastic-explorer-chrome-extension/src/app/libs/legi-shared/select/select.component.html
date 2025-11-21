@@ -1,0 +1,39 @@
+<label class="d-flex flex-column" [class.compact-form-field]="isCompact">
+  @if ((label || labelComponent) && classicMode) {
+  <span class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
+  }
+  <mat-form-field [class.cz-classic-appearance]="classicMode">
+    @if ((label || labelComponent) && !classicMode) {
+    <mat-label>{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+    }
+    <mat-select
+      [formControl]="embeddedControl"
+      [placeholder]="placeholder"
+      [multiple]="multiple"
+      (selectionChange)="selectionChange.emit($event)"
+    >
+      @if (canBeDiscarded) {
+      <mat-option>{{ 'global.none' | czTranslate }}</mat-option>
+      } @for (option of options | selectOptionsSort: sortType; track option) {
+      <mat-option
+        [value]="option.value"
+        [disabled]="option.disabled"
+        [matTooltip]="option.label | czLabel"
+        [matTooltipDisabled]="isString(option.label)"
+      >
+        <ng-container [ngTemplateOutlet]="template || defaultTemplate" [ngTemplateOutletContext]="getContext(option)"></ng-container>
+      </mat-option>
+      }
+    </mat-select>
+    @if (hint) {
+    <mat-hint>{{ hint }}</mat-hint>
+    }
+  </mat-form-field>
+  <ng-template #defaultTemplate let-option>
+    @if (isString(option.label)) {
+    {{ option.label | czTranslate }}
+    } @else {
+    {{ option.label | czLabel }}
+    }
+  </ng-template>
+</label>

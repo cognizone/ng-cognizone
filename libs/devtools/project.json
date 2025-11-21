@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/devtools/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -25,9 +26,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/devtools"],
       "options": {
-        "jestConfig": "libs/devtools/jest.config.ts"
+        "jestConfig": "libs/devtools/jest.config.ts",
+        "tsConfig": "libs/devtools/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

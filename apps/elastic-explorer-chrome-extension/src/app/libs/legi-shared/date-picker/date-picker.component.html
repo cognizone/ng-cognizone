@@ -1,0 +1,42 @@
+<label class="d-flex flex-column" [class.is-readonly]="readonly">
+  @if ((label || labelComponent) && classicMode) {
+  <span class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
+  }
+  <mat-form-field appearance="outline" [class.cz-classic-appearance]="classicMode" class="my-date-picker">
+    @if ((label || labelComponent) && !classicMode) {
+    <mat-label>{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+    } @if (iconPosition === 'prefix') {
+    <mat-datepicker-toggle matPrefix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>event</mat-icon>
+    </mat-datepicker-toggle>
+    } @if (iconPosition === 'suffix') {
+    <mat-datepicker-toggle matSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+    </mat-datepicker-toggle>
+    }
+
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [min]="min"
+      [max]="max"
+      autocomplete="off"
+      [formControl]="embeddedControl"
+      [placeholder]="placeholder"
+      [name]="name"
+      type="text"
+    />
+    @if (hint) {
+    <mat-hint>{{ hint }}</mat-hint>
+    }
+    <mat-error>
+      <cz-error></cz-error>
+    </mat-error>
+  </mat-form-field>
+</label>
+<mat-datepicker
+  #picker
+  [startView]="startView"
+  (yearSelected)="chosenYearHandler($event)"
+  (monthSelected)="chosenMonthHandler($event, picker)"
+></mat-datepicker>

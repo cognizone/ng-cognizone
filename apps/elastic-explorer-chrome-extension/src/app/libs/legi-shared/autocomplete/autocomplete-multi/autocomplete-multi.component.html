@@ -1,0 +1,115 @@
+@if (classicMode) { @if (label) {
+<span class="czls-title">{{ label }}</span>
+}
+<div class="d-flex flex-column">
+  <mat-form-field [class.mat-form-field-disabled]="disabled" class="cz-classic-appearance">
+    @if (profile === 'search') {
+    <mat-icon matPrefix>search</mat-icon>
+    }
+    <mat-chip-list #chipList [formControl]="errorControl">
+      @for (value of modelAsOptions | selectOptionsSort: 'label'; track value) {
+      <mat-chip
+        class="cz-classic-appearance"
+        [disabled]="disabled"
+        [selectable]="false"
+        [removable]="!disabled"
+        (removed)="removeValue(value)"
+      >
+        <span [innerHTML]="value.label | czLabel"></span>
+        @if (!disabled) {
+        <mat-icon matChipRemove>cancel</mat-icon>
+        }
+      </mat-chip>
+      }
+      <input
+        #multiInput
+        #trigger="matAutocompleteTrigger"
+        matInput
+        autocomplete="off"
+        type="text"
+        [disabled]="disabled"
+        [placeholder]="placeholder"
+        [name]="name"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        (input)="queryChanges.next(multiInput.value)"
+      />
+    </mat-chip-list>
+    @if (hint) {
+    <mat-hint class="czls-caption">{{ hint }}</mat-hint>
+    }
+    <mat-error>
+      <cz-error></cz-error>
+    </mat-error>
+    @if (profile === 'select') {
+    <button matSuffix mat-icon-button (click)="queryChanges.next(''); trigger.writeValue(''); trigger.openPanel()">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    }
+  </mat-form-field>
+</div>
+} @else {
+<div class="d-flex flex-row align-items-baseline mb-6">
+  <mat-form-field class="flex-grow-1" [class.mat-form-field-disabled]="disabled">
+    @if (label) {
+    <mat-label>{{ label }} </mat-label>
+    }
+    <input
+      #multiInput
+      matInput
+      autocomplete="off"
+      type="text"
+      [disabled]="disabled"
+      [placeholder]="placeholder"
+      [name]="name"
+      [matAutocomplete]="auto"
+      (input)="queryChanges.next(multiInput.value)"
+      [formControl]="errorControl"
+    />
+    @if (hint) {
+    <mat-hint class="czls-caption">{{ hint }}</mat-hint>
+    }
+    <mat-error>
+      <cz-error></cz-error>
+    </mat-error>
+  </mat-form-field>
+  <button class="mx-1" mat-button color="primary" [disabled]="!newModel" (click)="addSelectedValue()">
+    <mat-icon svgIcon="add" color="primary"></mat-icon>
+    <span>{{ btnLabel }}</span>
+  </button>
+</div>
+<div class="chips-container p-3">
+  <mat-chip-list #chipList>
+    @for (value of modelAsOptions | selectOptionsSort: 'label'; track value) {
+    <mat-chip
+      [class.cz-option-disabled]="value.disabled"
+      [disabled]="disabled"
+      [selectable]="false"
+      [removable]="!disabled"
+      (removed)="removeValue(value)"
+    >
+      <ng-container [ngTemplateOutlet]="template || chipDefaultTemplate" [ngTemplateOutletContext]="getContext(value)"></ng-container>
+      @if (!disabled) {
+      <mat-icon matChipRemove>close</mat-icon>
+      }
+    </mat-chip>
+    }
+  </mat-chip-list>
+</div>
+}
+
+<mat-autocomplete #auto [displayWith]="displayFn" [panelWidth]="panelWidth" (optionSelected)="onOptionSelected($event)">
+  @for (option of options | selectOptionsSort: sortType; track trackByFn($index, option)) {
+  <mat-option
+    [value]="option.value"
+    [disabled]="option.disabled"
+    [matTooltip]="option.data && option.data.tooltip ? (option.data.tooltip | czLabel: lang) : (option.label | czLabel: lang)"
+  >
+    <span [innerHTML]="option.label | czLabel: lang"></span
+  ></mat-option>
+  }
+</mat-autocomplete>
+
+<ng-template #chipDefaultTemplate let-value>
+  {{ value.label | czLabel }}
+</ng-template>

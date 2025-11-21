@@ -1,0 +1,44 @@
+<div class="d-flex flex-column">
+  @if (label && classicMode) {
+  <span class="czls-title">{{ label }}</span>
+  }
+  <mat-form-field [class.cz-classic-appearance]="classicMode">
+    @if (label && !classicMode) {
+    <mat-label>{{ label }} </mat-label>
+    } @if (profile === 'search') {
+    <mat-icon matPrefix>search</mat-icon>
+    }
+    <textarea
+      #singleInput
+      matInput
+      autocomplete="off"
+      type="text"
+      [placeholder]="placeholder"
+      [name]="name"
+      [matAutocomplete]="auto"
+      [formControl]="singleInputControl"
+      [cdkTextareaAutosize]="true"
+      (input)="queryChanges.next(singleInput.value)"
+      (blur)="onSingleBlur()"
+    ></textarea>
+    @if (profile === 'select') {
+    <button matSuffix mat-icon-button (click)="queryChanges.next('')">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    } @if (canBeDiscarded && model) {
+    <button matSuffix mat-icon-button (click)="discard()">
+      <mat-icon>close</mat-icon>
+    </button>
+    } @if (hint) {
+    <mat-hint class="czls-caption"> {{ hint }}</mat-hint>
+    }
+  </mat-form-field>
+</div>
+
+<mat-autocomplete #auto [displayWith]="displayFn" [panelWidth]="panelWidth" (optionSelected)="onOptionSelected($event)">
+  @for (option of options | selectOptionsSort: sortType; track trackByFn($index, option)) {
+  <mat-option [value]="option.value" [disabled]="option.disabled" [matTooltip]="getTooltip(option) | czLabel: lang">{{
+    option.label | czLabel: lang
+  }}</mat-option>
+  }
+</mat-autocomplete>

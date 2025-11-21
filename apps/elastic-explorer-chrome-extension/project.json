@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/elastic-explorer-chrome-extension/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -82,7 +83,8 @@
         "production": {
           "buildTarget": "elastic-explorer-chrome-extension:build:production"
         }
-      }
+      },
+      "continuous": true
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -98,9 +100,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/elastic-explorer-chrome-extension"],
       "options": {
-        "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.ts"
+        "jestConfig": "apps/elastic-explorer-chrome-extension/jest.config.ts",
+        "tsConfig": "apps/elastic-explorer-chrome-extension/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

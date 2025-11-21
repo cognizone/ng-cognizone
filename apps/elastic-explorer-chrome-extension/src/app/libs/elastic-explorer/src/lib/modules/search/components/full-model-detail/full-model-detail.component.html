@@ -1,0 +1,10 @@
+<cz-input type="text" [formControl]="queryControl" placeholder="search"></cz-input>
+<mat-tab-group>
+  @for (provider of providers; track provider) {
+  <mat-tab [label]="provider.label">
+    <ng-template matTabContent>
+      <ng-container *ngComponentOutlet="provider.component; injector: myInjector"></ng-container>
+    </ng-template>
+  </mat-tab>
+  }
+</mat-tab-group>

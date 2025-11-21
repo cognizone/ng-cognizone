@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/operation/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -28,9 +29,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/operation"],
       "options": {
-        "jestConfig": "libs/operation/jest.config.ts"
+        "jestConfig": "libs/operation/jest.config.ts",
+        "tsConfig": "libs/operation/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

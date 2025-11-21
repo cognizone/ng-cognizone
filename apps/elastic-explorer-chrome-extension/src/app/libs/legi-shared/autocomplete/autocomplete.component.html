@@ -1,0 +1,71 @@
+<div class="d-flex flex-column">
+  @if ((label || labelComponent) && classicMode) {
+  <span class="czls-title">{{ label }}<ng-content select="cz-label"></ng-content></span>
+  } @if (multi) {
+  <mat-form-field [class.mat-form-field-disabled]="disabled" [class.cz-classic-appearance]="classicMode">
+    @if ((label || labelComponent) && !classicMode) {
+    <mat-label>{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+    }
+    <mat-icon matPrefix>search</mat-icon>
+    <mat-chip-list #chipList>
+      @for (value of modelAsOptions | selectOptionsSort: 'label'; track value) {
+      <mat-chip
+        [disabled]="disabled"
+        [selectable]="false"
+        [class.cz-classic-appearance]="classicMode"
+        [removable]="!disabled"
+        (removed)="removeValue(value)"
+      >
+        {{ value.label | czLabel }}
+        @if (!disabled) {
+        <mat-icon matChipRemove>cancel</mat-icon>
+        }
+      </mat-chip>
+      }
+      <input
+        #multiInput
+        matInput
+        autocomplete="off"
+        type="text"
+        [disabled]="disabled"
+        [placeholder]="placeholder"
+        [name]="name"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        type="text"
+        (input)="queryChanges.next(multiInput.value)"
+      />
+    </mat-chip-list>
+  </mat-form-field>
+  } @else {
+  <mat-form-field class="my-single-field" [class.cz-classic-appearance]="classicMode">
+    @if ((label || labelComponent) && !classicMode) {
+    <mat-label>{{ label }}<ng-content select="cz-label"></ng-content></mat-label>
+    }
+    <mat-icon matPrefix>search</mat-icon>
+    <textarea
+      #singleInput
+      matInput
+      autocomplete="off"
+      type="text"
+      [placeholder]="placeholder"
+      [name]="name"
+      [matAutocomplete]="auto"
+      [formControl]="singleInputControl"
+      [cdkTextareaAutosize]="true"
+      type="text"
+      (input)="queryChanges.next(singleInput.value)"
+      (blur)="onSingleBlur()"
+    >
+    </textarea>
+  </mat-form-field>
+  }
+</div>
+
+<mat-autocomplete #auto [displayWith]="displayFn" [panelWidth]="panelWidth" (optionSelected)="onOptionSelected($event)">
+  @for (option of options | selectOptionsSort: sortType; track trackByFn($index, option)) {
+  <mat-option [value]="option.value" [disabled]="option.disabled" [matTooltip]="option.label | czLabel: lang">{{
+    option.label | czLabel: lang
+  }}</mat-option>
+  }
+</mat-autocomplete>

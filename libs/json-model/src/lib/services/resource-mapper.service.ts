@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Inject, Injectable, Optional } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Datatype, DatatypeLong, manyToArray, manyToOne, TypedResource } from '@cognizone/model-utils';
 
 import { Resource } from '../models';
 import { keys, stringKeys } from '../utils/keys';
-import { AttributeMapper, MICRO_ATTRIBUTE_MAPPER_TOKEN, MicroAttributeMapper } from './mappers/micro-attribute-mapper';
+import { AttributeMapper, MICRO_ATTRIBUTE_MAPPER_TOKEN } from './mappers/micro-attribute-mapper';
 
 @Injectable()
 export class ResourceMapper {
@@ -13,8 +13,9 @@ export class ResourceMapper {
     serialize: this.serializeAttribute.bind(this),
   };
 
-  constructor(@Inject(MICRO_ATTRIBUTE_MAPPER_TOKEN) @Optional() private readonly mappers: MicroAttributeMapper<unknown, unknown>[]) {
-    if (!this.mappers) this.mappers = [];
+  private mappers = inject(MICRO_ATTRIBUTE_MAPPER_TOKEN, { optional: true }) ?? [];
+
+  constructor() {
     if (!Array.isArray(this.mappers)) {
       throw new Error(`mappers should be an array, did you forget to add 'multi: true' in your provided 'MicroAttributeMapper'?`);
     }

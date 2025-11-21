@@ -1,11 +1,9 @@
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 
 import { LogLevel } from './models/log-level';
 import { LOGGER_NAMESPACE_TOKEN } from './models/logger-namespace.token';
 
 export type LogFunction = (...args: unknown[]) => void;
-
-let warnedDeprecation = false;
 
 @Injectable({ providedIn: 'root' })
 export class Logger {
@@ -22,24 +20,14 @@ export class Logger {
 
   logLevel: LogLevel = LogLevel.NONE;
 
-  constructor(@Inject(LOGGER_NAMESPACE_TOKEN) public namespace: string) {
+  namespace = inject(LOGGER_NAMESPACE_TOKEN, { optional: true });
+
+  constructor() {
     this.bindToConsoleMethod('debug');
     this.bindToConsoleMethod('log');
     this.bindToConsoleMethod('info');
     this.bindToConsoleMethod('warn');
     this.bindToConsoleMethod('error');
-  }
-
-  extend(namespace: string): Logger {
-    if (!warnedDeprecation) {
-      warnedDeprecation = true;
-      console.warn('Logger.extend is deprecated, please use LoggerFactory.create instead');
-    }
-
-    if (this.namespace && namespace) {
-      namespace = `${this.namespace}:${namespace}`;
-    }
-    return new Logger(namespace);
   }
 
   private get prefix(): string {

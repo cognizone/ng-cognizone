@@ -1,85 +1,102 @@
-# [6.3.0](https://github.com/cognizone/ng-cognizone/compare/v6.2.1...v6.3.0) (2025-10-23)
-
-
-### Features
-
-* **result:** add toError and toOk utils + added bunch of documentation ([ecf73b0](https://github.com/cognizone/ng-cognizone/commit/ecf73b07118f22190f2df1ff6f48124549366ece))
-
-## [6.2.1](https://github.com/cognizone/ng-cognizone/compare/v6.2.0...v6.2.1) (2025-10-07)
-
-
-### Bug Fixes
-
-* **lod-core:** add float, decimal, long to xsd namespace + fix anyURI typo ([b577bc2](https://github.com/cognizone/ng-cognizone/commit/b577bc2e2ec71e87716dd7b5bee998a4d57d58ef))
-* **shacl:** broaden class check ([fd642bb](https://github.com/cognizone/ng-cognizone/commit/fd642bb16aa3a0f78106290da474419fe111cf61))
-* **shacl:** include parent shapes ([7458ce4](https://github.com/cognizone/ng-cognizone/commit/7458ce4de2127fc6707bc77278a3de8e1005860b))
-
-# [6.2.0](https://github.com/cognizone/ng-cognizone/compare/v6.1.1...v6.2.0) (2025-09-12)
-
-
-### Bug Fixes
-
-* **legi-cv:** provide directives and services using a function following new Angular pattern ([e393d37](https://github.com/cognizone/ng-cognizone/commit/e393d376ea08b451b9c892690e1ccc1cfb5fa117))
-
+# [7.0.0-beta.4](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.3...v7.0.0-beta.4) (2025-11-05)
 
 ### Features
 
-* migrate most libraries to v19 way of doing things ([22fc886](https://github.com/cognizone/ng-cognizone/commit/22fc886017151e8e4d34102cdecfe3d5cd94d8b2))
+- remove deprecated libs, namely legi-shared, elastic-explorer, user-action and legi-styles ([569d2f0](https://github.com/cognizone/ng-cognizone/commit/569d2f0686b6e3177750f846af837d0c6603e93a))
 
-## [6.1.1](https://github.com/cognizone/ng-cognizone/compare/v6.1.0...v6.1.1) (2025-09-08)
-
-
-### Bug Fixes
-
-* **legi-shared:** add trackByGroup to checkbox-group component ([967a063](https://github.com/cognizone/ng-cognizone/commit/967a06384d1f165f7f7dc37a0c95ce28580bd6cf))
-
-# [6.1.0](https://github.com/cognizone/ng-cognizone/compare/v6.0.0...v6.1.0) (2025-09-02)
-
+# [7.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.2...v7.0.0-beta.3) (2025-10-23)
 
 ### Features
 
-* port a11y fixes from 1.x ([7659c59](https://github.com/cognizone/ng-cognizone/commit/7659c59ff7e5d6f7f3fa07c1ee0bdb03dc6c70ec))
+- **result:** add toError and toOk utils + added bunch of documentation ([f323a84](https://github.com/cognizone/ng-cognizone/commit/f323a842171c902a010b373e4e75df665d03c91e))
 
-# [6.0.0](https://github.com/cognizone/ng-cognizone/compare/v5.1.6...v6.0.0) (2025-07-11)
-
+# [7.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v7.0.0-beta.1...v7.0.0-beta.2) (2025-10-17)
 
 ### Bug Fixes
 
-* correctly get deactivated as a boolean ([050b28f](https://github.com/cognizone/ng-cognizone/commit/050b28f188dfa1fb3510c8ad00260a4cf24a1787))
-* peer dependencies ([70b791e](https://github.com/cognizone/ng-cognizone/commit/70b791ef2bca44c67f8c4dc77b8d5801059ed3fc))
-* peer deps ([7235e98](https://github.com/cognizone/ng-cognizone/commit/7235e982b89881ae21f4794ebcf01e047fa5d4e1))
-* **shacl:** avoid duplicates in properties paths ([dcbbcff](https://github.com/cognizone/ng-cognizone/commit/dcbbcff13bfcab8e4b7e61a6fdb3bd4bfa2ecfb9))
-* **shacl:** correctly compute if a property is a reference ([f465ac5](https://github.com/cognizone/ng-cognizone/commit/f465ac5e8538fbb323acf1eb36b3945782b7f569))
-* **shacl:** ensure uniqueness of property paths ([3989aff](https://github.com/cognizone/ng-cognizone/commit/3989affa3116611c4c883859e019acc5872d2025))
+- set peer and optional dependencies ([255f409](https://github.com/cognizone/ng-cognizone/commit/255f40996c7b00e774a858c99029c484ca91c046))
 
+# [7.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v6.2.1...v7.0.0-beta.1) (2025-10-17)
 
 ### Features
 
-* **json-ld-core:** add json-ld-traverser ([07a67b6](https://github.com/cognizone/ng-cognizone/commit/07a67b6781a31391fe49d6d399906d61ea6e5691))
-* **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([9923e9a](https://github.com/cognizone/ng-cognizone/commit/9923e9a82419203a51e9b500511b0e171f2694b1))
-* upgrade to angular 19 ([65022b5](https://github.com/cognizone/ng-cognizone/commit/65022b5cc9ec8576a659876535eebded97e665da))
-
+- prepare v7 of the libs ([7936e8e](https://github.com/cognizone/ng-cognizone/commit/7936e8e934789fac602bab96328b401256409ecc))
 
 ### BREAKING CHANGES
 
-* upgrade to angular 19
+- upgraded to angular v20 and nx v21
 
-# [6.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.9...v6.0.0-beta.10) (2025-07-11)
-
-
-### Bug Fixes
-
-* correctly get deactivated as a boolean ([abe30fd](https://github.com/cognizone/ng-cognizone/commit/abe30fd6ee469daa679ae22405e563edd3872acc))
-* fix peer deps ([c893de7](https://github.com/cognizone/ng-cognizone/commit/c893de7fe349639d4c66bc73dc25099b3c3a44de))
-* peer deps part 2 ([87afa36](https://github.com/cognizone/ng-cognizone/commit/87afa36cf204d00301046d8a19da3133d021d9c9))
-* **shacl:** avoid duplicates in properties paths ([d494391](https://github.com/cognizone/ng-cognizone/commit/d49439183872f7fc0a7fedb0b8a5bb375bb16216))
-* **shacl:** correctly compute if a property is a reference ([cccddd8](https://github.com/cognizone/ng-cognizone/commit/cccddd86f8b60074d3d058a3314ca32a014f5b11))
-* **shacl:** ensure uniqueness of property paths ([e8364a5](https://github.com/cognizone/ng-cognizone/commit/e8364a534bfed3f0e51ac5b8990b7737a9985b80))
-
+# [6.3.0](https://github.com/cognizone/ng-cognizone/compare/v6.2.1...v6.3.0) (2025-10-23)
 
 ### Features
 
-* **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([a0601f1](https://github.com/cognizone/ng-cognizone/commit/a0601f1e9c78cf2e4ae1607f54b504d221cd5c96))
+- **result:** add toError and toOk utils + added bunch of documentation ([ecf73b0](https://github.com/cognizone/ng-cognizone/commit/ecf73b07118f22190f2df1ff6f48124549366ece))
+
+## [6.2.1](https://github.com/cognizone/ng-cognizone/compare/v6.2.0...v6.2.1) (2025-10-07)
+
+### Bug Fixes
+
+- **lod-core:** add float, decimal, long to xsd namespace + fix anyURI typo ([b577bc2](https://github.com/cognizone/ng-cognizone/commit/b577bc2e2ec71e87716dd7b5bee998a4d57d58ef))
+- **shacl:** broaden class check ([fd642bb](https://github.com/cognizone/ng-cognizone/commit/fd642bb16aa3a0f78106290da474419fe111cf61))
+- **shacl:** include parent shapes ([7458ce4](https://github.com/cognizone/ng-cognizone/commit/7458ce4de2127fc6707bc77278a3de8e1005860b))
+
+# [6.2.0](https://github.com/cognizone/ng-cognizone/compare/v6.1.1...v6.2.0) (2025-09-12)
+
+### Bug Fixes
+
+- **legi-cv:** provide directives and services using a function following new Angular pattern ([e393d37](https://github.com/cognizone/ng-cognizone/commit/e393d376ea08b451b9c892690e1ccc1cfb5fa117))
+
+### Features
+
+- migrate most libraries to v19 way of doing things ([22fc886](https://github.com/cognizone/ng-cognizone/commit/22fc886017151e8e4d34102cdecfe3d5cd94d8b2))
+
+## [6.1.1](https://github.com/cognizone/ng-cognizone/compare/v6.1.0...v6.1.1) (2025-09-08)
+
+### Bug Fixes
+
+- **legi-shared:** add trackByGroup to checkbox-group component ([967a063](https://github.com/cognizone/ng-cognizone/commit/967a06384d1f165f7f7dc37a0c95ce28580bd6cf))
+
+# [6.1.0](https://github.com/cognizone/ng-cognizone/compare/v6.0.0...v6.1.0) (2025-09-02)
+
+### Features
+
+- port a11y fixes from 1.x ([7659c59](https://github.com/cognizone/ng-cognizone/commit/7659c59ff7e5d6f7f3fa07c1ee0bdb03dc6c70ec))
+
+# [6.0.0](https://github.com/cognizone/ng-cognizone/compare/v5.1.6...v6.0.0) (2025-07-11)
+
+### Bug Fixes
+
+- correctly get deactivated as a boolean ([050b28f](https://github.com/cognizone/ng-cognizone/commit/050b28f188dfa1fb3510c8ad00260a4cf24a1787))
+- peer dependencies ([70b791e](https://github.com/cognizone/ng-cognizone/commit/70b791ef2bca44c67f8c4dc77b8d5801059ed3fc))
+- peer deps ([7235e98](https://github.com/cognizone/ng-cognizone/commit/7235e982b89881ae21f4794ebcf01e047fa5d4e1))
+- **shacl:** avoid duplicates in properties paths ([dcbbcff](https://github.com/cognizone/ng-cognizone/commit/dcbbcff13bfcab8e4b7e61a6fdb3bd4bfa2ecfb9))
+- **shacl:** correctly compute if a property is a reference ([f465ac5](https://github.com/cognizone/ng-cognizone/commit/f465ac5e8538fbb323acf1eb36b3945782b7f569))
+- **shacl:** ensure uniqueness of property paths ([3989aff](https://github.com/cognizone/ng-cognizone/commit/3989affa3116611c4c883859e019acc5872d2025))
+
+### Features
+
+- **json-ld-core:** add json-ld-traverser ([07a67b6](https://github.com/cognizone/ng-cognizone/commit/07a67b6781a31391fe49d6d399906d61ea6e5691))
+- **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([9923e9a](https://github.com/cognizone/ng-cognizone/commit/9923e9a82419203a51e9b500511b0e171f2694b1))
+- upgrade to angular 19 ([65022b5](https://github.com/cognizone/ng-cognizone/commit/65022b5cc9ec8576a659876535eebded97e665da))
+
+### BREAKING CHANGES
+
+- upgrade to angular 19
+
+# [6.0.0-beta.10](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.9...v6.0.0-beta.10) (2025-07-11)
+
+### Bug Fixes
+
+- correctly get deactivated as a boolean ([abe30fd](https://github.com/cognizone/ng-cognizone/commit/abe30fd6ee469daa679ae22405e563edd3872acc))
+- fix peer deps ([c893de7](https://github.com/cognizone/ng-cognizone/commit/c893de7fe349639d4c66bc73dc25099b3c3a44de))
+- peer deps part 2 ([87afa36](https://github.com/cognizone/ng-cognizone/commit/87afa36cf204d00301046d8a19da3133d021d9c9))
+- **shacl:** avoid duplicates in properties paths ([d494391](https://github.com/cognizone/ng-cognizone/commit/d49439183872f7fc0a7fedb0b8a5bb375bb16216))
+- **shacl:** correctly compute if a property is a reference ([cccddd8](https://github.com/cognizone/ng-cognizone/commit/cccddd86f8b60074d3d058a3314ca32a014f5b11))
+- **shacl:** ensure uniqueness of property paths ([e8364a5](https://github.com/cognizone/ng-cognizone/commit/e8364a534bfed3f0e51ac5b8990b7737a9985b80))
+
+### Features
+
+- **ng-yasgui:** adding option to toggle yasgui results on query change and on query execution ([a0601f1](https://github.com/cognizone/ng-cognizone/commit/a0601f1e9c78cf2e4ae1607f54b504d221cd5c96))
 
 # [6.0.0-beta.9](https://github.com/cognizone/ng-cognizone/compare/v6.0.0-beta.8...v6.0.0-beta.9) (2025-06-24)
 

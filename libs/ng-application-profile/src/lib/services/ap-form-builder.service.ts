@@ -1,5 +1,5 @@
-import { Inject, Injectable, Optional, Provider, Type } from '@angular/core';
-import { AbstractControl, AsyncValidatorFn, UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, ValidatorFn } from '@angular/forms';
+import { inject, Injectable, Provider, Type } from '@angular/core';
+import { AbstractControl, UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, ValidatorFn } from '@angular/forms';
 import { ApplicationProfile, Rule } from '@cognizone/application-profile';
 import { Many } from '@cognizone/model-utils';
 
@@ -9,21 +9,11 @@ export abstract class MicroValidatorBuilder {
   abstract createValidator(rules: Rule[]): ValidatorFn | null;
 }
 
-export abstract class MicroAsyncValidatorBuilder {
-  abstract createAsyncValidator(rules: Rule[]): AsyncValidatorFn | null;
-}
-
 @Injectable()
 export class ApFormBuilder {
-  constructor(
-    private apService: ApHelper,
-    private fb: UntypedFormBuilder,
-    @Optional() @Inject(MicroValidatorBuilder) private validatorBuilders: MicroValidatorBuilder[],
-    @Optional() @Inject(MicroAsyncValidatorBuilder) private asyncValidatorBuilders: MicroAsyncValidatorBuilder[]
-  ) {
-    this.validatorBuilders = this.validatorBuilders || [];
-    this.asyncValidatorBuilders = this.asyncValidatorBuilders || [];
-  }
+  private apService = inject(ApHelper);
+  private fb = inject(UntypedFormBuilder);
+  private validatorBuilders = (inject(MicroValidatorBuilder, { optional: true }) ?? []) as MicroValidatorBuilder[];
 
   addValidatorsToControl<T extends AbstractControl>(control: T, ap: ApplicationProfile, types: Many<string>, key?: string): T {
     if (control instanceof UntypedFormControl) {

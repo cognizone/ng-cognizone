@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/material-icons/src",
   "prefix": "cz",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -25,9 +26,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/material-icons"],
       "options": {
-        "jestConfig": "libs/material-icons/jest.config.ts"
+        "jestConfig": "libs/material-icons/jest.config.ts",
+        "tsConfig": "libs/material-icons/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

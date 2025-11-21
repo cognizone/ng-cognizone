@@ -1,18 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { UriGenerator } from '@cognizone/lod';
 import { Datatype, DatatypeLong, Many, manyToArray, manyToOne, TypedResourceContext } from '@cognizone/model-utils';
 
 import { isJsonModel, JsonModel, JsonModelFlatGraph, JsonModels } from '../models/json-model';
-import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from './data-model-definition-helper.service';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from './data-model-definition-helper.service';
 
 @Injectable()
 export class JsonModelService {
-  constructor(
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    private idGenerator: UriGenerator
-  ) {}
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private idGenerator = inject(UriGenerator);
 
   toFlatGraph(root: JsonModel): JsonModelFlatGraph {
     const all: JsonModelFlatGraph = { rootUri: root['@id'], models: {} };

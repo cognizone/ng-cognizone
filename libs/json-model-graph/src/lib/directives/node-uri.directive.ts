@@ -1,5 +1,5 @@
-import { ChangeDetectorRef, Directive, Inject, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import { DATA_MODEL_DEFINITION_HELPER_TOKEN, DataModelDefinitionHelper } from '@cognizone/json-model';
+import { ChangeDetectorRef, Directive, inject, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from '@cognizone/json-model';
 import { OnDestroy$ } from '@cognizone/ng-core';
 
 import { GraphService, UrisStoreService } from '../services';
@@ -22,17 +22,12 @@ export class NodeUriDirective extends OnDestroy$ {
 
   type!: string;
 
-  constructor(
-    private readonly templateRef: TemplateRef<unknown>,
-    private readonly viewContainer: ViewContainerRef,
-    private readonly cdr: ChangeDetectorRef,
-    @Inject(DATA_MODEL_DEFINITION_HELPER_TOKEN)
-    private dataModelDefinitionHelper: DataModelDefinitionHelper,
-    private readonly graphService: GraphService,
-    private urisStoreService: UrisStoreService
-  ) {
-    super();
-  }
+  private templateRef = inject(TemplateRef<unknown>);
+  private viewContainer = inject(ViewContainerRef);
+  private cdr = inject(ChangeDetectorRef);
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private graphService = inject(GraphService);
+  private urisStoreService = inject(UrisStoreService);
 
   onUriChange(): void {
     this.render(false);
