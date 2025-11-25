@@ -38,6 +38,7 @@ import { getSortedObject } from '../utils/get-sorted-object';
 
 @Injectable()
 export class ElasticExplorerService {
+  private store = inject(Store);
   private get state$(): Observable<ElasticExplorerStateModel> {
     return this.store.select(ELASTIC_EXPLORER_STATE_TOKEN);
   }
@@ -62,7 +63,6 @@ export class ElasticExplorerService {
   private elasticClient = inject(ElasticClient);
   private resourceGraphService = inject(ResourceGraphService);
   private jsonModelService = inject(JsonModelService);
-  private store = inject(Store);
   private router = inject(Router);
   private snack = inject(MatSnackBar);
 
