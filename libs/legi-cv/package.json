@@ -31,7 +31,6 @@
   ],
   "private": false,
   "publishConfig": {
-    "access": "public",
-    "tag": "v6-lts"
+    "access": "public"
   }
 }

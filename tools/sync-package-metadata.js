@@ -2,9 +2,7 @@ const { readdirSync, readFileSync, writeFileSync } = require('fs');
 const { join, dirname, relative } = require('path');
 
 const libDist = join(__dirname, '../libs');
-const packageFiles = readdirSync(libDist)
-  .filter(dir => !dir.startsWith('.'))
-  .map(dir => join(libDist, dir, 'package.json'));
+const packageFiles = readdirSync(libDist).map(dir => join(libDist, dir, 'package.json'));
 
 function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'));
@@ -15,7 +13,6 @@ function writeJson(path, content) {
 }
 const cognizonePeerVersion = '>=6.0.0 <7';
 const angularVersion = '>=19.0.0 <20';
-const tag = 'v6-lts';
 
 const rootPackage = readJson(join(__dirname, '../package.json'));
 
@@ -30,7 +27,6 @@ packageFiles.forEach(packageFile => {
   package.private = false;
   package.publishConfig = {
     access: 'public',
-    tag,
   };
 
   ['peerDependencies', 'optionalDependencies'].forEach(dependencyType => {
