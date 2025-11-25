@@ -6,6 +6,12 @@ import { GraphWrapperFactory } from './graph-wrapper.factory';
 
 @Injectable()
 export class UrisStoreService {
+  nodeUri!: string;
+  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
+  private _rootUri!: string;
+  private graphWrapperFactory = inject(GraphWrapperFactory);
+  private parent = inject(UrisStoreService, { optional: true, skipSelf: true });
+
   get rootUri(): string {
     return this._rootUri ?? this.parent?.rootUri;
   }
@@ -20,12 +26,6 @@ export class UrisStoreService {
     return this.dataModelDefinitionHelper.getConcreteType(wrapper.getDefinition(), node['@type']);
   }
 
-  nodeUri!: string;
-  private _rootUri!: string;
-
-  private graphWrapperFactory = inject(GraphWrapperFactory);
-  private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
-  private parent = inject(UrisStoreService, { optional: true, skipSelf: true });
 
   getWrapper(): GraphWrapper {
     if (!this.rootUri) throw new Error('Cannot generate a wrapper with rootUri being Nil');

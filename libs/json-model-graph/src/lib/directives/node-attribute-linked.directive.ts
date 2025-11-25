@@ -13,6 +13,7 @@ import { GraphAndControlLinkingService, GraphService, GraphWrapper, UrisStoreSer
   standalone: true,
 })
 export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChanges {
+  private urisStoreService = inject(UrisStoreService);
   @Input('czNodeAttributeLinked')
   attributeKey!: string;
 
@@ -43,7 +44,7 @@ export class NodeAttributeLinkedDirective extends OnDestroy$ implements OnChange
   private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
   private graphService = inject(GraphService);
   private graphControlService = inject(GraphAndControlLinkingService);
-  private urisStoreService = inject(UrisStoreService);
+
   private devtoolsEnabled = inject(DEVTOOLS_ENABLED_TOKEN);
   private elRef = inject(ElementRef<Comment | HTMLElement | undefined>, { optional: true });
   private ngControl = inject(NgControl, { optional: true, host: true });
