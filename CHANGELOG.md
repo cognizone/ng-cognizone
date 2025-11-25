@@ -1,3 +1,15 @@
+## [6.3.1](https://github.com/cognizone/ng-cognizone/compare/v6.3.0...v6.3.1) (2025-11-25)
+
+
+### Bug Fixes
+
+* modifying dependency injection to resolve undefined issues ([13df460](https://github.com/cognizone/ng-cognizone/commit/13df460dd76d71cef1f352237088e717d853614c))
+
+
+### Reverts
+
+* Revert "fix: push changes for trusted publishing" ([79ea14c](https://github.com/cognizone/ng-cognizone/commit/79ea14cf55831eb42e00fe09bce1e0266a83fc6f))
+
 # [6.3.0](https://github.com/cognizone/ng-cognizone/compare/v6.2.1...v6.3.0) (2025-10-23)
 
 
