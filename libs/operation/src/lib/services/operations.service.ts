@@ -11,6 +11,7 @@ import { OPERATIONS_STATE_TOKEN, OperationsStateModel } from '../store/operation
   providedIn: 'root',
 })
 export class OperationsService {
+  private store = inject(Store);
   get groups$(): Observable<OperationGroup[]> {
     return this.state$.pipe(selectProp('groups'));
   }
@@ -23,7 +24,7 @@ export class OperationsService {
     return this.store.selectSnapshot(OPERATIONS_STATE_TOKEN).groups;
   }
 
-  private store = inject(Store);
+  
 
   setOperationGroups(groups: OperationGroup[]): void {
     this.store.dispatch(new SetOperationGroups(groups));

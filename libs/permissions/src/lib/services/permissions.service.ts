@@ -7,9 +7,9 @@ import { PERMISSIONS_PROVIDER_TOKEN } from './permissions-provider';
 
 @Injectable({ providedIn: 'root' })
 export class PermissionsService {
+  private permissionsProvider = inject(PERMISSIONS_PROVIDER_TOKEN);
   permissions$: Observable<string[]> = this.getPermissions();
 
-  private permissionsProvider = inject(PERMISSIONS_PROVIDER_TOKEN);
 
   hasPermissions(permissions: Nil<Many<string>>): Observable<boolean> {
     if (!permissions) return of(true);
