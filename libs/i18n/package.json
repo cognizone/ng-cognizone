@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/i18n",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "peerDependencies": {
     "@cognizone/model-utils": ">=7.0.0",
     "@angular/core": ">=20.0.0",

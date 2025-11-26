@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/json-model-graph",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "peerDependencies": {
     "@cognizone/devtools": ">=7.0.0",
     "@cognizone/json-model": ">=7.0.0",

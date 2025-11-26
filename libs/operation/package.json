@@ -1,6 +1,6 @@
 {
   "name": "@cognizone/operation",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "peerDependencies": {
     "@cognizone/devtools": ">=7.0.0",
     "@cognizone/model-utils": ">=7.0.0",

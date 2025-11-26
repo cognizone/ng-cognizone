@@ -1,3 +1,12 @@
+## [7.0.2](https://github.com/cognizone/ng-cognizone/compare/v7.0.1...v7.0.2) (2025-11-26)
+
+
+### Bug Fixes
+
+* modifying dependency injection to resolve undefined issues ([249048d](https://github.com/cognizone/ng-cognizone/commit/249048d909c814d7e94ce4238f4f61c512da827a))
+* **ng-core:** remove unnecessary peer deps ([87213c8](https://github.com/cognizone/ng-cognizone/commit/87213c827a9448742fab165639781d82f6f1cfb1))
+* **transloco-langstring:** remove unnecessary peer deps ([c577e01](https://github.com/cognizone/ng-cognizone/commit/c577e0141c8b7c6fc5daacb9b130de0b8cb6cde6))
+
 ## [7.0.1](https://github.com/cognizone/ng-cognizone/compare/v7.0.0...v7.0.1) (2025-11-21)
 
 
