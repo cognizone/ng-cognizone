@@ -3,7 +3,6 @@
   "version": "7.0.1",
   "peerDependencies": {
     "@angular/core": ">=20.0.0",
-    "@angular/platform-browser-dynamic": ">=20.0.0",
     "@cognizone/model-utils": ">=7.0.0",
     "@jsverse/transloco": "^7.0.0"
   },
