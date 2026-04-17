@@ -4,8 +4,9 @@ const { join } = require('path');
 // Hardcoded dependency version mappings
 const DEPENDENCY_VERSIONS = {
   '@cognizone/': '>=8.0.0-beta.1',
-  '@ngxs/': '>=20.0.0',
+  '@ngxs/': '>=21.0.0',
   '@angular/': '>=21.0.0',
+  '@jsverse/': '>=8.0.0',
   rxjs: '^7.8.0',
   tslib: '^2.3.0',
 };
