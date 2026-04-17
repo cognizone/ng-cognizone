@@ -1,3 +1,10 @@
+# [8.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v8.0.0-beta.1...v8.0.0-beta.2) (2026-04-17)
+
+
+### Bug Fixes
+
+* remove obsolete package.json overrides ([9b162cc](https://github.com/cognizone/ng-cognizone/commit/9b162cc16f20e20f45105cd2353c208745c90585))
+
 # [8.0.0-beta.1](https://github.com/cognizone/ng-cognizone/compare/v7.0.2...v8.0.0-beta.1) (2026-04-17)
 
 
