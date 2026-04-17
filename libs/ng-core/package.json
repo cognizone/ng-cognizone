@@ -5,9 +5,9 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/core": ">=20.0.0",
-    "@angular/forms": ">=20.0.0",
-    "@angular/common": ">=20.0.0",
+    "@angular/core": ">=21.0.0",
+    "@angular/forms": ">=21.0.0",
+    "@angular/common": ">=21.0.0",
     "rxjs": "^7.8.0"
   },
   "license": "Apache-2.0",

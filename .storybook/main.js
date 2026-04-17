@@ -1,12 +1,12 @@
-module.exports = {
+export default {
   framework: {
-    name: "@storybook/angular",
-    options: {}
+    name: '@storybook/angular',
+    options: {},
   },
 
   docs: {
-    autodocs: true
+    autodocs: true,
   },
 
-  addons: ["@chromatic-com/storybook"]
+  addons: ['@chromatic-com/storybook'],
 };
