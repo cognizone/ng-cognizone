@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/core": ">=21.0.0",
     "@cognizone/model-utils": ">=8.0.0-beta.1",
-    "@jsverse/transloco": "^7.0.0"
+    "@jsverse/transloco": ">=8.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
