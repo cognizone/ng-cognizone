@@ -69,7 +69,7 @@
     "@ngxs/store": "^21.0.0",
     "@types/lodash-es": "^4.17.4",
     "bootstrap": "^4.6.0",
-    "chokidar": "^3.6.0",
+    "chokidar": "^5.0.0",
     "clipboard": "^2.0.8",
     "copyfiles": "^2.4.1",
     "immer": "^9.0.5",
@@ -151,14 +151,6 @@
     "typescript": "5.9.3",
     "webpack": "^5.64.0",
     "jest-util": "30.3.0"
-  },
-  "//comment": "babel-loader for storybook, should be fixed with nx 16+, see https://github.com/nrwl/nx/issues/14331",
-  "overrides": {
-    "@nx/webpack": {
-      "babel-loader": "^9.0.0"
-    },
-    "chokidar": "^3.6.0",
-    "monaco-editor": "^0.55.1"
   },
   "config": {
     "commitizen": {
