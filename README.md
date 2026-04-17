@@ -85,6 +85,10 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
+## Migrating from v7 to v8
+
+- Minimal Angular version is now 21
+
 ## Migrating from v6 to v7
 
 - Minimal Angular version is now 20
