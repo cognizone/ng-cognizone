@@ -9,8 +9,8 @@ import { PermissionsService } from '../services/permissions.service';
   standalone: true,
 })
 export class EnabledForPermissionDirective extends OnDestroy$ implements OnInit, OnChanges {
-  @HostBinding()
-  disabled?: boolean;
+  @HostBinding('attr.disabled')
+  disabled?: '' | null;
 
   @Input('czEnabledForPermission')
   permissions: Nil<Many<string>>;
@@ -50,6 +50,6 @@ export class EnabledForPermissionDirective extends OnDestroy$ implements OnInit,
     } else {
       enabled = this.hasPermission;
     }
-    this.disabled = !enabled;
+    this.disabled = enabled ? null : '';
   }
 }

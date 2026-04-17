@@ -120,7 +120,7 @@ describe('SeoService', () => {
         };
       })
     );
-    expect(() => seoService.appendMetaValue(metaId, 'foo')).toThrowError();
+    expect(() => seoService.appendMetaValue(metaId, 'foo')).toThrow();
   });
 
   it(`should set canonical url`, () => {

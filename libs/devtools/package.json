@@ -2,8 +2,8 @@
   "name": "@cognizone/devtools",
   "version": "7.0.2",
   "peerDependencies": {
-    "@angular/core": ">=20.0.0",
-    "@angular/platform-browser-dynamic": ">=20.0.0"
+    "@angular/core": ">=21.0.0",
+    "@angular/platform-browser-dynamic": ">=21.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
