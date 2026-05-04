@@ -17,7 +17,7 @@ import { map, takeUntil } from 'rxjs/operators';
 import { OnDestroy$ } from '../helpers/on-destroy';
 import { Logger } from '../modules/logger/logger.service';
 import { Maybe } from '../types/maybe';
-import { LoggerFactory } from '../public-api';
+import { LoggerFactory } from '../modules/logger/logger.factory';
 
 // put @Directive so that @Input are kept
 /**
