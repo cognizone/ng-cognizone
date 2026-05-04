@@ -1,3 +1,10 @@
+# [8.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v8.0.0-beta.2...v8.0.0-beta.3) (2026-05-04)
+
+
+### Bug Fixes
+
+* **ng-core:** potential circular dependency between ng-core entrypoint, LoggerFactory and ControlComponent ([6e812f2](https://github.com/cognizone/ng-cognizone/commit/6e812f24e2fc58deee0b5ec5e62a1c45efa36e1a))
+
 # [8.0.0-beta.2](https://github.com/cognizone/ng-cognizone/compare/v8.0.0-beta.1...v8.0.0-beta.2) (2026-04-17)
 
 
