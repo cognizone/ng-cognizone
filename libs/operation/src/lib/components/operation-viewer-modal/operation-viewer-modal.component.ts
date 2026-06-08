@@ -51,7 +51,7 @@ export class OperationViewerModalComponent implements OnInit {
 
   group?: OperationGroup;
 
-  data = inject(MAT_DIALOG_DATA) as OperationViewerModalComponentData;
+  data = inject(MAT_DIALOG_DATA);
   private operationsService = inject(OperationsService);
   private operationUtils = inject(OperationUtils);
 
