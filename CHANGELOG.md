@@ -1,3 +1,50 @@
+# [8.0.0](https://github.com/cognizone/ng-cognizone/compare/v7.0.2...v8.0.0) (2026-06-08)
+
+
+* feat!: upgrade @jsverse/transloco to 8.x ([f162720](https://github.com/cognizone/ng-cognizone/commit/f162720c4aaa2a1e689947a269114b52ef0537de))
+* feat!: upgrade to Angular 21 and Nx 22 ([9943b55](https://github.com/cognizone/ng-cognizone/commit/9943b55458aba7bcabb708fef14d35d3da4d3c3d))
+
+
+### Bug Fixes
+
+* **ng-core:** potential circular dependency between ng-core entrypoint, LoggerFactory and ControlComponent ([a755013](https://github.com/cognizone/ng-cognizone/commit/a7550138f78478d222853d268a2a1b814f8e9044))
+* remove obsolete package.json overrides ([0e79c5a](https://github.com/cognizone/ng-cognizone/commit/0e79c5a0ff71922aa9220e27a4093f9d45a56bb4))
+
+
+### BREAKING CHANGES
+
+* @cognizone/i18n-transloco and
+@cognizone/transloco-langstring now require @jsverse/transloco >=8.0.0
+(was >=7.0.0). Consumers must upgrade @jsverse/transloco and
+@jsverse/transloco-locale to 8.x.
+
+- @jsverse/transloco ^7.4.2 -> ^8.3.0
+- @jsverse/transloco-locale ^7.0.1 -> ^8.3.0
+- align @ngxs/* peer ranges to >=21.0.0 across publishable libs
+- teach tools/set-peer-deps.js about @jsverse/* prefix
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
+* published libs now require Angular 21 (peer range
+>=21.0.0 <22). Consumers on Angular 20 must stay on @cognizone/* 7.0.2.
+
+- Angular 20.3.6 -> 21.2.9 (core, cli, cdk, material, eslint)
+- Nx 21.6.5 -> 22.6.5, ng-packagr 20 -> 21.2.2
+- Storybook unified on 10.3.5 (removed consolidated addon-essentials,
+  addon-interactions, core-server; configs moved to ESM)
+- jest-preset-angular 14 -> 16, zone.js 0.15 -> 0.16, @types/node -> 22
+- Ecosystem bumps for Angular 21 compat: @ngxs/* 21, ngx-monaco-editor-v2
+  21, monaco-editor 0.55, cypress 15, @chromatic-com/storybook 5
+- set-peer-deps.js: @angular/* peer range bumped to >=21.0.0 <22 and
+  propagated across all publishable libs
+- Applied Nx migration schematics: tsconfig module=preserve,
+  moduleResolution=bundler, lib=es2022, isolatedModules for specs
+- Fixed @HostBinding('disabled') -> @HostBinding('attr.disabled') in
+  EnabledForPermissionDirective for Angular 21 strict templates
+- Cleaned up test-setup.ts files left half-migrated by
+  update-jest-preset-angular-setup
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
+
 # [8.0.0-beta.3](https://github.com/cognizone/ng-cognizone/compare/v8.0.0-beta.2...v8.0.0-beta.3) (2026-05-04)
 
 
