@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+import { hardenYasgui } from '../utils/harden-yasgui';
 import { YASGUI } from '../models/yasgui';
 
 @Injectable({ providedIn: 'root' })
@@ -30,7 +31,9 @@ export class YasguiService {
     return (this.yasgui$ = fromEvent(this.script, 'load').pipe(
       map(() => {
         this.clearYasguiCache();
-        return (window as unknown as { YASGUI: YASGUI }).YASGUI;
+        const yasgui = (window as unknown as { YASGUI: YASGUI }).YASGUI;
+        hardenYasgui(yasgui);
+        return yasgui;
       }),
       shareReplay(1)
     ));
