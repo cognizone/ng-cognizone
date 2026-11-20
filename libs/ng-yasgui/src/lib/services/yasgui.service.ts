@@ -2,11 +2,16 @@ import { Injectable } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+import { hardenYasgui } from '../utils/harden-yasgui';
+import { restrictShareLinkOnCreate } from '../utils/share-link';
 import { YASGUI } from '../models/yasgui';
 
 @Injectable({ providedIn: 'root' })
 export class YasguiService {
   assetsBasePath = 'assets/ng-yasgui';
+
+  /** Keeps the endpoint, request method, headers and request arguments of a share link, see `ShareLinkOptions` */
+  keepShareLinkRequestSettings = false;
 
   private script?: HTMLScriptElement;
 
@@ -30,7 +35,9 @@ export class YasguiService {
     return (this.yasgui$ = fromEvent(this.script, 'load').pipe(
       map(() => {
         this.clearYasguiCache();
-        return (window as unknown as { YASGUI: YASGUI }).YASGUI;
+        const yasgui = (window as unknown as { YASGUI: YASGUI }).YASGUI;
+        hardenYasgui(yasgui);
+        return restrictShareLinkOnCreate(yasgui, () => ({ keepRequestSettings: this.keepShareLinkRequestSettings }));
       }),
       shareReplay(1)
     ));
