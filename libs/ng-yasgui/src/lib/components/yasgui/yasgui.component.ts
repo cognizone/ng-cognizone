@@ -13,7 +13,6 @@ import {
 } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
-import { restrictShareLinkInUrl } from '../../utils/share-link';
 import { Yasgui, YasguiOptions } from '../../models/yasgui';
 import { YasguiService } from '../../services/yasgui.service';
 
@@ -104,7 +103,6 @@ export class YasguiComponent implements OnInit, OnChanges, OnDestroy {
     const YASGUI = await firstValueFrom(this.yasguiService.loadYasgui());
 
     YASGUI.YASQE.defaults.sparql.showQueryButton = true;
-    restrictShareLinkInUrl();
     return YASGUI(this.yasguiRef.nativeElement, this.options);
   }
 }

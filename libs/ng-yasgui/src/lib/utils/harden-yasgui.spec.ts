@@ -159,13 +159,16 @@ describe('hardenYasgui', () => {
         'data:text/html,<script>alert(1)</script>',
         'vbscript:msgbox(1)',
         'urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66',
+        'ftp://example.org/a',
+        'tel:+41000000000',
         '//example.org/a',
         '',
-      ])('shows %j as text, not as a link', uri => {
+      ])('shows %j as text with the style of a uri, not as a link', uri => {
         draw([{ s: { type: 'uri', value: uri } }]);
 
         expect(host.querySelector('table.resultsTable a')).toBeNull();
         expect(cells()[0].textContent).toBe(uri);
+        expect(cells()[0].querySelector('span')!.className).toBe('uri');
       });
 
       it('keeps a quote in a uri inside the href', () => {
@@ -234,7 +237,7 @@ describe('hardenYasgui', () => {
         const render = (type: string): string =>
           YASGUI.YASR.plugins.table.defaults.getCellContent(yasr, { options: {} }, { s: { type, value } }, 's', {});
 
-        expect(render('uri')).toBe(`<div><span class="nonUri">${shown}</span></div>`);
+        expect(render('uri')).toBe(`<div><span class="uri">${shown}</span></div>`);
         expect(render('literal')).toBe(`<div><span class="nonUri">${shown}</span></div>`);
       });
 

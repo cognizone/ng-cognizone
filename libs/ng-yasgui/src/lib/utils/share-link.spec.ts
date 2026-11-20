@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-non-null-assertion */
 import { createHost, IMG, injected, loadYasguiBundle, sparqlJson, stubAjax } from '../../testing/yasgui-bundle';
 import { hardenYasgui } from './harden-yasgui';
-import { restrictShareLinkInUrl, restrictShareLinkParams } from './share-link';
+import { restrictShareLinkInUrl, restrictShareLinkOnCreate, restrictShareLinkParams } from './share-link';
 
 const QUERY = 'SELECT * WHERE { ?s ?p ?o }';
 const settingsParam = (settings: unknown): string => `outputSettings=${encodeURIComponent(JSON.stringify(settings))}`;
@@ -14,12 +14,44 @@ describe('restrictShareLinkParams', () => {
   it.each([
     '',
     'query=SELECT%20*&tabTitle=Query',
-    'query=a=b&&x',
+    'query=a=b',
+    'query=a&outputFormat=table&tabTitle=b&namedGraph=http%3A%2F%2Fg&namedGraph=x&defaultGraph=http%3A%2F%2Fd',
     'outputSettingsX=%7B%22datatable%22%3A1%7D',
     'xoutputSettings=%7B%22datatable%22%3A1%7D',
     'outputSettings',
+    'id=102&endpoint=http%3A%2F%2Fexample.org&requestMethod=GET',
+    'query=&endpoint=http%3A%2F%2Fexample.org',
+    'results',
   ])('leaves %j as it is', params => {
     expect(restrictShareLinkParams(params)).toBe(params);
+  });
+
+  it.each([
+    'endpoint=http%3A%2F%2Fexample.org%2Fsparql',
+    'requestMethod=GET',
+    'headers=%7B%22Authorization%22%3A%22Basic%20x%22%7D',
+    'contentTypeSelect=text%2Fhtml',
+    'contentTypeConstruct=text%2Fhtml',
+    'should-sponge=soft',
+    'update=DELETE%20WHERE%20%7B%3Fs%20%3Fp%20%3Fo%7D',
+    'Query=a',
+    '%71uery=a',
+    '#endpoint=http%3A%2F%2Fexample.org',
+    'x',
+    '',
+  ])('drops %j from a link', param => {
+    expect(restrictShareLinkParams(`query=a&${param}&tabTitle=b`)).toBe('query=a&tabTitle=b');
+  });
+
+  it('keeps the request settings of a link when told to', () => {
+    const params = 'endpoint=http%3A%2F%2Fexample.org&query=a&requestMethod=GET&headers=%7B%7D&should-sponge=soft';
+
+    expect(restrictShareLinkParams(params, { keepRequestSettings: true })).toBe(params);
+    expect(restrictShareLinkParams(`${params}&${settingsParam({ datatable: {} })}`, { keepRequestSettings: true })).toBe(params);
+  });
+
+  it.each(['#query=a', 'x=1&?query=a', 'x=1#query=a'])('takes %j for a link, as a restriction can make the query the first', params => {
+    expect(restrictShareLinkParams(`endpoint=x&${params}`)).not.toContain('endpoint');
   });
 
   it.each([
@@ -111,6 +143,22 @@ describe('restrictShareLinkParams', () => {
     expect(settingsOf(restrictShareLinkParams(settingsParam({ chartConfig })))).toEqual({ chartConfig: {} });
   });
 
+  it.each(['Table', 'ColumnChart', 'PieChart', 'GeoChart', 'Timeline', 'OrgChart', 'TreeMap', 'WordTree'])(
+    'keeps the chart type %s',
+    chartType => {
+      expect(settingsOf(restrictShareLinkParams(settingsParam({ chartConfig: { chartType } })))).toEqual({ chartConfig: { chartType } });
+    }
+  );
+
+  it.each(['Map', 'MotionChart', 'ImageChart', 'ImageBarChart', 'google.visualization.Table', 'table', 'Table ', IMG, 'constructor', ''])(
+    'drops the chart type %j',
+    chartType => {
+      const chartConfig = { chartType, options: { title: 'a' } };
+
+      expect(settingsOf(restrictShareLinkParams(settingsParam({ chartConfig })))).toEqual({ chartConfig: { options: { title: 'a' } } });
+    }
+  );
+
   it('keeps the layout of a pivot table only', () => {
     const pivotTable = {
       cols: ['a', 1, IMG],
@@ -136,14 +184,14 @@ describe('restrictShareLinkParams', () => {
   });
 
   it('decodes + as a space, as the client does', () => {
-    const params = restrictShareLinkParams('outputSettings=%7B%22chartConfig%22:%7B%22chartType%22:%22Bar+Chart%22%7D%7D');
+    const params = restrictShareLinkParams('outputSettings=%7B%22chartConfig%22:%7B%22options%22:%7B%22title%22:%22a+b%22%7D%7D%7D');
 
-    expect(settingsOf(params)).toEqual({ chartConfig: { chartType: 'Bar Chart' } });
+    expect(settingsOf(params)).toEqual({ chartConfig: { options: { title: 'a b' } } });
   });
 
   it.each([
     ['a pivot layout', PIVOT],
-    ['a chart', { chartConfig: { chartType: 'Bar Chart', options: { legend: 'none' }, state: {}, view: {} }, motionChartState: '{}' }],
+    ['a chart', { chartConfig: { chartType: 'BarChart', options: { title: 'A chart' }, state: {}, view: {} }, motionChartState: '{}' }],
   ])('leaves %s as the client wrote it', (_, settings) => {
     const params = `query=a&${clientParam(settings)}&tabTitle=b`;
 
@@ -162,9 +210,11 @@ describe('restrictShareLinkParams', () => {
     ['=', '%3D'],
     ['#', '%23'],
   ])('encodes settings again when their value has a %s', (char, encoded) => {
-    const params = restrictShareLinkParams(`outputSettings=%7B%22chartConfig%22%3A%7B%22chartType%22%3A%22a${char}b%22%7D%7D`);
+    const params = restrictShareLinkParams(`outputSettings=%7B%22pivotTable%22%3A%7B%22rendererName%22%3A%22a${char}b%22%7D%7D`);
 
-    expect(params).toBe(`outputSettings=%7B%22chartConfig%22%3A%7B%22chartType%22%3A%22a${encoded}b%22%7D%7D`);
+    expect(params).toBe(
+      `outputSettings=%7B%22pivotTable%22%3A%7B%22cols%22%3A%5B%5D%2C%22rows%22%3A%5B%5D%2C%22vals%22%3A%5B%5D%2C%22rendererName%22%3A%22a${encoded}b%22%7D%7D`
+    );
   });
 
   it('restricts every outputSettings parameter', () => {
@@ -237,6 +287,51 @@ describe('restrictShareLinkInUrl', () => {
 
     restrictShareLinkInUrl();
     expect(namesReadByClient()).not.toContain('outputSettings');
+
+    const replaceState = jest.spyOn(history, 'replaceState');
+    restrictShareLinkInUrl();
+    expect(replaceState).not.toHaveBeenCalled();
+  });
+
+  it('drops the request settings of a link in the hash, and keeps the parameters of the app in the query string', () => {
+    history.replaceState(null, '', '/sparql?id=102&endpoint=x#query=a&endpoint=http%3A%2F%2Fexample.org&tabTitle=b&headers=%7B%7D');
+
+    restrictShareLinkInUrl();
+
+    expect(window.location.pathname + window.location.search + window.location.hash).toBe('/sparql?id=102&endpoint=x#query=a&tabTitle=b');
+  });
+
+  it('drops the request settings of a link in the query string', () => {
+    history.replaceState(null, '', '/sparql?query=a&endpoint=http%3A%2F%2Fexample.org&requestMethod=GET');
+
+    restrictShareLinkInUrl();
+
+    expect(window.location.pathname + window.location.search + window.location.hash).toBe('/sparql?query=a');
+  });
+
+  it('keeps the request settings of a link when told to', () => {
+    const url = '/sparql#query=a&endpoint=http%3A%2F%2Fexample.org&requestMethod=GET';
+    history.replaceState(null, '', url);
+
+    restrictShareLinkInUrl({ keepRequestSettings: true });
+
+    expect(window.location.pathname + window.location.search + window.location.hash).toBe(url);
+  });
+
+  it.each([
+    '/sparql#endpoint=EVIL&query=a',
+    '/sparql##endpoint=EVIL&query=a',
+    '/sparql#endpoint=x&#endpoint=EVIL&query=a',
+    '/sparql#&#endpoint=EVIL&query=a',
+    '/sparql#x=1&#query=a&endpoint=EVIL',
+    '/sparql?endpoint=x&?endpoint=EVIL&query=a',
+    '/sparql?endpoint=EVIL&query=a#',
+    '/sparql?endpoint=EVIL&query=a#&#query=b',
+  ])('leaves no endpoint to read in %s, and nothing to restrict again', url => {
+    history.replaceState(null, '', url.replace('EVIL', 'http%3A%2F%2Fevil.example.org'));
+
+    restrictShareLinkInUrl();
+    expect(namesReadByClient()).not.toContain('endpoint');
 
     const replaceState = jest.spyOn(history, 'replaceState');
     restrictShareLinkInUrl();
@@ -320,6 +415,42 @@ describe('share link in the real client', () => {
     expect(injected(host)).toEqual([]);
   });
 
+  describe('request settings', () => {
+    const link = `query=${encodeURIComponent(QUERY)}&endpoint=http%3A%2F%2Fevil.example.org%2Fsparql&requestMethod=GET&should-sponge=soft`;
+
+    /** The request the client sends for the link */
+    function requestOf(restrict: boolean, options = {}): { url: string; type: string; data: unknown } {
+      window.location.hash = link;
+      if (restrict) restrictShareLinkInUrl(options);
+      const ajax = stubAjax(YASGUI);
+      host = createHost();
+      YASGUI(host, { yasqe: { sparql: { endpoint: 'http://localhost/sparql', requestMethod: 'POST' } } });
+      return ajax.queries[0];
+    }
+
+    it('come from an unrestricted link', () => {
+      const request = requestOf(false);
+
+      // a GET request has its arguments in the url
+      expect(request.url).toBe(`http://evil.example.org/sparql?query=${encodeURIComponent(QUERY)}&should-sponge=soft`);
+      expect(request.type).toBe('GET');
+    });
+
+    it('come from the client options for a restricted link', () => {
+      const request = requestOf(true);
+
+      expect(request.url).toBe('http://localhost/sparql');
+      expect(request.type).toBe('POST');
+      expect(request.data).toEqual([{ name: 'query', value: QUERY }]);
+    });
+
+    it('come from the link when the app keeps them', () => {
+      const request = requestOf(true, { keepRequestSettings: true });
+
+      expect(request.url).toBe(`http://evil.example.org/sparql?query=${encodeURIComponent(QUERY)}&should-sponge=soft`);
+    });
+  });
+
   it('opens a restricted pivot link with its layout', async () => {
     const tab = await open('pivot', pivot, true);
 
@@ -329,5 +460,52 @@ describe('share link in the real client', () => {
     expect(tab.yasr.plugins.pivot.options.pivotTable.rows).toEqual(['p']);
     expect(tab.yasr.plugins.pivot.options.pivotTable.rendererOptions).toBeUndefined();
     expect(host.querySelector('.pvtTotalLabel')!.textContent).toBe('Totals');
+  });
+});
+
+describe('restrictShareLinkOnCreate', () => {
+  const link = `query=a&endpoint=http%3A%2F%2Fexample.org&${settingsParam({ datatable: {} })}`;
+
+  afterEach(() => history.replaceState(null, '', '/'));
+
+  /** A client that records the url it is created on */
+  function client(): { (...args: unknown[]): string; YASQE: string } {
+    return Object.assign((...args: unknown[]) => `${window.location.hash} ${args.join(',')}`, { YASQE: 'statics' });
+  }
+
+  it('restricts the url before each creation', () => {
+    const yasgui = restrictShareLinkOnCreate(client(), () => ({}));
+
+    history.replaceState(null, '', `/sparql#${link}`);
+    expect(yasgui('host', 'options')).toBe('#query=a host,options');
+    history.replaceState(null, '', `/sparql#${link}`);
+    expect(yasgui('host')).toBe('#query=a host');
+  });
+
+  it('reads the options at each creation', () => {
+    let keepRequestSettings = false;
+    const yasgui = restrictShareLinkOnCreate(client(), () => ({ keepRequestSettings }));
+
+    keepRequestSettings = true;
+    history.replaceState(null, '', `/sparql#${link}`);
+
+    expect(yasgui()).toBe('#query=a&endpoint=http%3A%2F%2Fexample.org ');
+  });
+
+  it('restricts the url when created with new', () => {
+    class Client {
+      hash = window.location.hash;
+    }
+    const restricted = restrictShareLinkOnCreate(Client, () => ({}));
+    history.replaceState(null, '', `/sparql#${link}`);
+
+    const created = new restricted();
+
+    expect(created.hash).toBe('#query=a');
+    expect(created).toBeInstanceOf(Client);
+  });
+
+  it('keeps the statics of the client', () => {
+    expect(restrictShareLinkOnCreate(client(), () => ({})).YASQE).toBe('statics');
   });
 });

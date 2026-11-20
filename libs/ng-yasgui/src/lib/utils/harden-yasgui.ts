@@ -112,7 +112,8 @@ function hardenTable(table: TableDefaults): void {
     const binding = row[name] ?? {};
     const isUri = binding.type === 'uri';
     const content = linkOrSpan(binding, String(yasr.options.uriTarget));
-    content.className = content.matches('a') ? 'uri' : 'nonUri';
+    // also for a uri shown as text, as the bundle styles them
+    content.className = isUri ? 'uri' : 'nonUri';
 
     const merge = plugin.options.mergeLabelsWithUris;
     const label = isUri && merge ? row[name + (typeof merge === 'string' ? merge : 'Label')] : undefined;

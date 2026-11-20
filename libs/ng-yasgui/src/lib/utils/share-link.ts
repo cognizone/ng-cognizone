@@ -3,6 +3,43 @@ const DROPPED_KEYS = ['allowHtml', 'isHtml', '__proto__'];
 
 const SETTINGS_PARAM = 'outputSettings=';
 
+/** What the client writes in a share link, besides request settings. It sends any parameter it does not know to the endpoint */
+const SHARED_PARAMS = ['query', 'outputFormat', 'outputSettings', 'tabTitle', 'namedGraph', 'defaultGraph'];
+
+/** The chart types of the chart editor that draw SVG or text: not Map (HTML info windows), MotionChart (Flash) or the image charts */
+const CHART_TYPES = [
+  'AnnotationChart',
+  'AreaChart',
+  'BarChart',
+  'BubbleChart',
+  'Calendar',
+  'CandlestickChart',
+  'ColumnChart',
+  'ComboChart',
+  'Gauge',
+  'GeoChart',
+  'Histogram',
+  'LineChart',
+  'OrgChart',
+  'PieChart',
+  'Sankey',
+  'ScatterChart',
+  'SteppedAreaChart',
+  'Table',
+  'Timeline',
+  'TreeMap',
+  'WordTree',
+];
+
+export interface ShareLinkOptions {
+  /**
+   * Keeps the parameters of a share link that choose where and how its query is sent: `endpoint`, `requestMethod`,
+   * `headers`, `contentTypeSelect`, `contentTypeConstruct`, and any parameter the client does not know, which it sends
+   * to the endpoint as a request argument. Off by default, as the client runs the query of a link as soon as it opens it.
+   */
+  keepRequestSettings?: boolean;
+}
+
 const isObject = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v);
 const numbers = (v: unknown): number[] | undefined => (Array.isArray(v) ? v.filter(x => typeof x === 'number') : undefined);
 const strings = (v: unknown): string[] => (Array.isArray(v) ? v.filter(x => typeof x === 'string') : []);
@@ -19,7 +56,7 @@ function sameJson(a: unknown, b: unknown): boolean {
 /** What a saved chart needs: the other keys of a ChartWrapper (dataSourceUrl, query...) make it load data */
 function restrictChartConfig({ chartType, options, state, view }: Record<string, unknown>): Record<string, unknown> {
   return {
-    ...(typeof chartType === 'string' && { chartType }),
+    ...(typeof chartType === 'string' && CHART_TYPES.includes(chartType) && { chartType }),
     ...(isObject(options) && { options }),
     ...((typeof state === 'string' || isObject(state)) && { state }),
     ...(isObject(view) && { view: restrictChartView(view) }),
@@ -81,18 +118,32 @@ function restrictSettingsParam(param: string): string | null {
   return SETTINGS_PARAM + encodeURIComponent(JSON.stringify(safe));
 }
 
-/** For example 'query=SELECT...&outputSettings=%7B"datatable":1%7D' -> 'query=SELECT...' */
-export function restrictShareLinkParams(params: string): string {
+/** The client opens a link that has a query. Also counts one after a # or ?, which a later restriction can make the first */
+const isLink = (params: string): boolean => /(^|[&#?])query=[^&#]/.test(params);
+
+function restrictParam(param: string, link: boolean, { keepRequestSettings }: ShareLinkOptions): string | null {
+  if (param.startsWith(SETTINGS_PARAM)) return restrictSettingsParam(param);
+  if (!link || keepRequestSettings === true) return param;
+  // the client compares the name as it is, not decoded
+  return SHARED_PARAMS.includes(param.split('=')[0]) ? param : null;
+}
+
+/**
+ * For example 'query=SELECT...&outputSettings=%7B"datatable":1%7D&endpoint=https://example.org' -> 'query=SELECT...'.
+ * Parameters without a query are not a link: they stay, as the app may use them, apart from `outputSettings`.
+ */
+export function restrictShareLinkParams(params: string, options: ShareLinkOptions = {}): string {
+  const link = isLink(params);
   return params
     .split('&')
-    .map(param => (param.startsWith(SETTINGS_PARAM) ? restrictSettingsParam(param) : param))
+    .map(param => restrictParam(param, link, options))
     .filter(param => param !== null)
     .join('&');
 }
 
-function restrictUrl(url: URL): boolean {
-  const hash = restrictShareLinkParams(url.hash.slice(1));
-  const search = restrictShareLinkParams(url.search.slice(1));
+function restrictUrl(url: URL, options: ShareLinkOptions): boolean {
+  const hash = restrictShareLinkParams(url.hash.slice(1), options);
+  const search = restrictShareLinkParams(url.search.slice(1), options);
   if (hash === url.hash.slice(1) && search === url.search.slice(1)) return false;
 
   // prefixed: the setters strip one leading # or ? of what is left
@@ -103,12 +154,26 @@ function restrictUrl(url: URL): boolean {
 
 /**
  * The client reads the share link from the hash, or else the query string, when it is created.
- * `YasguiComponent` calls this: code that creates the client itself from `YasguiService.loadYasgui()` has to call it first.
+ * The client given by `YasguiService.loadYasgui()` calls this each time it is created.
  */
-export function restrictShareLinkInUrl(): void {
+export function restrictShareLinkInUrl(options: ShareLinkOptions = {}): void {
   const url = new URL(window.location.href);
   let changed = false;
   // until nothing is dropped any more, so that what is left reads the same when restricted again
-  while (restrictUrl(url)) changed = true;
+  while (restrictUrl(url, options)) changed = true;
   if (changed) history.replaceState(history.state, '', url.toString());
+}
+
+/** The client, restricting the share link in the url before each creation. `options` is read then */
+export function restrictShareLinkOnCreate<T extends object>(yasgui: T, options: () => ShareLinkOptions): T {
+  return new Proxy(yasgui, {
+    apply: (target, thisArg, args) => {
+      restrictShareLinkInUrl(options());
+      return Reflect.apply(target as (...params: unknown[]) => unknown, thisArg, args);
+    },
+    construct: (target, args) => {
+      restrictShareLinkInUrl(options());
+      return Reflect.construct(target as new (...params: unknown[]) => object, args);
+    },
+  });
 }
