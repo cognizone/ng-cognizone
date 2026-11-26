@@ -1,3 +1,10 @@
+## [8.0.1](https://github.com/cognizone/ng-cognizone/compare/v8.0.0...v8.0.1) (2026-11-26)
+
+
+### Bug Fixes
+
+* allow typescript <6.1 in lod-core and model-utils peer deps ([d01ea04](https://github.com/cognizone/ng-cognizone/commit/d01ea042321539eccc6a5fc873a593e3749c7207))
+
 # [8.0.0](https://github.com/cognizone/ng-cognizone/compare/v7.0.2...v8.0.0) (2026-06-08)
 
 
