@@ -24,6 +24,13 @@ const rawResourceGraph4: TypedResourceGraph = require('../../test/data/legiswiss
 const rawDraft1: TypedResourceGraph = require('../../test/data/draft-1.json');
 const rawDraft2: TypedResourceGraph = require('../../test/data/draft-2.json');
 const rawDraft3: TypedResourceGraph = require('../../test/data/draft-3.json');
+const rawWithUnknownAttribute: TypedResourceGraph = {
+  ...rawResourceGraph2,
+  data: {
+    ...rawResourceGraph2.data,
+    attributes: { ...rawResourceGraph2.data.attributes, anAttributeThatIsNowhereToBeFound: { 'xsd:string': ['raw value'] } },
+  },
+};
 
 describe('ResourceGraphService', () => {
   const createService = createServiceFactory({
@@ -166,6 +173,12 @@ describe('ResourceGraphService', () => {
     expect(console.warn).toHaveBeenCalled();
   });
 
+  it('should throw on an attribute missing from the definition by default', () => {
+    expect(() => spectator.service.resourceGraphRawToJsonModel(rawWithUnknownAttribute, directiveAp)).toThrow(
+      /anAttributeThatIsNowhereToBeFound/
+    );
+  });
+
   describe('or range rule on datatype', () => {
     it('should deserialize then serialize draft 1 (or on rapporteurChambreDeputesLabel, xsd:string)', () => {
       const json = spectator.service.resourceGraphRawToJsonModel(rawDraft1, draftAp);
@@ -190,6 +203,25 @@ describe('ResourceGraphService', () => {
       const newRaw = spectator.service.jsonModelToResourceGraphRaw(json, draftAp);
       checkRawEquality(newRaw, rawDraft3, ['internalId']);
     });
+  });
+});
+
+describe('ResourceGraphService with keepUnknownAttributes', () => {
+  const createService = createServiceFactory({
+    service: ResourceGraphService,
+    providers: [provideNgApplicationProfile(), provideLogger('TEST'), provideJsonModel({ keepUnknownAttributes: true })],
+  });
+
+  it('should keep the raw value of an attribute missing from the definition', () => {
+    jest.spyOn(console, 'warn').mockImplementation();
+    const spectator = createService();
+    const json = spectator.service.resourceGraphRawToJsonModel(rawWithUnknownAttribute, directiveAp) as JsonModel & {
+      anAttributeThatIsNowhereToBeFound: unknown;
+      eventRiskLevel: string;
+    };
+    expect(json.anAttributeThatIsNowhereToBeFound).toEqual(['raw value']);
+    expect(json.eventRiskLevel).toBe('http://resource/my-domain/6');
+    expect(console.warn).toHaveBeenCalled();
   });
 });
 

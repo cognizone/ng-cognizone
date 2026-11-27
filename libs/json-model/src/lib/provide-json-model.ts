@@ -8,7 +8,7 @@ import { DateTimeMapper } from './services/mappers/date-time-mapper.service';
 import { DefaultMapper } from './services/mappers/default-mapper.service';
 import { LangStringMapper } from './services/mappers/lang-string-mapper.service';
 import { provideMicroAttributeMapper } from './services/mappers/micro-attribute-mapper';
-import { ResourceGraphService } from './services/resource-graph.service';
+import { KEEP_UNKNOWN_ATTRIBUTES, ResourceGraphService } from './services/resource-graph.service';
 import { ResourceMapper } from './services/resource-mapper.service';
 
 export function provideJsonModel(options: JsonModelOptions = {}): Provider[] {
@@ -28,10 +28,12 @@ export function provideJsonModel(options: JsonModelOptions = {}): Provider[] {
     provideMicroAttributeMapper(DefaultMapper),
     provideMicroAttributeMapper(BooleanMapper),
     ResourceGraphService,
+    { provide: KEEP_UNKNOWN_ATTRIBUTES, useValue: options.keepUnknownAttributes ?? false },
   ];
 }
 
 export interface JsonModelOptions {
   useDateMapper?: boolean;
   useDateTimeMapper?: boolean;
+  keepUnknownAttributes?: boolean; // in case the resource has an attribute not present in the AP, we still use the value instead of throwing an error.
 }

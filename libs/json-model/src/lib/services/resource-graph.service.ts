@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, InjectionToken } from '@angular/core';
 import { PrefixService } from '@cognizone/lod';
 import { Datatype, DatatypeLong, Many, manyToArray, manyToOne, TypedResource, TypedResourceGraph } from '@cognizone/model-utils';
 
@@ -8,6 +8,8 @@ import { JsonModel } from '../models/json-model';
 import { DATA_MODEL_DEFINITION_HELPER_TOKEN } from './data-model-definition-helper.service';
 import { ResourceMapper } from './resource-mapper.service';
 
+export const KEEP_UNKNOWN_ATTRIBUTES = new InjectionToken<boolean>('KeepUnknownAttributes');
+
 // TODO rename according to new model name
 
 @Injectable()
@@ -15,6 +17,7 @@ export class ResourceGraphService {
   private dataModelDefinitionHelper = inject(DATA_MODEL_DEFINITION_HELPER_TOKEN);
   private resourceMapper = inject(ResourceMapper);
   private prefixCc = inject(PrefixService);
+  private keepUnknownAttributes = inject(KEEP_UNKNOWN_ATTRIBUTES);
 
   // TODO rename according to new model name
   jsonModelToResourceGraphRaw(json: JsonModel | undefined, definition: unknown): TypedResourceGraph | undefined {
@@ -182,9 +185,14 @@ export class ResourceGraphService {
 
     Object.entries(data.attributes ?? {}).forEach(([key, attr]) => {
       const attributes = manyToArray(attr);
+      const isAttributeUnknown =
+        !!definition && this.keepUnknownAttributes && !this.dataModelDefinitionHelper.hasProperty(definition, data.type, key);
+      if (isAttributeUnknown) {
+        console.warn('Could not find property in model definition, keeping raw value', { definition, data, key });
+      }
       let isSingle: boolean;
       let hasMultipleTypes: boolean;
-      if (definition) {
+      if (definition && !isAttributeUnknown) {
         isSingle = this.dataModelDefinitionHelper.isSingle(definition, data.type, key);
         hasMultipleTypes = this.dataModelDefinitionHelper.getTargetType(definition, data.type, key).length > 1;
       } else {
